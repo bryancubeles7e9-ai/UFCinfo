@@ -1,0 +1,64 @@
+/* Estilo general de la página */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  background: #eef2ff;
+  color: #1e293b;
+}
+
+/* Tarjeta central */
+.tarjeta {
+  width: 100%;
+  max-width: 480px;
+  padding: 36px;
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(30, 41, 59, 0.1);
+}
+
+.etiqueta {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4338ca;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background: #4338ca;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3730a3;
+}
+
+button:focus-visible {
+  outline: 3px solid #818cf8;
+  outline-offset: 4px;
+}
+
+#mensaje {
+  min-height: 26px;
+  margin-bottom: 0;
+}
