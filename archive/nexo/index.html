@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f5f0" />
+    <meta
+      name="description"
+      content="Nexo: tu espacio personal para organizar proyectos y trabajar con foco."
+    />
+    <title>Nexo — Tu espacio de trabajo</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="#inicio"
+        ><span class="brand-mark">n</span> nexo<span class="brand-dot"
+          >.</span
+        ></a
+      >
+      <div class="workspace">
+        <span class="avatar">B</span>
+        <div>
+          <strong>Espacio de Bryan</strong><small>Personal workspace</small>
+        </div>
+      </div>
+      <p class="nav-label">TU ESPACIO</p>
+      <nav aria-label="Navegación principal">
+        <button class="nav-item active" data-view="inicio">
+          <span>◈</span> Vista general
+        </button>
+        <button class="nav-item" data-view="tareas">
+          <span>☑</span> Mis tareas <b id="nav-count">0</b>
+        </button>
+        <button class="nav-item" data-view="proyectos">
+          <span>▦</span> Proyectos
+        </button>
+        <button class="nav-item" data-view="enfoque">
+          <span>◷</span> Tiempo de enfoque
+        </button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="tip">
+          <span>✦</span><strong>Pequeños pasos.<br />Grandes ideas.</strong>
+          <p>Una tarea a la vez también es avanzar.</p>
+        </div>
+        <button id="theme" class="nav-item">◐ <span>Cambiar tema</span></button
+        ><small class="local-note">● Datos guardados en este navegador</small>
+      </div>
+    </aside>
+    <div class="app">
+      <header class="topbar">
+        <div class="breadcrumb">
+          Mi espacio <span>/</span>
+          <strong id="breadcrumb">Vista general</strong>
+        </div>
+        <div class="header-tools">
+          <label class="search"
+            ><span>⌕</span
+            ><input
+              id="search"
+              type="search"
+              placeholder="Buscar tareas…"
+              aria-label="Buscar tareas"
+            /><kbd>/</kbd></label
+          ><button
+            id="theme-header"
+            class="icon-button"
+            aria-label="Cambiar tema"
+          >
+            ◐</button
+          ><span class="avatar small">B</span>
+        </div>
+      </header>
+      <main id="inicio">
+        <section class="page-heading">
+          <div>
+            <div class="eyebrow" id="today"></div>
+            <h1 id="page-title">Haz espacio para tus ideas<span>.</span></h1>
+            <p id="page-description">
+              Menos ruido, más claridad. Tu día empieza aquí.
+            </p>
+          </div>
+          <button class="primary" id="new-task">＋ Nueva tarea</button>
+        </section>
+        <section class="hero">
+          <div>
+            <span class="pill">✦ TU PRÓXIMO GRAN PASO</span>
+            <h2>Lo importante merece<br />toda tu atención.</h2>
+            <p>
+              Organiza tus pendientes y encuentra tu ritmo.<br />Hoy es un buen
+              día para construir algo.
+            </p>
+            <button id="hero-focus">Empezar una sesión <span>↗</span></button>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <div class="orb"></div>
+            <div class="floating-label label-one">✦ un poco más cerca</div>
+            <div class="floating-label label-two">
+              crear · aprender · avanzar
+            </div>
+            <span class="art-spark">✳</span>
+          </div>
+        </section>
+        <section class="stats" aria-label="Resumen">
+          <article class="stat">
+            <span>Tareas pendientes <i>↗</i></span
+            ><strong id="pending-stat">0</strong
+            ><small>Ideas listas para tomar forma</small>
+          </article>
+          <article class="stat">
+            <span>Completadas <i>✓</i></span
+            ><strong id="done-stat">0</strong
+            ><small id="done-caption">Cada paso cuenta</small>
+          </article>
+          <article class="stat">
+            <span>Proyectos activos <i>▦</i></span
+            ><strong id="projects-stat">0</strong
+            ><small>Tu próxima gran creación</small>
+          </article>
+          <article class="stat">
+            <span>Minutos de enfoque <i>◷</i></span
+            ><strong id="focus-stat">0</strong
+            ><small>Tiempo invertido en tus ideas</small>
+          </article>
+        </section>
+        <div class="content-grid">
+          <section class="panel tasks-panel" id="tasks-section">
+            <div class="section-heading">
+              <div>
+                <h2>Tu lista, a tu ritmo</h2>
+                <p>Un pequeño paso es un gran comienzo.</p>
+              </div>
+              <button class="text-button" id="export">Exportar ↓</button>
+            </div>
+            <div class="task-toolbar">
+              <div class="tabs" role="group" aria-label="Filtrar tareas">
+                <button class="selected" data-filter="all">Todas</button
+                ><button data-filter="pending">Pendientes</button
+                ><button data-filter="done">Completadas</button>
+              </div>
+              <select id="sort" aria-label="Ordenar tareas">
+                <option value="date">Por fecha</option>
+                <option value="priority">Por prioridad</option>
+                <option value="name">Por nombre</option>
+              </select>
+            </div>
+            <div id="task-list"></div>
+            <button class="add-inline" id="add-inline">
+              ＋ Añadir una nueva tarea
+            </button>
+          </section>
+          <aside class="right-column">
+            <section class="panel focus-panel" id="focus-section">
+              <div class="section-heading">
+                <h2>Un momento de enfoque</h2>
+                <span class="mini-tag">POMODORO</span>
+              </div>
+              <div class="timer-ring">
+                <div>
+                  <span id="timer" role="timer">25:00</span
+                  ><small id="timer-state">Todo listo para empezar</small>
+                </div>
+              </div>
+              <div class="timer-controls">
+                <button class="primary" id="timer-toggle">▶ Empezar</button
+                ><button
+                  class="icon-button"
+                  id="timer-reset"
+                  aria-label="Reiniciar temporizador"
+                >
+                  ↺
+                </button>
+              </div>
+              <label class="duration"
+                >Duración
+                <select id="duration">
+                  <option value="25">25 minutos</option>
+                  <option value="15">15 minutos</option>
+                  <option value="50">50 minutos</option>
+                </select></label
+              >
+            </section>
+            <section class="panel activity">
+              <div class="section-heading">
+                <h2>Tu semana</h2>
+                <span class="mini-tag">7 DÍAS</span>
+              </div>
+              <p>Tareas completadas por día</p>
+              <div
+                class="chart"
+                id="chart"
+                aria-label="Tareas completadas en los últimos siete días"
+              ></div>
+              <div class="week-total" id="week-total"></div>
+            </section>
+          </aside>
+        </div>
+        <section id="projects-section">
+          <div class="section-heading projects-heading">
+            <div>
+              <h2>Ideas en movimiento</h2>
+              <p>Tus proyectos, con perspectiva.</p>
+            </div>
+            <span class="muted">PROGRESO EN TIEMPO REAL</span>
+          </div>
+          <div class="projects" id="projects"></div>
+        </section>
+        <footer>
+          <span>Hecho para avanzar a tu manera.</span
+          ><span>NEXO <span class="footer-dot">✦</span> HTML · CSS · JS</span>
+        </footer>
+      </main>
+    </div>
+    <dialog id="task-dialog">
+      <form id="task-form">
+        <div class="section-heading">
+          <h2 id="dialog-title">Una nueva idea</h2>
+          <button
+            type="button"
+            class="icon-button"
+            id="close-dialog"
+            aria-label="Cerrar"
+          >
+            ×
+          </button>
+        </div>
+        <p class="muted">Dale un nombre y encuentra su lugar.</p>
+        <label
+          >Título<input
+            id="task-title"
+            name="title"
+            maxlength="120"
+            placeholder="¿Qué quieres hacer?"
+            required /></label
+        ><label
+          >Proyecto<input
+            id="task-project"
+            name="project"
+            maxlength="50"
+            list="project-options"
+            placeholder="Por ejemplo: Mi web"
+            required /></label
+        ><datalist id="project-options"></datalist>
+        <div class="form-row">
+          <label>Fecha<input name="date" type="date" required /></label
+          ><label
+            >Prioridad<select name="priority">
+              <option value="medium">Media</option>
+              <option value="high">Alta</option>
+              <option value="low">Baja</option>
+            </select></label
+          >
+        </div>
+        <div class="dialog-actions">
+          <button type="button" class="secondary" id="cancel-dialog">
+            Cancelar</button
+          ><button type="submit" class="primary">Guardar tarea ↗</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="delete-dialog">
+      <h2>¿Eliminar esta tarea?</h2>
+      <p>La tarea se quitará de tu lista.</p>
+      <div class="dialog-actions">
+        <button class="secondary" id="cancel-delete">Cancelar</button
+        ><button class="primary danger" id="confirm-delete">Eliminar</button>
+      </div>
+    </dialog>
+    <div id="toast" role="status" class="toast"></div>
+  </body>
+</html>
