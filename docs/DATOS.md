@@ -15,7 +15,7 @@ Octagon es un proyecto independiente de aficionados, sin afiliación con UFC. Pa
 
 ## Rankings
 
-La sección Rankings muestra una selección del top 10 de cinco categorías de [All Rankings de UFC](https://www.ufc.com/rankings): libra por libra masculino y femenino, ligero, wélter y paja femenino. Se consultó el 2 de octubre de 2026 mediante la versión indexada de la página oficial, cuya actualización figura como 29 de septiembre. Se utiliza All Rankings, no All Meta Rankings. Es una copia estática: no se actualiza al recargar. Los campeones se presentan separados de las posiciones 1–10. Consulta siempre la fuente para la lista completa y los cambios posteriores.
+La sección Rankings muestra el top 10 de las 11 divisiones de peso y las dos listas libra por libra de [All Rankings de UFC](https://www.ufc.com/rankings): mosca, gallo, pluma, ligero, wélter, medio, semipesado y pesado masculinos; paja, mosca y gallo femeninos; libra por libra masculino y femenino. Se utiliza All Rankings, no All Meta Rankings. `scripts/sync-ufc-rankings.py` consulta la página oficial cada 12 horas mediante GitHub Actions y guarda `assets/data/ufc-rankings.json`. La web comprueba ese archivo al abrirse, cada cinco minutos y al volver a la pestaña. Los campeones se presentan separados de las posiciones 1–10; los empates conservan su posición oficial. Si falla la consulta o la validación, se conservan los últimos datos válidos. La copia incluida en JavaScript sirve de respaldo si el archivo no está disponible. Consulta siempre la fuente para la lista completa.
 
 ## Catálogo ampliado y fotografías
 

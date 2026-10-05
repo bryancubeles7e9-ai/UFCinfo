@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "source": "https://www.ufc.com/rankings",
+  "synchronizedAt": "2026-10-05T10:08:47.759560+00:00",
+  "published": "How are rankings determined?",
+  "categories": [
+    {
+      "id": "p4p-men",
+      "champion": null,
+      "names": [
+        "Islam Makhachev",
+        "Alexander Volkanovski",
+        "Justin Gaethje",
+        "Petr Yan",
+        "Ilia Topuria",
+        "Joshua Van",
+        "Sean Strickland",
+        "Tom Aspinall",
+        "Merab Dvalishvili",
+        "Alex Pereira"
+      ],
+      "ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "flyweight",
+      "champion": "Joshua Van",
+      "names": [
+        "Alexandre Pantoja",
+        "Manel Kape",
+        "Brandon Royval",
+        "Tatsuro Taira",
+        "Kyoji Horiguchi",
+        "Lone’er Kavanagh",
+        "Asu Almabayev",
+        "Brandon Moreno",
+        "Amir Albazi",
+        "Ramazan Temirov"
+      ],
+      "ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "bantamweight",
+      "champion": "Petr Yan",
+      "names": [
+        "Merab Dvalishvili",
+        "Sean O'Malley",
+        "Song Yadong",
+        "Umar Nurmagomedov",
+        "Mario Bautista",
+        "Cory Sandhagen",
+        "Aiemann Zahabi",
+        "David Martinez",
+        "Deiveson Figueiredo",
+        "Marlon Vera"
+      ],
+      "ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "featherweight",
+      "champion": "Alexander Volkanovski",
+      "names": [
+        "Movsar Evloev",
+        "Diego Lopes",
+        "Lerone Murphy",
+        "Aljamain Sterling",
+        "Jean Silva",
+        "Yair Rodriguez",
+        "Arnold Allen",
+        "Youssef Zalal",
+        "Kevin Vallejos",
+        "Steve Garcia"
+      ],
+      "ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "lightweight",
+      "champion": "Justin Gaethje",
+      "names": [
+        "Ilia Topuria",
+        "Arman Tsarukyan",
+        "Charles Oliveira",
+        "Max Holloway",
+        "Paddy Pimblett",
+        "Benoît Saint Denis",
+        "Quillan Salkilld",
+        "Mauricio Ruffy",
+        "Salahdine Parnasse",
+        "Mateusz Gamrot"
+      ],
+      "ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "welterweight",
+      "champion": "Islam Makhachev",
+      "names": [
+        "Ian Machado Garry",
+        "Carlos Prates",
+        "Michael Morales",
+        "Jack Della Maddalena",
+        "Gabriel Bonfim",
+        "Sean Brady",
+        "Belal Muhammad",
+        "Leon Edwards",
+        "Kamaru Usman",
+        "Joaquin Buckley"
+      ],
+      "ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "middleweight",
+      "champion": "Sean Strickland",
+      "names": [
+        "Khamzat Chimaev",
+        "Dricus Du Plessis",
+        "Nassourdine Imavov",
+        "Brendan Allen",
+        "Caio Borralho",
+        "Joe Pyfer",
+        "Gregory Rodrigues",
+        "Anthony Hernandez",
+        "Israel Adesanya",
+        "Christian Leroy Duncan"
+      ],
+      "ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "light-heavyweight",
+      "champion": "Carlos Ulberg",
+      "names": [
+        "Magomed Ankalaev",
+        "Jiří Procházka",
+        "Alex Pereira",
+        "Khalil Rountree Jr.",
+        "Navajo Stirling",
+        "Paulo Costa",
+        "Jamahal Hill",
+        "Azamat Murzakanov",
+        "Jan Błachowicz",
+        "Dominick Reyes"
+      ],
+      "ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "heavyweight",
+      "champion": "Ciryl Gane",
+      "names": [
+        "Tom Aspinall",
+        "Alexander Volkov",
+        "Sergei Pavlovich",
+        "Josh Hokit",
+        "Curtis Blaydes",
+        "Waldo Cortes Acosta",
+        "Rizvan Kuniev",
+        "Vitor Petrino",
+        "Serghei Spivac",
+        "Ante Delija"
+      ],
+      "ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "p4p-women",
+      "champion": null,
+      "names": [
+        "Valentina Shevchenko",
+        "Kayla Harrison",
+        "Zhang Weili",
+        "Natalia Silva",
+        "Mackenzie Dern",
+        "Alexa Grasso",
+        "Manon Fiorot",
+        "Erin Blanchfield",
+        "Tatiana Suarez",
+        "Julianna Peña"
+      ],
+      "ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "strawweight-women",
+      "champion": "Mackenzie Dern",
+      "names": [
+        "Zhang Weili",
+        "Tatiana Suarez",
+        "Virna Jandiroba",
+        "Denise Gomes",
+        "Gillian Robertson",
+        "Yan Xiaonan",
+        "Fatima Kline",
+        "Loopy Godinez",
+        "Alexia Thainara",
+        "Jéssica Andrade"
+      ],
+      "ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "flyweight-women",
+      "champion": "Valentina Shevchenko",
+      "names": [
+        "Natalia Silva",
+        "Alexa Grasso",
+        "Manon Fiorot",
+        "Erin Blanchfield",
+        "Rose Namajunas",
+        "Maycee Barber",
+        "Jasmine Jasudavicius",
+        "Wang Cong",
+        "Tracy Cortez",
+        "Miranda Maverick"
+      ],
+      "ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "bantamweight-women",
+      "champion": "Kayla Harrison",
+      "names": [
+        "Julianna Peña",
+        "Joselyne Edwards",
+        "Ailin Perez",
+        "Raquel Pennington",
+        "Norma Dumont",
+        "Yana Santos",
+        "Luana Santos",
+        "Macy Chiasson",
+        "Jacqueline Cavalcanti",
+        "Karol Rosa"
+      ],
+      "ranks": [
+        1,
+        2,
+        3,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ]
+}
