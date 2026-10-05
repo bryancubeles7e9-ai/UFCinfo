@@ -55,6 +55,7 @@ jobs:
         if: steps.key.outputs.configured == 'true'
         run: |
           git add assets/data/ufc-events.json
+          if [ -d assets/images/events ]; then git add assets/images/events; fi
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

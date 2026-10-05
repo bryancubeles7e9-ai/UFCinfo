@@ -2536,3 +2536,10 @@ button.ranking-name:hover {
 .official-bout-names > span { color: var(--muted); }
 .official-result { line-height: 1.7; }
 @media (max-width: 600px) { .official-bout-names { gap: .6rem; font-size: .9rem; } .bout-heading { flex-wrap: wrap; gap: .5rem; } }
+
+.official-event-card { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+.event-poster { margin: 0; display: flex; flex-direction: column; justify-content: center; background: #101114; border-left: 1px solid var(--line); min-width: 0; }
+.event-poster-image { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; }
+.event-poster figcaption { padding: 12px 18px; color: #d0d0d0; font-size: 10px; letter-spacing: .12em; text-align: center; }
+.segmented { flex-wrap: wrap; }
+@media (max-width: 700px) { .official-event-card { grid-template-columns: 1fr; } .event-poster { order: -1; border-left: 0; border-bottom: 1px solid var(--line); } }

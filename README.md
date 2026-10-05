@@ -13,6 +13,7 @@ Abre esta carpeta en VS Code, pulsa con el botón derecho en `index.html` y sele
 - Búsqueda por nombre, apodo, país y base marcial; filtros por división, estilo, guardia y cinturones.
 - Distintivos de campeón actual/excampeón y palmarés de títulos UFC absolutos y BMF, excluyendo interinos.
 - Guardia de UFC Stats y disciplina de formación con notas y enlaces de procedencia.
+- Próximos eventos numerados anunciados desde UFCalendar y pestañas Próximos / Finalizados / Todos UFC, con imágenes promocionales oficiales o aviso de póster pendiente.
 - Historial UFC 324–332 de 2026: cartelera principal completa, resultados disponibles y enlaces oficiales; sincronización automática preparada con UFCalendar (requiere clave).
 - Carteleras imaginarias, creación de eventos, cuenta atrás y descarga de calendario `.ics`.
 - Rankings: top 10 de cinco categorías, campeón separado, búsqueda y acceso a fichas.

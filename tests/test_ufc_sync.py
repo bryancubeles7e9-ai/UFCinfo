@@ -66,6 +66,48 @@ class SyncTests(unittest.TestCase):
             row=event(); row.update(numbering=numbering,title=title)
             self.assertEqual(sync.event_number(row),expected)
 
+    def test_upcoming_empty_card_and_following_year(self):
+        row=event(336);row.update(status='announced',main_card_at='2027-01-20T02:00:00Z',card=[])
+        rows=sync.list_events(lambda p,q:page([row]),2026,NOW,upcoming=True)
+        self.assertEqual(len(rows),1)
+        result=sync.normalize_event(row,NOW)
+        self.assertEqual(result['bouts'],[])
+        self.assertEqual(result['status'],'announced')
+        self.assertEqual(result['subtitle'],'Cartelera pendiente de anuncio')
+
+    def test_synchronize_past_and_upcoming(self):
+        past=event();future=event(333);future.update(status='announced',main_card_at='2026-10-24T18:00:00Z')
+        def fetch(path,params):
+            if path=='/events':return page([future] if params['status']=='upcoming' else [past])
+            return {'data':future if path.endswith('333') else past}
+        result=sync.synchronize(fetch,NOW)
+        self.assertEqual([e['status'] for e in result['events']],['announced','completed'])
+
+    def test_posters_public_images_and_fallback(self):
+        with tempfile.TemporaryDirectory() as d:
+            e=sync.normalize_event(event(),NOW);payload={'events':[e]}
+            html=b'<div class="c-hero__image"><picture><img src="https://ufc.com/images/test-EVENT-ART.jpg" alt="Official UFC art"></picture></div>'
+            calls=[]
+            def read(url,limit):
+                calls.append(url);return html if '/event/' in url else b'\xff\xd8\xffimage'
+            sync.enrich_posters(payload,{},Path(d),read)
+            self.assertEqual(e['poster'],'assets/images/events/ufc-332.jpg')
+            self.assertTrue((Path(d)/'ufc-332.jpg').exists())
+            previous=copy.deepcopy(payload)
+            def fail(url,limit):raise OSError('network')
+            sync.enrich_posters(payload,previous,Path(d),fail)
+            self.assertEqual(e['poster'],previous['events'][0]['poster'])
+            parser=sync.PosterParser();parser.feed('<div class="c-hero__image"><img src="https://ufc.com/images/BACKGROUND.jpg"></div>')
+            self.assertIsNone(parser.poster)
+            parser=sync.PosterParser();parser.feed('<div class="c-hero__image"><img src="https://ufc.com/images/TEMP-HERO.jpg"></div>')
+            self.assertIsNotNone(parser.poster)
+
+    def test_removed_upcoming_does_not_block_history_update(self):
+        with tempfile.TemporaryDirectory() as d:
+            p=Path(d)/'feed.json';p.write_text(json.dumps({'year':2026,'events':[{'id':'ufc-332','status':'completed'},{'id':'ufc-333','status':'announced'}]}))
+            sync.atomic_save(p,{'year':2026,'events':[{'id':'ufc-332','status':'completed'}]})
+            self.assertEqual(len(json.loads(p.read_text())['events']),1)
+
     def test_repeating_cursor_fails(self):
         with self.assertRaises(sync.SyncError): sync.list_events(lambda p,q:page([],True,'same'),2026,NOW)
 

@@ -89,7 +89,7 @@
           </article>
           <article>
             <span>02 / IMAGINA</span><strong id="event-count">03</strong>
-            <p>Eventos UFC de este año</p>
+            <p>Eventos numerados UFC</p>
           </article>
           <article>
             <span>03 / ANALIZA</span><strong>05</strong>
@@ -102,8 +102,8 @@
         </section>
         <div class="section-heading">
           <div>
-            <p class="eyebrow">ÚLTIMO EVENTO NUMERADO</p>
-            <h2>Así terminó la noche.</h2>
+            <p class="eyebrow" id="featured-event-label">PRÓXIMO EVENTO NUMERADO</p>
+            <h2 id="featured-event-title">La próxima noche de combate.</h2>
           </div>
           <a href="#eventos" class="text-link">Ver todas las carteleras ↗</a>
         </div>
@@ -139,14 +139,16 @@
             <p class="eyebrow">EL AÑO DENTRO DEL OCTÁGONO</p>
             <h1>CARTELERAS<span>.</span></h1>
             <p>
-              Eventos numerados de UFC celebrados este año: cartelera principal completa y resultados.
+              Próximos eventos numerados anunciados y resultados de este año, con su cartelera principal.
             </p>
           </div>
           <button class="button" data-builder>＋ Crear cartelera</button>
         </div>
         <div class="toolbar">
           <div class="segmented" aria-label="Filtrar eventos">
-            <button data-event-filter="official" class="active">UFC de este año</button
+            <button data-event-filter="upcoming" class="active">Próximos</button
+            ><button data-event-filter="completed">Finalizados</button
+            ><button data-event-filter="official">Todos UFC</button
             ><button data-event-filter="all">Todos</button
             ><button data-event-filter="demo">Demostración</button
             ><button data-event-filter="custom">Mis eventos</button>

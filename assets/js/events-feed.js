@@ -15,8 +15,12 @@ function validEvent(event, year) {
     event.id === `ufc-${event.number}` &&
     event.source === `https://www.ufc.com/event/ufc-${event.number}` &&
     ['title', 'subtitle', 'location', 'date', 'checkedAt'].every(k => typeof event[k] === 'string') &&
-    Number.isFinite(Date.parse(event.date)) && new Date(event.date).getUTCFullYear() === year &&
-    Array.isArray(event.bouts) && event.bouts.length > 0 && event.bouts.length <= 30 &&
+    Number.isFinite(Date.parse(event.date)) &&
+    ['completed', 'announced', 'scheduled', 'live'].includes(event.status || 'completed') &&
+    ((event.status || 'completed') !== 'completed' || new Date(event.date).getUTCFullYear() === year) &&
+    (event.poster == null || event.poster === `assets/images/events/${event.id}.jpg`) &&
+    (event.posterAlt == null || typeof event.posterAlt === 'string') &&
+    Array.isArray(event.bouts) && ((event.status || 'completed') !== 'completed' || event.bouts.length > 0) && event.bouts.length <= 30 &&
     event.bouts.every(b => b && ['red', 'blue', 'division', 'method', 'round', 'time'].every(k => typeof b[k] === 'string') && b.red && b.blue &&
       (b.winner === null || b.winner === b.red || b.winner === b.blue) &&
       (b.outcome == null || typeof b.outcome === 'string'));

@@ -1,4 +1,4 @@
-"""Sync completed numbered UFC main cards from UFCalendar; keep last good data on failure."""
+"""Sync completed and announced numbered UFC main cards from UFCalendar; keep last good data on failure."""
 import argparse
 from datetime import datetime, timezone
 import json
@@ -58,7 +58,7 @@ def request_json(path, key, params=None):
             raise SyncError('Invalid JSON from UFCalendar') from None
 
 def event_number(event):
-    if event.get('org') != 'ufc' or event.get('status') != 'completed':
+    if event.get('org') != 'ufc' or event.get('status') not in ('completed', 'announced', 'scheduled', 'live'):
         return None
     numbering = str(event.get('numbering') or '').strip()
     match = re.fullmatch(r'(?:UFC\s+)?(\d+)', numbering)
@@ -67,8 +67,10 @@ def event_number(event):
         match = re.search(r'\bUFC\s+(\d+)(?=\s*(?::|$))', event.get('title') or '')
     return int(match.group(1)) if match else None
 
-def list_events(fetch, year, now):
+def list_events(fetch, year, now, upcoming=False):
     params = {'org': 'ufc', 'status': 'completed', 'from': f'{year}-01-01', 'to': now.date().isoformat(), 'order': 'asc', 'limit': 100}
+    if upcoming:
+        params = {'org': 'ufc', 'status': 'upcoming', 'order': 'asc', 'limit': 100}
     events, seen, cursors = [], set(), set()
     for _ in range(20):
         page = fetch('/events', params)
@@ -82,7 +84,10 @@ def list_events(fetch, year, now):
             if number is None:
                 continue
             date = utc_date(row.get('main_card_at') or row.get('starts_at'))
-            if date.year != year or date > now:
+            if upcoming:
+                if row.get('status') not in ('announced', 'scheduled', 'live') or (date < now and row.get('status') != 'live'):
+                    continue
+            elif row.get('status') != 'completed' or date.year != year or date > now:
                 continue
             if number in seen:
                 raise SyncError('Duplicate event number')
@@ -103,10 +108,13 @@ def list_events(fetch, year, now):
 def normalize_event(event, now):
     number = event_number(event)
     if number is None:
-        raise SyncError('Event detail is not a completed numbered UFC event')
+        raise SyncError('Event detail is not a numbered UFC event')
     date = utc_date(event.get('main_card_at') or event.get('starts_at'))
-    if date.year != now.year or date > now:
-        raise SyncError('Event detail outside current year')
+    status = event['status']
+    if status == 'completed' and (date.year != now.year or date > now):
+        raise SyncError('Completed event detail outside current year')
+    if status in ('announced', 'scheduled') and date < now:
+        raise SyncError('Upcoming event date has passed')
     card = event.get('card')
     if not isinstance(card, list):
         raise SyncError('Missing fight card')
@@ -116,12 +124,14 @@ def normalize_event(event, now):
             raise SyncError('Invalid fight')
         if fight.get('card_section') == 'main' and fight.get('status') != 'cancelled':
             main.append(fight)
-    if not main:
+    if not main and status == 'completed':
         raise SyncError(f'No main card for UFC {number}')
     main.sort(key=lambda f: (not f.get('is_main', False), f.get('ordering') if isinstance(f.get('ordering'), int) else 9999))
     bouts = []
     for fight in main:
         a, b = fight.get('fighter_a'), fight.get('fighter_b')
+        if status != 'completed' and (not a or not b):
+            continue
         if not isinstance(a, dict) or not isinstance(b, dict) or not all(isinstance(c.get('name'), str) and c['name'].strip() and isinstance(c.get('id'), int) for c in (a,b)):
             raise SyncError('Missing fighter identity')
         result = fight.get('result') or {}
@@ -148,10 +158,10 @@ def normalize_event(event, now):
     venue = event.get('venue') or {}
     if not isinstance(venue, dict):
         raise SyncError('Invalid venue')
-    return {'id': f'ufc-{number}', 'number': number, 'title': f'UFC {number}', 'subtitle': f"{bouts[0]['red']} vs {bouts[0]['blue']}", 'date': date.isoformat(), 'location': ', '.join(str(venue[k]) for k in ('name','city','country') if venue.get(k)) or 'Recinto no indicado', 'type': 'official', 'source': f'https://www.ufc.com/event/ufc-{number}', 'checkedAt': now.date().isoformat(), 'bouts': bouts}
+    return {'id': f'ufc-{number}', 'number': number, 'title': f'UFC {number}', 'subtitle': f"{bouts[0]['red']} vs {bouts[0]['blue']}" if bouts else 'Cartelera pendiente de anuncio', 'status': status, 'date': date.isoformat(), 'location': ', '.join(str(venue[k]) for k in ('name','city','country') if venue.get(k)) or 'Recinto no indicado', 'type': 'official', 'source': f'https://www.ufc.com/event/ufc-{number}', 'checkedAt': now.date().isoformat(), 'bouts': bouts}
 
 def synchronize(fetch, now):
-    rows = list_events(fetch, now.year, now)
+    rows = list_events(fetch, now.year, now) + list_events(fetch, now.year, now, upcoming=True)
     events = []
     for row in rows:
         event_id = row.get('id')
@@ -161,6 +171,8 @@ def synchronize(fetch, now):
         if not isinstance(detail, dict) or event_number(detail) != event_number(row):
             raise SyncError('Event detail mismatch')
         events.append(normalize_event(detail, now))
+    if len({e['id'] for e in events}) != len(events):
+        raise SyncError('Duplicate event across lists')
     events.sort(key=lambda e: e['date'], reverse=True)
     return {'schemaVersion': 1, 'year': now.year, 'source': 'UFCalendar', 'sourceUrl': 'https://www.ufcalendar.com', 'synchronizedAt': now.isoformat(), 'events': events}
 
@@ -169,7 +181,7 @@ def atomic_save(path, payload):
     if path.exists():
         previous = json.loads(path.read_text())
         if previous.get('year') == payload['year']:
-            previous_ids = {e['id'] for e in previous.get('events', [])}
+            previous_ids = {e['id'] for e in previous.get('events', []) if e.get('status', 'completed') == 'completed'}
             if not previous_ids.issubset({e['id'] for e in payload['events']}):
                 raise SyncError('API omitted existing events; keeping last good data')
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -184,6 +196,64 @@ def atomic_save(path, payload):
         if temp and temp.exists():
             temp.unlink()
 
+
+from html.parser import HTMLParser
+from urllib.parse import urlparse
+
+class PosterParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.hero_depth = 0
+        self.poster = None
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == 'div':
+            if self.hero_depth:
+                self.hero_depth += 1
+            elif 'c-hero__image' in attrs.get('class', '').split():
+                self.hero_depth = 1
+        if tag == 'img' and self.hero_depth and not self.poster:
+            url = attrs.get('src', '')
+            parsed = urlparse(url)
+            # A generic background is not an event poster.
+            if parsed.scheme == 'https' and parsed.hostname in ('ufc.com', 'www.ufc.com') and any(marker in parsed.path.upper() for marker in ('EVENT-ART', 'TEMP-HERO')):
+                self.poster = (url, attrs.get('alt') or 'Imagen promocional oficial de UFC')
+    def handle_endtag(self, tag):
+        if tag == 'div' and self.hero_depth:
+            self.hero_depth -= 1
+
+def public_bytes(url, max_bytes):
+    with urlopen(Request(url, headers={'User-Agent': 'Octagon/1.0'}), timeout=15) as response:
+        body = response.read(max_bytes + 1)
+        if len(body) > max_bytes:
+            raise SyncError('Public asset exceeded size limit')
+        return body
+
+def enrich_posters(payload, previous, image_dir, read_public=public_bytes):
+    old = {e['id']: e for e in previous.get('events', [])}
+    for event in payload['events']:
+        prior = old.get(event['id'], {})
+        event.update(poster=prior.get('poster'), posterSource=prior.get('posterSource'), posterAlt=prior.get('posterAlt'))
+        try:
+            parser = PosterParser()
+            parser.feed(read_public(event['source'], 1500000).decode('utf-8'))
+            if not parser.poster:
+                continue
+            url, alt = parser.poster
+            body = read_public(url, 4000000)
+            if not (body.startswith(b'\xff\xd8\xff') or body.startswith(b'\x89PNG') or (body.startswith(b'RIFF') and body[8:12] == b'WEBP')):
+                raise SyncError('Invalid poster image')
+            image_dir.mkdir(parents=True, exist_ok=True)
+            target = image_dir/f"{event['id']}.jpg"
+            with tempfile.NamedTemporaryFile(dir=image_dir, delete=False) as file:
+                file.write(body)
+                temporary = Path(file.name)
+            temporary.replace(target)
+            event.update(poster=f"assets/images/events/{event['id']}.jpg", posterSource=url, posterAlt=alt)
+        except (HTTPError, URLError, TimeoutError, OSError, SyncError, UnicodeDecodeError):
+            # Optional image failures must not block a valid card update.
+            continue
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=ROOT/'assets/data/ufc-events.json')
@@ -194,6 +264,8 @@ def main():
         return 1
     try:
         payload = synchronize(lambda path, params: request_json(path, key, params), datetime.now(timezone.utc))
+        previous = json.loads(args.output.read_text()) if args.output.exists() else {}
+        enrich_posters(payload, previous, args.output.parent.parent/'images/events')
         atomic_save(args.output, payload)
     except (SyncError, ValueError, TypeError, KeyError, AttributeError, OSError):
         print('UFC synchronization failed. Check credentials, quota, connectivity and provider schema. Last good file was preserved.', file=sys.stderr)

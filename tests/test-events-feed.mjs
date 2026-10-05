@@ -28,3 +28,13 @@ for (const mutate of [f=>f.events[0].source='javascript:alert(1)',f=>f.events[0]
 globalThis.fetch=async()=>({ok:true,json:async()=>live});
 assert.equal(await refreshEvents(),true); assert.equal(eventsFeed.unavailable,false);
 console.log('PASS: feed updates, attribution, freshness, network fallback, invalid payloads, recovery');
+
+const next = structuredClone(live);
+next.events = [{ ...live.events[0], id: 'ufc-336', number: 336, title: 'UFC 336', source: 'https://www.ufc.com/event/ufc-336', date: '2027-01-20T02:00:00Z', status: 'announced', bouts: [], poster: 'assets/images/events/ufc-336.jpg', posterAlt: 'UFC 336' }];
+globalThis.fetch=async()=>({ok:true,json:async()=>next});
+assert.equal(await refreshEvents(),true);
+assert.equal(eventsFeed.events[0].status,'announced');
+const badPoster=structuredClone(next);badPoster.events[0].poster='javascript:alert(1)';
+globalThis.fetch=async()=>({ok:true,json:async()=>badPoster});
+assert.equal(await refreshEvents(),false);
+console.log('PASS: upcoming events, incomplete cards, next year and poster validation');

@@ -40,3 +40,9 @@ La vista Carteleras incluye UFC 324–332, celebrados hasta el 5 de octubre de 2
 Actualización: descargar las páginas oficiales como `/tmp/ufc324.html` hasta `/tmp/ufc332.html`, ejecutar `python3 scripts/import-ufc-events.py /tmp` y revisar la copia antes de publicarla. El importador usa solo la biblioteca estándar. La copia HTML se conserva como respaldo. La sincronización automática usa el importador de API descrito en `API.md`.
 
 La API configurada es UFCalendar, un proveedor independiente. La fecha y fuente mostradas en Carteleras proceden del último archivo válido. La clave `UFCAL_KEY` activa la tarea de sincronización; hasta su primera ejecución se muestra la copia inicial de UFC. `API.md` describe la activación, frecuencia y publicación.
+
+## Próximos eventos y pósteres
+
+Añadidos con UFCalendar: UFC 333, 334 y 335. Consulta: 5 de octubre de 2026. La API enumera cinco combates principales para UFC 333, cinco para UFC 334 y tres para UFC 335; no se rellenan los restantes con combates inventados. Las carteleras anunciadas pueden cambiar. UFC 335 sigue titulado TBD en la API, pero sus combates permiten mostrar Oliveira vs Lopes sin inventar una cartelera completa.
+
+Imágenes promocionales descargadas de los bloques principales de UFC.com para UFC 324–334. UFC 334 usa el arte provisional oficial TEMP-HERO; UFC 335 solo tiene un fondo genérico en su página, que se descarta. La URL de origen y el texto alternativo se guardan con cada evento. Se acredita UFC; la consulta automática de imágenes es complementaria a la API y no utiliza su clave.
