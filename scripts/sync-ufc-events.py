@@ -60,7 +60,11 @@ def request_json(path, key, params=None):
 def event_number(event):
     if event.get('org') != 'ufc' or event.get('status') != 'completed':
         return None
-    match = re.fullmatch(r'UFC\s+(\d+)', event.get('numbering') or '')
+    numbering = str(event.get('numbering') or '').strip()
+    match = re.fullmatch(r'(?:UFC\s+)?(\d+)', numbering)
+    if not match:
+        # Some sponsored cards (e.g. Crypto.com UFC 331) have no numbering.
+        match = re.search(r'\bUFC\s+(\d+)(?=\s*(?::|$))', event.get('title') or '')
     return int(match.group(1)) if match else None
 
 def list_events(fetch, year, now):

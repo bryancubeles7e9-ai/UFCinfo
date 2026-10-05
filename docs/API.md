@@ -14,7 +14,7 @@ El workflow requiere Actions habilitado y permisos para que `GITHUB_TOKEN` escri
 
 ## Cómo se actualiza
 
-GitHub Actions ejecuta `scripts/sync-ufc-events.py` a las 00:17, 06:17, 12:17 y 18:17 UTC, y también permite ejecución manual. GitHub puede retrasar tareas programadas. El script pagina `/v1/events`, filtra `org=ufc`, `status=completed` y fechas del año UTC actual, y reconoce eventos por `numbering = UFC N`. No filtra por PPV: ese campo no equivale a evento numerado.
+GitHub Actions ejecuta `scripts/sync-ufc-events.py` a las 00:17, 06:17, 12:17 y 18:17 UTC, y también permite ejecución manual. GitHub puede retrasar tareas programadas. El script pagina `/v1/events`, filtra `org=ufc`, `status=completed` y fechas del año UTC actual, y reconoce eventos por `numbering = UFC N` o `N`. Cuando el campo falta, reconoce `UFC N` en el título, incluyendo prefijos de patrocinadores como Crypto.com. No filtra por PPV: ese campo no equivale a evento numerado.
 
 Para cada evento consulta `/v1/events/{id}` y conserva `card_section=main`, eliminando combates cancelados. Ordena el estelar primero y el resto por `ordering`. Mapea ganadores por identificador; muestra empates y No contest sin inventar ganador. No importa cuotas, imágenes ni perfiles de la API. Conserva únicamente los campos que la web muestra.
 

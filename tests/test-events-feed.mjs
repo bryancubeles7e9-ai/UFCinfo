@@ -4,7 +4,7 @@ const snapshot = await readFile(new URL('../assets/js/official-events.js', impor
 let code = await readFile(new URL('../assets/js/events-feed.js', import.meta.url), 'utf8');
 code = code.replace("import { officialEvents } from './official-events.js';", snapshot).replace("new URL('../data/ufc-events.json', import.meta.url)", "new URL('https://example.test/assets/data/ufc-events.json')");
 const { eventsFeed, refreshEvents } = await import('data:text/javascript;base64,' + Buffer.from(code).toString('base64'));
-const initial = JSON.parse(await readFile(new URL('../assets/data/ufc-events.json', import.meta.url),'utf8'));
+const initial = { schemaVersion: 1, year: 2026, source: 'UFC', sourceUrl: 'https://www.ufc.com', synchronizedAt: null, events: JSON.parse(snapshot.slice(snapshot.indexOf('['), snapshot.lastIndexOf(';'))) };
 let requested;
 globalThis.fetch = async (url, options) => { requested=options; return {ok:true,json:async()=>initial}; };
 assert.equal(await refreshEvents(),true);

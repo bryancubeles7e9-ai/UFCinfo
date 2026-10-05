@@ -61,6 +61,11 @@ class SyncTests(unittest.TestCase):
         self.assertEqual(calls[0]['status'],'completed')
         self.assertNotIn('is_ppv',calls[0])
 
+    def test_provider_numbering_variants(self):
+        for numbering, title, expected in [('332','UFC 332: Silva vs Wang',332),('UFC 332','UFC 332: Silva vs Wang',332),(None,'Crypto.com UFC 331',331),('Fight Night','UFC Fight Night: Bautista vs Oliveira',None),(None,'UFC Freedom 250',None),('DWCS 93','Dana White Contender Series 93',None)]:
+            row=event(); row.update(numbering=numbering,title=title)
+            self.assertEqual(sync.event_number(row),expected)
+
     def test_repeating_cursor_fails(self):
         with self.assertRaises(sync.SyncError): sync.list_events(lambda p,q:page([],True,'same'),2026,NOW)
 
