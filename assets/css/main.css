@@ -2530,3 +2530,9 @@ button.ranking-name:hover {
     font-size: 25px;
   }
 }
+
+.official-bout-names { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center; padding: 1.2rem 0; }
+.official-bout-names > strong:last-child { text-align: right; }
+.official-bout-names > span { color: var(--muted); }
+.official-result { line-height: 1.7; }
+@media (max-width: 600px) { .official-bout-names { gap: .6rem; font-size: .9rem; } .bout-heading { flex-wrap: wrap; gap: .5rem; } }

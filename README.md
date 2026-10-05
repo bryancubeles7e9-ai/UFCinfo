@@ -13,6 +13,7 @@ Abre esta carpeta en VS Code, pulsa con el botón derecho en `index.html` y sele
 - Búsqueda por nombre, apodo, país y base marcial; filtros por división, estilo, guardia y cinturones.
 - Distintivos de campeón actual/excampeón y palmarés de títulos UFC absolutos y BMF, excluyendo interinos.
 - Guardia de UFC Stats y disciplina de formación con notas y enlaces de procedencia.
+- Historial UFC 324–332 de 2026: cartelera principal completa, resultados disponibles y enlaces oficiales; sincronización automática preparada con UFCalendar (requiere clave).
 - Carteleras imaginarias, creación de eventos, cuenta atrás y descarga de calendario `.ics`.
 - Rankings: top 10 de cinco categorías, campeón separado, búsqueda y acceso a fichas.
 - Pronósticos personales por combate.
@@ -47,3 +48,9 @@ La aplicación utiliza la clave `octagon-workspace-v1` en `localStorage`, distin
 Cada luchador tiene cinco puntuaciones ficticias de 0 a 100. El índice es la media ponderada de las puntuaciones elegidas. La barra muestra la proporción entre ambos índices, no una probabilidad de victoria. Si todos los pesos son cero o se elige el mismo luchador en ambas esquinas, no se permite guardar un análisis.
 
 Los eventos pueden cruzar divisiones: son propuestas imaginarias de aficionados. No son anuncios oficiales. Los nombres corresponden a atletas reales, y la sección Rankings incluye una copia fechada de cinco listas de UFC; las fichas muestran una copia fechada de división, récord, apodo, estilo, altura, alcance y lugar de nacimiento consultados en UFC. No hay resultados en directo. Consulta `docs/DATOS.md`.
+
+## Actualizaciones automáticas de eventos
+
+Consulta [docs/API.md](docs/API.md) para activar `UFCAL_KEY` y la tarea de GitHub Actions. El navegador carga `assets/data/ufc-events.json` al abrir la web, cada cinco minutos y al volver a la pestaña. La clave nunca se envía al navegador. Sin clave se mantiene la copia inicial. La publicación opcional con GitHub Pages requiere configuración adicional; la sincronización del repositorio funciona de forma independiente.
+
+Verificación: `python3 -m unittest discover -s tests -p 'test_*.py'`.

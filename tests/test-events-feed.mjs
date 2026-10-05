@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+const snapshot = await readFile(new URL('../assets/js/official-events.js', import.meta.url), 'utf8');
+let code = await readFile(new URL('../assets/js/events-feed.js', import.meta.url), 'utf8');
+code = code.replace("import { officialEvents } from './official-events.js';", snapshot).replace("new URL('../data/ufc-events.json', import.meta.url)", "new URL('https://example.test/assets/data/ufc-events.json')");
+const { eventsFeed, refreshEvents } = await import('data:text/javascript;base64,' + Buffer.from(code).toString('base64'));
+const initial = JSON.parse(await readFile(new URL('../assets/data/ufc-events.json', import.meta.url),'utf8'));
+let requested;
+globalThis.fetch = async (url, options) => { requested=options; return {ok:true,json:async()=>initial}; };
+assert.equal(await refreshEvents(),true);
+assert.equal(eventsFeed.automatic,false);
+assert.equal(requested.cache,'no-store');
+const live = structuredClone(initial);
+live.source='UFCalendar'; live.sourceUrl='https://www.ufcalendar.com'; live.synchronizedAt='2026-10-05T10:00:00Z';
+live.events[8].bouts[0].winner=live.events[8].bouts[0].blue;
+globalThis.fetch = async () => ({ok:true,json:async()=>live});
+assert.equal(await refreshEvents(),true);
+assert.equal(eventsFeed.automatic,true);
+assert.equal(eventsFeed.synchronizedAt,live.synchronizedAt);
+const previous=eventsFeed.events;
+globalThis.fetch = async () => {throw Error('Network unavailable');};
+assert.equal(await refreshEvents(),false); assert.equal(eventsFeed.events,previous); assert.equal(eventsFeed.unavailable,true);
+for (const mutate of [f=>f.events[0].source='javascript:alert(1)',f=>f.events[0].bouts[0].winner='Not a participant',f=>f.synchronizedAt='invalid',f=>f.events.push(f.events[0])]) {
+ const invalid=structuredClone(live); mutate(invalid);
+ globalThis.fetch=async()=>({ok:true,json:async()=>invalid});
+ assert.equal(await refreshEvents(),false); assert.equal(eventsFeed.events,previous);
+}
+globalThis.fetch=async()=>({ok:true,json:async()=>live});
+assert.equal(await refreshEvents(),true); assert.equal(eventsFeed.unavailable,false);
+console.log('PASS: feed updates, attribution, freshness, network fallback, invalid payloads, recovery');

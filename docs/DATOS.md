@@ -30,3 +30,13 @@ Los detalles de los 24 perfiles figuran en `fighter-details-sources.json`. La co
 La guardia procede del campo Stance del directorio de UFC Stats. Orthodox se muestra como «Diestro / ortodoxa», Southpaw como «Zurdo / southpaw» y Switch como «Alterna ambas». Es una postura de combate registrada, no una comprobación de la mano dominante ni una exclusión de cambios ocasionales. Cuando la fuente dice Switch, no se inventa una guardia principal.
 
 La base marcial resume la formación documentada en las biografías y entrevistas de UFC; puede incluir varias disciplinas. No equivale necesariamente al campo Fighting style ni implica que el atleta sólo practique esa disciplina. En Strickland se conserva «MMA / Jiu-jitsu brasileño» porque no se acredita una única base tradicional. Las notas de cada ficha explican el fundamento. Los perfiles de Aspinall y Grasso enlazan también a entrevistas o artículos de UFC sobre su formación.
+
+## Eventos numerados de 2026
+
+La vista Carteleras incluye UFC 324–332, celebrados hasta el 5 de octubre de 2026, con los cinco combates de la cartelera principal de cada evento. Fuente: https://www.ufc.com/event/ufc-324 (y sucesivamente hasta ufc-332). No incluye Fight Nights, preliminares ni Freedom 250, que no es un evento numerado. Las fechas provienen del timestamp de inicio de la cartelera principal y se muestran en la zona del navegador; pueden caer al día siguiente respecto a la fecha local del recinto.
+
+`assets/js/official-events.js` contiene la copia independiente de los datos personales del navegador. Los resultados ausentes en UFC se muestran pendientes, nunca se deducen de cuotas ni de perfiles. UFC 332 todavía no mostraba resultados en su página de evento al descargarla. No se permiten pronósticos retrospectivos sobre este historial. Los eventos imaginarios siguen accesibles mediante sus filtros.
+
+Actualización: descargar las páginas oficiales como `/tmp/ufc324.html` hasta `/tmp/ufc332.html`, ejecutar `python3 scripts/import-ufc-events.py /tmp` y revisar la copia antes de publicarla. El importador usa solo la biblioteca estándar. La copia HTML se conserva como respaldo. La sincronización automática usa el importador de API descrito en `API.md`.
+
+La API configurada es UFCalendar, un proveedor independiente. La fecha y fuente mostradas en Carteleras proceden del último archivo válido. La clave `UFCAL_KEY` activa la tarea de sincronización; hasta su primera ejecución se muestra la copia inicial de UFC. `API.md` describe la activación, frecuencia y publicación.
