@@ -1,0 +1,525 @@
+// Official UFC main-card snapshot. Refresh with scripts/import-ufc-events.py.
+export const officialEvents = [
+  {
+    "id": "ufc-324",
+    "number": 324,
+    "title": "UFC 324",
+    "subtitle": "Gaethje vs Pimblett",
+    "date": "2026-01-25T02:00:00+00:00",
+    "location": "T-Mobile Arena, Las Vegas United States",
+    "type": "official",
+    "source": "https://www.ufc.com/event/ufc-324",
+    "checkedAt": "2026-10-05",
+    "bouts": [
+      {
+        "red": "Justin Gaethje",
+        "blue": "Paddy Pimblett",
+        "division": "Lightweight Interim Title Bout",
+        "winner": "Justin Gaethje",
+        "method": "Decision - Unanimous",
+        "round": "5",
+        "time": "5:00"
+      },
+      {
+        "red": "Sean O'Malley",
+        "blue": "Song Yadong",
+        "division": "Bantamweight Bout",
+        "winner": "Sean O'Malley",
+        "method": "Decision - Unanimous",
+        "round": "3",
+        "time": "5:00"
+      },
+      {
+        "red": "Waldo Cortes Acosta",
+        "blue": "Derrick Lewis",
+        "division": "Heavyweight Bout",
+        "winner": "Waldo Cortes Acosta",
+        "method": "KO/TKO",
+        "round": "2",
+        "time": "3:14"
+      },
+      {
+        "red": "Natalia Silva",
+        "blue": "Rose Namajunas",
+        "division": "Women's Flyweight Bout",
+        "winner": "Natalia Silva",
+        "method": "Decision - Unanimous",
+        "round": "3",
+        "time": "5:00"
+      },
+      {
+        "red": "Arnold Allen",
+        "blue": "Jean Silva",
+        "division": "Featherweight Bout",
+        "winner": "Jean Silva",
+        "method": "Decision - Unanimous",
+        "round": "3",
+        "time": "5:00"
+      }
+    ]
+  },
+  {
+    "id": "ufc-325",
+    "number": 325,
+    "title": "UFC 325",
+    "subtitle": "Volkanovski vs Lopes 2",
+    "date": "2026-02-01T02:00:00+00:00",
+    "location": "Afterpay Arena, Sydney Olympic Park Australia",
+    "type": "official",
+    "source": "https://www.ufc.com/event/ufc-325",
+    "checkedAt": "2026-10-05",
+    "bouts": [
+      {
+        "red": "Alexander Volkanovski",
+        "blue": "Diego Lopes",
+        "division": "Featherweight Title Bout",
+        "winner": "Alexander Volkanovski",
+        "method": "Decision - Unanimous",
+        "round": "5",
+        "time": "5:00"
+      },
+      {
+        "red": "Dan Hooker",
+        "blue": "Benoît Saint Denis",
+        "division": "Lightweight Bout",
+        "winner": "Benoît Saint Denis",
+        "method": "KO/TKO",
+        "round": "2",
+        "time": "4:45"
+      },
+      {
+        "red": "Rafael Fiziev",
+        "blue": "Mauricio Ruffy",
+        "division": "Lightweight Bout",
+        "winner": "Mauricio Ruffy",
+        "method": "KO/TKO",
+        "round": "2",
+        "time": "4:30"
+      },
+      {
+        "red": "Tai Tuivasa",
+        "blue": "Tallison Teixeira",
+        "division": "Heavyweight Bout",
+        "winner": "Tallison Teixeira",
+        "method": "Decision - Unanimous",
+        "round": "3",
+        "time": "5:00"
+      },
+      {
+        "red": "Quillan Salkilld",
+        "blue": "Jamie Mullarkey",
+        "division": "Lightweight Bout",
+        "winner": "Quillan Salkilld",
+        "method": "Submission",
+        "round": "1",
+        "time": "3:02"
+      }
+    ]
+  },
+  {
+    "id": "ufc-326",
+    "number": 326,
+    "title": "UFC 326",
+    "subtitle": "Holloway vs Oliveira 2",
+    "date": "2026-03-08T02:00:00+00:00",
+    "location": "T-Mobile Arena, Las Vegas United States",
+    "type": "official",
+    "source": "https://www.ufc.com/event/ufc-326",
+    "checkedAt": "2026-10-05",
+    "bouts": [
+      {
+        "red": "Max Holloway",
+        "blue": "Charles Oliveira",
+        "division": "Lightweight Bout",
+        "winner": "Charles Oliveira",
+        "method": "Decision - Unanimous",
+        "round": "5",
+        "time": "5:00"
+      },
+      {
+        "red": "Caio Borralho",
+        "blue": "Reinier de Ridder",
+        "division": "Middleweight Bout",
+        "winner": "Caio Borralho",
+        "method": "Decision - Unanimous",
+        "round": "3",
+        "time": "5:00"
+      },
+      {
+        "red": "Rob Font",
+        "blue": "Raul Rosas Jr.",
+        "division": "Bantamweight Bout",
+        "winner": "Raul Rosas Jr.",
+        "method": "Decision - Unanimous",
+        "round": "3",
+        "time": "5:00"
+      },
+      {
+        "red": "Drew Dober",
+        "blue": "Michael Johnson",
+        "division": "Lightweight Bout",
+        "winner": "Drew Dober",
+        "method": "KO/TKO",
+        "round": "2",
+        "time": "1:53"
+      },
+      {
+        "red": "Gregory Rodrigues",
+        "blue": "Brunno Ferreira",
+        "division": "Middleweight Bout",
+        "winner": "Gregory Rodrigues",
+        "method": "KO/TKO",
+        "round": "1",
+        "time": "1:47"
+      }
+    ]
+  },
+  {
+    "id": "ufc-327",
+    "number": 327,
+    "title": "UFC 327",
+    "subtitle": "Prochazka vs Ulberg",
+    "date": "2026-04-12T01:00:00+00:00",
+    "location": "Kaseya Center, Miami United States",
+    "type": "official",
+    "source": "https://www.ufc.com/event/ufc-327",
+    "checkedAt": "2026-10-05",
+    "bouts": [
+      {
+        "red": "Jiří Procházka",
+        "blue": "Carlos Ulberg",
+        "division": "Light Heavyweight Title Bout",
+        "winner": "Carlos Ulberg",
+        "method": "KO/TKO",
+        "round": "1",
+        "time": "3:45"
+      },
+      {
+        "red": "Azamat Murzakanov",
+        "blue": "Paulo Costa",
+        "division": "Light Heavyweight Bout",
+        "winner": "Paulo Costa",
+        "method": "KO/TKO",
+        "round": "3",
+        "time": "1:23"
+      },
+      {
+        "red": "Curtis Blaydes",
+        "blue": "Josh Hokit",
+        "division": "Heavyweight Bout",
+        "winner": "Josh Hokit",
+        "method": "Decision - Unanimous",
+        "round": "3",
+        "time": "5:00"
+      },
+      {
+        "red": "Dominick Reyes",
+        "blue": "Johnny Walker",
+        "division": "Light Heavyweight Bout",
+        "winner": "Dominick Reyes",
+        "method": "Decision - Split",
+        "round": "3",
+        "time": "5:00"
+      },
+      {
+        "red": "Cub Swanson",
+        "blue": "Nate Landwehr",
+        "division": "Featherweight Bout",
+        "winner": "Cub Swanson",
+        "method": "KO/TKO",
+        "round": "1",
+        "time": "4:06"
+      }
+    ]
+  },
+  {
+    "id": "ufc-328",
+    "number": 328,
+    "title": "UFC 328",
+    "subtitle": "Chimaev vs Strickland",
+    "date": "2026-05-10T01:00:00+00:00",
+    "location": "Prudential Center, Newark United States",
+    "type": "official",
+    "source": "https://www.ufc.com/event/ufc-328",
+    "checkedAt": "2026-10-05",
+    "bouts": [
+      {
+        "red": "Khamzat Chimaev",
+        "blue": "Sean Strickland",
+        "division": "Middleweight Title Bout",
+        "winner": "Sean Strickland",
+        "method": "Decision - Split",
+        "round": "5",
+        "time": "5:00"
+      },
+      {
+        "red": "Joshua Van",
+        "blue": "Tatsuro Taira",
+        "division": "Flyweight Title Bout",
+        "winner": "Joshua Van",
+        "method": "KO/TKO",
+        "round": "5",
+        "time": "1:32"
+      },
+      {
+        "red": "Alexander Volkov",
+        "blue": "Waldo Cortes Acosta",
+        "division": "Heavyweight Bout",
+        "winner": "Alexander Volkov",
+        "method": "Decision - Unanimous",
+        "round": "3",
+        "time": "5:00"
+      },
+      {
+        "red": "Sean Brady",
+        "blue": "Joaquin Buckley",
+        "division": "Welterweight Bout",
+        "winner": "Sean Brady",
+        "method": "Decision - Unanimous",
+        "round": "3",
+        "time": "5:00"
+      },
+      {
+        "red": "King Green",
+        "blue": "Jeremy Stephens",
+        "division": "Lightweight Bout",
+        "winner": "King Green",
+        "method": "Submission",
+        "round": "1",
+        "time": "4:20"
+      }
+    ]
+  },
+  {
+    "id": "ufc-329",
+    "number": 329,
+    "title": "UFC 329",
+    "subtitle": "McGregor vs Holloway 2",
+    "date": "2026-07-12T01:00:00+00:00",
+    "location": "T-Mobile Arena, Las Vegas United States",
+    "type": "official",
+    "source": "https://www.ufc.com/event/ufc-329",
+    "checkedAt": "2026-10-05",
+    "bouts": [
+      {
+        "red": "Conor McGregor",
+        "blue": "Max Holloway",
+        "division": "Welterweight Bout",
+        "winner": "Max Holloway",
+        "method": "KO/TKO",
+        "round": "1",
+        "time": "1:09"
+      },
+      {
+        "red": "Benoît Saint Denis",
+        "blue": "Paddy Pimblett",
+        "division": "Lightweight Bout",
+        "winner": "Paddy Pimblett",
+        "method": "Submission",
+        "round": "1",
+        "time": "0:52"
+      },
+      {
+        "red": "Cory Sandhagen",
+        "blue": "Mario Bautista",
+        "division": "Bantamweight Bout",
+        "winner": "Mario Bautista",
+        "method": "Decision - Unanimous",
+        "round": "3",
+        "time": "5:00"
+      },
+      {
+        "red": "Brandon Royval",
+        "blue": "Lone’er Kavanagh",
+        "division": "Flyweight Bout",
+        "winner": "Brandon Royval",
+        "method": "Submission",
+        "round": "3",
+        "time": "3:40"
+      },
+      {
+        "red": "King Green",
+        "blue": "Terrance McKinney",
+        "division": "Lightweight Bout",
+        "winner": "King Green",
+        "method": "KO/TKO",
+        "round": "1",
+        "time": "4:59"
+      }
+    ]
+  },
+  {
+    "id": "ufc-330",
+    "number": 330,
+    "title": "UFC 330",
+    "subtitle": "Makhachev vs Machado Garry",
+    "date": "2026-08-16T01:00:00+00:00",
+    "location": "Xfinity Mobile Arena, Philadelphia United States",
+    "type": "official",
+    "source": "https://www.ufc.com/event/ufc-330",
+    "checkedAt": "2026-10-05",
+    "bouts": [
+      {
+        "red": "Islam Makhachev",
+        "blue": "Ian Machado Garry",
+        "division": "Welterweight Title Bout",
+        "winner": "Islam Makhachev",
+        "method": "Decision - Unanimous",
+        "round": "5",
+        "time": "5:00"
+      },
+      {
+        "red": "Mackenzie Dern",
+        "blue": "Gillian Robertson",
+        "division": "Women's Strawweight Title Bout",
+        "winner": "Mackenzie Dern",
+        "method": "Decision - Unanimous",
+        "round": "5",
+        "time": "5:00"
+      },
+      {
+        "red": "Jalin Turner",
+        "blue": "Kauê Fernandes",
+        "division": "Lightweight Bout",
+        "winner": "Jalin Turner",
+        "method": "KO/TKO",
+        "round": "1",
+        "time": "0:39"
+      },
+      {
+        "red": "Mansur Abdul-Malik",
+        "blue": "Dustin Stoltzfus",
+        "division": "Middleweight Bout",
+        "winner": "Dustin Stoltzfus",
+        "method": "Submission",
+        "round": "2",
+        "time": "4:25"
+      },
+      {
+        "red": "Edson Barboza",
+        "blue": "Esteban Ribovics",
+        "division": "Lightweight Bout",
+        "winner": "Esteban Ribovics",
+        "method": "KO/TKO",
+        "round": "2",
+        "time": "1:32"
+      }
+    ]
+  },
+  {
+    "id": "ufc-331",
+    "number": 331,
+    "title": "UFC 331",
+    "subtitle": "Van vs Pantoja 2",
+    "date": "2026-09-20T01:00:00+00:00",
+    "location": "Crypto.com Arena, Los Angeles United States",
+    "type": "official",
+    "source": "https://www.ufc.com/event/ufc-331",
+    "checkedAt": "2026-10-05",
+    "bouts": [
+      {
+        "red": "Joshua Van",
+        "blue": "Alexandre Pantoja",
+        "division": "Flyweight Title Bout",
+        "winner": "Joshua Van",
+        "method": "Decision - Unanimous",
+        "round": "5",
+        "time": "5:00"
+      },
+      {
+        "red": "Arman Tsarukyan",
+        "blue": "Mauricio Ruffy",
+        "division": "Lightweight Bout",
+        "winner": "Arman Tsarukyan",
+        "method": "KO/TKO",
+        "round": "1",
+        "time": "4:56"
+      },
+      {
+        "red": "Patricio Pitbull",
+        "blue": "Dooho Choi",
+        "division": "Featherweight Bout",
+        "winner": "Patricio Pitbull",
+        "method": "KO/TKO",
+        "round": "1",
+        "time": "3:28"
+      },
+      {
+        "red": "Gable Steveson",
+        "blue": "Sean Sharaf",
+        "division": "Heavyweight Bout",
+        "winner": "Sean Sharaf",
+        "method": "KO/TKO",
+        "round": "1",
+        "time": "0:12"
+      },
+      {
+        "red": "Alonzo Menifield",
+        "blue": "Iwo Baraniewski",
+        "division": "Light Heavyweight Bout",
+        "winner": "Alonzo Menifield",
+        "method": "Decision - Split",
+        "round": "3",
+        "time": "5:00"
+      }
+    ]
+  },
+  {
+    "id": "ufc-332",
+    "number": 332,
+    "title": "UFC 332",
+    "subtitle": "Silva vs Wang",
+    "date": "2026-10-04T00:00:00+00:00",
+    "location": "Delta Center, Salt Lake City United States",
+    "type": "official",
+    "source": "https://www.ufc.com/event/ufc-332",
+    "checkedAt": "2026-10-05",
+    "bouts": [
+      {
+        "red": "Natalia Silva",
+        "blue": "Wang Cong",
+        "division": "Women's Flyweight Title Bout",
+        "winner": null,
+        "method": "",
+        "round": "",
+        "time": ""
+      },
+      {
+        "red": "Deiveson Figueiredo",
+        "blue": "Payton Talbott",
+        "division": "Bantamweight Bout",
+        "winner": null,
+        "method": "",
+        "round": "",
+        "time": ""
+      },
+      {
+        "red": "King Green",
+        "blue": "Esteban Ribovics",
+        "division": "Lightweight Bout",
+        "winner": null,
+        "method": "",
+        "round": "",
+        "time": ""
+      },
+      {
+        "red": "Roberto Soldić",
+        "blue": "Khaos Williams",
+        "division": "Welterweight Bout",
+        "winner": null,
+        "method": "",
+        "round": "",
+        "time": ""
+      },
+      {
+        "red": "Ateba Gautier",
+        "blue": "Roman Kopylov",
+        "division": "Middleweight Bout",
+        "winner": null,
+        "method": "",
+        "round": "",
+        "time": ""
+      }
+    ]
+  }
+];

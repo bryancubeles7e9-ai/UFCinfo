@@ -15,7 +15,7 @@ Octagon es un proyecto independiente de aficionados, sin afiliación con UFC. Pa
 
 ## Rankings
 
-La sección Rankings muestra una selección del top 10 de cinco categorías de [All Rankings de UFC](https://www.ufc.com/rankings): libra por libra masculino y femenino, ligero, wélter y paja femenino. Se consultó el 2 de octubre de 2026 mediante la versión indexada de la página oficial, cuya actualización figura como 29 de septiembre. Se utiliza All Rankings, no All Meta Rankings. Es una copia estática: no se actualiza al recargar. Los campeones se presentan separados de las posiciones 1–10. Consulta siempre la fuente para la lista completa y los cambios posteriores.
+La sección Rankings muestra el top 10 de las 11 divisiones de peso y las dos listas libra por libra de [All Rankings de UFC](https://www.ufc.com/rankings): mosca, gallo, pluma, ligero, wélter, medio, semipesado y pesado masculinos; paja, mosca y gallo femeninos; libra por libra masculino y femenino. Se utiliza All Rankings, no All Meta Rankings. `scripts/sync-ufc-rankings.py` consulta la página oficial cada 12 horas mediante GitHub Actions y guarda `assets/data/ufc-rankings.json`. La web comprueba ese archivo al abrirse, cada cinco minutos y al volver a la pestaña. Los campeones se presentan separados de las posiciones 1–10; los empates conservan su posición oficial. Si falla la consulta o la validación, se conservan los últimos datos válidos. La copia incluida en JavaScript sirve de respaldo si el archivo no está disponible. Consulta siempre la fuente para la lista completa.
 
 ## Catálogo ampliado y fotografías
 
@@ -30,3 +30,19 @@ Los detalles de los 24 perfiles figuran en `fighter-details-sources.json`. La co
 La guardia procede del campo Stance del directorio de UFC Stats. Orthodox se muestra como «Diestro / ortodoxa», Southpaw como «Zurdo / southpaw» y Switch como «Alterna ambas». Es una postura de combate registrada, no una comprobación de la mano dominante ni una exclusión de cambios ocasionales. Cuando la fuente dice Switch, no se inventa una guardia principal.
 
 La base marcial resume la formación documentada en las biografías y entrevistas de UFC; puede incluir varias disciplinas. No equivale necesariamente al campo Fighting style ni implica que el atleta sólo practique esa disciplina. En Strickland se conserva «MMA / Jiu-jitsu brasileño» porque no se acredita una única base tradicional. Las notas de cada ficha explican el fundamento. Los perfiles de Aspinall y Grasso enlazan también a entrevistas o artículos de UFC sobre su formación.
+
+## Eventos numerados de 2026
+
+La vista Carteleras incluye UFC 324–332, celebrados hasta el 5 de octubre de 2026, con los cinco combates de la cartelera principal de cada evento. Fuente: https://www.ufc.com/event/ufc-324 (y sucesivamente hasta ufc-332). No incluye Fight Nights, preliminares ni Freedom 250, que no es un evento numerado. Las fechas provienen del timestamp de inicio de la cartelera principal y se muestran en la zona del navegador; pueden caer al día siguiente respecto a la fecha local del recinto.
+
+`assets/js/official-events.js` contiene la copia independiente de los datos personales del navegador. Los resultados ausentes en UFC se muestran pendientes, nunca se deducen de cuotas ni de perfiles. UFC 332 todavía no mostraba resultados en su página de evento al descargarla. No se permiten pronósticos retrospectivos sobre este historial. Los eventos imaginarios siguen accesibles mediante sus filtros.
+
+Actualización: descargar las páginas oficiales como `/tmp/ufc324.html` hasta `/tmp/ufc332.html`, ejecutar `python3 scripts/import-ufc-events.py /tmp` y revisar la copia antes de publicarla. El importador usa solo la biblioteca estándar. La copia HTML se conserva como respaldo. La sincronización automática usa el importador de API descrito en `API.md`.
+
+La API configurada es UFCalendar, un proveedor independiente. La fecha y fuente mostradas en Carteleras proceden del último archivo válido. La clave `UFCAL_KEY` activa la tarea de sincronización; hasta su primera ejecución se muestra la copia inicial de UFC. `API.md` describe la activación, frecuencia y publicación.
+
+## Próximos eventos y pósteres
+
+Añadidos con UFCalendar: UFC 333, 334 y 335. Consulta: 5 de octubre de 2026. La API enumera cinco combates principales para UFC 333, cinco para UFC 334 y tres para UFC 335; no se rellenan los restantes con combates inventados. Las carteleras anunciadas pueden cambiar. UFC 335 sigue titulado TBD en la API, pero sus combates permiten mostrar Oliveira vs Lopes sin inventar una cartelera completa.
+
+Imágenes promocionales descargadas de los bloques principales de UFC.com para UFC 324–334. UFC 334 usa el arte provisional oficial TEMP-HERO; UFC 335 solo tiene un fondo genérico en su página, que se descarta. La URL de origen y el texto alternativo se guardan con cada evento. Se acredita UFC; la consulta automática de imágenes es complementaria a la API y no utiliza su clave.

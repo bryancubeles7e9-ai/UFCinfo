@@ -89,7 +89,7 @@
           </article>
           <article>
             <span>02 / IMAGINA</span><strong id="event-count">03</strong>
-            <p>Carteleras de demostración</p>
+            <p>Eventos numerados UFC</p>
           </article>
           <article>
             <span>03 / ANALIZA</span><strong>05</strong>
@@ -102,8 +102,8 @@
         </section>
         <div class="section-heading">
           <div>
-            <p class="eyebrow">TU PRÓXIMA NOCHE DE COMBATE</p>
-            <h2>El escenario está listo.</h2>
+            <p class="eyebrow" id="featured-event-label">PRÓXIMO EVENTO NUMERADO</p>
+            <h2 id="featured-event-title">La próxima noche de combate.</h2>
           </div>
           <a href="#eventos" class="text-link">Ver todas las carteleras ↗</a>
         </div>
@@ -136,17 +136,20 @@
       <section class="view" data-view="eventos" hidden>
         <div class="page-heading">
           <div>
-            <p class="eyebrow">FIGHT NIGHT, A TU MANERA</p>
-            <h1>TU CARTELERA<span>.</span></h1>
+            <p class="eyebrow">EL AÑO DENTRO DEL OCTÁGONO</p>
+            <h1>CARTELERAS<span>.</span></h1>
             <p>
-              Explora eventos de ejemplo o diseña la noche que te gustaría ver.
+              Próximos eventos numerados anunciados y resultados de este año, con su cartelera principal.
             </p>
           </div>
           <button class="button" data-builder>＋ Crear cartelera</button>
         </div>
         <div class="toolbar">
           <div class="segmented" aria-label="Filtrar eventos">
-            <button data-event-filter="all" class="active">Todos</button
+            <button data-event-filter="upcoming" class="active">Próximos</button
+            ><button data-event-filter="completed">Finalizados</button
+            ><button data-event-filter="official">Todos UFC</button
+            ><button data-event-filter="all">Todos</button
             ><button data-event-filter="demo">Demostración</button
             ><button data-event-filter="custom">Mis eventos</button>
           </div>
@@ -159,6 +162,8 @@
               aria-label="Buscar evento"
           /></label>
         </div>
+        <p class="data-note" id="event-feed-status" role="status" aria-live="polite">Cargando última actualización de las carteleras…</p>
+        <a class="text-link" id="event-feed-source" href="https://www.ufc.com" target="_blank" rel="noopener noreferrer">Fuente: UFC ↗</a>
         <div class="event-list" id="event-list"></div>
       </section>
       <section class="view" data-view="luchadores" hidden>
@@ -232,7 +237,7 @@
             <p class="eyebrow">LA JERARQUÍA DEL OCTÁGONO</p>
             <h1>LOS RANKINGS<span>.</span></h1>
             <p>
-              Explora el top 10 de cinco clasificaciones publicadas por UFC y
+              Explora el top 10 de todas las divisiones de peso y las listas libra por libra de UFC y
               descubre quién ocupa cada posición.
             </p>
           </div>
@@ -247,7 +252,7 @@
         <div class="ranking-source">
           <span class="badge orange">FUENTE: UFC</span>
           <p id="ranking-source-date"></p>
-          <span>Copia fechada · Sin actualización automática</span>
+          <span>Actualización programada cada 12 horas</span>
         </div>
         <div class="toolbar ranking-toolbar">
           <label class="field-label ranking-category-label"
@@ -453,8 +458,8 @@
     <footer>
       <div class="footer-brand">OCTAGON<span>INSIDE THE FIGHT.</span></div>
       <p>
-        Proyecto de aficionados inspirado en UFC. Fotografías: UFC. Carteleras y
-        puntuaciones de demostración.<br />Favoritos y análisis se guardan en
+        Proyecto de aficionados inspirado en UFC. Fotografías y eventos numerados: UFC. Carteleras de aficionados y
+        puntuaciones ficticias.<br />Favoritos y análisis se guardan en
         este navegador. Sin conexión a resultados en directo.
       </p>
       <div>

@@ -1,0 +1,110 @@
+name: Actualizar eventos UFC
+on:
+  schedule:
+    - cron: '17 */12 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'assets/**'
+      - 'scripts/sync-ufc-events.py'
+      - 'scripts/sync-ufc-rankings.py'
+      - '.github/workflows/ufc-events.yml'
+permissions:
+  contents: read
+concurrency:
+  group: octagon-ufc-sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    outputs:
+      revision: ${{ steps.revision.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Test importador
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test carga dinámica
+        run: node tests/test-events-feed.mjs
+      - name: Test rankings dinámicos
+        run: node tests/test-rankings-feed.mjs
+      - name: Actualizar rankings oficiales
+        continue-on-error: true
+        run: python3 scripts/sync-ufc-rankings.py
+      - name: Guardar rankings actualizados
+        run: |
+          git add assets/data/ufc-rankings.json
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Actualizar rankings oficiales UFC'
+            git push origin HEAD:main
+          fi
+      - name: Comprobar clave
+        id: key
+        env:
+          UFCAL_KEY: ${{ secrets.UFCAL_KEY }}
+        run: |
+          if [ -n "$UFCAL_KEY" ]; then
+            echo 'configured=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'configured=false' >> "$GITHUB_OUTPUT"
+            echo '::notice::Configura UFCAL_KEY en los secretos del repositorio para activar la API. Se conserva la copia actual.'
+          fi
+      - name: Consultar UFCalendar
+        if: steps.key.outputs.configured == 'true'
+        env:
+          UFCAL_KEY: ${{ secrets.UFCAL_KEY }}
+        run: python3 scripts/sync-ufc-events.py
+      - name: Guardar datos actualizados
+        if: steps.key.outputs.configured == 'true'
+        run: |
+          git add assets/data/ufc-events.json
+          if [ -d assets/images/events ]; then git add assets/images/events; fi
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Actualizar carteleras y resultados UFC'
+            git push origin HEAD:main
+          fi
+      - name: Identificar versión
+        id: revision
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+  publish:
+    # Opt in only after GitHub Pages is configured. API synchronization works without Pages.
+    if: vars.OCTAGON_PAGES_ENABLED == 'true'
+    needs: sync
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ needs.sync.outputs.revision }}
+      - uses: actions/configure-pages@v5
+      - name: Preparar web
+        run: |
+          mkdir _site
+          cp index.html _site/index.html
+          cp -R assets _site/assets
+          touch _site/.nojekyll
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - uses: actions/deploy-pages@v4
+        id: deployment

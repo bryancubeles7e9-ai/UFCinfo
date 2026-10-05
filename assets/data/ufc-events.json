@@ -1,0 +1,793 @@
+{
+  "schemaVersion": 1,
+  "year": 2026,
+  "source": "UFCalendar",
+  "sourceUrl": "https://www.ufcalendar.com",
+  "synchronizedAt": "2026-10-05T08:32:00.635501+00:00",
+  "events": [
+    {
+      "id": "ufc-335",
+      "number": 335,
+      "title": "UFC 335",
+      "subtitle": "Charles Oliveira vs Diego Lopes",
+      "status": "announced",
+      "date": "2026-12-13T02:00:00+00:00",
+      "location": "T-Mobile Arena, Las Vegas, United States",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-335",
+      "checkedAt": "2026-10-05",
+      "bouts": [
+        {
+          "red": "Charles Oliveira",
+          "blue": "Diego Lopes",
+          "division": "Lightweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "red": "Sergei Pavlovich",
+          "blue": "Alex Pereira",
+          "division": "Heavyweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "red": "Joe Pyfer",
+          "blue": "Bo Nickal",
+          "division": "Middleweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        }
+      ],
+      "poster": null,
+      "posterSource": null,
+      "posterAlt": null
+    },
+    {
+      "id": "ufc-334",
+      "number": 334,
+      "title": "UFC 334",
+      "subtitle": "Ciryl Gane vs Josh Hokit",
+      "status": "announced",
+      "date": "2026-11-15T02:00:00+00:00",
+      "location": "Madison Square Garden, New York, United States",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-334",
+      "checkedAt": "2026-10-05",
+      "bouts": [
+        {
+          "red": "Ciryl Gane",
+          "blue": "Josh Hokit",
+          "division": "Heavyweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "red": "Kayla Harrison",
+          "blue": "Amanda Nunes",
+          "division": "Women's Bantamweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "red": "Caio Borralho",
+          "blue": "Yousri Belgaroui",
+          "division": "Middleweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "red": "Uros Medic",
+          "blue": "Kevin Holland",
+          "division": "Welterweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "red": "Bilal Hasan",
+          "blue": "Luis Gurule",
+          "division": "Flyweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        }
+      ],
+      "poster": "assets/images/events/ufc-334.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/image/2026-09/111426-polymarket-ufc-334-gane-vs-hokit-TEMP-HERO.jpg?h=d1cb525d&itok=mNOcXTSi",
+      "posterAlt": "Ciryl Gane and Josh Hokit side by side over a black and gold background"
+    },
+    {
+      "id": "ufc-333",
+      "number": 333,
+      "title": "UFC 333",
+      "subtitle": "Alexander Volkanovski vs Movsar Evloev",
+      "status": "announced",
+      "date": "2026-10-24T18:00:00+00:00",
+      "location": "Etihad Arena, Yas Island/Yas West, United Arab Emirates",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-333",
+      "checkedAt": "2026-10-05",
+      "bouts": [
+        {
+          "red": "Alexander Volkanovski",
+          "blue": "Movsar Evloev",
+          "division": "Featherweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "red": "Petr Yan",
+          "blue": "Merab Dvalishvili",
+          "division": "Bantamweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "red": "Lone'er Kavanagh",
+          "blue": "Ramazan Temirov",
+          "division": "Flyweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "red": "Alexander Volkov",
+          "blue": "Rizvan Kuniev",
+          "division": "Heavyweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "red": "Arnold Allen",
+          "blue": "Aaron Pico",
+          "division": "Featherweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        }
+      ],
+      "poster": "assets/images/events/ufc-333.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/102426-ufc-333-volkanovski-vs-evloev-EVENT-ART.jpg?h=d1cb525d&itok=ceS_oo8W",
+      "posterAlt": "UFC featherweight champion Alexander Volkanovski and Movsar Evloev side by side over a black and gold background"
+    },
+    {
+      "id": "ufc-332",
+      "number": 332,
+      "title": "UFC 332",
+      "subtitle": "Natalia Silva vs Wang Cong",
+      "status": "completed",
+      "date": "2026-10-04T00:00:00+00:00",
+      "location": "Delta Center, Salt Lake City, United States",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-332",
+      "checkedAt": "2026-10-05",
+      "bouts": [
+        {
+          "red": "Natalia Silva",
+          "blue": "Wang Cong",
+          "division": "Women's Flyweight",
+          "winner": "Natalia Silva",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "5",
+          "time": "5:00"
+        },
+        {
+          "red": "Deiveson Figueiredo",
+          "blue": "Payton Talbott",
+          "division": "Bantamweight",
+          "winner": "Payton Talbott",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "2:09"
+        },
+        {
+          "red": "King Green",
+          "blue": "Esteban Ribovics",
+          "division": "Lightweight",
+          "winner": "Esteban Ribovics",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "4:08"
+        },
+        {
+          "red": "Roberto Soldic",
+          "blue": "Khaos Williams",
+          "division": "Welterweight",
+          "winner": "Roberto Soldic",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Ateba Gautier",
+          "blue": "Roman Kopylov",
+          "division": "Middleweight",
+          "winner": "Roman Kopylov",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "3:12"
+        }
+      ],
+      "poster": "assets/images/events/ufc-332.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/100326-ufc-332-silva-vs-wang-EVENT-ART.jpg?h=d1cb525d&itok=FbGVB5rh",
+      "posterAlt": "UFC women's flyweights Natalia Silva and Wang Cong side by side over a black and gold background"
+    },
+    {
+      "id": "ufc-331",
+      "number": 331,
+      "title": "UFC 331",
+      "subtitle": "Joshua Van vs Alexandre Pantoja",
+      "status": "completed",
+      "date": "2026-09-20T01:00:00+00:00",
+      "location": "Crypto.com Arena, Los Angeles, United States",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-331",
+      "checkedAt": "2026-10-05",
+      "bouts": [
+        {
+          "red": "Joshua Van",
+          "blue": "Alexandre Pantoja",
+          "division": "Flyweight",
+          "winner": "Joshua Van",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "5",
+          "time": "5:00"
+        },
+        {
+          "red": "Arman Tsarukyan",
+          "blue": "Maurício Ruffy",
+          "division": "Lightweight",
+          "winner": "Arman Tsarukyan",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "4:56"
+        },
+        {
+          "red": "Patricio Pitbull",
+          "blue": "Dooho Choi",
+          "division": "Featherweight",
+          "winner": "Patricio Pitbull",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "3:28"
+        },
+        {
+          "red": "Gable Steveson",
+          "blue": "Sean Sharaf",
+          "division": "Heavyweight",
+          "winner": "Sean Sharaf",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "0:12"
+        },
+        {
+          "red": "Alonzo Menifield",
+          "blue": "Iwo Baraniewski",
+          "division": "Light Heavyweight",
+          "winner": "Alonzo Menifield",
+          "outcome": null,
+          "method": "Decision - Split",
+          "round": "3",
+          "time": "5:00"
+        }
+      ],
+      "poster": "assets/images/events/ufc-331.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/091926-ufc-331-van-vs-pantoja-2-EVENT-ART.jpg?h=d1cb525d&itok=7PimniVq",
+      "posterAlt": "Joshua Van & Alexandre Pantoja side by side over a purple, orange and yellow gradient background"
+    },
+    {
+      "id": "ufc-330",
+      "number": 330,
+      "title": "UFC 330",
+      "subtitle": "Islam Makhachev vs Ian Machado Garry",
+      "status": "completed",
+      "date": "2026-08-16T01:00:00+00:00",
+      "location": "Xfinity Mobile Arena, Philadelphia, United States",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-330",
+      "checkedAt": "2026-10-05",
+      "bouts": [
+        {
+          "red": "Islam Makhachev",
+          "blue": "Ian Machado Garry",
+          "division": "Welterweight",
+          "winner": "Islam Makhachev",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "5",
+          "time": "5:00"
+        },
+        {
+          "red": "Mackenzie Dern",
+          "blue": "Gillian Robertson",
+          "division": "Women's Strawweight",
+          "winner": "Mackenzie Dern",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "5",
+          "time": "5:00"
+        },
+        {
+          "red": "Jalin Turner",
+          "blue": "Kaue Fernandes",
+          "division": "Lightweight",
+          "winner": "Jalin Turner",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "0:39"
+        },
+        {
+          "red": "Mansur Abdul-Malik",
+          "blue": "Dustin Stoltzfus",
+          "division": "Middleweight",
+          "winner": "Dustin Stoltzfus",
+          "outcome": null,
+          "method": "Submission",
+          "round": "2",
+          "time": "4:25"
+        },
+        {
+          "red": "Edson Barboza",
+          "blue": "Esteban Ribovics",
+          "division": "Lightweight",
+          "winner": "Esteban Ribovics",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "1:32"
+        }
+      ],
+      "poster": "assets/images/events/ufc-330.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-07/081526-ufc-330-makhachev-vs-machado-garry-EVENT-ART.jpg?h=d1cb525d&itok=uOmUPrTG",
+      "posterAlt": "UFC welterweights Islam Makhachev and Ian Machado Garry over a yellow and black skyline of Philadelphia"
+    },
+    {
+      "id": "ufc-329",
+      "number": 329,
+      "title": "UFC 329",
+      "subtitle": "Conor McGregor vs Max Holloway",
+      "status": "completed",
+      "date": "2026-07-12T01:00:00+00:00",
+      "location": "T-Mobile Arena, Las Vegas, United States",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-329",
+      "checkedAt": "2026-10-05",
+      "bouts": [
+        {
+          "red": "Conor McGregor",
+          "blue": "Max Holloway",
+          "division": "Welterweight",
+          "winner": "Max Holloway",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "1:09"
+        },
+        {
+          "red": "Benoit Saint Denis",
+          "blue": "Paddy Pimblett",
+          "division": "Lightweight",
+          "winner": "Paddy Pimblett",
+          "outcome": null,
+          "method": "Submission",
+          "round": "1",
+          "time": "0:52"
+        },
+        {
+          "red": "Cory Sandhagen",
+          "blue": "Mario Bautista",
+          "division": "Bantamweight",
+          "winner": "Mario Bautista",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Brandon Royval",
+          "blue": "Lone'er Kavanagh",
+          "division": "Flyweight",
+          "winner": "Brandon Royval",
+          "outcome": null,
+          "method": "Submission",
+          "round": "3",
+          "time": "3:40"
+        },
+        {
+          "red": "King Green",
+          "blue": "Terrance McKinney",
+          "division": "Lightweight",
+          "winner": "King Green",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "4:59"
+        }
+      ],
+      "poster": "assets/images/events/ufc-329.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-06/071126-ufc-329-mcgregor-vs-holloway-2-EVENT-ART.jpg?h=d1cb525d&itok=xqaVyV38",
+      "posterAlt": "UFC fighters Conor McGregor and Max Holloway side-by-side"
+    },
+    {
+      "id": "ufc-328",
+      "number": 328,
+      "title": "UFC 328",
+      "subtitle": "Khamzat Chimaev vs Sean Strickland",
+      "status": "completed",
+      "date": "2026-05-10T01:00:00+00:00",
+      "location": "Prudential Center, Newark, United States",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-328",
+      "checkedAt": "2026-10-05",
+      "bouts": [
+        {
+          "red": "Khamzat Chimaev",
+          "blue": "Sean Strickland",
+          "division": "Middleweight",
+          "winner": "Sean Strickland",
+          "outcome": null,
+          "method": "Decision - Split",
+          "round": "5",
+          "time": "5:00"
+        },
+        {
+          "red": "Joshua Van",
+          "blue": "Tatsuro Taira",
+          "division": "Flyweight",
+          "winner": "Joshua Van",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "5",
+          "time": "1:32"
+        },
+        {
+          "red": "Alexander Volkov",
+          "blue": "Waldo Cortes Acosta",
+          "division": "Heavyweight",
+          "winner": "Alexander Volkov",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Sean Brady",
+          "blue": "Joaquin Buckley",
+          "division": "Welterweight",
+          "winner": "Sean Brady",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "King Green",
+          "blue": "Jeremy Stephens",
+          "division": "Lightweight",
+          "winner": "King Green",
+          "outcome": null,
+          "method": "Submission",
+          "round": "1",
+          "time": "4:20"
+        }
+      ],
+      "poster": "assets/images/events/ufc-328.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/050926-ufc-329-chimaev-vs-strickland-EVENT-ART.jpg?h=d1cb525d&itok=FOhWtvD1",
+      "posterAlt": "UFC middleweight champion Khamzat Chimaev and Sean Strickland posing side-by-side on a green background"
+    },
+    {
+      "id": "ufc-327",
+      "number": 327,
+      "title": "UFC 327",
+      "subtitle": "Jiri Prochazka vs Carlos Ulberg",
+      "status": "completed",
+      "date": "2026-04-12T01:00:00+00:00",
+      "location": "Kaseya Center, Miami, United States",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-327",
+      "checkedAt": "2026-10-05",
+      "bouts": [
+        {
+          "red": "Jiri Prochazka",
+          "blue": "Carlos Ulberg",
+          "division": "Light Heavyweight",
+          "winner": "Carlos Ulberg",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "3:45"
+        },
+        {
+          "red": "Azamat Murzakanov",
+          "blue": "Paulo Costa",
+          "division": "Light Heavyweight",
+          "winner": "Paulo Costa",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "3",
+          "time": "1:23"
+        },
+        {
+          "red": "Curtis Blaydes",
+          "blue": "Josh Hokit",
+          "division": "Heavyweight",
+          "winner": "Josh Hokit",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Dominick Reyes",
+          "blue": "Johnny Walker",
+          "division": "Light Heavyweight",
+          "winner": "Dominick Reyes",
+          "outcome": null,
+          "method": "Decision - Split",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Cub Swanson",
+          "blue": "Nate Landwehr",
+          "division": "Featherweight",
+          "winner": "Cub Swanson",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "4:06"
+        }
+      ],
+      "poster": "assets/images/events/ufc-327.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/041126-ufc-327-prochazka-vs-ulberg-EVENT-ART_0.jpg?h=d1cb525d&itok=9W2RosM3",
+      "posterAlt": "UFC light heavyweights Jiri Prochazka and Carlos Ulberg"
+    },
+    {
+      "id": "ufc-326",
+      "number": 326,
+      "title": "UFC 326",
+      "subtitle": "Max Holloway vs Charles Oliveira",
+      "status": "completed",
+      "date": "2026-03-08T02:00:00+00:00",
+      "location": "T-Mobile Arena, Las Vegas, United States",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-326",
+      "checkedAt": "2026-10-05",
+      "bouts": [
+        {
+          "red": "Max Holloway",
+          "blue": "Charles Oliveira",
+          "division": "Lightweight",
+          "winner": "Charles Oliveira",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "5",
+          "time": "5:00"
+        },
+        {
+          "red": "Caio Borralho",
+          "blue": "Reinier de Ridder",
+          "division": "Middleweight",
+          "winner": "Caio Borralho",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Rob Font",
+          "blue": "Raul Rosas Jr.",
+          "division": "Bantamweight",
+          "winner": "Raul Rosas Jr.",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Drew Dober",
+          "blue": "Michael Johnson",
+          "division": "Lightweight",
+          "winner": "Drew Dober",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "1:53"
+        },
+        {
+          "red": "Gregory Rodrigues",
+          "blue": "Brunno Ferreira",
+          "division": "Middleweight",
+          "winner": "Gregory Rodrigues",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "1:47"
+        }
+      ],
+      "poster": "assets/images/events/ufc-326.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-01/030726-ufc-326-holloway-vs-oliveira-2-EVENT-ART.jpg?h=d1cb525d&itok=toM9IzNp",
+      "posterAlt": "UFC BMF Champion Max Holloway standing side-by-side with Charles Oliveira"
+    },
+    {
+      "id": "ufc-325",
+      "number": 325,
+      "title": "UFC 325",
+      "subtitle": "Alexander Volkanovski vs Diego Lopes",
+      "status": "completed",
+      "date": "2026-02-01T02:00:00+00:00",
+      "location": "Afterpay Arena, Sydney Olympic Park, Australia",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-325",
+      "checkedAt": "2026-10-05",
+      "bouts": [
+        {
+          "red": "Alexander Volkanovski",
+          "blue": "Diego Lopes",
+          "division": "Featherweight",
+          "winner": "Alexander Volkanovski",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "5",
+          "time": "5:00"
+        },
+        {
+          "red": "Dan Hooker",
+          "blue": "Benoit Saint Denis",
+          "division": "Lightweight",
+          "winner": "Benoit Saint Denis",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "4:45"
+        },
+        {
+          "red": "Rafael Fiziev",
+          "blue": "Maurício Ruffy",
+          "division": "Lightweight",
+          "winner": "Maurício Ruffy",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "4:30"
+        },
+        {
+          "red": "Tai Tuivasa",
+          "blue": "Tallison Teixeira",
+          "division": "Heavyweight",
+          "winner": "Tallison Teixeira",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Quillan Salkilld",
+          "blue": "Jamie Mullarkey",
+          "division": "Lightweight",
+          "winner": "Quillan Salkilld",
+          "outcome": null,
+          "method": "Submission",
+          "round": "1",
+          "time": "3:02"
+        }
+      ],
+      "poster": "assets/images/events/ufc-325.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2025-12/013125-ufc-325-volkanovski-vs-lopes-2-EVENT-ART-gradient.jpg?h=d1cb525d&itok=x7DKqEEN",
+      "posterAlt": "UFC featherweight champion Alexander Volkanovski and UFC 325 title challenger Diego Lopes stand side-by-side on a green and black background"
+    },
+    {
+      "id": "ufc-324",
+      "number": 324,
+      "title": "UFC 324",
+      "subtitle": "Justin Gaethje vs Paddy Pimblett",
+      "status": "completed",
+      "date": "2026-01-25T02:00:00+00:00",
+      "location": "T-Mobile Arena, Las Vegas, United States",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-324",
+      "checkedAt": "2026-10-05",
+      "bouts": [
+        {
+          "red": "Justin Gaethje",
+          "blue": "Paddy Pimblett",
+          "division": "Interim Lightweight",
+          "winner": "Justin Gaethje",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "5",
+          "time": "5:00"
+        },
+        {
+          "red": "Sean O'Malley",
+          "blue": "Song Yadong",
+          "division": "Bantamweight",
+          "winner": "Sean O'Malley",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Waldo Cortes Acosta",
+          "blue": "Derrick Lewis",
+          "division": "Heavyweight",
+          "winner": "Waldo Cortes Acosta",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "3:14"
+        },
+        {
+          "red": "Natalia Silva",
+          "blue": "Rose Namajunas",
+          "division": "Women's Flyweight",
+          "winner": "Natalia Silva",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Arnold Allen",
+          "blue": "Jean Silva",
+          "division": "Featherweight",
+          "winner": "Jean Silva",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        }
+      ],
+      "poster": "assets/images/events/ufc-324.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2025-12/012426-ufc-324-gaethje-vs-pimblett-EVENT-ART.jpg?h=d1cb525d&itok=gbEd0WlL",
+      "posterAlt": "UFC lightweights Justin Gaethje and Paddy Pimblett standing side by side on a blue background"
+    }
+  ]
+}
