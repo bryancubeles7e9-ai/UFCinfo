@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
-      - name: Comprobar inicio del runner
+      - name: Comprobar inicio del runner tras iniciar sesion
         run: echo 'GitHub Actions inicia correctamente'
