@@ -142,18 +142,15 @@ html {
   gap: 8px;
 }
 .logo-icon {
-  display: grid;
-  place-items: center;
-  width: 27px;
-  height: 27px;
-  border-radius: 6px;
-  background: var(--accent);
-  color: var(--bg);
-  font-family: var(--display);
-  font-size: 21px;
-  font-weight: 800;
-  line-height: 1;
+  display: block;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
 }
+.logo-corner, .logo-center { fill: var(--accent); }
+.logo-opponent { fill: currentColor; }
+.logo-wordmark { letter-spacing: .5px; }
+.logo-wordmark > span { color: var(--accent); font-weight: 600; }
 .logo-dot {
   font: 10px var(--body);
   align-self: flex-start;
@@ -1893,11 +1890,8 @@ dialog .dialog-close {
     font-size: 21px;
   }
   .logo-icon {
-    width: 22px;
-    height: 22px;
-  }
-  .logo-icon:after {
-    inset: 5px;
+    width: 28px;
+    height: 28px;
   }
   .hero-bottom {
     font-size: 5px;
