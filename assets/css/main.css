@@ -2771,3 +2771,29 @@ button.ranking-name:hover {
     transition: none !important;
   }
 }
+
+/* Reported matchups retain their original attribution. */
+.rumor-toolbar { flex-wrap: wrap; gap: 12px; }
+.rumor-toolbar .search-box { flex: 1 1 260px; }
+.rumor-toolbar select { width: auto; max-width: 100%; }
+.rumor-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); gap: 28px; align-items: start; }
+#rumor-count { margin-bottom: 16px; }
+.rumor-list { display: grid; gap: 20px; margin-bottom: 40px; }
+.rumor-card-top, .rumor-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; }
+.rumor-matchup { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin: 22px 0 16px; }
+.rumor-matchup > span { font: 11px var(--body); color: var(--muted); }
+.rumor-fighter { background: none; color: var(--ink); padding: 0; text-align: left; font: 700 30px var(--display); }
+.rumor-fighter:hover { color: var(--accent); }
+.rumor-summary { line-height: 1.8; margin-bottom: 22px; }
+.rumor-byline { display: flex; flex-wrap: wrap; gap: 6px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; line-height: 1.8; }
+.rumor-byline a { color: var(--ink); font-weight: 600; }
+.rumor-byline time { flex-basis: 100%; color: var(--muted); }
+.rumor-actions { justify-content: flex-start; margin: 16px 0; }
+.rumor-confirmed { color: var(--ink); border-color: var(--blue); background: var(--surface-2); }
+.rumor-sidebar h2 { font-size: 28px; margin: 10px 0 22px; }
+.rumor-sidebar .data-note { margin-top: 18px; line-height: 1.8; }
+.rumor-source-link { display: flex; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding: 14px 0; font-size: 12px; }
+.rumor-source-link small { display: block; color: var(--muted); margin-top: 5px; }
+.rumor-source-link:hover { color: var(--accent); }
+@media (max-width: 1150px) { .header { flex-wrap: wrap; } .header nav { order: 3; width: 100%; overflow-x: auto; } }
+@media (max-width: 850px) { .rumor-layout { grid-template-columns: minmax(0,1fr); } .rumor-toolbar select { flex: 1 1 160px; } }

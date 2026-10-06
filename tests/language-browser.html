@@ -33,6 +33,27 @@ try {
   frame.contentWindow.location.reload(); await loaded; await pause();
   doc=frame.contentDocument;
   check('English survives reload',doc.documentElement.lang==='en' && doc.querySelector('[data-nav="guardados"]').textContent.includes('My corner'));
+  doc.querySelector('[data-nav="rumores"]').click();
+  await pause();
+  check('Rumors navigation', !doc.querySelector('[data-view="rumores"]').hidden);
+  check('Spanish and English journalists',doc.querySelector('#rumor-sources').textContent.includes('Carlos Contreras Legaspi') && doc.querySelector('#rumor-sources').textContent.includes('Damon Martin'));
+  const originalFetch=frame.contentWindow.fetch.bind(frame.contentWindow);
+  const testFeed=await (await originalFetch('/assets/data/ufc-rumors.json')).json();
+  const testRumor={id:'2000000000000000000',sourceId:'cclegaspi',postUrl:'https://x.com/CCLegaspi/status/2000000000000000000',publishedAt:'2026-10-01T12:00:00Z',reviewedAt:'2026-10-06T12:00:00Z',language:'es',fighters:['topuria','holloway'],summary:{es:'Resumen sintético de prueba',en:'Synthetic browser test report'},containsSpoilers:true,eventId:'ufc-335',official:null};
+  testFeed.rumors=[testRumor];
+  frame.contentWindow.fetch=(input,options)=>String(input).includes('/assets/data/ufc-rumors.json') ? Promise.resolve(new frame.contentWindow.Response(JSON.stringify(testFeed),{headers:{'Content-Type':'application/json'}})) : originalFetch(input,options);
+  frame.contentWindow.dispatchEvent(new Event('hashchange'));await pause();
+  check('Rumor source and post link',doc.querySelector('#rumor-list').textContent.includes('Carlos Contreras Legaspi') && doc.querySelector('#rumor-list a[href="'+testRumor.postUrl+'"]'));
+  check('Rumor starts unconfirmed',doc.querySelector('#rumor-list').textContent.includes('UNCONFIRMED'));
+  check('Rumor summary hidden by default',!doc.querySelector('#rumor-list').textContent.includes('Synthetic browser test report'));
+  doc.querySelector('#rumor-list [data-reveal-result]').click();await pause();
+  check('Rumor summary revealed',doc.querySelector('#rumor-list').textContent.includes('Synthetic browser test report'));
+  testRumor.official={eventId:'ufc-335',url:'https://www.ufc.com/event/ufc-335',checkedAt:'2026-10-06T12:00:00Z',eventDate:'2026-12-13T02:00:00Z'};
+  frame.contentWindow.dispatchEvent(new Event('hashchange'));await pause();
+  check('Rumor updates to official confirmation',doc.querySelector('#rumor-list').textContent.includes('CONFIRMED BY UFC') && doc.querySelector('#rumor-list a[href="'+testRumor.official.url+'"]'));
+  check('Original journalist retained after confirmation',doc.querySelector('#rumor-list').textContent.includes('Carlos Contreras Legaspi'));
+  doc.querySelector('#rumor-source').value='mike-heck';doc.querySelector('#rumor-source').dispatchEvent(new Event('change'));await pause();
+  check('Journalist filter',!doc.querySelector('#rumor-list a[href="'+testRumor.postUrl+'"]'));
   // Restore the manual browser’s default after the test.
   await choose('es');
   document.querySelector('#results').textContent=JSON.stringify({pass:true,checks},null,2);

@@ -1,3 +1,4 @@
+import { initializeRumors } from "./rumors.js";
 import { getLocale, initializeLanguage } from "./i18n.js";
 import { spoilersEnabled, setSpoilersEnabled, revealResult, resultHidden, hiddenResult } from "./spoilers.js";
 import { initializeAccount } from "./account.js";
@@ -40,6 +41,7 @@ let eventFilter = "upcoming",
   onlyFavorites = false,
   confirmAction = null;
 const lab = initializeLab();
+const rumors = initializeRumors();
 function persist() {
   const saved = store.save();
   $("#storage-status").textContent = saved
@@ -223,6 +225,7 @@ function renderSaved() {
 }
 function refreshSpoilerViews() {
   renderSaved();
+  rumors.draw();
   const id = $("#event-detail").dataset.officialEventId;
   if ($("#event-dialog").open && id) showOfficialEvent(id);
 }
@@ -301,6 +304,7 @@ function navigate() {
       "rankings",
       "laboratorio",
       "guardados",
+      "rumores",
     ].includes(view)
   )
     view = "inicio";
@@ -312,7 +316,7 @@ function navigate() {
     if (link.dataset.nav === view) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
   });
-  document.title = `${{ inicio: "Inside the fight", eventos: "Carteleras", luchadores: "Luchadores", rankings: "Rankings", laboratorio: "Fight Lab", guardados: "Mi esquina" }[view]} — UFCinfo`;
+  document.title = `${{ inicio: "Inside the fight", eventos: "Carteleras", luchadores: "Luchadores", rankings: "Rankings", laboratorio: "Fight Lab", guardados: "Mi esquina", rumores: "Rumores" }[view]} — UFCinfo`;
   window.scrollTo({ top: 0, behavior: "instant" });
 }
 function askDelete(title, action) {

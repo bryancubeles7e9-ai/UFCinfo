@@ -30,6 +30,7 @@
         ><a href="#rankings" data-nav="rankings">Rankings</a
         ><a href="#laboratorio" data-nav="laboratorio"
           >Fight Lab <span>NEW</span></a
+        ><a href="#rumores" data-nav="rumores">Rumores</a
         ><a href="#guardados" data-nav="guardados"
           >Mi esquina <b id="saved-count">0</b></a
         >
@@ -359,6 +360,17 @@
             <p>El peso y la edad son los publicados en el perfil. Los totales de finalizaciones pueden incluir combates de otras organizaciones; los títulos mostrados incluyen absolutos y BMF, sin interinos.</p>
           </div>
         </section>
+      </section>
+      <section class="view" data-view="rumores" hidden>
+        <div class="page-heading"><div><p class="eyebrow">LO QUE SE HABLA FUERA DE LA JAULA</p><h1>RUMORES<span>.</span></h1><p>Posibles peleas reportadas por periodistas en español e inglés. Cada publicación conserva su fuente original.</p></div><span class="badge orange">EN DESARROLLO</span></div>
+        <p class="data-note">Sección incompleta y pendiente de retomar. La búsqueda automática de rumores en X y la actualización automática de confirmaciones todavía no están activadas.</p>
+        <div class="toolbar rumor-toolbar">
+          <label class="search-box">⌕<input id="rumor-search" type="search" placeholder="Buscar luchador o periodista…" aria-label="Buscar rumores"></label>
+          <select id="rumor-language" aria-label="Idioma de la fuente"><option value="all">Todos los idiomas</option><option value="es">Español</option><option value="en">Inglés</option></select>
+          <select id="rumor-source" aria-label="Periodista"><option value="all">Todos los periodistas</option></select>
+          <select id="rumor-status" aria-label="Estado del rumor"><option value="all">Todos los estados</option><option value="pending">Sin confirmar</option><option value="confirmed">Confirmados por UFC</option></select>
+        </div>
+        <div class="rumor-layout"><div><p id="rumor-count" class="data-note" role="status" aria-live="polite">0 publicaciones</p><div id="rumor-list" class="rumor-list"></div></div><aside class="panel rumor-sidebar"><p class="eyebrow">DE DÓNDE SALE LA INFORMACIÓN</p><h2>Periodistas</h2><div id="rumor-sources"></div><p class="data-note">Los nombres y las cuentas identifican al autor del reporte. Un rumor no es un anuncio oficial.</p><p class="data-note">La comprobación de confirmaciones oficiales está preparada, pero su ejecución automática está desactivada.</p><p id="rumor-feed-status" class="data-note" role="status" aria-live="polite"></p></aside></div>
       </section>
       <section class="view" data-view="guardados" hidden>
         <div class="page-heading">
