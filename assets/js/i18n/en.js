@@ -73,3 +73,7 @@ Object.assign(english, {
 'Sección incompleta y pendiente de retomar. La búsqueda automática de rumores en X y la actualización automática de confirmaciones todavía no están activadas.':'This section is incomplete and on hold. Automatic rumor searches on X and automatic confirmation updates are not enabled yet.',
 'La comprobación de confirmaciones oficiales está preparada, pero su ejecución automática está desactivada.':'Official confirmation checks are prepared, but automatic execution is disabled.'
 });
+Object.assign(english, {
+'UFCinfo — Carteleras UFC, luchadores y rankings MMA':'UFCinfo — UFC fight cards, fighters and MMA rankings',
+'Explora carteleras UFC, luchadores y rankings de MMA. Compara estilos en Fight Lab y sigue tus favoritos en UFCinfo, con modo sin spoilers.':'Explore UFC fight cards, fighters and MMA rankings. Compare styles in Fight Lab and follow your favorites on UFCinfo with spoiler-free mode.'
+});
