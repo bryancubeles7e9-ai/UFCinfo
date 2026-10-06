@@ -1,7 +1,7 @@
 # Review paid service/disk costs in Render before deploying this blueprint.
 services:
   - type: web
-    name: octagon
+    name: ufcinfo
     runtime: python
     plan: starter
     buildCommand: python3 -m py_compile server.py
