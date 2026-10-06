@@ -46,7 +46,7 @@ class SyncTests(unittest.TestCase):
         with self.assertRaises(sync.SyncError): sync.normalize_event(e,NOW)
 
     def test_pagination_and_scope(self):
-        unnumbered=event(); unnumbered['numbering']=None; unnumbered['title']='UFC Freedom 250'
+        unnumbered=event(900); unnumbered['numbering']=None; unnumbered['title']='UFC Freedom 250'
         scheduled=event(333); scheduled['status']='scheduled'
         prior=event(320); prior['starts_at']=prior['main_card_at']='2025-12-20T00:00:00Z'
         other=event(); other['org']='pfl'
@@ -56,7 +56,7 @@ class SyncTests(unittest.TestCase):
             calls.append(copy.deepcopy(params))
             return page([event(331),unnumbered,prior,other,scheduled,future],True,'next') if not params.get('cursor') else page([event()])
         rows=sync.list_events(fetch,2026,NOW)
-        self.assertEqual([r['id'] for r in rows],[331,332])
+        self.assertEqual([r['id'] for r in rows],[331,900,332])
         self.assertEqual(calls[1]['cursor'],'next')
         self.assertEqual(calls[0]['status'],'completed')
         self.assertNotIn('is_ppv',calls[0])
@@ -65,6 +65,17 @@ class SyncTests(unittest.TestCase):
         for numbering, title, expected in [('332','UFC 332: Silva vs Wang',332),('UFC 332','UFC 332: Silva vs Wang',332),(None,'Crypto.com UFC 331',331),('Fight Night','UFC Fight Night: Bautista vs Oliveira',None),(None,'UFC Freedom 250',None),('DWCS 93','Dana White Contender Series 93',None)]:
             row=event(); row.update(numbering=numbering,title=title)
             self.assertEqual(sync.event_number(row),expected)
+
+    def test_freedom_identity_and_normalization(self):
+        row = event(900)
+        row.update(title='UFC Freedom 250', numbering=None, main_card_at='2026-06-15T00:00:00Z')
+        normalized = sync.normalize_event(row, NOW)
+        self.assertEqual(normalized['id'], 'ufc-freedom-250')
+        self.assertIsNone(normalized['number'])
+        self.assertEqual(normalized['title'], 'UFC Freedom 250')
+        self.assertEqual(normalized['source'], 'https://www.ufc.com/event/ufc-freedom-250')
+        row['org'] = 'pfl'
+        self.assertIsNone(sync.event_identity(row))
 
     def test_upcoming_empty_card_and_following_year(self):
         row=event(336);row.update(status='announced',main_card_at='2027-01-20T02:00:00Z',card=[])

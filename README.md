@@ -21,7 +21,7 @@ Abre esta carpeta en VS Code, pulsa con el botón derecho en `index.html` y sele
 - Guardia de UFC Stats y disciplina de formación con notas y enlaces de procedencia.
 - Próximos eventos numerados anunciados desde UFCalendar y pestañas Próximos / Finalizados / Todos UFC, con imágenes promocionales oficiales o aviso de póster pendiente.
 - Historial UFC 324–332 de 2026: cartelera principal completa, resultados disponibles y enlaces oficiales; sincronización automática preparada con UFCalendar (requiere clave).
-- Carteleras imaginarias, creación de eventos, cuenta atrás y descarga de calendario `.ics`.
+- Consulta de carteleras, cuenta atrás y descarga de calendario `.ics`. Solo se muestran carteleras oficiales UFC. La creación y las vistas de demostración y eventos personales se han retirado; los datos históricos se conservan en las copias exportadas.
 - Rankings: top 10 de las 11 divisiones de peso y las dos listas libra por libra, campeón separado, búsqueda y acceso a fichas; sincronización oficial cada 12 horas sin clave de API.
 - Pronósticos personales por combate.
 - Fight Lab: comparación de dos de los 165 luchadores, con 27 datos y estadísticas oficiales, fotografías, fuentes y fechas de consulta.

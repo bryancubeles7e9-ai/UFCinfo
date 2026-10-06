@@ -9,6 +9,10 @@ let requested;
 globalThis.fetch = async (url, options) => { requested=options; return {ok:true,json:async()=>initial}; };
 assert.equal(await refreshEvents(),true);
 assert.equal(eventsFeed.automatic,false);
+const freedom = eventsFeed.events.find(e => e.id === 'ufc-freedom-250');
+assert.ok(freedom);
+assert.equal(freedom.number, null);
+assert.equal(freedom.bouts.length, 7);
 assert.equal(requested.cache,'no-store');
 const live = structuredClone(initial);
 live.source='UFCalendar'; live.sourceUrl='https://www.ufcalendar.com'; live.synchronizedAt='2026-10-05T10:00:00Z';
@@ -20,7 +24,7 @@ assert.equal(eventsFeed.synchronizedAt,live.synchronizedAt);
 const previous=eventsFeed.events;
 globalThis.fetch = async () => {throw Error('Network unavailable');};
 assert.equal(await refreshEvents(),false); assert.equal(eventsFeed.events,previous); assert.equal(eventsFeed.unavailable,true);
-for (const mutate of [f=>f.events[0].source='javascript:alert(1)',f=>f.events[0].bouts[0].winner='Not a participant',f=>f.synchronizedAt='invalid',f=>f.events.push(f.events[0])]) {
+for (const mutate of [f=>f.events[0].source='javascript:alert(1)',f=>f.events[0].bouts[0].winner='Not a participant',f=>f.synchronizedAt='invalid',f=>f.events.push(f.events[0]),f=>f.events.find(e=>e.id==='ufc-freedom-250').source='https://example.com/freedom',f=>f.events.find(e=>e.id==='ufc-freedom-250').id='ufc-special-999']) {
  const invalid=structuredClone(live); mutate(invalid);
  globalThis.fetch=async()=>({ok:true,json:async()=>invalid});
  assert.equal(await refreshEvents(),false); assert.equal(eventsFeed.events,previous);

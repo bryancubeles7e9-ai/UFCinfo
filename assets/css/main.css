@@ -1330,16 +1330,6 @@ dialog .dialog-close {
 .bout > .text-link {
   margin-top: 14px;
 }
-#builder-dialog {
-  max-width: 600px;
-}
-#builder-dialog .section-heading {
-  margin: 0 0 24px;
-  align-items: start;
-}
-#builder-dialog h2 {
-  font-size: 34px;
-}
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;

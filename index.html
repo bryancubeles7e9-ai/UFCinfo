@@ -46,7 +46,7 @@
         <button id="account-open" class="outline-button small" disabled>Iniciar sesión</button>
         <button id="theme-button" class="icon-button" aria-label="Cambiar tema">
           ◐</button
-        ><button id="open-builder" class="button small">＋ Crear evento</button>
+        >
       </div>
     </header>
     <main id="main">
@@ -100,7 +100,7 @@
           </article>
           <article>
             <span>02 / IMAGINA</span><strong id="event-count">03</strong>
-            <p>Eventos numerados UFC</p>
+            <p>Eventos UFC</p>
           </article>
           <article>
             <span>03 / ANALIZA</span><strong>05</strong>
@@ -113,7 +113,7 @@
         </section>
         <div class="section-heading">
           <div>
-            <p class="eyebrow" id="featured-event-label">PRÓXIMO EVENTO NUMERADO</p>
+            <p class="eyebrow" id="featured-event-label">PRÓXIMO EVENTO UFC</p>
             <h2 id="featured-event-title">La próxima noche de combate.</h2>
           </div>
           <a href="#eventos" class="text-link">Ver todas las carteleras ↗</a>
@@ -150,19 +150,16 @@
             <p class="eyebrow">EL AÑO DENTRO DEL OCTÁGONO</p>
             <h1>CARTELERAS<span>.</span></h1>
             <p>
-              Próximos eventos numerados anunciados y resultados de este año, con su cartelera principal.
+              Próximos eventos UFC anunciados y resultados de este año, con su cartelera principal.
             </p>
           </div>
-          <button class="button" data-builder>＋ Crear cartelera</button>
         </div>
         <div class="toolbar">
           <div class="segmented" aria-label="Filtrar eventos">
             <button data-event-filter="upcoming" class="active">Próximos</button
             ><button data-event-filter="completed">Finalizados</button
             ><button data-event-filter="official">Todos UFC</button
-            ><button data-event-filter="all">Todos</button
-            ><button data-event-filter="demo">Demostración</button
-            ><button data-event-filter="custom">Mis eventos</button>
+            >
           </div>
           <label class="search-box"
             >⌕
@@ -451,67 +448,6 @@
         ×
       </button>
       <div id="event-detail"></div>
-    </dialog>
-    <dialog id="builder-dialog">
-      <form id="builder-form">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">HAZ DE MATCHMAKER</p>
-            <h2>Crea tu noche de combate.</h2>
-          </div>
-          <button
-            type="button"
-            class="icon-button"
-            data-close
-            aria-label="Cerrar"
-          >
-            ×
-          </button>
-        </div>
-        <label class="field-label"
-          >Nombre del evento<input
-            name="title"
-            maxlength="70"
-            required
-            placeholder="Mi Fight Night"
-        /></label>
-        <div class="form-row">
-          <label class="field-label"
-            >Ciudad<input
-              name="location"
-              maxlength="60"
-              required
-              placeholder="Madrid, España" /></label
-          ><label class="field-label"
-            >Fecha y hora local<input
-              name="date"
-              type="datetime-local"
-              required
-          /></label>
-        </div>
-        <p class="field-label">Combate estelar</p>
-        <div class="form-row">
-          <label class="field-label"
-            >Esquina roja<select name="red" id="builder-red"></select></label
-          ><label class="field-label"
-            >Esquina azul<select name="blue" id="builder-blue"></select
-          ></label>
-        </div>
-        <label class="field-label"
-          >Formato<select name="rounds">
-            <option value="5">5 asaltos · 5 minutos</option>
-            <option value="3">3 asaltos · 5 minutos</option>
-          </select></label
-        >
-        <p class="data-note">
-          Es una cartelera de aficionados, no un evento oficial de UFC.
-        </p>
-        <div class="dialog-actions">
-          <button type="button" class="outline-button" data-close>
-            Cancelar</button
-          ><button type="submit" class="button">Crear evento ↗</button>
-        </div>
-      </form>
     </dialog>
     <dialog id="confirm-dialog">
       <h2 id="confirm-title">¿Eliminar elemento?</h2>

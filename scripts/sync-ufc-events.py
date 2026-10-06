@@ -67,6 +67,14 @@ def event_number(event):
         match = re.search(r'\bUFC\s+(\d+)(?=\s*(?::|$))', event.get('title') or '')
     return int(match.group(1)) if match else None
 
+def event_identity(event):
+    if event.get('org') != 'ufc' or event.get('status') not in ('completed', 'announced', 'scheduled', 'live'):
+        return None
+    if re.search(r'\bUFC\s+Freedom\s+250\b', event.get('title') or '', re.I):
+        return 'ufc-freedom-250'
+    number = event_number(event)
+    return f'ufc-{number}' if number is not None else None
+
 def list_events(fetch, year, now, upcoming=False):
     params = {'org': 'ufc', 'status': 'completed', 'from': f'{year}-01-01', 'to': now.date().isoformat(), 'order': 'asc', 'limit': 100}
     if upcoming:
@@ -80,8 +88,8 @@ def list_events(fetch, year, now, upcoming=False):
         for row in rows:
             if not isinstance(row, dict):
                 raise SyncError('Invalid event row')
-            number = event_number(row)
-            if number is None:
+            identity = event_identity(row)
+            if identity is None:
                 continue
             date = utc_date(row.get('main_card_at') or row.get('starts_at'))
             if upcoming:
@@ -89,9 +97,9 @@ def list_events(fetch, year, now, upcoming=False):
                     continue
             elif row.get('status') != 'completed' or date.year != year or date > now:
                 continue
-            if number in seen:
+            if identity in seen:
                 raise SyncError('Duplicate event number')
-            seen.add(number)
+            seen.add(identity)
             events.append(row)
         pagination = page.get('meta', {}).get('pagination', {})
         if not isinstance(pagination.get('has_more'), bool):
@@ -107,8 +115,12 @@ def list_events(fetch, year, now, upcoming=False):
 
 def normalize_event(event, now):
     number = event_number(event)
-    if number is None:
-        raise SyncError('Event detail is not a numbered UFC event')
+    identity = event_identity(event)
+    if identity is None:
+        raise SyncError('Event detail is not a supported UFC event')
+    title = 'UFC Freedom 250' if identity == 'ufc-freedom-250' else f'UFC {number}'
+    if identity == 'ufc-freedom-250':
+        number = None
     date = utc_date(event.get('main_card_at') or event.get('starts_at'))
     status = event['status']
     if status == 'completed' and (date.year != now.year or date > now):
@@ -158,7 +170,7 @@ def normalize_event(event, now):
     venue = event.get('venue') or {}
     if not isinstance(venue, dict):
         raise SyncError('Invalid venue')
-    return {'id': f'ufc-{number}', 'number': number, 'title': f'UFC {number}', 'subtitle': f"{bouts[0]['red']} vs {bouts[0]['blue']}" if bouts else 'Cartelera pendiente de anuncio', 'status': status, 'date': date.isoformat(), 'location': ', '.join(str(venue[k]) for k in ('name','city','country') if venue.get(k)) or 'Recinto no indicado', 'type': 'official', 'source': f'https://www.ufc.com/event/ufc-{number}', 'checkedAt': now.date().isoformat(), 'bouts': bouts}
+    return {'id': identity, 'number': number, 'title': title, 'subtitle': f"{bouts[0]['red']} vs {bouts[0]['blue']}" if bouts else 'Cartelera pendiente de anuncio', 'status': status, 'date': date.isoformat(), 'location': ', '.join(str(venue[k]) for k in ('name','city','country') if venue.get(k)) or 'Recinto no indicado', 'type': 'official', 'source': f'https://www.ufc.com/event/{identity}', 'checkedAt': now.date().isoformat(), 'bouts': bouts}
 
 def synchronize(fetch, now):
     rows = list_events(fetch, now.year, now) + list_events(fetch, now.year, now, upcoming=True)
@@ -168,7 +180,7 @@ def synchronize(fetch, now):
         if not isinstance(event_id, int) or event_id <= 0:
             raise SyncError('Invalid event id')
         detail = fetch(f'/events/{event_id}', None).get('data')
-        if not isinstance(detail, dict) or event_number(detail) != event_number(row):
+        if not isinstance(detail, dict) or event_identity(detail) != event_identity(row):
             raise SyncError('Event detail mismatch')
         events.append(normalize_event(detail, now))
     if len({e['id'] for e in events}) != len(events):

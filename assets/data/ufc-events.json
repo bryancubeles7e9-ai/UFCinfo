@@ -455,6 +455,93 @@
       "posterAlt": "UFC fighters Conor McGregor and Max Holloway side-by-side"
     },
     {
+      "id": "ufc-freedom-250",
+      "number": null,
+      "title": "UFC Freedom 250",
+      "subtitle": "Topuria vs Gaethje",
+      "status": "completed",
+      "date": "2026-06-15T00:00:00+00:00",
+      "location": "White House, Washington, D.C., United States",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-freedom-250",
+      "checkedAt": "2026-10-06",
+      "bouts": [
+        {
+          "red": "Ilia Topuria",
+          "blue": "Justin Gaethje",
+          "division": "Lightweight Title Bout",
+          "winner": "Justin Gaethje",
+          "method": "TKO (corner stoppage)",
+          "round": "4",
+          "time": "5:00",
+          "outcome": null
+        },
+        {
+          "red": "Alex Pereira",
+          "blue": "Ciryl Gane",
+          "division": "Heavyweight Interim Title Bout",
+          "winner": "Ciryl Gane",
+          "method": "TKO (strikes)",
+          "round": "2",
+          "time": "1:27",
+          "outcome": null
+        },
+        {
+          "red": "Sean O'Malley",
+          "blue": "Aiemann Zahabi",
+          "division": "Bantamweight Bout",
+          "winner": "Sean O'Malley",
+          "method": "KO (right hand)",
+          "round": "2",
+          "time": "4:02",
+          "outcome": null
+        },
+        {
+          "red": "Josh Hokit",
+          "blue": "Derrick Lewis",
+          "division": "Heavyweight Bout",
+          "winner": "Josh Hokit",
+          "method": "TKO (strikes)",
+          "round": "2",
+          "time": "4:09",
+          "outcome": null
+        },
+        {
+          "red": "Mauricio Ruffy",
+          "blue": "Michael Chandler",
+          "division": "Lightweight Bout",
+          "winner": "Mauricio Ruffy",
+          "method": "TKO (strikes)",
+          "round": "1",
+          "time": "4:29",
+          "outcome": null
+        },
+        {
+          "red": "Bo Nickal",
+          "blue": "Kyle Daukaus",
+          "division": "Middleweight Bout",
+          "winner": "Bo Nickal",
+          "method": "TKO (strikes)",
+          "round": "1",
+          "time": "4:34",
+          "outcome": null
+        },
+        {
+          "red": "Diego Lopes",
+          "blue": "Steve Garcia",
+          "division": "Featherweight Bout",
+          "winner": "Diego Lopes",
+          "method": "KO (strikes)",
+          "round": "2",
+          "time": "2:42",
+          "outcome": null
+        }
+      ],
+      "poster": "assets/images/events/ufc-freedom-250.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/061426-ufc-freedom-250-EVENT-ART.jpg?h=d1cb525d&itok=XYATs_UA",
+      "posterAlt": "Póster oficial UFC Freedom 250: Alex Pereira, Ilia Topuria, Justin Gaethje y Ciryl Gane sobre la Casa Blanca"
+    },
+    {
       "id": "ufc-328",
       "number": 328,
       "title": "UFC 328",
