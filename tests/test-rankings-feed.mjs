@@ -1,8 +1,11 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { directoryFighterByName, fighterNameLink } from '../assets/js/fighter-directory.js';
+import { escapeHTML } from '../assets/js/utils.js';
+globalThis.rankingDirectory = { directoryFighterByName, fighterNameLink };
 let code = await readFile(new URL('../assets/js/rankings.js', import.meta.url), 'utf8');
 code = code.replace(/^import .*;\n/gm, '').replace("new URL('../data/ufc-rankings.json', import.meta.url)", "new URL('https://example.test/rankings.json')");
-code = "const fighters = []; const esc = s => s; const $ = s => globalThis.rankingElements.get(s); const document = {addEventListener() {}}; const setInterval = () => {};\n" + code;
+code = "const {directoryFighterByName, fighterNameLink} = globalThis.rankingDirectory; const getLocale = () => 'es-ES'; const fighters = []; const esc = s => s; const $ = s => globalThis.rankingElements.get(s); const document = {addEventListener() {}}; const setInterval = () => {};\n" + code;
 const { refreshRankings, rankingCategories, rankingSnapshot, initializeRankings } = await import('data:text/javascript;base64,' + Buffer.from(code).toString('base64'));
 const feed = JSON.parse(await readFile(new URL('../assets/data/ufc-rankings.json', import.meta.url)));
 let options;
@@ -41,7 +44,7 @@ for (const category of rankingCategories) {
   elements.get('#ranking-category').listeners.change();
   assert.equal(elements.get('#ranking-category-title').textContent, category.label);
   assert.equal(elements.get('#ranking-table').hidden, false);
-  for (const name of category.names) assert.ok(elements.get('#ranking-table-body').innerHTML.includes(name));
+  for (const name of category.names) assert.ok(elements.get('#ranking-table-body').innerHTML.includes(escapeHTML(name)));
 }
 assert.equal((elements.get('#ranking-table-body').innerHTML.match(/>03<\/span>/g) || []).length, 2);
 console.log('PASS: all 13 dropdown categories render, including official tied positions');

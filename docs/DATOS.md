@@ -9,9 +9,9 @@ Los nombres e identidades enlazan a las páginas oficiales de UFC:
 - [Weili Zhang](https://www.ufc.com/athlete/zhang-weili)
 - [Valentina Shevchenko](https://www.ufc.com/athlete/valentina-shevchenko)
 
-Los textos de presentación son originales. Las puntuaciones, categorías de estilo y enfrentamientos son ejemplos editoriales ficticios, no estadísticas oficiales. Las fechas iniciales se generan respecto al primer arranque y quedan guardadas en el navegador; no son fechas anunciadas por UFC. Las fichas muestran fotografías descargadas de los perfiles oficiales UFC. Los archivos originales se conservan sin modificaciones en assets/images/fighters/.
+Los textos de presentación son originales. Las categorías editoriales de estilo y los enfrentamientos de demostración son ejemplos ficticios, no estadísticas oficiales. Las fechas iniciales se generan respecto al primer arranque y quedan guardadas en el navegador; no son fechas anunciadas por UFC. Las fichas muestran fotografías descargadas de los perfiles oficiales UFC. Los archivos originales se conservan sin modificaciones en assets/images/fighters/.
 
-Octagon es un proyecto independiente de aficionados, sin afiliación con UFC. Para rankings, récords, divisiones y eventos reales, consulta [UFC.com](https://www.ufc.com).
+UFCinfo es un proyecto independiente de aficionados, sin afiliación con UFC. Para rankings, récords, divisiones y eventos reales, consulta [UFC.com](https://www.ufc.com).
 
 ## Rankings
 
@@ -21,7 +21,7 @@ La sección Rankings muestra el top 10 de las 11 divisiones de peso y las dos li
 
 El catálogo incluye 24 atletas. Se consultaron sus páginas oficiales el 2 de octubre de 2026. `fighter-sources.json` registra para cada atleta el perfil consultado, la URL exacta de su fotografía y los campos de origen. Las fotografías se sirven desde archivos locales; los derechos corresponden a sus titulares originales y se atribuye UFC en las fichas.
 
-División, récord, apodo, estilo, altura, alcance y lugar de nacimiento proceden de esas fichas. Altura y alcance se convierten de pulgadas a centímetros y se redondean al entero más próximo. Si UFC no indica un campo, aparece «No indicado». Son copias fechadas y pueden cambiar en la web oficial. El lugar de nacimiento no implica nacionalidad deportiva. Los textos editoriales y las puntuaciones de Fight Lab siguen siendo ficticios.
+División, récord, apodo, estilo, altura, alcance y lugar de nacimiento proceden de esas fichas. Altura y alcance se convierten de pulgadas a centímetros y se redondean al entero más próximo. Si UFC no indica un campo, aparece «No indicado». Son copias fechadas y pueden cambiar en la web oficial. El lugar de nacimiento no implica nacionalidad deportiva. Los textos editoriales son originales; Fight Lab usa las estadísticas oficiales de las fichas.
 
 ## Cinturones, guardia y formación
 
@@ -46,3 +46,41 @@ La API configurada es UFCalendar, un proveedor independiente. La fecha y fuente 
 Añadidos con UFCalendar: UFC 333, 334 y 335. Consulta: 5 de octubre de 2026. La API enumera cinco combates principales para UFC 333, cinco para UFC 334 y tres para UFC 335; no se rellenan los restantes con combates inventados. Las carteleras anunciadas pueden cambiar. UFC 335 sigue titulado TBD en la API, pero sus combates permiten mostrar Oliveira vs Lopes sin inventar una cartelera completa.
 
 Imágenes promocionales descargadas de los bloques principales de UFC.com para UFC 324–334. UFC 334 usa el arte provisional oficial TEMP-HERO; UFC 335 solo tiene un fondo genérico en su página, que se descarta. La URL de origen y el texto alternativo se guardan con cada evento. Se acredita UFC; la consulta automática de imágenes es complementaria a la API y no utiliza su clave.
+
+## Información ampliada de luchadores
+
+Los 24 perfiles incorporan una copia adicional consultada el 6 de octubre de 2026, guardada en `assets/js/fighter-info-data.js`. Cada entrada conserva su URL oficial y fecha de consulta. Incluye edad publicada, equipo o gimnasio, peso del perfil, alcance de pierna, debut en UFC, golpes significativos conectados y recibidos por minuto, precisión y defensa de golpeo, medias de derribos, intentos de sumisión y knockdowns por 15 minutos, precisión y defensa de derribos, victorias por KO/TKO y sumisión, y finalizaciones en el primer asalto.
+
+Los campos ausentes se muestran como «No indicado»; los ceros publicados se conservan. El peso se convierte de libras a kilogramos y el alcance de pierna de pulgadas a centímetros, con un decimal. La edad no se recalcula: es la indicada al consultar el perfil. Los totales de finalizaciones son los publicados por UFC y pueden incluir combates de otras organizaciones; no se deducen victorias por decisión ni porcentajes a partir del récord. Esta ampliación no actualiza los campos anteriores del catálogo.
+
+Para renovar la copia, descarga cada URL del catálogo como `/tmp/octagon-ID.html`, crea un manifiesto JSON con los campos `id` y `source`, y ejecuta `python3 scripts/import-fighter-info.py /tmp /ruta/manifiesto.json AAAA-MM-DD assets/js/fighter-info-data.js`. Revisa el resultado antes de publicarlo. El importador no accede a la red.
+
+## Fichas asociadas a rankings y carteleras
+
+El catálogo se amplía a 165 atletas: los 24 perfiles iniciales y 141 perfiles adicionales consultados el 6 de octubre de 2026. `fighter-directory-sources.json` conserva el manifiesto de nombres, alias y URLs. `assets/js/fighter-directory-data.js` guarda el nombre oficial, división, récord, apodo, estilo, altura, alcance, lugar de nacimiento y las estadísticas ampliadas con fecha y fuente. Las fotografías se descargan del perfil oficial y se sirven localmente.
+
+Todos los nombres de la copia actual de rankings y carteleras abren una ficha dentro de UFCinfo. La resolución admite tildes y variantes tipográficas de apóstrofos, y conserva «Zhang Weili» como alias de «Weili Zhang». Las fichas adicionales aparecen en Luchadores y se pueden buscar por nombre, apodo, división, lugar de nacimiento, estilo oficial y gimnasio, y filtrar por división. Los filtros de estilo editorial, guardia y cinturones se aplican a las fichas iniciales que tienen esa información documentada; no se asignan esos campos por deducción a los nuevos atletas. El seguimiento y Fight Lab admiten los 165 perfiles.
+
+Cuando el perfil oficial omite una estadística, se muestra «No indicado». Esto ocurre, por ejemplo, con las medias de golpeo de Jack Della Maddalena y Roberto Soldić. No se calculan datos sustitutos. Si una actualización futura incorpora un nombre todavía desconocido, se ofrece un enlace al directorio oficial de UFC.
+
+Renovación: descargar las URLs del manifiesto como `/tmp/octagon-ID.html` y ejecutar `python3 scripts/import-fighter-directory.py /tmp docs/fighter-directory-sources.json AAAA-MM-DD assets/js/fighter-directory-data.js`; revisar y descargar las fotografías de las URLs `photoSource`. Comprobación: `node tests/test-fighter-directory.mjs`.
+
+## Fight Lab: comparación oficial
+
+Fight Lab compara dos atletas distintos entre los 165 del directorio. Muestra 27 filas en cinco grupos: perfil y datos físicos, formación y trayectoria, golpeo, derribos y sumisiones, y finalizaciones. Combina la copia original de los 24 atletas con sus estadísticas ampliadas y las 141 fichas adicionales. Las tarjetas muestran las fechas de cada bloque y enlaces a UFC y, donde existe guardia documentada, UFC Stats. Los cinturones conservan la fecha de consulta de su ficha.
+
+Los campos ausentes no se sustituyen por ceros. Los cinturones sin documentar se distinguen de un palmarés registrado vacío. Las barras representan exclusivamente porcentajes publicados de precisión y defensa, con una escala común 0–100; no se genera un índice, pronóstico o puntuación de victoria. El comparador no crea análisis ni notas. Los análisis históricos se conservan en las copias por compatibilidad, aunque la nueva Mi esquina ya no los muestra.
+
+## Mi esquina: seguimiento y agenda
+
+Mi esquina permite seguir a los 165 atletas y relaciona sus identificadores con los nombres normalizados y alias de las carteleras oficiales. Los favoritos anteriores se conservan con la misma clave de almacenamiento; la validación de copias acepta ahora también los identificadores de las fichas adicionales y rechaza duplicados o atletas desconocidos. Los datos anteriores de pronósticos y análisis siguen guardados y exportables, pero no forman parte de la nueva interfaz.
+
+La agenda muestra eventos anunciados o programados con fecha futura y eventos identificados como en curso. La actividad reciente utiliza eventos finalizados con fecha pasada, ordenados del más reciente al más antiguo, hasta seis combates. No se incluyen carteleras imaginarias, no se infieren resultados y no se muestran anuncios antiguos como próximos. Un combate entre dos atletas seguidos no se duplica. Cada tarjeta de atleta muestra su próxima participación disponible y sus posiciones en la copia de rankings; un campeón de ranking no sustituye el historial documentado de cinturones de la ficha.
+
+El alcance está limitado a las carteleras principales de los eventos numerados disponibles. La ausencia de un próximo combate significa únicamente que no está anunciado en esta copia. Los eventos y los rankings conservan sus propias fuentes y fechas; la sección se redibuja al refrescar ambas fuentes. Los archivos `.ics` usan la fecha y hora de inicio de la cartelera principal, sin inventar una hora de fin para eventos oficiales, e incluyen su URL de origen.
+
+Verificación: `node tests/test-following.mjs`.
+
+## Seguimiento por cuenta
+
+El modo invitado conserva el almacenamiento anterior. Con sesión iniciada, la lista de identificadores de atletas seguidos se guarda en la base de datos de `server.py`, separada por cuenta. Las estadísticas y las carteleras mantienen sus fuentes originales. El tema y otros datos personales históricos son locales a cada navegador; solo el seguimiento se sincroniza. Consulta `CUENTAS.md` para funcionamiento, publicación, alcance y verificación.

@@ -1,4 +1,4 @@
-# Activar la API de eventos de OCTAGON
+# Activar la API de eventos de UFCinfo
 
 El proveedor es [UFCalendar](https://api.ufcalendar.com/docs), independiente de UFC. La integración está preparada; necesita una cuenta con prueba o plan activo y una clave. No pongas la clave en JavaScript, archivos del repositorio, URLs ni mensajes públicos.
 
@@ -36,7 +36,7 @@ El mismo workflow incluye publicación opcional con GitHub Pages. Para activarla
 2. **Settings → Secrets and variables → Actions → Variables → New repository variable**: `OCTAGON_PAGES_ENABLED` con valor `true`.
 3. Ejecuta de nuevo el workflow. Publicará únicamente `index.html` y `assets/`, sin scripts, tests, archivos Git ni secretos.
 
-La publicación está desactivada hasta configurar esa variable. GitHub Pages en repositorios privados requiere un plan compatible; no cambies la visibilidad del repositorio para sortear ese requisito. Si alojas OCTAGON en otro proveedor, deja la variable sin configurar y conecta su despliegue a los commits de `main`.
+La publicación está desactivada hasta configurar esa variable. GitHub Pages en repositorios privados requiere un plan compatible; no cambies la visibilidad del repositorio para sortear ese requisito. Si alojas UFCinfo en otro proveedor, deja la variable sin configurar y conecta su despliegue a los commits de `main`.
 
 ## Ejecutar y verificar localmente
 

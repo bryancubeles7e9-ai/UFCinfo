@@ -1,4 +1,5 @@
-import { fighters } from "./data.js";
+import { getLocale } from "./i18n.js";
+import { directoryFighterByName, fighterNameLink } from "./fighter-directory.js";
 import { $, escapeHTML as esc } from "./utils.js";
 
 // Respaldo del top 10 de «All Rankings», no de «All Meta Rankings».
@@ -446,6 +447,7 @@ export async function refreshRankings() {
     }
     rankingSnapshot.published = feed.published;
     rankingSnapshot.synchronizedAt = feed.synchronizedAt;
+    document.dispatchEvent?.(new Event("octagon:rankings-updated"));
     return true;
   } catch {
     return false;
@@ -456,15 +458,10 @@ export async function refreshRankings() {
 }
 
 function localProfile(name) {
-  // UFC usa «Zhang Weili» mientras la ficha local muestra «Weili Zhang».
-  if (name === "Zhang Weili") return fighters.find((f) => f.id === "zhang");
-  return fighters.find((f) => `${f.first} ${f.last}` === name);
+  return directoryFighterByName(name);
 }
 function nameLink(name) {
-  const fighter = localProfile(name);
-  return fighter
-    ? `<button class="ranking-name" data-profile="${fighter.id}">${esc(name)} <span>↗</span></button>`
-    : `<span class="ranking-name">${esc(name)}</span>`;
+  return fighterNameLink(name);
 }
 
 export function initializeRankings() {
@@ -476,7 +473,7 @@ export function initializeRankings() {
     .join("");
   function render() {
     $("#ranking-source-date").textContent =
-      `Versión publicada: ${rankingSnapshot.published || "Fecha no indicada por UFC"} · Última consulta: ${new Date(rankingSnapshot.synchronizedAt || rankingSnapshot.consulted + "T00:00:00Z").toLocaleString("es-ES")}`;
+      `Versión publicada: ${rankingSnapshot.published || "Fecha no indicada por UFC"} · Última consulta: ${new Date(rankingSnapshot.synchronizedAt || rankingSnapshot.consulted + "T00:00:00Z").toLocaleString(getLocale())}`;
     const category =
       rankingCategories.find((c) => c.id === $("#ranking-category").value) ||
       rankingCategories[0];
@@ -509,6 +506,7 @@ export function initializeRankings() {
     $("#ranking-local-only").checked = false;
     render();
   });
+  document.addEventListener("ufcinfo:language-changed", render);
   render();
   const update = async () => {
     if (await refreshRankings()) render();

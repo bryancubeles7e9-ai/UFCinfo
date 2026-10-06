@@ -1,19 +1,26 @@
 import { createDemoEvents, fighterById } from "./data.js";
+import { directoryFighterById, directoryFighters } from "./fighter-directory.js";
 const key = "octagon-workspace-v1";
 export const freshState = () => ({
   version: 1,
   favorites: [],
+  pinnedBout: null,
   picks: {},
   matchups: [],
   events: createDemoEvents(),
   theme: "dark",
 });
 export function validateState(value) {
+  if (value?.pinnedBout != null && (
+    typeof value.pinnedBout !== "string" || value.pinnedBout.length > 500
+  )) return false;
   if (
     !value ||
     value.version !== 1 ||
     !Array.isArray(value.favorites) ||
-    !value.favorites.every((id) => fighterById(id)) ||
+    value.favorites.length > directoryFighters.length ||
+    new Set(value.favorites).size !== value.favorites.length ||
+    !value.favorites.every((id) => directoryFighterById(id)) ||
     !["dark", "light"].includes(value.theme)
   )
     return false;
@@ -82,7 +89,18 @@ export function validateState(value) {
 }
 export function createStore() {
   let state = freshState(),
-    available = true;
+    available = true,
+    storageKey = key;
+  function readScope() {
+    state = freshState();
+    try {
+      const raw = localStorage.getItem(storageKey);
+      const saved = raw && JSON.parse(raw);
+      if (saved && validateState(saved)) state = saved;
+    } catch {
+      available = false;
+    }
+  }
   try {
     const raw = localStorage.getItem(key);
     if (raw) {
@@ -101,7 +119,7 @@ export function createStore() {
     },
     save() {
       try {
-        localStorage.setItem(key, JSON.stringify(state));
+        localStorage.setItem(storageKey, JSON.stringify(state));
         available = true;
       } catch {
         available = false;
@@ -113,6 +131,13 @@ export function createStore() {
         throw new Error("Archivo incompatible o datos no válidos.");
       state = value;
       return this.save();
+    },
+    useScope(accountId = null) {
+      if (accountId !== null && !/^[a-zA-Z0-9-]{1,80}$/.test(accountId))
+        throw new Error("Identificador de cuenta no válido.");
+      storageKey = accountId ? `${key}:account:${accountId}` : key;
+      readScope();
+      return state;
     },
   };
 }

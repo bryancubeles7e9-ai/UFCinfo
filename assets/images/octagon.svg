@@ -10,7 +10,7 @@
 <g fill="url(#fence)" stroke="#615750" stroke-width="1"><path d="M123 362v88l167-97v-88Z"/><path d="M290 265h293v88H290Z"/><path d="m583 265 168 98v88l-168-98Z"/><path d="M751 363v118l-2 88V451Z"/><path d="m749 481-170 106v88l170-106Z"/><path d="M579 587H289v88h290Z"/><path d="m289 587-166-105v88l166 105Z"/><path d="M123 362v120l0 88v-120Z"/></g>
 <g stroke="#d6c2af" stroke-width="6"><path d="M123 362v90M290 265v90M583 265v90M751 363v90M749 481v90M579 587v90M289 587v90M123 482v90"/></g>
 <path d="m290 265 293 0 168 98-2 118-170 106H289L123 482V362Z" fill="none" stroke="#f4512b" stroke-width="2"/>
-<g transform="translate(430 480) skewX(-30) scale(1 .65)"><path d="M-58-50h74l43 43v72L16 108h-74l-43-43V-7Z" fill="none" stroke="#f4512b" stroke-width="10" opacity=".8"/><text x="-78" y="44" font-family="Arial,sans-serif" font-weight="900" font-size="26" fill="#d8c9be">OCTAGON</text></g>
+<g transform="translate(430 480) skewX(-30) scale(1 .65)"><path d="M-58-50h74l43 43v72L16 108h-74l-43-43V-7Z" fill="none" stroke="#f4512b" stroke-width="10" opacity=".8"/><text x="-78" y="44" font-family="Arial,sans-serif" font-weight="900" font-size="26" fill="#d8c9be">UFCinfo</text></g>
 <path d="M290 677h290" stroke="#f4512b" stroke-width="10" filter="url(#glow)"/><path d="M290 677h290" stroke="#f4512b" stroke-width="2"/>
 <g fill="#9d8a7b" font-family="Arial,sans-serif" font-size="10" letter-spacing="5" opacity=".5"><text x="320" y="762">THE CENTER OF EVERYTHING</text></g>
 </svg>

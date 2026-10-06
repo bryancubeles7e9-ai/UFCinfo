@@ -1,3 +1,4 @@
+import { getLocale } from "./i18n.js";
 export const $ = (selector) => document.querySelector(selector);
 export const escapeHTML = (value) =>
   String(value).replace(
@@ -8,13 +9,13 @@ export const escapeHTML = (value) =>
       ],
   );
 export const formatDate = (date) =>
-  new Date(date).toLocaleDateString("es-ES", {
+  new Date(date).toLocaleDateString(getLocale(), {
     day: "2-digit",
     month: "short",
     year: "numeric",
   });
 export const formatTime = (date) =>
-  new Date(date).toLocaleTimeString("es-ES", {
+  new Date(date).toLocaleTimeString(getLocale(), {
     hour: "2-digit",
     minute: "2-digit",
   });

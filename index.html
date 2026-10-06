@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Octagon: un espacio para explorar el universo UFC, crear carteleras y comparar estilos."
+      content="UFCinfo: un espacio para explorar el universo UFC, crear carteleras y comparar estilos."
     />
     <meta name="theme-color" content="#101010" />
-    <title>OCTAGON — Inside the fight</title>
+    <title>UFCinfo — Inside the fight</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <script type="module" src="assets/js/app.js"></script>
@@ -17,9 +17,7 @@
     <a class="skip" href="#main">Saltar al contenido</a>
     <header class="header">
       <a class="logo" href="#inicio"
-        ><span class="logo-icon">O</span> OCTAGON<span class="logo-dot"
-          >®</span
-        ></a
+        ><span class="logo-icon" aria-hidden="true">U</span> UFCinfo</a
       >
       <nav aria-label="Navegación principal">
         <a href="#inicio" data-nav="inicio">Overview</a
@@ -33,6 +31,9 @@
         >
       </nav>
       <div class="header-actions">
+        <label class="language-picker"><span class="sr-only">Idioma / Language</span><select id="language-select" aria-label="Idioma / Language" translate="no"><option value="es">Español</option><option value="en">English</option></select></label>
+        <button id="spoiler-button" class="outline-button small" aria-pressed="true">Sin spoilers: ON</button>
+        <button id="account-open" class="outline-button small" disabled>Iniciar sesión</button>
         <button id="theme-button" class="icon-button" aria-label="Cambiar tema">
           ◐</button
         ><button id="open-builder" class="button small">＋ Crear evento</button>
@@ -96,8 +97,8 @@
             <p>Dimensiones de combate</p>
           </article>
           <article>
-            <span>04 / ELIGE</span><strong id="pick-count">00</strong>
-            <p>Pronósticos guardados</p>
+            <span>04 / SIGUE</span><strong id="pick-count">00</strong>
+            <p>Luchadores en tu esquina</p>
           </article>
         </section>
         <div class="section-heading">
@@ -118,11 +119,11 @@
         <div class="fighter-grid" id="featured-fighters"></div>
         <section class="lab-banner">
           <div>
-            <p class="eyebrow">TU ANÁLISIS. TUS REGLAS.</p>
-            <h2>¿Striking o grappling?<br />Que hablen los estilos.</h2>
+            <p class="eyebrow">COMPARA SUS ESTADÍSTICAS.</p>
+            <h2>Dos luchadores.<br />Sus datos, cara a cara.</h2>
             <p>
-              Compara perfiles, ajusta los pesos y explora un enfrentamiento
-              hipotético.
+              Compara récords, datos físicos, golpeo, derribos y finalizaciones
+              de los 165 luchadores del catálogo.
             </p>
             <a href="#laboratorio" class="button">Abrir Fight Lab ↗</a>
           </div>
@@ -219,15 +220,16 @@
               class="outline-button small"
               aria-pressed="false"
             >
-              ♡ Favoritos
+              ♥ Seguidos
             </button>
           </div>
         </div>
         <p class="data-note">
-          Fotografías y datos de 24 perfiles oficiales de UFC, consultados el 2
-          de octubre de 2026. Las puntuaciones de estilo son ficticias y sirven
-          para probar el comparador. Las fichas enlazan a los perfiles oficiales
-          de UFC.
+          Catálogo de 165 perfiles oficiales de UFC. Las nuevas fichas de rankings y
+          carteleras se consultaron el 6 de octubre de 2026; cada perfil muestra
+          su fecha y fuente. Los filtros de estilo, guardia y cinturones se
+          aplican a las fichas con esos datos documentados. Fight Lab permite
+          comparar los datos oficiales de los 165 perfiles.
         </p>
         <div class="fighter-grid" id="fighter-list"></div>
       </section>
@@ -269,7 +271,7 @@
               aria-label="Buscar luchador en el ranking" /></label
           ><label class="ranking-local-filter"
             ><input id="ranking-local-only" type="checkbox" /> Solo con ficha en
-            Octagon</label
+            UFCinfo</label
           >
         </div>
         <div class="rankings-layout">
@@ -319,8 +321,8 @@
                 filtros. «C» identifica al campeón, separado de los aspirantes.
               </p>
               <p>
-                Las fichas disponibles abren el perfil de Octagon. Sus atributos
-                de Fight Lab siguen siendo ficticios.
+                Los nombres abren su ficha en UFCinfo. Fight Lab permite comparar
+                sus datos y estadísticas oficiales.
               </p>
               <a
                 class="text-link"
@@ -335,131 +337,58 @@
       </section>
       <section class="view" data-view="laboratorio" hidden>
         <div class="page-heading">
-          <div>
-            <p class="eyebrow">ESTILOS QUE COLISIONAN</p>
-            <h1>FIGHT LAB<span>.</span></h1>
-            <p>
-              Elige dos luchadores y explora cómo cambian las ventajas de un
-              modelo de ejemplo.
-            </p>
+          <div><p class="eyebrow">DOS LUCHADORES, TODOS LOS DATOS</p><h1>FIGHT LAB<span>.</span></h1><p>Compara los perfiles y las estadísticas oficiales de dos luchadores del catálogo.</p></div>
+          <span class="badge">COMPARADOR UFC</span>
+        </div>
+        <section class="panel lab-comparator" aria-label="Comparador de luchadores">
+          <div class="comparison-selects">
+            <label>ESQUINA ROJA<select id="red-fighter" aria-label="Luchador de la esquina roja"></select></label>
+            <button id="swap-fighters" class="icon-button" aria-label="Intercambiar luchadores">⇄</button>
+            <label>ESQUINA AZUL<select id="blue-fighter" aria-label="Luchador de la esquina azul"></select></label>
           </div>
-          <span class="badge">SIMULACIÓN INTERACTIVA</span>
-        </div>
-        <div class="lab-layout">
-          <section class="panel comparison">
-            <div class="comparison-selects">
-              <label
-                >ESQUINA ROJA<select
-                  id="red-fighter"
-                  aria-label="Luchador de la esquina roja"
-                ></select></label
-              ><button
-                id="swap-fighters"
-                class="icon-button"
-                aria-label="Intercambiar luchadores"
-              >
-                ⇄</button
-              ><label
-                >ESQUINA AZUL<select
-                  id="blue-fighter"
-                  aria-label="Luchador de la esquina azul"
-                ></select
-              ></label>
-            </div>
-            <div class="versus-header" id="versus-header"></div>
-            <div class="radar-wrapper">
-              <svg
-                id="radar"
-                viewBox="0 0 420 300"
-                role="img"
-                aria-label="Comparación de cinco atributos ficticios"
-              ></svg>
-            </div>
-            <div id="comparison-bars"></div>
-            <div
-              class="model-result"
-              id="model-result"
-              aria-live="polite"
-            ></div>
-            <p class="data-note">
-              Índice relativo calculado con puntuaciones ficticias. No
-              representa probabilidades de victoria, cuotas ni resultados
-              reales.
-            </p>
-          </section>
-          <aside class="panel weights">
-            <p class="eyebrow">AJUSTA TU PERSPECTIVA</p>
-            <h2>¿Qué pesa más?</h2>
-            <p>Cambia la importancia de cada atributo en el modelo.</p>
-            <div id="weight-controls"></div>
-            <button id="reset-weights" class="outline-button">
-              Restablecer pesos ↺
-            </button>
-            <hr />
-            <label class="field-label"
-              >Tu nota del enfrentamiento<textarea
-                id="matchup-note"
-                rows="4"
-                maxlength="500"
-                placeholder="¿Qué detalle marcaría la diferencia?"
-              ></textarea></label
-            ><button id="save-matchup" class="button">
-              Guardar análisis ↗
-            </button>
-          </aside>
-        </div>
+          <p id="comparison-status" class="lab-status" role="status" aria-live="polite"></p>
+          <div id="lab-fighter-summaries" class="lab-fighter-summaries"></div>
+          <div id="comparison-tables"></div>
+          <div id="comparison-notes" class="lab-comparison-notes">
+            <p>Las cifras corresponden a las fechas de consulta de cada ficha. «No indicado» significa que la fuente no publica el dato; «No documentado» indica que el catálogo no ha verificado ese campo.</p>
+            <p>Los golpes significativos incluyen golpes a distancia y golpes de potencia en clinch o suelo. La defensa es el porcentaje de intentos rivales que no conectan. Las medias de derribos, intentos de sumisión y knockdowns se expresan por 15 minutos.</p>
+            <p>El peso y la edad son los publicados en el perfil. Los totales de finalizaciones pueden incluir combates de otras organizaciones; los títulos mostrados incluyen absolutos y BMF, sin interinos.</p>
+          </div>
+        </section>
       </section>
       <section class="view" data-view="guardados" hidden>
         <div class="page-heading">
-          <div>
-            <p class="eyebrow">TU VISIÓN DEL OCTÁGONO</p>
-            <h1>MI ESQUINA<span>.</span></h1>
-            <p>
-              Tus luchadores, tus pronósticos y tus análisis. Todo en un mismo
-              lugar.
-            </p>
-          </div>
-          <div class="backup-buttons">
-            <button id="export-data" class="outline-button small">
-              Exportar ↓</button
-            ><button id="import-data" class="outline-button small">
-              Importar ↑</button
-            ><input
-              id="import-file"
-              type="file"
-              accept="application/json,.json"
-              hidden
-            />
-          </div>
+          <div><p class="eyebrow">SIGUE A TUS PROTAGONISTAS</p><h1>MI ESQUINA<span>.</span></h1><p>Tus luchadores favoritos, sus próximos combates y sus últimos resultados, en un solo lugar.</p></div>
+          <div class="backup-buttons"><button id="export-data" class="outline-button small">Exportar ↓</button><button id="import-data" class="outline-button small">Importar ↑</button><input id="import-file" type="file" accept="application/json,.json" hidden></div>
         </div>
-        <div class="section-heading">
-          <h2>Mis favoritos</h2>
-          <span class="eyebrow">TU EQUIPO</span>
+        <section class="panel account-panel" aria-label="Tu cuenta">
+          <div><h2 id="account-panel-title">Guarda tu esquina en una cuenta</h2><p id="account-panel-copy">Recupera tus luchadores seguidos desde otros dispositivos.</p><p id="account-sync-status" role="status" aria-live="polite">Comprobando sesión…</p></div>
+          <div class="account-actions"><button id="account-enter" class="button small" disabled>Entrar / Crear cuenta</button><button id="account-retry" class="outline-button small" hidden>Reintentar guardado</button><button id="account-logout" class="outline-button small" hidden>Cerrar sesión</button></div>
+        </section>
+        <div class="following-stats" aria-label="Resumen de seguimiento">
+          <article><strong id="following-count">0</strong><span>Luchadores seguidos</span></article>
+          <article><strong id="following-bouts-count">0</strong><span>Próximos combates</span></article>
+          <article><strong id="following-events-count">0</strong><span>Eventos en tu agenda</span></article>
         </div>
-        <div class="fighter-grid" id="saved-fighters"></div>
-        <div class="saved-layout">
-          <section class="panel">
-            <div class="section-heading">
-              <h2>Mis pronósticos</h2>
-              <span id="predictions-count" class="badge">0 PICKS</span>
-            </div>
-            <div id="saved-picks"></div>
-          </section>
-          <section class="panel">
-            <div class="section-heading">
-              <h2>Mis análisis</h2>
-              <span class="badge">FIGHT LAB</span>
-            </div>
-            <div id="saved-matchups"></div>
-          </section>
+        <section class="panel follow-picker"><label for="follow-fighter">Añade un luchador a tu esquina</label><div><select id="follow-fighter" aria-label="Luchador para seguir"></select><button id="follow-selected" class="button small">Seguir +</button></div><p class="data-note">También puedes seguir o dejar de seguir desde cualquier ficha del catálogo.</p></section>
+        <p id="following-feed-status" class="data-note"></p>
+        <section id="following-pinned-panel" class="panel following-pinned" aria-label="Combate fijado" hidden>
+          <div class="section-heading"><h2>Tu combate fijado</h2><span class="badge orange">FIJADO</span></div>
+          <div id="following-pinned"></div>
+          <p class="data-note">El combate fijado se guarda en este navegador.</p>
+        </section>
+        <div class="following-layout">
+          <section class="panel"><div class="section-heading"><h2>Tu próxima cita</h2><span class="eyebrow">AGENDA UFC</span></div><div id="following-upcoming"></div></section>
+          <section class="panel"><div class="section-heading"><h2>Actividad reciente</h2><span class="eyebrow">ÚLTIMOS 6 COMBATES</span></div><div id="following-recent"></div></section>
         </div>
+        <div class="section-heading"><h2>Luchadores que sigues</h2><a href="#luchadores" class="text-link">Explorar catálogo ↗</a></div>
+        <div class="following-fighter-grid" id="saved-fighters"></div>
       </section>
     </main>
     <footer>
-      <div class="footer-brand">OCTAGON<span>INSIDE THE FIGHT.</span></div>
+      <div class="footer-brand">UFCinfo<span>INSIDE THE FIGHT.</span></div>
       <p>
-        Proyecto de aficionados inspirado en UFC. Fotografías y eventos numerados: UFC. Carteleras de aficionados y
-        puntuaciones ficticias.<br />Favoritos y análisis se guardan en
+        Proyecto de aficionados inspirado en UFC. Fotografías y datos oficiales: UFC. Carteleras de aficionados imaginarias.<br />Puedes guardar el seguimiento en tu cuenta o usar el modo invitado en
         este navegador. Sin conexión a resultados en directo.
       </p>
       <div>
@@ -468,6 +397,20 @@
         ><span id="storage-status">● Guardado local</span>
       </div>
     </footer>
+    <dialog id="auth-dialog" aria-labelledby="auth-title">
+      <button class="dialog-close icon-button" data-close aria-label="Cerrar acceso a la cuenta">×</button>
+      <p class="eyebrow">TU ESQUINA, DONDE ESTÉS</p><h2 id="auth-title">Inicia sesión</h2>
+      <div class="auth-tabs"><button id="auth-login-tab" type="button" class="outline-button small" aria-pressed="true">Iniciar sesión</button><button id="auth-register-tab" type="button" class="outline-button small" aria-pressed="false">Crear cuenta</button></div>
+      <form id="auth-form">
+        <label class="field-label" for="auth-email">Correo electrónico</label><input id="auth-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+        <label class="field-label" for="auth-password">Contraseña</label><input id="auth-password" name="password" type="password" autocomplete="current-password" maxlength="256" required>
+        <p class="data-note">Para crear una cuenta, usa una contraseña de al menos 12 caracteres.</p>
+        <label id="auth-import-local-row" class="auth-import-local" hidden><input id="auth-import-local" type="checkbox" checked> Añadir a mi nueva cuenta los luchadores que sigo como invitado</label>
+        <button id="auth-submit" class="button" type="submit">Iniciar sesión</button>
+      </form>
+      <div id="auth-signed-in" hidden><p id="auth-signed-email" translate="no"></p><p>Tu seguimiento se guarda en esta cuenta.</p><button id="auth-logout" class="outline-button small">Cerrar sesión</button></div>
+      <p id="auth-error" class="auth-error" role="alert"></p>
+    </dialog>
     <dialog id="fighter-dialog">
       <button
         class="dialog-close icon-button"

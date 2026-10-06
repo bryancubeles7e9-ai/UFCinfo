@@ -1,0 +1,1134 @@
+[
+  {
+    "id": "ufc-joshua-van",
+    "name": "Joshua Van",
+    "aliases": [
+      "Joshua Van"
+    ],
+    "source": "https://www.ufc.com/athlete/joshua-van"
+  },
+  {
+    "id": "ufc-manel-kape",
+    "name": "Manel Kape",
+    "aliases": [
+      "Manel Kape"
+    ],
+    "source": "https://www.ufc.com/athlete/manel-kape"
+  },
+  {
+    "id": "ufc-brandon-royval",
+    "name": "Brandon Royval",
+    "aliases": [
+      "Brandon Royval"
+    ],
+    "source": "https://www.ufc.com/athlete/brandon-royval"
+  },
+  {
+    "id": "ufc-tatsuro-taira",
+    "name": "Tatsuro Taira",
+    "aliases": [
+      "Tatsuro Taira"
+    ],
+    "source": "https://www.ufc.com/athlete/tatsuro-taira"
+  },
+  {
+    "id": "ufc-kyoji-horiguchi",
+    "name": "Kyoji Horiguchi",
+    "aliases": [
+      "Kyoji Horiguchi"
+    ],
+    "source": "https://www.ufc.com/athlete/kyoji-horiguchi"
+  },
+  {
+    "id": "ufc-loneer-kavanagh",
+    "name": "Lone’er Kavanagh",
+    "aliases": [
+      "Lone’er Kavanagh",
+      "Lone'er Kavanagh"
+    ],
+    "source": "https://www.ufc.com/athlete/loneer-kavanagh"
+  },
+  {
+    "id": "ufc-asu-almabayev",
+    "name": "Asu Almabayev",
+    "aliases": [
+      "Asu Almabayev"
+    ],
+    "source": "https://www.ufc.com/athlete/asu-almabayev"
+  },
+  {
+    "id": "ufc-brandon-moreno",
+    "name": "Brandon Moreno",
+    "aliases": [
+      "Brandon Moreno"
+    ],
+    "source": "https://www.ufc.com/athlete/brandon-moreno"
+  },
+  {
+    "id": "ufc-amir-albazi",
+    "name": "Amir Albazi",
+    "aliases": [
+      "Amir Albazi"
+    ],
+    "source": "https://www.ufc.com/athlete/amir-albazi"
+  },
+  {
+    "id": "ufc-ramazan-temirov",
+    "name": "Ramazan Temirov",
+    "aliases": [
+      "Ramazan Temirov"
+    ],
+    "source": "https://www.ufc.com/athlete/ramazan-temirov"
+  },
+  {
+    "id": "ufc-sean-omalley",
+    "name": "Sean O'Malley",
+    "aliases": [
+      "Sean O'Malley"
+    ],
+    "source": "https://www.ufc.com/athlete/sean-omalley"
+  },
+  {
+    "id": "ufc-song-yadong",
+    "name": "Song Yadong",
+    "aliases": [
+      "Song Yadong"
+    ],
+    "source": "https://www.ufc.com/athlete/song-yadong"
+  },
+  {
+    "id": "ufc-umar-nurmagomedov",
+    "name": "Umar Nurmagomedov",
+    "aliases": [
+      "Umar Nurmagomedov"
+    ],
+    "source": "https://www.ufc.com/athlete/umar-nurmagomedov"
+  },
+  {
+    "id": "ufc-mario-bautista",
+    "name": "Mario Bautista",
+    "aliases": [
+      "Mario Bautista"
+    ],
+    "source": "https://www.ufc.com/athlete/mario-bautista"
+  },
+  {
+    "id": "ufc-cory-sandhagen",
+    "name": "Cory Sandhagen",
+    "aliases": [
+      "Cory Sandhagen"
+    ],
+    "source": "https://www.ufc.com/athlete/cory-sandhagen"
+  },
+  {
+    "id": "ufc-aiemann-zahabi",
+    "name": "Aiemann Zahabi",
+    "aliases": [
+      "Aiemann Zahabi"
+    ],
+    "source": "https://www.ufc.com/athlete/aiemann-zahabi"
+  },
+  {
+    "id": "ufc-david-martinez",
+    "name": "David Martinez",
+    "aliases": [
+      "David Martinez"
+    ],
+    "source": "https://www.ufc.com/athlete/david-martinez"
+  },
+  {
+    "id": "ufc-deiveson-figueiredo",
+    "name": "Deiveson Figueiredo",
+    "aliases": [
+      "Deiveson Figueiredo"
+    ],
+    "source": "https://www.ufc.com/athlete/deiveson-figueiredo"
+  },
+  {
+    "id": "ufc-marlon-vera",
+    "name": "Marlon Vera",
+    "aliases": [
+      "Marlon Vera"
+    ],
+    "source": "https://www.ufc.com/athlete/marlon-vera"
+  },
+  {
+    "id": "ufc-movsar-evloev",
+    "name": "Movsar Evloev",
+    "aliases": [
+      "Movsar Evloev"
+    ],
+    "source": "https://www.ufc.com/athlete/movsar-evloev"
+  },
+  {
+    "id": "ufc-diego-lopes",
+    "name": "Diego Lopes",
+    "aliases": [
+      "Diego Lopes"
+    ],
+    "source": "https://www.ufc.com/athlete/diego-lopes"
+  },
+  {
+    "id": "ufc-lerone-murphy",
+    "name": "Lerone Murphy",
+    "aliases": [
+      "Lerone Murphy"
+    ],
+    "source": "https://www.ufc.com/athlete/lerone-murphy"
+  },
+  {
+    "id": "ufc-aljamain-sterling",
+    "name": "Aljamain Sterling",
+    "aliases": [
+      "Aljamain Sterling"
+    ],
+    "source": "https://www.ufc.com/athlete/aljamain-sterling"
+  },
+  {
+    "id": "ufc-jean-silva",
+    "name": "Jean Silva",
+    "aliases": [
+      "Jean Silva"
+    ],
+    "source": "https://www.ufc.com/athlete/jean-silva"
+  },
+  {
+    "id": "ufc-yair-rodriguez",
+    "name": "Yair Rodriguez",
+    "aliases": [
+      "Yair Rodriguez"
+    ],
+    "source": "https://www.ufc.com/athlete/yair-rodriguez"
+  },
+  {
+    "id": "ufc-arnold-allen",
+    "name": "Arnold Allen",
+    "aliases": [
+      "Arnold Allen"
+    ],
+    "source": "https://www.ufc.com/athlete/arnold-allen"
+  },
+  {
+    "id": "ufc-youssef-zalal",
+    "name": "Youssef Zalal",
+    "aliases": [
+      "Youssef Zalal"
+    ],
+    "source": "https://www.ufc.com/athlete/youssef-zalal"
+  },
+  {
+    "id": "ufc-kevin-vallejos",
+    "name": "Kevin Vallejos",
+    "aliases": [
+      "Kevin Vallejos"
+    ],
+    "source": "https://www.ufc.com/athlete/kevin-vallejos"
+  },
+  {
+    "id": "ufc-steve-garcia",
+    "name": "Steve Garcia",
+    "aliases": [
+      "Steve Garcia"
+    ],
+    "source": "https://www.ufc.com/athlete/steve-garcia"
+  },
+  {
+    "id": "ufc-paddy-pimblett",
+    "name": "Paddy Pimblett",
+    "aliases": [
+      "Paddy Pimblett"
+    ],
+    "source": "https://www.ufc.com/athlete/paddy-pimblett"
+  },
+  {
+    "id": "ufc-benoit-saint-denis",
+    "name": "Benoît Saint Denis",
+    "aliases": [
+      "Benoît Saint Denis",
+      "Benoit Saint Denis"
+    ],
+    "source": "https://www.ufc.com/athlete/benoit-saint-denis"
+  },
+  {
+    "id": "ufc-quillan-salkilld",
+    "name": "Quillan Salkilld",
+    "aliases": [
+      "Quillan Salkilld"
+    ],
+    "source": "https://www.ufc.com/athlete/quillan-salkilld"
+  },
+  {
+    "id": "ufc-mauricio-ruffy",
+    "name": "Mauricio Ruffy",
+    "aliases": [
+      "Mauricio Ruffy",
+      "Maurício Ruffy"
+    ],
+    "source": "https://www.ufc.com/athlete/mauricio-ruffy"
+  },
+  {
+    "id": "ufc-salahdine-parnasse",
+    "name": "Salahdine Parnasse",
+    "aliases": [
+      "Salahdine Parnasse"
+    ],
+    "source": "https://www.ufc.com/athlete/salahdine-parnasse"
+  },
+  {
+    "id": "ufc-mateusz-gamrot",
+    "name": "Mateusz Gamrot",
+    "aliases": [
+      "Mateusz Gamrot"
+    ],
+    "source": "https://www.ufc.com/athlete/mateusz-gamrot"
+  },
+  {
+    "id": "ufc-michael-morales",
+    "name": "Michael Morales",
+    "aliases": [
+      "Michael Morales"
+    ],
+    "source": "https://www.ufc.com/athlete/michael-morales"
+  },
+  {
+    "id": "ufc-jack-della-maddalena",
+    "name": "Jack Della Maddalena",
+    "aliases": [
+      "Jack Della Maddalena"
+    ],
+    "source": "https://www.ufc.com/athlete/jack-della-maddalena"
+  },
+  {
+    "id": "ufc-gabriel-bonfim",
+    "name": "Gabriel Bonfim",
+    "aliases": [
+      "Gabriel Bonfim"
+    ],
+    "source": "https://www.ufc.com/athlete/gabriel-bonfim"
+  },
+  {
+    "id": "ufc-sean-brady",
+    "name": "Sean Brady",
+    "aliases": [
+      "Sean Brady"
+    ],
+    "source": "https://www.ufc.com/athlete/sean-brady"
+  },
+  {
+    "id": "ufc-belal-muhammad",
+    "name": "Belal Muhammad",
+    "aliases": [
+      "Belal Muhammad"
+    ],
+    "source": "https://www.ufc.com/athlete/belal-muhammad"
+  },
+  {
+    "id": "ufc-leon-edwards",
+    "name": "Leon Edwards",
+    "aliases": [
+      "Leon Edwards"
+    ],
+    "source": "https://www.ufc.com/athlete/leon-edwards"
+  },
+  {
+    "id": "ufc-kamaru-usman",
+    "name": "Kamaru Usman",
+    "aliases": [
+      "Kamaru Usman"
+    ],
+    "source": "https://www.ufc.com/athlete/kamaru-usman"
+  },
+  {
+    "id": "ufc-joaquin-buckley",
+    "name": "Joaquin Buckley",
+    "aliases": [
+      "Joaquin Buckley"
+    ],
+    "source": "https://www.ufc.com/athlete/joaquin-buckley"
+  },
+  {
+    "id": "ufc-dricus-du-plessis",
+    "name": "Dricus Du Plessis",
+    "aliases": [
+      "Dricus Du Plessis"
+    ],
+    "source": "https://www.ufc.com/athlete/dricus-du-plessis"
+  },
+  {
+    "id": "ufc-nassourdine-imavov",
+    "name": "Nassourdine Imavov",
+    "aliases": [
+      "Nassourdine Imavov"
+    ],
+    "source": "https://www.ufc.com/athlete/nassourdine-imavov"
+  },
+  {
+    "id": "ufc-brendan-allen",
+    "name": "Brendan Allen",
+    "aliases": [
+      "Brendan Allen"
+    ],
+    "source": "https://www.ufc.com/athlete/brendan-allen"
+  },
+  {
+    "id": "ufc-caio-borralho",
+    "name": "Caio Borralho",
+    "aliases": [
+      "Caio Borralho"
+    ],
+    "source": "https://www.ufc.com/athlete/caio-borralho"
+  },
+  {
+    "id": "ufc-joe-pyfer",
+    "name": "Joe Pyfer",
+    "aliases": [
+      "Joe Pyfer"
+    ],
+    "source": "https://www.ufc.com/athlete/joe-pyfer"
+  },
+  {
+    "id": "ufc-gregory-rodrigues",
+    "name": "Gregory Rodrigues",
+    "aliases": [
+      "Gregory Rodrigues"
+    ],
+    "source": "https://www.ufc.com/athlete/gregory-rodrigues"
+  },
+  {
+    "id": "ufc-anthony-hernandez",
+    "name": "Anthony Hernandez",
+    "aliases": [
+      "Anthony Hernandez"
+    ],
+    "source": "https://www.ufc.com/athlete/anthony-hernandez"
+  },
+  {
+    "id": "ufc-israel-adesanya",
+    "name": "Israel Adesanya",
+    "aliases": [
+      "Israel Adesanya"
+    ],
+    "source": "https://www.ufc.com/athlete/israel-adesanya"
+  },
+  {
+    "id": "ufc-christian-leroy-duncan",
+    "name": "Christian Leroy Duncan",
+    "aliases": [
+      "Christian Leroy Duncan"
+    ],
+    "source": "https://www.ufc.com/athlete/christian-leroy-duncan"
+  },
+  {
+    "id": "ufc-carlos-ulberg",
+    "name": "Carlos Ulberg",
+    "aliases": [
+      "Carlos Ulberg"
+    ],
+    "source": "https://www.ufc.com/athlete/carlos-ulberg"
+  },
+  {
+    "id": "ufc-magomed-ankalaev",
+    "name": "Magomed Ankalaev",
+    "aliases": [
+      "Magomed Ankalaev"
+    ],
+    "source": "https://www.ufc.com/athlete/magomed-ankalaev"
+  },
+  {
+    "id": "ufc-jiri-prochazka",
+    "name": "Jiří Procházka",
+    "aliases": [
+      "Jiří Procházka",
+      "Jiri Prochazka"
+    ],
+    "source": "https://www.ufc.com/athlete/jiri-prochazka"
+  },
+  {
+    "id": "ufc-khalil-rountree-jr",
+    "name": "Khalil Rountree Jr.",
+    "aliases": [
+      "Khalil Rountree Jr."
+    ],
+    "source": "https://www.ufc.com/athlete/khalil-rountree-jr"
+  },
+  {
+    "id": "ufc-navajo-stirling",
+    "name": "Navajo Stirling",
+    "aliases": [
+      "Navajo Stirling"
+    ],
+    "source": "https://www.ufc.com/athlete/navajo-stirling"
+  },
+  {
+    "id": "ufc-paulo-costa",
+    "name": "Paulo Costa",
+    "aliases": [
+      "Paulo Costa"
+    ],
+    "source": "https://www.ufc.com/athlete/paulo-costa"
+  },
+  {
+    "id": "ufc-jamahal-hill",
+    "name": "Jamahal Hill",
+    "aliases": [
+      "Jamahal Hill"
+    ],
+    "source": "https://www.ufc.com/athlete/jamahal-hill"
+  },
+  {
+    "id": "ufc-azamat-murzakanov",
+    "name": "Azamat Murzakanov",
+    "aliases": [
+      "Azamat Murzakanov"
+    ],
+    "source": "https://www.ufc.com/athlete/azamat-murzakanov"
+  },
+  {
+    "id": "ufc-jan-blachowicz",
+    "name": "Jan Błachowicz",
+    "aliases": [
+      "Jan Błachowicz"
+    ],
+    "source": "https://www.ufc.com/athlete/jan-blachowicz"
+  },
+  {
+    "id": "ufc-dominick-reyes",
+    "name": "Dominick Reyes",
+    "aliases": [
+      "Dominick Reyes"
+    ],
+    "source": "https://www.ufc.com/athlete/dominick-reyes"
+  },
+  {
+    "id": "ufc-ciryl-gane",
+    "name": "Ciryl Gane",
+    "aliases": [
+      "Ciryl Gane"
+    ],
+    "source": "https://www.ufc.com/athlete/ciryl-gane"
+  },
+  {
+    "id": "ufc-alexander-volkov",
+    "name": "Alexander Volkov",
+    "aliases": [
+      "Alexander Volkov"
+    ],
+    "source": "https://www.ufc.com/athlete/alexander-volkov"
+  },
+  {
+    "id": "ufc-sergei-pavlovich",
+    "name": "Sergei Pavlovich",
+    "aliases": [
+      "Sergei Pavlovich"
+    ],
+    "source": "https://www.ufc.com/athlete/sergei-pavlovich"
+  },
+  {
+    "id": "ufc-josh-hokit",
+    "name": "Josh Hokit",
+    "aliases": [
+      "Josh Hokit"
+    ],
+    "source": "https://www.ufc.com/athlete/josh-hokit"
+  },
+  {
+    "id": "ufc-curtis-blaydes",
+    "name": "Curtis Blaydes",
+    "aliases": [
+      "Curtis Blaydes"
+    ],
+    "source": "https://www.ufc.com/athlete/curtis-blaydes"
+  },
+  {
+    "id": "ufc-waldo-cortes-acosta",
+    "name": "Waldo Cortes Acosta",
+    "aliases": [
+      "Waldo Cortes Acosta"
+    ],
+    "source": "https://www.ufc.com/athlete/waldo-cortes-acosta"
+  },
+  {
+    "id": "ufc-rizvan-kuniev",
+    "name": "Rizvan Kuniev",
+    "aliases": [
+      "Rizvan Kuniev"
+    ],
+    "source": "https://www.ufc.com/athlete/rizvan-kuniev"
+  },
+  {
+    "id": "ufc-vitor-petrino",
+    "name": "Vitor Petrino",
+    "aliases": [
+      "Vitor Petrino"
+    ],
+    "source": "https://www.ufc.com/athlete/vitor-petrino"
+  },
+  {
+    "id": "ufc-serghei-spivac",
+    "name": "Serghei Spivac",
+    "aliases": [
+      "Serghei Spivac"
+    ],
+    "source": "https://www.ufc.com/athlete/serghei-spivac"
+  },
+  {
+    "id": "ufc-ante-delija",
+    "name": "Ante Delija",
+    "aliases": [
+      "Ante Delija"
+    ],
+    "source": "https://www.ufc.com/athlete/ante-delija"
+  },
+  {
+    "id": "ufc-tatiana-suarez",
+    "name": "Tatiana Suarez",
+    "aliases": [
+      "Tatiana Suarez"
+    ],
+    "source": "https://www.ufc.com/athlete/tatiana-suarez"
+  },
+  {
+    "id": "ufc-julianna-pena",
+    "name": "Julianna Peña",
+    "aliases": [
+      "Julianna Peña"
+    ],
+    "source": "https://www.ufc.com/athlete/julianna-pena"
+  },
+  {
+    "id": "ufc-virna-jandiroba",
+    "name": "Virna Jandiroba",
+    "aliases": [
+      "Virna Jandiroba"
+    ],
+    "source": "https://www.ufc.com/athlete/virna-jandiroba"
+  },
+  {
+    "id": "ufc-denise-gomes",
+    "name": "Denise Gomes",
+    "aliases": [
+      "Denise Gomes"
+    ],
+    "source": "https://www.ufc.com/athlete/denise-gomes"
+  },
+  {
+    "id": "ufc-gillian-robertson",
+    "name": "Gillian Robertson",
+    "aliases": [
+      "Gillian Robertson"
+    ],
+    "source": "https://www.ufc.com/athlete/gillian-robertson"
+  },
+  {
+    "id": "ufc-yan-xiaonan",
+    "name": "Yan Xiaonan",
+    "aliases": [
+      "Yan Xiaonan"
+    ],
+    "source": "https://www.ufc.com/athlete/yan-xiaonan"
+  },
+  {
+    "id": "ufc-fatima-kline",
+    "name": "Fatima Kline",
+    "aliases": [
+      "Fatima Kline"
+    ],
+    "source": "https://www.ufc.com/athlete/fatima-kline"
+  },
+  {
+    "id": "ufc-loopy-godinez",
+    "name": "Loopy Godinez",
+    "aliases": [
+      "Loopy Godinez"
+    ],
+    "source": "https://www.ufc.com/athlete/loopy-godinez"
+  },
+  {
+    "id": "ufc-alexia-thainara",
+    "name": "Alexia Thainara",
+    "aliases": [
+      "Alexia Thainara"
+    ],
+    "source": "https://www.ufc.com/athlete/alexia-thainara"
+  },
+  {
+    "id": "ufc-jessica-andrade",
+    "name": "Jéssica Andrade",
+    "aliases": [
+      "Jéssica Andrade"
+    ],
+    "source": "https://www.ufc.com/athlete/jessica-andrade"
+  },
+  {
+    "id": "ufc-rose-namajunas",
+    "name": "Rose Namajunas",
+    "aliases": [
+      "Rose Namajunas"
+    ],
+    "source": "https://www.ufc.com/athlete/rose-namajunas"
+  },
+  {
+    "id": "ufc-maycee-barber",
+    "name": "Maycee Barber",
+    "aliases": [
+      "Maycee Barber"
+    ],
+    "source": "https://www.ufc.com/athlete/maycee-barber"
+  },
+  {
+    "id": "ufc-jasmine-jasudavicius",
+    "name": "Jasmine Jasudavicius",
+    "aliases": [
+      "Jasmine Jasudavicius"
+    ],
+    "source": "https://www.ufc.com/athlete/jasmine-jasudavicius"
+  },
+  {
+    "id": "ufc-wang-cong",
+    "name": "Wang Cong",
+    "aliases": [
+      "Wang Cong"
+    ],
+    "source": "https://www.ufc.com/athlete/wang-cong"
+  },
+  {
+    "id": "ufc-tracy-cortez",
+    "name": "Tracy Cortez",
+    "aliases": [
+      "Tracy Cortez"
+    ],
+    "source": "https://www.ufc.com/athlete/tracy-cortez"
+  },
+  {
+    "id": "ufc-miranda-maverick",
+    "name": "Miranda Maverick",
+    "aliases": [
+      "Miranda Maverick"
+    ],
+    "source": "https://www.ufc.com/athlete/miranda-maverick"
+  },
+  {
+    "id": "ufc-joselyne-edwards",
+    "name": "Joselyne Edwards",
+    "aliases": [
+      "Joselyne Edwards"
+    ],
+    "source": "https://www.ufc.com/athlete/joselyne-edwards"
+  },
+  {
+    "id": "ufc-ailin-perez",
+    "name": "Ailin Perez",
+    "aliases": [
+      "Ailin Perez"
+    ],
+    "source": "https://www.ufc.com/athlete/ailin-perez"
+  },
+  {
+    "id": "ufc-raquel-pennington",
+    "name": "Raquel Pennington",
+    "aliases": [
+      "Raquel Pennington"
+    ],
+    "source": "https://www.ufc.com/athlete/raquel-pennington"
+  },
+  {
+    "id": "ufc-norma-dumont",
+    "name": "Norma Dumont",
+    "aliases": [
+      "Norma Dumont"
+    ],
+    "source": "https://www.ufc.com/athlete/norma-dumont"
+  },
+  {
+    "id": "ufc-yana-santos",
+    "name": "Yana Santos",
+    "aliases": [
+      "Yana Santos"
+    ],
+    "source": "https://www.ufc.com/athlete/yana-santos"
+  },
+  {
+    "id": "ufc-luana-santos",
+    "name": "Luana Santos",
+    "aliases": [
+      "Luana Santos"
+    ],
+    "source": "https://www.ufc.com/athlete/luana-santos"
+  },
+  {
+    "id": "ufc-macy-chiasson",
+    "name": "Macy Chiasson",
+    "aliases": [
+      "Macy Chiasson"
+    ],
+    "source": "https://www.ufc.com/athlete/macy-chiasson"
+  },
+  {
+    "id": "ufc-jacqueline-cavalcanti",
+    "name": "Jacqueline Cavalcanti",
+    "aliases": [
+      "Jacqueline Cavalcanti"
+    ],
+    "source": "https://www.ufc.com/athlete/jacqueline-cavalcanti"
+  },
+  {
+    "id": "ufc-karol-rosa",
+    "name": "Karol Rosa",
+    "aliases": [
+      "Karol Rosa"
+    ],
+    "source": "https://www.ufc.com/athlete/karol-rosa"
+  },
+  {
+    "id": "ufc-bo-nickal",
+    "name": "Bo Nickal",
+    "aliases": [
+      "Bo Nickal"
+    ],
+    "source": "https://www.ufc.com/athlete/bo-nickal"
+  },
+  {
+    "id": "ufc-amanda-nunes",
+    "name": "Amanda Nunes",
+    "aliases": [
+      "Amanda Nunes"
+    ],
+    "source": "https://www.ufc.com/athlete/amanda-nunes"
+  },
+  {
+    "id": "ufc-yousri-belgaroui",
+    "name": "Yousri Belgaroui",
+    "aliases": [
+      "Yousri Belgaroui"
+    ],
+    "source": "https://www.ufc.com/athlete/yousri-belgaroui"
+  },
+  {
+    "id": "ufc-uros-medic",
+    "name": "Uros Medic",
+    "aliases": [
+      "Uros Medic"
+    ],
+    "source": "https://www.ufc.com/athlete/uros-medic"
+  },
+  {
+    "id": "ufc-kevin-holland",
+    "name": "Kevin Holland",
+    "aliases": [
+      "Kevin Holland"
+    ],
+    "source": "https://www.ufc.com/athlete/kevin-holland"
+  },
+  {
+    "id": "ufc-bilal-hasan",
+    "name": "Bilal Hasan",
+    "aliases": [
+      "Bilal Hasan"
+    ],
+    "source": "https://www.ufc.com/athlete/bilal-hasan"
+  },
+  {
+    "id": "ufc-luis-gurule",
+    "name": "Luis Gurule",
+    "aliases": [
+      "Luis Gurule"
+    ],
+    "source": "https://www.ufc.com/athlete/luis-gurule"
+  },
+  {
+    "id": "ufc-aaron-pico",
+    "name": "Aaron Pico",
+    "aliases": [
+      "Aaron Pico"
+    ],
+    "source": "https://www.ufc.com/athlete/aaron-pico"
+  },
+  {
+    "id": "ufc-payton-talbott",
+    "name": "Payton Talbott",
+    "aliases": [
+      "Payton Talbott"
+    ],
+    "source": "https://www.ufc.com/athlete/payton-talbott"
+  },
+  {
+    "id": "ufc-king-green",
+    "name": "King Green",
+    "aliases": [
+      "King Green"
+    ],
+    "source": "https://www.ufc.com/athlete/king-green"
+  },
+  {
+    "id": "ufc-esteban-ribovics",
+    "name": "Esteban Ribovics",
+    "aliases": [
+      "Esteban Ribovics"
+    ],
+    "source": "https://www.ufc.com/athlete/esteban-ribovics"
+  },
+  {
+    "id": "ufc-roberto-soldic",
+    "name": "Roberto Soldic",
+    "aliases": [
+      "Roberto Soldic"
+    ],
+    "source": "https://www.ufc.com/athlete/roberto-soldic"
+  },
+  {
+    "id": "ufc-khaos-williams",
+    "name": "Khaos Williams",
+    "aliases": [
+      "Khaos Williams"
+    ],
+    "source": "https://www.ufc.com/athlete/khaos-williams"
+  },
+  {
+    "id": "ufc-ateba-gautier",
+    "name": "Ateba Gautier",
+    "aliases": [
+      "Ateba Gautier"
+    ],
+    "source": "https://www.ufc.com/athlete/ateba-gautier"
+  },
+  {
+    "id": "ufc-roman-kopylov",
+    "name": "Roman Kopylov",
+    "aliases": [
+      "Roman Kopylov"
+    ],
+    "source": "https://www.ufc.com/athlete/roman-kopylov"
+  },
+  {
+    "id": "ufc-patricio-freire",
+    "name": "Patricio Pitbull",
+    "aliases": [
+      "Patricio Pitbull"
+    ],
+    "source": "https://www.ufc.com/athlete/patricio-freire"
+  },
+  {
+    "id": "ufc-dooho-choi",
+    "name": "Dooho Choi",
+    "aliases": [
+      "Dooho Choi"
+    ],
+    "source": "https://www.ufc.com/athlete/dooho-choi"
+  },
+  {
+    "id": "ufc-gable-steveson",
+    "name": "Gable Steveson",
+    "aliases": [
+      "Gable Steveson"
+    ],
+    "source": "https://www.ufc.com/athlete/gable-steveson"
+  },
+  {
+    "id": "ufc-sean-sharaf",
+    "name": "Sean Sharaf",
+    "aliases": [
+      "Sean Sharaf"
+    ],
+    "source": "https://www.ufc.com/athlete/sean-sharaf"
+  },
+  {
+    "id": "ufc-alonzo-menifield",
+    "name": "Alonzo Menifield",
+    "aliases": [
+      "Alonzo Menifield"
+    ],
+    "source": "https://www.ufc.com/athlete/alonzo-menifield"
+  },
+  {
+    "id": "ufc-iwo-baraniewski",
+    "name": "Iwo Baraniewski",
+    "aliases": [
+      "Iwo Baraniewski"
+    ],
+    "source": "https://www.ufc.com/athlete/iwo-baraniewski"
+  },
+  {
+    "id": "ufc-jalin-turner",
+    "name": "Jalin Turner",
+    "aliases": [
+      "Jalin Turner"
+    ],
+    "source": "https://www.ufc.com/athlete/jalin-turner"
+  },
+  {
+    "id": "ufc-kaue-fernandes",
+    "name": "Kaue Fernandes",
+    "aliases": [
+      "Kaue Fernandes"
+    ],
+    "source": "https://www.ufc.com/athlete/kaue-fernandes"
+  },
+  {
+    "id": "ufc-mansur-abdul-malik",
+    "name": "Mansur Abdul-Malik",
+    "aliases": [
+      "Mansur Abdul-Malik"
+    ],
+    "source": "https://www.ufc.com/athlete/mansur-abdul-malik"
+  },
+  {
+    "id": "ufc-dustin-stoltzfus",
+    "name": "Dustin Stoltzfus",
+    "aliases": [
+      "Dustin Stoltzfus"
+    ],
+    "source": "https://www.ufc.com/athlete/dustin-stoltzfus"
+  },
+  {
+    "id": "ufc-edson-barboza",
+    "name": "Edson Barboza",
+    "aliases": [
+      "Edson Barboza"
+    ],
+    "source": "https://www.ufc.com/athlete/edson-barboza"
+  },
+  {
+    "id": "ufc-conor-mcgregor",
+    "name": "Conor McGregor",
+    "aliases": [
+      "Conor McGregor"
+    ],
+    "source": "https://www.ufc.com/athlete/conor-mcgregor"
+  },
+  {
+    "id": "ufc-terrance-mckinney",
+    "name": "Terrance McKinney",
+    "aliases": [
+      "Terrance McKinney"
+    ],
+    "source": "https://www.ufc.com/athlete/terrance-mckinney"
+  },
+  {
+    "id": "ufc-jeremy-stephens",
+    "name": "Jeremy Stephens",
+    "aliases": [
+      "Jeremy Stephens"
+    ],
+    "source": "https://www.ufc.com/athlete/jeremy-stephens"
+  },
+  {
+    "id": "ufc-johnny-walker",
+    "name": "Johnny Walker",
+    "aliases": [
+      "Johnny Walker"
+    ],
+    "source": "https://www.ufc.com/athlete/johnny-walker"
+  },
+  {
+    "id": "ufc-cub-swanson",
+    "name": "Cub Swanson",
+    "aliases": [
+      "Cub Swanson"
+    ],
+    "source": "https://www.ufc.com/athlete/cub-swanson"
+  },
+  {
+    "id": "ufc-nate-landwehr",
+    "name": "Nate Landwehr",
+    "aliases": [
+      "Nate Landwehr"
+    ],
+    "source": "https://www.ufc.com/athlete/nate-landwehr"
+  },
+  {
+    "id": "ufc-reinier-de-ridder",
+    "name": "Reinier de Ridder",
+    "aliases": [
+      "Reinier de Ridder"
+    ],
+    "source": "https://www.ufc.com/athlete/reinier-de-ridder"
+  },
+  {
+    "id": "ufc-rob-font",
+    "name": "Rob Font",
+    "aliases": [
+      "Rob Font"
+    ],
+    "source": "https://www.ufc.com/athlete/rob-font"
+  },
+  {
+    "id": "ufc-raul-rosas-jr",
+    "name": "Raul Rosas Jr.",
+    "aliases": [
+      "Raul Rosas Jr."
+    ],
+    "source": "https://www.ufc.com/athlete/raul-rosas-jr"
+  },
+  {
+    "id": "ufc-drew-dober",
+    "name": "Drew Dober",
+    "aliases": [
+      "Drew Dober"
+    ],
+    "source": "https://www.ufc.com/athlete/drew-dober"
+  },
+  {
+    "id": "ufc-michael-johnson",
+    "name": "Michael Johnson",
+    "aliases": [
+      "Michael Johnson"
+    ],
+    "source": "https://www.ufc.com/athlete/michael-johnson"
+  },
+  {
+    "id": "ufc-brunno-ferreira",
+    "name": "Brunno Ferreira",
+    "aliases": [
+      "Brunno Ferreira"
+    ],
+    "source": "https://www.ufc.com/athlete/brunno-ferreira"
+  },
+  {
+    "id": "ufc-dan-hooker",
+    "name": "Dan Hooker",
+    "aliases": [
+      "Dan Hooker"
+    ],
+    "source": "https://www.ufc.com/athlete/dan-hooker"
+  },
+  {
+    "id": "ufc-rafael-fiziev",
+    "name": "Rafael Fiziev",
+    "aliases": [
+      "Rafael Fiziev"
+    ],
+    "source": "https://www.ufc.com/athlete/rafael-fiziev"
+  },
+  {
+    "id": "ufc-tai-tuivasa",
+    "name": "Tai Tuivasa",
+    "aliases": [
+      "Tai Tuivasa"
+    ],
+    "source": "https://www.ufc.com/athlete/tai-tuivasa"
+  },
+  {
+    "id": "ufc-tallison-teixeira",
+    "name": "Tallison Teixeira",
+    "aliases": [
+      "Tallison Teixeira"
+    ],
+    "source": "https://www.ufc.com/athlete/tallison-teixeira"
+  },
+  {
+    "id": "ufc-jamie-mullarkey",
+    "name": "Jamie Mullarkey",
+    "aliases": [
+      "Jamie Mullarkey"
+    ],
+    "source": "https://www.ufc.com/athlete/jamie-mullarkey"
+  },
+  {
+    "id": "ufc-derrick-lewis",
+    "name": "Derrick Lewis",
+    "aliases": [
+      "Derrick Lewis"
+    ],
+    "source": "https://www.ufc.com/athlete/derrick-lewis"
+  }
+]

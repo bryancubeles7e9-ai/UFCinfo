@@ -1,0 +1,13 @@
+# Review paid service/disk costs in Render before deploying this blueprint.
+services:
+  - type: web
+    name: octagon
+    runtime: python
+    plan: starter
+    buildCommand: python3 -m py_compile server.py
+    startCommand: python3 server.py --host 0.0.0.0 --port $PORT --database /var/data/accounts.sqlite3
+    healthCheckPath: /api/health
+    disk:
+      name: octagon-accounts
+      mountPath: /var/data
+      sizeGB: 1

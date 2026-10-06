@@ -1,25 +1,31 @@
-# OCTAGON — Inside the fight
+# UFCinfo — Inside the fight
 
-Portal de aficionados al universo UFC hecho con HTML, CSS y JavaScript, sin compilación ni dependencias de ejecución.
+Portal de aficionados al universo UFC hecho con HTML, CSS y JavaScript, sin compilación. El modo invitado es estático; las cuentas utilizan un servidor Python con SQLite.
 
 ## Abrir la web
+
+Para usar cuentas: ejecuta `python3 server.py` y abre `http://127.0.0.1:8780`. Registro e inicio de sesión guardan el seguimiento en el servidor. Consulta [docs/CUENTAS.md](docs/CUENTAS.md) para publicarlo y acceder desde otros ordenadores.
 
 Abre esta carpeta en VS Code, pulsa con el botón derecho en `index.html` y selecciona **Open with Live Server**. Los módulos JavaScript necesitan un servidor HTTP: abrir el archivo con doble clic no es suficiente.
 
 ## Funciones
 
 - Seis vistas: inicio, carteleras, luchadores, rankings, Fight Lab y Mi esquina.
-- Catálogo de 24 luchadores con fotografías locales y datos consultados en sus perfiles oficiales UFC.
+- Catálogo de 165 luchadores con fotografías locales y datos consultados en sus perfiles oficiales UFC; 141 fichas nuevas para cubrir rankings y carteleras.
 - Búsqueda por nombre, apodo, país y base marcial; filtros por división, estilo, guardia y cinturones.
 - Distintivos de campeón actual/excampeón y palmarés de títulos UFC absolutos y BMF, excluyendo interinos.
+- Fichas ampliadas: edad, gimnasio, peso, debut, alcance de pierna y estadísticas oficiales de golpeo, derribos y finalizaciones con fuente y fecha.
 - Guardia de UFC Stats y disciplina de formación con notas y enlaces de procedencia.
 - Próximos eventos numerados anunciados desde UFCalendar y pestañas Próximos / Finalizados / Todos UFC, con imágenes promocionales oficiales o aviso de póster pendiente.
 - Historial UFC 324–332 de 2026: cartelera principal completa, resultados disponibles y enlaces oficiales; sincronización automática preparada con UFCalendar (requiere clave).
 - Carteleras imaginarias, creación de eventos, cuenta atrás y descarga de calendario `.ics`.
 - Rankings: top 10 de las 11 divisiones de peso y las dos listas libra por libra, campeón separado, búsqueda y acceso a fichas; sincronización oficial cada 12 horas sin clave de API.
 - Pronósticos personales por combate.
-- Comparador de cinco atributos con radar SVG y pesos configurables.
-- Análisis con notas, guardado local e importación/exportación de copias JSON.
+- Fight Lab: comparación de dos de los 165 luchadores, con 27 datos y estadísticas oficiales, fotografías, fuentes y fechas de consulta.
+- Mi esquina: seguimiento de los 165 luchadores, próximos combates, agenda UFC, rankings y últimos resultados; exportación/importación del seguimiento.
+- Registro e inicio de sesión con correo y contraseña, guardado del seguimiento por cuenta y separación del modo invitado.
+- Modo sin spoilers activo al entrar: oculta resultados en carteleras y Mi esquina, con revelado por combate o control global. Se reactiva al recargar; las fichas y rankings mantienen sus datos publicados.
+- Selector Español / English en la cabecera, con elección guardada en el navegador, traducción de la interfaz y formatos de fechas y cifras según el idioma.
 - Tema claro/oscuro, diseño adaptable y navegación con teclado.
 
 ## Estructura
@@ -34,7 +40,7 @@ mi-web/
 │       ├── app.js     # navegación, renderizado e interacciones
 │       ├── fighter-details.js # cinturones, guardia y formación marcial
 │       ├── data.js    # perfiles y eventos de demostración
-│       ├── lab.js     # comparador, radar y modelo ponderado
+│       ├── lab.js     # comparador de datos y estadísticas oficiales
 │       ├── rankings.js # copia fechada y vista de rankings
 │       ├── store.js   # persistencia y validación de copias
 │       └── utils.js   # fechas, cuenta atrás y utilidades
@@ -42,13 +48,19 @@ mi-web/
 └── docs/            # DATOS.md y fighter-sources.json con procedencia
 ```
 
-La aplicación utiliza la clave `octagon-workspace-v1` en `localStorage`, distinta de la de Nexo. Sus datos pertenecen al navegador y al origen (host/puerto) donde abras la web. Exporta una copia para trasladarlos. No hay cuentas, backend ni resultados en directo. Las fuentes tipográficas se descargan de Google Fonts; existen fuentes de respaldo si no hay conexión.
+La aplicación utiliza la clave `octagon-workspace-v1` en `localStorage`, distinta de la de Nexo. Sus datos pertenecen al navegador y al origen (host/puerto) donde abras la web. Exporta una copia para trasladarlos. Las cuentas y el guardado del seguimiento requieren `server.py`; no hay resultados en directo. Las fuentes tipográficas se descargan de Google Fonts; existen fuentes de respaldo si no hay conexión.
 
-## Modelo de ejemplo
+## Fight Lab
 
-Cada luchador tiene cinco puntuaciones ficticias de 0 a 100. El índice es la media ponderada de las puntuaciones elegidas. La barra muestra la proporción entre ambos índices, no una probabilidad de victoria. Si todos los pesos son cero o se elige el mismo luchador en ambas esquinas, no se permite guardar un análisis.
+Selecciona dos luchadores distintos del catálogo para comparar perfil, datos físicos, formación y trayectoria, golpeo, derribos, sumisiones y finalizaciones. Puedes intercambiar las esquinas y abrir la ficha completa o la fuente oficial. Las barras muestran únicamente porcentajes oficiales de precisión y defensa. Los campos ausentes se indican; la falta de documentación sobre cinturones no se interpreta como ausencia de títulos. No hay puntuaciones ficticias, pesos, índice de victoria ni creación de análisis. Las copias antiguas siguen siendo compatibles; los datos históricos se conservan al exportar, aunque ya no aparecen en Mi esquina.
 
-Los eventos pueden cruzar divisiones: son propuestas imaginarias de aficionados. No son anuncios oficiales. Los nombres corresponden a atletas reales, y la sección Rankings incluye una copia fechada de las 13 listas de UFC; las fichas muestran una copia fechada de división, récord, apodo, estilo, altura, alcance y lugar de nacimiento consultados en UFC. No hay resultados en directo. Consulta `docs/DATOS.md`.
+Las cifras son copias fechadas. Los eventos de demostración y los creados por usuarios son carteleras imaginarias. No hay resultados en directo. Consulta `docs/DATOS.md`.
+
+## Mi esquina
+
+Sigue cualquiera de los 165 luchadores desde su ficha, la tarjeta del catálogo o el selector de Mi esquina. La sección reúne los próximos combates anunciados y en curso, una agenda con descarga `.ics`, los últimos seis combates disponibles de los atletas seguidos y tarjetas con récord, posiciones de ranking y próxima cita. Si sigues a ambos rivales, el combate aparece una sola vez.
+
+En modo invitado, el seguimiento se guarda en el navegador; con sesión iniciada, se sincroniza con la cuenta en el servidor. Admite exportación/importación de copias. Los favoritos previos se mantienen. La agenda utiliza exclusivamente carteleras principales de eventos numerados incluidos en la copia disponible, con fuente y fecha; no se deduce un próximo combate cuando no hay anuncio. Se actualiza al seguir/dejar de seguir y al recargar las fuentes de eventos y rankings.
 
 ## Actualizaciones automáticas de eventos
 
