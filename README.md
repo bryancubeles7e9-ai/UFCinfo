@@ -4,6 +4,8 @@ Portal de aficionados al universo UFC hecho con HTML, CSS y JavaScript, sin comp
 
 ## Abrir la web
 
+Para publicar con cuentas y solicitar que Google encuentre la página de inicio, consulta [docs/PUBLICACION.md](docs/PUBLICACION.md). La cuenta de alojamiento y el despliegue público siguen pendientes.
+
 Para usar cuentas: ejecuta `python3 server.py` y abre `http://127.0.0.1:8780`. Registro e inicio de sesión guardan el seguimiento en el servidor. Consulta [docs/CUENTAS.md](docs/CUENTAS.md) para publicarlo y acceder desde otros ordenadores.
 
 Abre esta carpeta en VS Code, pulsa con el botón derecho en `index.html` y selecciona **Open with Live Server**. Los módulos JavaScript necesitan un servidor HTTP: abrir el archivo con doble clic no es suficiente.
