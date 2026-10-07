@@ -1,5 +1,59 @@
 {
   "schemaVersion": 1,
-  "updatedAt": null,
-  "groups": []
+  "updatedAt": "2026-10-07T16:12:41.796Z",
+  "groups": [
+    {
+      "id": "2107747599155708089",
+      "fighterNames": [
+        "Abdul Hussein",
+        "Hecher Sosa"
+      ],
+      "matchupKey": "abdulhussein|hechersosa|2026-11-28",
+      "eventDateHint": "2026-11-28",
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Álvaro Colmenero reporta una posible pelea entre Abdul Hussein y Hecher Sosa para el 28 de noviembre. Información pendiente de confirmación oficial de UFC.",
+        "en": "Álvaro Colmenero reports a possible fight between Abdul Hussein and Hecher Sosa for November 28. Awaiting official UFC confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T16:12:41.796Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-07T08:19:22.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2107747599155708089",
+          "sourceId": "kolmenero",
+          "postUrl": "https://x.com/KOlmeneroMMA/status/2107747599155708089",
+          "publishedAt": "2026-10-07T08:19:22.000Z",
+          "language": "en",
+          "attributedAccounts": [],
+          "attribution": "ABC MMA"
+        },
+        {
+          "id": "2107750144795975680",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2107750144795975680",
+          "publishedAt": "2026-10-07T08:29:29.000Z",
+          "language": "es",
+          "attributedAccounts": [
+            "KOlmeneroMMA"
+          ],
+          "attribution": "@KOlmeneroMMA)"
+        },
+        {
+          "id": "2107827465770975397",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2107827465770975397",
+          "publishedAt": "2026-10-07T13:36:44.000Z",
+          "language": "es",
+          "attributedAccounts": [
+            "KOlmeneroMMA"
+          ],
+          "attribution": "@KOlmeneroMMA 🙌"
+        }
+      ],
+      "official": null
+    }
+  ]
 }
