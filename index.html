@@ -402,13 +402,13 @@
       <p class="eyebrow">TU ESQUINA, DONDE ESTÉS</p><h2 id="auth-title">Inicia sesión</h2>
       <div class="auth-tabs"><button id="auth-login-tab" type="button" class="outline-button small" aria-pressed="true">Iniciar sesión</button><button id="auth-register-tab" type="button" class="outline-button small" aria-pressed="false">Crear cuenta</button></div>
       <form id="auth-form">
-        <label class="field-label" for="auth-email">Correo electrónico</label><input id="auth-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+        <label class="field-label" for="auth-username">Nombre de usuario</label><input id="auth-username" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="254" required>
         <label class="field-label" for="auth-password">Contraseña</label><input id="auth-password" name="password" type="password" autocomplete="current-password" maxlength="256" required>
-        <p class="data-note">Para crear una cuenta, usa una contraseña de al menos 12 caracteres.</p>
+        <p class="data-note">Nombre de usuario: 3–24 caracteres, con letras, números, guiones o guiones bajos. Contraseña: al menos 12 caracteres.</p>
         <label id="auth-import-local-row" class="auth-import-local" hidden><input id="auth-import-local" type="checkbox" checked> Añadir a mi nueva cuenta los luchadores que sigo como invitado</label>
         <button id="auth-submit" class="button" type="submit">Iniciar sesión</button>
       </form>
-      <div id="auth-signed-in" hidden><p id="auth-signed-email" translate="no"></p><p>Tu seguimiento se guarda en esta cuenta.</p><button id="auth-logout" class="outline-button small">Cerrar sesión</button></div>
+      <div id="auth-signed-in" hidden><p id="auth-signed-username" translate="no"></p><p>Tu seguimiento se guarda en esta cuenta.</p><button id="auth-logout" class="outline-button small">Cerrar sesión</button></div>
       <p id="auth-error" class="auth-error" role="alert"></p>
     </dialog>
     <dialog id="fighter-dialog">

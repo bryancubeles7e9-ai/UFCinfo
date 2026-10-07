@@ -25,7 +25,7 @@ Abre esta carpeta en VS Code, pulsa con el botón derecho en `index.html` y sele
 - Rankings: top 10 de las 11 divisiones de peso y las dos listas libra por libra, campeón separado, búsqueda y acceso a fichas; sincronización oficial cada 12 horas sin clave de API.
 - Fight Lab: comparación de dos de los 165 luchadores, con 27 datos y estadísticas oficiales, fotografías, fuentes y fechas de consulta.
 - Mi esquina: seguimiento de los 165 luchadores, próximos combates, agenda UFC, rankings y últimos resultados; exportación/importación del seguimiento.
-- Registro e inicio de sesión con correo y contraseña, guardado del seguimiento por cuenta y separación del modo invitado.
+- Registro e inicio de sesión con nombre de usuario único y contraseña, guardado del seguimiento por cuenta y separación del modo invitado.
 - Modo sin spoilers activo al entrar: oculta resultados en carteleras y Mi esquina, con revelado por combate o control global. Se reactiva al recargar; las fichas y rankings mantienen sus datos publicados.
 - Selector Español / English en la cabecera, con elección guardada en el navegador, traducción de la interfaz y formatos de fechas y cifras según el idioma.
 - Tema claro/oscuro, diseño adaptable y navegación con teclado.
