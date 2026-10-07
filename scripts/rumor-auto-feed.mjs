@@ -50,8 +50,11 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
     }
     const reporter=sources.find(source=>source.id===reports[0].sourceId).name;
     const [first,second]=candidate.fighters;
+    const kind=rawGroup?.discussionKind;
+    const descriptions={response:{es:'recoge una respuesta pública relacionada con una posible pelea',en:'covers a public response concerning a possible fight'},challenge:{es:'recoge un reto público',en:'covers a public challenge'},'claimed-agreement':{es:'recoge la declaración de un luchador de haber aceptado una pelea',en:'covers a fighter’s claim of having agreed to a fight'}};
+    const description=descriptions[kind]??{es:'comenta un posible cruce',en:'discusses a possible matchup'};
     groups.push({id:reports[0].id,fighterNames:candidate.fighters,matchupKey,eventDateHint,dateYearInferred:date ? date.year===null : false,
-      summary:{es:`${reporter} comenta un posible cruce entre ${first} y ${second}${date ? `; la publicación menciona el ${date.day} de ${monthNames.es[date.month-1]}` : ', sin fecha indicada en la fuente'}. Puede tratarse de especulación o una propuesta de la comunidad. No implica negociaciones ni confirmación oficial.`,en:`${reporter} discusses a possible matchup between ${first} and ${second}${date ? `; the post mentions ${monthNames.en[date.month-1]} ${date.day}` : ', with no date stated by the source'}. This may be speculation or a community suggestion. It does not imply negotiations or official confirmation.`},
+      summary:{es:`${reporter} ${description.es} entre ${first} y ${second}${date ? `; la publicación menciona el ${date.day} de ${monthNames.es[date.month-1]}` : ', sin fecha exacta indicada en la fuente'}. Runrún de la comunidad; no constituye confirmación oficial.`,en:`${reporter} ${description.en} between ${first} and ${second}${date ? `; the post mentions ${monthNames.en[date.month-1]} ${date.day}` : ', with no exact date stated by the source'}. Community discussion; this is not official confirmation.`},
       processing:'automatic',generatedAt:now.toISOString(),reviewedAt:null,publishedAt,containsSpoilers:true,reports,official:null});
     added++;
   }

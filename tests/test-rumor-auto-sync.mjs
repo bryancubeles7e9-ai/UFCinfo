@@ -24,8 +24,8 @@ const undated=automaticFeed(undatedPayload,sources,undefined,now);
 assert.equal(undated.feed.groups.length,1);
 assert.equal(undated.skipReasons['no-ufc-reference'],undefined);
 assert.equal(undated.feed.groups[0].eventDateHint,null);
-assert.ok(undated.feed.groups[0].summary.es.includes('sin fecha indicada'));
-assert.ok(undated.feed.groups[0].summary.en.includes('no date stated'));
+assert.ok(undated.feed.groups[0].summary.es.includes('sin fecha exacta indicada'));
+assert.ok(undated.feed.groups[0].summary.en.includes('no exact date stated'));
 assert.ok(validateGroupFeed(undated.feed,sources));
 assert.equal(automaticFeed(undatedPayload,sources,undated.feed,now).feed.groups.length,1);
 assert.equal(result.feed.groups[0].reports.length,2);
@@ -40,6 +40,21 @@ const community=automaticFeed({...payload,candidates:[candidate('210774759915570
 assert.equal(community.feed.groups.length,1);
 assert.equal(community.feed.groups[0].official,null);
 assert.equal(community.skipReasons['no-booking-language'],undefined);
+
+const examples=[
+ ['2106844191712223558','Sean O’Malley responds to Payton Talbott accusing him of running from a fight 👀',["Payton Talbott","Sean O'Malley"],'respuesta pública'],
+ ['2106866511814005038','Nassourdine Imavov offers Sean Strickland $500K if he beats him 😳',['Nassourdine Imavov','Sean Strickland'],'reto público'],
+ ['2107009056577667336','Ian Garry reveals he’s agreed to a main-event fight with Michael Morales and the "date is locked in" 👀',['Ian Garry','Michael Morales'],'haber aceptado'],
+];
+for(const [id,text,names,description] of examples){
+ const feed=automaticFeed({...payload,candidates:[candidate(id,text)]},sources,undefined,now);
+ assert.equal(feed.feed.groups.length,1);
+ assert.deepEqual(feed.feed.groups[0].fighterNames,names);
+ assert.ok(feed.feed.groups[0].summary.es.includes(description));
+ assert.equal(feed.feed.groups[0].eventDateHint,null);
+ assert.equal(feed.feed.groups[0].official,null);
+}
+
 const root=await mkdtemp(join(tmpdir(),'ufcinfo-auto-test-'));
 try {
  await mkdir(join(root,'assets/data'),{recursive:true});await mkdir(join(root,'.ufcinfo-data'));
