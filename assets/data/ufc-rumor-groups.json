@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-07T16:43:13.179Z",
+  "updatedAt": "2026-10-07T17:12:00.241Z",
   "groups": [
     {
       "id": "2107747599155708089",
@@ -56,6 +56,167 @@
       "official": null
     },
     {
+      "id": "2107443469853556814",
+      "fighterNames": [
+        "Michael Morales",
+        "Shavkat Rakhmonov"
+      ],
+      "matchupKey": "michaelmorales|shavkatrakhmonov|undated:2026-10",
+      "eventDateHint": null,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "MMA Latinoamérica comenta un posible cruce entre Michael Morales y Shavkat Rakhmonov, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "MMA Latinoamérica discusses a possible matchup between Michael Morales and Shavkat Rakhmonov, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-06T12:10:52.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2107443469853556814",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2107443469853556814",
+          "publishedAt": "2026-10-06T12:10:52.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2107294932084154444",
+      "fighterNames": [
+        "Carlos Prates",
+        "Islam Makhachev"
+      ],
+      "matchupKey": "carlosprates|islammakhachev|undated:2026-10",
+      "eventDateHint": null,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "UPFRONT MMA comenta un posible cruce entre Carlos Prates y Islam Makhachev, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "UPFRONT MMA discusses a possible matchup between Carlos Prates and Islam Makhachev, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-06T02:20:38.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2107294932084154444",
+          "sourceId": "upfront-mma",
+          "postUrl": "https://x.com/upfrontmma/status/2107294932084154444",
+          "publishedAt": "2026-10-06T02:20:38.000Z",
+          "language": "en",
+          "attributedAccounts": [
+            "thenightmare170",
+            "MAKHACHEVMMA"
+          ]
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2107009056577667336",
+      "fighterNames": [
+        "Ian Garry",
+        "Michael Morales"
+      ],
+      "matchupKey": "iangarry|michaelmorales|undated:2026-10",
+      "eventDateHint": null,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "Championship Rounds recoge la declaración de un luchador de haber aceptado una pelea entre Ian Garry y Michael Morales, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds covers a fighter’s claim of having agreed to a fight between Ian Garry and Michael Morales, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-05T07:24:40.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2107009056577667336",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2107009056577667336",
+          "publishedAt": "2026-10-05T07:24:40.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2106866511814005038",
+      "fighterNames": [
+        "Nassourdine Imavov",
+        "Sean Strickland"
+      ],
+      "matchupKey": "nassourdineimavov|seanstrickland|undated:2026-10",
+      "eventDateHint": null,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "Championship Rounds recoge un reto público entre Nassourdine Imavov y Sean Strickland, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds covers a public challenge between Nassourdine Imavov and Sean Strickland, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-04T21:58:14.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2106866511814005038",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2106866511814005038",
+          "publishedAt": "2026-10-04T21:58:14.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2106844191712223558",
+      "fighterNames": [
+        "Payton Talbott",
+        "Sean O'Malley"
+      ],
+      "matchupKey": "paytontalbott|seanomalley|undated:2026-10",
+      "eventDateHint": null,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "Championship Rounds recoge una respuesta pública relacionada con una posible pelea entre Payton Talbott y Sean O'Malley, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds covers a public response concerning a possible fight between Payton Talbott and Sean O'Malley, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-04T20:29:33.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2106564580398829797",
+          "sourceId": "eric-alexander",
+          "postUrl": "https://x.com/ericaiexander/status/2106564580398829797",
+          "publishedAt": "2026-10-04T01:58:28.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        },
+        {
+          "id": "2106844191712223558",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2106844191712223558",
+          "publishedAt": "2026-10-04T20:29:33.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
       "id": "2106593647596654854",
       "fighterNames": [
         "Ilia Topuria",
@@ -80,6 +241,333 @@
           "postUrl": "https://x.com/ChampRDS/status/2106593647596654854",
           "publishedAt": "2026-10-04T03:53:58.000Z",
           "language": "en",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2106590689261732292",
+      "fighterNames": [
+        "Esteban Ribovics",
+        "King Green"
+      ],
+      "matchupKey": "estebanribovics|kinggreen|undated:2026-10",
+      "eventDateHint": null,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "Championship Rounds comenta un posible cruce entre Esteban Ribovics y King Green, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds discusses a possible matchup between Esteban Ribovics and King Green, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-04T03:42:13.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2105791077735182492",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2105791077735182492",
+          "publishedAt": "2026-10-01T22:44:51.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        },
+        {
+          "id": "2106553731655287102",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2106553731655287102",
+          "publishedAt": "2026-10-04T01:15:22.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        },
+        {
+          "id": "2106554800305553594",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2106554800305553594",
+          "publishedAt": "2026-10-04T01:19:36.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        },
+        {
+          "id": "2106590689261732292",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2106590689261732292",
+          "publishedAt": "2026-10-04T03:42:13.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2106561029421637671",
+      "fighterNames": [
+        "Bo Nickal",
+        "Joe Pyfer"
+      ],
+      "matchupKey": "bonickal|joepyfer|2026-12-12",
+      "eventDateHint": "2026-12-12",
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Championship Rounds comenta un posible cruce entre Bo Nickal y Joe Pyfer; la publicación menciona el 12 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds discusses a possible matchup between Bo Nickal and Joe Pyfer; the post mentions December 12. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-04T01:44:22.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2106561029421637671",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2106561029421637671",
+          "publishedAt": "2026-10-04T01:44:22.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2106559976160239801",
+      "fighterNames": [
+        "Charles Oliveira",
+        "Diego Lopes"
+      ],
+      "matchupKey": "charlesoliveira|diegolopes|2026-12-12",
+      "eventDateHint": "2026-12-12",
+      "dateYearInferred": true,
+      "summary": {
+        "es": "MMA Latinoamérica comenta un posible cruce entre Charles Oliveira y Diego Lopes; la publicación menciona el 12 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "MMA Latinoamérica discusses a possible matchup between Charles Oliveira and Diego Lopes; the post mentions December 12. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-04T01:40:10.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2106559976160239801",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2106559976160239801",
+          "publishedAt": "2026-10-04T01:40:10.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2106544129379348990",
+      "fighterNames": [
+        "Alex Pereira",
+        "Sergei Pavlovich"
+      ],
+      "matchupKey": "alexpereira|sergeipavlovich|2026-12-12",
+      "eventDateHint": "2026-12-12",
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Championship Rounds comenta un posible cruce entre Alex Pereira y Sergei Pavlovich; la publicación menciona el 12 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds discusses a possible matchup between Alex Pereira and Sergei Pavlovich; the post mentions December 12. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-04T00:37:12.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2106544129379348990",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2106544129379348990",
+          "publishedAt": "2026-10-04T00:37:12.000Z",
+          "language": "en",
+          "attributedAccounts": [
+            "Ninadrama"
+          ],
+          "attribution": "@Ninadrama)"
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2106526068630769983",
+      "fighterNames": [
+        "Alden Coria",
+        "Imanol Rodriguez"
+      ],
+      "matchupKey": "aldencoria|imanolrodriguez|undated:2026-10",
+      "eventDateHint": null,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "MMA Latinoamérica comenta un posible cruce entre Alden Coria y Imanol Rodriguez, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "MMA Latinoamérica discusses a possible matchup between Alden Coria and Imanol Rodriguez, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-03T23:25:26.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2106526068630769983",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2106526068630769983",
+          "publishedAt": "2026-10-03T23:25:26.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2106348613001756776",
+      "fighterNames": [
+        "Ian Garry",
+        "Yaroslav Amosov"
+      ],
+      "matchupKey": "iangarry|yaroslavamosov|undated:2026-10",
+      "eventDateHint": null,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "Pelunaton comenta un posible cruce entre Ian Garry y Yaroslav Amosov, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Pelunaton discusses a possible matchup between Ian Garry and Yaroslav Amosov, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-03T11:40:18.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2106348613001756776",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2106348613001756776",
+          "publishedAt": "2026-10-03T11:40:18.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2106341639572594830",
+      "fighterNames": [
+        "Eric Garcia",
+        "Santi Higuera"
+      ],
+      "matchupKey": "ericgarcia|santihiguera|undated:2026-10",
+      "eventDateHint": null,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "MMA Sin Límites comenta un posible cruce entre Eric Garcia y Santi Higuera, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "MMA Sin Límites discusses a possible matchup between Eric Garcia and Santi Higuera, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-03T11:12:35.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2106341639572594830",
+          "sourceId": "mma-sin-limites",
+          "postUrl": "https://x.com/MMASINLIMITES/status/2106341639572594830",
+          "publishedAt": "2026-10-03T11:12:35.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2105839611880591421",
+      "fighterNames": [
+        "Charles Oliveira",
+        "Diego Lopes"
+      ],
+      "matchupKey": "charlesoliveira|diegolopes|undated:2026-10",
+      "eventDateHint": null,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "MMA Latinoamérica comenta un posible cruce entre Charles Oliveira y Diego Lopes, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "MMA Latinoamérica discusses a possible matchup between Charles Oliveira and Diego Lopes, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-02T01:57:42.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2105839611880591421",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2105839611880591421",
+          "publishedAt": "2026-10-02T01:57:42.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2105781810076561567",
+      "fighterNames": [
+        "Marcos Degli",
+        "Mitch Raposo"
+      ],
+      "matchupKey": "marcosdegli|mitchraposo|2026-11-07",
+      "eventDateHint": "2026-11-07",
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Pelunaton comenta un posible cruce entre Marcos Degli y Mitch Raposo; la publicación menciona el 7 de noviembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Pelunaton discusses a possible matchup between Marcos Degli and Mitch Raposo; the post mentions November 7. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-01T22:08:01.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2105781810076561567",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2105781810076561567",
+          "publishedAt": "2026-10-01T22:08:01.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2105714508966580502",
+      "fighterNames": [
+        "Jared Gordon",
+        "Melquizael Costa"
+      ],
+      "matchupKey": "jaredgordon|melquizaelcosta|2026-11-14",
+      "eventDateHint": "2026-11-14",
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Pelunaton comenta un posible cruce entre Jared Gordon y Melquizael Costa; la publicación menciona el 14 de noviembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Pelunaton discusses a possible matchup between Jared Gordon and Melquizael Costa; the post mentions November 14. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T17:12:00.241Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-01T17:40:35.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2105714508966580502",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2105714508966580502",
+          "publishedAt": "2026-10-01T17:40:35.000Z",
+          "language": "es",
           "attributedAccounts": []
         }
       ],
