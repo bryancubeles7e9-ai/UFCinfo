@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-07T17:14:04.980Z",
+  "updatedAt": "2026-10-07T17:30:24.255286+00:00",
   "groups": [
     {
       "id": "2107747599155708089",
@@ -389,36 +389,6 @@
             "Ninadrama"
           ],
           "attribution": "@Ninadrama)"
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2106526068630769983",
-      "fighterNames": [
-        "Alden Coria",
-        "Imanol Rodriguez"
-      ],
-      "matchupKey": "aldencoria|imanolrodriguez|undated:2026-10",
-      "eventDateHint": null,
-      "dateYearInferred": false,
-      "summary": {
-        "es": "MMA Latinoamérica comenta un posible cruce entre Alden Coria y Imanol Rodriguez, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "MMA Latinoamérica discusses a possible matchup between Alden Coria and Imanol Rodriguez, with no exact date stated by the source. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-10-07T17:12:00.241Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-10-03T23:25:26.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2106526068630769983",
-          "sourceId": "mma-latinoamerica",
-          "postUrl": "https://x.com/ClubDeLasMMA/status/2106526068630769983",
-          "publishedAt": "2026-10-03T23:25:26.000Z",
-          "language": "es",
-          "attributedAccounts": []
         }
       ],
       "official": null
