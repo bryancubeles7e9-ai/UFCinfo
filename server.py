@@ -11,6 +11,7 @@ import threading
 import time
 import uuid
 from contextlib import contextmanager
+from html import escape
 from http.cookies import SimpleCookie
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -90,6 +91,9 @@ def make_handler(database, public_origin, fighter_ids):
             super().__init__(*args, directory=str(ROOT), **kwargs)
 
         def end_headers(self):
+            # Assets use stable URLs: revalidate after deployments to avoid mixing versions.
+            if urlsplit(self.path).path.startswith('/assets/'):
+                self.send_header('Cache-Control', 'no-cache')
             self.send_header("X-Content-Type-Options", "nosniff")
             self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
             self.send_header("X-Frame-Options", "SAMEORIGIN")
@@ -250,6 +254,30 @@ def make_handler(database, public_origin, fighter_ids):
             if self.headers.get("Host") not in allowed_hosts:
                 return self.send_error(403)
             path = unquote(urlsplit(self.path).path)
+            if path in {"/", "/index.html", "/robots.txt", "/sitemap.xml"}:
+                home = public_origin.rstrip("/") + "/"
+                if path == "/robots.txt":
+                    body = f"User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: {home}sitemap.xml\n"
+                    content_type = "text/plain; charset=utf-8"
+                elif path == "/sitemap.xml":
+                    body = '<?xml version="1.0" encoding="UTF-8"?>\n' + f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>{escape(home)}</loc></url></urlset>\n'
+                    content_type = "application/xml; charset=utf-8"
+                else:
+                    body = (ROOT / "index.html").read_text()
+                    metadata = f'<link rel="canonical" href="{escape(home, quote=True)}" />\n<meta property="og:url" content="{escape(home, quote=True)}" />'
+                    verification = os.environ.get("GOOGLE_SITE_VERIFICATION", "")
+                    if verification:
+                        metadata += f'\n<meta name="google-site-verification" content="{escape(verification, quote=True)}" />'
+                    body = body.replace("</head>", metadata + "\n</head>", 1)
+                    content_type = "text/html; charset=utf-8"
+                payload = body.encode("utf-8")
+                self.send_response(200)
+                self.send_header("Content-Type", content_type)
+                self.send_header("Content-Length", str(len(payload)))
+                self.send_header("Cache-Control", "no-cache")
+                self.end_headers()
+                self.wfile.write(payload)
+                return
             # Publish only website assets, never database, source, hidden files or listings.
             relative = Path(path.lstrip("/"))
             target = (ROOT / relative).resolve()

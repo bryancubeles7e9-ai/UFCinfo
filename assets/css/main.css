@@ -142,18 +142,15 @@ html {
   gap: 8px;
 }
 .logo-icon {
-  display: grid;
-  place-items: center;
-  width: 27px;
-  height: 27px;
-  border-radius: 6px;
-  background: var(--accent);
-  color: var(--bg);
-  font-family: var(--display);
-  font-size: 21px;
-  font-weight: 800;
-  line-height: 1;
+  display: block;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
 }
+.logo-corner, .logo-center { fill: var(--accent); }
+.logo-opponent { fill: currentColor; }
+.logo-wordmark { letter-spacing: .5px; }
+.logo-wordmark > span { color: var(--accent); font-weight: 600; }
 .logo-dot {
   font: 10px var(--body);
   align-self: flex-start;
@@ -1333,16 +1330,7 @@ dialog .dialog-close {
 .bout > .text-link {
   margin-top: 14px;
 }
-#builder-dialog {
-  max-width: 600px;
-}
-#builder-dialog .section-heading {
-  margin: 0 0 24px;
-  align-items: start;
-}
-#builder-dialog h2 {
-  font-size: 34px;
-}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1893,11 +1881,8 @@ dialog .dialog-close {
     font-size: 21px;
   }
   .logo-icon {
-    width: 22px;
-    height: 22px;
-  }
-  .logo-icon:after {
-    inset: 5px;
+    width: 28px;
+    height: 28px;
   }
   .hero-bottom {
     font-size: 5px;
@@ -2776,4 +2761,68 @@ button.ranking-name:hover {
     animation: none !important;
     transition: none !important;
   }
+}
+
+/* Reported matchups retain their original attribution. */
+.rumor-toolbar { flex-wrap: wrap; gap: 12px; }
+.rumor-toolbar .search-box { flex: 1 1 260px; }
+.rumor-toolbar select { width: auto; max-width: 100%; }
+.rumor-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); gap: 28px; align-items: start; }
+#rumor-count { margin-bottom: 16px; }
+.rumor-list { display: grid; gap: 20px; margin-bottom: 40px; }
+.rumor-card-top, .rumor-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; }
+.rumor-matchup { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin: 22px 0 16px; }
+.rumor-matchup > span { font: 11px var(--body); color: var(--muted); }
+.rumor-fighter { background: none; color: var(--ink); padding: 0; text-align: left; font: 700 30px var(--display); }
+.rumor-fighter:hover { color: var(--accent); }
+.rumor-summary { line-height: 1.8; margin-bottom: 22px; }
+.rumor-byline { display: flex; flex-wrap: wrap; gap: 6px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; line-height: 1.8; }
+.rumor-byline a { color: var(--ink); font-weight: 600; }
+.rumor-byline time { flex-basis: 100%; color: var(--muted); }
+.rumor-actions { justify-content: flex-start; margin: 16px 0; }
+.rumor-confirmed { color: var(--ink); border-color: var(--blue); background: var(--surface-2); }
+.rumor-sidebar h2 { font-size: 28px; margin: 10px 0 22px; }
+.rumor-sidebar .data-note { margin-top: 18px; line-height: 1.8; }
+.rumor-source-link { display: flex; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding: 14px 0; font-size: 12px; }
+.rumor-source-link small { display: block; color: var(--muted); margin-top: 5px; }
+.rumor-source-link:hover { color: var(--accent); }
+@media (max-width: 1150px) { .header { flex-wrap: wrap; } .header nav { order: 3; width: 100%; overflow-x: auto; } }
+@media (max-width: 850px) { .rumor-layout { grid-template-columns: minmax(0,1fr); } .rumor-toolbar select { flex: 1 1 160px; } }
+
+/* Useful homepage agenda, driven by the official events feed. */
+.info-hero { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+.info-hero .hero-copy { min-width: 0; padding: 36px; }
+.info-hero h1 { font-size: clamp(32px, 4.2vw, 60px); line-height: 1.08; margin: 24px 0; overflow-wrap: anywhere; }
+.info-hero .hero-versus { display: block; font-size: 18px; color: var(--accent); margin: 10px 0; letter-spacing: 2px; }
+.info-hero .hero-tag { flex-wrap: wrap; font-size: 10px; }
+.hero-facts { margin: 0; display: grid; gap: 18px; }
+.hero-facts dt { font-size: 10px; letter-spacing: 1.5px; color: #aaa9a4; margin-bottom: 6px; }
+.hero-facts dd { margin: 0; font-size: 14px; color: #f3f1ec; line-height: 1.6; }
+.info-hero .hero-buttons { flex-wrap: wrap; margin: 24px 0 14px; }
+.info-hero .data-note { font-size: 11px; line-height: 1.7; color: #aaa9a4; }
+.hero-agenda { min-width: 0; padding: 36px; border-left: 1px solid #ffffff20; background: radial-gradient(ellipse at top right, #f4512b18, transparent 70%); display: flex; flex-direction: column; align-items: start; gap: 14px; color: #f3f1ec; }
+.hero-agenda > .eyebrow { color: var(--accent); margin: 0; }
+.hero-agenda h2 { margin: 0; font-size: 34px; }
+.hero-agenda h2 > span { font-size: 16px; font-weight: 400; }
+.hero-bouts { width: 100%; }
+.hero-bouts > div { padding: 14px 0; border-bottom: 1px solid #ffffff20; }
+.hero-bouts .eyebrow { font-size: 9px; color: #aaa9a4; }
+.hero-bouts p { margin: 8px 0; font-size: 16px; font-weight: 600; line-height: 1.5; }
+.hero-bouts p span { color: var(--accent); }
+.hero-bouts small { color: #aaa9a4; }
+.hero-agenda .text-link { color: var(--accent); }
+.light .info-hero .outline-button { color: #f3f1ec; border-color: #ffffff40; }
+@media (max-width: 760px) {
+  .info-hero { grid-template-columns: 1fr; }
+  .info-hero .hero-copy, .hero-agenda { padding: 24px; }
+  .hero-agenda { border-left: 0; border-top: 1px solid #ffffff20; }
+  .info-hero h1 { font-size: 38px; }
+  .info-hero .hero-buttons { width: 100%; }
+}
+
+ .event-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.event-kind-buttons { border-left: 1px solid var(--line); padding-left: 12px; }
+@media (max-width: 760px) {
+  .event-filters { width: 100%; gap: 8px; }
+  .event-kind-buttons { border-left: 0; padding-left: 0; }
 }

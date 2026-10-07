@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {validateRumorFeed, filterRumors, rumorCard} from '../assets/js/rumors.js';
+import {setSpoilersEnabled,revealResult} from '../assets/js/spoilers.js';
+import {setLanguage} from '../assets/js/i18n.js';
+const feed=JSON.parse(await readFile(new URL('../assets/data/ufc-rumors.json',import.meta.url)));
+assert.ok(validateRumorFeed(feed));
+assert.equal(feed.rumors.length,0);
+// Synthetic fixture only; no fake report is shipped in the production feed.
+const r={id:'2000000000000000000',sourceId:'cclegaspi',postUrl:'https://x.com/CCLegaspi/status/2000000000000000000',publishedAt:'2026-10-01T12:00:00Z',reviewedAt:'2026-10-06T12:00:00Z',language:'es',fighters:['topuria','holloway'],summary:{es:'Resumen de prueba <script>no ejecutar</script>',en:'Synthetic test report'},containsSpoilers:true,eventId:'ufc-335',official:null};
+const populated={...feed,rumors:[r]};
+assert.ok(validateRumorFeed(populated));
+for(const mutate of [r=>r.sourceId='unknown',r=>r.postUrl='https://x.com/other/status/'+r.id,r=>r.fighters=['topuria','topuria'],r=>r.summary.en='',r=>r.publishedAt='invalid',r=>r.official={eventId:'ufc-335',url:'https://evil.test',checkedAt:'2026-10-06T12:00:00Z',eventDate:'2026-12-13T02:00:00Z'}]) {
+ const bad=structuredClone(populated);mutate(bad.rumors[0]);assert.equal(validateRumorFeed(bad),false);
+}
+assert.equal(validateRumorFeed({...populated,rumors:[r,r]}),false);
+assert.equal(filterRumors(populated,{source:'mike-heck'}).length,0);
+assert.equal(filterRumors(populated,{query:'legaspi',language:'es',status:'pending'}).length,1);
+assert.equal(filterRumors(populated,{query:'Resumen de prueba'}).length,0);
+assert.equal(filterRumors(populated,{status:'confirmed'}).length,0);
+let html=rumorCard(r,feed.sources);
+assert.ok(html.includes('Carlos Contreras Legaspi') && html.includes(r.postUrl));
+assert.ok(html.includes('Leer rumor') && !html.includes('Resumen de prueba'));
+revealResult('rumor:'+r.id);
+html=rumorCard(r,feed.sources);
+assert.ok(html.includes('&lt;script&gt;') && !html.includes('<script>'));
+setLanguage('en');assert.ok(rumorCard(r,feed.sources).includes('Synthetic test report'));
+setLanguage('es');setSpoilersEnabled(true);
+const confirmed={...r,official:{eventId:'ufc-335',url:'https://www.ufc.com/event/ufc-335',checkedAt:'2026-10-06T12:00:00Z',eventDate:'2026-12-13T02:00:00Z'}};
+assert.ok(validateRumorFeed({...feed,rumors:[confirmed]}));
+assert.equal(filterRumors({...feed,rumors:[confirmed]},{status:'confirmed'}).length,1);
+html=rumorCard(confirmed,feed.sources);
+assert.ok(html.includes('CONFIRMADO POR UFC') && html.includes(confirmed.official.url) && html.includes(r.postUrl));
+assert.equal(validateRumorFeed({...feed,rumors:[{...confirmed,eventId:'ufc-334'}]}),false);
+assert.equal(validateRumorFeed({...feed,rumors:[{...confirmed,official:{...confirmed.official,eventDate:'2025-01-01T00:00:00Z'}}]}),false);
+console.log('PASS: provenance, original links, filters, bilingual summaries, spoilers, escaped content and official confirmations');

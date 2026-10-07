@@ -1,5 +1,13 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+'Numerados':'Numbered', 'Especiales':'Special events', 'No hay eventos UFC disponibles.':'No UFC events available.', 'No hay carteleras con estos filtros. Prueba otra selección.':'No fight cards match these filters. Try another selection.',
+
+'UFC EVENTO ESPECIAL':'UFC SPECIAL EVENT', 'Eventos especiales':'Special events', 'Eventos numerados, Fight Night y especiales: próximos anunciados y resultados de este año, con su cartelera principal.':'Numbered, Fight Night and special events: upcoming announced events and this year’s results, with their main cards.',
+
+'Tipo de evento':'Event type', 'Numerados y Fight Night':'Numbered and Fight Night', 'Solo numerados':'Numbered only', 'Solo Fight Night':'Fight Night only', 'Eventos UFC':'UFC events', 'PRÓXIMO EVENTO UFC':'NEXT UFC EVENT', 'ÚLTIMO EVENTO UFC':'LATEST UFC EVENT', 'No hay próximos eventos UFC en los datos disponibles.':'There are no upcoming UFC events in the available data.', 'Eventos numerados y Fight Night: próximos anunciados y resultados de este año, con su cartelera principal.':'Numbered events and Fight Night: upcoming announced events and this year’s results, with their main cards.',
+
+'TU AGENDA UFC':'YOUR UFC SCHEDULE', 'Resumen del próximo evento':'Next event overview', 'FECHA Y HORA LOCAL':'LOCAL DATE AND TIME', 'SEDE':'VENUE', 'combates anunciados':'announced bouts', 'COMBATE ANUNCIADO':'ANNOUNCED BOUT', 'La próxima noche está por anunciar.':'The next fight night is yet to be announced.', 'No hay próximos eventos numerados en los datos disponibles.':'There are no upcoming numbered events in the available data.', 'EXPLORA UFCINFO':'EXPLORE UFCINFO', 'Pendiente de anuncio':'To be announced', 'Consulta fechas, horarios y combates anunciados.':'Check dates, times and announced bouts.',
+
 'Saltar al contenido':'Skip to content', 'Navegación principal':'Main navigation', 'Carteleras':'Fight cards', 'CARTELERAS':'FIGHT CARDS', 'Luchadores':'Fighters', 'Mi esquina':'My corner', 'MI ESQUINA':'MY CORNER',
 'Sin spoilers: ON':'Spoiler-free: ON', 'Sin spoilers: OFF':'Spoiler-free: OFF', 'Iniciar sesión':'Sign in', 'Cambiar tema':'Change theme', 'Crear evento':'Create event', 'Crear cartelera':'Create fight card',
 'UFC · MMA · CULTURA':'UFC · MMA · CULTURE', 'NO ES SOLO':'IT’S MORE THAN', 'UNA PELEA':'A FIGHT',
@@ -46,4 +54,34 @@ Object.assign(english, {
 'FOTO NO DISPONIBLE · VER PERFIL OFICIAL':'PHOTO UNAVAILABLE · VIEW OFFICIAL PROFILE',
 '2 de octubre de 2026':'October 2, 2026', 'Según biografía UFC':'According to UFC biography',
 'ESTILOS QUE HACEN HISTORIA':'STYLES THAT MAKE HISTORY', 'Escenario imaginario':'Imaginary venue', 'Cartelera principal UFC.':'UFC main card.', 'El horario y los combates anunciados pueden cambiar.':'Times and announced fights may change.', 'Evento ficticio creado en UFCinfo. No es una cartelera oficial UFC.':'Fictional event created in UFCinfo. This is not an official UFC fight card.', 'cartelera imaginaria':'imaginary fight card', 'aquí':'here'
+});
+Object.assign(english, {
+'Rumores':'Rumors','RUMORES':'RUMORS','LO QUE SE HABLA FUERA DE LA JAULA':'TALK OUTSIDE THE CAGE',
+'Posibles peleas reportadas por periodistas en español e inglés. Cada publicación conserva su fuente original.':'Potential fights reported by journalists in Spanish and English. Every post retains its original source.',
+'FUENTES IDENTIFICADAS':'IDENTIFIED SOURCES','Buscar luchador o periodista…':'Search fighters or journalists…','Buscar rumores':'Search rumors',
+'Idioma de la fuente':'Source language','Todos los idiomas':'All languages','Inglés':'English','Periodista':'Journalist','Todos los periodistas':'All journalists',
+'Estado del rumor':'Rumor status','Todos los estados':'All statuses','Sin confirmar':'Unconfirmed','Confirmados por UFC':'Confirmed by UFC',
+'DE DÓNDE SALE LA INFORMACIÓN':'WHERE THE INFORMATION COMES FROM','Periodistas':'Journalists',
+'Los nombres y las cuentas identifican al autor del reporte. Un rumor no es un anuncio oficial.':'Names and accounts identify the reporter. A rumor is not an official announcement.',
+'La etiqueta de confirmación se actualiza cuando se verifica la pareja en una cartelera de UFC.com.':'The confirmation label updates when the matchup is verified on a UFC.com fight card.',
+'CONFIRMADO POR UFC':'CONFIRMED BY UFC','RUMOR · SIN CONFIRMAR':'RUMOR · UNCONFIRMED','FUENTE EN ESPAÑOL':'SPANISH SOURCE','FUENTE EN INGLÉS':'ENGLISH SOURCE',
+'Contenido oculto por el modo sin spoilers.':'Content hidden by spoiler-free mode.','Leer rumor':'Read rumor','Publicado por':'Reported by',
+'Ver publicación original en X':'View original post on X','Confirmación oficial UFC':'Official UFC confirmation',
+'La pelea aparece en la cartelera oficial UFC. Comprobación:':'The fight appears on the official UFC card. Checked:',
+'Información atribuida al periodista; pendiente de confirmación oficial.':'Report attributed to the journalist; awaiting official confirmation.',
+'Última comprobación de confirmaciones oficiales:':'Official confirmations last checked:',
+'Todavía no hay una comprobación de confirmaciones oficiales disponible.':'No official confirmation check is available yet.',
+'No se pudo comprobar una actualización. Se conservan las últimas publicaciones cargadas.':'Unable to check for updates. The latest loaded posts have been retained.',
+'No hay publicaciones con estos filtros.':'No posts match these filters.',
+'Aún no hay rumores revisados. Aquí aparecerán publicaciones con periodista, fecha y enlace original.':'No reviewed rumors yet. Posts will appear here with the reporter, date and original link.'
+});
+
+Object.assign(english, {
+'EN DESARROLLO':'IN DEVELOPMENT',
+'Sección incompleta y pendiente de retomar. La búsqueda automática de rumores en X y la actualización automática de confirmaciones todavía no están activadas.':'This section is incomplete and on hold. Automatic rumor searches on X and automatic confirmation updates are not enabled yet.',
+'La comprobación de confirmaciones oficiales está preparada, pero su ejecución automática está desactivada.':'Official confirmation checks are prepared, but automatic execution is disabled.'
+});
+Object.assign(english, {
+'UFCinfo — Carteleras UFC, luchadores y rankings MMA':'UFCinfo — UFC fight cards, fighters and MMA rankings',
+'Explora carteleras UFC, luchadores y rankings de MMA. Compara estilos en Fight Lab y sigue tus favoritos en UFCinfo, con modo sin spoilers.':'Explore UFC fight cards, fighters and MMA rankings. Compare styles in Fight Lab and follow your favorites on UFCinfo with spoiler-free mode.'
 });

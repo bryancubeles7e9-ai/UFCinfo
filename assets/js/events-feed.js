@@ -11,9 +11,8 @@ export const eventsFeed = {
 let updating = false;
 
 function validEvent(event, year) {
-  return event && event.type === 'official' && Number.isInteger(event.number) &&
-    event.id === `ufc-${event.number}` &&
-    event.source === `https://www.ufc.com/event/ufc-${event.number}` &&
+  return event && event.type === 'official' && ((Number.isInteger(event.number) && event.id === `ufc-${event.number}` && (!event.eventKind || event.eventKind === 'numbered')) || (event.number === null && event.eventKind === 'fight-night' && /^ufc-fight-night-[a-z]+-\d{2}-\d{4}$/.test(event.id)) || (event.number === null && event.eventKind === 'special' && event.id === 'ufc-freedom-250')) &&
+    event.source === `https://www.ufc.com/event/${event.id}` &&
     ['title', 'subtitle', 'location', 'date', 'checkedAt'].every(k => typeof event[k] === 'string') &&
     Number.isFinite(Date.parse(event.date)) &&
     ['completed', 'announced', 'scheduled', 'live'].includes(event.status || 'completed') &&

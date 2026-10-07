@@ -1,4 +1,4 @@
-import { createDemoEvents, fighterById } from "./data.js";
+import { fighterById } from "./data.js";
 import { directoryFighterById, directoryFighters } from "./fighter-directory.js";
 const key = "octagon-workspace-v1";
 export const freshState = () => ({
@@ -7,7 +7,7 @@ export const freshState = () => ({
   pinnedBout: null,
   picks: {},
   matchups: [],
-  events: createDemoEvents(),
+  events: [],
   theme: "dark",
 });
 export function validateState(value) {
