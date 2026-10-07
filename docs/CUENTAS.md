@@ -1,6 +1,6 @@
 # Cuentas y guardado del seguimiento
 
-UFCinfo permite crear una cuenta con correo y contraseña e iniciar/cerrar sesión. La lista de luchadores seguidos se guarda en el servidor y se recupera al acceder con la misma cuenta desde otro ordenador. Los eventos oficiales y los perfiles siguen siendo datos compartidos del catálogo; no se guardan copias de ellos por usuario.
+UFCinfo permite crear una cuenta con nombre de usuario y contraseña e iniciar/cerrar sesión. La lista de luchadores seguidos se guarda en el servidor y se recupera al acceder con la misma cuenta desde otro ordenador. Los eventos oficiales y los perfiles siguen siendo datos compartidos del catálogo; no se guardan copias de ellos por usuario.
 
 ## Probar en este ordenador
 
@@ -38,7 +38,7 @@ También puede ejecutarse en otro servidor Python detrás de un proxy HTTPS. Con
 
 | Método y ruta | Función |
 | --- | --- |
-| `POST /api/auth/register` | Crea la cuenta; acepta correo, contraseña y seguimiento inicial opcional. |
+| `POST /api/auth/register` | Crea la cuenta; acepta nombre de usuario, contraseña y seguimiento inicial opcional. |
 | `POST /api/auth/login` | Inicia una sesión y devuelve el seguimiento. |
 | `GET /api/auth/session` | Recupera la sesión actual. |
 | `POST /api/auth/logout` | Invalida la sesión actual. |
@@ -46,7 +46,7 @@ También puede ejecutarse en otro servidor Python detrás de un proxy HTTPS. Con
 | `PUT /api/me/following` | Guarda una lista válida con comprobación de revisión. |
 | `GET /api/health` | Estado del servidor, sin información de cuentas. |
 
-Las contraseñas requieren al menos 12 caracteres al registrarse y se almacenan derivadas mediante scrypt con sal individual. Las sesiones usan identificadores aleatorios en cookies HttpOnly y SameSite; en el origen público HTTPS también son Secure. Las mutaciones comprueban origen y, para una sesión autenticada, un token CSRF. Los intentos de acceso se limitan por correo y dirección de conexión. La actualización exige autenticación y siempre afecta a la cuenta de la sesión; no acepta un identificador de usuario suministrado por el cliente.
+Las contraseñas requieren al menos 12 caracteres al registrarse y se almacenan derivadas mediante scrypt con sal individual. Las sesiones usan identificadores aleatorios en cookies HttpOnly y SameSite; en el origen público HTTPS también son Secure. Las mutaciones comprueban origen y, para una sesión autenticada, un token CSRF. Los intentos de acceso se limitan por nombre de usuario y dirección de conexión. La actualización exige autenticación y siempre afecta a la cuenta de la sesión; no acepta un identificador de usuario suministrado por el cliente.
 
 Esta primera versión no incluye verificación por correo ni recuperación de contraseña. No se envían emails. No publiques la base de datos ni sus copias.
 
@@ -59,3 +59,11 @@ node tests/test-following.mjs
 ```
 
 Las pruebas de API usan una base temporal y un puerto local efímero. Comprueban registro, acceso desde dos clientes, aislamiento, persistencia, conflictos de revisión, origen, CSRF, expiración y cierre de sesión, contraseñas derivadas, límites de intentos y protección de archivos privados.
+
+## Nombres de usuario únicos
+
+Las nuevas cuentas usan nombres de 3 a 24 caracteres: letras ASCII, números, guiones y guiones bajos. Se guardan en minúsculas y un índice único de SQLite impide duplicados, incluso con registros simultáneos. La contraseña sigue requiriendo al menos 12 caracteres y se almacena derivada con scrypt.
+
+Al arrancar, el servidor migra automáticamente las cuentas antiguas: conserva su identificador, contraseña, seguimiento y sesiones. Para esas cuentas, el nombre de usuario inicial es su correo anterior; pueden usarlo en el formulario de inicio de sesión. Las cuentas nuevas no piden correo.
+
+Los usuarios se almacenan en la tabla `users` de `accounts.sqlite3`. En Render, debe existir el disco persistente montado en `/var/data` y el comando de inicio debe usar `--database /var/data/accounts.sqlite3` para conservarlos tras reinicios y despliegues.

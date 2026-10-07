@@ -52,7 +52,7 @@ export function initializeAccount({store, onChange}) {
   function render() {
     $("#account-open").textContent = user ? "Mi cuenta" : "Iniciar sesión";
     $("#account-panel-title").setAttribute("translate", user ? "no" : "yes");
-    $("#account-panel-title").textContent = user ? user.email : "Guarda tu esquina en una cuenta";
+    $("#account-panel-title").textContent = user ? user.username : "Guarda tu esquina en una cuenta";
     $("#account-panel-copy").textContent = user ? "Tu lista de luchadores seguidos se guarda en tu cuenta y se recupera al iniciar sesión desde otro dispositivo." : "Crea una cuenta o inicia sesión para recuperar tus luchadores seguidos desde otros dispositivos. También puedes seguir usando el modo invitado.";
     $("#account-logout").hidden = !user;
     $("#account-enter").hidden = !!user;
@@ -70,11 +70,13 @@ export function initializeAccount({store, onChange}) {
     $("#auth-form").hidden = !!user && !expired;
     $("#auth-signed-in").hidden = !user || expired;
     $("#auth-register-tab").disabled = !!user && expired;
-    $("#auth-email").readOnly = !!user && expired;
-    $("#auth-signed-email").textContent = user?.email || "";
+    $("#auth-username").maxLength = mode === "register" ? 24 : 254;
+    $("#auth-username").pattern = mode === "register" ? "[A-Za-z0-9_\\-]{3,24}" : ".*";
+    $("#auth-username").readOnly = !!user && expired;
+    $("#auth-signed-username").textContent = user?.username || "";
   }
   function validateRemote(data) {
-    if (!data.user?.id || !data.user?.email || !validFavorites(data.favorites) || !Number.isInteger(data.revision) || typeof data.csrf !== "string") throw new AccountError("La cuenta devolvió datos no válidos.");
+    if (!data.user?.id || !data.user?.username || !validFavorites(data.favorites) || !Number.isInteger(data.revision) || typeof data.csrf !== "string") throw new AccountError("La cuenta devolvió datos no válidos.");
   }
   async function sync() {
     if (!user || !dirty) return;
@@ -101,7 +103,7 @@ export function initializeAccount({store, onChange}) {
             store.save(); pendingCache(); onChange();
             continue;
           }
-          if (error.status === 401) { expired = true; mode = "login"; $("#auth-email").value = user.email; }
+          if (error.status === 401) { expired = true; mode = "login"; $("#auth-username").value = user.username; }
           status(error.status === 401 ? "Tu sesión ha caducado. Inicia sesión para guardar los cambios pendientes." : error.message);
           pendingCache();
           break;
@@ -146,7 +148,7 @@ export function initializeAccount({store, onChange}) {
       store.state.favorites = [...data.favorites]; base = [...data.favorites]; revision = data.revision;
       store.save(); pendingCache(); onChange(); status("Seguimiento guardado en tu cuenta.");
     } catch (error) {
-      if (error.status === 401) { expired = true; mode = "login"; $("#auth-email").value = user.email; render(); }
+      if (error.status === 401) { expired = true; mode = "login"; $("#auth-username").value = user.username; render(); }
       status(error.message);
     }
   }
@@ -160,7 +162,7 @@ export function initializeAccount({store, onChange}) {
     event.preventDefault(); if (busy || !available) return;
     busy = true; render(); $("#auth-error").textContent = "";
     try {
-      const data = await accountRequest(`auth/${mode}`, {method:"POST", body:{email:$("#auth-email").value, password:$("#auth-password").value, ...(mode === "register" ? {favorites:$("#auth-import-local").checked ? [...store.state.favorites] : []} : {})}});
+      const data = await accountRequest(`auth/${mode}`, {method:"POST", body:{username:$("#auth-username").value, password:$("#auth-password").value, ...(mode === "register" ? {favorites:$("#auth-import-local").checked ? [...store.state.favorites] : []} : {})}});
       await activate(data);
       $("#auth-dialog").close();
     } catch (error) { $("#auth-error").textContent = error.message; }

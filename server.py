@@ -40,7 +40,7 @@ class Database:
             db.executescript("""
               PRAGMA journal_mode=WAL;
               CREATE TABLE IF NOT EXISTS users (
-                id TEXT PRIMARY KEY, email TEXT UNIQUE NOT NULL, salt BLOB NOT NULL,
+                id TEXT PRIMARY KEY, username TEXT UNIQUE NOT NULL, salt BLOB NOT NULL,
                 password BLOB NOT NULL, favorites TEXT NOT NULL DEFAULT '[]',
                 revision INTEGER NOT NULL DEFAULT 0, updated_at INTEGER NOT NULL);
               CREATE TABLE IF NOT EXISTS sessions (
@@ -51,6 +51,11 @@ class Database:
                 scope TEXT NOT NULL, at INTEGER NOT NULL);
               CREATE INDEX IF NOT EXISTS attempt_scope ON auth_attempts(scope, at);
             """)
+            # Upgrade existing email accounts without changing IDs, passwords or sessions.
+            columns = {row["name"] for row in db.execute("PRAGMA table_info(users)")}
+            if "email" in columns and "username" not in columns:
+                db.execute("ALTER TABLE users RENAME COLUMN email TO username")
+            db.execute("CREATE UNIQUE INDEX IF NOT EXISTS unique_username ON users(username COLLATE NOCASE)")
         os.chmod(self.path, 0o600)
 
     @contextmanager
@@ -64,9 +69,9 @@ class Database:
         finally:
             db.close()
 
-    def rate_limit(self, ip, email):
+    def rate_limit(self, ip, username):
         now = int(time.time())
-        scopes = [("ip:" + ip, 30), ("email:" + email, 10)]
+        scopes = [("ip:" + ip, 30), ("username:" + username, 10)]
         with self.connect() as db:
             db.execute("BEGIN IMMEDIATE")
             db.execute("DELETE FROM auth_attempts WHERE at < ?", (now - 900,))
@@ -157,7 +162,7 @@ def make_handler(database, public_origin, fighter_ids):
             return ids
 
         def user_response(self, row):
-            return {"user": {"id": row["id"], "email": row["email"]}, "csrf": row["csrf"],
+            return {"user": {"id": row["id"], "username": row["username"]}, "csrf": row["csrf"],
                     "favorites": json.loads(row["favorites"]), "revision": row["revision"], "updatedAt": row["updated_at"]}
 
         def verify_origin(self):
@@ -181,34 +186,37 @@ def make_handler(database, public_origin, fighter_ids):
                     return self.json_response(200, self.user_response(self.session()))
                 if self.command == "POST" and path in {"/api/auth/register", "/api/auth/login"}:
                     data = self.body()
-                    email, password = data.get("email"), data.get("password")
-                    if not isinstance(email, str) or not isinstance(password, str):
-                        raise APIError(400, "Introduce correo y contraseña.")
-                    email = email.strip().lower()
-                    if not re.fullmatch(r"[^\s@]{1,64}@[^\s@]{1,190}\.[^\s@]{2,63}", email) or len(email) > 254 or len(password) > 256:
-                        raise APIError(400, "Correo o contraseña no válidos.")
+                    username, password = data.get("username"), data.get("password")
+                    if not isinstance(username, str) or not isinstance(password, str):
+                        raise APIError(400, "Introduce nombre de usuario y contraseña.")
+                    username = username.strip().lower()
                     registering = path.endswith("register")
+                    # Existing email accounts retain their original identifier for login.
+                    if len(password) > 256 or not username or len(username) > 254:
+                        raise APIError(400, "Nombre de usuario o contraseña no válidos.")
+                    if registering and not re.fullmatch(r"[a-z0-9_\-]{3,24}", username):
+                        raise APIError(400, "El nombre de usuario debe tener entre 3 y 24 caracteres: letras, números, guiones o guiones bajos.")
                     if registering and len(password) < 12:
                         raise APIError(400, "La contraseña debe tener al menos 12 caracteres.")
                     initial = self.favorites({"favorites": data.get("favorites", [])}) if registering else []
-                    database.rate_limit(self.client_address[0], email)
+                    database.rate_limit(self.client_address[0], username)
                     if not password_slots.acquire(blocking=False):
                         raise APIError(503, "El servidor está ocupado. Inténtalo de nuevo.")
                     try:
                         with database.connect() as db:
-                            existing = db.execute("SELECT * FROM users WHERE email=?", (email,)).fetchone()
+                            existing = db.execute("SELECT * FROM users WHERE username=?", (username,)).fetchone()
                         salt = existing["salt"] if existing and not registering else secrets.token_bytes(16)
                         hashed = password_hash(password, salt)
                         if registering:
                             user_id = str(uuid.uuid4())
                             try:
                                 with database.connect() as db:
-                                    db.execute("INSERT INTO users (id,email,salt,password,favorites,updated_at) VALUES (?,?,?,?,?,?)", (user_id,email,salt,hashed,json.dumps(initial),int(time.time())))
+                                    db.execute("INSERT INTO users (id,username,salt,password,favorites,updated_at) VALUES (?,?,?,?,?,?)", (user_id,username,salt,hashed,json.dumps(initial),int(time.time())))
                             except sqlite3.IntegrityError:
-                                raise APIError(409, "No se puede crear la cuenta con este correo. Prueba a iniciar sesión.")
+                                raise APIError(409, "Este nombre de usuario ya está registrado. Elige otro o inicia sesión.")
                         else:
                             if not existing or not hmac.compare_digest(hashed, existing["password"]):
-                                raise APIError(401, "Correo o contraseña incorrectos.")
+                                raise APIError(401, "Nombre de usuario o contraseña incorrectos.")
                             user_id = existing["id"]
                     finally:
                         password_slots.release()
