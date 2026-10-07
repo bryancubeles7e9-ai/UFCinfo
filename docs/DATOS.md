@@ -84,3 +84,7 @@ Verificación: `node tests/test-following.mjs`.
 ## Seguimiento por cuenta
 
 El modo invitado conserva el almacenamiento anterior. Con sesión iniciada, la lista de identificadores de atletas seguidos se guarda en la base de datos de `server.py`, separada por cuenta. Las estadísticas y las carteleras mantienen sus fuentes originales. El tema y otros datos personales históricos son locales a cada navegador; solo el seguimiento se sincroniza. Consulta `CUENTAS.md` para funcionamiento, publicación, alcance y verificación.
+
+## UFC Freedom 250
+
+Evento especial oficial incluido junto a los eventos numerados, con identificador `ufc-freedom-250` y sin número de serie. Cartelera de siete combates y resultados consultados el 6 de octubre de 2026 en https://www.ufc.com/news/ufc-freedom-250-official-scorecards-judges y https://www.ufc.com/news/ufc-freedom-250-results-highlights-interviews . Horario de cartelera principal: 14 de junio, 20:00 EDT (15 de junio, 00:00 UTC), según https://www.ufc.com/events?fa=news.detail&gid=17041&page=2 .
