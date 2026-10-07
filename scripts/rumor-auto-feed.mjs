@@ -23,7 +23,6 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
     const texts=candidate.reports.map(report=>report.text);
     const reasons=[];
     if(candidate.fighters.length!==2)reasons.push('fighters-not-detected');
-    if(!texts.some(text=>/\bufc\b|#ufc/i.test(text)))reasons.push('no-ufc-reference');
     if(!texts.some(text=>bookingPattern.test(text)))reasons.push('no-booking-language');
     if(texts.some(text=>boxingPattern.test(text)))reasons.push('boxing');
     if(texts.some(text=>officialPattern.test(text)))reasons.push('official-announcement');
