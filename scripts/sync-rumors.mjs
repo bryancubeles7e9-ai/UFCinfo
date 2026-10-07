@@ -107,7 +107,18 @@ if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
       if(result.skipped)console.log('Un grupo puede tener varios motivos; los contadores no se suman.');
       if(result.truncated)console.log('More pages pending or credit limit reached; saved results preserved.');
     }
-    catch {console.error('Sync failed. Check configuration, key permissions, API balance or sync lock. Existing public data preserved; no automatic retry.');process.exitCode=1;}
+    catch(error) {
+      // Only report known application errors or numeric transport codes, never response bodies or credentials.
+      const message=String(error?.message??'');
+      const known=/^(?:TwitterAPI\.io HTTP \d{3}; no retries\. Reserved credits retained\.|GitHub state-store HTTP \d{3}\. No paid query permitted\.|Unexpected API response; feed preserved\.|API response too large\.|Invalid pagination cursor\.|Invalid generated feed; refusing to publish\.|Invalid existing public feed; refusing to overwrite\.|Grupo no válido\.|Publicación no válida\.|Fecha de publicación no válida\.|La publicación no pertenece a una fuente configurada\.|Publicación duplicada o desconocida\.|Invalid accounting state\. No API request made\.|GitHub did not confirm durable accounting\.)$/;
+      if(known.test(message))console.error('Sync error: '+message);
+      else if(error instanceof SyntaxError)console.error('Sync error: invalid JSON response or stored JSON.');
+      else if(error?.name==='TimeoutError' || error?.name==='AbortError')console.error('Sync error: request timed out.');
+      else if(error?.cause?.code && /^[A-Z0-9_]{1,60}$/.test(error.cause.code))console.error('Sync network error: '+error.cause.code);
+      else console.error('Sync error category: '+(['TypeError','Error'].includes(error?.name)?error.name:'unknown')+'.');
+      console.error('Existing public data preserved; no automatic retry.');
+      process.exitCode=1;
+    }
   }
   await run();
   if (args.includes('--watch') && !fromFile && !process.exitCode) {
