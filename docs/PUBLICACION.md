@@ -6,6 +6,8 @@ Preparación local para Render con cuentas persistentes. Todavía falta crear la
 
 ## Publicar con las cuentas actuales
 
+El servicio se llama `ufcinfo`. Si ya se creó como `octagon`, renombrar primero ese servicio existente en Render antes de sincronizar este Blueprint: Render identifica los recursos por su nombre y un nombre nuevo puede crear otro servicio. Conservar el disco de cuentas existente.
+
 1. Crear una cuenta en https://dashboard.render.com/ y conectar GitHub.
 2. Crear un Blueprint y elegir `bryancubeles7e9-ai/pruebaCodex`, rama `main`. Usa el archivo `render.yaml` del repositorio.
 3. Revisar el importe antes de crear el servicio: el archivo solicita Starter y un disco persistente de 1 GB. Consultar https://render.com/pricing. No usar un disco temporal para SQLite.

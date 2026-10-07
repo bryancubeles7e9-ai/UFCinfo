@@ -10,7 +10,7 @@ try {
   const choose = async lang => { const select = frame.contentDocument.querySelector('#language-select'); select.value=lang; select.dispatchEvent(new Event('change',{bubbles:true})); await pause(); };
   await choose('es');
   check('Spanish navigation', doc.querySelector('[data-nav="guardados"]').textContent.includes('Mi esquina'));
-  doc.querySelector('#builder-form [name="title"]').value = 'Mi esquina custom event';
+  doc.querySelector('#fighter-search').value = 'Mi esquina custom event';
   await choose('en');
   check('English document language',doc.documentElement.lang==='en');
   check('English navigation',doc.querySelector('[data-nav="guardados"]').textContent.includes('My corner'));
@@ -18,7 +18,7 @@ try {
   check('English empty state',doc.querySelector('#following-upcoming').textContent.includes('Follow your favorite fighters'));
   check('English placeholder',doc.querySelector('#fighter-search').placeholder.includes('Name, nickname'));
   check('English comparison',doc.querySelector('#comparison-tables').textContent.includes('Striking accuracy'));
-  check('User input unchanged',doc.querySelector('#builder-form [name="title"]').value==='Mi esquina custom event');
+  check('User input unchanged',doc.querySelector('#fighter-search').value==='Mi esquina custom event');
   check('Spoilers stay enabled',doc.querySelector('#spoiler-button').getAttribute('aria-pressed')==='true');
   check('Language saved',frame.contentWindow.localStorage.getItem('ufcinfo-language')==='en');
   doc.querySelector('[data-profile="topuria"]').click();
