@@ -17,13 +17,15 @@ La vista `#rumores` carga `assets/data/ufc-rumors.json`. Cada reporte identifica
 
 ## Estado inicial y fuentes
 
-El catálogo propone Carlos Contreras Legaspi y Álvaro Colmenero en español; Damon Martin, Mike Heck y Guilherme Cruz para publicaciones en inglés. El idioma efectivo de cada post se guarda por separado. Las cuentas se pueden editar en `sources` después de revisar su identidad. El respaldo de los nombres y cuentas procede de:
+El catálogo incluye las fuentes seleccionadas por el usuario: Carlos Contreras Legaspi, Álvaro Colmenero, Eric Alexander, MMA Sin Límites, MMA Latinoamérica, UPFRONT MMA y Pelunaton. El idioma efectivo de cada post se guarda por separado. Las cuentas se pueden editar en `sources` después de revisar su identidad. El respaldo de los nombres y cuentas procede de:
 
 - Carlos Contreras Legaspi: https://www.milenio.com/opinion/carlos-contreras-legaspi/asi-lo-vivimos/el-ufc-junto-a-la-nfl-nba-o-mlb y https://www.sherdog.com/news/news/Former-topranked-womens-bantamweight-UFC-title-challenger-retires-from-MMA-201959
 - Álvaro Colmenero: https://www.linkedin.com/company/kolmenero y https://x.com/KOlmeneroMMA (la cuenta aparece también en resultados indexados; debe revisarse antes de importar un post).
-- Damon Martin: https://www.mmafighting.com/authors/damon-martin
-- Mike Heck: https://www.mmafighting.com/authors/mike-heck
-- Guilherme Cruz: https://www.mmafighting.com/authors/guilherme-cruz
+- Eric Alexander: https://podcasts.apple.com/es/podcast/conexi%C3%B3n-mma/id1500775085 (su podcast enlaza a `ericaiexander`, con una «i» en lugar de la «l»).
+- MMA Sin Límites: https://x.com/MMASINLIMITES y https://linktr.ee/mmasinlimites.
+- MMA Latinoamérica: https://x.com/ClubDeLasMMA (cuenta con ese nombre; distinta de `MMALatinAmerica`).
+- UPFRONT MMA: https://x.com/upfrontmma y https://upfrontmma.com.
+- Pelunaton: https://x.com/pelunaton (perfil confirmado por el usuario).
 
 La lista identifica fuentes propuestas; no afirma que la web ya esté leyendo sus cuentas. No se incluye ningún rumor de ejemplo en producción: hacen falta posts reales revisados. No hay publicaciones ni confirmaciones inventadas.
 
@@ -67,3 +69,20 @@ Documentación: https://docs.x.com/x-api/posts/search/introduction y https://doc
 node tests/test-rumors.mjs
 python3 -m unittest discover -s tests -p 'test_rumor*.py'
 ```
+
+## Prueba limitada con TwitterAPI.io
+
+Se ha preparado `scripts/test-twitterapi.py`. No activa tareas periódicas ni modifica el catálogo público. Por defecto muestra la consulta sin contactar con el proveedor.
+
+1. Crear una cuenta en https://twitterapi.io/ y obtener la API key desde su panel. Comprobar el saldo y las tarifas antes de ejecutar.
+2. Guardar únicamente la clave en `.octagon-data/twitterapi.key` (carpeta excluida de Git y no servida por la web), con permisos privados. También se acepta la variable de entorno `TWITTERAPI_IO_KEY`. No añadir la clave al código ni enviarla por chat.
+3. Previsualizar: `python3 scripts/test-twitterapi.py`.
+4. Ejecutar una consulta: `python3 scripts/test-twitterapi.py --fetch`.
+
+Se consulta a todas las fuentes seleccionadas del catálogo durante las últimas 24 horas, filtrando términos de negociaciones o combates y excluyendo respuestas y retuits. Se puede limitar la prueba a algunas fuentes con `--source kolmenero --source mma-sin-limites` y una ventana de 1 a 168 horas con `--hours`.
+
+La búsqueda usa el endpoint Advanced Search, `queryType=Latest`, `since_time` y `until_time`. Solo pide la primera página, documentada con hasta 20 publicaciones. No solicita páginas siguientes ni reintenta errores. El coste depende de los resultados devueltos y de las tarifas del proveedor, no solo de los candidatos retenidos; un resultado vacío también puede tener cargo mínimo. La prueba no garantiza encontrar todos los rumores.
+
+Los candidatos se guardan en `.octagon-data/twitterapi-candidates.json`; cada ejecución reemplaza el informe de prueba anterior. No se publican automáticamente ni se afirma que sean reportes revisados. Para publicar un candidato, leer la fuente, identificar los luchadores y redactar los resúmenes con `scripts/add-rumor.py`. La lectura automática periódica, la clasificación y los feeds de medios quedan pendientes de esta prueba real.
+
+Documentación del proveedor: https://docs.twitterapi.io/api-reference/endpoint/tweet_advanced_search

@@ -3,11 +3,55 @@
   "updatedAt": null,
   "lastOfficialCheckAt": null,
   "sources": [
-    {"id":"cclegaspi","name":"Carlos Contreras Legaspi","handle":"CCLegaspi","language":"es","profile":"https://x.com/CCLegaspi"},
-    {"id":"kolmenero","name":"Álvaro Colmenero","handle":"KOlmeneroMMA","language":"es","profile":"https://x.com/KOlmeneroMMA"},
-    {"id":"damon-martin","name":"Damon Martin","handle":"DamonMartin","language":"en","profile":"https://x.com/DamonMartin"},
-    {"id":"mike-heck","name":"Mike Heck","handle":"MikeHeck_JR","language":"en","profile":"https://x.com/MikeHeck_JR"},
-    {"id":"guilherme-cruz","name":"Guilherme Cruz","handle":"guicruzzz","language":"en","profile":"https://x.com/guicruzzz"}
+    {
+      "id": "cclegaspi",
+      "name": "Carlos Contreras Legaspi",
+      "handle": "CCLegaspi",
+      "language": "es",
+      "profile": "https://x.com/CCLegaspi"
+    },
+    {
+      "id": "kolmenero",
+      "name": "Álvaro Colmenero",
+      "handle": "KOlmeneroMMA",
+      "language": "es",
+      "profile": "https://x.com/KOlmeneroMMA"
+    },
+    {
+      "id": "eric-alexander",
+      "name": "Eric Alexander",
+      "handle": "ericaiexander",
+      "language": "es",
+      "profile": "https://x.com/ericaiexander"
+    },
+    {
+      "id": "mma-sin-limites",
+      "name": "MMA Sin Límites",
+      "handle": "MMASINLIMITES",
+      "language": "es",
+      "profile": "https://x.com/MMASINLIMITES"
+    },
+    {
+      "id": "mma-latinoamerica",
+      "name": "MMA Latinoamérica",
+      "handle": "ClubDeLasMMA",
+      "language": "es",
+      "profile": "https://x.com/ClubDeLasMMA"
+    },
+    {
+      "id": "upfront-mma",
+      "name": "UPFRONT MMA",
+      "handle": "upfrontmma",
+      "language": "en",
+      "profile": "https://x.com/upfrontmma"
+    },
+    {
+      "id": "pelunaton",
+      "name": "Pelunaton",
+      "handle": "pelunaton",
+      "language": "es",
+      "profile": "https://x.com/pelunaton"
+    }
   ],
   "rumors": []
 }
