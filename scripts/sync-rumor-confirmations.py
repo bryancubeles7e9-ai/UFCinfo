@@ -31,12 +31,38 @@ def parse_card(html):
         if len(red) == len(blue) == 1 and red[0].text() and blue[0].text():
             pairs.add(tuple(sorted([normalize(red[0].text()),normalize(blue[0].text())])))
     times = parser.root.find(lambda n: n.has('c-event-fight-card-broadcaster__time') and 'data-timestamp' in n.attrs)
-    if not pairs or not times:
+    if not pairs:
         raise ValueError('Official fight card or event timestamp missing; preserve existing confirmations')
-    dates = {int(n.attrs['data-timestamp']) for n in times}
-    if len(dates) != 1:
-        raise ValueError('Ambiguous official event date')
-    return pairs, datetime.fromtimestamp(dates.pop(),timezone.utc)
+    dates = set()
+    for node in times:
+        stamp = str(node.attrs.get('data-timestamp', '')).strip()
+        if re.fullmatch(r'\\d{9,13}', stamp):
+            value = int(stamp)
+            dates.add(value // 1000 if value > 10_000_000_000 else value)
+    # UFC lists preliminary and main-card start times, sometimes with empty placeholders.
+    if dates:
+        if max(dates) - min(dates) > 12 * 3600:
+            raise ValueError('Ambiguous official event date')
+        return pairs, datetime.fromtimestamp(max(dates), timezone.utc)
+    schema_dates = set()
+    def inspect_schema(value):
+        if isinstance(value, list):
+            for item in value: inspect_schema(item)
+        elif isinstance(value, dict):
+            kinds = value.get('@type', [])
+            if isinstance(kinds, str): kinds = [kinds]
+            if any(kind in ('Event', 'SportsEvent') for kind in kinds) and value.get('startDate'):
+                try:
+                    date = datetime.fromisoformat(value['startDate'].replace('Z', '+00:00'))
+                    if date.tzinfo: schema_dates.add(date)
+                except (ValueError, TypeError): pass
+            if '@graph' in value: inspect_schema(value['@graph'])
+    for node in parser.root.find(lambda n: n.tag == 'script' and n.attrs.get('type') == 'application/ld+json'):
+        try: inspect_schema(json.loads(node.text()))
+        except (ValueError, TypeError): pass
+    if len(schema_dates) == 1:
+        return pairs, schema_dates.pop()
+    raise ValueError('Official fight card or event timestamp missing; preserve existing confirmations')
 
 
 def catalog_names():

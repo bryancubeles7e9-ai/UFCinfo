@@ -22,10 +22,23 @@ class OfficialCardTests(unittest.TestCase):
             module.parse_card(self.fight('Ilia Topuria','Max Holloway'))
     def test_ambiguous_date_is_not_a_confirmation(self):
         with self.assertRaises(ValueError):
-            module.parse_card(self.fight('Ilia Topuria','Max Holloway')+'<span class="c-event-fight-card-broadcaster__time" data-timestamp="1797127200"></span><span class="c-event-fight-card-broadcaster__time" data-timestamp="1797127201"></span>')
+            module.parse_card(self.fight('Ilia Topuria','Max Holloway')+'<span class="c-event-fight-card-broadcaster__time" data-timestamp="1797127200"></span><span class="c-event-fight-card-broadcaster__time" data-timestamp="1797213601"></span>')
     def test_spelling_normalization(self):
         self.assertEqual(module.normalize('Jiří Procházka'),module.normalize('Jiri Prochazka'))
 
+
+    def test_prelims_and_main_card_times_are_not_ambiguous(self):
+        html=self.fight('Ilia Topuria','Max Holloway')+'<span class="c-event-fight-card-broadcaster__time" data-timestamp="1797112800"></span><span class="c-event-fight-card-broadcaster__time" data-timestamp="1797127200"></span>'
+        pairs,date=module.parse_card(html)
+        self.assertEqual(int(date.timestamp()),1797127200)
+    def test_empty_broadcast_time_is_ignored(self):
+        html=self.fight('Ilia Topuria','Max Holloway')+'<span class="c-event-fight-card-broadcaster__time" data-timestamp=""></span><span class="c-event-fight-card-broadcaster__time" data-timestamp="1797127200"></span>'
+        pairs,date=module.parse_card(html)
+        self.assertEqual(int(date.timestamp()),1797127200)
+    def test_official_event_schema_supplies_date_when_times_are_empty(self):
+        html=self.fight('Ilia Topuria','Max Holloway')+'<script type="application/ld+json">{"@type":"SportsEvent","startDate":"2026-12-13T02:00:00Z"}</script>'
+        pairs,date=module.parse_card(html)
+        self.assertEqual(date.day,13)
 
 class AutomaticGroupTests(unittest.TestCase):
     def event(self, identity='ufc-fight-night-november-21-2026'):
