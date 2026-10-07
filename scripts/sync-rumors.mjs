@@ -53,6 +53,7 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
     const until=state.pending?.until ?? now.toISOString();
     let cursor=state.pending?.cursor ?? '',requests=0,truncated=false;
     const known=new Map(state.archive.map(report=>[report.id,report]));
+    const collectionSkips={};
     for (let page=0;page<(backfillHours ? 10 : config.maxPagesPerRun);page++) {
       // Reserve a full documented page before sending, including failed requests.
       const reservation=20*config.creditsPerTweet;
@@ -70,8 +71,9 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
       state.estimatedCredits+=(Math.max(1,data.tweets.length)*config.creditsPerTweet);
       for (const tweet of data.tweets) {
         const source=sources.find(source=>source.handle.toLowerCase()===String(tweet.author?.userName).toLowerCase());
-        if (!source || typeof tweet.id!=='string' || !/^\d{10,22}$/.test(tweet.id) || typeof tweet.text!=='string' || !tweet.text.trim() || tweet.text.length>30000 || tweet.isReply || tweet.retweeted_tweet || tweet.text.startsWith('RT @') || boxingPattern.test(tweet.text)) continue;
-        const date=new Date(tweet.createdAt);if(!Number.isFinite(date.getTime()) || date>now)continue;
+        const reason=!source ? 'unknown-source' : typeof tweet.id!=='string' || !/^\d{10,22}$/.test(tweet.id) || typeof tweet.text!=='string' || !tweet.text.trim() || tweet.text.length>30000 ? 'invalid-post' : tweet.isReply ? 'reply' : tweet.retweeted_tweet || tweet.text.startsWith('RT @') ? 'retweet' : boxingPattern.test(tweet.text) ? 'boxing' : null;
+        if(reason){collectionSkips[reason]=(collectionSkips[reason]??0)+1;continue;}
+        const date=new Date(tweet.createdAt);if(!Number.isFinite(date.getTime()) || date>now){collectionSkips['invalid-post-date']=(collectionSkips['invalid-post-date']??0)+1;continue;}
         known.set(tweet.id,{id:tweet.id,sourceId:source.id,postUrl:`https://x.com/${source.handle}/status/${tweet.id}`,text:tweet.text,publishedAt:date.toISOString(),language:['es','en'].includes(tweet.lang)?tweet.lang:source.language,status:'unverified'});
       }
       state.archive=[...known.values()].filter(report=>Date.parse(report.publishedAt)>=now.getTime()-7*86400000).sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt)).slice(0,500);
@@ -84,7 +86,7 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
     }
     const result=automaticFeed({checkedAt:now.toISOString(),candidates:state.archive},sources,previous,now);
     await atomicJSON(output,result.feed);
-    return {...result,requests,truncated,reservedCredits:state.reservedCredits,estimatedCredits:state.estimatedCredits,mode:'automatic'};
+    return {...result,collectionSkips,requests,truncated,reservedCredits:state.reservedCredits,estimatedCredits:state.estimatedCredits,mode:'automatic'};
   } finally {await lock.close();await unlink(lockPath);}
 }
 
@@ -94,7 +96,17 @@ if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
   if (fileIndex>=0 && !args[fileIndex+1]) {process.stderr.write('Specify a candidate file after --from-file.\n');process.exit(1);}
   const fromFile=fileIndex>=0 ? args[fileIndex+1] : undefined;
   async function run() {
-    try {const stateStore=process.env.GITHUB_ACTIONS==='true' && !fromFile ? githubRumorState() : undefined;const backfillHours=process.env.UFCINFO_RUMOR_BACKFILL==='true' ? 168 : undefined;const result=await syncRumors({fromFile,stateStore,backfillHours});console.log(`Sync: ${result.mode}; requests: ${result.requests}; added: ${result.added}; published groups: ${result.feed.groups.length}; skipped: ${result.skipped}.`);if(result.truncated)console.log('More pages pending or credit limit reached; saved results preserved.');}
+    try {
+      const stateStore=process.env.GITHUB_ACTIONS==='true' && !fromFile ? githubRumorState() : undefined;
+      const backfillHours=process.env.UFCINFO_RUMOR_BACKFILL==='true' ? 168 : undefined;
+      const result=await syncRumors({fromFile,stateStore,backfillHours});
+      console.log(`Sync: ${result.mode}; requests: ${result.requests}; added: ${result.added}; published groups: ${result.feed.groups.length}; skipped: ${result.skipped}.`);
+      const labels={'fighters-not-detected':'No se detectaron dos luchadores','date-not-detected':'No se detecto una fecha','no-ufc-reference':'Sin referencia a UFC','no-booking-language':'Sin lenguaje de negociacion o pelea prevista',boxing:'Boxeo','official-announcement':'Anuncio oficial',opinion:'Opinion','invalid-event-date':'Fecha de combate invalida','past-event':'Combate pasado','event-too-far-ahead':'Combate a mas de 183 dias','unknown-source':'Fuente no configurada','invalid-post':'Publicacion invalida',reply:'Respuesta',retweet:'Retuit','invalid-post-date':'Fecha de publicacion invalida'};
+      for(const [reason,count] of Object.entries(result.collectionSkips??{}))console.log(`Descartes de publicaciones: ${labels[reason]??reason}: ${count}.`);
+      for(const [reason,count] of Object.entries(result.skipReasons??{}))console.log(`Descartes de grupos: ${labels[reason]??reason}: ${count}.`);
+      if(result.skipped)console.log('Un grupo puede tener varios motivos; los contadores no se suman.');
+      if(result.truncated)console.log('More pages pending or credit limit reached; saved results preserved.');
+    }
     catch {console.error('Sync failed. Check configuration, key permissions, API balance or sync lock. Existing public data preserved; no automatic retry.');process.exitCode=1;}
   }
   await run();

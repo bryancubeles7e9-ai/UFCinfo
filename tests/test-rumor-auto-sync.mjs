@@ -15,6 +15,10 @@ const second=candidate('2107750144795975680','Hecher Sosa se enfrentará a Abdul
 const payload={checkedAt:now.toISOString(),candidates:[first,second,candidate('2107834082587459654','Póster oficial de la pelea entre Aleksandre Topuria y Santiago Luna del 21 de noviembre en UFC'),candidate('2107838271237558664','Esta pelea dos días después de salir GTA 6 me va a robar el tiempo')]};
 const result=automaticFeed(payload,sources,undefined,now);
 assert.equal(result.feed.groups.length,1);
+assert.equal(result.skipped,2);
+assert.equal(result.skipReasons['official-announcement'],1);
+assert.equal(result.skipReasons['fighters-not-detected'],1);
+assert.equal(result.skipReasons['date-not-detected'],1);
 assert.equal(result.feed.groups[0].reports.length,2);
 assert.equal(result.feed.groups[0].reports[0].attribution,'ABC MMA');
 assert.equal(result.feed.groups[0].reviewedAt,null);

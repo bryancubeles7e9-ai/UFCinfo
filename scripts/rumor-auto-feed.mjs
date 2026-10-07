@@ -15,18 +15,29 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
   const candidates=new Map(grouped.candidates.map(report=>[report.id,report]));
   const groups=previous.groups.map(group=>structuredClone(group));
   let added=0,skipped=0;
+  const skipReasons={};
+  const discard=reasons=>{skipped++;for(const reason of reasons)skipReasons[reason]=(skipReasons[reason]??0)+1;};
   for (const candidate of imported) {
     const rawGroup=grouped.groups.find(group=>group.reportIds.includes(candidate.reports[0].id));
     const date=rawGroup?.dateMention;
     const texts=candidate.reports.map(report=>report.text);
-    if (candidate.fighters.length!==2 || !date || !texts.some(text=>/\bufc\b|#ufc/i.test(text)) ||
-        !texts.some(text=>bookingPattern.test(text)) || texts.some(text=>boxingPattern.test(text) || officialPattern.test(text) || opinionPattern.test(text))) {skipped++;continue;}
+    const reasons=[];
+    if(candidate.fighters.length!==2)reasons.push('fighters-not-detected');
+    if(!date)reasons.push('date-not-detected');
+    if(!texts.some(text=>/\bufc\b|#ufc/i.test(text)))reasons.push('no-ufc-reference');
+    if(!texts.some(text=>bookingPattern.test(text)))reasons.push('no-booking-language');
+    if(texts.some(text=>boxingPattern.test(text)))reasons.push('boxing');
+    if(texts.some(text=>officialPattern.test(text)))reasons.push('official-announcement');
+    if(texts.some(text=>opinionPattern.test(text)))reasons.push('opinion');
+    if(reasons.length){discard(reasons);continue;}
     const publishedAt=candidate.reports.map(report=>report.publishedAt).sort()[0];
     const posted=new Date(publishedAt);
     let year=date.year ?? posted.getUTCFullYear();
     let eventDate=new Date(Date.UTC(year,date.month-1,date.day));
     if (!date.year && eventDate < new Date(Date.UTC(posted.getUTCFullYear(),posted.getUTCMonth(),posted.getUTCDate()))) eventDate=new Date(Date.UTC(++year,date.month-1,date.day));
-    if (eventDate.getUTCMonth()!==date.month-1 || eventDate.getUTCDate()!==date.day || eventDate.getTime()<now.getTime()-86400000 || eventDate.getTime()-posted.getTime()>183*86400000) {skipped++;continue;}
+    if(eventDate.getUTCMonth()!==date.month-1 || eventDate.getUTCDate()!==date.day){discard(['invalid-event-date']);continue;}
+    if(eventDate.getTime()<now.getTime()-86400000){discard(['past-event']);continue;}
+    if(eventDate.getTime()-posted.getTime()>183*86400000){discard(['event-too-far-ahead']);continue;}
     const eventDateHint=eventDate.toISOString().slice(0,10);
     const matchupKey=candidate.fighters.map(normalize).sort().join('|')+'|'+eventDateHint;
     const reports=candidate.reports.map(report=> {
@@ -48,5 +59,6 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
   }
   const feed={schemaVersion:1,updatedAt:now.toISOString(),groups:groups.sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt)).slice(0,500)};
   if (!validateGroupFeed(feed,sources)) throw Error('Invalid generated feed; refusing to publish.');
-  return {feed,added,skipped};
+  return {feed,added,skipped,skipReasons};
 }
+
