@@ -4,7 +4,7 @@ import {pathToFileURL} from 'node:url';
 const months = {january:1,enero:1,february:2,febrero:2,march:3,marzo:3,april:4,abril:4,may:5,mayo:5,june:6,junio:6,july:7,julio:7,august:8,agosto:8,september:9,septiembre:9,october:10,octubre:10,november:11,noviembre:11,december:12,diciembre:12};
 const monthPattern = Object.keys(months).join('|');
 const name = '[A-Z][a-z]+(?:[ \\t]+[A-Z][a-z]+){1,3}';
-const matchupPattern = new RegExp(`\\b(${name})\\s+(?:vs\\.?|versus|contra|(?:se\\s+)?enfrentara\\s+(?:al|a)|(?:se\\s+)?enfrenta\\s+(?:al|a))\\s+(?:libanes\\s+)?(${name})\\b`);
+const matchupPattern = new RegExp(`\\b(${name})\\s+(?:[Vv][Ss]\\.?|[Vv]ersus|[Cc]ontra|against|(?:could|may|might|will|would)\\s+(?:fight|face)|(?:se\\s+)?(?:enfrentara|enfrenta|enfrentaria)\\s+(?:al|a))\\s+(?:libanes\\s+)?(${name})\\b`);
 const betweenPattern = new RegExp(`\\bentre\\s+(${name})\\s+y\\s+(${name})\\b`);
 
 export function groupCandidates(payload) {
@@ -40,3 +40,4 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
   // ASCII JSON escapes prevent Windows PowerShell native-output decoding damage.
   process.stdout.write(JSON.stringify(groupCandidates(JSON.parse(input)),null,2).replace(/[^\x00-\x7F]/g, character=>'\\u'+character.charCodeAt(0).toString(16).padStart(4,'0'))+'\n');
 }
+

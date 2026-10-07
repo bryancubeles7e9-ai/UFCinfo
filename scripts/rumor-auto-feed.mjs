@@ -3,8 +3,6 @@ import {candidateImport,validateGroupFeed} from '../assets/js/rumor-groups.js';
 
 export const boxingPattern=/\b(boxing|boxeo|boxeador(?:es)?|boxeadoras?|pugilismo|tyson\s+fury|anthony\s+joshua|fury\s+vs\.?\s+joshua|aj[- ]fury)\b/i;
 const officialPattern=/\b(?:p[oó]ster\s+oficial|official\s+(?:poster|announcement)|confirmed\s+by\s+ufc|confirmad[oa]\s+por\s+(?:la\s+)?ufc)\b/i;
-const opinionPattern=/\b(?:ojal[aá]|me\s+gustar[ií]a|would\s+love|i\s+wish|fantasy\s+matchup|dream\s+fight)\b/i;
-const bookingPattern=/\b(?:in\s+talks|targeted|expected\s+to\s+face|set\s+(?:to\s+face|for)|booking|negociaciones|enfrentar[aá]|pelear[aá]|reportedly)\b/i;
 const monthNames={es:['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],en:['January','February','March','April','May','June','July','August','September','October','November','December']};
 const normalize=name=>name.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]/g,'');
 
@@ -23,10 +21,8 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
     const texts=candidate.reports.map(report=>report.text);
     const reasons=[];
     if(candidate.fighters.length!==2)reasons.push('fighters-not-detected');
-    if(!texts.some(text=>bookingPattern.test(text)))reasons.push('no-booking-language');
     if(texts.some(text=>boxingPattern.test(text)))reasons.push('boxing');
     if(texts.some(text=>officialPattern.test(text)))reasons.push('official-announcement');
-    if(texts.some(text=>opinionPattern.test(text)))reasons.push('opinion');
     if(reasons.length){discard(reasons);continue;}
     const publishedAt=candidate.reports.map(report=>report.publishedAt).sort()[0];
     const posted=new Date(publishedAt);
@@ -55,7 +51,7 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
     const reporter=sources.find(source=>source.id===reports[0].sourceId).name;
     const [first,second]=candidate.fighters;
     groups.push({id:reports[0].id,fighterNames:candidate.fighters,matchupKey,eventDateHint,dateYearInferred:date ? date.year===null : false,
-      summary:{es:`${reporter} reporta una posible pelea entre ${first} y ${second}${date ? ` para el ${date.day} de ${monthNames.es[date.month-1]}` : ', sin fecha indicada en la fuente'}. Información pendiente de confirmación oficial de UFC.`,en:`${reporter} reports a possible fight between ${first} and ${second}${date ? ` for ${monthNames.en[date.month-1]} ${date.day}` : ', with no date stated by the source'}. Awaiting official UFC confirmation.`},
+      summary:{es:`${reporter} comenta un posible cruce entre ${first} y ${second}${date ? `; la publicación menciona el ${date.day} de ${monthNames.es[date.month-1]}` : ', sin fecha indicada en la fuente'}. Puede tratarse de especulación o una propuesta de la comunidad. No implica negociaciones ni confirmación oficial.`,en:`${reporter} discusses a possible matchup between ${first} and ${second}${date ? `; the post mentions ${monthNames.en[date.month-1]} ${date.day}` : ', with no date stated by the source'}. This may be speculation or a community suggestion. It does not imply negotiations or official confirmation.`},
       processing:'automatic',generatedAt:now.toISOString(),reviewedAt:null,publishedAt,containsSpoilers:true,reports,official:null});
     added++;
   }

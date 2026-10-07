@@ -6,7 +6,7 @@ import {githubRumorState} from './github-rumor-state.mjs';
 
 const root=resolve(import.meta.dirname,'..');
 const endpoint='https://api.twitterapi.io/twitter/tweet/advanced_search';
-const keywords='("in talks" OR "targeted" OR "expected to face" OR "set to face" OR "booking" OR "negociaciones" OR "pelea" OR "combate" OR "vs")';
+const keywords='("in talks" OR "targeted" OR "expected to face" OR "set to face" OR "booking" OR "negociaciones" OR "pelea" OR "combate" OR "vs" OR "versus" OR "fight" OR "against" OR "rumor" OR "rumour" OR "posible" OR "rival" OR "enfrentamiento")';
 async function readJSON(path,fallback) {
   try {return JSON.parse((await readFile(path,'utf8')).replace(/^\uFEFF/,''));}
   catch(error) {if (error.code==='ENOENT' && fallback!==undefined) return fallback;throw error;}

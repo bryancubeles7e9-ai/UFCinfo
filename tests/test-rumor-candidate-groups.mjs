@@ -19,6 +19,9 @@ assert.equal(result.groups[1].reports[0].text,texts[3]);
 assert.equal(groupCandidates({...payload,candidates:[payload.candidates[2],{...payload.candidates[2],id:'other',text:texts[2].replace('November 28','December 28')}]}).groups.length,2);
 assert.equal(groupCandidates({...payload,candidates:[{id:'1',text:'Hecher Sosa vs Abdul Hussein'},{id:'2',text:'Hecher Sosa vs Abdul Hussein'}]}).groups.length,2);
 assert.deepEqual(groupCandidates({candidates:[]}).groups,[]);
+for(const separator of ['VS','against','could face','would fight','se enfrentaría a']) {
+ assert.deepEqual(groupCandidates({candidates:[{id:'community',text:`Hecher Sosa ${separator} Abdul Hussein`}]}).groups[0].fighters,['Abdul Hussein','Hecher Sosa']);
+}
 const legacy = groupCandidates({...payload,candidates:[{id:'legacy',text:'Hecher Sosa enfrentar\u00c3\u00a1 a Abdul Hussein el 28 de noviembre'}]});
 assert.equal(legacy.candidates[0].text,'Hecher Sosa enfrentará a Abdul Hussein el 28 de noviembre');
 assert.ok(legacy.candidates[0].originalText);
@@ -35,3 +38,4 @@ const pasted = groupCandidates({...payload,candidates:pastedTexts.map((text,i)=>
 assert.equal(pasted.groups.length,3);
 assert.equal(pasted.groups.find(g=>g.fighters.includes('Hecher Sosa')).reports.length,3);
 console.log('PASS: five pasted reports form three groups without absorbing the headline into fighter names');
+

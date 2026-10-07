@@ -35,7 +35,11 @@ assert.ok(validateGroupFeed(result.feed,sources));
 assert.ok(groupCard(result.feed.groups[0],sources).includes('Recopilado automáticamente'));
 assert.equal(automaticFeed(payload,sources,result.feed,now).feed.groups.length,1);
 assert.equal(automaticFeed({...payload,candidates:[candidate('2107747599155708090','Hecher Sosa vs Abdul Hussein is set for UFC Saudi Arabia on December 28')]},sources,result.feed,now).feed.groups.length,2);
-assert.equal(automaticFeed({...payload,candidates:[candidate('2107747599155708091','I wish Hecher Sosa vs Abdul Hussein is set for UFC on November 28')]},sources,undefined,now).feed.groups.length,0);
+assert.equal(automaticFeed({...payload,candidates:[candidate('2107747599155708091','I wish Hecher Sosa vs Abdul Hussein on November 28')]},sources,undefined,now).feed.groups.length,1);
+const community=automaticFeed({...payload,candidates:[candidate('2107747599155708092','¿Hecher Sosa vs Abdul Hussein? Me gustaría esa pelea.')]},sources,undefined,now);
+assert.equal(community.feed.groups.length,1);
+assert.equal(community.feed.groups[0].official,null);
+assert.equal(community.skipReasons['no-booking-language'],undefined);
 const root=await mkdtemp(join(tmpdir(),'ufcinfo-auto-test-'));
 try {
  await mkdir(join(root,'assets/data'),{recursive:true});await mkdir(join(root,'.ufcinfo-data'));
