@@ -1,6 +1,11 @@
 name: Publicar rumores automaticamente
 on:
   workflow_dispatch:
+    inputs:
+      broad_search:
+        description: 'Buscar los ultimos 7 dias (hasta 10 consultas, 3000 creditos reservados)'
+        type: boolean
+        default: false
   schedule:
     - cron: '17 * * * *'
 permissions:
@@ -31,6 +36,7 @@ jobs:
         env:
           TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
+          UFCINFO_RUMOR_BACKFILL: ${{ github.event_name == 'workflow_dispatch' && inputs.broad_search && 'true' || 'false' }}
         run: node scripts/sync-rumors.mjs
       - name: Guardar el catalogo publico
         id: publish
@@ -54,3 +60,4 @@ jobs:
           else
             echo 'Catalogo guardado en GitHub. El alojamiento debe tener despliegue automatico o un deploy hook configurado.'
           fi
+

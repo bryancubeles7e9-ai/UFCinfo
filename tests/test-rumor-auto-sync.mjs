@@ -52,6 +52,10 @@ try {
  const stateStore={load:async()=>({schemaVersion:1,reservedCredits:0,estimatedCredits:0,lastSuccessAt:null,pending:null,archive:[]}),save:async state=>{assert.ok(state.reservedCredits>=300);durableSaved=true;}};
  await syncRumors({projectRoot:root,configOverride:config,stateStore,fetchImpl:async()=>{assert.ok(durableSaved);paidCalls++;return new Response(JSON.stringify({tweets:[],has_next_page:false}));},now});
  assert.equal(paidCalls,1);
+ let broadCalls=0;
+ const broad=await syncRumors({projectRoot:root,configOverride:config,backfillHours:168,stateStore:{load:async()=>({schemaVersion:1,reservedCredits:0,estimatedCredits:0,lastSuccessAt:now.toISOString(),pending:null,archive:[]}),save:async()=>{}},fetchImpl:async url=>{broadCalls++;assert.ok(url.searchParams.get('query').includes(`since_time:${Math.floor(now.getTime()/1000)-168*3600}`));return new Response(JSON.stringify({tweets:[],has_next_page:false}));},now});
+ assert.equal(broad.requests,1);assert.equal(broadCalls,1);
+ await assert.rejects(syncRumors({projectRoot:root,configOverride:config,backfillHours:169,fetchImpl:()=>{throw Error('Must not fetch');},now}),/Invalid backfill/);
  await assert.rejects(syncRumors({projectRoot:root,configOverride:config,stateStore:{...stateStore,save:async()=>{throw Error('GitHub unavailable');}},fetchImpl:()=>{throw Error('Must not make paid request');},now}),/GitHub unavailable/);
 } finally {await rm(root,{recursive:true,force:true});}
 console.log('PASS: automatic bilingual feed, filters, attribution, rematches, pagination, deduplication, interval, credit cap, offline processing and preserved data on API failure');

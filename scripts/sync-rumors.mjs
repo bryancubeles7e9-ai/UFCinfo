@@ -17,7 +17,7 @@ async function atomicJSON(path,data) {
   await writeFile(temporary,JSON.stringify(data,null,2)+'\n',{encoding:'utf8',mode:0o600});
   await rename(temporary,path);
 }
-export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=new Date(),configOverride,stateStore}={}) {
+export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=new Date(),configOverride,stateStore,backfillHours}={}) {
   const config=configOverride ?? await readJSON(resolve(projectRoot,'scripts/rumor-sync.config.json'));
   const sources=(await readJSON(resolve(projectRoot,'assets/data/ufc-rumors.json'))).sources;
   if (!sources.length || sources.some(source=>!/^\w{1,15}$/.test(source.handle))) throw Error('Invalid configured sources.');
@@ -43,16 +43,17 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
     const state=(stateStore ? await stateStore.load() : await readJSON(statePath,emptyState)) ?? emptyState;
     if (state.schemaVersion!==1 || !Number.isSafeInteger(state.reservedCredits) || state.reservedCredits<0 || !Number.isSafeInteger(state.estimatedCredits) || state.estimatedCredits<0 || !Array.isArray(state.archive) || (state.lastSuccessAt!==null && !Number.isFinite(Date.parse(state.lastSuccessAt))) || (state.pending!==null && (typeof state.pending?.query!=='string' || typeof state.pending.cursor!=='string' || !Number.isFinite(Date.parse(state.pending.until))))) throw Error('Invalid accounting state. No API request made.');
     const saveState=async()=>{await atomicJSON(statePath,state);if(stateStore)await stateStore.save(state);};
-    if (!state.pending && state.lastSuccessAt && now.getTime()-Date.parse(state.lastSuccessAt)<config.intervalMinutes*60000) return {feed:previous,added:0,skipped:0,requests:0,mode:'not-due'};
+    if (backfillHours!==undefined && (!Number.isInteger(backfillHours) || backfillHours<1 || backfillHours>168)) throw Error('Invalid backfill window. No API request made.');
+    if (!backfillHours && !state.pending && state.lastSuccessAt && now.getTime()-Date.parse(state.lastSuccessAt)<config.intervalMinutes*60000) return {feed:previous,added:0,skipped:0,requests:0,mode:'not-due'};
     const key=process.env.TWITTERAPI_IO_KEY?.trim() || (await readFile(resolve(projectRoot,'.ufcinfo-data/twitterapi.key'),'utf8')).trim();
     if (!key) throw Error('Missing TwitterAPI.io key.');
     const end=Math.floor(now.getTime()/1000);
-    const start=state.lastSuccessAt ? Math.max(Math.floor(Date.parse(state.lastSuccessAt)/1000)-120,end-168*3600) : end-config.lookbackHours*3600;
+    const start=backfillHours ? end-backfillHours*3600 : state.lastSuccessAt ? Math.max(Math.floor(Date.parse(state.lastSuccessAt)/1000)-120,end-168*3600) : end-config.lookbackHours*3600;
     const query=state.pending?.query ?? `(${sources.map(source=>'from:'+source.handle).join(' OR ')}) ${keywords} -filter:retweets -filter:replies since_time:${start} until_time:${end}`;
     const until=state.pending?.until ?? now.toISOString();
     let cursor=state.pending?.cursor ?? '',requests=0,truncated=false;
     const known=new Map(state.archive.map(report=>[report.id,report]));
-    for (let page=0;page<config.maxPagesPerRun;page++) {
+    for (let page=0;page<(backfillHours ? 10 : config.maxPagesPerRun);page++) {
       // Reserve a full documented page before sending, including failed requests.
       const reservation=20*config.creditsPerTweet;
       if (state.reservedCredits+reservation>config.creditLimit) {truncated=true;break;}
@@ -93,7 +94,7 @@ if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
   if (fileIndex>=0 && !args[fileIndex+1]) {process.stderr.write('Specify a candidate file after --from-file.\n');process.exit(1);}
   const fromFile=fileIndex>=0 ? args[fileIndex+1] : undefined;
   async function run() {
-    try {const stateStore=process.env.GITHUB_ACTIONS==='true' && !fromFile ? githubRumorState() : undefined;const result=await syncRumors({fromFile,stateStore});console.log(`Sync: ${result.mode}; requests: ${result.requests}; added: ${result.added}; published groups: ${result.feed.groups.length}; skipped: ${result.skipped}.`);if(result.truncated)console.log('More pages pending or credit limit reached; saved results preserved.');}
+    try {const stateStore=process.env.GITHUB_ACTIONS==='true' && !fromFile ? githubRumorState() : undefined;const backfillHours=process.env.UFCINFO_RUMOR_BACKFILL==='true' ? 168 : undefined;const result=await syncRumors({fromFile,stateStore,backfillHours});console.log(`Sync: ${result.mode}; requests: ${result.requests}; added: ${result.added}; published groups: ${result.feed.groups.length}; skipped: ${result.skipped}.`);if(result.truncated)console.log('More pages pending or credit limit reached; saved results preserved.');}
     catch {console.error('Sync failed. Check configuration, key permissions, API balance or sync lock. Existing public data preserved; no automatic retry.');process.exitCode=1;}
   }
   await run();
@@ -103,3 +104,4 @@ if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
     setInterval(run,config.intervalMinutes*60000);
   }
 }
+
