@@ -51,51 +51,128 @@ def catalog_names():
     return names
 
 
-def main():
-    target = ROOT / 'assets/data/ufc-rumors.json'
-    feed = json.loads(target.read_text())
-    if not feed['rumors']:
-        print('No reviewed rumors: no external requests made.'); return 0
-    names = catalog_names()
-    events = json.loads((ROOT / 'assets/data/ufc-events.json').read_text())['events']
-    now = datetime.now(timezone.utc).isoformat()
+def event_url(event):
+    identity = event.get('id', '')
+    expected = f'https://www.ufc.com/event/{identity}'
+    if event.get('type') != 'official' or not re.fullmatch(r'ufc-[a-z0-9-]{1,100}', identity):
+        return None
+    return expected if event.get('source') == expected else None
+
+
+def as_date(value):
+    return datetime.fromisoformat(value.replace('Z', '+00:00'))
+
+
+def confirmed_match(pair, posted, pairs, official_date, date_hint=None):
+    # A completed first fight cannot confirm a later rematch rumor.
+    if pair not in pairs or official_date < posted:
+        return False
+    if date_hint:
+        try:
+            hinted = datetime.strptime(date_hint, '%Y-%m-%d').date()
+        except (ValueError, TypeError):
+            return False
+        # Tweets use local dates; UFC timestamps are UTC.
+        if abs((official_date.date() - hinted).days) > 1:
+            return False
+    return True
+
+
+def write_json(target, feed):
+    with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', dir=target.parent, delete=False) as tmp:
+        json.dump(feed, tmp, ensure_ascii=False, indent=2)
+        tmp.write('\n')
+    Path(tmp.name).replace(target)
+
+
+def verify_feeds(feed, grouped, events, fetch_card, now, names=None):
+    records = []
+    for rumor in feed.get('rumors', []):
+        records.append((rumor, tuple(sorted(normalize(names[f]) for f in rumor['fighters'])), False))
+    for group in grouped.get('groups', []):
+        records.append((group, tuple(sorted(normalize(n) for n in group['fighterNames'])), True))
     card_cache, failures = {}, set()
-    checked = 0
-    for rumor in feed['rumors']:
-        posted = datetime.fromisoformat(rumor['publishedAt'].replace('Z','+00:00'))
-        pair = tuple(sorted(normalize(names[f]) for f in rumor['fighters']))
-        candidates = [e for e in events if e.get('type') == 'official' and re.fullmatch(r'ufc-\d{1,4}',e['id']) and
-                      datetime.fromisoformat(e['date'].replace('Z','+00:00')) >= posted and
-                      (rumor.get('eventId') is None or rumor['eventId'] == e['id'])]
-        for event in sorted(candidates,key=lambda e:e['date']):
-            event_id = event['id']
-            if event_id in failures:
+    removed, checked = set(), 0
+    for record, pair, is_group in records:
+        posted = as_date(record['publishedAt'])
+        candidates = []
+        for event in events:
+            url = event_url(event)
+            if not url:
                 continue
-            if event_id not in card_cache:
-                url = f'https://www.ufc.com/event/{event_id}'
+            try:
+                eligible = as_date(event['date']) >= posted
+            except (ValueError, KeyError, TypeError):
+                continue
+            if eligible and (record.get('eventId') is None or record['eventId'] == event['id']):
+                candidates.append(event)
+        for event in sorted(candidates, key=lambda e: e['date']):
+            identity = event['id']
+            if identity in failures:
+                continue
+            if identity not in card_cache:
+                # Bounded official-page traffic; never guess confirmation on a failure.
+                if len(card_cache) + len(failures) >= 24:
+                    failures.add(identity)
+                    continue
                 try:
-                    with urlopen(Request(url,headers={'User-Agent':'UFCinfo/1.0','Accept':'text/html'}),timeout=15) as response:
-                        if response.geturl().rstrip('/') != url:
-                            raise ValueError('Unexpected redirect')
-                        card_cache[event_id] = parse_card(response.read(5_000_000).decode('utf-8'))
+                    card_cache[identity] = parse_card(fetch_card(event_url(event)))
                 except Exception:
-                    failures.add(event_id); continue
-            pairs, official_date = card_cache[event_id]
+                    failures.add(identity)
+                    continue
+            pairs, official_date = card_cache[identity]
             checked += 1
-            if pair in pairs and official_date >= posted:
-                rumor['official'] = {'eventId':event_id,'url':f'https://www.ufc.com/event/{event_id}',
-                                     'checkedAt':now,'eventDate':official_date.isoformat()}
+            if confirmed_match(pair, posted, pairs, official_date, record.get('eventDateHint')):
+                if is_group:
+                    removed.add(record['id'])
+                    print(f"Confirmed on UFC.com: {record['id']} -> {identity}")
+                else:
+                    record['official'] = {'eventId': identity, 'url': event_url(event),
+                                          'checkedAt': now, 'eventDate': official_date.isoformat()}
                 break
-    # Never claim a complete fresh check if one relevant official page was unavailable.
+    grouped['groups'] = [g for g in grouped.get('groups', []) if g['id'] not in removed]
+    if removed:
+        grouped['updatedAt'] = now
+    if checked and feed.get('rumors'):
+        feed['updatedAt'] = now
     if not failures:
         feed['lastOfficialCheckAt'] = now
-    if checked:
-        feed['updatedAt'] = now
-        with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8',dir=target.parent,delete=False) as tmp:
-            json.dump(feed,tmp,ensure_ascii=False,indent=2); tmp.write('\n')
-        Path(tmp.name).replace(target)
-    print(f'Official cards checked: {len(card_cache)}; unavailable: {len(failures)}. Existing confirmations retained.')
-    return 1 if failures else 0
+    return {'checkedCards': len(card_cache), 'unavailableCards': len(failures),
+            'removedGroups': len(removed), 'remainingGroups': len(grouped['groups'])}
+
+
+def fetch_official_card(url):
+    with urlopen(Request(url, headers={'User-Agent': 'UFCinfo/1.0', 'Accept': 'text/html'}), timeout=10) as response:
+        if response.geturl().rstrip('/') != url:
+            raise ValueError('Unexpected redirect')
+        body = response.read(5_000_001)
+        if len(body) > 5_000_000:
+            raise ValueError('Official page too large')
+        return body.decode('utf-8')
+
+
+def main():
+    target = ROOT / 'assets/data/ufc-rumors.json'
+    group_target = ROOT / 'assets/data/ufc-rumor-groups.json'
+    feed = json.loads(target.read_text(encoding='utf-8'))
+    grouped = json.loads(group_target.read_text(encoding='utf-8'))
+    if not feed.get('rumors') and not grouped.get('groups'):
+        print('No rumors: no official-page requests made.')
+        return 0
+    names = catalog_names() if feed.get('rumors') else None
+    events = json.loads((ROOT / 'assets/data/ufc-events.json').read_text(encoding='utf-8'))['events']
+    before_feed, before_groups = json.dumps(feed), json.dumps(grouped)
+    result = verify_feeds(feed, grouped, events, fetch_official_card, datetime.now(timezone.utc).isoformat(), names)
+    # Both files are committed together by the workflow.
+    if feed.get('rumors') and json.dumps(feed) != before_feed:
+        write_json(target, feed)
+    if json.dumps(grouped) != before_groups:
+        write_json(group_target, grouped)
+    print(f"Official UFC cards checked: {result['checkedCards']}; unavailable: {result['unavailableCards']}; confirmed groups removed: {result['removedGroups']}; remaining groups: {result['remainingGroups']}.")
+    if result['unavailableCards']:
+        print('Some UFC pages were unavailable. Unverified groups retained; no confirmation inferred.')
+    return 0
+
 
 if __name__ == '__main__':
     sys.exit(main())

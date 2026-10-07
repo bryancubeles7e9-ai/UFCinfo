@@ -26,4 +26,60 @@ class OfficialCardTests(unittest.TestCase):
     def test_spelling_normalization(self):
         self.assertEqual(module.normalize('Jiří Procházka'),module.normalize('Jiri Prochazka'))
 
+
+class AutomaticGroupTests(unittest.TestCase):
+    def event(self, identity='ufc-fight-night-november-21-2026'):
+        return {'id':identity,'type':'official','source':f'https://www.ufc.com/event/{identity}','date':'2026-11-21T18:00:00Z'}
+    def group(self, **overrides):
+        return {'id':'test','fighterNames':['Jiří Procházka','Navajo Stirling'],'publishedAt':'2026-10-07T08:00:00Z','eventDateHint':None,**overrides}
+    def html(self):
+        return OfficialCardTests().fight('Jiri Prochazka','Navajo Stirling')+'<span class="c-event-fight-card-broadcaster__time" data-timestamp="1795284000"></span>'
+    def verify(self, groups, fetch=None, events=None):
+        feed={'rumors':[]}
+        grouped={'groups':groups,'updatedAt':None}
+        result=module.verify_feeds(feed,grouped,events or [self.event()],fetch or (lambda url:self.html()),'2026-10-07T16:00:00Z')
+        return result,grouped
+    def test_fight_night_group_is_removed_after_official_page_match(self):
+        result,grouped=self.verify([self.group()])
+        self.assertEqual(result['removedGroups'],1)
+        self.assertEqual(grouped['groups'],[])
+    def test_calendar_alone_is_not_confirmation(self):
+        result,grouped=self.verify([self.group()],fetch=lambda url: '<h1>Jiri Prochazka vs Navajo Stirling</h1>')
+        self.assertEqual(result['removedGroups'],0)
+        self.assertEqual(len(grouped['groups']),1)
+        self.assertEqual(result['unavailableCards'],1)
+    def test_page_failure_retains_group(self):
+        def unavailable(url):raise OSError('offline')
+        result,grouped=self.verify([self.group()],fetch=unavailable)
+        self.assertEqual(len(grouped['groups']),1)
+    def test_later_rematch_is_not_removed(self):
+        result,grouped=self.verify([self.group(publishedAt='2026-12-01T08:00:00Z')])
+        self.assertEqual(result['checkedCards'],0)
+        self.assertEqual(len(grouped['groups']),1)
+    def test_other_event_date_retains_group(self):
+        result,grouped=self.verify([self.group(eventDateHint='2026-12-21')])
+        self.assertEqual(len(grouped['groups']),1)
+    def test_local_date_can_differ_by_one_day(self):
+        result,grouped=self.verify([self.group(eventDateHint='2026-11-22')])
+        self.assertEqual(result['removedGroups'],1)
+    def test_both_names_in_different_bouts_is_not_confirmation(self):
+        html=OfficialCardTests().fight('Jiri Prochazka','Other Fighter')+OfficialCardTests().fight('Navajo Stirling','Another Fighter')+'<span class="c-event-fight-card-broadcaster__time" data-timestamp="1795284000"></span>'
+        result,grouped=self.verify([self.group()],fetch=lambda url:html)
+        self.assertEqual(len(grouped['groups']),1)
+    def test_fetch_once_for_shared_event(self):
+        urls=[]
+        def fetch(url):urls.append(url);return self.html()
+        self.verify([self.group(),self.group(id='second')],fetch=fetch)
+        self.assertEqual(len(urls),1)
+    def test_external_source_is_never_requested(self):
+        event=self.event();event['source']='https://example.com/event'
+        result,grouped=self.verify([self.group()],fetch=lambda url:self.fail('Must not fetch'),events=[event])
+        self.assertEqual(result['checkedCards'],0)
+        self.assertEqual(len(grouped['groups']),1)
+    def test_legacy_reviewed_rumor_still_gets_confirmation(self):
+        feed={'rumors':[{'id':'old','fighters':['jiri','navajo'],'publishedAt':'2026-10-07T08:00:00Z','official':None}]}
+        module.verify_feeds(feed,{'groups':[]},[self.event()],lambda url:self.html(),'2026-10-07T16:00:00Z',{'jiri':'Jiří Procházka','navajo':'Navajo Stirling'})
+        self.assertEqual(feed['rumors'][0]['official']['eventId'],self.event()['id'])
+
 if __name__=='__main__':unittest.main()
+

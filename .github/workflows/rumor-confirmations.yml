@@ -1,26 +1,25 @@
 name: Comprobar confirmaciones de rumores
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '7,22,37,52 * * * *'
   push:
     branches: [main]
     paths:
       - 'assets/data/ufc-rumors.json'
+      - 'assets/data/ufc-rumor-groups.json'
+      - 'assets/data/ufc-events.json'
       - 'scripts/sync-rumor-confirmations.py'
+      - 'tests/test_rumor_confirmations.py'
+      - '.github/workflows/rumor-confirmations.yml'
 permissions:
-  contents: read
+  contents: write
 concurrency:
-  group: ufcinfo-rumor-confirmations
+  group: ufcinfo-rumor-automation
   cancel-in-progress: false
 jobs:
   verify:
-    # Explicit opt-in: no scheduled runner or network use before configuration.
-    if: vars.UFCINFO_RUMORS_AUTO_ENABLED == 'true' || github.event_name == 'workflow_dispatch'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
@@ -29,16 +28,27 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Probar confirmaciones y proteccion de revanchas
+        run: python3 tests/test_rumor_confirmations.py
       - name: Comprobar confirmaciones oficiales
         run: python3 scripts/sync-rumor-confirmations.py
       - name: Guardar confirmaciones
-        if: always()
+        id: publish
         run: |
-          git add assets/data/ufc-rumors.json
+          git add assets/data/ufc-rumors.json assets/data/ufc-rumor-groups.json
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git commit -m 'Actualizar confirmaciones oficiales de rumores'
+            git commit -m 'Retirar rumores confirmados en UFC.com'
             git pull --rebase origin main
             git push origin HEAD:main
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Actualizar Render
+        if: steps.publish.outputs.changed == 'true'
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -n "$RENDER_DEPLOY_HOOK_URL" ]; then
+            curl --fail --silent --output /dev/null --request POST "$RENDER_DEPLOY_HOOK_URL"
           fi
