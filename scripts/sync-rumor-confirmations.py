@@ -36,7 +36,7 @@ def parse_card(html):
     dates = set()
     for node in times:
         stamp = str(node.attrs.get('data-timestamp', '')).strip()
-        if re.fullmatch(r'\\d{9,13}', stamp):
+        if re.fullmatch(r'[0-9]{9,13}', stamp):
             value = int(stamp)
             dates.add(value // 1000 if value > 10_000_000_000 else value)
     # UFC lists preliminary and main-card start times, sometimes with empty placeholders.
