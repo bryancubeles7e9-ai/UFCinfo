@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-07T16:39:30.295Z",
+  "updatedAt": "2026-10-07T16:43:13.179Z",
   "groups": [
     {
       "id": "2107747599155708089",
@@ -51,6 +51,36 @@
             "KOlmeneroMMA"
           ],
           "attribution": "@KOlmeneroMMA 🙌"
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2106593647596654854",
+      "fighterNames": [
+        "Ilia Topuria",
+        "Paddy Pimblett"
+      ],
+      "matchupKey": "iliatopuria|paddypimblett|undated:2026-10",
+      "eventDateHint": null,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "Championship Rounds reporta una posible pelea entre Ilia Topuria y Paddy Pimblett, sin fecha indicada en la fuente. Información pendiente de confirmación oficial de UFC.",
+        "en": "Championship Rounds reports a possible fight between Ilia Topuria and Paddy Pimblett, with no date stated by the source. Awaiting official UFC confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-07T16:43:13.179Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-04T03:53:58.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2106593647596654854",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2106593647596654854",
+          "publishedAt": "2026-10-04T03:53:58.000Z",
+          "language": "en",
+          "attributedAccounts": []
         }
       ],
       "official": null
