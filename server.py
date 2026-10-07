@@ -91,6 +91,9 @@ def make_handler(database, public_origin, fighter_ids):
             super().__init__(*args, directory=str(ROOT), **kwargs)
 
         def end_headers(self):
+            # Assets use stable URLs: revalidate after deployments to avoid mixing versions.
+            if urlsplit(self.path).path.startswith('/assets/'):
+                self.send_header('Cache-Control', 'no-cache')
             self.send_header("X-Content-Type-Options", "nosniff")
             self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
             self.send_header("X-Frame-Options", "SAMEORIGIN")
