@@ -8,6 +8,7 @@ import sys
 import tempfile
 import unicodedata
 from urllib.request import Request, urlopen
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('rankings_parser', ROOT / 'scripts/sync-ufc-rankings.py')
@@ -120,7 +121,7 @@ def verify_feeds(feed, grouped, events, fetch_card, now, names=None):
                 except Exception as error:
                     failures.add(identity)
                     status = getattr(error, 'code', None)
-                    detail = f'HTTP {status}' if isinstance(status, int) else 'missing/invalid fight card' if isinstance(error, ValueError) else type(error).__name__
+                    detail = f'HTTP {status}' if isinstance(status, int) else str(error) if isinstance(error, ValueError) and str(error) in {'Unexpected redirect', 'Official fight card or event timestamp missing; preserve existing confirmations', 'Ambiguous official event date', 'Official page too large'} else type(error).__name__
                     print(f'Official page unavailable: {identity}: {detail}')
                     continue
             pairs, official_date = card_cache[identity]
@@ -146,7 +147,8 @@ def verify_feeds(feed, grouped, events, fetch_card, now, names=None):
 
 def fetch_official_card(url):
     with urlopen(Request(url, headers={'User-Agent': 'Mozilla/5.0 (compatible; UFCinfo/1.0)', 'Accept': 'text/html,application/xhtml+xml', 'Accept-Language': 'en-US,en;q=0.9'}), timeout=10) as response:
-        if response.geturl().rstrip('/') != url:
+        requested, final = urlparse(url), urlparse(response.geturl())
+        if final.scheme != 'https' or final.hostname not in {'www.ufc.com', 'ufc.com'} or final.path.rstrip('/') != requested.path.rstrip('/'):
             raise ValueError('Unexpected redirect')
         body = response.read(5_000_001)
         if len(body) > 5_000_000:
