@@ -1,8 +1,12 @@
 {
   "schemaVersion": 1,
   "reservedCredits": 2400,
-  "estimatedCredits": 1035,
+  "estimatedCredits": 1335,
   "lastSuccessAt": "2026-10-07T16:30:16.722Z",
-  "pending": null,
+  "pending": {
+    "query": "(from:CCLegaspi OR from:KOlmeneroMMA OR from:ericaiexander OR from:MMASINLIMITES OR from:ClubDeLasMMA OR from:upfrontmma OR from:pelunaton OR from:ChampRDS) (\"in talks\" OR \"targeted\" OR \"expected to face\" OR \"set to face\" OR \"booking\" OR \"negociaciones\" OR \"pelea\" OR \"combate\" OR \"vs\") -filter:retweets -filter:replies since_time:1790786069 until_time:1791390869",
+    "cursor": "DAADDAABCgABHUColWQWwOgKAAIdPAXlgpswVAAIAAIAAAACCAADAAAAAAgABAAAAAAKAAUdQKqbR4AnEAoABh1AqptHf9jwCwAHAAAA8EVtUEM2d0FBQWZRL2dHSk4wdkdwL0FBQUFCUWRQeTVZa3R1QVF4MUFxSlZrRnNEb0hUd0dGT2RiZ1BjZFBBWGxncHN3VkIxQU9VWXIyOEM1SFQ4a3E0eldnRTRkUUlIcGtSZEFwUjFBaTcxcEZwR0lIVHdkRWhpWFFjUWRQQjVXTkZjd3N4MDhIOExqRjlFR0hVQTdsdC9Yb0FBZFBBdTRZSlpnMlIwL2dNNldsZ0ZCSFQwMlVISlhvQzhkUEFZeTBKZFEvaDFBaCs0cUZrQkdIVDQwMTFEWEVORWRQQWtEa2xhQWh4MCtuWk5uMjJCTQAA",
+    "until": "2026-10-07T16:34:29.239Z"
+  },
   "archive": []
 }
