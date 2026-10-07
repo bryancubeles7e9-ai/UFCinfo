@@ -56,10 +56,32 @@ class SyncTests(unittest.TestCase):
             calls.append(copy.deepcopy(params))
             return page([event(331),unnumbered,prior,other,scheduled,future],True,'next') if not params.get('cursor') else page([event()])
         rows=sync.list_events(fetch,2026,NOW)
-        self.assertEqual([r['id'] for r in rows],[331,332])
+        self.assertEqual([r['id'] for r in rows],[331,332,332])
         self.assertEqual(calls[1]['cursor'],'next')
         self.assertEqual(calls[0]['status'],'completed')
         self.assertNotIn('is_ppv',calls[0])
+
+    def test_fight_nights_included_and_normalized(self):
+        row=event(999); row.update(numbering='Fight Night',title='UFC Fight Night: Silva vs Wang',starts_at='2026-10-03T22:00:00Z')
+        normalized=sync.normalize_event(row,NOW)
+        self.assertEqual(normalized['eventKind'],'fight-night')
+        self.assertIsNone(normalized['number'])
+        self.assertEqual(normalized['id'],'ufc-fight-night-october-03-2026')
+        self.assertEqual(normalized['source'],'https://www.ufc.com/event/ufc-fight-night-october-03-2026')
+        rows=sync.list_events(lambda path,params:page([event(),row]),2026,NOW)
+        self.assertEqual(len(rows),2)
+        row['org']='pfl'; self.assertIsNone(sync.event_identity(row))
+
+    def test_freedom_special_event(self):
+        row=event(999); row.update(numbering=None,title='UFC Freedom 250')
+        result=sync.normalize_event(row,NOW)
+        self.assertEqual(result['id'],'ufc-freedom-250')
+        self.assertEqual(result['eventKind'],'special')
+        self.assertIsNone(result['number'])
+        self.assertEqual(result['title'],'UFC Freedom 250')
+        self.assertEqual(result['source'],'https://www.ufc.com/event/ufc-freedom-250')
+        row['numbering']='250'
+        self.assertEqual(sync.normalize_event(row,NOW)['id'],'ufc-freedom-250')
 
     def test_provider_numbering_variants(self):
         for numbering, title, expected in [('332','UFC 332: Silva vs Wang',332),('UFC 332','UFC 332: Silva vs Wang',332),(None,'Crypto.com UFC 331',331),('Fight Night','UFC Fight Night: Bautista vs Oliveira',None),(None,'UFC Freedom 250',None),('DWCS 93','Dana White Contender Series 93',None)]:
@@ -101,6 +123,14 @@ class SyncTests(unittest.TestCase):
             self.assertIsNone(parser.poster)
             parser=sync.PosterParser();parser.feed('<div class="c-hero__image"><img src="https://ufc.com/images/TEMP-HERO.jpg"></div>')
             self.assertIsNotNone(parser.poster)
+
+    def test_relative_and_endpage_posters(self):
+        parser=sync.PosterParser()
+        parser.feed('<div class="c-hero__image"><img src="/s3/files/styles/background_image_sm/s3/2026-10/335_Endpage.jpg" alt="Charles Oliveira and Diego Lopes"></div>')
+        self.assertEqual(parser.poster[0],'https://www.ufc.com/s3/files/styles/background_image_sm/s3/2026-10/335_Endpage.jpg')
+        parser=sync.PosterParser()
+        parser.feed('<div class="c-hero__image"><img src="https://example.com/EVENT-ART.jpg"></div>')
+        self.assertIsNone(parser.poster)
 
     def test_removed_upcoming_does_not_block_history_update(self):
         with tempfile.TemporaryDirectory() as d:

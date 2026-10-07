@@ -1,4 +1,4 @@
-"""Sync completed and announced numbered UFC main cards from UFCalendar; keep last good data on failure."""
+"""Sync completed and announced numbered UFC and Fight Night main cards from UFCalendar; keep last good data on failure."""
 import argparse
 from datetime import datetime, timezone
 import json
@@ -60,12 +60,34 @@ def request_json(path, key, params=None):
 def event_number(event):
     if event.get('org') != 'ufc' or event.get('status') not in ('completed', 'announced', 'scheduled', 'live'):
         return None
+    if re.search(r'\bUFC\s+Freedom\s+250\b', str(event.get('title') or ''), re.I) or event.get('slug') == 'ufc-freedom-250':
+        return None
     numbering = str(event.get('numbering') or '').strip()
     match = re.fullmatch(r'(?:UFC\s+)?(\d+)', numbering)
     if not match:
         # Some sponsored cards (e.g. Crypto.com UFC 331) have no numbering.
         match = re.search(r'\bUFC\s+(\d+)(?=\s*(?::|$))', event.get('title') or '')
     return int(match.group(1)) if match else None
+
+def event_identity(event):
+    number = event_number(event)
+    if number is not None:
+        return f'ufc-{number}'
+    if event.get('org') != 'ufc' or event.get('status') not in ('completed', 'announced', 'scheduled', 'live'):
+        return None
+    if re.search(r'\bUFC\s+Freedom\s+250\b', str(event.get('title') or '') + ' ' + str(event.get('numbering') or ''), re.I) or event.get('slug') == 'ufc-freedom-250':
+        return 'ufc-freedom-250'
+    if not re.search(r'fight\s+night', str(event.get('numbering') or '') + ' ' + str(event.get('title') or ''), re.I):
+        return None
+    # Use the canonical provider URL when available; otherwise the event-day timestamp.
+    for field in ('url', 'source', 'slug'):
+        value = str(event.get(field) or '')
+        match = re.fullmatch(r'(?:https://www\.ufc\.com/event/)?(ufc-fight-night-[a-z]+-\d{2}-\d{4})', value)
+        if match: return match.group(1)
+    from zoneinfo import ZoneInfo
+    date = utc_date(event.get('starts_at') or event.get('main_card_at')).astimezone(ZoneInfo('America/New_York'))
+    month = ('january','february','march','april','may','june','july','august','september','october','november','december')[date.month-1]
+    return f'ufc-fight-night-{month}-{date.day:02d}-{date.year}'
 
 def list_events(fetch, year, now, upcoming=False):
     params = {'org': 'ufc', 'status': 'completed', 'from': f'{year}-01-01', 'to': now.date().isoformat(), 'order': 'asc', 'limit': 100}
@@ -80,8 +102,8 @@ def list_events(fetch, year, now, upcoming=False):
         for row in rows:
             if not isinstance(row, dict):
                 raise SyncError('Invalid event row')
-            number = event_number(row)
-            if number is None:
+            identity = event_identity(row)
+            if identity is None:
                 continue
             date = utc_date(row.get('main_card_at') or row.get('starts_at'))
             if upcoming:
@@ -89,9 +111,9 @@ def list_events(fetch, year, now, upcoming=False):
                     continue
             elif row.get('status') != 'completed' or date.year != year or date > now:
                 continue
-            if number in seen:
-                raise SyncError('Duplicate event number')
-            seen.add(number)
+            if identity in seen:
+                raise SyncError('Duplicate event identity')
+            seen.add(identity)
             events.append(row)
         pagination = page.get('meta', {}).get('pagination', {})
         if not isinstance(pagination.get('has_more'), bool):
@@ -107,8 +129,9 @@ def list_events(fetch, year, now, upcoming=False):
 
 def normalize_event(event, now):
     number = event_number(event)
-    if number is None:
-        raise SyncError('Event detail is not a numbered UFC event')
+    identity = event_identity(event)
+    if identity is None:
+        raise SyncError('Event detail is not a UFC numbered or Fight Night event')
     date = utc_date(event.get('main_card_at') or event.get('starts_at'))
     status = event['status']
     if status == 'completed' and (date.year != now.year or date > now):
@@ -158,7 +181,7 @@ def normalize_event(event, now):
     venue = event.get('venue') or {}
     if not isinstance(venue, dict):
         raise SyncError('Invalid venue')
-    return {'id': f'ufc-{number}', 'number': number, 'title': f'UFC {number}', 'subtitle': f"{bouts[0]['red']} vs {bouts[0]['blue']}" if bouts else 'Cartelera pendiente de anuncio', 'status': status, 'date': date.isoformat(), 'location': ', '.join(str(venue[k]) for k in ('name','city','country') if venue.get(k)) or 'Recinto no indicado', 'type': 'official', 'source': f'https://www.ufc.com/event/ufc-{number}', 'checkedAt': now.date().isoformat(), 'bouts': bouts}
+    return {'id': identity, 'number': number, 'eventKind': 'numbered' if number is not None else 'special' if identity == 'ufc-freedom-250' else 'fight-night', 'title': f'UFC {number}' if number is not None else 'UFC Freedom 250' if identity == 'ufc-freedom-250' else 'UFC Fight Night', 'subtitle': f"{bouts[0]['red']} vs {bouts[0]['blue']}" if bouts else 'Cartelera pendiente de anuncio', 'status': status, 'date': date.isoformat(), 'location': ', '.join(str(venue[k]) for k in ('name','city','country') if venue.get(k)) or 'Recinto no indicado', 'type': 'official', 'source': f'https://www.ufc.com/event/{identity}', 'checkedAt': now.date().isoformat(), 'bouts': bouts}
 
 def synchronize(fetch, now):
     rows = list_events(fetch, now.year, now) + list_events(fetch, now.year, now, upcoming=True)
@@ -168,7 +191,7 @@ def synchronize(fetch, now):
         if not isinstance(event_id, int) or event_id <= 0:
             raise SyncError('Invalid event id')
         detail = fetch(f'/events/{event_id}', None).get('data')
-        if not isinstance(detail, dict) or event_number(detail) != event_number(row):
+        if not isinstance(detail, dict) or event_identity(detail) != event_identity(row):
             raise SyncError('Event detail mismatch')
         events.append(normalize_event(detail, now))
     if len({e['id'] for e in events}) != len(events):
@@ -198,7 +221,7 @@ def atomic_save(path, payload):
 
 
 from html.parser import HTMLParser
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 
 class PosterParser(HTMLParser):
     def __init__(self):
@@ -213,10 +236,10 @@ class PosterParser(HTMLParser):
             elif 'c-hero__image' in attrs.get('class', '').split():
                 self.hero_depth = 1
         if tag == 'img' and self.hero_depth and not self.poster:
-            url = attrs.get('src', '')
+            url = urljoin('https://www.ufc.com', attrs.get('src', ''))
             parsed = urlparse(url)
             # A generic background is not an event poster.
-            if parsed.scheme == 'https' and parsed.hostname in ('ufc.com', 'www.ufc.com') and any(marker in parsed.path.upper() for marker in ('EVENT-ART', 'TEMP-HERO')):
+            if parsed.scheme == 'https' and parsed.hostname in ('ufc.com', 'www.ufc.com') and any(marker in parsed.path.upper() for marker in ('EVENT-ART', 'TEMP-HERO', 'ENDPAGE')):
                 self.poster = (url, attrs.get('alt') or 'Imagen promocional oficial de UFC')
     def handle_endtag(self, tag):
         if tag == 'div' and self.hero_depth:

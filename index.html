@@ -46,7 +46,7 @@
         <button id="account-open" class="outline-button small" disabled>Iniciar sesión</button>
         <button id="theme-button" class="icon-button" aria-label="Cambiar tema">
           ◐</button
-        ><button id="open-builder" class="button small">＋ Crear evento</button>
+        >
       </div>
     </header>
     <main id="main">
@@ -55,37 +55,12 @@
           <span class="live-dot"></span> THE FIGHT NEVER STOPS
           <span id="current-date"></span>
         </div>
-        <section class="hero">
+        <section class="hero info-hero" id="home-event-banner" aria-label="Resumen del próximo evento">
           <div class="hero-copy">
-            <div class="hero-tag">
-              <span>FAN EXPERIENCE</span> UFC · MMA · CULTURA
-            </div>
-            <h1>NO ES SOLO<br />UNA PELEA<span>.</span></h1>
-            <p>
-              Es técnica. Es carácter. Es el instante que lo cambia todo.<br />Entra
-              al octágono y construye tu propia visión del combate.
-            </p>
-            <div class="hero-buttons">
-              <a class="button" href="#eventos"
-                >Explorar carteleras <span>↗</span></a
-              ><a class="outline-button" href="#laboratorio"
-                >Entrar al Fight Lab <span>→</span></a
-              >
-            </div>
-            <div class="hero-bottom">
-              <span>01 / EL SIGUIENTE ASALTO</span
-              ><span>100 % PASIÓN POR LAS MMA</span>
-            </div>
-          </div>
-          <div class="hero-art">
-            <img
-              src="assets/images/octagon.svg"
-              alt="Ilustración de un octágono iluminado en una arena oscura"
-            />
-            <div class="arena-label">
-              <span class="live-dot"></span> INSIDE THE FIGHT
-            </div>
-            <span class="art-coordinate">36°06′ N · 115°10′ W</span>
+            <p class="eyebrow">TU AGENDA UFC</p>
+            <h1>La próxima<br />noche de combate.</h1>
+            <p>Consulta fechas, horarios y combates anunciados.</p>
+            <a class="button" href="#eventos">Ver todas las carteleras ↗</a>
           </div>
         </section>
         <div class="ticker" aria-hidden="true">
@@ -100,7 +75,7 @@
           </article>
           <article>
             <span>02 / IMAGINA</span><strong id="event-count">03</strong>
-            <p>Eventos numerados UFC</p>
+            <p>Eventos UFC</p>
           </article>
           <article>
             <span>03 / ANALIZA</span><strong>05</strong>
@@ -150,19 +125,23 @@
             <p class="eyebrow">EL AÑO DENTRO DEL OCTÁGONO</p>
             <h1>CARTELERAS<span>.</span></h1>
             <p>
-              Próximos eventos numerados anunciados y resultados de este año, con su cartelera principal.
+              Eventos numerados, Fight Night y especiales: próximos anunciados y resultados de este año, con su cartelera principal.
             </p>
           </div>
-          <button class="button" data-builder>＋ Crear cartelera</button>
         </div>
         <div class="toolbar">
-          <div class="segmented" aria-label="Filtrar eventos">
-            <button data-event-filter="upcoming" class="active">Próximos</button
-            ><button data-event-filter="completed">Finalizados</button
-            ><button data-event-filter="official">Todos UFC</button
-            ><button data-event-filter="all">Todos</button
-            ><button data-event-filter="demo">Demostración</button
-            ><button data-event-filter="custom">Mis eventos</button>
+          <div class="event-filters">
+            <div class="segmented" aria-label="Filtrar eventos">
+              <button data-event-filter="upcoming" class="active" aria-pressed="true">Próximos</button>
+              <button data-event-filter="completed" aria-pressed="false">Finalizados</button>
+              <button data-event-filter="all" aria-pressed="false">Todos</button>
+            </div>
+            <div class="segmented event-kind-buttons" aria-label="Tipo de evento">
+              <button data-event-kind="all" class="active" aria-pressed="true">Todos UFC</button>
+              <button data-event-kind="numbered" aria-pressed="false">Numerados</button>
+              <button data-event-kind="fight-night" aria-pressed="false">Fight Night</button>
+              <button data-event-kind="special" aria-pressed="false">Especiales</button>
+            </div>
           </div>
           <label class="search-box"
             >⌕
@@ -451,67 +430,6 @@
         ×
       </button>
       <div id="event-detail"></div>
-    </dialog>
-    <dialog id="builder-dialog">
-      <form id="builder-form">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">HAZ DE MATCHMAKER</p>
-            <h2>Crea tu noche de combate.</h2>
-          </div>
-          <button
-            type="button"
-            class="icon-button"
-            data-close
-            aria-label="Cerrar"
-          >
-            ×
-          </button>
-        </div>
-        <label class="field-label"
-          >Nombre del evento<input
-            name="title"
-            maxlength="70"
-            required
-            placeholder="Mi Fight Night"
-        /></label>
-        <div class="form-row">
-          <label class="field-label"
-            >Ciudad<input
-              name="location"
-              maxlength="60"
-              required
-              placeholder="Madrid, España" /></label
-          ><label class="field-label"
-            >Fecha y hora local<input
-              name="date"
-              type="datetime-local"
-              required
-          /></label>
-        </div>
-        <p class="field-label">Combate estelar</p>
-        <div class="form-row">
-          <label class="field-label"
-            >Esquina roja<select name="red" id="builder-red"></select></label
-          ><label class="field-label"
-            >Esquina azul<select name="blue" id="builder-blue"></select
-          ></label>
-        </div>
-        <label class="field-label"
-          >Formato<select name="rounds">
-            <option value="5">5 asaltos · 5 minutos</option>
-            <option value="3">3 asaltos · 5 minutos</option>
-          </select></label
-        >
-        <p class="data-note">
-          Es una cartelera de aficionados, no un evento oficial de UFC.
-        </p>
-        <div class="dialog-actions">
-          <button type="button" class="outline-button" data-close>
-            Cancelar</button
-          ><button type="submit" class="button">Crear evento ↗</button>
-        </div>
-      </form>
     </dialog>
     <dialog id="confirm-dialog">
       <h2 id="confirm-title">¿Eliminar elemento?</h2>

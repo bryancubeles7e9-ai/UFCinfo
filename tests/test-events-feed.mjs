@@ -38,3 +38,20 @@ const badPoster=structuredClone(next);badPoster.events[0].poster='javascript:ale
 globalThis.fetch=async()=>({ok:true,json:async()=>badPoster});
 assert.equal(await refreshEvents(),false);
 console.log('PASS: upcoming events, incomplete cards, next year and poster validation');
+
+const fightNight = structuredClone(next);
+fightNight.events = [{...next.events[0], number:null, eventKind:'fight-night', id:'ufc-fight-night-october-10-2026', source:'https://www.ufc.com/event/ufc-fight-night-october-10-2026', poster:null}];
+globalThis.fetch=async()=>({ok:true,json:async()=>fightNight});
+assert.equal(await refreshEvents(),true);
+assert.equal(eventsFeed.events[0].eventKind,'fight-night');
+const unsafe=structuredClone(fightNight);unsafe.events[0].id='../invalid';
+globalThis.fetch=async()=>({ok:true,json:async()=>unsafe});
+assert.equal(await refreshEvents(),false);
+console.log('PASS: Fight Night feed and canonical URL validation');
+
+const freedom=structuredClone(fightNight);
+freedom.events=[{...fightNight.events[0],eventKind:'special',id:'ufc-freedom-250',title:'UFC Freedom 250',source:'https://www.ufc.com/event/ufc-freedom-250'}];
+globalThis.fetch=async()=>({ok:true,json:async()=>freedom});
+assert.equal(await refreshEvents(),true);
+assert.equal(eventsFeed.events[0].eventKind,'special');
+console.log('PASS: UFC Freedom special event accepted');

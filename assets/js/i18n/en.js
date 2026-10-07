@@ -1,5 +1,13 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+'Numerados':'Numbered', 'Especiales':'Special events', 'No hay eventos UFC disponibles.':'No UFC events available.', 'No hay carteleras con estos filtros. Prueba otra selección.':'No fight cards match these filters. Try another selection.',
+
+'UFC EVENTO ESPECIAL':'UFC SPECIAL EVENT', 'Eventos especiales':'Special events', 'Eventos numerados, Fight Night y especiales: próximos anunciados y resultados de este año, con su cartelera principal.':'Numbered, Fight Night and special events: upcoming announced events and this year’s results, with their main cards.',
+
+'Tipo de evento':'Event type', 'Numerados y Fight Night':'Numbered and Fight Night', 'Solo numerados':'Numbered only', 'Solo Fight Night':'Fight Night only', 'Eventos UFC':'UFC events', 'PRÓXIMO EVENTO UFC':'NEXT UFC EVENT', 'ÚLTIMO EVENTO UFC':'LATEST UFC EVENT', 'No hay próximos eventos UFC en los datos disponibles.':'There are no upcoming UFC events in the available data.', 'Eventos numerados y Fight Night: próximos anunciados y resultados de este año, con su cartelera principal.':'Numbered events and Fight Night: upcoming announced events and this year’s results, with their main cards.',
+
+'TU AGENDA UFC':'YOUR UFC SCHEDULE', 'Resumen del próximo evento':'Next event overview', 'FECHA Y HORA LOCAL':'LOCAL DATE AND TIME', 'SEDE':'VENUE', 'combates anunciados':'announced bouts', 'COMBATE ANUNCIADO':'ANNOUNCED BOUT', 'La próxima noche está por anunciar.':'The next fight night is yet to be announced.', 'No hay próximos eventos numerados en los datos disponibles.':'There are no upcoming numbered events in the available data.', 'EXPLORA UFCINFO':'EXPLORE UFCINFO', 'Pendiente de anuncio':'To be announced', 'Consulta fechas, horarios y combates anunciados.':'Check dates, times and announced bouts.',
+
 'Saltar al contenido':'Skip to content', 'Navegación principal':'Main navigation', 'Carteleras':'Fight cards', 'CARTELERAS':'FIGHT CARDS', 'Luchadores':'Fighters', 'Mi esquina':'My corner', 'MI ESQUINA':'MY CORNER',
 'Sin spoilers: ON':'Spoiler-free: ON', 'Sin spoilers: OFF':'Spoiler-free: OFF', 'Iniciar sesión':'Sign in', 'Cambiar tema':'Change theme', 'Crear evento':'Create event', 'Crear cartelera':'Create fight card',
 'UFC · MMA · CULTURA':'UFC · MMA · CULTURE', 'NO ES SOLO':'IT’S MORE THAN', 'UNA PELEA':'A FIGHT',
