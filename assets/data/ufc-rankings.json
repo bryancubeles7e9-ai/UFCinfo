@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://www.ufc.com/rankings",
-  "synchronizedAt": "2026-10-05T10:08:47.759560+00:00",
+  "synchronizedAt": "2026-10-07T18:57:35.478443+00:00",
   "published": "How are rankings determined?",
   "categories": [
     {
@@ -70,10 +70,10 @@
         "Umar Nurmagomedov",
         "Mario Bautista",
         "Cory Sandhagen",
+        "Payton Talbott",
         "Aiemann Zahabi",
         "David Martinez",
-        "Deiveson Figueiredo",
-        "Marlon Vera"
+        "Raul Rosas Jr."
       ],
       "ranks": [
         1,
@@ -210,10 +210,10 @@
         "Khalil Rountree Jr.",
         "Navajo Stirling",
         "Paulo Costa",
-        "Jamahal Hill",
         "Azamat Murzakanov",
+        "Dominick Reyes",
         "Jan Błachowicz",
-        "Dominick Reyes"
+        "Bogdan Guskov"
       ],
       "ranks": [
         1,
@@ -314,15 +314,15 @@
     },
     {
       "id": "flyweight-women",
-      "champion": "Valentina Shevchenko",
+      "champion": "Natalia Silva",
       "names": [
-        "Natalia Silva",
+        "Valentina Shevchenko",
         "Alexa Grasso",
         "Manon Fiorot",
         "Erin Blanchfield",
         "Rose Namajunas",
-        "Maycee Barber",
         "Jasmine Jasudavicius",
+        "Maycee Barber",
         "Wang Cong",
         "Tracy Cortez",
         "Miranda Maverick"
@@ -334,7 +334,7 @@
         4,
         5,
         6,
-        7,
+        6,
         8,
         9,
         10
@@ -351,15 +351,15 @@
         "Norma Dumont",
         "Yana Santos",
         "Luana Santos",
-        "Macy Chiasson",
         "Jacqueline Cavalcanti",
+        "Macy Chiasson",
         "Karol Rosa"
       ],
       "ranks": [
         1,
         2,
         3,
-        3,
+        4,
         5,
         6,
         7,
