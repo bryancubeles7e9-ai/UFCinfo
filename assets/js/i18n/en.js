@@ -83,5 +83,28 @@ Object.assign(english, {
 });
 Object.assign(english, {
 'UFCinfo — Carteleras UFC, luchadores y rankings MMA':'UFCinfo — UFC fight cards, fighters and MMA rankings',
+'REPORTES REVISADOS':'REVIEWED REPORTS',
+'REPORTES DE FUENTES':'SOURCE REPORTS',
+'Recopilado automáticamente. No ha sido verificado manualmente ni confirmado por UFC.':'Collected automatically. Not manually verified or confirmed by UFC.',
+'Posibles peleas reportadas por periodistas en español e inglés. Los reportes de una misma pelea se agrupan conservando sus fuentes.':'Potential fights reported by Spanish and English-language journalists. Reports about the same matchup are grouped with their sources.',
+'Un rumor no es un anuncio oficial. Consulta las publicaciones originales y las confirmaciones disponibles.':'A rumor is not an official announcement. Check the original posts and available confirmations.',
+'Revisión local de candidatos':'Local candidate review',
+'Importa el archivo de candidatos para revisar las publicaciones agrupadas. Se queda en este navegador; aprobar un grupo no lo publica.':'Import the candidate file to review grouped posts. It stays in this browser; approving a group does not publish it.',
+'Importar candidatos':'Import candidates',
+'Exportar grupos aprobados':'Export approved groups',
+'Publicación sin pelea identificada':'Post without an identified matchup',
+'Revisión pendiente':'Awaiting review',
+'Primer luchador':'First fighter',
+'Segundo luchador':'Second fighter',
+'Resumen en español':'Spanish summary',
+'Resumen en inglés':'English summary',
+'Puede contener resultados':'May contain fight results',
+'He comprobado las fuentes y se trata de un reporte pendiente de confirmación oficial':'I have checked the sources and this report is awaiting official confirmation',
+'Aprobar para exportar':'Approve for export',
+'Descartar grupo':'Discard group',
+'El texto contiene caracteres dañados. Consulta la publicación original.':'This text contains damaged characters. Check the original post.',
+'Varias publicaciones pueden repetir una misma fuente. No equivalen a confirmaciones independientes.':'Several posts may repeat a single source. They are not independent confirmations.',
+'publicaciones agrupadas':'grouped posts',
+'Cita a':'Cites',
 'Explora carteleras UFC, luchadores y rankings de MMA. Compara estilos en Fight Lab y sigue tus favoritos en UFCinfo, con modo sin spoilers.':'Explore UFC fight cards, fighters and MMA rankings. Compare styles in Fight Lab and follow your favorites on UFCinfo with spoiler-free mode.'
 });

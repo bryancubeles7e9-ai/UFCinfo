@@ -5,6 +5,8 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
+import subprocess
 import tempfile
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
@@ -13,6 +15,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 ENDPOINT = 'https://api.twitterapi.io/twitter/tweet/advanced_search'
 KEYWORDS = '("in talks" OR "targeted" OR "expected to face" OR "set to face" OR "booking" OR "negociaciones" OR "pelea" OR "combate" OR "vs")'
+BOXING_PATTERN = re.compile(r'\b(boxing|boxeo|boxeador(?:es)?|boxeadoras?|pugilismo|tyson\s+fury|anthony\s+joshua|fury\s+vs\.?\s+joshua|aj[- ]fury)\b', re.IGNORECASE)
 
 
 def build_query(sources, start, end):
@@ -45,6 +48,8 @@ def candidates(data, sources):
             continue
         if tweet.get('isReply') or tweet.get('retweeted_tweet') or text.startswith('RT @'):
             continue
+        if BOXING_PATTERN.search(text):
+            continue
         found[post_id] = {'id': post_id, 'sourceId': source['id'], 'postUrl': f'https://x.com/{source["handle"]}/status/{post_id}', 'text': text, 'publishedAt': tweet.get('createdAt'), 'language': tweet.get('lang'), 'status': 'pending-review'}
     return list(found.values())
 
@@ -57,7 +62,7 @@ def main():
     args = parser.parse_args()
     if not 1 <= args.hours <= 168:
         parser.error('--hours must be between 1 and 168')
-    feed = json.loads((ROOT / 'assets/data/ufc-rumors.json').read_text())
+    feed = json.loads((ROOT / 'assets/data/ufc-rumors.json').read_text(encoding='utf-8'))
     selected = set(args.source or [s['id'] for s in feed['sources']])
     sources = [s for s in feed['sources'] if s['id'] in selected]
     if {s['id'] for s in sources} != selected:
@@ -69,12 +74,14 @@ def main():
     if not args.fetch:
         print('Preview only: no network request or charge. Add --fetch to test.')
         return
-    key_path = ROOT / '.octagon-data/twitterapi.key'
+    if not shutil.which('node'):
+        parser.exit(2, 'Node.js is required for candidate grouping. No API request made.\n')
+    key_path = ROOT / '.ufcinfo-data/twitterapi.key'
     key = os.environ.get('TWITTERAPI_IO_KEY', '').strip()
     if not key and key_path.is_file():
         key = key_path.read_text().strip()
     if not key:
-        parser.exit(2, 'Missing key: set TWITTERAPI_IO_KEY or save it in .octagon-data/twitterapi.key.\n')
+        parser.exit(2, 'Missing key: set TWITTERAPI_IO_KEY or save it in .ufcinfo-data/twitterapi.key.\n')
     try:
         data = search(query, key)
         results = candidates(data, sources)
@@ -82,15 +89,22 @@ def main():
         parser.exit(1, f'API HTTP {error.code}. No automatic retry. Check key, credits or limits in your dashboard.\n')
     except (URLError, ValueError, TimeoutError, OSError):
         parser.exit(1, 'Could not retrieve valid data. No automatic retry; check provider status.\n')
-    target = ROOT / '.octagon-data/twitterapi-candidates.json'
+    target = ROOT / '.ufcinfo-data/twitterapi-candidates.json'
     target.parent.mkdir(parents=True, exist_ok=True)
     payload = {'checkedAt': datetime.now(timezone.utc).isoformat(), 'query': query, 'returned': len(data['tweets']), 'hasMore': bool(data.get('has_next_page')), 'candidates': results}
+    try:
+        grouped = subprocess.run(['node', str(ROOT / 'scripts/group-rumor-candidates.mjs')], input=json.dumps(payload), text=True, encoding='utf-8', capture_output=True, check=True, timeout=20)
+        payload = json.loads(grouped.stdout)
+    except (subprocess.SubprocessError, OSError, ValueError):
+        print('Grouping failed; ungrouped candidates will be saved for review.')
     with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', dir=target.parent, delete=False) as tmp:
         json.dump(payload, tmp, ensure_ascii=False, indent=2)
         tmp.write('\n')
     Path(tmp.name).replace(target)
     os.chmod(target, 0o600)
     print(f'Returned {len(data["tweets"])} posts; retained {len(results)} candidates. Saved privately to {target}.')
+    if 'groups' in payload:
+        print(f'Groups for review: {len(payload["groups"])}.')
     if payload['hasMore']:
         print('More results exist; they were not requested to keep this test limited.')
     print('Candidates are not published rumors. Review before publishing with scripts/add-rumor.py.')

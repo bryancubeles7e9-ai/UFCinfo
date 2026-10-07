@@ -3,6 +3,8 @@ import { getLanguage } from './i18n.js';
 import { directoryFighterById, fighterNameLink } from './fighter-directory.js';
 import { fullName } from './data.js';
 import { resultHidden } from './spoilers.js';
+import {validateGroupFeed,filterGroups,groupCard} from './rumor-groups.js';
+import {initializeRumorReview} from './rumor-review.js';
 
 const validDate = value => typeof value === 'string' && Number.isFinite(Date.parse(value)) && /(?:Z|[+-]\d{2}:\d{2})$/.test(value);
 export function validateRumorFeed(feed) {
@@ -59,11 +61,14 @@ export function rumorCard(r, sources) {
 export function initializeRumors() {
   let feed = {schemaVersion:1, updatedAt:null, lastOfficialCheckAt:null, sources:[], rumors:[]};
   let loading = false, unavailable = false;
+  let groupFeed = {schemaVersion:1,updatedAt:null,groups:[]};
   function draw() {
     const list = filterRumors(feed, {query:$('#rumor-search').value, language:$('#rumor-language').value, source:$('#rumor-source').value, status:$('#rumor-status').value});
-    $('#rumor-count').textContent = `${list.length} publicaciones`;
+    const groups=filterGroups(groupFeed,feed.sources,{query:$('#rumor-search').value,language:$('#rumor-language').value,source:$('#rumor-source').value,status:$('#rumor-status').value});
+    $('#rumor-count').textContent = `${list.length+groups.length} reportes`;
     $('#rumor-feed-status').textContent = unavailable ? 'No se pudo comprobar una actualización. Se conservan las últimas publicaciones cargadas.' : feed.lastOfficialCheckAt ? `Última comprobación de confirmaciones oficiales: ${formatDate(feed.lastOfficialCheckAt)} · ${formatTime(feed.lastOfficialCheckAt)}.` : 'Todavía no hay una comprobación de confirmaciones oficiales disponible.';
-    $('#rumor-list').innerHTML = list.length ? list.map(r => rumorCard(r, feed.sources)).join('') : `<div class="empty-state"><span>◇</span><p>${feed.rumors.length ? 'No hay publicaciones con estos filtros.' : 'Aún no hay rumores revisados. Aquí aparecerán publicaciones con periodista, fecha y enlace original.'}</p></div>`;
+    const cards=[...list.map(r=>({date:r.publishedAt,html:rumorCard(r,feed.sources)})),...groups.map(group=>({date:group.publishedAt,html:groupCard(group,feed.sources)}))].sort((a,b)=>Date.parse(b.date)-Date.parse(a.date));
+    $('#rumor-list').innerHTML = cards.length ? cards.map(card=>card.html).join('') : `<div class="empty-state"><span>◇</span><p>${feed.rumors.length || groupFeed.groups.length ? 'No hay publicaciones con estos filtros.' : 'Aún no hay rumores revisados. Aquí aparecerán publicaciones con periodista, fecha y enlace original.'}</p></div>`;
     $('#rumor-sources').innerHTML = feed.sources.map(s => `<a class="rumor-source-link" href="${esc(s.profile)}" target="_blank" rel="noopener noreferrer"><span translate="no">${esc(s.name)}<small>@${esc(s.handle)}</small></span><span class="badge">${s.language.toUpperCase()}</span></a>`).join('');
   }
   async function refresh() {
@@ -71,11 +76,12 @@ export function initializeRumors() {
     loading = true;
     const controller = new AbortController(), timer = setTimeout(() => controller.abort(),10000);
     try {
-      const response = await fetch(new URL('../data/ufc-rumors.json',import.meta.url), {cache:'no-store',signal:controller.signal});
-      if (!response.ok) throw Error('Unavailable');
-      const next = await response.json();
+      const responses = await Promise.all([fetch(new URL('../data/ufc-rumors.json',import.meta.url), {cache:'no-store',signal:controller.signal}),fetch(new URL('../data/ufc-rumor-groups.json',import.meta.url), {cache:'no-store',signal:controller.signal})]);
+      if (responses.some(response=>!response.ok)) throw Error('Unavailable');
+      const [next,nextGroups] = await Promise.all(responses.map(response=>response.json()));
       if (!validateRumorFeed(next)) throw Error('Invalid feed');
-      feed = next; unavailable = false;
+      if (!validateGroupFeed(nextGroups,next.sources)) throw Error('Invalid group feed');
+      feed = next; groupFeed=nextGroups; unavailable = false;
       const selected = $('#rumor-source').value;
       $('#rumor-source').innerHTML = '<option value="all">Todos los periodistas</option>' + feed.sources.map(s => `<option value="${esc(s.id)}" translate="no">${esc(s.name)}</option>`).join('');
       $('#rumor-source').value = feed.sources.some(s => s.id === selected) ? selected : 'all';
@@ -90,5 +96,6 @@ export function initializeRumors() {
   window.addEventListener('hashchange', () => { if (location.hash === '#rumores') refresh(); });
   setInterval(() => {if (!document.hidden) refresh();},60000);
   draw(); refresh();
+  initializeRumorReview({getSources:()=>feed.sources,getPublished:()=>groupFeed});
   return {draw, refresh};
 }

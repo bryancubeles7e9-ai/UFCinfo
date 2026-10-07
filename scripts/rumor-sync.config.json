@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "intervalMinutes": 60,
+  "maxPagesPerRun": 3,
+  "creditLimit": 1000000,
+  "creditsPerTweet": 15,
+  "lookbackHours": 24
+}

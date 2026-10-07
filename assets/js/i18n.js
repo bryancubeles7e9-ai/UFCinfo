@@ -15,6 +15,7 @@ export function translate(text) {
   return String(text).replace(pattern, match => english[match])
     .replace(/(\d+) de (\d+) luchadores/g, '$1 of $2 fighters')
     .replace(/(\d+) publicaciones/g, '$1 posts')
+    .replace(/(\d+) reportes/g, '$1 reports')
     .replace(/\+ campeón/g, '+ champion')
     .replace(/ frente a /g, ' vs ')
     .replace(/(\d+) años\b/g, '$1 years')

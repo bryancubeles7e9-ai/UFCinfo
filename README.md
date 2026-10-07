@@ -13,7 +13,7 @@ Abre esta carpeta en VS Code, pulsa con el botón derecho en `index.html` y sele
 ## Funciones
 
 - Siete vistas: inicio, carteleras, luchadores, rankings, Fight Lab, Rumores y Mi esquina.
-- Rumores **incompleta · pendiente de retomar**: interfaz y fuentes preparadas; búsqueda automática en X sin implementar y comprobación automática de confirmaciones desactivada. Consulta [docs/RUMORES.md](docs/RUMORES.md).
+- Rumores: recopilación y publicación automática con TwitterAPI.io cada hora mediante GitHub Actions, resúmenes bilingües, filtro de boxeo, agrupación, atribuciones y control duradero de créditos; revisión local opcional. Requiere el secreto de API y conectar el despliegue; confirmación oficial de grupos pendiente. Consulta [docs/RUMORES.md](docs/RUMORES.md).
 - Catálogo de 165 luchadores con fotografías locales y datos consultados en sus perfiles oficiales UFC; 141 fichas nuevas para cubrir rankings y carteleras.
 - Búsqueda por nombre, apodo, país y base marcial; filtros por división, estilo, guardia y cinturones.
 - Distintivos de campeón actual/excampeón y palmarés de títulos UFC absolutos y BMF, excluyendo interinos.

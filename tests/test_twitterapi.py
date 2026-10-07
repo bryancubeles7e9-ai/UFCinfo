@@ -42,5 +42,15 @@ class TwitterAPITests(unittest.TestCase):
         with self.assertRaises(ValueError):
             module.search('query', 'key', lambda *a, **k: io.BytesIO(b'{"error":"invalid"}'))
 
+    def test_boxing_excluded_but_ufc_matchup_retained(self):
+        for text in ['TKO offered Anthony Joshua $10 MILLION for Fury vs Joshua',
+                     'BOXING fight booking', 'Nueva pelea de boxeo',
+                     'Tyson Fury is expected to face AJ', 'AJ-Fury in America']:
+            with self.subTest(text=text):
+                tweet = {'id': '1234567890123456789', 'text': text, 'author': {'userName': 'Reporter'}}
+                self.assertEqual(module.candidates({'tweets': [tweet]}, self.sources), [])
+        tweet = {'id': '1234567890123456789', 'text': 'Hecher Sosa vs Abdul Hussein is set for UFC Saudi Arabia', 'author': {'userName': 'Reporter'}}
+        self.assertEqual(len(module.candidates({'tweets': [tweet]}, self.sources)), 1)
+
 if __name__ == '__main__':
     unittest.main()

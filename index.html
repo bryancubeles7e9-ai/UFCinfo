@@ -346,8 +346,9 @@
         </section>
       </section>
       <section class="view" data-view="rumores" hidden>
-        <div class="page-heading"><div><p class="eyebrow">LO QUE SE HABLA FUERA DE LA JAULA</p><h1>RUMORES<span>.</span></h1><p>Posibles peleas reportadas por periodistas en español e inglés. Cada publicación conserva su fuente original.</p></div><span class="badge orange">EN DESARROLLO</span></div>
-        <p class="data-note">Sección incompleta y pendiente de retomar. La búsqueda automática de rumores en X y la actualización automática de confirmaciones todavía no están activadas.</p>
+        <div class="page-heading"><div><p class="eyebrow">LO QUE SE HABLA FUERA DE LA JAULA</p><h1>RUMORES<span>.</span></h1><p>Posibles peleas reportadas por periodistas en español e inglés. Los reportes de una misma pelea se agrupan conservando sus fuentes.</p></div><span class="badge orange">REPORTES DE FUENTES</span></div>
+        <p class="data-note">Un rumor no es un anuncio oficial. Consulta las publicaciones originales y las confirmaciones disponibles.</p>
+        <details id="rumor-review" class="panel rumor-review-panel" hidden><summary>Revisión local de candidatos</summary><p class="data-note">Selecciona twitterapi-candidates.json de la carpeta .ufcinfo-data para revisar las publicaciones agrupadas. El archivo se queda en este navegador; aprobar un grupo no lo publica.</p><label class="outline-button small rumor-review-upload">Importar candidatos<input id="rumor-candidate-file" type="file" accept="application/json,.json,.txt,text/plain"></label><button id="rumor-review-export" class="button small" disabled>Exportar grupos aprobados</button><p id="rumor-review-status" class="data-note" role="status" aria-live="polite"></p><div id="rumor-review-list"></div></details>
         <div class="toolbar rumor-toolbar">
           <label class="search-box">⌕<input id="rumor-search" type="search" placeholder="Buscar luchador o periodista…" aria-label="Buscar rumores"></label>
           <select id="rumor-language" aria-label="Idioma de la fuente"><option value="all">Todos los idiomas</option><option value="es">Español</option><option value="en">Inglés</option></select>

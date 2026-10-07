@@ -1,0 +1,56 @@
+name: Publicar rumores automaticamente
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+permissions:
+  contents: write
+concurrency:
+  group: ufcinfo-rumor-automation
+  cancel-in-progress: false
+jobs:
+  sync:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Comprobar configuracion y credenciales
+        env:
+          TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
+        run: |
+          if [ -z "$TWITTERAPI_IO_KEY" ]; then
+            echo 'Falta el secreto TWITTERAPI_IO_KEY. No se ha consultado la API.'
+            exit 1
+          fi
+          node tests/test-rumor-auto-sync.mjs
+      - name: Recopilar, filtrar y publicar rumores
+        env:
+          TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/sync-rumors.mjs
+      - name: Guardar el catalogo publico
+        id: publish
+        run: |
+          git add assets/data/ufc-rumor-groups.json
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Actualizar rumores UFC automaticamente'
+            git pull --rebase origin main
+            git push origin HEAD:main
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Actualizar el alojamiento Render
+        if: steps.publish.outputs.changed == 'true'
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -n "$RENDER_DEPLOY_HOOK_URL" ]; then
+            curl --fail --silent --output /dev/null --request POST "$RENDER_DEPLOY_HOOK_URL"
+          else
+            echo 'Catalogo guardado en GitHub. El alojamiento debe tener despliegue automatico o un deploy hook configurado.'
+          fi

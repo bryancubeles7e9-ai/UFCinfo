@@ -12,7 +12,7 @@ python3 server.py
 
 Abre `http://127.0.0.1:8780`. Python 3.10 o posterior, con soporte para `hashlib.scrypt`, es suficiente; no hay paquetes adicionales. Live Server y `python3 -m http.server` permiten usar la web como invitado pero no ejecutan la API de cuentas.
 
-La base de datos se guarda en `.octagon-data/accounts.sqlite3`, fuera de los archivos publicados y excluida de Git. No borres esa carpeta si quieres conservar las cuentas. Las sesiones duran 30 días y el cierre de sesión invalida la sesión de ese navegador.
+La base de datos se guarda en `.ufcinfo-data/accounts.sqlite3`, fuera de los archivos publicados y excluida de Git. No borres esa carpeta si quieres conservar las cuentas. Las sesiones duran 30 días y el cierre de sesión invalida la sesión de ese navegador.
 
 Al crear una cuenta puedes añadir los luchadores que sigues como invitado. Al entrar en una cuenta existente se carga su seguimiento; no se mezcla automáticamente con el del invitado. Cada cuenta tiene una caché local separada. Al salir vuelve el seguimiento del invitado. Solo la lista de luchadores seguidos se sincroniza entre ordenadores: el tema, las carteleras imaginarias y los datos históricos permanecen en el navegador y en las copias exportadas.
 

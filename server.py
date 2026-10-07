@@ -318,7 +318,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8780)
-    parser.add_argument("--database", default=str(ROOT / ".octagon-data/accounts.sqlite3"))
+    parser.add_argument("--database", default=str(ROOT / ".ufcinfo-data/accounts.sqlite3"))
     parser.add_argument("--public-origin", default=os.environ.get("OCTAGON_PUBLIC_ORIGIN") or os.environ.get("RENDER_EXTERNAL_URL"))
     args = parser.parse_args()
     origin = args.public_origin or f"http://127.0.0.1:{args.port}"

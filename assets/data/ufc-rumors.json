@@ -51,6 +51,13 @@
       "handle": "pelunaton",
       "language": "es",
       "profile": "https://x.com/pelunaton"
+    },
+    {
+      "id": "championship-rounds",
+      "name": "Championship Rounds",
+      "handle": "ChampRDS",
+      "language": "en",
+      "profile": "https://x.com/ChampRDS"
     }
   ],
   "rumors": []

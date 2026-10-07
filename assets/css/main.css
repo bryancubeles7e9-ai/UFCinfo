@@ -2786,6 +2786,24 @@ button.ranking-name:hover {
 .rumor-source-link { display: flex; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid var(--line); padding: 14px 0; font-size: 12px; }
 .rumor-source-link small { display: block; color: var(--muted); margin-top: 5px; }
 .rumor-source-link:hover { color: var(--accent); }
+.rumor-group-sources { list-style: none; padding: 0; margin: 16px 0; }
+.rumor-group-sources li { padding: 12px 0; border-top: 1px solid var(--line); }
+.rumor-group-sources small { display: block; color: var(--muted); margin-top: 6px; }
+.rumor-review-panel { margin-bottom: 28px; }
+.rumor-review-panel > summary { cursor: pointer; font-weight: 700; }
+.rumor-review-panel > .data-note { margin: 16px 0; }
+.rumor-review-upload { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0 12px 12px 0; }
+.rumor-review-upload input { max-width: 100%; }
+.rumor-review-card { margin-top: 20px; }
+.rumor-review-card h3 { font: 700 24px var(--display); }
+.rumor-review-post { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.rumor-review-post summary { cursor: pointer; }
+.rumor-review-text { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.7; padding: 14px 0; }
+.rumor-review-form { display: grid; gap: 16px; margin-top: 20px; }
+.rumor-review-form label { display: grid; gap: 8px; }
+.rumor-review-form input:not([type="checkbox"]), .rumor-review-form textarea { width: 100%; padding: 12px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); font: inherit; border-radius: 4px; }
+.rumor-review-names { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 16px; }
+.rumor-review-form .rumor-review-check { display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
 @media (max-width: 1150px) { .header { flex-wrap: wrap; } .header nav { order: 3; width: 100%; overflow-x: auto; } }
 @media (max-width: 850px) { .rumor-layout { grid-template-columns: minmax(0,1fr); } .rumor-toolbar select { flex: 1 1 160px; } }
 
