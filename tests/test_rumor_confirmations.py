@@ -40,6 +40,15 @@ class OfficialCardTests(unittest.TestCase):
         pairs,date=module.parse_card(html)
         self.assertEqual(date.day,13)
 
+    def test_official_bout_with_tba_time_can_use_catalog_date(self):
+        html=self.fight('Ilia Topuria','Max Holloway')
+        pairs,date=module.parse_card(html,module.as_date('2026-12-13T02:00:00Z'))
+        self.assertIn(tuple(sorted(['iliatopuria','maxholloway'])),pairs)
+        self.assertEqual(date.day,13)
+    def test_catalog_date_never_substitutes_for_official_bout(self):
+        with self.assertRaises(ValueError):
+            module.parse_card('<h1>Ilia Topuria Max Holloway</h1>',module.as_date('2026-12-13T02:00:00Z'))
+
 class AutomaticGroupTests(unittest.TestCase):
     def event(self, identity='ufc-fight-night-november-21-2026'):
         return {'id':identity,'type':'official','source':f'https://www.ufc.com/event/{identity}','date':'2026-11-21T18:00:00Z'}

@@ -20,7 +20,7 @@ def normalize(name):
     return re.sub(r'[^a-z0-9]', '', unicodedata.normalize('NFD', name).lower())
 
 
-def parse_card(html):
+def parse_card(html, catalog_date=None):
     parser = parser_module.Parser(); parser.feed(html)
     fights = parser.root.find(lambda n: n.has('c-listing-fight'))
     # Both participants must be inside the same fight, never just somewhere on the page.
@@ -62,6 +62,10 @@ def parse_card(html):
         except (ValueError, TypeError): pass
     if len(schema_dates) == 1:
         return pairs, schema_dates.pop()
+    if not schema_dates and catalog_date is not None:
+        # The official page confirms the pair. The catalog date only bounds chronology
+        # when UFC has not filled in its broadcaster time yet.
+        return pairs, catalog_date
     raise ValueError('Official fight card or event timestamp missing; preserve existing confirmations')
 
 
@@ -143,7 +147,7 @@ def verify_feeds(feed, grouped, events, fetch_card, now, names=None):
                     failures.add(identity)
                     continue
                 try:
-                    card_cache[identity] = parse_card(fetch_card(event_url(event)))
+                    card_cache[identity] = parse_card(fetch_card(event_url(event)), as_date(event['date']))
                 except Exception as error:
                     failures.add(identity)
                     status = getattr(error, 'code', None)
