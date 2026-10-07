@@ -23,7 +23,6 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
     const texts=candidate.reports.map(report=>report.text);
     const reasons=[];
     if(candidate.fighters.length!==2)reasons.push('fighters-not-detected');
-    if(!date)reasons.push('date-not-detected');
     if(!texts.some(text=>/\bufc\b|#ufc/i.test(text)))reasons.push('no-ufc-reference');
     if(!texts.some(text=>bookingPattern.test(text)))reasons.push('no-booking-language');
     if(texts.some(text=>boxingPattern.test(text)))reasons.push('boxing');
@@ -32,14 +31,18 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
     if(reasons.length){discard(reasons);continue;}
     const publishedAt=candidate.reports.map(report=>report.publishedAt).sort()[0];
     const posted=new Date(publishedAt);
-    let year=date.year ?? posted.getUTCFullYear();
-    let eventDate=new Date(Date.UTC(year,date.month-1,date.day));
-    if (!date.year && eventDate < new Date(Date.UTC(posted.getUTCFullYear(),posted.getUTCMonth(),posted.getUTCDate()))) eventDate=new Date(Date.UTC(++year,date.month-1,date.day));
-    if(eventDate.getUTCMonth()!==date.month-1 || eventDate.getUTCDate()!==date.day){discard(['invalid-event-date']);continue;}
-    if(eventDate.getTime()<now.getTime()-86400000){discard(['past-event']);continue;}
-    if(eventDate.getTime()-posted.getTime()>183*86400000){discard(['event-too-far-ahead']);continue;}
-    const eventDateHint=eventDate.toISOString().slice(0,10);
-    const matchupKey=candidate.fighters.map(normalize).sort().join('|')+'|'+eventDateHint;
+    let eventDateHint=null;
+    if(date) {
+      let year=date.year ?? posted.getUTCFullYear();
+      let eventDate=new Date(Date.UTC(year,date.month-1,date.day));
+      if (!date.year && eventDate < new Date(Date.UTC(posted.getUTCFullYear(),posted.getUTCMonth(),posted.getUTCDate()))) eventDate=new Date(Date.UTC(++year,date.month-1,date.day));
+      if(eventDate.getUTCMonth()!==date.month-1 || eventDate.getUTCDate()!==date.day){discard(['invalid-event-date']);continue;}
+      if(eventDate.getTime()<now.getTime()-86400000){discard(['past-event']);continue;}
+      if(eventDate.getTime()-posted.getTime()>183*86400000){discard(['event-too-far-ahead']);continue;}
+      eventDateHint=eventDate.toISOString().slice(0,10);
+    }
+    // Bound undated grouping by publication month, without inventing an event date.
+    const matchupKey=candidate.fighters.map(normalize).sort().join('|')+'|'+(eventDateHint??'undated:'+publishedAt.slice(0,7));
     const reports=candidate.reports.map(report=> {
       const original=candidates.get(report.id);
       const attribution=original.text.match(/(?:v[ií]a|inform[oó]\s+primero)\s*:?\s*([^\r\n]+)/i)?.[1]?.replace(/https?:\/\/\S+|#\S+/g,'').trim().slice(0,200);
@@ -52,8 +55,8 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
     }
     const reporter=sources.find(source=>source.id===reports[0].sourceId).name;
     const [first,second]=candidate.fighters;
-    groups.push({id:reports[0].id,fighterNames:candidate.fighters,matchupKey,eventDateHint,dateYearInferred:date.year===null,
-      summary:{es:`${reporter} reporta una posible pelea entre ${first} y ${second} para el ${date.day} de ${monthNames.es[date.month-1]}. Información pendiente de confirmación oficial de UFC.`,en:`${reporter} reports a possible fight between ${first} and ${second} for ${monthNames.en[date.month-1]} ${date.day}. Awaiting official UFC confirmation.`},
+    groups.push({id:reports[0].id,fighterNames:candidate.fighters,matchupKey,eventDateHint,dateYearInferred:date ? date.year===null : false,
+      summary:{es:`${reporter} reporta una posible pelea entre ${first} y ${second}${date ? ` para el ${date.day} de ${monthNames.es[date.month-1]}` : ', sin fecha indicada en la fuente'}. Información pendiente de confirmación oficial de UFC.`,en:`${reporter} reports a possible fight between ${first} and ${second}${date ? ` for ${monthNames.en[date.month-1]} ${date.day}` : ', with no date stated by the source'}. Awaiting official UFC confirmation.`},
       processing:'automatic',generatedAt:now.toISOString(),reviewedAt:null,publishedAt,containsSpoilers:true,reports,official:null});
     added++;
   }
