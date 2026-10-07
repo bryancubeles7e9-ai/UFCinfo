@@ -5,6 +5,8 @@ import {join} from 'node:path';
 import {automaticFeed} from '../scripts/rumor-auto-feed.mjs';
 import {syncRumors} from '../scripts/sync-rumors.mjs';
 import {validateGroupFeed,groupCard} from '../assets/js/rumor-groups.js';
+// Keep mocked API tests independent of production credentials.
+process.env.TWITTERAPI_IO_KEY='fake-test-key';
 const now=new Date('2026-10-07T16:00:00Z');
 const sources=[{id:'kolmenero',name:'Álvaro Colmenero',handle:'KOlmeneroMMA',language:'es',profile:'https://x.com/KOlmeneroMMA'},{id:'pelunaton',name:'Pelunaton',handle:'pelunaton',language:'es',profile:'https://x.com/pelunaton'}];
 const candidate=(id,text,sourceId='kolmenero')=>({id,sourceId,postUrl:`https://x.com/${sources.find(s=>s.id===sourceId).handle}/status/${id}`,text,publishedAt:'2026-10-07T08:19:22Z',language:'es'});
@@ -53,3 +55,4 @@ try {
  await assert.rejects(syncRumors({projectRoot:root,configOverride:config,stateStore:{...stateStore,save:async()=>{throw Error('GitHub unavailable');}},fetchImpl:()=>{throw Error('Must not make paid request');},now}),/GitHub unavailable/);
 } finally {await rm(root,{recursive:true,force:true});}
 console.log('PASS: automatic bilingual feed, filters, attribution, rematches, pagination, deduplication, interval, credit cap, offline processing and preserved data on API failure');
+
