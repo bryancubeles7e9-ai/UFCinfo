@@ -117,8 +117,11 @@ def verify_feeds(feed, grouped, events, fetch_card, now, names=None):
                     continue
                 try:
                     card_cache[identity] = parse_card(fetch_card(event_url(event)))
-                except Exception:
+                except Exception as error:
                     failures.add(identity)
+                    status = getattr(error, 'code', None)
+                    detail = f'HTTP {status}' if isinstance(status, int) else 'missing/invalid fight card' if isinstance(error, ValueError) else type(error).__name__
+                    print(f'Official page unavailable: {identity}: {detail}')
                     continue
             pairs, official_date = card_cache[identity]
             checked += 1
@@ -142,7 +145,7 @@ def verify_feeds(feed, grouped, events, fetch_card, now, names=None):
 
 
 def fetch_official_card(url):
-    with urlopen(Request(url, headers={'User-Agent': 'UFCinfo/1.0', 'Accept': 'text/html'}), timeout=10) as response:
+    with urlopen(Request(url, headers={'User-Agent': 'Mozilla/5.0 (compatible; UFCinfo/1.0)', 'Accept': 'text/html,application/xhtml+xml', 'Accept-Language': 'en-US,en;q=0.9'}), timeout=10) as response:
         if response.geturl().rstrip('/') != url:
             raise ValueError('Unexpected redirect')
         body = response.read(5_000_001)
