@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "year": 2026,
-  "source": "UFCalendar",
-  "sourceUrl": "https://www.ufcalendar.com",
-  "synchronizedAt": "2026-10-05T08:32:00.635501+00:00",
+  "source": "Cito + UFCalendar",
+  "sourceUrl": "https://citoapi.com/ufc-api/",
+  "synchronizedAt": "2026-10-08T22:12:28.340269+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -50,7 +50,8 @@
       ],
       "poster": "assets/images/events/ufc-335.jpg",
       "posterSource": "https://www.ufc.com/s3/files/styles/background_image_sm/s3/2026-10/0000000000_335_BoutAnn_CO-DL_Endpage.jpg?h=d1cb525d&itok=lvjtmVB1",
-      "posterAlt": "Charles Oliveira and Diego Lopes over a gold and black background"
+      "posterAlt": "Charles Oliveira and Diego Lopes over a gold and black background",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-november-21-2026",
@@ -158,7 +159,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-november-21-2026.jpg",
       "posterAlt": "UFC light heavyweights Jiri Prochazka and Navajo Stirling stand side by side over a red background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/_Endpage.jpg?h=d1cb525d&itok=EL8X6ZKz"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/_Endpage.jpg?h=d1cb525d&itok=EL8X6ZKz",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-334",
@@ -225,7 +227,8 @@
       ],
       "poster": "assets/images/events/ufc-334.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/image/2026-09/111426-polymarket-ufc-334-gane-vs-hokit-TEMP-HERO.jpg?h=d1cb525d&itok=mNOcXTSi",
-      "posterAlt": "Ciryl Gane and Josh Hokit side by side over a black and gold background"
+      "posterAlt": "Ciryl Gane and Josh Hokit side by side over a black and gold background",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-november-07-2026",
@@ -373,7 +376,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-november-07-2026.jpg",
       "posterAlt": "UFC welterweights Gabriel Bonfim and Sean Brady side by side over a red and black background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/110726-ufc-fight-night-bonfim-vs-brady-TEMP-HERO.jpg?h=d1cb525d&itok=vmUARwy5"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/110726-ufc-fight-night-bonfim-vs-brady-TEMP-HERO.jpg?h=d1cb525d&itok=vmUARwy5",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-october-31-2026",
@@ -501,7 +505,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-october-31-2026.jpg",
       "posterAlt": "UFC lightweights Renato Moicano and Tom Nolan side by side over a red background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/103126-ufc-fight-night-moicano-vs-nolan-TEMP-HERO.jpg?h=d1cb525d&itok=HAflfCIz"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/103126-ufc-fight-night-moicano-vs-nolan-TEMP-HERO.jpg?h=d1cb525d&itok=HAflfCIz",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-333",
@@ -568,25 +573,26 @@
       ],
       "poster": "assets/images/events/ufc-333.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/102426-ufc-333-volkanovski-vs-evloev-EVENT-ART.jpg?h=d1cb525d&itok=ceS_oo8W",
-      "posterAlt": "UFC featherweight champion Alexander Volkanovski and Movsar Evloev side by side over a black and gold background"
+      "posterAlt": "UFC featherweight champion Alexander Volkanovski and Movsar Evloev side by side over a black and gold background",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-october-17-2026",
       "number": null,
       "eventKind": "fight-night",
       "title": "UFC Fight Night",
-      "subtitle": "Buckley vs Malott",
+      "subtitle": "Joaquin Buckley vs Mike Malott",
+      "status": "scheduled",
       "date": "2026-10-18T00:00:00+00:00",
-      "location": "Rogers Place, Edmonton Canada",
-      "status": "announced",
+      "location": "Rogers Place",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "checkedAt": "2026-10-07",
+      "checkedAt": "2026-10-08",
       "bouts": [
         {
           "red": "Joaquin Buckley",
           "blue": "Mike Malott",
-          "division": "Welterweight Bout",
+          "division": "Welterweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -596,7 +602,7 @@
         {
           "red": "Erin Blanchfield",
           "blue": "Jasmine Jasudavicius",
-          "division": "Women's Flyweight Bout",
+          "division": "Women's Flyweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -606,7 +612,7 @@
         {
           "red": "Kyle Nelson",
           "blue": "Cristian Perez Gonzalez",
-          "division": "Lightweight Bout",
+          "division": "Lightweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -616,7 +622,7 @@
         {
           "red": "Marc-Andre Barriault",
           "blue": "Kyle Daukaus",
-          "division": "Middleweight Bout",
+          "division": "Middleweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -626,7 +632,7 @@
         {
           "red": "Louis Jourdain",
           "blue": "Timmy Cuamba",
-          "division": "Bantamweight Bout",
+          "division": "Bantamweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -636,7 +642,7 @@
         {
           "red": "Mandel Nallo",
           "blue": "Nate Landwehr",
-          "division": "Lightweight Bout",
+          "division": "Lightweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -644,27 +650,28 @@
           "time": ""
         }
       ],
+      "dataSource": "Cito",
       "poster": "assets/images/events/ufc-fight-night-october-17-2026.jpg",
-      "posterAlt": "Joaquin Buckley and Mike Malott side by side over a blue and red background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-10/101726-ufc-fight-night-buckey-vs-malott-EVENT-ART.jpg?h=d1cb525d&itok=9nlcHO-H"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-10/101726-ufc-fight-night-buckey-vs-malott-EVENT-ART.jpg?h=d1cb525d&itok=9nlcHO-H",
+      "posterAlt": "Joaquin Buckley and Mike Malott side by side over a blue and red background"
     },
     {
       "id": "ufc-fight-night-october-10-2026",
       "number": null,
       "eventKind": "fight-night",
       "title": "UFC Fight Night",
-      "subtitle": "Allen vs Duncan",
+      "subtitle": "Brendan Allen vs Christian Leroy Duncan",
+      "status": "scheduled",
       "date": "2026-10-11T00:00:00+00:00",
-      "location": "Meta APEX, Las Vegas United States",
-      "status": "announced",
+      "location": "Meta APEX",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
-      "checkedAt": "2026-10-07",
+      "checkedAt": "2026-10-08",
       "bouts": [
         {
           "red": "Brendan Allen",
           "blue": "Christian Leroy Duncan",
-          "division": "Middleweight Bout",
+          "division": "Middleweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -674,7 +681,7 @@
         {
           "red": "Matheus Camilo",
           "blue": "Jai Herbert",
-          "division": "Lightweight Bout",
+          "division": "Lightweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -684,7 +691,7 @@
         {
           "red": "Loopy Godinez",
           "blue": "Ketlen Souza",
-          "division": "Women's Strawweight Bout",
+          "division": "Women's Strawweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -694,7 +701,7 @@
         {
           "red": "Andre Fili",
           "blue": "Kai Kamaka III",
-          "division": "Featherweight Bout",
+          "division": "Featherweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -704,7 +711,7 @@
         {
           "red": "Malcolm Wellmaker",
           "blue": "Otari Tanzilovi",
-          "division": "Bantamweight Bout",
+          "division": "Bantamweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -712,26 +719,28 @@
           "time": ""
         }
       ],
+      "dataSource": "Cito",
       "poster": "assets/images/events/ufc-fight-night-october-10-2026.jpg",
-      "posterAlt": "UFC middleweights Brendan Allen and Christian Leroy Duncan stand side-by-side over a green and black background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/101026-ufc-fight-night-allen-vs-duncan-EVENT-ART.jpg?h=d1cb525d&itok=Giih5XjD"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/101026-ufc-fight-night-allen-vs-duncan-EVENT-ART.jpg?h=d1cb525d&itok=Giih5XjD",
+      "posterAlt": "UFC middleweights Brendan Allen and Christian Leroy Duncan stand side-by-side over a green and black background"
     },
     {
       "id": "ufc-332",
       "number": 332,
+      "eventKind": "numbered",
       "title": "UFC 332",
       "subtitle": "Natalia Silva vs Wang Cong",
       "status": "completed",
       "date": "2026-10-04T00:00:00+00:00",
-      "location": "Delta Center, Salt Lake City, United States",
+      "location": "Delta Center",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-332",
-      "checkedAt": "2026-10-05",
+      "checkedAt": "2026-10-08",
       "bouts": [
         {
           "red": "Natalia Silva",
           "blue": "Wang Cong",
-          "division": "Women's Flyweight",
+          "division": "Women's Flyweight Title",
           "winner": "Natalia Silva",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -759,10 +768,10 @@
           "time": "4:08"
         },
         {
-          "red": "Roberto Soldic",
+          "red": "Roberto Soldić",
           "blue": "Khaos Williams",
           "division": "Welterweight",
-          "winner": "Roberto Soldic",
+          "winner": "Roberto Soldić",
           "outcome": null,
           "method": "Decision - Unanimous",
           "round": "3",
@@ -779,6 +788,7 @@
           "time": "3:12"
         }
       ],
+      "dataSource": "Cito",
       "poster": "assets/images/events/ufc-332.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/100326-ufc-332-silva-vs-wang-EVENT-ART.jpg?h=d1cb525d&itok=FbGVB5rh",
       "posterAlt": "UFC women's flyweights Natalia Silva and Wang Cong side by side over a black and gold background"
@@ -849,7 +859,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-september-26-2026.jpg",
       "posterAlt": "UFC bantamweights Raul Rosas Jr. and Raoni Barcelos side by side over a yellow and black background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/091026-ufc-fight-night-rosas-jr-vs-barcelos-EVENT-ART.jpg?h=d1cb525d&itok=7RHDKLRe"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/091026-ufc-fight-night-rosas-jr-vs-barcelos-EVENT-ART.jpg?h=d1cb525d&itok=7RHDKLRe",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-331",
@@ -916,7 +927,8 @@
       ],
       "poster": "assets/images/events/ufc-331.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/091926-ufc-331-van-vs-pantoja-2-EVENT-ART.jpg?h=d1cb525d&itok=7PimniVq",
-      "posterAlt": "Joshua Van & Alexandre Pantoja side by side over a purple, orange and yellow gradient background"
+      "posterAlt": "Joshua Van & Alexandre Pantoja side by side over a purple, orange and yellow gradient background",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-september-12-2026",
@@ -994,7 +1006,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-september-12-2026.jpg",
       "posterAlt": "UFC featherweights Jean Silva and Jose Miguel Delgado stand side by side over a Noche UFC themed background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/091226-ufc-fight-night-silva-vs-delgado-EVENT-ART.jpg?h=d1cb525d&itok=D2248TxU"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/091226-ufc-fight-night-silva-vs-delgado-EVENT-ART.jpg?h=d1cb525d&itok=D2248TxU",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-september-05-2026",
@@ -1072,7 +1085,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-september-05-2026.jpg",
       "posterAlt": "UFC lightweights Dan Hooker and Salahdine Parnasse side by side over a red and beige background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/090526-ufc-fight-night-hooker-vs-parnasse-EVENT-ART.jpg?h=a6682860&itok=te2L1nA9"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/090526-ufc-fight-night-hooker-vs-parnasse-EVENT-ART.jpg?h=a6682860&itok=te2L1nA9",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-august-29-2026",
@@ -1150,7 +1164,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-august-29-2026.jpg",
       "posterAlt": "UFC bantamweights Umar Nurmagomedov and Song Yadong over a purple background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/082926-ufc-fight-night-nurmagomedov-vs-song-EVENT-ART.jpg?h=d1cb525d&itok=nuZkuk_P"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/082926-ufc-fight-night-nurmagomedov-vs-song-EVENT-ART.jpg?h=d1cb525d&itok=nuZkuk_P",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-august-22-2026",
@@ -1228,7 +1243,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-august-22-2026.jpg",
       "posterAlt": "UFC middleweights Anthony Hernandez and Gregory Rod side by side on a blue and red background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/082226-ufc-fight-night-herndandez-vs-rodrigues-EVENT-ART.jpg?h=d1cb525d&itok=bPiN9362"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/082226-ufc-fight-night-herndandez-vs-rodrigues-EVENT-ART.jpg?h=d1cb525d&itok=bPiN9362",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-330",
@@ -1295,7 +1311,8 @@
       ],
       "poster": "assets/images/events/ufc-330.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-07/081526-ufc-330-makhachev-vs-machado-garry-EVENT-ART.jpg?h=d1cb525d&itok=uOmUPrTG",
-      "posterAlt": "UFC welterweights Islam Makhachev and Ian Machado Garry over a yellow and black skyline of Philadelphia"
+      "posterAlt": "UFC welterweights Islam Makhachev and Ian Machado Garry over a yellow and black skyline of Philadelphia",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-august-08-2026",
@@ -1363,7 +1380,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-august-08-2026.jpg",
       "posterAlt": "UFC lightweights Mateusz Gamrot and Quillan Salkilld side by side on a black background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-07/080826-ufc-fight-night-gamrot-vs-salkilld-EVENT-ART.jpg?h=d1cb525d&itok=Fuzkdrf-"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-07/080826-ufc-fight-night-gamrot-vs-salkilld-EVENT-ART.jpg?h=d1cb525d&itok=Fuzkdrf-",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-august-01-2026",
@@ -1441,7 +1459,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-august-01-2026.jpg",
       "posterAlt": "UFC welterweights Uros Medic and Daniel Rodriguez standing side-by-side over a skyline of Belgrade",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-07/080126-ufc-fight-night-medic-vs-rodriguez-EVENT-ART.jpg?h=d1cb525d&itok=QABvW-sJ"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-07/080126-ufc-fight-night-medic-vs-rodriguez-EVENT-ART.jpg?h=d1cb525d&itok=QABvW-sJ",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-july-25-2026",
@@ -1519,7 +1538,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-july-25-2026.jpg",
       "posterAlt": "UFC light heavyweights Magomed Ankalaev and Bogdan Guskov stand side by side on a red and black background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-07/072526-ufc-fight-night-ankalaev-vs-guskov-EVENT-ART.jpg?h=d1cb525d&itok=KETNKJv7"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-07/072526-ufc-fight-night-ankalaev-vs-guskov-EVENT-ART.jpg?h=d1cb525d&itok=KETNKJv7",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-july-18-2026",
@@ -1587,7 +1607,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-july-18-2026.jpg",
       "posterAlt": "UFC middleweights Dricus Du Plessis and Kamaru Usman on a black and green background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-07/071826-ufc-fight-night-du-plessis-vs-usman-TEMPORARY-EVENT-ART-NOT-FINAL.jpg?h=d1cb525d&itok=Ie9Z4biL"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-07/071826-ufc-fight-night-du-plessis-vs-usman-TEMPORARY-EVENT-ART-NOT-FINAL.jpg?h=d1cb525d&itok=Ie9Z4biL",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-329",
@@ -1654,7 +1675,8 @@
       ],
       "poster": "assets/images/events/ufc-329.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-06/071126-ufc-329-mcgregor-vs-holloway-2-EVENT-ART.jpg?h=d1cb525d&itok=xqaVyV38",
-      "posterAlt": "UFC fighters Conor McGregor and Max Holloway side-by-side"
+      "posterAlt": "UFC fighters Conor McGregor and Max Holloway side-by-side",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-june-27-2026",
@@ -1732,7 +1754,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-june-27-2026.jpg",
       "posterAlt": "UFC lightweights Rafael Fiziev and Manuel Torres stand side by side over a background of Baku",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-06/062726-ufc-fight-night-fiziev-vs-torres-EVENT-ART.jpg?h=d1cb525d&itok=ulI1zANn"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-06/062726-ufc-fight-night-fiziev-vs-torres-EVENT-ART.jpg?h=d1cb525d&itok=ulI1zANn",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-june-20-2026",
@@ -1800,7 +1823,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-june-20-2026.jpg",
       "posterAlt": "UFC flyweights Manel Kape and Kyoji Horiguchi by side over a red and black textured background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-05/062026-ufc-fight-night-kape-vs-horiguchi-EVENT-ART.jpg?h=d1cb525d&itok=_PRgW9S0"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-05/062026-ufc-fight-night-kape-vs-horiguchi-EVENT-ART.jpg?h=d1cb525d&itok=_PRgW9S0",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-freedom-250",
@@ -1888,7 +1912,8 @@
       ],
       "poster": "assets/images/events/ufc-freedom-250.jpg",
       "posterAlt": "Alex Pereira, Ilia Topuria, Justin Gaethje and Ciryl Gane standing above The White House",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/061426-ufc-freedom-250-EVENT-ART.jpg?h=d1cb525d&itok=XYATs_UA"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/061426-ufc-freedom-250-EVENT-ART.jpg?h=d1cb525d&itok=XYATs_UA",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-june-06-2026",
@@ -1956,7 +1981,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-june-06-2026.jpg",
       "posterAlt": "Former Welterweight Champion Belal Muhammad and Brazil's Gabriel Bonfim",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-05/060626-ufc-fight-night-muhammad-vs-bonfim-EVENT-ART.jpg?h=d1cb525d&itok=qjf1v9tA"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-05/060626-ufc-fight-night-muhammad-vs-bonfim-EVENT-ART.jpg?h=d1cb525d&itok=qjf1v9tA",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-may-30-2026",
@@ -2034,7 +2060,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-may-30-2026.jpg",
       "posterAlt": "UFC bantamweights Song Yadong and Deiveson Figueiredo stand side-by-side in front of a view of the Macau skyline",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/053026-ufc-fight-night-song-vs-figueiredo-EVENT-ART.jpg?h=d1cb525d&itok=n3Niw1u9"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/053026-ufc-fight-night-song-vs-figueiredo-EVENT-ART.jpg?h=d1cb525d&itok=n3Niw1u9",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-may-16-2026",
@@ -2112,7 +2139,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-may-16-2026.jpg",
       "posterAlt": "UFC featherweights Arnold Allen and Melquizael Costa on a white and black background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/051626-ufc-fight-night-allen-vs-costa-EVENT-ART.jpg?h=d1cb525d&itok=i_Y32CC2"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/051626-ufc-fight-night-allen-vs-costa-EVENT-ART.jpg?h=d1cb525d&itok=i_Y32CC2",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-328",
@@ -2179,7 +2207,8 @@
       ],
       "poster": "assets/images/events/ufc-328.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/050926-ufc-329-chimaev-vs-strickland-EVENT-ART.jpg?h=d1cb525d&itok=FOhWtvD1",
-      "posterAlt": "UFC middleweight champion Khamzat Chimaev and Sean Strickland posing side-by-side on a green background"
+      "posterAlt": "UFC middleweight champion Khamzat Chimaev and Sean Strickland posing side-by-side on a green background",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-may-02-2026",
@@ -2257,7 +2286,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-may-02-2026.jpg",
       "posterAlt": "UFC welterweights Jack Della Maddalena and Carlos Prates stand side-by-side on a black textured background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/050226-ufc-fight-night-della-maddalena-vs-prates-EVENT-ART.jpg?h=d1cb525d&itok=rUXGqt5g"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/050226-ufc-fight-night-della-maddalena-vs-prates-EVENT-ART.jpg?h=d1cb525d&itok=rUXGqt5g",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-april-25-2026",
@@ -2335,7 +2365,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-april-25-2026.jpg",
       "posterAlt": "UFC featherweights Aljamain Sterling and Youssef Zalal standing cross armed on a black background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/042526-ufc-fight-night-sterling-vs-zalal-EVENT-ART.jpg?h=d1cb525d&itok=dzWHB49C"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/042526-ufc-fight-night-sterling-vs-zalal-EVENT-ART.jpg?h=d1cb525d&itok=dzWHB49C",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-april-18-2026",
@@ -2403,7 +2434,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-april-18-2026.jpg",
       "posterAlt": "UFC welterweights Gilbert Burns and Mike Malott on a red background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-03/041826-ufc-fight-night-burns-vs-malott-EVENT-ART.jpg?h=d1cb525d&itok=YVPUgl58"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-03/041826-ufc-fight-night-burns-vs-malott-EVENT-ART.jpg?h=d1cb525d&itok=YVPUgl58",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-327",
@@ -2470,7 +2502,8 @@
       ],
       "poster": "assets/images/events/ufc-327.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-04/041126-ufc-327-prochazka-vs-ulberg-EVENT-ART_0.jpg?h=d1cb525d&itok=9W2RosM3",
-      "posterAlt": "UFC light heavyweights Jiri Prochazka and Carlos Ulberg"
+      "posterAlt": "UFC light heavyweights Jiri Prochazka and Carlos Ulberg",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-april-04-2026",
@@ -2548,7 +2581,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-april-04-2026.jpg",
       "posterAlt": "UFC lightweights Renato Moicano and Chris Duncan",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-03/040426-ufc-fight-night-moicano-vs-duncan-EVENT-ART.jpg?h=d1cb525d&itok=qyVcgy2V"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-03/040426-ufc-fight-night-moicano-vs-duncan-EVENT-ART.jpg?h=d1cb525d&itok=qyVcgy2V",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-march-28-2026",
@@ -2626,7 +2660,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-march-28-2026.jpg",
       "posterAlt": "Israel Adesanya and Joe Pyfer",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-02/032826-ufc-fight-night-adesanyva-vs-pyfer-EVENT-ART.jpg?h=d1cb525d&itok=SUEXCdNM"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-02/032826-ufc-fight-night-adesanyva-vs-pyfer-EVENT-ART.jpg?h=d1cb525d&itok=SUEXCdNM",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-march-21-2026",
@@ -2704,7 +2739,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-march-21-2026.jpg",
       "posterAlt": "Movsar Evloev and Lerone Murphy",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-02/032126-ufc-fight-night-evloev-vs-murphy-EVENT-ART.jpg?h=d1cb525d&itok=rbt4Zra0"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-02/032126-ufc-fight-night-evloev-vs-murphy-EVENT-ART.jpg?h=d1cb525d&itok=rbt4Zra0",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-march-14-2026",
@@ -2782,7 +2818,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-march-14-2026.jpg",
       "posterAlt": "Josh Emmett and Kevin Vallejos",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-02/031426-ufc-fight-night-emmett-vs-vallejos-EVENT-ART.jpg?h=d1cb525d&itok=rhlQoXNV"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-02/031426-ufc-fight-night-emmett-vs-vallejos-EVENT-ART.jpg?h=d1cb525d&itok=rhlQoXNV",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-326",
@@ -2849,7 +2886,8 @@
       ],
       "poster": "assets/images/events/ufc-326.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-01/030726-ufc-326-holloway-vs-oliveira-2-EVENT-ART.jpg?h=d1cb525d&itok=toM9IzNp",
-      "posterAlt": "UFC BMF Champion Max Holloway standing side-by-side with Charles Oliveira"
+      "posterAlt": "UFC BMF Champion Max Holloway standing side-by-side with Charles Oliveira",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-february-28-2026",
@@ -2927,7 +2965,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-february-28-2026.jpg",
       "posterAlt": "UFC flyweights Brandon Moreno and Lone'er Kavanagh over a red, white and green background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-02/022826-ufc-fight-night-moreno-vs-kavanagh-EVENT-ART.jpg?h=d1cb525d&itok=FJfn9ajf"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-02/022826-ufc-fight-night-moreno-vs-kavanagh-EVENT-ART.jpg?h=d1cb525d&itok=FJfn9ajf",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-february-21-2026",
@@ -3005,7 +3044,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-february-21-2026.jpg",
       "posterAlt": "UFC middleweights Sean Strickland and Anthony Hernandez",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-02/022126-ufc-fight-night-strickland-vs-hernandez-EVENT-ART.jpg?h=d1cb525d&itok=fTWqTE5Z"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-02/022126-ufc-fight-night-strickland-vs-hernandez-EVENT-ART.jpg?h=d1cb525d&itok=fTWqTE5Z",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-fight-night-february-07-2026",
@@ -3083,7 +3123,8 @@
       ],
       "poster": "assets/images/events/ufc-fight-night-february-07-2026.jpg",
       "posterAlt": "UFC bantamweights Mario Bautista and Vinicius Oliveira standing side-by-side on a white background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-01/020726-ufc-fight-night-bautista-vs-oliveira-EVENT-ART.jpg?h=d1cb525d&itok=eMpfGQ2k"
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-01/020726-ufc-fight-night-bautista-vs-oliveira-EVENT-ART.jpg?h=d1cb525d&itok=eMpfGQ2k",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-325",
@@ -3150,7 +3191,8 @@
       ],
       "poster": "assets/images/events/ufc-325.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2025-12/013125-ufc-325-volkanovski-vs-lopes-2-EVENT-ART-gradient.jpg?h=d1cb525d&itok=x7DKqEEN",
-      "posterAlt": "UFC featherweight champion Alexander Volkanovski and UFC 325 title challenger Diego Lopes stand side-by-side on a green and black background"
+      "posterAlt": "UFC featherweight champion Alexander Volkanovski and UFC 325 title challenger Diego Lopes stand side-by-side on a green and black background",
+      "dataSource": "UFCalendar"
     },
     {
       "id": "ufc-324",
@@ -3217,7 +3259,8 @@
       ],
       "poster": "assets/images/events/ufc-324.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2025-12/012426-ufc-324-gaethje-vs-pimblett-EVENT-ART.jpg?h=d1cb525d&itok=gbEd0WlL",
-      "posterAlt": "UFC lightweights Justin Gaethje and Paddy Pimblett standing side by side on a blue background"
+      "posterAlt": "UFC lightweights Justin Gaethje and Paddy Pimblett standing side by side on a blue background",
+      "dataSource": "UFCalendar"
     }
   ]
 }
