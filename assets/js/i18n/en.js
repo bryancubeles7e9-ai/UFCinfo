@@ -108,3 +108,9 @@ Object.assign(english, {
 'Cita a':'Cites',
 'Explora carteleras UFC, luchadores y rankings de MMA. Compara estilos en Fight Lab y sigue tus favoritos en UFCinfo, con modo sin spoilers.':'Explore UFC fight cards, fighters and MMA rankings. Compare styles in Fight Lab and follow your favorites on UFCinfo with spoiler-free mode.'
 });
+
+Object.assign(english, {
+  "Última búsqueda:": "Last search:",
+  "Última búsqueda: todavía no disponible.": "Last search: not yet available.",
+  "Búsqueda programada cada hora en punto.": "Search scheduled at the start of every hour."
+});

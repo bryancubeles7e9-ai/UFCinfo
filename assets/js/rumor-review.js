@@ -42,13 +42,13 @@ export function initializeRumorReview({getSources,getPublished}) {
     const candidate=candidates.find(candidate=>candidate.id===id);
     try {
       const group=reviewedGroup(candidate,{fighterNames:[form.elements.fighter1.value,form.elements.fighter2.value],summary:{es:form.elements.summaryEs.value,en:form.elements.summaryEn.value},containsSpoilers:form.elements.spoilers.checked,checked:form.elements.reviewed.checked});
-      const feed={schemaVersion:1,updatedAt:new Date().toISOString(),groups:[...getPublished().groups,...approved,group]};
+      const feed={schemaVersion:1,lastSearchedAt:getPublished().lastSearchedAt ?? null,updatedAt:new Date().toISOString(),groups:[...getPublished().groups,...approved,group]};
       if (!validateGroupFeed(feed,getSources())) throw Error('Comprueba los nombres, resúmenes y posibles publicaciones duplicadas.');
       approved.push(group);candidates=candidates.filter(candidate=>candidate.id!==id);form.closest('[data-review-id]').remove();exportButton.disabled=false;notify(`${approved.length} grupos aprobados para exportar. Aún no se han publicado.`);
     } catch(error) {notify(error.message || 'No se pudo aprobar el grupo.');}
   });
   exportButton.addEventListener('click',()=> {
-    const feed={schemaVersion:1,updatedAt:new Date().toISOString(),groups:[...getPublished().groups,...approved]};
+    const feed={schemaVersion:1,lastSearchedAt:getPublished().lastSearchedAt ?? null,updatedAt:new Date().toISOString(),groups:[...getPublished().groups,...approved]};
     if (!approved.length || !validateGroupFeed(feed,getSources())) {notify('No hay un archivo válido para exportar.');return;}
     const url=URL.createObjectURL(new Blob([JSON.stringify(feed,null,2)+'\n'],{type:'application/json;charset=utf-8'}));
     const link=document.createElement('a');link.href=url;link.download='ufc-rumor-groups.json';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);

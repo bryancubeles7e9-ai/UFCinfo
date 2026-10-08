@@ -58,6 +58,12 @@ export function rumorCard(r, sources) {
   return `<article class="panel rumor-card"><div class="rumor-card-top"><span class="badge ${r.official ? 'rumor-confirmed' : 'orange'}">${r.official ? 'CONFIRMADO POR UFC' : 'RUMOR · SIN CONFIRMAR'}</span><span class="eyebrow">${r.language === 'es' ? 'FUENTE EN ESPAÑOL' : 'FUENTE EN INGLÉS'}</span></div><h2 class="rumor-matchup">${r.fighters.map(id => fighterNameLink(fullName(directoryFighterById(id)), 'rumor-fighter')).join('<span>VS</span>')}</h2>${hidden ? `<p class="data-note">Contenido oculto por el modo sin spoilers.</p><button class="text-link" data-reveal-result="rumor:${esc(r.id)}">Leer rumor</button>` : `<p class="rumor-summary" lang="${getLanguage() === 'ca' ? 'es' : getLanguage()}" translate="no">${esc(r.summary[getLanguage()] ?? r.summary.es)}</p>${getLanguage() === 'ca' ? '<p class="data-note">Resumen disponible en español.</p>' : ''}`} <div class="rumor-byline"><span>Publicado por</span> <a href="${esc(reporter.profile)}" target="_blank" rel="noopener noreferrer" translate="no">${esc(reporter.name)} · @${esc(reporter.handle)}</a><time datetime="${esc(r.publishedAt)}">${formatDate(r.publishedAt)} · ${formatTime(r.publishedAt)}</time></div><div class="rumor-actions"><a class="text-link" href="${esc(r.postUrl)}" target="_blank" rel="noopener noreferrer">Ver publicación original en X ↗</a>${r.official ? `<a class="text-link" href="${esc(r.official.url)}" target="_blank" rel="noopener noreferrer">Confirmación oficial UFC ↗</a>` : ''}</div>${r.official ? `<p class="data-note">La pelea aparece en la cartelera oficial UFC. Comprobación: ${formatDate(r.official.checkedAt)} · ${formatTime(r.official.checkedAt)}.</p>` : '<p class="data-note">Información atribuida al periodista; pendiente de confirmación oficial.</p>'}</article>`;
 }
 
+export function rumorSearchStatus(groupFeed) {
+  const last=groupFeed.lastSearchedAt;
+  const status=validDate(last) ? `Última búsqueda: ${formatDate(last)} · ${formatTime(last)}.` : 'Última búsqueda: todavía no disponible.';
+  return `${status} Búsqueda programada cada hora en punto.`;
+}
+
 export function initializeRumors() {
   let feed = {schemaVersion:1, updatedAt:null, lastOfficialCheckAt:null, sources:[], rumors:[]};
   let loading = false, unavailable = false;
@@ -65,6 +71,7 @@ export function initializeRumors() {
   function draw() {
     const list = filterRumors(feed, {query:$('#rumor-search').value, language:$('#rumor-language').value, source:$('#rumor-source').value, status:$('#rumor-status').value});
     const groups=filterGroups(groupFeed,feed.sources,{query:$('#rumor-search').value,language:$('#rumor-language').value,source:$('#rumor-source').value,status:$('#rumor-status').value});
+    $('#rumor-search-status').textContent = rumorSearchStatus(groupFeed);
     $('#rumor-count').textContent = `${list.length+groups.length} reportes`;
     $('#rumor-feed-status').textContent = unavailable ? 'No se pudo comprobar una actualización. Se conservan las últimas publicaciones cargadas.' : feed.lastOfficialCheckAt ? `Última comprobación de confirmaciones oficiales: ${formatDate(feed.lastOfficialCheckAt)} · ${formatTime(feed.lastOfficialCheckAt)}.` : 'Todavía no hay una comprobación de confirmaciones oficiales disponible.';
     const cards=[...list.map(r=>({date:r.publishedAt,html:rumorCard(r,feed.sources)})),...groups.map(group=>({date:group.publishedAt,html:groupCard(group,feed.sources)}))].sort((a,b)=>Date.parse(b.date)-Date.parse(a.date));

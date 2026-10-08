@@ -6,7 +6,9 @@ Actualizado el 8 de octubre de 2026.
 
 Se consultan las cuentas configuradas en `assets/data/ufc-rumors.json`. La búsqueda incluye términos de peleas, negociaciones, retos, respuestas y acuerdos en español e inglés. Se excluyen retuits y respuestas de X; una publicación independiente que informa de una respuesta entre luchadores sí puede admitirse.
 
-La frecuencia, el límite de páginas y el presupuesto de créditos no cambian. El filtro local no reduce los resultados que factura la API.
+La búsqueda se programa cada hora en punto (`0 * * * *`) en GitHub Actions. GitHub puede retrasar el inicio; el control de frecuencia permite una búsqueda en la siguiente hora aunque la anterior haya arrancado tarde. El límite de páginas y el presupuesto de créditos no cambian. El filtro local no reduce los resultados que factura la API.
+
+El apartado Rumores muestra la fecha y hora local de la última búsqueda correcta mediante `lastSearchedAt`, también cuando no se encuentran publicaciones nuevas. Los errores, las importaciones locales y las ejecuciones sin consultas no adelantan esa hora. Hasta la primera búsqueda correcta tras esta actualización se indica que todavía no está disponible. El texto está traducido al español, inglés y catalán.
 
 ## Identificación de enfrentamientos
 
@@ -38,6 +40,7 @@ El detector sigue siendo un sistema de reglas de texto, no una verificación sem
 ## Pruebas sin consultas de pago
 
 ```bash
+node tests/test-rumor-search-time.mjs
 node tests/test-rumor-filter.mjs
 node tests/test-rumor-auto-sync.mjs
 node tests/test-rumor-candidate-groups.mjs

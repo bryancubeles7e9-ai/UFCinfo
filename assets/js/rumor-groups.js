@@ -14,7 +14,8 @@ function validReport(report,sources) {
 }
 export function validateGroupFeed(feed,sources) {
   if (!feed || feed.schemaVersion !== 1 || !Array.isArray(feed.groups) || feed.groups.length > 500 ||
-      (feed.updatedAt !== null && !validDate(feed.updatedAt))) return false;
+      (feed.updatedAt !== null && !validDate(feed.updatedAt)) ||
+      (feed.lastSearchedAt != null && !validDate(feed.lastSearchedAt))) return false;
   const ids = new Set(),posts = new Set();
   return feed.groups.every(group=> {
     if (!group || typeof group.id !== 'string' || !/^[0-9]{10,22}$/.test(group.id) || ids.has(group.id) ||

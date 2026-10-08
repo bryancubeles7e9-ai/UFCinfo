@@ -7,7 +7,7 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: '17 * * * *'
+    - cron: '0 * * * *'
 permissions:
   contents: write
 concurrency:
@@ -34,6 +34,7 @@ jobs:
           node tests/test-rumor-auto-sync.mjs
           node tests/test-rumor-filter.mjs
           node tests/test-rumor-calendar.mjs
+          node tests/test-rumor-search-time.mjs
           node tests/test-rumor-candidate-groups.mjs
           python3 tests/test_rumor_confirmations.py
       - name: Recopilar, filtrar y publicar rumores

@@ -86,7 +86,7 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
       processing:'automatic',generatedAt:now.toISOString(),reviewedAt:null,publishedAt,containsSpoilers:true,reports,official:null});
     added++;
   }
-  const feed={schemaVersion:1,updatedAt:now.toISOString(),groups:groups.sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt)).slice(0,500)};
+  const feed={schemaVersion:1,updatedAt:now.toISOString(),lastSearchedAt:previous.lastSearchedAt ?? null,groups:groups.sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt)).slice(0,500)};
   if (!validateGroupFeed(feed,sources)) throw Error('Invalid generated feed; refusing to publish.');
   return {feed,added,skipped,skipReasons,removedConfirmed,calendarChecked:calendar.available,calendarSynchronizedAt:calendar.synchronizedAt};
 }

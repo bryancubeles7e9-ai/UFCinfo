@@ -599,3 +599,9 @@ export const catalan = {
   "Rankings": "Rànquings",
   "Overview": "Inici"
 };
+
+Object.assign(catalan, {
+  "Última búsqueda:": "Última cerca:",
+  "Última búsqueda: todavía no disponible.": "Última cerca: encara no disponible.",
+  "Búsqueda programada cada hora en punto.": "Cerca programada cada hora en punt."
+});

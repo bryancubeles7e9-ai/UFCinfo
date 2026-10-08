@@ -45,7 +45,11 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
     if (state.schemaVersion!==1 || !Number.isSafeInteger(state.reservedCredits) || state.reservedCredits<0 || !Number.isSafeInteger(state.estimatedCredits) || state.estimatedCredits<0 || !Array.isArray(state.archive) || (state.lastSuccessAt!==null && !Number.isFinite(Date.parse(state.lastSuccessAt))) || (state.pending!==null && (typeof state.pending?.query!=='string' || typeof state.pending.cursor!=='string' || !Number.isFinite(Date.parse(state.pending.until))))) throw Error('Invalid accounting state. No API request made.');
     const saveState=async()=>{await atomicJSON(statePath,state);if(stateStore)await stateStore.save(state);};
     if (backfillHours!==undefined && (!Number.isInteger(backfillHours) || backfillHours<1 || backfillHours>168)) throw Error('Invalid backfill window. No API request made.');
-    if (!backfillHours && !state.pending && state.lastSuccessAt && now.getTime()-Date.parse(state.lastSuccessAt)<config.intervalMinutes*60000) return {feed:previous,added:0,skipped:0,requests:0,mode:'not-due'};
+    // Delayed Actions runs should not cause the following scheduled hour to be skipped.
+    const notDue=state.lastSuccessAt && (config.alignToHour === true && config.intervalMinutes === 60
+      ? Math.floor(now.getTime()/3600000) <= Math.floor(Date.parse(state.lastSuccessAt)/3600000)
+      : now.getTime()-Date.parse(state.lastSuccessAt)<config.intervalMinutes*60000);
+    if (!backfillHours && !state.pending && notDue) return {feed:previous,added:0,skipped:0,requests:0,mode:'not-due'};
     const key=process.env.TWITTERAPI_IO_KEY?.trim() || (await readFile(resolve(projectRoot,'.ufcinfo-data/twitterapi.key'),'utf8')).trim();
     if (!key) throw Error('Missing TwitterAPI.io key.');
     const end=Math.floor(now.getTime()/1000);
@@ -86,6 +90,8 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
       if (!data.has_next_page)break;
     }
     const result=automaticFeed({checkedAt:now.toISOString(),candidates:state.archive},sources,previous,now,eventFeed);
+    // Only successful real API requests advance the public search timestamp.
+    if (requests > 0) result.feed.lastSearchedAt=now.toISOString();
     await atomicJSON(output,result.feed);
     return {...result,collectionSkips,requests,truncated,reservedCredits:state.reservedCredits,estimatedCredits:state.estimatedCredits,mode:'automatic'};
   } finally {await lock.close();await unlink(lockPath);}
