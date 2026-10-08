@@ -38,6 +38,7 @@ for (const selector of ['#ranking-category', '#ranking-source-date', '#ranking-s
   elements.set(selector, {value: '', checked: false, listeners: {}, addEventListener(type, callback) { this.listeners[type] = callback; }});
 }
 initializeRankings();
+await new Promise(resolve => setImmediate(resolve));
 assert.equal((elements.get('#ranking-category').innerHTML.match(/<option /g) || []).length, 13);
 for (const category of rankingCategories) {
   elements.get('#ranking-category').value = category.id;
@@ -46,5 +47,13 @@ for (const category of rankingCategories) {
   assert.equal(elements.get('#ranking-table').hidden, false);
   for (const name of category.names) assert.ok(elements.get('#ranking-table-body').innerHTML.includes(escapeHTML(name)));
 }
-assert.equal((elements.get('#ranking-table-body').innerHTML.match(/>03<\/span>/g) || []).length, 2);
+const tied = structuredClone(feed);
+tied.categories[0].ranks[3] = 3;
+globalThis.fetch = async () => ({ok: true, json: async () => tied});
+assert.equal(await refreshRankings(), true);
+elements.get('#ranking-category').value = tied.categories[0].id;
+elements.get('#ranking-category').listeners.change();
+const table = elements.get('#ranking-table-body').innerHTML;
+assert.equal((table.match(/>03<\/span>/g) || []).length, 2);
+for (const name of tied.categories[0].names.slice(2, 4)) assert.ok(table.includes(escapeHTML(name)));
 console.log('PASS: all 13 dropdown categories render, including official tied positions');

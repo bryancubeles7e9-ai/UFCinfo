@@ -10,6 +10,10 @@ on:
       - 'assets/**'
       - 'scripts/sync-ufc-events.py'
       - 'scripts/sync-ufc-rankings.py'
+      - 'tests/test-rankings-feed.mjs'
+      - 'tests/test-events-feed.mjs'
+      - 'tests/test_ufc_sync.py'
+      - 'tests/test_rankings_sync.py'
       - '.github/workflows/ufc-events.yml'
 permissions:
   contents: read
