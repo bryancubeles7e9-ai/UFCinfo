@@ -1,18 +1,30 @@
 import { english } from './i18n/en.js';
+import { catalan } from './i18n/ca.js';
+const dictionaries = { en: english, ca: catalan };
+const locales = { es: 'es-ES', en: 'en-US', ca: 'ca-ES' };
 const storageKey = 'ufcinfo-language';
 let language = 'es';
-try { if (globalThis.localStorage?.getItem(storageKey) === 'en') language = 'en'; } catch { /* Spanish remains available without storage. */ }
+try { const saved = globalThis.localStorage?.getItem(storageKey); if (Object.hasOwn(locales, saved)) language = saved; } catch { /* Spanish remains available without storage. */ }
 export const getLanguage = () => language;
-export const getLocale = () => language === 'en' ? 'en-US' : 'es-ES';
+export const getLocale = () => locales[language];
 const normalize = text => text.replace(/\s+/g, ' ').trim();
 const escapePattern = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-const phrases = Object.keys(english).sort((a, b) => b.length - a.length);
+const phrases = [...new Set([...Object.keys(english), ...Object.keys(catalan)])].sort((a, b) => b.length - a.length);
 const pattern = new RegExp(`(?<![\\p{L}])(?:${phrases.map(escapePattern).join('|')})(?![\\p{L}])`, 'gu');
 export function translate(text) {
-  if (language !== 'en') return text;
+  if (language === 'es') return text;
+  const dictionary = dictionaries[language];
   const source = normalize(String(text));
-  if (english[source]) return String(text).replace(/\S[\s\S]*\S|\S/, english[source]);
-  return String(text).replace(pattern, match => english[match])
+  if (dictionary[source]) return String(text).replace(/\S[\s\S]*\S|\S/, dictionary[source]);
+  const translated = String(text).replace(pattern, match => dictionary[match] ?? match);
+  if (language === 'ca') return translated
+    .replace(/(\d+) de (\d+) luchadores/g, '$1 de $2 lluitadors')
+    .replace(/(\d+) publicaciones/g, '$1 publicacions')
+    .replace(/(\d+) reportes/g, '$1 informes')
+    .replace(/\+ campeón/g, '+ campió')
+    .replace(/ frente a /g, ' contra ')
+    .replace(/(\d+) años\b/g, '$1 anys');
+  return translated
     .replace(/(\d+) de (\d+) luchadores/g, '$1 of $2 fighters')
     .replace(/(\d+) publicaciones/g, '$1 posts')
     .replace(/(\d+) reportes/g, '$1 reports')
@@ -22,7 +34,7 @@ export function translate(text) {
     .replace(/ \(actual\)/g, ' (current)').replace(/ \(anterior\)/g, ' (former)');
 }
 export function setLanguage(next) {
-  if (!['es', 'en'].includes(next)) return false;
+  if (!Object.hasOwn(locales, next)) return false;
   language = next;
   try { globalThis.localStorage?.setItem(storageKey, next); } catch { /* Selection still works for this visit. */ }
   if (typeof document !== 'undefined') {

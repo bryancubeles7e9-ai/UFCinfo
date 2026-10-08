@@ -27,7 +27,7 @@ Abre esta carpeta en VS Code, pulsa con el botón derecho en `index.html` y sele
 - Mi esquina: seguimiento de los 165 luchadores, próximos combates, agenda UFC, rankings y últimos resultados; exportación/importación del seguimiento.
 - Registro e inicio de sesión con nombre de usuario único y contraseña, guardado del seguimiento por cuenta y separación del modo invitado.
 - Modo sin spoilers activo al entrar: oculta resultados en carteleras y Mi esquina, con revelado por combate o control global. Se reactiva al recargar; las fichas y rankings mantienen sus datos publicados.
-- Selector Español / English en la cabecera, con elección guardada en el navegador, traducción de la interfaz y formatos de fechas y cifras según el idioma.
+- Selector Español / English / Català en la cabecera, con elección guardada en el navegador, traducción de la interfaz y formatos de fechas y cifras según el idioma.
 - Tema claro/oscuro, diseño adaptable y navegación con teclado.
 
 ## Estructura

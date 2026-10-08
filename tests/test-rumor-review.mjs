@@ -35,7 +35,11 @@ html=groupCard(reviewed,sources);
 assert.ok(html.includes('&lt;script&gt;') && !html.includes('<script>'));
 assert.ok(html.includes(candidates[0].postUrl) && html.includes(candidates[1].postUrl));
 assert.ok(html.includes('Cita a @KOlmeneroMMA'));
-setLanguage('en');assert.ok(groupCard(reviewed,sources).includes(values.summary.en));setLanguage('es');
+setLanguage('en');assert.ok(groupCard(reviewed,sources).includes(values.summary.en));setLanguage('ca');
+html=groupCard(reviewed,sources);
+assert.ok(html.includes('Reporte atribuido') && html.includes('lang="es"'));
+assert.ok(html.includes('Resumen disponible en español.') && !html.includes('undefined'));
+setLanguage('es');
 for (const mutate of [g=>g.fighterNames=['Sosa','Sosa'],g=>g.summary.es='',g=>g.reports[0].postUrl='javascript:alert(1)',g=>g.reports[0].sourceId='unknown',g=>g.reports[0].attributedAccounts=['bad<script>'],g=>g.official={url:'https://ufc.com'},g=>g.reviewedAt='invalid']) {
  const bad=structuredClone(feed);mutate(bad.groups[0]);assert.equal(validateGroupFeed(bad,sources),false);
 }

@@ -24,6 +24,16 @@ try {
   doc.querySelector('[data-profile="topuria"]').click();
   await pause();
   check('Dynamic profile English',doc.querySelector('#fighter-detail').textContent.includes('Height / reach'));
+  await choose('ca');
+  check('Catalan document language',doc.documentElement.lang==='ca');
+  check('Catalan navigation',doc.querySelector('[data-nav="guardados"]').textContent.includes('El meu racó'));
+  check('Catalan dynamic profile',doc.querySelector('#fighter-detail').textContent.includes('Alçada / abast'));
+  check('Catalan user input unchanged',doc.querySelector('#fighter-search').value==='Mi esquina custom event');
+  const catalanLoaded = new Promise(resolve=>frame.addEventListener('load',resolve,{once:true}));
+  frame.contentWindow.location.reload(); await catalanLoaded; await pause();
+  doc=frame.contentDocument;
+  check('Catalan survives reload',doc.documentElement.lang==='ca' && doc.querySelector('#language-select').value==='ca');
+  doc.querySelector('[data-profile="topuria"]').click();await pause();
   await choose('es');
   check('Open profile preserved',doc.querySelector('#fighter-dialog').open);
   check('Spanish profile restored',doc.querySelector('#fighter-detail').textContent.includes('Altura / alcance'));
