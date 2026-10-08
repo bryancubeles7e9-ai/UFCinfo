@@ -20,6 +20,7 @@ export function validateGroupFeed(feed,sources) {
   return feed.groups.every(group=> {
     if (!group || typeof group.id !== 'string' || !/^[0-9]{10,22}$/.test(group.id) || ids.has(group.id) ||
         !Array.isArray(group.fighterNames) || group.fighterNames.length !== 2 || !group.fighterNames.every(validName) ||
+        (group.rematch !== undefined && typeof group.rematch !== 'boolean') ||
         group.fighterNames[0].trim().toLowerCase() === group.fighterNames[1].trim().toLowerCase() ||
         !(group.processing === 'automatic' ? group.reviewedAt === null && validDate(group.generatedAt) : validDate(group.reviewedAt)) || !validDate(group.publishedAt) || typeof group.containsSpoilers !== 'boolean' ||
         !group.summary || !['es','en'].every(lang=>typeof group.summary[lang] === 'string' && group.summary[lang].trim() && group.summary[lang].length <= 600) ||

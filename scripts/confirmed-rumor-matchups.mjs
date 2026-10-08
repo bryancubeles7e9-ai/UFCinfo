@@ -33,10 +33,10 @@ export function confirmedCalendar(feed) {
       hinted=Date.parse(record.eventDateHint+'T00:00:00Z');
       if (!Number.isFinite(hinted) || new Date(hinted).toISOString().slice(0,10)!==record.eventDateHint) return null;
     }
-    // The group timestamp can be its newest report, published after the fight.
-    const firstReport=Array.isArray(record.reports) ? Math.min(posted,...record.reports.map(report=>timestamp(report?.publishedAt)).filter(Number.isFinite)) : posted;
     return bouts.find(bout=>bout.key===pairKey(record.fighterNames) &&
-      (timestamp(bout.date)>=posted || (bout.status==='completed' && firstReport<=timestamp(bout.date)+2*86400000)) &&
+      // A finished meeting is no longer a rumor, even when mentioned weeks later.
+      // An explicit second fight posted after it refers to another meeting.
+      (timestamp(bout.date)>=posted || (bout.status==='completed' && record.rematch!==true)) &&
       (record.eventId==null || record.eventId===bout.eventId) &&
       (hinted===undefined || Math.abs(Date.parse(bout.date.slice(0,10)+'T00:00:00Z')-hinted)<=86400000)) ?? null;
   }};

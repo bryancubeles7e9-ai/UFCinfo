@@ -17,11 +17,23 @@ export const isBoxingPost = text => boxingBoutPattern.test(text) || boxingPatter
 const ufcPattern=/\bufc(?:\b|[a-z0-9])/i;
 const otherPromotionPattern=/\b(?:pfl|bellator|one championship|aca|rizin|ksw|cage warriors)\b/i;
 const bookingPattern=/\b(?:targeted|talks|negotiat\w*|in the works|set for|scheduled|booked|will (?:fight|face)|agreed|accepted|enfrentara|peleara|negoci\w*|previst\w*|programad\w*|acordad\w*|aceptad\w*)\b/i;
+const futureRematchPattern=/\b(?:rumou?r(?:ed|s)?|possible|potential|could|might|would|wants?|calls?\s+for|busca|quiere|pide|podria|posible|futura|future|next|proxima)\b/i;
 const opinionPattern=/\b(?:i wish|i would love|dream fight|me gustaria|ojala|pelea sonada|quien ganaria|who (?:wins|would win)|my prediction|mi prediccion)\b/i;
 const resultPattern=/\b(?:highlights|throwback|defeated|knocked out|submitted|vencio|derroto|noqueo|sometio|resultado final)\b/i;
 const invalidNamePattern=/\b(?:breaking|news|main|event|official|poster|fight|night|ufc|mma)\b/i;
 const monthNames={es:['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],en:['January','February','March','April','May','June','July','August','September','October','November','December']};
 const normalize=name=>name.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+const rematchWords=/\b(?:revancha|rematch|segunda\s+pelea|segundo\s+combate|second\s+(?:fight|bout)|fight\s+again|run\s+it\s+back)\b/i;
+export function isRematchReport(text,fighterNames) {
+  const normalized=normalizeName(text);
+  if (rematchWords.test(normalized)) return true;
+  // A bare "2" only counts directly after the opponent in a named matchup.
+  for (const match of normalized.matchAll(/\b(?:vs|versus|contra|v)\s+([a-z][a-z'-]*(?:\s+[a-z][a-z'-]*){0,3})\s+(?:2|ii)\b/gi)) {
+    const named=canonicalFighter(match[1]);
+    if (named && fighterNames.some(name=>canonicalFighter(name)===named)) return true;
+  }
+  return false;
+}
 
 export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedAt:null,groups:[]},now=new Date(),eventFeed=null) {
   if (!validateGroupFeed(previous,sources)) throw Error('Invalid existing public feed; refusing to overwrite.');
@@ -63,9 +75,11 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
       if(eventDate.getTime()-posted.getTime()>183*86400000){discard(['event-too-far-ahead']);continue;}
       eventDateHint=eventDate.toISOString().slice(0,10);
     }
-    if(calendar.match({fighterNames:candidate.fighters,publishedAt,eventDateHint})) {discard(['confirmed-in-calendar']);continue;}
+    const rematch=texts.some(text=>isRematchReport(text,candidate.fighters)) &&
+      (eventDateHint!==null || normalized.some(text=>bookingPattern.test(text) || futureRematchPattern.test(text)));
+    if(calendar.match({fighterNames:candidate.fighters,publishedAt,eventDateHint,rematch})) {discard(['confirmed-in-calendar']);continue;}
     // Bound undated grouping by publication month, without inventing an event date.
-    const matchupKey=candidate.fighters.map(normalize).sort().join('|')+'|'+(eventDateHint??'undated:'+publishedAt.slice(0,7));
+    const matchupKey=candidate.fighters.map(normalize).sort().join('|')+'|'+(eventDateHint??'undated:'+publishedAt.slice(0,7))+(rematch?'|rematch':'');
     const reports=candidate.reports.map(report=> {
       const original=candidates.get(report.id);
       const attribution=original.text.match(/(?:v[ií]a|inform[oó]\s+primero)\s*:?\s*([^\r\n]+)/i)?.[1]?.replace(/https?:\/\/\S+|#\S+/g,'').trim().replace(/[)\s]+$/,'').slice(0,200);
@@ -80,8 +94,8 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
     const [first,second]=candidate.fighters;
     const kind=rawGroup?.discussionKind;
     const descriptions={response:{es:'recoge una respuesta pública relacionada con una posible pelea',en:'covers a public response concerning a possible fight'},challenge:{es:'recoge un reto público',en:'covers a public challenge'},'claimed-agreement':{es:'recoge la declaración de un luchador de haber aceptado una pelea',en:'covers a fighter’s claim of having agreed to a fight'}};
-    const description=descriptions[kind]??{es:'comenta un posible cruce',en:'discusses a possible matchup'};
-    groups.push({id:reports[0].id,fighterNames:candidate.fighters,matchupKey,eventDateHint,dateYearInferred:date ? date.year===null : false,
+    const description=rematch ? {es:'comenta una posible revancha',en:'discusses a possible rematch'} : descriptions[kind]??{es:'comenta un posible cruce',en:'discusses a possible matchup'};
+    groups.push({id:reports[0].id,fighterNames:candidate.fighters,matchupKey,eventDateHint,rematch,dateYearInferred:date ? date.year===null : false,
       summary:{es:`${reporter} ${description.es} entre ${first} y ${second}${date ? `; la publicación menciona el ${date.day} de ${monthNames.es[date.month-1]}` : ', sin fecha exacta indicada en la fuente'}. Runrún de la comunidad; no constituye confirmación oficial.`,en:`${reporter} ${description.en} between ${first} and ${second}${date ? `; the post mentions ${monthNames.en[date.month-1]} ${date.day}` : ', with no exact date stated by the source'}. Community discussion; this is not official confirmation.`},
       processing:'automatic',generatedAt:now.toISOString(),reviewedAt:null,publishedAt,containsSpoilers:true,reports,official:null});
     added++;

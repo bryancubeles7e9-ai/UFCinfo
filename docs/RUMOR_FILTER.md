@@ -56,6 +56,8 @@ Se comparan ambos rivales en un único combate, normalizando alias y acentos. No
 
 Las coincidencias impiden publicar nuevos grupos y retiran los ya publicados. Los rumores sin coincidencia se mantienen: la ausencia en esta copia no demuestra que una pelea esté sin anunciar, y actualmente solo cubre las carteleras principales sincronizadas. Después sigue ejecutándose la comprobación existente contra páginas oficiales de UFC.com.
 
+Una pelea finalizada se excluye aunque la última publicación del grupo sea posterior al evento. Si una publicación posterior propone explícitamente un segundo encuentro (`vs 2`, `vs II`, «revancha», «rematch», «segunda pelea»), se trata como un rumor distinto y no se confunde con el combate anterior. Un «2» aislado, como en `UFC 2` o «en 2 días», no basta. Una revancha que ya figure en una cartelera futura también se excluye como pelea anunciada. Si una posible revancha no aporta ni fecha futura ni indicación explícita de segundo combate, se descarta para evitar republicar un enfrentamiento ya disputado.
+
 Si la copia está ausente o no supera las validaciones, los logs lo indican y se conserva el catálogo de rumores sin inferir confirmaciones. El estado y presupuesto de TwitterAPI.io siguen separados.
 
 Prueba adicional: `node tests/test-rumor-calendar.mjs`.
