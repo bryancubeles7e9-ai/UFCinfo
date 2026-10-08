@@ -1,3 +1,4 @@
+import {confirmedCalendar} from './confirmed-rumor-matchups.mjs';
 import {groupCandidates} from './group-rumor-candidates.mjs';
 import {canonicalFighter,normalizeName} from './rumor-fighter-names.mjs';
 import {candidateImport,validateGroupFeed} from '../assets/js/rumor-groups.js';
@@ -22,12 +23,14 @@ const invalidNamePattern=/\b(?:breaking|news|main|event|official|poster|fight|ni
 const monthNames={es:['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],en:['January','February','March','April','May','June','July','August','September','October','November','December']};
 const normalize=name=>name.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]/g,'');
 
-export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedAt:null,groups:[]},now=new Date()) {
+export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedAt:null,groups:[]},now=new Date(),eventFeed=null) {
   if (!validateGroupFeed(previous,sources)) throw Error('Invalid existing public feed; refusing to overwrite.');
   const grouped=groupCandidates(payload);
   const imported=candidateImport(grouped,sources);
   const candidates=new Map(grouped.candidates.map(report=>[report.id,report]));
-  const groups=previous.groups.map(group=>structuredClone(group));
+  const calendar=confirmedCalendar(eventFeed);
+  const groups=previous.groups.filter(group=>!calendar.match(group)).map(group=>structuredClone(group));
+  const removedConfirmed=previous.groups.length-groups.length;
   let added=0,skipped=0;
   const skipReasons={};
   const discard=reasons=>{skipped++;for(const reason of reasons)skipReasons[reason]=(skipReasons[reason]??0)+1;};
@@ -60,6 +63,7 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
       if(eventDate.getTime()-posted.getTime()>183*86400000){discard(['event-too-far-ahead']);continue;}
       eventDateHint=eventDate.toISOString().slice(0,10);
     }
+    if(calendar.match({fighterNames:candidate.fighters,publishedAt,eventDateHint})) {discard(['confirmed-in-calendar']);continue;}
     // Bound undated grouping by publication month, without inventing an event date.
     const matchupKey=candidate.fighters.map(normalize).sort().join('|')+'|'+(eventDateHint??'undated:'+publishedAt.slice(0,7));
     const reports=candidate.reports.map(report=> {
@@ -84,6 +88,6 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
   }
   const feed={schemaVersion:1,updatedAt:now.toISOString(),groups:groups.sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt)).slice(0,500)};
   if (!validateGroupFeed(feed,sources)) throw Error('Invalid generated feed; refusing to publish.');
-  return {feed,added,skipped,skipReasons};
+  return {feed,added,skipped,skipReasons,removedConfirmed,calendarChecked:calendar.available,calendarSynchronizedAt:calendar.synchronizedAt};
 }
 

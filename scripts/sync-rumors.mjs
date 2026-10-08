@@ -19,6 +19,7 @@ async function atomicJSON(path,data) {
 }
 export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=new Date(),configOverride,stateStore,backfillHours}={}) {
   const config=configOverride ?? await readJSON(resolve(projectRoot,'scripts/rumor-sync.config.json'));
+  const eventFeed=await readJSON(resolve(projectRoot,'assets/data/ufc-events.json'),null);
   const sources=(await readJSON(resolve(projectRoot,'assets/data/ufc-rumors.json'))).sources;
   if (!sources.length || sources.some(source=>!/^\w{1,15}$/.test(source.handle))) throw Error('Invalid configured sources.');
   const output=resolve(projectRoot,'assets/data/ufc-rumor-groups.json');
@@ -31,7 +32,7 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
   try {
     if (fromFile) {
       const payload=await readJSON(resolve(fromFile));
-      const result=automaticFeed(payload,sources,previous,now);
+      const result=automaticFeed(payload,sources,previous,now,eventFeed);
       await atomicJSON(output,result.feed);
       return {...result,requests:0,mode:'offline'};
     }
@@ -84,7 +85,7 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
       await saveState();
       if (!data.has_next_page)break;
     }
-    const result=automaticFeed({checkedAt:now.toISOString(),candidates:state.archive},sources,previous,now);
+    const result=automaticFeed({checkedAt:now.toISOString(),candidates:state.archive},sources,previous,now,eventFeed);
     await atomicJSON(output,result.feed);
     return {...result,collectionSkips,requests,truncated,reservedCredits:state.reservedCredits,estimatedCredits:state.estimatedCredits,mode:'automatic'};
   } finally {await lock.close();await unlink(lockPath);}
@@ -101,7 +102,9 @@ if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
       const backfillHours=process.env.UFCINFO_RUMOR_BACKFILL==='true' ? 168 : undefined;
       const result=await syncRumors({fromFile,stateStore,backfillHours});
       console.log(`Sync: ${result.mode}; requests: ${result.requests}; added: ${result.added}; published groups: ${result.feed.groups.length}; skipped: ${result.skipped}.`);
-      const labels={'fighters-not-detected':'No se detectaron dos luchadores', 'unverified-fighters':'Nombres fuera del catalogo sin contexto UFC y negociacion', 'other-promotion':'Otra promotora', 'past-result':'Resultado o recuerdo de un combate','date-not-detected':'No se detecto una fecha','no-ufc-reference':'Sin referencia a UFC','no-booking-language':'Sin lenguaje de negociacion o pelea prevista',boxing:'Boxeo','official-announcement':'Anuncio oficial',opinion:'Opinion','invalid-event-date':'Fecha de combate invalida','past-event':'Combate pasado','event-too-far-ahead':'Combate a mas de 183 dias','unknown-source':'Fuente no configurada','invalid-post':'Publicacion invalida',reply:'Respuesta',retweet:'Retuit','invalid-post-date':'Fecha de publicacion invalida'};
+      if(result.calendarChecked) console.log(`Calendar cross-check: snapshot ${result.calendarSynchronizedAt}; previous confirmed groups removed: ${result.removedConfirmed}.`);
+      else if(result.mode!=='not-due') console.log('Calendar cross-check unavailable; no confirmation inferred.');
+      const labels={'fighters-not-detected':'No se detectaron dos luchadores', 'unverified-fighters':'Nombres fuera del catalogo sin contexto UFC y negociacion', 'confirmed-in-calendar':'Pelea ya anunciada en las carteleras', 'other-promotion':'Otra promotora', 'past-result':'Resultado o recuerdo de un combate','date-not-detected':'No se detecto una fecha','no-ufc-reference':'Sin referencia a UFC','no-booking-language':'Sin lenguaje de negociacion o pelea prevista',boxing:'Boxeo','official-announcement':'Anuncio oficial',opinion:'Opinion','invalid-event-date':'Fecha de combate invalida','past-event':'Combate pasado','event-too-far-ahead':'Combate a mas de 183 dias','unknown-source':'Fuente no configurada','invalid-post':'Publicacion invalida',reply:'Respuesta',retweet:'Retuit','invalid-post-date':'Fecha de publicacion invalida'};
       for(const [reason,count] of Object.entries(result.collectionSkips??{}))console.log(`Descartes de publicaciones: ${labels[reason]??reason}: ${count}.`);
       for(const [reason,count] of Object.entries(result.skipReasons??{}))console.log(`Descartes de grupos: ${labels[reason]??reason}: ${count}.`);
       if(result.skipped)console.log('Un grupo puede tener varios motivos; los contadores no se suman.');

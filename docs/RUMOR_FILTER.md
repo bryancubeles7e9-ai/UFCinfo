@@ -31,7 +31,7 @@ Los reportes sin fecha siguen admitiéndose cuando cumplen los demás criterios.
 
 Se conservan autor, enlaces originales, cuentas citadas, resúmenes bilingües y protección contra espóilers. Se agrupan duplicados manteniendo fechas distintas para posibles revanchas. El proceso oficial de comprobación contra carteleras de UFC sigue separado.
 
-Los grupos ya publicados se conservan; este cambio aplica el nuevo criterio a los candidatos procesados en las siguientes ejecuciones. No vuelve a verificar ni elimina retrospectivamente todos los grupos anteriores.
+Los filtros de texto se aplican a los candidatos de las siguientes ejecuciones. Además, el cruce de carteleras retira grupos anteriores cuando los dos luchadores aparecen en el mismo combate anunciado y coinciden las fechas.
 
 El detector sigue siendo un sistema de reglas de texto, no una verificación semántica de cada noticia. Puede perder publicaciones con formatos no reconocidos o confundir contextos; las fuentes y sus enlaces permiten revisar los casos dudosos.
 
@@ -44,3 +44,15 @@ node tests/test-rumor-candidate-groups.mjs
 node tests/test-rumor-review.mjs
 python3 tests/test_rumor_confirmations.py
 ```
+
+## Cruce con la API de carteleras
+
+Antes de guardar los rumores se consulta `assets/data/ufc-events.json`, la copia sincronizada de UFCalendar que también consume la web. No se hace una consulta de pago adicional por cada rumor ni se cambia la frecuencia de sincronización de las carteleras. Los logs indican la fecha de la copia usada; esta comprobación depende de que la sincronización de eventos esté al día.
+
+Se comparan ambos rivales en un único combate, normalizando alias y acentos. No basta con que aparezcan en combates distintos del mismo evento. El evento no puede ser anterior a la publicación del rumor y, cuando el rumor tiene fecha, debe coincidir con un margen de un día por la zona horaria. Las cancelaciones explícitas no cuentan como confirmación.
+
+Las coincidencias impiden publicar nuevos grupos y retiran los ya publicados. Los rumores sin coincidencia se mantienen: la ausencia en esta copia no demuestra que una pelea esté sin anunciar, y actualmente solo cubre las carteleras principales sincronizadas. Después sigue ejecutándose la comprobación existente contra páginas oficiales de UFC.com.
+
+Si la copia está ausente o no supera las validaciones, los logs lo indican y se conserva el catálogo de rumores sin inferir confirmaciones. El estado y presupuesto de TwitterAPI.io siguen separados.
+
+Prueba adicional: `node tests/test-rumor-calendar.mjs`.
