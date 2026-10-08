@@ -1,5 +1,7 @@
 # Rumores y confirmaciones oficiales
 
+El criterio actual de publicación automática se describe en [Filtro de rumores](RUMOR_FILTER.md). Ese documento sustituye las descripciones históricas del filtro que aparecen más abajo.
+
 ## Estado: publicación automática y tarea horaria preparadas
 
 La integración se retomó a petición del usuario el 7 de octubre de 2026. El usuario pidió publicación automática, sin introducir ni aprobar reportes uno por uno, y autorizó GitHub Actions cada hora. `scripts/sync-rumors.mjs` implementa ese flujo. `.github/workflows/rumor-sync.yml` se ejecuta al minuto 17 de cada hora; necesita el secreto de API para consultar y una conexión de despliegue para actualizar un alojamiento independiente.

@@ -1,8 +1,24 @@
 import {groupCandidates} from './group-rumor-candidates.mjs';
+import {canonicalFighter,normalizeName} from './rumor-fighter-names.mjs';
 import {candidateImport,validateGroupFeed} from '../assets/js/rumor-groups.js';
 
 export const boxingPattern=/\b(boxing|boxeo|boxeador(?:es)?|boxeadoras?|pugilismo|tyson\s+fury|anthony\s+joshua|fury\s+vs\.?\s+joshua|aj[- ]fury)\b/i;
-const officialPattern=/\b(?:p[oó]ster\s+oficial|official\s+(?:poster|announcement)|confirmed\s+by\s+ufc|confirmad[oa]\s+por\s+(?:la\s+)?ufc)\b/i;
+const officialPattern=/\b(?:ufc\s+(?:announces?|confirms?)|(?:ufc\s+)?(?:anuncia|confirma)\s+oficialmente|is\s+official|p[oó]ster\s+oficial|official\s+(?:poster|announcement)|confirmed\s+by\s+ufc|confirmad[oa]\s+por\s+(?:la\s+)?ufc)\b/i;
+export function isOfficialAnnouncement(text) {
+  for (const match of text.matchAll(new RegExp(officialPattern.source, 'gi'))) {
+    const before=normalizeName(text.slice(Math.max(0,match.index-65),match.index));
+    if (!/\b(?:no|not|sin|without|pending|pendiente)(?:\s+[a-z]+){0,4}$/.test(before)) return true;
+  }
+  return false;
+}
+const boxingBoutPattern=/\b(?:tyson\s+fury|anthony\s+joshua|aj[- ]fury|boxing\s+(?:match|bout|fight)|(?:pelea|combate)\s+de\s+boxeo|(?:in|en)\s+(?:boxing|boxeo)|boxing\s+rules)\b/i;
+export const isBoxingPost = text => boxingBoutPattern.test(text) || boxingPattern.test(text) && !/\bufc(?:\b|[a-z0-9])/i.test(text);
+const ufcPattern=/\bufc(?:\b|[a-z0-9])/i;
+const otherPromotionPattern=/\b(?:pfl|bellator|one championship|aca|rizin|ksw|cage warriors)\b/i;
+const bookingPattern=/\b(?:targeted|talks|negotiat\w*|in the works|set for|scheduled|booked|will (?:fight|face)|agreed|accepted|enfrentara|peleara|negoci\w*|previst\w*|programad\w*|acordad\w*|aceptad\w*)\b/i;
+const opinionPattern=/\b(?:i wish|i would love|dream fight|me gustaria|ojala|pelea sonada|quien ganaria|who (?:wins|would win)|my prediction|mi prediccion)\b/i;
+const resultPattern=/\b(?:highlights|throwback|defeated|knocked out|submitted|vencio|derroto|noqueo|sometio|resultado final)\b/i;
+const invalidNamePattern=/\b(?:breaking|news|main|event|official|poster|fight|night|ufc|mma)\b/i;
 const monthNames={es:['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'],en:['January','February','March','April','May','June','July','August','September','October','November','December']};
 const normalize=name=>name.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]/g,'');
 
@@ -20,9 +36,17 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
     const date=rawGroup?.dateMention;
     const texts=candidate.reports.map(report=>report.text);
     const reasons=[];
-    if(candidate.fighters.length!==2)reasons.push('fighters-not-detected');
-    if(texts.some(text=>boxingPattern.test(text)))reasons.push('boxing');
-    if(texts.some(text=>officialPattern.test(text)))reasons.push('official-announcement');
+    if(candidate.fighters.length!==2 || candidate.fighters[0]===candidate.fighters[1]) reasons.push('fighters-not-detected');
+    const normalized=texts.map(normalizeName);
+    if(normalized.some(text=>opinionPattern.test(text))) reasons.push('opinion');
+    if(normalized.some(text=>resultPattern.test(text)) && !normalized.some(text=>bookingPattern.test(text))) reasons.push('past-result');
+    if(texts.some(text=>otherPromotionPattern.test(text)) && !texts.some(text=>ufcPattern.test(text))) reasons.push('other-promotion');
+    if(candidate.fighters.length===2 && candidate.fighters.some(name=>!canonicalFighter(name))) {
+      // Prospects outside the directory need both explicit UFC context and a future booking report.
+      if(!texts.some(text=>ufcPattern.test(text) && bookingPattern.test(normalizeName(text))) || candidate.fighters.some(name=>invalidNamePattern.test(name))) reasons.push('unverified-fighters');
+    }
+    if(texts.some(isBoxingPost))reasons.push('boxing');
+    if(texts.some(isOfficialAnnouncement))reasons.push('official-announcement');
     if(reasons.length){discard(reasons);continue;}
     const publishedAt=candidate.reports.map(report=>report.publishedAt).sort()[0];
     const posted=new Date(publishedAt);
@@ -40,7 +64,7 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
     const matchupKey=candidate.fighters.map(normalize).sort().join('|')+'|'+(eventDateHint??'undated:'+publishedAt.slice(0,7));
     const reports=candidate.reports.map(report=> {
       const original=candidates.get(report.id);
-      const attribution=original.text.match(/(?:v[ií]a|inform[oó]\s+primero)\s*:?\s*([^\r\n]+)/i)?.[1]?.replace(/https?:\/\/\S+|#\S+/g,'').trim().slice(0,200);
+      const attribution=original.text.match(/(?:v[ií]a|inform[oó]\s+primero)\s*:?\s*([^\r\n]+)/i)?.[1]?.replace(/https?:\/\/\S+|#\S+/g,'').trim().replace(/[)\s]+$/,'').slice(0,200);
       return {id:report.id,sourceId:report.sourceId,postUrl:report.postUrl,publishedAt:report.publishedAt,language:report.language,attributedAccounts:report.attributedAccounts,...(attribution?{attribution}: {})};
     }).sort((a,b)=>a.publishedAt.localeCompare(b.publishedAt));
     const existing=groups.find(group=>group.matchupKey===matchupKey || group.reports.some(report=>reports.some(next=>next.id===report.id)));

@@ -1,12 +1,12 @@
 import {readFile,writeFile,rename,mkdir,open,unlink} from 'node:fs/promises';
 import {resolve,dirname} from 'node:path';
 import {pathToFileURL} from 'node:url';
-import {automaticFeed,boxingPattern} from './rumor-auto-feed.mjs';
+import {automaticFeed,isBoxingPost} from './rumor-auto-feed.mjs';
 import {githubRumorState} from './github-rumor-state.mjs';
 
 const root=resolve(import.meta.dirname,'..');
 const endpoint='https://api.twitterapi.io/twitter/tweet/advanced_search';
-const keywords='(fight OR pelea OR combate OR vs OR offers OR challenge OR rumor OR rival OR targeted OR talks OR posible)';
+const keywords='(fight OR pelea OR combate OR vs OR offers OR challenge OR rumor OR rival OR targeted OR talks OR posible OR responds OR response OR responde OR reta OR agreed OR accepted OR negotiations OR negociaciones OR enfrentará OR peleará OR bout OR versus)';
 async function readJSON(path,fallback) {
   try {return JSON.parse((await readFile(path,'utf8')).replace(/^\uFEFF/,''));}
   catch(error) {if (error.code==='ENOENT' && fallback!==undefined) return fallback;throw error;}
@@ -71,7 +71,7 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
       state.estimatedCredits+=(Math.max(1,data.tweets.length)*config.creditsPerTweet);
       for (const tweet of data.tweets) {
         const source=sources.find(source=>source.handle.toLowerCase()===String(tweet.author?.userName).toLowerCase());
-        const reason=!source ? 'unknown-source' : typeof tweet.id!=='string' || !/^\d{10,22}$/.test(tweet.id) || typeof tweet.text!=='string' || !tweet.text.trim() || tweet.text.length>30000 ? 'invalid-post' : tweet.isReply ? 'reply' : tweet.retweeted_tweet || tweet.text.startsWith('RT @') ? 'retweet' : boxingPattern.test(tweet.text) ? 'boxing' : null;
+        const reason=!source ? 'unknown-source' : typeof tweet.id!=='string' || !/^\d{10,22}$/.test(tweet.id) || typeof tweet.text!=='string' || !tweet.text.trim() || tweet.text.length>30000 ? 'invalid-post' : tweet.isReply ? 'reply' : tweet.retweeted_tweet || tweet.text.startsWith('RT @') ? 'retweet' : isBoxingPost(tweet.text) ? 'boxing' : null;
         if(reason){collectionSkips[reason]=(collectionSkips[reason]??0)+1;continue;}
         const date=new Date(tweet.createdAt);if(!Number.isFinite(date.getTime()) || date>now){collectionSkips['invalid-post-date']=(collectionSkips['invalid-post-date']??0)+1;continue;}
         known.set(tweet.id,{id:tweet.id,sourceId:source.id,postUrl:`https://x.com/${source.handle}/status/${tweet.id}`,text:tweet.text,publishedAt:date.toISOString(),language:['es','en'].includes(tweet.lang)?tweet.lang:source.language,status:'unverified'});
@@ -101,7 +101,7 @@ if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
       const backfillHours=process.env.UFCINFO_RUMOR_BACKFILL==='true' ? 168 : undefined;
       const result=await syncRumors({fromFile,stateStore,backfillHours});
       console.log(`Sync: ${result.mode}; requests: ${result.requests}; added: ${result.added}; published groups: ${result.feed.groups.length}; skipped: ${result.skipped}.`);
-      const labels={'fighters-not-detected':'No se detectaron dos luchadores','date-not-detected':'No se detecto una fecha','no-ufc-reference':'Sin referencia a UFC','no-booking-language':'Sin lenguaje de negociacion o pelea prevista',boxing:'Boxeo','official-announcement':'Anuncio oficial',opinion:'Opinion','invalid-event-date':'Fecha de combate invalida','past-event':'Combate pasado','event-too-far-ahead':'Combate a mas de 183 dias','unknown-source':'Fuente no configurada','invalid-post':'Publicacion invalida',reply:'Respuesta',retweet:'Retuit','invalid-post-date':'Fecha de publicacion invalida'};
+      const labels={'fighters-not-detected':'No se detectaron dos luchadores', 'unverified-fighters':'Nombres fuera del catalogo sin contexto UFC y negociacion', 'other-promotion':'Otra promotora', 'past-result':'Resultado o recuerdo de un combate','date-not-detected':'No se detecto una fecha','no-ufc-reference':'Sin referencia a UFC','no-booking-language':'Sin lenguaje de negociacion o pelea prevista',boxing:'Boxeo','official-announcement':'Anuncio oficial',opinion:'Opinion','invalid-event-date':'Fecha de combate invalida','past-event':'Combate pasado','event-too-far-ahead':'Combate a mas de 183 dias','unknown-source':'Fuente no configurada','invalid-post':'Publicacion invalida',reply:'Respuesta',retweet:'Retuit','invalid-post-date':'Fecha de publicacion invalida'};
       for(const [reason,count] of Object.entries(result.collectionSkips??{}))console.log(`Descartes de publicaciones: ${labels[reason]??reason}: ${count}.`);
       for(const [reason,count] of Object.entries(result.skipReasons??{}))console.log(`Descartes de grupos: ${labels[reason]??reason}: ${count}.`);
       if(result.skipped)console.log('Un grupo puede tener varios motivos; los contadores no se suman.');

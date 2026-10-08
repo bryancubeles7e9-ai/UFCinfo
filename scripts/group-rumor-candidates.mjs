@@ -1,9 +1,10 @@
 import {readFileSync} from 'node:fs';
 import {pathToFileURL} from 'node:url';
+import {catalogMatchup,canonicalFighter} from './rumor-fighter-names.mjs';
 
 const months = {january:1,enero:1,february:2,febrero:2,march:3,marzo:3,april:4,abril:4,may:5,mayo:5,june:6,junio:6,july:7,julio:7,august:8,agosto:8,september:9,septiembre:9,october:10,octubre:10,november:11,noviembre:11,december:12,diciembre:12};
 const monthPattern = Object.keys(months).join('|');
-const nameToken = "(?:[A-Z][a-z]+(?:[A-Z][a-z]+)*|[A-Z]'[A-Z][a-z]+)";
+const nameToken = "(?:[A-Z][a-z]+(?:[A-Z][a-z]+)*|[A-Z]'[A-Z][a-z]+)(?:-[A-Z][a-z]+)*";
 const name = `${nameToken}(?:[ \\t]+${nameToken}){1,3}`;
 const matchupPattern = new RegExp(`\\b(${name})\\s+(?:[Vv][Ss]\\.?|[Vv]ersus|[Cc]ontra|against|(?:could|may|might|will|would)\\s+(?:fight|face)|(?:se\\s+)?(?:enfrentara|enfrenta|enfrentaria)\\s+(?:al|a))\\s+(?:libanes\\s+)?(${name})\\b`);
 const betweenPattern = new RegExp(`\\bentre\\s+(${name})\\s+y\\s+(${name})\\b`);
@@ -23,6 +24,7 @@ export function groupCandidates(payload) {
   for (const candidate of payload.candidates ?? []) {
     // Normalize only a matching copy; retain every original text and source.
     const text = candidate.text.normalize('NFD').replace(/\p{M}/gu, '').replace(/[’‘]/g,"'").replace(/[^\x00-\x7F]/g, ' ').replace(/\([^)]*\)/g, ' ').replace(/[^\S\r\n]+/g, ' ');
+    const known=catalogMatchup(text);
     const narrative=narrativePatterns.map(item=>({...item,match:text.match(item.pattern)})).find(item=>item.match);
     const match = text.match(matchupPattern) ?? text.match(betweenPattern) ?? narrative?.match;
     const lower = text.toLowerCase();
@@ -30,11 +32,11 @@ export function groupCandidates(payload) {
     const reversedDate = lower.match(new RegExp(`\\b(\\d{1,2})\\s+(?:de\\s+)?(${monthPattern})(?:\\s+(?:de\\s+)?(20\\d{2}))?\\b`));
     let dateMention = date ? {month:months[date[1]],day:Number(date[2]),year:date[3] ? Number(date[3]) : null} : reversedDate ? {month:months[reversedDate[2]],day:Number(reversedDate[1]),year:reversedDate[3] ? Number(reversedDate[3]) : null} : null;
     if (dateMention && (dateMention.day < 1 || dateMention.day > 31)) dateMention = null;
-    const fighters = match ? [match[1].trim(),match[2].trim()].sort() : [];
+    const fighters = known ? known.fighters : match ? [match[1].trim(),match[2].trim()].map(name=>canonicalFighter(name) ?? name).sort() : [];
     // Date-less or unidentified reports stay separate; grouping is not verification.
     const window = String(payload.checkedAt ?? '').slice(0,10);
     const key = fighters.length === 2 && dateMention ? `${window}:${fighters.join('|').toLowerCase()}:${JSON.stringify(dateMention)}` : `post:${candidate.id}`;
-    if (!groups.has(key)) groups.set(key, {id:key,fighters,dateMention,discussionKind:narrative?.kind??'possible-matchup',status:'pending-review',reportIds:[],reports:[]});
+    if (!groups.has(key)) groups.set(key, {id:key,fighters,dateMention,discussionKind:known?.kind??narrative?.kind??'possible-matchup',status:'pending-review',reportIds:[],reports:[]});
     const group = groups.get(key);
     const attributedAccounts = [...new Set([...candidate.text.matchAll(/@([A-Za-z0-9_]{1,15})/g)].map(m=>m[1]))];
     group.reportIds.push(candidate.id);

@@ -19,7 +19,7 @@ assert.equal(result.skipped,2);
 assert.equal(result.skipReasons['official-announcement'],1);
 assert.equal(result.skipReasons['fighters-not-detected'],1);
 assert.equal(result.skipReasons['date-not-detected'],undefined);
-const undatedPayload={...payload,candidates:[candidate('2107747599155708095','Hecher Sosa vs Abdul Hussein is targeted')]};
+const undatedPayload={...payload,candidates:[candidate('2107747599155708095','Hecher Sosa vs Abdul Hussein is targeted for UFC')]};
 const undated=automaticFeed(undatedPayload,sources,undefined,now);
 assert.equal(undated.feed.groups.length,1);
 assert.equal(undated.skipReasons['no-ufc-reference'],undefined);
@@ -35,16 +35,15 @@ assert.ok(validateGroupFeed(result.feed,sources));
 assert.ok(groupCard(result.feed.groups[0],sources).includes('Recopilado automáticamente'));
 assert.equal(automaticFeed(payload,sources,result.feed,now).feed.groups.length,1);
 assert.equal(automaticFeed({...payload,candidates:[candidate('2107747599155708090','Hecher Sosa vs Abdul Hussein is set for UFC Saudi Arabia on December 28')]},sources,result.feed,now).feed.groups.length,2);
-assert.equal(automaticFeed({...payload,candidates:[candidate('2107747599155708091','I wish Hecher Sosa vs Abdul Hussein on November 28')]},sources,undefined,now).feed.groups.length,1);
+assert.equal(automaticFeed({...payload,candidates:[candidate('2107747599155708091','I wish Hecher Sosa vs Abdul Hussein on November 28')]},sources,undefined,now).feed.groups.length,0);
 const community=automaticFeed({...payload,candidates:[candidate('2107747599155708092','¿Hecher Sosa vs Abdul Hussein? Me gustaría esa pelea.')]},sources,undefined,now);
-assert.equal(community.feed.groups.length,1);
-assert.equal(community.feed.groups[0].official,null);
-assert.equal(community.skipReasons['no-booking-language'],undefined);
+assert.equal(community.feed.groups.length,0);
+assert.equal(community.skipReasons.opinion,1);
 
 const examples=[
  ['2106844191712223558','Sean O’Malley responds to Payton Talbott accusing him of running from a fight 👀',["Payton Talbott","Sean O'Malley"],'respuesta pública'],
  ['2106866511814005038','Nassourdine Imavov offers Sean Strickland $500K if he beats him 😳',['Nassourdine Imavov','Sean Strickland'],'reto público'],
- ['2107009056577667336','Ian Garry reveals he’s agreed to a main-event fight with Michael Morales and the "date is locked in" 👀',['Ian Garry','Michael Morales'],'haber aceptado'],
+ ['2107009056577667336','Ian Garry reveals he’s agreed to a main-event fight with Michael Morales and the "date is locked in" 👀',['Ian Machado Garry','Michael Morales'],'haber aceptado'],
 ];
 for(const [id,text,names,description] of examples){
  const feed=automaticFeed({...payload,candidates:[candidate(id,text)]},sources,undefined,now);
