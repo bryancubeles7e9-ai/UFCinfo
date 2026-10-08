@@ -179,7 +179,10 @@ def main():
             json.dump(payload, file, ensure_ascii=False, indent=2)
             file.write('\n')
         temp.replace(args.output)
-    except (SyncError, ValueError, TypeError, KeyError, OSError):
+    except SyncError as error:
+        print(f'Cito synchronization failed: {error}. Last good events file was preserved.', file=sys.stderr)
+        return 1
+    except (ValueError, TypeError, KeyError, AttributeError, OSError):
         print('Cito synchronization failed. Last good events file was preserved.', file=sys.stderr)
         return 1
     print(f"Updated {len(payload['events'])} UFC events; at most five Cito requests in this run.")
