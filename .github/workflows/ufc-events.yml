@@ -9,10 +9,12 @@ on:
       - 'index.html'
       - 'assets/**'
       - 'scripts/sync-ufc-events.py'
+      - 'scripts/sync-cito-events.py'
       - 'scripts/sync-ufc-rankings.py'
       - 'tests/test-rankings-feed.mjs'
       - 'tests/test-events-feed.mjs'
       - 'tests/test_ufc_sync.py'
+      - 'tests/test_cito_sync.py'
       - 'tests/test_rankings_sync.py'
       - '.github/workflows/ufc-events.yml'
 permissions:
@@ -57,19 +59,19 @@ jobs:
       - name: Comprobar clave
         id: key
         env:
-          UFCAL_KEY: ${{ secrets.UFCAL_KEY }}
+          CITO_API_KEY: ${{ secrets.CITO_API_KEY }}
         run: |
-          if [ -n "$UFCAL_KEY" ]; then
+          if [ -n "$CITO_API_KEY" ]; then
             echo 'configured=true' >> "$GITHUB_OUTPUT"
           else
             echo 'configured=false' >> "$GITHUB_OUTPUT"
-            echo '::notice::Configura UFCAL_KEY en los secretos del repositorio para activar la API. Se conserva la copia actual.'
+            echo '::notice::Configura CITO_API_KEY en los secretos del repositorio para activar Cito. Se conserva la copia actual.'
           fi
-      - name: Consultar UFCalendar
+      - name: Consultar Cito
         if: steps.key.outputs.configured == 'true'
         env:
-          UFCAL_KEY: ${{ secrets.UFCAL_KEY }}
-        run: python3 scripts/sync-ufc-events.py
+          CITO_API_KEY: ${{ secrets.CITO_API_KEY }}
+        run: python3 scripts/sync-cito-events.py
       - name: Guardar datos actualizados
         if: steps.key.outputs.configured == 'true'
         run: |

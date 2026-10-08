@@ -9,6 +9,9 @@ const feed={schemaVersion:1,source:'UFCalendar',sourceUrl:'https://www.ufcalenda
 const record={fighterNames:['Max Holloway','Ilia Topuria'],publishedAt:'2026-10-08T08:00:00Z',eventDateHint:null};
 const calendar=confirmedCalendar(feed);
 assert.equal(calendar.match(record).eventId,'ufc-335');
+const citoFeed=structuredClone(feed);
+citoFeed.source='Cito + UFCalendar'; citoFeed.sourceUrl='https://citoapi.com/ufc-api/';
+assert.equal(confirmedCalendar(citoFeed).match(record).eventId,'ufc-335');
 assert.ok(calendar.match({...record,fighterNames:['Ian Machado Garry','Michael Morales']}));
 assert.ok(calendar.match({...record,fighterNames:['topuria','holloway']}));
 assert.equal(calendar.match({...record,fighterNames:['Ilia Topuria','Michael Morales']}),null);

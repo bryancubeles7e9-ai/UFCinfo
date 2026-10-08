@@ -7,8 +7,8 @@ const validName=value=>typeof value==='string' && value.trim().length>0 && value
 // This is the synchronized calendar API snapshot, not an additional paid API query.
 export function confirmedCalendar(feed) {
   const unavailable={available:false,synchronizedAt:null,match:()=>null};
-  if (!feed || feed.schemaVersion!==1 || !['UFC','UFCalendar'].includes(feed.source) ||
-      feed.sourceUrl!==(feed.source==='UFCalendar' ? 'https://www.ufcalendar.com' : 'https://www.ufc.com') ||
+  if (!feed || feed.schemaVersion!==1 || !['UFC','UFCalendar','Cito','Cito + UFCalendar'].includes(feed.source) ||
+      feed.sourceUrl!==(feed.source.startsWith('Cito') ? 'https://citoapi.com/ufc-api/' : feed.source==='UFCalendar' ? 'https://www.ufcalendar.com' : 'https://www.ufc.com') ||
       !Number.isFinite(timestamp(feed.synchronizedAt)) || !Array.isArray(feed.events) || feed.events.length>100) return unavailable;
   const ids=new Set(),bouts=[];
   for (const event of feed.events) {
