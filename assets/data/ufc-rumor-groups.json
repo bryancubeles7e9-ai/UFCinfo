@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-08T17:23:29.624Z",
+  "updatedAt": "2026-10-08T17:32:10.679Z",
   "lastSearchedAt": "2026-10-08T17:23:29.624Z",
   "groups": [
     {
@@ -241,60 +241,6 @@
           "sourceId": "championship-rounds",
           "postUrl": "https://x.com/ChampRDS/status/2106593647596654854",
           "publishedAt": "2026-10-04T03:53:58.000Z",
-          "language": "en",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2106590689261732292",
-      "fighterNames": [
-        "Esteban Ribovics",
-        "King Green"
-      ],
-      "matchupKey": "estebanribovics|kinggreen|undated:2026-10",
-      "eventDateHint": null,
-      "dateYearInferred": false,
-      "summary": {
-        "es": "Championship Rounds comenta un posible cruce entre Esteban Ribovics y King Green, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Championship Rounds discusses a possible matchup between Esteban Ribovics and King Green, with no exact date stated by the source. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-10-07T17:12:00.241Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-10-04T03:42:13.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2105791077735182492",
-          "sourceId": "mma-latinoamerica",
-          "postUrl": "https://x.com/ClubDeLasMMA/status/2105791077735182492",
-          "publishedAt": "2026-10-01T22:44:51.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        },
-        {
-          "id": "2106553731655287102",
-          "sourceId": "mma-latinoamerica",
-          "postUrl": "https://x.com/ClubDeLasMMA/status/2106553731655287102",
-          "publishedAt": "2026-10-04T01:15:22.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        },
-        {
-          "id": "2106554800305553594",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2106554800305553594",
-          "publishedAt": "2026-10-04T01:19:36.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        },
-        {
-          "id": "2106590689261732292",
-          "sourceId": "championship-rounds",
-          "postUrl": "https://x.com/ChampRDS/status/2106590689261732292",
-          "publishedAt": "2026-10-04T03:42:13.000Z",
           "language": "en",
           "attributedAccounts": []
         }

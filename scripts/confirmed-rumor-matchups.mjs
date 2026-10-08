@@ -20,7 +20,7 @@ export function confirmedCalendar(feed) {
     for (const bout of event.bouts) {
       if (!bout || !validName(bout.red) || !validName(bout.blue) || identity(bout.red)===identity(bout.blue)) return unavailable;
       if (event.status==='cancelled' || bout.status==='cancelled') continue;
-      bouts.push({key:pairKey([bout.red,bout.blue]),eventId:event.id,date:event.date,url:event.source});
+      bouts.push({key:pairKey([bout.red,bout.blue]),eventId:event.id,date:event.date,status:event.status,url:event.source});
     }
   }
   return {available:true,synchronizedAt:feed.synchronizedAt,match(record) {
@@ -33,7 +33,10 @@ export function confirmedCalendar(feed) {
       hinted=Date.parse(record.eventDateHint+'T00:00:00Z');
       if (!Number.isFinite(hinted) || new Date(hinted).toISOString().slice(0,10)!==record.eventDateHint) return null;
     }
-    return bouts.find(bout=>bout.key===pairKey(record.fighterNames) && timestamp(bout.date)>=posted &&
+    // The group timestamp can be its newest report, published after the fight.
+    const firstReport=Array.isArray(record.reports) ? Math.min(posted,...record.reports.map(report=>timestamp(report?.publishedAt)).filter(Number.isFinite)) : posted;
+    return bouts.find(bout=>bout.key===pairKey(record.fighterNames) &&
+      (timestamp(bout.date)>=posted || (bout.status==='completed' && firstReport<=timestamp(bout.date)+2*86400000)) &&
       (record.eventId==null || record.eventId===bout.eventId) &&
       (hinted===undefined || Math.abs(Date.parse(bout.date.slice(0,10)+'T00:00:00Z')-hinted)<=86400000)) ?? null;
   }};
