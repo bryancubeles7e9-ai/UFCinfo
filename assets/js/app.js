@@ -1,4 +1,5 @@
 import { initializeRumors } from "./rumors.js";
+import { initializeMobileNavigation } from "./mobile-navigation.js";
 import { getLocale, initializeLanguage } from "./i18n.js";
 import { spoilersEnabled, setSpoilersEnabled, revealResult, resultHidden, hiddenResult } from "./spoilers.js";
 import { initializeAccount } from "./account.js";
@@ -550,4 +551,5 @@ document.addEventListener("ufcinfo:language-changed", () => {
   }
   if ($("#fighter-dialog").open && $("#fighter-detail").dataset.fighterId) showProfile($("#fighter-detail").dataset.fighterId);
 });
+initializeMobileNavigation();
 initializeLanguage();

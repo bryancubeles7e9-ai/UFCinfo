@@ -1,0 +1,170 @@
+/* Mobile refinements; desktop keeps the established layout. */
+.mobile-menu-toggle { display: none; }
+
+@media (max-width: 700px) {
+  html { scroll-padding-top: 84px; }
+  body:has(dialog[open]) { overflow: hidden; }
+  main {
+    padding-left: max(16px, env(safe-area-inset-left));
+    padding-right: max(16px, env(safe-area-inset-right));
+  }
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    min-height: 68px;
+    padding: max(12px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 12px max(16px, env(safe-area-inset-left));
+    gap: 12px;
+    background: var(--bg);
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .header .logo { min-height: 44px; }
+  .mobile-menu-toggle {
+    display: inline-flex;
+    margin-left: auto;
+    padding: 10px 14px;
+    gap: 10px;
+    font-size: 14px;
+  }
+  .mobile-menu-toggle[aria-expanded="true"] { border-color: var(--accent); color: var(--accent); }
+  .header.mobile-nav-ready:not(.mobile-menu-open) nav,
+  .header.mobile-nav-ready:not(.mobile-menu-open) .header-actions { display: none; }
+  .header nav {
+    order: 3;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 6px;
+    padding: 12px 0 0;
+    border-top: 1px solid var(--line);
+    overflow: visible;
+  }
+  .header nav a {
+    min-height: 48px;
+    padding: 12px;
+    font-size: 14px;
+    white-space: normal;
+    border-radius: 6px;
+  }
+  .header nav a.active { background: var(--surface-2); color: var(--accent); }
+  .header nav a.active::after { display: none; }
+  .header nav b { font-size: 11px; }
+  .header-actions {
+    order: 4;
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 8px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+  .language-picker, .language-picker select { width: 100%; }
+  .header-actions #account-open, #spoiler-button { font-size: 12px; padding: 10px; }
+  .header-actions #theme-button { justify-self: end; }
+  .button, .outline-button, .icon-button, .favorite-button,
+  .fighter-card-footer .icon-button, .segmented button { min-height: 44px; }
+  .icon-button, .favorite-button, .fighter-card-footer .icon-button { min-width: 44px; }
+  .favorite-button { z-index: 3; }
+  .button, .outline-button { white-space: normal; text-align: center; gap: 10px; }
+  /* 16px inputs keep forms readable and avoid automatic zoom on iPhone. */
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+  select, textarea,
+  .language-picker select, .filters select,
+  .comparison-selects select, .lab-comparator .comparison-selects select,
+  .field-label input, .field-label textarea, .field-label select,
+  .rumor-review-form input:not([type="checkbox"]), .rumor-review-form textarea {
+    font-size: 16px;
+    min-height: 44px;
+  }
+  .search-box, .search-box input, .filters select { min-width: 0; }
+  .search-box { max-width: 100%; }
+  .toolbar { align-items: stretch; }
+  .page-heading { padding: 26px 0 22px; }
+  .page-heading h1 { font-size: clamp(38px, 10vw, 52px); overflow-wrap: anywhere; }
+  .page-heading p:not(.eyebrow) { font-size: 14px; line-height: 1.7; }
+  .top-kicker, .top-kicker > span:last-child { font-size: 9px; }
+  .info-hero .hero-copy, .hero-agenda { padding: 22px 18px; }
+  .info-hero h1 { font-size: clamp(32px, 9vw, 44px); }
+  .info-hero .hero-buttons { flex-direction: column; align-items: stretch; }
+  .info-hero .hero-buttons .text-link { padding: 12px 0; }
+  .section-heading { flex-wrap: wrap; }
+  .section-heading .text-link { max-width: none; text-align: left; font-size: 12px; padding: 8px 0; }
+  .event-info { padding: 20px 16px; min-width: 0; }
+  .event-info h3, .event-dialog-title { overflow-wrap: anywhere; }
+  .event-filters .segmented { flex-wrap: wrap; }
+  .event-filters .segmented button { font-size: 12px; }
+  .data-note, .data-note small { font-size: 12px; line-height: 1.7; overflow-wrap: anywhere; }
+  .fighter-card-body, .profile-copy, .panel, .ranking-panel { min-width: 0; }
+  .fighter-name { overflow-wrap: anywhere; }
+  .fighter-card-body p, .fighter-card-body .fighter-division, .card-combat-info dd { font-size: 12px; }
+  .fighter-card-meta { flex-wrap: wrap; font-size: 10px; }
+  .fighter-card-footer > span { font-size: 10px; letter-spacing: .5px; }
+  .official-facts dt, .card-combat-info dt { font-size: 11px; }
+  .official-facts dd { font-size: 14px; }
+  .official-facts > p, .official-facts > p small { font-size: 12px; }
+  .profile-layout .official-facts .badge { font-size: 10px; }
+  .profile-copy > p:not(.eyebrow) { font-size: 13px; }
+  .profile-copy h2 { font-size: clamp(36px, 10vw, 49px); overflow-wrap: anywhere; }
+  dialog {
+    width: calc(100% - 16px);
+    max-width: 560px;
+    max-height: calc(100vh - 16px);
+    max-height: calc(100dvh - 16px);
+    padding: 12px 16px max(20px, env(safe-area-inset-bottom));
+    border-radius: 12px;
+    overscroll-behavior: contain;
+    scroll-padding-top: 60px;
+  }
+  dialog .dialog-close {
+    position: sticky;
+    display: flex;
+    top: 0;
+    right: auto;
+    margin: 0 0 8px auto;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+  }
+  .profile-layout { gap: 20px; }
+  .official-bout-names { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+  .bout-fighter-name { min-height: 44px; overflow-wrap: anywhere; }
+  .lab-comparator .comparison-selects { grid-template-columns: minmax(0, 1fr) 44px; gap: 12px; }
+  .lab-comparator .comparison-selects label:first-child { grid-column: 1; grid-row: 1; }
+  .lab-comparator .comparison-selects label:last-child { grid-column: 1; grid-row: 2; }
+  .lab-comparator .comparison-selects .icon-button { grid-column: 2; grid-row: 1 / 3; align-self: center; width: 44px; }
+  .lab-comparator .comparison-selects select { padding: 12px 8px; }
+  .lab-table thead th, .lab-table tbody th, .lab-value { font-size: 12px; }
+  .lab-table th, .lab-table td { padding: 12px 6px; }
+  .lab-fighter .text-link { font-size: 12px; display: inline-flex; align-items: center; min-height: 44px; }
+  .lab-comparison-notes p { font-size: 12px; }
+  .ranking-name { font-size: 15px; min-height: 44px; overflow-wrap: anywhere; }
+  .ranking-status { font-size: 11px; }
+  .ranking-table-wrapper { max-width: 100%; overflow-x: auto; }
+  .rumor-matchup { gap: 10px; }
+  .rumor-fighter { min-height: 44px; overflow-wrap: anywhere; }
+  .rumor-card, .rumor-byline, .rumor-group-sources { overflow-wrap: anywhere; }
+  .rumor-actions > * { min-height: 44px; display: inline-flex; align-items: center; }
+  footer { padding-bottom: max(28px, env(safe-area-inset-bottom)); }
+  #toast { max-width: calc(100vw - 32px); bottom: max(20px, env(safe-area-inset-bottom)); }
+}
+
+@media (max-width: 480px) {
+  .fighter-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .fighter-card { display: grid; grid-template-columns: 104px minmax(0, 1fr); }
+  .fighter-card > .fighter-portrait { height: 100%; min-height: 220px; }
+  .fighter-card .fighter-photo { width: 100%; height: 100%; left: 0; transform: none; object-fit: contain; object-position: top center; }
+  .fighter-card .portrait-label { left: 8px; right: 8px; bottom: 10px; font-size: 9px; letter-spacing: 0; line-height: 1.5; }
+  .fighter-card .portrait-number { left: 10px; }
+  .fighter-card > .favorite-button { left: 8px; top: 40px; right: auto; }
+  .fighter-card-body { padding: 14px 14px 0; }
+  .fighter-name { margin-top: 12px; font-size: 22px; }
+  .fighter-name strong { font-size: 30px; line-height: 1.05; }
+  .fighter-card-footer { margin-top: 12px; padding: 8px 0; }
+  .view[data-view="luchadores"] .filters { grid-template-columns: minmax(0, 1fr); }
+  .official-facts dl { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .rumor-review-names { grid-template-columns: minmax(0, 1fr); }
+}

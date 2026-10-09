@@ -1,5 +1,6 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+'Menú':'Menu',
 'Numerados':'Numbered', 'Especiales':'Special events', 'No hay eventos UFC disponibles.':'No UFC events available.', 'No hay carteleras con estos filtros. Prueba otra selección.':'No fight cards match these filters. Try another selection.',
 
 'UFC EVENTO ESPECIAL':'UFC SPECIAL EVENT', 'Eventos especiales':'Special events', 'Eventos numerados, Fight Night y especiales: próximos anunciados y resultados de este año, con su cartelera principal.':'Numbered, Fight Night and special events: upcoming announced events and this year’s results, with their main cards.',

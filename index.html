@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta
       name="description"
       content="Explora carteleras UFC, luchadores y rankings de MMA. Compara estilos en Fight Lab y sigue tus favoritos en UFCinfo, con modo sin spoilers."
@@ -16,6 +16,7 @@
     <meta property="og:description" content="Explora el universo UFC y sigue a tus luchadores favoritos, con modo sin spoilers." />
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/mobile.css" />
     <script type="module" src="assets/js/app.js"></script>
   </head>
   <body>
@@ -28,7 +29,11 @@
           <path class="logo-center" d="m24 19 5 5-5 5-5-5Z" />
         </svg><span class="logo-wordmark">UFC<span>info</span></span></a
       >
-      <nav aria-label="Navegación principal">
+      <button class="mobile-menu-toggle outline-button" id="mobile-menu-toggle" aria-expanded="false" aria-controls="main-navigation header-actions" hidden>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+        <span>Menú</span>
+      </button>
+      <nav id="main-navigation" aria-label="Navegación principal">
         <a href="#inicio" data-nav="inicio">Overview</a
         ><a href="#eventos" data-nav="eventos">Carteleras</a
         ><a href="#luchadores" data-nav="luchadores">Luchadores</a
@@ -40,7 +45,7 @@
           >Mi esquina <b id="saved-count">0</b></a
         >
       </nav>
-      <div class="header-actions">
+      <div class="header-actions" id="header-actions">
         <label class="language-picker"><span class="sr-only">Idioma / Language</span><select id="language-select" aria-label="Idioma / Language" translate="no"><option value="es">Español</option><option value="en">English</option><option value="ca">Català</option></select></label>
         <button id="spoiler-button" class="outline-button small" aria-pressed="true">Sin spoilers: ON</button>
         <button id="account-open" class="outline-button small" disabled>Iniciar sesión</button>
