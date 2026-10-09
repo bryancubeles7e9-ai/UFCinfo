@@ -1,5 +1,6 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+'Filtros y orden':'Filters and sorting', 'Limpiar filtros':'Clear filters',
 'Menú':'Menu',
 'Numerados':'Numbered', 'Especiales':'Special events', 'No hay eventos UFC disponibles.':'No UFC events available.', 'No hay carteleras con estos filtros. Prueba otra selección.':'No fight cards match these filters. Try another selection.',
 

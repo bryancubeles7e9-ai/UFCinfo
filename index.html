@@ -182,7 +182,11 @@
               placeholder="Nombre, apodo, división o base marcial…"
               aria-label="Buscar luchadores"
           /></label>
-          <div class="filters">
+          <div id="fighter-filter-controls" class="fighter-filter-controls" hidden>
+            <button id="fighter-filter-toggle" class="outline-button" aria-expanded="false" aria-controls="fighter-filters"><span>Filtros y orden</span><span id="fighter-active-filters" hidden></span><span aria-hidden="true">⌄</span></button>
+            <button id="fighter-filter-reset" class="outline-button" hidden>Limpiar filtros</button>
+          </div>
+          <div class="filters" id="fighter-filters">
             <select id="style-filter" aria-label="Filtrar por estilo">
               <option value="all">Todos los estilos</option>
               <option value="striking">Striking</option>

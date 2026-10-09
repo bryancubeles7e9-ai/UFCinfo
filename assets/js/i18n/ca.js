@@ -1,5 +1,6 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "Filtros y orden": "Filtres i ordre", "Limpiar filtros": "Netejar filtres",
   "Numerados": "Numerats",
   "Especiales": "Especials",
   "No hay eventos UFC disponibles.": "No hi ha esdeveniments UFC disponibles.",

@@ -1,5 +1,6 @@
 /* Mobile refinements; desktop keeps the established layout. */
 .mobile-menu-toggle { display: none; }
+.fighter-filter-controls { display: none; }
 
 @media (max-width: 700px) {
   html { scroll-padding-top: 84px; }
@@ -82,6 +83,14 @@
   .search-box, .search-box input, .filters select { min-width: 0; }
   .search-box { max-width: 100%; }
   .toolbar { align-items: stretch; }
+  .fighter-filter-controls { display: flex; flex-wrap: wrap; width: 100%; gap: 8px; }
+  #fighter-filter-toggle { flex: 1; justify-content: space-between; font-size: 14px; }
+  #fighter-filter-toggle[aria-expanded="true"] { border-color: var(--accent); }
+  #fighter-filter-toggle[aria-expanded="true"] > span:last-child { transform: rotate(180deg); }
+  #fighter-active-filters { display: grid; place-items: center; min-width: 24px; min-height: 24px; border-radius: 12px; background: var(--accent); color: #fff; }
+  #fighter-filter-reset { font-size: 12px; }
+  #fighter-filters.mobile-filters-ready:not(.mobile-filters-open) { display: none; }
+  #fighter-filters { padding: 14px; border: 1px solid var(--line); background: var(--surface); border-radius: 8px; }
   .page-heading { padding: 26px 0 22px; }
   .page-heading h1 { font-size: clamp(38px, 10vw, 52px); overflow-wrap: anywhere; }
   .page-heading p:not(.eyebrow) { font-size: 14px; line-height: 1.7; }
@@ -143,6 +152,8 @@
   .lab-comparison-notes p { font-size: 12px; }
   .ranking-name { font-size: 15px; min-height: 44px; overflow-wrap: anywhere; }
   .ranking-status { font-size: 11px; }
+  #ranking-table thead th { font-size: 11px; line-height: 1.4; }
+  .ranking-source { font-size: 12px; line-height: 1.6; flex-wrap: wrap; }
   .ranking-table-wrapper { max-width: 100%; overflow-x: auto; }
   .rumor-matchup { gap: 10px; }
   .rumor-fighter { min-height: 44px; overflow-wrap: anywhere; }
