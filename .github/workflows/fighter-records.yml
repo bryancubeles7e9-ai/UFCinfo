@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '47 9 * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/sync-fighter-records.py
+      - .github/workflows/fighter-records.yml
 permissions:
   contents: read
 concurrency:
@@ -24,6 +29,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Comprobar conexión y formato real
+        if: github.event_name != 'schedule'
+        env:
+          API_SPORTS_MMA_KEY: ${{ secrets.API_SPORTS_MMA_KEY }}
+        run: python3 scripts/sync-fighter-records.py --probe
       - name: Actualizar solo luchadores de eventos terminados
         env:
           API_SPORTS_MMA_KEY: ${{ secrets.API_SPORTS_MMA_KEY }}

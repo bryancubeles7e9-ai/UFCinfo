@@ -155,11 +155,31 @@ def sync(client, events, state, directory):
         save(state)
 
 
+def probe(key):
+    """Read-only live check; never edits the public record snapshot."""
+    client = Client(key, limit=3)
+    rows = client.get("/fighters", search="Joshua")
+    print("PROBE fighter sample:", json.dumps(rows[:3], ensure_ascii=False))
+    matches = [row for row in rows if normalize(api_name(row)) == normalize("Joshua Van")]
+    if len(matches) != 1:
+        raise SystemExit("Probe could not uniquely resolve Joshua Van")
+    rows = client.get("/fighters/records", id=matches[0]["id"])
+    print("PROBE records sample:", json.dumps(rows, ensure_ascii=False))
+    if len(rows) != 1:
+        raise SystemExit("Probe records response needs inspection")
+    print("PROBE parsed record:", record_from_row(rows[0]))
+    print("PROBE requests:", client.used)
+
+
 def main():
     key = os.environ.get("API_SPORTS_MMA_KEY")
+    if not key and "--probe" in sys.argv:
+        raise SystemExit("API_SPORTS_MMA_KEY absent; live check cannot run")
     if not key:
         print("API_SPORTS_MMA_KEY absent; fighter records unchanged")
         return
+    if "--probe" in sys.argv:
+        return probe(key)
     if not STATE.exists():
         raise SystemExit("Missing baseline fighter-records.json; refusing to replay history")
     state = json.loads(STATE.read_text(encoding="utf-8"))
