@@ -39,7 +39,7 @@ try {
  setLanguage('es');
 } finally {await rm(root,{recursive:true,force:true});}
 const workflow=await readFile(new URL('../.github/workflows/rumor-sync.yml',import.meta.url),'utf8');
-assert.ok(workflow.includes("cron: '0 * * * *'"));
+assert.ok(workflow.includes("cron: '17 * * * *'"));
 const index=await readFile(new URL('../index.html',import.meta.url),'utf8');
 assert.ok(index.includes('id="rumor-search-status"'));
 console.log('PASS: hourly boundaries, real search timestamp, empty results, failures, skipped runs, offline imports, credit cap, translations and schedule');
