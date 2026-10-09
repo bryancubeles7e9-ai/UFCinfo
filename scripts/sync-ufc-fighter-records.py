@@ -87,7 +87,7 @@ def parse_profile(html, fighter):
             raise ValueError("Official percentage outside range: " + key)
         stats[key] = value
     if any(key not in stats for key in CORE_STATS):
-        raise ValueError("Official combat statistics incomplete: " + json.dumps(raw) + " HTML: " + json.dumps(re.findall(r'[^<>]{0,40}c-stat-compare[^>]{0,120}>.{0,160}', html)[:20]))
+        raise ValueError("Official combat statistics incomplete")
     return {"record": record, "info": stats}
 
 
