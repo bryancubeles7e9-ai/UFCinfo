@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-09T09:56:42.488651+00:00",
+  "synchronizedAt": "2026-10-09T13:22:42.306243+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -740,10 +740,10 @@
         {
           "red": "Natalia Silva",
           "blue": "Wang Cong",
-          "division": "Women's Flyweight",
+          "division": "Women's Flyweight Title",
           "winner": "Natalia Silva",
           "outcome": null,
-          "method": "U-DEC",
+          "method": "Decision - Unanimous",
           "round": "5",
           "time": "5:00"
         },
@@ -768,12 +768,12 @@
           "time": "4:08"
         },
         {
-          "red": "Roberto Soldic",
+          "red": "Roberto Soldić",
           "blue": "Khaos Williams",
           "division": "Welterweight",
-          "winner": "Roberto Soldic",
+          "winner": "Roberto Soldić",
           "outcome": null,
-          "method": "U-DEC",
+          "method": "Decision - Unanimous",
           "round": "3",
           "time": "5:00"
         },
