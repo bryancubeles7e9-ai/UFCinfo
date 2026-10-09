@@ -15,6 +15,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   sync:
+    # Enable scheduled calls only after a live sample returns usable records.
+    if: github.event_name != 'schedule' || vars.API_SPORTS_RECORDS_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:

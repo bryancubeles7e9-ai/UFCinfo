@@ -2,6 +2,12 @@
 
 Los récords actuales en `assets/js/data.js` y `assets/js/fighter-directory-data.js` son la copia de partida. `assets/data/fighter-records.json` solo contiene cambios posteriores y los IDs de eventos ya procesados. Sin API o ante una respuesta inválida, se mantiene el récord de la copia anterior.
 
+## Estado de la prueba real
+
+Prueba realizada el 9 de octubre de 2026: la clave autentica correctamente y la búsqueda identifica a Joshua Van, Ilia Topuria, Deiveson Figueiredo y Natalia Silva, pero `/fighters/records` devuelve `total.win`, `total.loss` y `total.draw` como `null` para los cuatro. No se ha modificado ningún récord. No se conoce todavía la causa de los valores vacíos; no se presupone que pagar un plan lo resuelva.
+
+La programación diaria queda desactivada hasta validar datos utilizables. Solo se habilitará al establecer la variable de repositorio `API_SPORTS_RECORDS_ENABLED=true`; las ejecuciones manuales y los cambios al script pueden seguir haciendo la comprobación de cobertura (hasta ocho consultas). No activar esa variable con la cobertura actual.
+
 ## Activación
 
 1. Crea una clave de API-MMA en [API-Sports](https://api-sports.io/sports/mma).
