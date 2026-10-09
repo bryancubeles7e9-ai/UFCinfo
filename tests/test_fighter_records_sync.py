@@ -20,8 +20,8 @@ class FakeClient:
         if endpoint == "/fighters":
             return [{"id": 7, "name": "A Fighter"}]
         if self.bad:
-            return [{"wins": None, "losses": 2, "draws": 0}]
-        return [{"wins": {"total": 11}, "losses": {"total": 2}, "draws": {"total": 0}}]
+            return [{"fighter": {"id": 7}, "total": {"win": None, "loss": None, "draw": None}}]
+        return [{"fighter": {"id": 7}, "total": {"win": 11, "loss": 2, "draw": 0}}]
 
 
 class FighterSyncTest(unittest.TestCase):

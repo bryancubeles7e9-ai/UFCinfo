@@ -38,6 +38,11 @@ def api_name(row):
 
 def record_from_row(row):
     """Accept only an explicit career V-D-E triple, never infer from a fight."""
+    total = row.get("total")
+    if isinstance(total, dict):
+        values = [total.get(k) for k in ("win", "loss", "draw")]
+        if all(isinstance(v, int) and not isinstance(v, bool) and 0 <= v <= 200 for v in values):
+            return "-".join(map(str, values))
     candidates = [row]
     for key in ("record", "records"):
         if isinstance(row.get(key), dict):
@@ -141,6 +146,8 @@ def sync(client, events, state, directory):
                 rows = client.get("/fighters/records", id=api_id)
                 if len(rows) != 1 or not isinstance(rows[0], dict):
                     raise ValueError("No unique fighter record")
+                if rows[0].get("fighter", {}).get("id") != api_id:
+                    raise ValueError("Record identity mismatch")
                 record = record_from_row(rows[0])
                 state["records"][fighter["id"]] = {"record": record, "source": "API-Sports MMA", "apiId": api_id,
                                                    "updatedAt": datetime.now(timezone.utc).isoformat()}
@@ -156,19 +163,23 @@ def sync(client, events, state, directory):
 
 
 def probe(key):
-    """Read-only live check; never edits the public record snapshot."""
-    client = Client(key, limit=3)
-    rows = client.get("/fighters", search="Joshua")
-    print("PROBE fighter sample:", json.dumps(rows[:3], ensure_ascii=False))
-    matches = [row for row in rows if normalize(api_name(row)) == normalize("Joshua Van")]
-    if len(matches) != 1:
-        raise SystemExit("Probe could not uniquely resolve Joshua Van")
-    rows = client.get("/fighters/records", id=matches[0]["id"])
-    print("PROBE records sample:", json.dumps(rows, ensure_ascii=False))
-    if len(rows) != 1:
-        raise SystemExit("Probe records response needs inspection")
-    print("PROBE parsed record:", record_from_row(rows[0]))
-    print("PROBE requests:", client.used)
+    """Read-only coverage check; never edits the public record snapshot."""
+    client = Client(key, limit=8)
+    valid = 0
+    for name in ("Joshua Van", "Ilia Topuria", "Deiveson Figueiredo", "Natalia Silva"):
+        api_id = resolve(client, name)
+        rows = client.get("/fighters/records", id=api_id)
+        print("PROBE", name, json.dumps(rows, ensure_ascii=False))
+        try:
+            if len(rows) != 1 or rows[0].get("fighter", {}).get("id") != api_id:
+                raise ValueError("Record identity mismatch")
+            print("PROBE parsed", name, record_from_row(rows[0]))
+            valid += 1
+        except ValueError as error:
+            print("PROBE unavailable", name, str(error))
+    print("PROBE valid records:", valid, "requests:", client.used)
+    if not valid:
+        raise SystemExit("No complete records in sample; API coverage insufficient")
 
 
 def main():
