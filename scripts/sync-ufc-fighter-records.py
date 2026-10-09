@@ -2,6 +2,8 @@
 from datetime import datetime, timezone, timedelta
 from html.parser import HTMLParser
 import json
+import importlib.util
+import math
 from pathlib import Path
 import re
 import subprocess
@@ -14,6 +16,14 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 STATE = ROOT / "assets/data/fighter-records.json"
 MAX_PROFILES = 40
+STAT_KEYS = ("strikesLanded", "strikesAbsorbed", "takedownAverage", "submissionAverage",
+             "strikingDefense", "takedownDefense", "knockdownAverage", "strikingAccuracy",
+             "takedownAccuracy", "koWins", "submissionWins", "firstRoundFinishes")
+CORE_STATS = ("strikesLanded", "strikesAbsorbed", "takedownAverage", "submissionAverage")
+PERCENT_STATS = ("strikingDefense", "takedownDefense", "strikingAccuracy", "takedownAccuracy")
+spec = importlib.util.spec_from_file_location("official_fighter_info", ROOT / "scripts/import-fighter-info.py")
+info_parser = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(info_parser)
 
 
 def normalize(name):
@@ -63,7 +73,25 @@ def parse_record(html, fighter):
     return records.pop()
 
 
-def fetch_record(fighter):
+def parse_profile(html, fighter):
+    record = parse_record(html, fighter)
+    raw = info_parser.parse_profile(html)
+    stats = {}
+    for key in STAT_KEYS:
+        value = raw.get(key)
+        if value is None:
+            continue  # Keep the previous optional statistic when UFC omits it.
+        if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0:
+            raise ValueError("Invalid official statistic: " + key)
+        if key in PERCENT_STATS and value > 100:
+            raise ValueError("Official percentage outside range: " + key)
+        stats[key] = value
+    if any(key not in stats for key in CORE_STATS):
+        raise ValueError("Official combat statistics incomplete")
+    return {"record": record, "info": stats}
+
+
+def fetch_profile(fighter):
     url = fighter["source"]
     parsed = urlparse(url)
     if parsed.scheme != "https" or parsed.netloc != "www.ufc.com" or not parsed.path.startswith("/athlete/"):
@@ -73,7 +101,7 @@ def fetch_record(fighter):
         html = response.read(2_000_001)
     if len(html) > 2_000_000:
         raise ValueError("Official profile response too large")
-    return parse_record(html.decode("utf-8"), fighter)
+    return parse_profile(html.decode("utf-8"), fighter)
 
 
 def directory():
@@ -93,7 +121,7 @@ def save(state):
     Path(tmp.name).replace(STATE)
 
 
-def sync(events, state, fighters, fetch=fetch_record, now=None):
+def sync(events, state, fighters, fetch=fetch_profile, now=None):
     now = now or datetime.now(timezone.utc)
     by_name = {}
     for fighter in fighters:
@@ -125,11 +153,13 @@ def sync(events, state, fighters, fetch=fetch_record, now=None):
                     return used
                 used += 1
                 try:
-                    record = fetch(fighter)
+                    profile = fetch(fighter)
+                    record = profile["record"]
                     previous = state["records"].get(fighter["id"], {}).get("record", fighter["record"])
                     if record == previous and bout.get("outcome") != "no-contest":
                         raise ValueError("Official record unchanged; retry after profile update")
-                    state["records"][fighter["id"]] = {"record": record, "source": "UFC", "sourceUrl": fighter["source"], "updatedAt": now.isoformat()}
+                    state["records"][fighter["id"]] = {"record": record, "source": "UFC", "sourceUrl": fighter["source"], "updatedAt": now.isoformat(),
+                        "info": {**profile["info"], "statisticsSource": fighter["source"], "statisticsConsulted": now.date().isoformat()}}
                     done.append(fighter["id"])
                     save(state)
                 except Exception as error:
@@ -146,7 +176,7 @@ def main():
     if "--probe" in sys.argv:
         for name in ("Joshua Van", "Ilia Topuria", "Deiveson Figueiredo", "Natalia Silva"):
             fighter = next(f for f in fighters if normalize(f["name"]) == normalize(name))
-            print("Official UFC record:", name, fetch_record(fighter))
+            print("Official UFC record and statistics:", name, json.dumps(fetch_profile(fighter), ensure_ascii=False))
         return
     state = json.loads(STATE.read_text(encoding="utf-8"))
     if state.get("source") != "UFC":

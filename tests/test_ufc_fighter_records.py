@@ -11,6 +11,18 @@ SPEC.loader.exec_module(module)
 
 
 class OfficialRecordsTest(unittest.TestCase):
+    def test_stats_require_complete_core_and_preserve_missing_optional(self):
+        page = '<h1 class="hero-profile__name">A Fighter</h1><p class="hero-profile__division-body">11-2-0 (W-L-D)</p>'
+        for label, value in [("Sig. Str. Landed", 4.2), ("Sig. Str. Absorbed", 2.3), ("Takedown avg", 0), ("Submission avg", 0.5)]:
+            page += f'<div class="c-stat-compare__number">{value}<div class="c-stat-compare__label">{label}</div></div>'
+        parsed = module.parse_profile(page, {"name": "A Fighter"})
+        self.assertEqual(parsed["info"]["takedownAverage"], 0)
+        self.assertNotIn("koWins", parsed["info"])
+        with self.assertRaises(ValueError):
+            module.parse_profile(page.replace("Sig. Str. Landed", "Other stat"), {"name": "A Fighter"})
+        with self.assertRaises(ValueError):
+            module.parse_profile(page + '<title>Striking accuracy 101%</title>', {"name": "A Fighter"})
+
     def test_identity_and_record_validation(self):
         page = '<h1 class="hero-profile__name">A Fighter</h1><p class="hero-profile__division-body">11-2-0 (W-L-D)</p>'
         self.assertEqual(module.parse_record(page, {"name": "A Fighter"}), "11-2-0")
@@ -28,7 +40,7 @@ class OfficialRecordsTest(unittest.TestCase):
         calls = []
         def fetch(fighter):
             calls.append(fighter["id"])
-            return values[fighter["id"]]
+            return {"record": values[fighter["id"]], "info": {"strikesLanded": 4.5, "takedownAverage": 0}}
         with tempfile.TemporaryDirectory() as tmp, patch.object(module, "STATE", Path(tmp) / "feed.json"):
             now = datetime(2026, 10, 3, tzinfo=timezone.utc)
             module.sync([event], state, fighters, fetch=fetch, now=now)
@@ -38,6 +50,7 @@ class OfficialRecordsTest(unittest.TestCase):
             module.sync([event], state, fighters, fetch=fetch, now=now)
             self.assertEqual(calls, ["a", "b", "b"])
             self.assertEqual(state["processedEventIds"], ["new"])
+            self.assertEqual(state["records"]["a"]["info"]["strikesLanded"], 4.5)
             module.sync([event], state, fighters, fetch=fetch, now=now)
             self.assertEqual(calls, ["a", "b", "b"])
 

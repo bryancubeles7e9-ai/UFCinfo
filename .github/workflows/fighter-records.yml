@@ -31,6 +31,8 @@ jobs:
           node-version: '22'
       - name: Test conservación y actualización de récords
         run: python3 -m unittest discover -s tests -p 'test_ufc_fighter_records.py'
+      - name: Test carga dinámica de estadísticas
+        run: node tests/test-fighter-records-feed.mjs
       - name: Comprobar perfiles reales de UFC
         if: github.event_name != 'schedule'
         run: python3 scripts/sync-ufc-fighter-records.py --probe

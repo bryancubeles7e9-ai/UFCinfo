@@ -54,5 +54,6 @@ export function renderExtendedFighterInfo(fighter) {
     <p>Golpes significativos: golpes a distancia y golpes de potencia en clinch o suelo. La defensa indica el porcentaje de intentos rivales que no conectan. Las medias de derribos, intentos de sumisión y knockdowns se expresan por 15 minutos.</p>
     <p>Las finalizaciones son los totales que publica el perfil; pueden abarcar combates fuera de UFC. La edad y el peso corresponden a esta copia del perfil.</p>
     <p>Consulta: ${esc(dateLabel(info.consulted))} · Copia fechada · <a class="text-link" href="${esc(info.source)}" target="_blank" rel="noopener noreferrer">Fuente: perfil oficial UFC ↗</a></p>
+    ${info.statisticsConsulted ? `<p>Estadísticas actualizadas: ${esc(dateLabel(info.statisticsConsulted))} · <a class="text-link" href="${esc(info.statisticsSource)}" target="_blank" rel="noopener noreferrer">Fuente: UFC ↗</a></p>` : ""}
   </section>`;
 }

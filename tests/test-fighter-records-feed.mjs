@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import { directoryFighters } from '../assets/js/fighter-directory.js';
+import { fighterInfo } from '../assets/js/fighter-info-data.js';
+import { refreshFighterRecords } from '../assets/js/fighter-records-feed.js';
+const fighter = directoryFighters.find(f => f.id === 'topuria');
+const gym = fighterInfo.topuria.gym;
+let entry = {record: '18-1-0', source: 'UFC', info: {strikesLanded: 5, strikesAbsorbed: 2,
+  takedownAverage: 0, submissionAverage: 0.2, statisticsSource: fighter.source, statisticsConsulted: '2026-10-12'}};
+globalThis.fetch = async () => ({ok: true, json: async () => ({schemaVersion: 1, source: 'UFC', records: {topuria: entry}})});
+assert.equal(await refreshFighterRecords(), true);
+assert.equal(fighter.record, '18-1-0');
+assert.equal(fighterInfo.topuria.strikesLanded, 5);
+assert.equal(fighterInfo.topuria.takedownAverage, 0);
+assert.equal(fighterInfo.topuria.gym, gym);
+entry = {...entry, record: '19-1-0', info: {...entry.info, strikingAccuracy: 150}};
+assert.equal(await refreshFighterRecords(), false);
+assert.equal(fighter.record, '18-1-0');
+globalThis.fetch = async () => {throw new Error('offline');};
+assert.equal(await refreshFighterRecords(), false);
+assert.equal(fighterInfo.topuria.strikesLanded, 5);
+console.log('PASS: records and stats update together; invalid feed and network failures preserve prior data');
