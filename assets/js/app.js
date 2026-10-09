@@ -5,6 +5,7 @@ import { initializeAccount } from "./account.js";
 import { eventCalendar } from "./calendar.js";
 import { followingActivity, followingFighterCard, followingBoutCard, resolvePinnedBout, boutPinKey } from "./following.js";
 import { additionalFighters, directoryFighters, directoryFighterById, fighterNameLink, normalizeFighterName } from "./fighter-directory.js";
+import { refreshFighterRecords } from "./fighter-records-feed.js";
 import { renderExtendedFighterInfo } from "./fighter-info.js";
 import { eventsFeed, refreshEvents } from "./events-feed.js";
 import {
@@ -63,7 +64,7 @@ function additionalFighterCard(fighter) {
 function additionalFighterProfile(fighter) {
   const dimension = (v) => v == null ? "No indicado" : `${v} cm`;
   const rows = [["División", fighter.division], ["Récord · V-D-E", fighter.record], ["Apodo", fighter.nickname || "No indicado"], ["Estilo indicado por UFC", fighter.officialStyle || "No indicado"], ["Altura", dimension(fighter.heightCm)], ["Alcance", dimension(fighter.reachCm)], ["Lugar de nacimiento", fighter.birthplace || "No indicado"]];
-  return `<div class="profile-layout">${portrait(fighter, "large")}<div class="profile-copy"><p class="eyebrow">${esc(fighter.division)} · PERFIL UFC</p><h2>${esc(fighter.first)}<br>${esc(fighter.last)}</h2><section class="official-facts"><span class="badge orange">DATOS DEL PERFIL UFC</span><dl>${rows.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl><p>Consulta: ${formatDate(fighter.consulted + "T12:00:00Z")} · Copia fechada</p></section>${renderExtendedFighterInfo(fighter)}<a class="button small" href="${esc(fighter.source)}" target="_blank" rel="noopener noreferrer">Perfil oficial UFC ↗</a>${followButton(fighter)}<p class="data-note">Fotografía y datos del perfil oficial de UFC. El lugar de nacimiento no implica nacionalidad deportiva.</p></div></div>`;
+  return `<div class="profile-layout">${portrait(fighter, "large")}<div class="profile-copy"><p class="eyebrow">${esc(fighter.division)} · PERFIL UFC</p><h2>${esc(fighter.first)}<br>${esc(fighter.last)}</h2><section class="official-facts"><span class="badge orange">DATOS DEL PERFIL UFC</span><dl>${rows.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl><p>Consulta: ${formatDate(fighter.consulted + "T12:00:00Z")} · Copia fechada${fighter.recordSource ? ` · Récord: ${esc(fighter.recordSource)}` : ""}</p></section>${renderExtendedFighterInfo(fighter)}<a class="button small" href="${esc(fighter.source)}" target="_blank" rel="noopener noreferrer">Perfil oficial UFC ↗</a>${followButton(fighter)}<p class="data-note">Fotografía y datos del perfil oficial de UFC. El lugar de nacimiento no implica nacionalidad deportiva.</p></div></div>`;
 }
 function fighterCard(fighter) {
   const favorite = store.state.favorites.includes(fighter.id);
@@ -256,7 +257,7 @@ function showProfile(id) {
     return;
   }
   $("#fighter-detail").innerHTML =
-    `<div class="profile-layout">${portrait(fighter, "large")}<div class="profile-copy"><p class="eyebrow">${esc(fighter.country)} · ${styleNames[fighter.style]}</p><h2>${esc(fighter.first)}<br>${esc(fighter.last)}</h2><p>${esc(fighter.tagline)}</p><section class="official-facts"><span class="badge orange">DATOS DEL PERFIL UFC</span><dl><div><dt>División</dt><dd>${esc(fighter.division)}</dd></div><div><dt>Récord · V-D-E</dt><dd>${esc(fighter.record)}</dd></div><div><dt>Apodo</dt><dd>${esc(fighter.nickname || "No indicado")}</dd></div><div><dt>Estilo indicado por UFC</dt><dd>${esc(fighter.officialStyle || "No indicado")}</dd></div><div><dt>Altura / alcance</dt><dd>${fighter.heightCm ?? "—"} cm / ${fighter.reachCm ?? "—"} cm</dd></div><div><dt>Lugar de nacimiento</dt><dd>${esc(fighter.birthplace || "No indicado")}</dd></div></dl><p>Consulta: 2 de octubre de 2026 · Copia fechada</p></section>${renderCombatDetails(fighter)}${renderChampionships(fighter)}${renderExtendedFighterInfo(fighter)}<a class="button small" href="${fighter.source}" target="_blank" rel="noopener noreferrer">Perfil oficial UFC ↗</a><button class="outline-button small" data-favorite="${fighter.id}">${store.state.favorites.includes(id) ? "✓ Siguiendo · Dejar de seguir" : "♡ Seguir luchador"}</button><p class="data-note">Fotografía y datos consultados en el perfil oficial de UFC. Consulta la fuente para cambios posteriores.</p></div></div>`;
+    `<div class="profile-layout">${portrait(fighter, "large")}<div class="profile-copy"><p class="eyebrow">${esc(fighter.country)} · ${styleNames[fighter.style]}</p><h2>${esc(fighter.first)}<br>${esc(fighter.last)}</h2><p>${esc(fighter.tagline)}</p><section class="official-facts"><span class="badge orange">DATOS DEL PERFIL UFC</span><dl><div><dt>División</dt><dd>${esc(fighter.division)}</dd></div><div><dt>Récord · V-D-E</dt><dd>${esc(fighter.record)}</dd></div><div><dt>Apodo</dt><dd>${esc(fighter.nickname || "No indicado")}</dd></div><div><dt>Estilo indicado por UFC</dt><dd>${esc(fighter.officialStyle || "No indicado")}</dd></div><div><dt>Altura / alcance</dt><dd>${fighter.heightCm ?? "—"} cm / ${fighter.reachCm ?? "—"} cm</dd></div><div><dt>Lugar de nacimiento</dt><dd>${esc(fighter.birthplace || "No indicado")}</dd></div></dl><p>Consulta: 2 de octubre de 2026 · Copia fechada${fighter.recordSource ? ` · Récord: ${esc(fighter.recordSource)}` : ""}</p></section>${renderCombatDetails(fighter)}${renderChampionships(fighter)}${renderExtendedFighterInfo(fighter)}<a class="button small" href="${fighter.source}" target="_blank" rel="noopener noreferrer">Perfil oficial UFC ↗</a><button class="outline-button small" data-favorite="${fighter.id}">${store.state.favorites.includes(id) ? "✓ Siguiendo · Dejar de seguir" : "♡ Seguir luchador"}</button><p class="data-note">Fotografía y datos consultados en el perfil oficial de UFC. Consulta la fuente para cambios posteriores.</p></div></div>`;
   if (!$("#fighter-dialog").open) $("#fighter-dialog").showModal();
 }
 function updateCountdowns() {
@@ -525,6 +526,14 @@ async function updateEventFeed() {
   if ($("#event-dialog").open && officialId) showOfficialEvent(officialId);
 }
 updateEventFeed();
+async function updateFighterRecords() {
+  if (await refreshFighterRecords()) {
+    renderAll();
+    if ($("#fighter-dialog").open && $("#fighter-detail").dataset.fighterId) showProfile($("#fighter-detail").dataset.fighterId);
+  }
+}
+updateFighterRecords();
+setInterval(updateFighterRecords, 300000);
 setInterval(updateEventFeed, 300000);
 document.addEventListener("visibilitychange", () => {
   if (!document.hidden) updateEventFeed();
