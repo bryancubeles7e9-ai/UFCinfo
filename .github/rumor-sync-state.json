@@ -1,8 +1,12 @@
 {
   "schemaVersion": 1,
   "reservedCredits": 15900,
-  "estimatedCredits": 8310,
+  "estimatedCredits": 8325,
   "lastSuccessAt": "2026-10-08T20:54:37.701Z",
-  "pending": null,
+  "pending": {
+    "query": "(from:CCLegaspi OR from:KOlmeneroMMA OR from:ericaiexander OR from:MMASINLIMITES OR from:ClubDeLasMMA OR from:upfrontmma OR from:pelunaton OR from:ChampRDS) (fight OR pelea OR combate OR vs OR rematch OR revancha OR offers OR challenge OR rumor OR rival OR targeted OR talks OR posible OR responds OR response OR responde OR reta OR agreed OR accepted OR negotiations OR negociaciones OR enfrentará OR peleará OR bout OR versus) -filter:retweets -filter:replies since_time:1791492757 until_time:1791506820",
+    "cursor": "DAADDAABCgABHUJHH9iX0fEKAAIdQkcf2JfR8QAIAAIAAAACCAADAAAAAAgABAAAAAAKAAUdQmTtSQAnEAoABh1CZO1I_9jwCwAHAAAAKEVtUEM2d0FBQWZRL2dHSk4wdkdwL0FBQUFBRWRRa2NmMkpmUjhRPT0AAA",
+    "until": "2026-10-09T00:47:00.855Z"
+  },
   "archive": []
 }
