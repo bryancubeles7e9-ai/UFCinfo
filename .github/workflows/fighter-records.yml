@@ -6,7 +6,7 @@ on:
   push:
     branches: [main]
     paths:
-      - scripts/sync-fighter-records.py
+      - scripts/sync-ufc-fighter-records.py
       - .github/workflows/fighter-records.yml
 permissions:
   contents: read
@@ -15,8 +15,6 @@ concurrency:
   cancel-in-progress: false
 jobs:
   sync:
-    # Enable scheduled calls only after a live sample returns usable records.
-    if: github.event_name == 'workflow_dispatch' || vars.API_SPORTS_RECORDS_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -31,22 +29,20 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Comprobar conexión y formato real
+      - name: Test conservación y actualización de récords
+        run: python3 -m unittest discover -s tests -p 'test_ufc_fighter_records.py'
+      - name: Comprobar perfiles reales de UFC
         if: github.event_name != 'schedule'
-        env:
-          API_SPORTS_MMA_KEY: ${{ secrets.API_SPORTS_MMA_KEY }}
-        run: python3 scripts/sync-fighter-records.py --probe
+        run: python3 scripts/sync-ufc-fighter-records.py --probe
       - name: Actualizar solo luchadores de eventos terminados
-        env:
-          API_SPORTS_MMA_KEY: ${{ secrets.API_SPORTS_MMA_KEY }}
-        run: python3 scripts/sync-fighter-records.py
+        run: python3 scripts/sync-ufc-fighter-records.py
       - name: Guardar fichas verificadas
         run: |
           git add assets/data/fighter-records.json
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git commit -m 'Actualizar récords MMA de luchadores UFC'
+            git commit -m 'Actualizar récords oficiales de luchadores UFC'
             git pull --rebase origin main
             git push origin HEAD:main
           fi

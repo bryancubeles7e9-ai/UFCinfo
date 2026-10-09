@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "source": "API-Sports MMA",
+  "source": "UFC",
   "processedEventIds": [
     "ufc-332",
     "ufc-fight-night-september-26-2026",
@@ -38,6 +38,5 @@
     "ufc-324"
   ],
   "completedFighters": {},
-  "apiIds": {},
   "records": {}
 }
