@@ -6,8 +6,15 @@ on:
         description: 'Buscar los ultimos 7 dias (hasta 10 consultas, 3000 creditos reservados)'
         type: boolean
         default: false
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/rumor-sync.yml'
+      - 'scripts/sync-rumors.mjs'
+      - 'tests/test-rumor-search-time.mjs'
   schedule:
-    - cron: '17 * * * *'
+    # Backup opportunities; the script skips an already searched hour.
+    - cron: '17,37,57 * * * *'
 permissions:
   contents: write
 concurrency:

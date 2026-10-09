@@ -49,7 +49,11 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
     const notDue=state.lastSuccessAt && (config.alignToHour === true && config.intervalMinutes === 60
       ? Math.floor(now.getTime()/3600000) <= Math.floor(Date.parse(state.lastSuccessAt)/3600000)
       : now.getTime()-Date.parse(state.lastSuccessAt)<config.intervalMinutes*60000);
-    if (!backfillHours && !state.pending && notDue) return {feed:previous,added:0,skipped:0,requests:0,mode:'not-due'};
+    // Backup triggers must not multiply paid pages while pagination is pending.
+    const lastSearch=Date.parse(previous.lastSearchedAt);
+    const searchedThisHour=config.alignToHour === true && config.intervalMinutes === 60
+      && Number.isFinite(lastSearch) && Math.floor(now.getTime()/3600000) <= Math.floor(lastSearch/3600000);
+    if (!backfillHours && (searchedThisHour || (!state.pending && notDue))) return {feed:previous,added:0,skipped:0,requests:0,mode:'not-due'};
     const key=process.env.TWITTERAPI_IO_KEY?.trim() || (await readFile(resolve(projectRoot,'.ufcinfo-data/twitterapi.key'),'utf8')).trim();
     if (!key) throw Error('Missing TwitterAPI.io key.');
     const end=Math.floor(now.getTime()/1000);

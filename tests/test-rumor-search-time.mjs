@@ -37,9 +37,15 @@ try {
  setLanguage('ca');assert.ok(translate(rumorSearchStatus({})).includes('Última cerca: encara no disponible.'));
  setLanguage('en');assert.ok(translate(rumorSearchStatus({})).includes('Last search: not yet available.'));
  setLanguage('es');
+ const paginated=await syncRumors({projectRoot:root,configOverride:config,now:new Date('2026-10-08T15:17:00Z'),fetchImpl:async()=>new Response(JSON.stringify({tweets:[],has_next_page:true,next_cursor:'page-2'}))});
+ assert.equal(paginated.requests,1);assert.equal(paginated.truncated,true);
+ const backup=await syncRumors({projectRoot:root,configOverride:config,now:new Date('2026-10-08T15:37:00Z'),fetchImpl:()=>assert.fail('Backup must not repeat paid API pages')});
+ assert.equal(backup.requests,0);assert.equal(backup.feed.lastSearchedAt,paginated.feed.lastSearchedAt);
+ const resumed=await syncRumors({projectRoot:root,configOverride:config,now:new Date('2026-10-08T16:17:00Z'),fetchImpl:async url=>{assert.equal(new URL(url).searchParams.get('cursor'),'page-2');return new Response(JSON.stringify({tweets:[],has_next_page:false}));}});
+ assert.equal(resumed.requests,1);assert.equal(resumed.truncated,false);
 } finally {await rm(root,{recursive:true,force:true});}
 const workflow=await readFile(new URL('../.github/workflows/rumor-sync.yml',import.meta.url),'utf8');
-assert.ok(workflow.includes("cron: '17 * * * *'"));
+assert.ok(workflow.includes("cron: '17,37,57 * * * *'"));
 const index=await readFile(new URL('../index.html',import.meta.url),'utf8');
 assert.ok(index.includes('id="rumor-search-status"'));
 console.log('PASS: hourly boundaries, real search timestamp, empty results, failures, skipped runs, offline imports, credit cap, translations and schedule');
