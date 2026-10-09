@@ -25,10 +25,11 @@ export async function refreshFighterRecords() {
         !feed.records || typeof feed.records !== 'object' || Array.isArray(feed.records)) return false;
     const updates = Object.entries(feed.records);
     if (updates.some(([id, entry]) => !byId.has(id) || entry?.source !== 'UFC' ||
-        !/^\d{1,3}-\d{1,3}-\d{1,3}$/.test(entry.record) || !validStats(entry, byId.get(id)))) return false;
+        !/^\d{1,3}-\d{1,3}-\d{1,3}$/.test(entry.record) || !validStats(entry, byId.get(id)) || !Number.isFinite(Date.parse(entry.updatedAt)))) return false;
     for (const [id, entry] of updates) {
       byId.get(id).record = entry.record;
       byId.get(id).recordSource = 'UFC.com';
+      byId.get(id).recordConsultedAt = entry.updatedAt;
       if (entry.info) {
         const fighter = byId.get(id);
         const info = fighter.info || fighterInfo[id] || {};

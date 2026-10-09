@@ -13,6 +13,15 @@ function dateLabel(date) {
     day: "numeric", month: "long", year: "numeric", timeZone: "UTC",
   });
 }
+export function renderFighterConsultation(fighter) {
+  if (fighter.recordConsultedAt) {
+    const timestamp = new Intl.DateTimeFormat(getLocale(), { dateStyle: "medium", timeStyle: "short" }).format(new Date(fighter.recordConsultedAt));
+    return `<p class="data-note"><small>Última consulta de récord y estadísticas: ${esc(timestamp)} · UFC.com</small></p>`;
+  }
+  const stats = fighter.info || fighterInfo[fighter.id];
+  return `<p class="data-note"><small>Última consulta · Récord: ${esc(dateLabel(fighter.consulted))}${stats?.consulted ? ` · Estadísticas: ${esc(dateLabel(stats.consulted))}` : ""}</small></p>`;
+}
+
 function facts(rows) {
   return `<dl>${rows.map(([label, text]) => `<div><dt>${esc(label)}</dt><dd>${esc(text)}</dd></div>`).join("")}</dl>`;
 }
