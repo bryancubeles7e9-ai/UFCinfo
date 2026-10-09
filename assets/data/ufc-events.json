@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-08T22:12:28.340269+00:00",
+  "synchronizedAt": "2026-10-09T06:08:53.432071+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -587,7 +587,7 @@
       "location": "Rogers Place",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "checkedAt": "2026-10-08",
+      "checkedAt": "2026-10-09",
       "bouts": [
         {
           "red": "Joaquin Buckley",
@@ -666,7 +666,7 @@
       "location": "Meta APEX",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
-      "checkedAt": "2026-10-08",
+      "checkedAt": "2026-10-09",
       "bouts": [
         {
           "red": "Brendan Allen",
@@ -735,15 +735,15 @@
       "location": "Delta Center",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-332",
-      "checkedAt": "2026-10-08",
+      "checkedAt": "2026-10-09",
       "bouts": [
         {
           "red": "Natalia Silva",
           "blue": "Wang Cong",
-          "division": "Women's Flyweight Title",
+          "division": "Women's Flyweight",
           "winner": "Natalia Silva",
           "outcome": null,
-          "method": "Decision - Unanimous",
+          "method": "U-DEC",
           "round": "5",
           "time": "5:00"
         },
@@ -768,12 +768,12 @@
           "time": "4:08"
         },
         {
-          "red": "Roberto Soldić",
+          "red": "Roberto Soldic",
           "blue": "Khaos Williams",
           "division": "Welterweight",
-          "winner": "Roberto Soldić",
+          "winner": "Roberto Soldic",
           "outcome": null,
-          "method": "Decision - Unanimous",
+          "method": "U-DEC",
           "round": "3",
           "time": "5:00"
         },
