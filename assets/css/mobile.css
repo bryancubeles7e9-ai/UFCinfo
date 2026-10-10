@@ -253,3 +253,81 @@
   .lab-table thead th:first-child { width: 40%; }
   .official-bout-names { gap: 8px; }
 }
+
+/* Compact catalogue; the complete information remains in the fighter dialog. */
+.mobile-card-record { display: none; }
+@media (max-width: 700px) {
+  .view[data-view="luchadores"] .fighter-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .view[data-view="luchadores"] .fighter-card {
+    display: grid;
+    grid-template-columns: 116px minmax(0, 1fr);
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .view[data-view="luchadores"] .fighter-card > .fighter-portrait {
+    height: 190px;
+    min-height: 0;
+    align-self: center;
+    background: radial-gradient(ellipse at bottom, color-mix(in srgb, var(--fighter-color) 18%, var(--surface)), var(--surface));
+  }
+  .view[data-view="luchadores"] .fighter-card .fighter-photo {
+    inset: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    transform: none;
+    object-fit: contain;
+    object-position: center bottom;
+  }
+  .view[data-view="luchadores"] .portrait-grid,
+  .view[data-view="luchadores"] .portrait-initials,
+  .view[data-view="luchadores"] .portrait-number,
+  .view[data-view="luchadores"] .portrait-label,
+  .view[data-view="luchadores"] .fighter-card-meta,
+  .view[data-view="luchadores"] .fighter-card-body > .championship-badge,
+  .view[data-view="luchadores"] .card-combat-info,
+  .view[data-view="luchadores"] .fighter-card-footer,
+  .view[data-view="luchadores"] .fighter-card-body > p:not(.fighter-division):not(.mobile-card-record) {
+    display: none;
+  }
+  .view[data-view="luchadores"] .fighter-card-body { padding: 18px 16px; }
+  .view[data-view="luchadores"] .fighter-name {
+    min-height: 44px;
+    margin: 0 0 8px;
+    font-size: 18px;
+    line-height: 1.2;
+    width: 100%;
+  }
+  .view[data-view="luchadores"] .fighter-name strong {
+    font-size: clamp(22px, 5.5vw, 28px);
+    line-height: 1.1;
+    margin-top: 3px;
+  }
+  .view[data-view="luchadores"] .fighter-division {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .view[data-view="luchadores"] .mobile-card-record {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 14px 0 0;
+  }
+  .mobile-card-record span { font-size: 10px; letter-spacing: .5px; color: var(--muted); }
+  .mobile-card-record strong { font-size: 19px; line-height: 1.2; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .view[data-view="luchadores"] .fighter-card > .favorite-button {
+    top: 8px;
+    left: 8px;
+    right: auto;
+    border-radius: 50%;
+    background: #101010bf;
+  }
+}
