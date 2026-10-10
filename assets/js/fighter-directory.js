@@ -20,6 +20,6 @@ export const directoryFighterByName = (name) => byName.get(normalizeFighterName(
 export function fighterNameLink(name, className = "ranking-name") {
   const fighter = directoryFighterByName(name);
   return fighter
-    ? `<button translate="no" class="${esc(className)}" data-profile="${esc(fighter.id)}">${esc(name)} <span>↗</span></button>`
-    : `<a translate="no" class="${esc(className)}" href="https://www.ufc.com/athletes" target="_blank" rel="noopener noreferrer">${esc(name)} ↗</a>`;
+    ? `<button translate="no" class="${esc(className)}" data-profile="${esc(fighter.id)}">${esc(name)} <span>›</span></button>`
+    : `<a translate="no" class="${esc(className)}" href="https://www.ufc.com/athletes" target="_blank" rel="noopener noreferrer">${esc(name)} ›</a>`;
 }

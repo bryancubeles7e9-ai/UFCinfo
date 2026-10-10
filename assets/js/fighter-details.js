@@ -47,7 +47,7 @@ export function compactCombatInfo(fighter) {
 
 export function renderCombatDetails(fighter) {
   const stance = stanceNames[fighter.stance];
-  return `<section class="combat-details"><div class="combat-stance"><span class="stance-emblem">${stance?.code || "—"}</span><div><p class="eyebrow">GUARDIA REGISTRADA</p><h3>${esc(stance?.label || "No indicada")}</h3><a class="text-link" href="${esc(fighter.stanceSource)}" target="_blank" rel="noopener noreferrer">Fuente: UFC Stats ↗</a></div></div><div class="martial-base"><p class="eyebrow">BASE / FORMACIÓN MARCIAL</p><h3>${esc(fighter.martialBase)}</h3><p>${esc(fighter.martialBaseNote)}</p><a class="text-link" href="${esc(fighter.martialBaseSource)}" target="_blank" rel="noopener noreferrer">Formación en UFC ↗</a></div></section>`;
+  return `<section class="combat-details"><div class="combat-stance"><span class="stance-emblem">${stance?.code || "—"}</span><div><p class="eyebrow">GUARDIA REGISTRADA</p><h3>${esc(stance?.label || "No indicada")}</h3><a class="text-link" href="${esc(fighter.stanceSource)}" target="_blank" rel="noopener noreferrer">Fuente: UFC Stats ›</a></div></div><div class="martial-base"><p class="eyebrow">BASE / FORMACIÓN MARCIAL</p><h3>${esc(fighter.martialBase)}</h3><p>${esc(fighter.martialBaseNote)}</p><a class="text-link" href="${esc(fighter.martialBaseSource)}" target="_blank" rel="noopener noreferrer">Formación en UFC ›</a></div></section>`;
 }
 
 export function renderChampionships(fighter) {
