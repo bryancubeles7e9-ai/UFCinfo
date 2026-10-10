@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-10T20:44:23.605017+00:00",
+  "synchronizedAt": "2026-10-10T22:11:38.767228+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -511,19 +511,20 @@
     {
       "id": "ufc-333",
       "number": 333,
+      "eventKind": "numbered",
       "title": "UFC 333",
       "subtitle": "Alexander Volkanovski vs Movsar Evloev",
-      "status": "announced",
+      "status": "scheduled",
       "date": "2026-10-24T18:00:00+00:00",
-      "location": "Etihad Arena, Yas Island/Yas West, United Arab Emirates",
+      "location": "Etihad Arena",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-333",
-      "checkedAt": "2026-10-05",
+      "checkedAt": "2026-10-10",
       "bouts": [
         {
           "red": "Alexander Volkanovski",
           "blue": "Movsar Evloev",
-          "division": "Featherweight",
+          "division": "Featherweight Title",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -533,7 +534,7 @@
         {
           "red": "Petr Yan",
           "blue": "Merab Dvalishvili",
-          "division": "Bantamweight",
+          "division": "Bantamweight Title",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -541,7 +542,7 @@
           "time": ""
         },
         {
-          "red": "Lone'er Kavanagh",
+          "red": "Lone’er Kavanagh",
           "blue": "Ramazan Temirov",
           "division": "Flyweight",
           "winner": null,
@@ -561,8 +562,8 @@
           "time": ""
         },
         {
-          "red": "Arnold Allen",
-          "blue": "Aaron Pico",
+          "red": "Aaron Pico",
+          "blue": "Losene Keita",
           "division": "Featherweight",
           "winner": null,
           "outcome": null,
@@ -571,10 +572,10 @@
           "time": ""
         }
       ],
+      "dataSource": "Cito",
       "poster": "assets/images/events/ufc-333.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/102426-ufc-333-volkanovski-vs-evloev-EVENT-ART.jpg?h=d1cb525d&itok=ceS_oo8W",
-      "posterAlt": "UFC featherweight champion Alexander Volkanovski and Movsar Evloev side by side over a black and gold background",
-      "dataSource": "UFCalendar"
+      "posterAlt": "UFC featherweight champion Alexander Volkanovski and Movsar Evloev side by side over a black and gold background"
     },
     {
       "id": "ufc-fight-night-october-17-2026",
