@@ -1,7 +1,6 @@
 name: Actualizar eventos UFC
 on:
-  schedule:
-    - cron: '17 */12 * * *'
+  # cron-job.org dispatches at 02:17 and 14:17 Europe/Madrid.
   workflow_dispatch:
   push:
     branches: [main]

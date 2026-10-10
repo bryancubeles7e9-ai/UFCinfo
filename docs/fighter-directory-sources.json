@@ -1130,5 +1130,61 @@
       "Derrick Lewis"
     ],
     "source": "https://www.ufc.com/athlete/derrick-lewis"
+  },
+  {
+    "id": "ufc-matheus-camilo",
+    "name": "Matheus Camilo",
+    "aliases": [
+      "Matheus Camilo"
+    ],
+    "source": "https://www.ufc.com/athlete/matheus-camilo"
+  },
+  {
+    "id": "ufc-jai-herbert",
+    "name": "Jai Herbert",
+    "aliases": [
+      "Jai Herbert"
+    ],
+    "source": "https://www.ufc.com/athlete/jai-herbert"
+  },
+  {
+    "id": "ufc-ketlen-souza",
+    "name": "Ketlen Souza",
+    "aliases": [
+      "Ketlen Souza"
+    ],
+    "source": "https://www.ufc.com/athlete/ketlen-souza"
+  },
+  {
+    "id": "ufc-andre-fili",
+    "name": "Andre Fili",
+    "aliases": [
+      "Andre Fili"
+    ],
+    "source": "https://www.ufc.com/athlete/andre-fili"
+  },
+  {
+    "id": "ufc-kai-kamaka-iii",
+    "name": "Kai Kamaka III",
+    "aliases": [
+      "Kai Kamaka III"
+    ],
+    "source": "https://www.ufc.com/athlete/kai-kamaka-iii"
+  },
+  {
+    "id": "ufc-malcolm-wellmaker",
+    "name": "Malcolm Wellmaker",
+    "aliases": [
+      "Malcolm Wellmaker"
+    ],
+    "source": "https://www.ufc.com/athlete/malcolm-wellmaker"
+  },
+  {
+    "id": "ufc-otari-tanzilovi",
+    "name": "Otari Tanzilovi",
+    "aliases": [
+      "Otari Tanzilovi"
+    ],
+    "source": "https://www.ufc.com/athlete/otari-tanzilovi"
   }
 ]

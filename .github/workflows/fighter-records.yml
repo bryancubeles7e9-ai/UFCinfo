@@ -1,7 +1,6 @@
 name: Actualizar récords de luchadores
 on:
-  schedule:
-    - cron: '47 9 * * *'
+  # cron-job.org dispatches daily at 11:47 Europe/Madrid.
   workflow_dispatch:
   push:
     branches: [main]
@@ -33,6 +32,8 @@ jobs:
         run: python3 -m unittest discover -s tests -p 'test_ufc_fighter_records.py'
       - name: Test carga dinámica de estadísticas
         run: node tests/test-fighter-records-feed.mjs
+      - name: Comprobar cobertura de la cartelera del 10 de octubre
+        run: node tests/test-october-10-card.mjs
       - name: Comprobar perfiles reales de UFC
         if: github.event_name != 'schedule'
         run: python3 scripts/sync-ufc-fighter-records.py --probe
