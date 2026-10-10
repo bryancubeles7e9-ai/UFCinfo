@@ -358,7 +358,6 @@
   :is(.button, .outline-button, .icon-button, .favorite-button, .fighter-name, .segmented button):not(:disabled):active {
     transform: scale(.97);
   }
-  .favorite-button.selected { animation: mobile-follow-pop 240ms ease-out; }
 }
 
 @keyframes mobile-view-enter {
@@ -380,4 +379,34 @@
 @keyframes mobile-follow-pop {
   0%, 100% { transform: scale(1); }
   45% { transform: scale(1.12); }
+}
+
+/* Celebrate a new follow only after the user's action, never on a feed refresh. */
+@media (max-width: 700px) and (prefers-reduced-motion: no-preference) {
+  [data-favorite].follow-celebrate {
+    animation: mobile-follow-heartbeat 520ms cubic-bezier(.2,.8,.3,1);
+    isolation: isolate;
+    overflow: visible;
+  }
+  [data-favorite].follow-celebrate:not(.favorite-button) { position: relative; }
+  [data-favorite].follow-celebrate::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border: 2px solid var(--accent);
+    border-radius: inherit;
+    opacity: 0;
+    pointer-events: none;
+    animation: mobile-follow-ring 520ms ease-out;
+  }
+}
+@keyframes mobile-follow-heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.14); }
+  50% { transform: scale(.96); }
+  72% { transform: scale(1.06); }
+}
+@keyframes mobile-follow-ring {
+  0% { opacity: .85; transform: scale(.9); }
+  100% { opacity: 0; transform: scale(1.35); }
 }

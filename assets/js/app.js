@@ -60,6 +60,16 @@ function followButton(fighter, compact = false) {
   const following = store.state.favorites.includes(fighter.id);
   return `<button class="${compact ? `favorite-button ${following ? "selected" : ""}` : "outline-button small"}" data-favorite="${esc(fighter.id)}" aria-pressed="${following}" aria-label="${following ? "Dejar de seguir a" : "Seguir a"} ${esc(fullName(fighter))}">${compact ? following ? "♥" : "♡" : following ? "✓ Siguiendo · Dejar de seguir" : "♡ Seguir luchador"}</button>`;
 }
+function animateFollow(id, fromDialog = false) {
+  if (!window.matchMedia("(max-width: 700px) and (prefers-reduced-motion: no-preference)").matches) return;
+  const scope = fromDialog ? $("#fighter-dialog") : document.querySelector(".view:not([hidden])");
+  if (!scope) return;
+  const buttons = [...scope.querySelectorAll("[data-favorite]")].filter(button => button.dataset.favorite === id);
+  for (const button of buttons) {
+    button.classList.add("follow-celebrate");
+    window.setTimeout(() => button.classList.remove("follow-celebrate"), 600);
+  }
+}
 function additionalFighterCard(fighter) {
   return `<article class="fighter-card">${portrait(fighter)}${followButton(fighter, true)}<div class="fighter-card-body"><div class="fighter-card-meta"><span>PERFIL OFICIAL UFC</span></div><button class="fighter-name" data-profile="${esc(fighter.id)}">${esc(fighter.first)}<strong>${esc(fighter.last)}</strong></button><p class="fighter-division">${esc(fighter.division)}</p><p class="mobile-card-record"><span>RÉCORD · V-D-E</span><strong>${esc(fighter.record || "—")}</strong></p><p>${esc(fighter.nickname || fighter.officialStyle || "Trayectoria y estadísticas oficiales")}</p><dl class="card-combat-info"><div><dt>RÉCORD · V-D-E</dt><dd>${esc(fighter.record)}</dd></div><div><dt>EQUIPO / GIMNASIO</dt><dd>${esc(fighter.info.gym || "No indicado")}</dd></div></dl><div class="fighter-card-footer"><span>EXPLORAR PERFIL</span><button class="icon-button" data-profile="${esc(fighter.id)}" aria-label="Ver ficha de ${esc(fullName(fighter))}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 5 7 7-7 7"/></svg></button></div></div></article>`;
 }
@@ -329,6 +339,7 @@ document.addEventListener("click", (event) => {
   const favorite = event.target.closest("[data-favorite]");
   if (favorite) {
     const id = favorite.dataset.favorite;
+    const fromDialog = Boolean(favorite.closest("#fighter-dialog"));
     if (!directoryFighterById(id)) return;
     const index = store.state.favorites.indexOf(id);
     if (index < 0) store.state.favorites.push(id);
@@ -339,6 +350,7 @@ document.addEventListener("click", (event) => {
       $("#fighter-dialog").close();
       showProfile(id);
     }
+    if (index < 0) animateFollow(id, fromDialog);
     toast(index < 0 ? "Siguiendo al luchador" : "Has dejado de seguir al luchador");
     return;
   }
@@ -390,6 +402,7 @@ $("#follow-selected").addEventListener("click", () => {
   store.state.favorites.push(id);
   persist();
   renderAll();
+  animateFollow(id);
   toast("Luchador añadido a tu esquina");
 });
 $("#favorites-only").addEventListener("click", () => {
