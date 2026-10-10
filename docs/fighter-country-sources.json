@@ -1,0 +1,4214 @@
+{
+  "charles-oliveira": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "diego-lopes": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sergei-pavlovich": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alex-pereira": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "joe-pyfer": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "bo-nickal": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "brandon-moreno": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "charles-johnson": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jiri-prochazka": {
+    "code": "CZ",
+    "country": "Czechia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "navajo-stirling": {
+    "code": "NZ",
+    "country": "New Zealand",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "aljamain-sterling": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kevin-vallejos": {
+    "code": "AR",
+    "country": "Argentina",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "dan-hooker": {
+    "code": "NZ",
+    "country": "New Zealand",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "brian-ortega": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jared-cannonier": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ikram-aliskerov": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "shamil-gaziev": {
+    "code": "BH",
+    "country": "Bahrain",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tallison-teixeira": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jake-matthews": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tahir-abdullayev": {
+    "code": "AZ",
+    "country": "Azerbaijan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "aleksandre-topuria": {
+    "code": "GE",
+    "country": "Georgia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "santiago-luna": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "asu-almabayev": {
+    "code": "KZ",
+    "country": "Kazakhstan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kyoji-horiguchi": {
+    "code": "JP",
+    "country": "Japan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "amir-albazi": {
+    "code": "IQ",
+    "country": "Iraq",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alessandro-costa": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ciryl-gane": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "josh-hokit": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kayla-harrison": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "amanda-nunes": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "caio-borralho": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "yousri-belgaroui": {
+    "code": "NL",
+    "country": "Netherlands",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "uros-medic": {
+    "code": "RS",
+    "country": "Serbia",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kevin-holland": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "bilal-hasan": {
+    "code": "ID",
+    "country": "Indonesia",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "luis-gurule": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "drew-dober": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "chris-duncan": {
+    "code": "SF",
+    "country": "Scotland",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "stephen-thompson": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "charles-radtke": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "donte-johnson": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "baisangur-susurkaev": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jim-miller": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "terrance-mckinney": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "macy-chiasson": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "bia-mesquita": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "adrian-yanez": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "juan-diaz": {
+    "code": "PE",
+    "country": "Peru",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nazim-sadykhov": {
+    "code": "AZ",
+    "country": "Azerbaijan",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jefferson-nascimento": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gabriel-bonfim": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sean-brady": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tatiana-suarez": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "virna-jandiroba": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mantas-kondratavicius": {
+    "code": "LT",
+    "country": "Lithuania",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "wes-schultz": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "billy-elekana": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "lucas-fernando": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "austin-bashi": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "lucas-brennan": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "karine-silva": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gabriella-fernandes": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "keiichiro-nakamura-0": {
+    "code": "JP",
+    "country": "Japan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ollie-schmid": {
+    "code": "NZ",
+    "country": "New Zealand",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "seokhyeon-ko": {
+    "code": "KR",
+    "country": "South Korea",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "wellington-turman": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jonny-parsons": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jose-henrique": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "davey-grant": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "elijah-smith": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jose-delano": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "murtazali-magomedov": {
+    "code": "KG",
+    "country": "Kyrgyzstan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gabriel-lorenco": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alvin-hines": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "priscila-cachoeira": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nina-milosevic": {
+    "code": "RS",
+    "country": "Serbia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "renato-moicano": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tom-nolan": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "randy-brown": {
+    "code": "JM",
+    "country": "Jamaica",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "carlos-leal": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "lucia-szabova": {
+    "code": "SK",
+    "country": "Slovakia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tainara-lisboa": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "yana-santos": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "luana-santos": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "talita-alencar": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "piera-rodriguez": {
+    "code": "VE",
+    "country": "Venezuela",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nick-klein": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "joseph-kropschot": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rodrigo-sezinando": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "theodor-berggren": {
+    "code": "SE",
+    "country": "Sweden",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jean-paul-lebosnoyani": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "farman-hasanov": {
+    "code": "AZ",
+    "country": "Azerbaijan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "azamat-bekoev": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "andre-petroski": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "julian-erosa": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jeongyeong-lee": {
+    "code": "KR",
+    "country": "South Korea",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "francis-marshall": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gaston-bolanos": {
+    "code": "PE",
+    "country": "Peru",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alexander-volkanovski": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "movsar-evloev": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "petr-yan": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "merab-dvalishvili": {
+    "code": "GE",
+    "country": "Georgia",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "loneer-kavanagh": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ramazan-temirov": {
+    "code": "UZ",
+    "country": "Uzbekistan",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alexander-volkov": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rizvan-kuniev": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "aaron-pico": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "losene-keita": {
+    "code": "BE",
+    "country": "Belgium",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "azamat-murzakanov": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "dominick-reyes": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nikita-krylov": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "abdulrakhman-yakhyaev": {
+    "code": "TR",
+    "country": "Türkiye",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "abus-magomedov": {
+    "code": "DE",
+    "country": "Germany",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "cam-rowston": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "grant-dawson": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nurullo-aliev": {
+    "code": "TJ",
+    "country": "Tajikistan",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "joaquin-buckley": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mike-malott": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "erin-blanchfield": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jasmine-jasudavicius": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kyle-nelson": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "cristian-perez-gonzalez": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "marc-andre-barriault": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kyle-daukaus": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "louis-jourdain": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "timothy-cuamba": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mandel-nallo": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nate-landwehr": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tanner-boser": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jhonata-diniz": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "julien-leblanc": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nick-galanti": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "katlyn-cerminara": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "chad-anheliger": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "steven-koslow": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "melissa-croden": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "chelsea-chandler": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "cody-chovancek": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "suyoung-you": {
+    "code": "KR",
+    "country": "South Korea",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "brendan-allen": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "christian-leroy-duncan": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "matheus-camilo": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jai-herbert": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "loopy-godinez": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ketlen-souza": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "andre-fili": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kai-kamaka-iii": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "malcolm-wellmaker": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "otari-tanzilovi": {
+    "code": "GE",
+    "country": "Georgia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "julius-walker": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gerald-meerschaert": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "francisco-prado": {
+    "code": "AR",
+    "country": "Argentina",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ismael-bonfim": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "niko-price": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "leon-shahbazyan": {
+    "code": "AM",
+    "country": "Armenia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "felipe-franco": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "brendson-ribeiro": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "allen-frye-jr": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rj-harris": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alice-pereira": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "dariya-zheleznyakova": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ernesta-kareckaite": {
+    "code": "LT",
+    "country": "Lithuania",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "melissa-gatto": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "natalia-silva": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "wang-cong": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "deiveson-figueiredo": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "payton-talbott": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "king-green": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "esteban-ribovics": {
+    "code": "AR",
+    "country": "Argentina",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "roberto-soldic": {
+    "code": "HR",
+    "country": "Croatia",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "khaos-williams": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ateba-gautier": {
+    "code": "CM",
+    "country": "Cameroon",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "roman-kopylov": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "imanol-rodriguez": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alden-coria": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "damian-pinas": {
+    "code": "AW",
+    "country": "Aruba",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "andrey-pulyaev": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "marcus-mcghee": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "anthony-romero-0": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "anthony-wint": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "lucas-armand": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "johnny-walker": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mick-parkin": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jacobe-smith": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "bruce-whitehead": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rafael-dos-anjos": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alexander-hernandez": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "marvin-vettori": {
+    "code": "IT",
+    "country": "Italy",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ismail-naurdiev": {
+    "code": "MA",
+    "country": "Morocco",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "court-mcgee": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "eric-nolan": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "raul-rosas-jr": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "raoni-barcelos": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "norma-dumont": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ailin-perez": {
+    "code": "AR",
+    "country": "Argentina",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "luis-hernandez": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sedriques-dumas": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mahammadali-osmanli": {
+    "code": "AZ",
+    "country": "Azerbaijan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ilimbek-akylbek": {
+    "code": "KG",
+    "country": "Kyrgyzstan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "melissa-amaya": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "valesca-machado": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "brady-hiestand": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rinya-nakamura": {
+    "code": "JP",
+    "country": "Japan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rodolfo-vieira": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "robert-bryczek": {
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rodolfo-bellato": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "christian-edwards": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "elves-brener": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "josiah-harrell": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "montel-jackson": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ricky-simon": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "john-castaneda": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "heili-alateng": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "vanessa-demopoulos": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "yazmin-jauregui": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "joshua-van": {
+    "code": "MM",
+    "country": "Myanmar",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alexandre-pantoja": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "arman-tsarukyan": {
+    "code": "AM",
+    "country": "Armenia",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mauricio-ruffy": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "patricio-freire": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "dooho-choi": {
+    "code": "KR",
+    "country": "South Korea",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gable-steveson": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sean-sharaf": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alonzo-menifield": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "iwo-baraniewski": {
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "marlon-vera": {
+    "code": "EC",
+    "country": "Ecuador",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "charles-jourdain": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tai-tuivasa": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "robelis-despaigne": {
+    "code": "CU",
+    "country": "Cuba",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "michael-aswell-jr": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "joosang-yoo": {
+    "code": "KR",
+    "country": "South Korea",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ryan-gandra": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ozzy-diaz": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "edmen-shahbazyan": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "brunno-ferreira": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "casey-oneill": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "eduarda-moura": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "giga-chikadze": {
+    "code": "GE",
+    "country": "Georgia",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "joanderson-brito": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jean-silva": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jose-miguel-delgado": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "joseph-morales": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "manon-fiorot": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alexa-grasso": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "waldo-cortes-acosta": {
+    "code": "DO",
+    "country": "Dominican Republic",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "curtis-blaydes": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "david-martinez": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "dan-ige": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ignacio-bahamondes": {
+    "code": "CL",
+    "country": "Chile",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "muslim-salikhov": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "djorden-santos": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "drakkar-klose": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "thomas-gantt": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rafa-garcia": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rong-zhu": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sean-king-iii": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jessie-rosas": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jj-aldrich": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "regina-malpica-rivera": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "salahdine-parnasse": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "fares-ziam": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "axel-sola": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nursulton-ruziboev": {
+    "code": "UZ",
+    "country": "Uzbekistan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "daniil-donchenko": {
+    "code": "UA",
+    "country": "Ukraine",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "punahele-soriano": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kurtis-campbell": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "trevor-peek": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "muhammad-naimov": {
+    "code": "TJ",
+    "country": "Tajikistan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "morgan-charriere": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "felipe-lima": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mario-pinto": {
+    "code": "PT",
+    "country": "Portugal",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ryan-spann": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "oumar-sy": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "modestas-bukauskas": {
+    "code": "LT",
+    "country": "Lithuania",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nathaniel-wood": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "pavel-andrusca": {
+    "code": "MD",
+    "country": "Moldova",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "michael-aljarouj": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "fabia-sintes": {
+    "code": "ES",
+    "country": "Spain",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nora-cornolle": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "klaudia-sygula": {
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "matthieu-letho-duclos": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "luis-felipe-dias": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "delphine-benouaich": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sofia-montenegro": {
+    "code": "AR",
+    "country": "Argentina",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "umar-nurmagomedov": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "song-yadong": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "yan-xiaonan": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "denise-gomes": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "aoriqileng": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kai-asakura": {
+    "code": "JP",
+    "country": "Japan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alex-perez": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "su-mudaerji": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "liu-ce": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "levi-rodrigues-jr": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nilson-rojas": {
+    "code": "PE",
+    "country": "Peru",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "namsrai-batbayar": {
+    "code": "MN",
+    "country": "Mongolia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "andre-lima": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rei-tsuruya": {
+    "code": "JP",
+    "country": "Japan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kevin-borjas": {
+    "code": "PE",
+    "country": "Peru",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jack-jenkins": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sean-woodson": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "xiao-long": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "francesco-nuzzi": {
+    "code": "IT",
+    "country": "Italy",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "lawrence-lui": {
+    "code": "NZ",
+    "country": "New Zealand",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "hector-de-sousa-santiago": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "xiong-jingnan": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "julia-polastri": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ding-meng": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "cam-nelson": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "anthony-hernandez": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gregory-rodrigues": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "serghei-spivac": {
+    "code": "MD",
+    "country": "Moldova",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "vitor-petrino": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "reinier-de-ridder": {
+    "code": "NL",
+    "country": "Netherlands",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "roman-dolidze": {
+    "code": "GE",
+    "country": "Georgia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "marquel-mederos": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mason-jones": {
+    "code": "WL",
+    "country": "Wales",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "carli-judice": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jeisla-chaves": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "terrance-chatman": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jamall-emmers": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "lerryan-douglas": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kennedy-nzechukwu": {
+    "code": "NG",
+    "country": "Nigeria",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "chris-padilla": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nasrat-haqparast": {
+    "code": "MA",
+    "country": "Morocco",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "marcio-barbosa": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ryan-kuse": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gauge-young": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "stan-dorsainvil": {
+    "code": "HT",
+    "country": "Haiti",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jackson-mcvey": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "shanelle-dyer": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "elise-reed": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "islam-makhachev": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ian-machado-garry": {
+    "code": "IE",
+    "country": "Ireland",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mackenzie-dern": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gillian-robertson": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jalin-turner": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kaue-fernandes": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mansur-abdul-malik": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "dustin-stoltzfus": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "edson-barboza": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "chidi-njokuani": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "joel-alvarez": {
+    "code": "ES",
+    "country": "Spain",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "eduardo-chapolin": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "eric-mcconico": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "vicente-luque": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tresean-gore": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rafael-tobias": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "neil-magny": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ramiz-brahimaj": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jeremiah-wells": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "myktybek-orolbai": {
+    "code": "KG",
+    "country": "Kyrgyzstan",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mateusz-gamrot": {
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "quillan-salkilld": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "diego-ferreira": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "billy-quarantillo": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "darren-elkins": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "yadier-del-valle": {
+    "code": "CU",
+    "country": "Cuba",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "amanda-lemos": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alexia-thainara": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "billy-goff": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ty-miller": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "steven-asplund": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "guilherme-pat": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "diyar-nurgozhay": {
+    "code": "KZ",
+    "country": "Kazakhstan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "bruno-lopes": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "louie-sutherland": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jose-montanha-da-silva": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "manoel-sousa": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "richie-miranda": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "miles-johns": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gianni-vazquez": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "juliana-miller": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ravena-oliveira-morais": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gigi-canuto": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "carol-foro": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "daniel-rodriguez": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jan-blachowicz": {
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "aleksandar-rakic": {
+    "code": "RS",
+    "country": "Serbia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "marcin-tybura": {
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "dusko-todorovic": {
+    "code": "RS",
+    "country": "Serbia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "robert-valentin-frey": {
+    "code": "CH",
+    "country": "Switzerland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "vlasto-cepo": {
+    "code": "SK",
+    "country": "Slovakia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gilbert-urbina": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "milos-janicic": {
+    "code": "ME",
+    "country": "Montenegro",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "noah-gugnon": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ludovit-klein": {
+    "code": "SK",
+    "country": "Slovakia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tofiq-musayev": {
+    "code": "AZ",
+    "country": "Azerbaijan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "oban-elliott": {
+    "code": "WL",
+    "country": "Wales",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "michael-oliveira": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "borislav-nikolic": {
+    "code": "RS",
+    "country": "Serbia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mark-vologdin": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "dennis-buzukja": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "bogdan-grad": {
+    "code": "AT",
+    "country": "Austria",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mateusz-rebecki": {
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kyle-prepolec": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "hailey-cowan": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jovan-leka": {
+    "code": "RS",
+    "country": "Serbia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alexander-poppeck": {
+    "code": "DE",
+    "country": "Germany",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "marina-spasic": {
+    "code": "RS",
+    "country": "Serbia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "stephanie-bruna-luciano": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "magomed-ankalaev": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "bogdan-guskov": {
+    "code": "UZ",
+    "country": "Uzbekistan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "steve-erceg": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "magomed-zaynukov": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "damian-rzepecki": {
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tyrell-fortune": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "abubakar-vagaev": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "saygid-izagakhmaev": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "valter-walker": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "thomas-petersen": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "dustin-jacoby": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "muhammad-said": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "santiago-ponzinibbio": {
+    "code": "AR",
+    "country": "Argentina",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sam-patterson": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "magomed-tuchalov": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mike-davis": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "cody-gibson": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "abdul-hussein": {
+    "code": "FI",
+    "country": "Finland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "dricus-du-plessis": {
+    "code": "ZA",
+    "country": "South Africa",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kamaru-usman": {
+    "code": "NG",
+    "country": "Nigeria",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "chase-hooper": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mitch-ramirez": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tabatha-ricci": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "fatima-kline": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tommy-mcmillen": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alberto-montes": {
+    "code": "VE",
+    "country": "Venezuela",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ezra-elliot": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "damien-anderson": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "stewart-nicoll": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "anna-melisano": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "dione-barbosa": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "conor-mcgregor": {
+    "code": "IE",
+    "country": "Ireland",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "max-holloway": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "benoit-saint-denis": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "paddy-pimblett": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "cory-sandhagen": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mario-bautista": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "brandon-royval": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "robert-whittaker": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "elisha-ellison": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "cody-garbrandt": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "luke-riley": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tracy-cortez": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "cesar-almeida": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "john-garza": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "zachary-reese": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "cody-durden": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rafael-fiziev": {
+    "code": "AZ",
+    "country": "Azerbaijan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-27-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "manuel-torres": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-27-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "shara-magomedov": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-27-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "michel-pereira": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-27-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "michal-oleksiejczuk": {
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-27-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kaan-ofli": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-27-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "javier-reyes": {
+    "code": "CO",
+    "country": "Colombia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-27-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "bekzat-almakhan": {
+    "code": "KZ",
+    "country": "Kazakhstan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-27-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jean-matsumoto": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-27-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "manel-kape": {
+    "code": "PT",
+    "country": "Portugal",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-20-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ion-cutelaba": {
+    "code": "MD",
+    "country": "Moldova",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-20-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "hyder-amil": {
+    "code": "PH",
+    "country": "Philippines",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-20-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "christian-rodriguez": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-20-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "melsik-baghdasaryan": {
+    "code": "AM",
+    "country": "Armenia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-20-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "vinicius-oliveira": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-20-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "melissa-mullins": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-20-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "allan-nascimento": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-20-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mitch-raposo": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-20-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "levan-chokheli": {
+    "code": "GE",
+    "country": "Georgia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-20-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "karol-rosa": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-20-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "shane-collins": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-20-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ilia-topuria": {
+    "code": "GE",
+    "country": "Georgia",
+    "countrySource": "https://www.ufc.com/event/ufc-freedom-250",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "justin-gaethje": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-freedom-250",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sean-omalley": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-freedom-250",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "aiemann-zahabi": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-freedom-250",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "derrick-lewis": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-freedom-250",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "michael-chandler": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-freedom-250",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "steve-garcia": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-freedom-250",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "belal-muhammad": {
+    "code": "PS",
+    "country": "Palestine",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-06-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "bryce-mitchell": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-06-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "junior-tafa": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-06-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "matt-schnell": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-06-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "john-yannis": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-06-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "bruno-silva": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-06-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "edgar-chairez": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-06-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jordan-leavitt": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-06-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "yuneisy-duben": {
+    "code": "VE",
+    "country": "Venezuela",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-06-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ariane-carnelossi": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-06-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "zhang-mingyang": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-30-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "cameron-smotherman": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-30-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "carlston-harris": {
+    "code": "GY",
+    "country": "Guyana",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-30-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "yi-sak-lee": {
+    "code": "KR",
+    "country": "South Korea",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-30-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "cody-haddon": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-30-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "angela-hill": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-30-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "zhu-kangjie": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-30-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rodrigo-vera": {
+    "code": "PE",
+    "country": "Peru",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-30-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "loma-lookboonmee": {
+    "code": "TH",
+    "country": "Thailand",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-30-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jaqueline-amorim": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-30-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "arnold-allen": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "melquizael-costa": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "daniel-santos": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "benardo-sopaj": {
+    "code": "AL",
+    "country": "Albania",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nikolay-veretennikov": {
+    "code": "KZ",
+    "country": "Kazakhstan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tuco-tokkos": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ivan-erslan": {
+    "code": "HR",
+    "country": "Croatia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "artur-minev": {
+    "code": "UA",
+    "country": "Ukraine",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ketlen-vieira": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jacqueline-cavalcanti": {
+    "code": "PT",
+    "country": "Portugal",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "cody-brundage": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alice-ardelean": {
+    "code": "RO",
+    "country": "Romania",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "polyana-viana": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "daniel-barez": {
+    "code": "ES",
+    "country": "Spain",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "shauna-bannon": {
+    "code": "IE",
+    "country": "Ireland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nicolle-caliari": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "khamzat-chimaev": {
+    "code": "AE",
+    "country": "United Arab Emirates",
+    "countrySource": "https://www.ufc.com/event/ufc-328",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sean-strickland": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-328",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tatsuro-taira": {
+    "code": "JP",
+    "country": "Japan",
+    "countrySource": "https://www.ufc.com/event/ufc-328",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jeremy-stephens": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-328",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "yaroslav-amosov": {
+    "code": "UA",
+    "country": "Ukraine",
+    "countrySource": "https://www.ufc.com/event/ufc-328",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jared-gordon": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-328",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "marco-tulio": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-328",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "pat-sabatini": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-328",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "william-gomis": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-328",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "clayton-carpenter": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-328",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jose-ochoa": {
+    "code": "PE",
+    "country": "Peru",
+    "countrySource": "https://www.ufc.com/event/ufc-328",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jack-della-maddalena": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "carlos-prates": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "beneil-dariush": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tim-elliott": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "marwan-rahiki": {
+    "code": "MA",
+    "country": "Morocco",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "brando-pericic": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kevin-christian": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jacob-malkoun": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "colby-thicknesse": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "vince-morales": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "benjamin-johnston": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jonathan-micallef": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "dom-mar-fan": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kody-steele": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "youssef-zalal": {
+    "code": "MA",
+    "country": "Morocco",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "joselyne-edwards": {
+    "code": "PA",
+    "country": "Panama",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "juan-martinetti": {
+    "code": "EC",
+    "country": "Ecuador",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "marcus-buchecha": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mayra-bueno-silva": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "michelle-montague": {
+    "code": "NZ",
+    "country": "New Zealand",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jafel-filho": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "max-griffin": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "victor-valenzuela-0": {
+    "code": "CL",
+    "country": "Chile",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gilbert-burns": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kyler-phillips": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "thiago-moises": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gokhan-saricam": {
+    "code": "TR",
+    "country": "Türkiye",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jamey-lyn-horth": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jamie-siraj": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "carlos-ulberg": {
+    "code": "NZ",
+    "country": "New Zealand",
+    "countrySource": "https://www.ufc.com/event/ufc-327",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "paulo-costa": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-327",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "cub-swanson": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-327",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kelvin-gastelum": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-327",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ethyn-ewing": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-04-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rafael-estevam": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-04-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "manolo-zecchini": {
+    "code": "IT",
+    "country": "Italy",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-04-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "robert-ruchala": {
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-04-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "lando-vannata": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-04-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "darrius-flowers": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-04-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "dakota-hope": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-04-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "israel-adesanya": {
+    "code": "NG",
+    "country": "Nigeria",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "maycee-barber": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "michael-chiesa": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "lance-gibson-jr": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "bruna-brasil": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "lerone-murphy": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "austen-lane": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "danny-silva": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "antonio-trocoli": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "abdul-kareem-al-selwady": {
+    "code": "PS",
+    "country": "Palestine",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "josh-emmett": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-14-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "harry-hardwick": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-14-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "chris-curtis": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-14-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "bolaji-oki": {
+    "code": "BE",
+    "country": "Belgium",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-14-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "brad-tavares": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-14-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "eryk-anders": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-14-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "montserrat-rendon": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-14-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "luan-lacerda": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-14-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "hecher-sosa": {
+    "code": "ES",
+    "country": "Spain",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-14-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sam-hughes": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-14-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rob-font": {
+    "code": "PR",
+    "country": "Puerto Rico",
+    "countrySource": "https://www.ufc.com/event/ufc-326",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "michael-johnson": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-326",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ricky-turcios": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-326",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nyamjargal-tumendemberel": {
+    "code": "MN",
+    "country": "Mongolia",
+    "countrySource": "https://www.ufc.com/event/ufc-326",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jesus-aguilar": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-326",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "luke-fernandez": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-326",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "daniel-zellhuber": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "felipe-bunes": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "angel-pacheco": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jose-daniel-medina": {
+    "code": "BO",
+    "country": "Bolivia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "cristian-quinonez": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "kris-moutinho": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "douglas-silva-de-andrade": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "erik-silva": {
+    "code": "VE",
+    "country": "Venezuela",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "geoff-neal": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ante-delija": {
+    "code": "HR",
+    "country": "Croatia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ode-osbourne": {
+    "code": "JM",
+    "country": "Jamaica",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alibi-idiris": {
+    "code": "KZ",
+    "country": "Kazakhstan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "philip-rowe": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jailton-almeida": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "alex-morono": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "muin-gafurov": {
+    "code": "TJ",
+    "country": "Tajikistan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jakub-wiklacz": {
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jamie-mullarkey": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-325",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "torrez-finney": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-325",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "yi-zha": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-325",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sangwook-kim": {
+    "code": "KR",
+    "country": "South Korea",
+    "countrySource": "https://www.ufc.com/event/ufc-325",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "keiichiro-nakamura": {
+    "code": "JP",
+    "country": "Japan",
+    "countrySource": "https://www.ufc.com/event/ufc-325",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sebastian-szalay": {
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-325",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sulang-rangbo": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-325",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rose-namajunas": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-324",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "denzel-freeman": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-324",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "adam-fugitt": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-324",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "yair-rodriguez": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-314",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mateus-mendonca": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-24-2024",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "daniel-da-silva": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-24-2024",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "claudio-puelles": {
+    "code": "PE",
+    "country": "Peru",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-24-2024",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "luis-rodriguez": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-24-2024",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "denys-bondar": {
+    "code": "UA",
+    "country": "Ukraine",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-24-2024",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "victor-altamirano": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-24-2024",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "felipe-dos-santos": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-24-2024",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "valentina-shevchenko": {
+    "code": "KG",
+    "country": "Kyrgyzstan",
+    "countrySource": "https://www.ufc.com/event/ufc-322",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "zhang-weili": {
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-322",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "michael-morales": {
+    "code": "EC",
+    "country": "Ecuador",
+    "countrySource": "https://www.ufc.com/event/ufc-322",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "leon-edwards": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-322",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "chepe-mariscal": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-322",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "viacheslav-borshchev": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-322",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "sodiq-yusuff": {
+    "code": "NG",
+    "country": "Nigeria",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-17-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mairon-santos-alves": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-17-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gabe-green": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-17-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "connor-matthews": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-17-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "hyunsung-park": {
+    "code": "KR",
+    "country": "South Korea",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-17-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "carlos-hernandez": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-17-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tecia-pennington": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-17-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "luana-pinheiro": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-17-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "gunnar-nelson": {
+    "code": "IS",
+    "country": "Iceland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-22-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "molly-mccann": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-22-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jordan-vucenic": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-22-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "puja-tomar": {
+    "code": "IN",
+    "country": "India",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-22-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nathan-fletcher": {
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-22-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "caolan-loughran": {
+    "code": "IE",
+    "country": "Ireland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-22-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "guram-kutateladze": {
+    "code": "GE",
+    "country": "Georgia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-22-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nassourdine-imavov": {
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-06-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "paul-craig": {
+    "code": "SF",
+    "country": "Scotland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-06-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rhys-mckee": {
+    "code": "IE",
+    "country": "Ireland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-06-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "trey-waters": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-06-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "andreas-gustafsson": {
+    "code": "SE",
+    "country": "Sweden",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-06-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "rinat-fakhretdinov": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-06-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jairzinho-rozenstruik": {
+    "code": "SR",
+    "country": "Suriname",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-01-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "said-nurmagomedov": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-01-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tamia-hasohitsuku": {
+    "code": "DK",
+    "country": "Denmark",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-01-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "lucas-alexander": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-01-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "hamdy-abdelwahab": {
+    "code": "EG",
+    "country": "Egypt",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-01-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jamal-pogues": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-01-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "khalil-rountree-jr": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-320",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "treston-vines": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-320",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "patrick-mix": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-320",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "andre-muniz": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-320",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "chris-gutierrez": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-320",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "austin-vanderford": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-320",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "veronica-hardy": {
+    "code": "VE",
+    "country": "Venezuela",
+    "countrySource": "https://www.ufc.com/event/ufc-320",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "brogan-walker": {
+    "code": "GU",
+    "country": "Guam",
+    "countrySource": "https://www.ufc.com/event/ufc-320",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jamahal-hill": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-21-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "nikolas-motta": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-21-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jun-yong-park": {
+    "code": "KR",
+    "country": "South Korea",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-21-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "irina-alekseeva": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-21-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tagir-ulanbekov": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-21-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "azat-maksum": {
+    "code": "KZ",
+    "country": "Kazakhstan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-21-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mohammed-usman": {
+    "code": "NG",
+    "country": "Nigeria",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-21-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "julianna-pena": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-316",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ariane-da-silva": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-316",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jeka-saragih": {
+    "code": "ID",
+    "country": "Indonesia",
+    "countrySource": "https://www.ufc.com/event/ufc-316",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "yanal-ashmouz": {
+    "code": "IL",
+    "country": "Israel",
+    "countrySource": "https://www.ufc.com/event/ufc-316",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "mark-choinski": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-316",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "raquel-pennington": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-307",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jose-aldo": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-307",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "marina-rodriguez": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-307",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "iasmin-lucindo": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-307",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "austin-hubbard": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-307",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ihor-potieria": {
+    "code": "UA",
+    "country": "Ukraine",
+    "countrySource": "https://www.ufc.com/event/ufc-307",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ovince-saint-preux": {
+    "code": "HT",
+    "country": "Haiti",
+    "countrySource": "https://www.ufc.com/event/ufc-307",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "carla-esparza": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-307",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "tim-means": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-307",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jessica-andrade": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-319",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "bruno-silva-blindado": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-315",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "brad-katona": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-315",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "miranda-maverick": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-14-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ange-loosa": {
+    "code": "CD",
+    "country": "Democratic Republic of the Congo",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-14-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "colby-covington": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-december-14-2024",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "daniel-marcos": {
+    "code": "PE",
+    "country": "Peru",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-december-14-2024",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ottman-azaitar": {
+    "code": "MA",
+    "country": "Morocco",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-december-14-2024",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "fernando-padilla": {
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-december-14-2024",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "ramon-taveras": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-december-14-2024",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "josefine-knutsson": {
+    "code": "SE",
+    "country": "Sweden",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-december-14-2024",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "garrett-armfield": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-297",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "serhiy-sidey": {
+    "code": "UA",
+    "country": "Ukraine",
+    "countrySource": "https://www.ufc.com/event/ufc-297",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "yohan-lainesse": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-297",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "malcolm-gordon": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-297",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  "jimmy-flick": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-297",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  }
+}

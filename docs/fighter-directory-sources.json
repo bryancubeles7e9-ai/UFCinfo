@@ -5,7 +5,11 @@
     "aliases": [
       "Joshua Van"
     ],
-    "source": "https://www.ufc.com/athlete/joshua-van"
+    "source": "https://www.ufc.com/athlete/joshua-van",
+    "code": "MM",
+    "country": "Myanmar",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-manel-kape",
@@ -13,7 +17,11 @@
     "aliases": [
       "Manel Kape"
     ],
-    "source": "https://www.ufc.com/athlete/manel-kape"
+    "source": "https://www.ufc.com/athlete/manel-kape",
+    "code": "PT",
+    "country": "Portugal",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-20-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-brandon-royval",
@@ -21,7 +29,11 @@
     "aliases": [
       "Brandon Royval"
     ],
-    "source": "https://www.ufc.com/athlete/brandon-royval"
+    "source": "https://www.ufc.com/athlete/brandon-royval",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-tatsuro-taira",
@@ -29,7 +41,11 @@
     "aliases": [
       "Tatsuro Taira"
     ],
-    "source": "https://www.ufc.com/athlete/tatsuro-taira"
+    "source": "https://www.ufc.com/athlete/tatsuro-taira",
+    "code": "JP",
+    "country": "Japan",
+    "countrySource": "https://www.ufc.com/event/ufc-328",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-kyoji-horiguchi",
@@ -37,7 +53,11 @@
     "aliases": [
       "Kyoji Horiguchi"
     ],
-    "source": "https://www.ufc.com/athlete/kyoji-horiguchi"
+    "source": "https://www.ufc.com/athlete/kyoji-horiguchi",
+    "code": "JP",
+    "country": "Japan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-loneer-kavanagh",
@@ -46,7 +66,11 @@
       "Lone’er Kavanagh",
       "Lone'er Kavanagh"
     ],
-    "source": "https://www.ufc.com/athlete/loneer-kavanagh"
+    "source": "https://www.ufc.com/athlete/loneer-kavanagh",
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-asu-almabayev",
@@ -54,7 +78,11 @@
     "aliases": [
       "Asu Almabayev"
     ],
-    "source": "https://www.ufc.com/athlete/asu-almabayev"
+    "source": "https://www.ufc.com/athlete/asu-almabayev",
+    "code": "KZ",
+    "country": "Kazakhstan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-brandon-moreno",
@@ -62,7 +90,11 @@
     "aliases": [
       "Brandon Moreno"
     ],
-    "source": "https://www.ufc.com/athlete/brandon-moreno"
+    "source": "https://www.ufc.com/athlete/brandon-moreno",
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-amir-albazi",
@@ -70,7 +102,11 @@
     "aliases": [
       "Amir Albazi"
     ],
-    "source": "https://www.ufc.com/athlete/amir-albazi"
+    "source": "https://www.ufc.com/athlete/amir-albazi",
+    "code": "IQ",
+    "country": "Iraq",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-ramazan-temirov",
@@ -78,7 +114,11 @@
     "aliases": [
       "Ramazan Temirov"
     ],
-    "source": "https://www.ufc.com/athlete/ramazan-temirov"
+    "source": "https://www.ufc.com/athlete/ramazan-temirov",
+    "code": "UZ",
+    "country": "Uzbekistan",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-sean-omalley",
@@ -86,7 +126,11 @@
     "aliases": [
       "Sean O'Malley"
     ],
-    "source": "https://www.ufc.com/athlete/sean-omalley"
+    "source": "https://www.ufc.com/athlete/sean-omalley",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-freedom-250",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-song-yadong",
@@ -94,7 +138,11 @@
     "aliases": [
       "Song Yadong"
     ],
-    "source": "https://www.ufc.com/athlete/song-yadong"
+    "source": "https://www.ufc.com/athlete/song-yadong",
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-umar-nurmagomedov",
@@ -102,7 +150,11 @@
     "aliases": [
       "Umar Nurmagomedov"
     ],
-    "source": "https://www.ufc.com/athlete/umar-nurmagomedov"
+    "source": "https://www.ufc.com/athlete/umar-nurmagomedov",
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-mario-bautista",
@@ -110,7 +162,11 @@
     "aliases": [
       "Mario Bautista"
     ],
-    "source": "https://www.ufc.com/athlete/mario-bautista"
+    "source": "https://www.ufc.com/athlete/mario-bautista",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-cory-sandhagen",
@@ -118,7 +174,11 @@
     "aliases": [
       "Cory Sandhagen"
     ],
-    "source": "https://www.ufc.com/athlete/cory-sandhagen"
+    "source": "https://www.ufc.com/athlete/cory-sandhagen",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-aiemann-zahabi",
@@ -126,7 +186,11 @@
     "aliases": [
       "Aiemann Zahabi"
     ],
-    "source": "https://www.ufc.com/athlete/aiemann-zahabi"
+    "source": "https://www.ufc.com/athlete/aiemann-zahabi",
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-freedom-250",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-david-martinez",
@@ -134,7 +198,11 @@
     "aliases": [
       "David Martinez"
     ],
-    "source": "https://www.ufc.com/athlete/david-martinez"
+    "source": "https://www.ufc.com/athlete/david-martinez",
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-deiveson-figueiredo",
@@ -142,7 +210,11 @@
     "aliases": [
       "Deiveson Figueiredo"
     ],
-    "source": "https://www.ufc.com/athlete/deiveson-figueiredo"
+    "source": "https://www.ufc.com/athlete/deiveson-figueiredo",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-marlon-vera",
@@ -150,7 +222,11 @@
     "aliases": [
       "Marlon Vera"
     ],
-    "source": "https://www.ufc.com/athlete/marlon-vera"
+    "source": "https://www.ufc.com/athlete/marlon-vera",
+    "code": "EC",
+    "country": "Ecuador",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-movsar-evloev",
@@ -158,7 +234,11 @@
     "aliases": [
       "Movsar Evloev"
     ],
-    "source": "https://www.ufc.com/athlete/movsar-evloev"
+    "source": "https://www.ufc.com/athlete/movsar-evloev",
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-diego-lopes",
@@ -166,7 +246,11 @@
     "aliases": [
       "Diego Lopes"
     ],
-    "source": "https://www.ufc.com/athlete/diego-lopes"
+    "source": "https://www.ufc.com/athlete/diego-lopes",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-lerone-murphy",
@@ -174,7 +258,11 @@
     "aliases": [
       "Lerone Murphy"
     ],
-    "source": "https://www.ufc.com/athlete/lerone-murphy"
+    "source": "https://www.ufc.com/athlete/lerone-murphy",
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-aljamain-sterling",
@@ -182,7 +270,11 @@
     "aliases": [
       "Aljamain Sterling"
     ],
-    "source": "https://www.ufc.com/athlete/aljamain-sterling"
+    "source": "https://www.ufc.com/athlete/aljamain-sterling",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-jean-silva",
@@ -190,7 +282,11 @@
     "aliases": [
       "Jean Silva"
     ],
-    "source": "https://www.ufc.com/athlete/jean-silva"
+    "source": "https://www.ufc.com/athlete/jean-silva",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-yair-rodriguez",
@@ -198,7 +294,11 @@
     "aliases": [
       "Yair Rodriguez"
     ],
-    "source": "https://www.ufc.com/athlete/yair-rodriguez"
+    "source": "https://www.ufc.com/athlete/yair-rodriguez",
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-314",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-arnold-allen",
@@ -206,7 +306,11 @@
     "aliases": [
       "Arnold Allen"
     ],
-    "source": "https://www.ufc.com/athlete/arnold-allen"
+    "source": "https://www.ufc.com/athlete/arnold-allen",
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-youssef-zalal",
@@ -214,7 +318,11 @@
     "aliases": [
       "Youssef Zalal"
     ],
-    "source": "https://www.ufc.com/athlete/youssef-zalal"
+    "source": "https://www.ufc.com/athlete/youssef-zalal",
+    "code": "MA",
+    "country": "Morocco",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-kevin-vallejos",
@@ -222,7 +330,11 @@
     "aliases": [
       "Kevin Vallejos"
     ],
-    "source": "https://www.ufc.com/athlete/kevin-vallejos"
+    "source": "https://www.ufc.com/athlete/kevin-vallejos",
+    "code": "AR",
+    "country": "Argentina",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-steve-garcia",
@@ -230,7 +342,11 @@
     "aliases": [
       "Steve Garcia"
     ],
-    "source": "https://www.ufc.com/athlete/steve-garcia"
+    "source": "https://www.ufc.com/athlete/steve-garcia",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-freedom-250",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-paddy-pimblett",
@@ -238,7 +354,11 @@
     "aliases": [
       "Paddy Pimblett"
     ],
-    "source": "https://www.ufc.com/athlete/paddy-pimblett"
+    "source": "https://www.ufc.com/athlete/paddy-pimblett",
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-benoit-saint-denis",
@@ -247,7 +367,11 @@
       "Benoît Saint Denis",
       "Benoit Saint Denis"
     ],
-    "source": "https://www.ufc.com/athlete/benoit-saint-denis"
+    "source": "https://www.ufc.com/athlete/benoit-saint-denis",
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-quillan-salkilld",
@@ -255,7 +379,11 @@
     "aliases": [
       "Quillan Salkilld"
     ],
-    "source": "https://www.ufc.com/athlete/quillan-salkilld"
+    "source": "https://www.ufc.com/athlete/quillan-salkilld",
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-mauricio-ruffy",
@@ -264,7 +392,11 @@
       "Mauricio Ruffy",
       "Maurício Ruffy"
     ],
-    "source": "https://www.ufc.com/athlete/mauricio-ruffy"
+    "source": "https://www.ufc.com/athlete/mauricio-ruffy",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-salahdine-parnasse",
@@ -272,7 +404,11 @@
     "aliases": [
       "Salahdine Parnasse"
     ],
-    "source": "https://www.ufc.com/athlete/salahdine-parnasse"
+    "source": "https://www.ufc.com/athlete/salahdine-parnasse",
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-05-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-mateusz-gamrot",
@@ -280,7 +416,11 @@
     "aliases": [
       "Mateusz Gamrot"
     ],
-    "source": "https://www.ufc.com/athlete/mateusz-gamrot"
+    "source": "https://www.ufc.com/athlete/mateusz-gamrot",
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-michael-morales",
@@ -288,7 +428,11 @@
     "aliases": [
       "Michael Morales"
     ],
-    "source": "https://www.ufc.com/athlete/michael-morales"
+    "source": "https://www.ufc.com/athlete/michael-morales",
+    "code": "EC",
+    "country": "Ecuador",
+    "countrySource": "https://www.ufc.com/event/ufc-322",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-jack-della-maddalena",
@@ -296,7 +440,11 @@
     "aliases": [
       "Jack Della Maddalena"
     ],
-    "source": "https://www.ufc.com/athlete/jack-della-maddalena"
+    "source": "https://www.ufc.com/athlete/jack-della-maddalena",
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-02-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-gabriel-bonfim",
@@ -304,7 +452,11 @@
     "aliases": [
       "Gabriel Bonfim"
     ],
-    "source": "https://www.ufc.com/athlete/gabriel-bonfim"
+    "source": "https://www.ufc.com/athlete/gabriel-bonfim",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-sean-brady",
@@ -312,7 +464,11 @@
     "aliases": [
       "Sean Brady"
     ],
-    "source": "https://www.ufc.com/athlete/sean-brady"
+    "source": "https://www.ufc.com/athlete/sean-brady",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-belal-muhammad",
@@ -320,7 +476,11 @@
     "aliases": [
       "Belal Muhammad"
     ],
-    "source": "https://www.ufc.com/athlete/belal-muhammad"
+    "source": "https://www.ufc.com/athlete/belal-muhammad",
+    "code": "PS",
+    "country": "Palestine",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-06-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-leon-edwards",
@@ -328,7 +488,11 @@
     "aliases": [
       "Leon Edwards"
     ],
-    "source": "https://www.ufc.com/athlete/leon-edwards"
+    "source": "https://www.ufc.com/athlete/leon-edwards",
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-322",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-kamaru-usman",
@@ -336,7 +500,11 @@
     "aliases": [
       "Kamaru Usman"
     ],
-    "source": "https://www.ufc.com/athlete/kamaru-usman"
+    "source": "https://www.ufc.com/athlete/kamaru-usman",
+    "code": "NG",
+    "country": "Nigeria",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-joaquin-buckley",
@@ -344,7 +512,11 @@
     "aliases": [
       "Joaquin Buckley"
     ],
-    "source": "https://www.ufc.com/athlete/joaquin-buckley"
+    "source": "https://www.ufc.com/athlete/joaquin-buckley",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-dricus-du-plessis",
@@ -352,7 +524,11 @@
     "aliases": [
       "Dricus Du Plessis"
     ],
-    "source": "https://www.ufc.com/athlete/dricus-du-plessis"
+    "source": "https://www.ufc.com/athlete/dricus-du-plessis",
+    "code": "ZA",
+    "country": "South Africa",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-nassourdine-imavov",
@@ -360,7 +536,11 @@
     "aliases": [
       "Nassourdine Imavov"
     ],
-    "source": "https://www.ufc.com/athlete/nassourdine-imavov"
+    "source": "https://www.ufc.com/athlete/nassourdine-imavov",
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-06-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-brendan-allen",
@@ -368,7 +548,11 @@
     "aliases": [
       "Brendan Allen"
     ],
-    "source": "https://www.ufc.com/athlete/brendan-allen"
+    "source": "https://www.ufc.com/athlete/brendan-allen",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-caio-borralho",
@@ -376,7 +560,11 @@
     "aliases": [
       "Caio Borralho"
     ],
-    "source": "https://www.ufc.com/athlete/caio-borralho"
+    "source": "https://www.ufc.com/athlete/caio-borralho",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-joe-pyfer",
@@ -384,7 +572,11 @@
     "aliases": [
       "Joe Pyfer"
     ],
-    "source": "https://www.ufc.com/athlete/joe-pyfer"
+    "source": "https://www.ufc.com/athlete/joe-pyfer",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-gregory-rodrigues",
@@ -392,7 +584,11 @@
     "aliases": [
       "Gregory Rodrigues"
     ],
-    "source": "https://www.ufc.com/athlete/gregory-rodrigues"
+    "source": "https://www.ufc.com/athlete/gregory-rodrigues",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-anthony-hernandez",
@@ -400,7 +596,11 @@
     "aliases": [
       "Anthony Hernandez"
     ],
-    "source": "https://www.ufc.com/athlete/anthony-hernandez"
+    "source": "https://www.ufc.com/athlete/anthony-hernandez",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-israel-adesanya",
@@ -408,7 +608,11 @@
     "aliases": [
       "Israel Adesanya"
     ],
-    "source": "https://www.ufc.com/athlete/israel-adesanya"
+    "source": "https://www.ufc.com/athlete/israel-adesanya",
+    "code": "NG",
+    "country": "Nigeria",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-christian-leroy-duncan",
@@ -416,7 +620,11 @@
     "aliases": [
       "Christian Leroy Duncan"
     ],
-    "source": "https://www.ufc.com/athlete/christian-leroy-duncan"
+    "source": "https://www.ufc.com/athlete/christian-leroy-duncan",
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-carlos-ulberg",
@@ -424,7 +632,11 @@
     "aliases": [
       "Carlos Ulberg"
     ],
-    "source": "https://www.ufc.com/athlete/carlos-ulberg"
+    "source": "https://www.ufc.com/athlete/carlos-ulberg",
+    "code": "NZ",
+    "country": "New Zealand",
+    "countrySource": "https://www.ufc.com/event/ufc-327",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-magomed-ankalaev",
@@ -432,7 +644,11 @@
     "aliases": [
       "Magomed Ankalaev"
     ],
-    "source": "https://www.ufc.com/athlete/magomed-ankalaev"
+    "source": "https://www.ufc.com/athlete/magomed-ankalaev",
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-jiri-prochazka",
@@ -441,7 +657,11 @@
       "Jiří Procházka",
       "Jiri Prochazka"
     ],
-    "source": "https://www.ufc.com/athlete/jiri-prochazka"
+    "source": "https://www.ufc.com/athlete/jiri-prochazka",
+    "code": "CZ",
+    "country": "Czechia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-khalil-rountree-jr",
@@ -449,7 +669,11 @@
     "aliases": [
       "Khalil Rountree Jr."
     ],
-    "source": "https://www.ufc.com/athlete/khalil-rountree-jr"
+    "source": "https://www.ufc.com/athlete/khalil-rountree-jr",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-320",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-navajo-stirling",
@@ -457,7 +681,11 @@
     "aliases": [
       "Navajo Stirling"
     ],
-    "source": "https://www.ufc.com/athlete/navajo-stirling"
+    "source": "https://www.ufc.com/athlete/navajo-stirling",
+    "code": "NZ",
+    "country": "New Zealand",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-paulo-costa",
@@ -465,7 +693,11 @@
     "aliases": [
       "Paulo Costa"
     ],
-    "source": "https://www.ufc.com/athlete/paulo-costa"
+    "source": "https://www.ufc.com/athlete/paulo-costa",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-327",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-jamahal-hill",
@@ -473,7 +705,11 @@
     "aliases": [
       "Jamahal Hill"
     ],
-    "source": "https://www.ufc.com/athlete/jamahal-hill"
+    "source": "https://www.ufc.com/athlete/jamahal-hill",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-21-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-azamat-murzakanov",
@@ -481,7 +717,11 @@
     "aliases": [
       "Azamat Murzakanov"
     ],
-    "source": "https://www.ufc.com/athlete/azamat-murzakanov"
+    "source": "https://www.ufc.com/athlete/azamat-murzakanov",
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-jan-blachowicz",
@@ -489,7 +729,11 @@
     "aliases": [
       "Jan Błachowicz"
     ],
-    "source": "https://www.ufc.com/athlete/jan-blachowicz"
+    "source": "https://www.ufc.com/athlete/jan-blachowicz",
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-01-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-dominick-reyes",
@@ -497,7 +741,11 @@
     "aliases": [
       "Dominick Reyes"
     ],
-    "source": "https://www.ufc.com/athlete/dominick-reyes"
+    "source": "https://www.ufc.com/athlete/dominick-reyes",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-ciryl-gane",
@@ -505,7 +753,11 @@
     "aliases": [
       "Ciryl Gane"
     ],
-    "source": "https://www.ufc.com/athlete/ciryl-gane"
+    "source": "https://www.ufc.com/athlete/ciryl-gane",
+    "code": "FR",
+    "country": "France",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-alexander-volkov",
@@ -513,7 +765,11 @@
     "aliases": [
       "Alexander Volkov"
     ],
-    "source": "https://www.ufc.com/athlete/alexander-volkov"
+    "source": "https://www.ufc.com/athlete/alexander-volkov",
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-sergei-pavlovich",
@@ -521,7 +777,11 @@
     "aliases": [
       "Sergei Pavlovich"
     ],
-    "source": "https://www.ufc.com/athlete/sergei-pavlovich"
+    "source": "https://www.ufc.com/athlete/sergei-pavlovich",
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-josh-hokit",
@@ -529,7 +789,11 @@
     "aliases": [
       "Josh Hokit"
     ],
-    "source": "https://www.ufc.com/athlete/josh-hokit"
+    "source": "https://www.ufc.com/athlete/josh-hokit",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-curtis-blaydes",
@@ -537,7 +801,11 @@
     "aliases": [
       "Curtis Blaydes"
     ],
-    "source": "https://www.ufc.com/athlete/curtis-blaydes"
+    "source": "https://www.ufc.com/athlete/curtis-blaydes",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-waldo-cortes-acosta",
@@ -545,7 +813,11 @@
     "aliases": [
       "Waldo Cortes Acosta"
     ],
-    "source": "https://www.ufc.com/athlete/waldo-cortes-acosta"
+    "source": "https://www.ufc.com/athlete/waldo-cortes-acosta",
+    "code": "DO",
+    "country": "Dominican Republic",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-12-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-rizvan-kuniev",
@@ -553,7 +825,11 @@
     "aliases": [
       "Rizvan Kuniev"
     ],
-    "source": "https://www.ufc.com/athlete/rizvan-kuniev"
+    "source": "https://www.ufc.com/athlete/rizvan-kuniev",
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-vitor-petrino",
@@ -561,7 +837,11 @@
     "aliases": [
       "Vitor Petrino"
     ],
-    "source": "https://www.ufc.com/athlete/vitor-petrino"
+    "source": "https://www.ufc.com/athlete/vitor-petrino",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-serghei-spivac",
@@ -569,7 +849,11 @@
     "aliases": [
       "Serghei Spivac"
     ],
-    "source": "https://www.ufc.com/athlete/serghei-spivac"
+    "source": "https://www.ufc.com/athlete/serghei-spivac",
+    "code": "MD",
+    "country": "Moldova",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-ante-delija",
@@ -577,7 +861,11 @@
     "aliases": [
       "Ante Delija"
     ],
-    "source": "https://www.ufc.com/athlete/ante-delija"
+    "source": "https://www.ufc.com/athlete/ante-delija",
+    "code": "HR",
+    "country": "Croatia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-february-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-tatiana-suarez",
@@ -585,7 +873,11 @@
     "aliases": [
       "Tatiana Suarez"
     ],
-    "source": "https://www.ufc.com/athlete/tatiana-suarez"
+    "source": "https://www.ufc.com/athlete/tatiana-suarez",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-julianna-pena",
@@ -593,7 +885,11 @@
     "aliases": [
       "Julianna Peña"
     ],
-    "source": "https://www.ufc.com/athlete/julianna-pena"
+    "source": "https://www.ufc.com/athlete/julianna-pena",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-316",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-virna-jandiroba",
@@ -601,7 +897,11 @@
     "aliases": [
       "Virna Jandiroba"
     ],
-    "source": "https://www.ufc.com/athlete/virna-jandiroba"
+    "source": "https://www.ufc.com/athlete/virna-jandiroba",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-denise-gomes",
@@ -609,7 +909,11 @@
     "aliases": [
       "Denise Gomes"
     ],
-    "source": "https://www.ufc.com/athlete/denise-gomes"
+    "source": "https://www.ufc.com/athlete/denise-gomes",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-gillian-robertson",
@@ -617,7 +921,11 @@
     "aliases": [
       "Gillian Robertson"
     ],
-    "source": "https://www.ufc.com/athlete/gillian-robertson"
+    "source": "https://www.ufc.com/athlete/gillian-robertson",
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-yan-xiaonan",
@@ -625,7 +933,11 @@
     "aliases": [
       "Yan Xiaonan"
     ],
-    "source": "https://www.ufc.com/athlete/yan-xiaonan"
+    "source": "https://www.ufc.com/athlete/yan-xiaonan",
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-29-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-fatima-kline",
@@ -633,7 +945,11 @@
     "aliases": [
       "Fatima Kline"
     ],
-    "source": "https://www.ufc.com/athlete/fatima-kline"
+    "source": "https://www.ufc.com/athlete/fatima-kline",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-18-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-loopy-godinez",
@@ -641,7 +957,11 @@
     "aliases": [
       "Loopy Godinez"
     ],
-    "source": "https://www.ufc.com/athlete/loopy-godinez"
+    "source": "https://www.ufc.com/athlete/loopy-godinez",
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-alexia-thainara",
@@ -649,7 +969,11 @@
     "aliases": [
       "Alexia Thainara"
     ],
-    "source": "https://www.ufc.com/athlete/alexia-thainara"
+    "source": "https://www.ufc.com/athlete/alexia-thainara",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-08-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-jessica-andrade",
@@ -657,7 +981,11 @@
     "aliases": [
       "Jéssica Andrade"
     ],
-    "source": "https://www.ufc.com/athlete/jessica-andrade"
+    "source": "https://www.ufc.com/athlete/jessica-andrade",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-319",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-rose-namajunas",
@@ -665,7 +993,11 @@
     "aliases": [
       "Rose Namajunas"
     ],
-    "source": "https://www.ufc.com/athlete/rose-namajunas"
+    "source": "https://www.ufc.com/athlete/rose-namajunas",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-324",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-maycee-barber",
@@ -673,7 +1005,11 @@
     "aliases": [
       "Maycee Barber"
     ],
-    "source": "https://www.ufc.com/athlete/maycee-barber"
+    "source": "https://www.ufc.com/athlete/maycee-barber",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-march-28-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-jasmine-jasudavicius",
@@ -681,7 +1017,11 @@
     "aliases": [
       "Jasmine Jasudavicius"
     ],
-    "source": "https://www.ufc.com/athlete/jasmine-jasudavicius"
+    "source": "https://www.ufc.com/athlete/jasmine-jasudavicius",
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-wang-cong",
@@ -689,7 +1029,11 @@
     "aliases": [
       "Wang Cong"
     ],
-    "source": "https://www.ufc.com/athlete/wang-cong"
+    "source": "https://www.ufc.com/athlete/wang-cong",
+    "code": "CN",
+    "country": "China",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-tracy-cortez",
@@ -697,7 +1041,11 @@
     "aliases": [
       "Tracy Cortez"
     ],
-    "source": "https://www.ufc.com/athlete/tracy-cortez"
+    "source": "https://www.ufc.com/athlete/tracy-cortez",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-miranda-maverick",
@@ -705,7 +1053,11 @@
     "aliases": [
       "Miranda Maverick"
     ],
-    "source": "https://www.ufc.com/athlete/miranda-maverick"
+    "source": "https://www.ufc.com/athlete/miranda-maverick",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-14-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-joselyne-edwards",
@@ -713,7 +1065,11 @@
     "aliases": [
       "Joselyne Edwards"
     ],
-    "source": "https://www.ufc.com/athlete/joselyne-edwards"
+    "source": "https://www.ufc.com/athlete/joselyne-edwards",
+    "code": "PA",
+    "country": "Panama",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-april-25-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-ailin-perez",
@@ -721,7 +1077,11 @@
     "aliases": [
       "Ailin Perez"
     ],
-    "source": "https://www.ufc.com/athlete/ailin-perez"
+    "source": "https://www.ufc.com/athlete/ailin-perez",
+    "code": "AR",
+    "country": "Argentina",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-raquel-pennington",
@@ -729,7 +1089,11 @@
     "aliases": [
       "Raquel Pennington"
     ],
-    "source": "https://www.ufc.com/athlete/raquel-pennington"
+    "source": "https://www.ufc.com/athlete/raquel-pennington",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-307",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-norma-dumont",
@@ -737,7 +1101,11 @@
     "aliases": [
       "Norma Dumont"
     ],
-    "source": "https://www.ufc.com/athlete/norma-dumont"
+    "source": "https://www.ufc.com/athlete/norma-dumont",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-yana-santos",
@@ -745,7 +1113,11 @@
     "aliases": [
       "Yana Santos"
     ],
-    "source": "https://www.ufc.com/athlete/yana-santos"
+    "source": "https://www.ufc.com/athlete/yana-santos",
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-luana-santos",
@@ -753,7 +1125,11 @@
     "aliases": [
       "Luana Santos"
     ],
-    "source": "https://www.ufc.com/athlete/luana-santos"
+    "source": "https://www.ufc.com/athlete/luana-santos",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-macy-chiasson",
@@ -761,7 +1137,11 @@
     "aliases": [
       "Macy Chiasson"
     ],
-    "source": "https://www.ufc.com/athlete/macy-chiasson"
+    "source": "https://www.ufc.com/athlete/macy-chiasson",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-jacqueline-cavalcanti",
@@ -769,7 +1149,11 @@
     "aliases": [
       "Jacqueline Cavalcanti"
     ],
-    "source": "https://www.ufc.com/athlete/jacqueline-cavalcanti"
+    "source": "https://www.ufc.com/athlete/jacqueline-cavalcanti",
+    "code": "PT",
+    "country": "Portugal",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-may-16-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-karol-rosa",
@@ -777,7 +1161,11 @@
     "aliases": [
       "Karol Rosa"
     ],
-    "source": "https://www.ufc.com/athlete/karol-rosa"
+    "source": "https://www.ufc.com/athlete/karol-rosa",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-20-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-bo-nickal",
@@ -785,7 +1173,11 @@
     "aliases": [
       "Bo Nickal"
     ],
-    "source": "https://www.ufc.com/athlete/bo-nickal"
+    "source": "https://www.ufc.com/athlete/bo-nickal",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-amanda-nunes",
@@ -793,7 +1185,11 @@
     "aliases": [
       "Amanda Nunes"
     ],
-    "source": "https://www.ufc.com/athlete/amanda-nunes"
+    "source": "https://www.ufc.com/athlete/amanda-nunes",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-yousri-belgaroui",
@@ -801,7 +1197,11 @@
     "aliases": [
       "Yousri Belgaroui"
     ],
-    "source": "https://www.ufc.com/athlete/yousri-belgaroui"
+    "source": "https://www.ufc.com/athlete/yousri-belgaroui",
+    "code": "NL",
+    "country": "Netherlands",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-uros-medic",
@@ -809,7 +1209,11 @@
     "aliases": [
       "Uros Medic"
     ],
-    "source": "https://www.ufc.com/athlete/uros-medic"
+    "source": "https://www.ufc.com/athlete/uros-medic",
+    "code": "RS",
+    "country": "Serbia",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-kevin-holland",
@@ -817,7 +1221,11 @@
     "aliases": [
       "Kevin Holland"
     ],
-    "source": "https://www.ufc.com/athlete/kevin-holland"
+    "source": "https://www.ufc.com/athlete/kevin-holland",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-bilal-hasan",
@@ -825,7 +1233,11 @@
     "aliases": [
       "Bilal Hasan"
     ],
-    "source": "https://www.ufc.com/athlete/bilal-hasan"
+    "source": "https://www.ufc.com/athlete/bilal-hasan",
+    "code": "ID",
+    "country": "Indonesia",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-luis-gurule",
@@ -833,7 +1245,11 @@
     "aliases": [
       "Luis Gurule"
     ],
-    "source": "https://www.ufc.com/athlete/luis-gurule"
+    "source": "https://www.ufc.com/athlete/luis-gurule",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-aaron-pico",
@@ -841,7 +1257,11 @@
     "aliases": [
       "Aaron Pico"
     ],
-    "source": "https://www.ufc.com/athlete/aaron-pico"
+    "source": "https://www.ufc.com/athlete/aaron-pico",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-payton-talbott",
@@ -849,7 +1269,11 @@
     "aliases": [
       "Payton Talbott"
     ],
-    "source": "https://www.ufc.com/athlete/payton-talbott"
+    "source": "https://www.ufc.com/athlete/payton-talbott",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-king-green",
@@ -857,7 +1281,11 @@
     "aliases": [
       "King Green"
     ],
-    "source": "https://www.ufc.com/athlete/king-green"
+    "source": "https://www.ufc.com/athlete/king-green",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-esteban-ribovics",
@@ -865,7 +1293,11 @@
     "aliases": [
       "Esteban Ribovics"
     ],
-    "source": "https://www.ufc.com/athlete/esteban-ribovics"
+    "source": "https://www.ufc.com/athlete/esteban-ribovics",
+    "code": "AR",
+    "country": "Argentina",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-roberto-soldic",
@@ -873,7 +1305,11 @@
     "aliases": [
       "Roberto Soldic"
     ],
-    "source": "https://www.ufc.com/athlete/roberto-soldic"
+    "source": "https://www.ufc.com/athlete/roberto-soldic",
+    "code": "HR",
+    "country": "Croatia",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-khaos-williams",
@@ -881,7 +1317,11 @@
     "aliases": [
       "Khaos Williams"
     ],
-    "source": "https://www.ufc.com/athlete/khaos-williams"
+    "source": "https://www.ufc.com/athlete/khaos-williams",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-ateba-gautier",
@@ -889,7 +1329,11 @@
     "aliases": [
       "Ateba Gautier"
     ],
-    "source": "https://www.ufc.com/athlete/ateba-gautier"
+    "source": "https://www.ufc.com/athlete/ateba-gautier",
+    "code": "CM",
+    "country": "Cameroon",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-roman-kopylov",
@@ -897,7 +1341,11 @@
     "aliases": [
       "Roman Kopylov"
     ],
-    "source": "https://www.ufc.com/athlete/roman-kopylov"
+    "source": "https://www.ufc.com/athlete/roman-kopylov",
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-patricio-freire",
@@ -905,7 +1353,11 @@
     "aliases": [
       "Patricio Pitbull"
     ],
-    "source": "https://www.ufc.com/athlete/patricio-freire"
+    "source": "https://www.ufc.com/athlete/patricio-freire",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-dooho-choi",
@@ -913,7 +1365,11 @@
     "aliases": [
       "Dooho Choi"
     ],
-    "source": "https://www.ufc.com/athlete/dooho-choi"
+    "source": "https://www.ufc.com/athlete/dooho-choi",
+    "code": "KR",
+    "country": "South Korea",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-gable-steveson",
@@ -921,7 +1377,11 @@
     "aliases": [
       "Gable Steveson"
     ],
-    "source": "https://www.ufc.com/athlete/gable-steveson"
+    "source": "https://www.ufc.com/athlete/gable-steveson",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-sean-sharaf",
@@ -929,7 +1389,11 @@
     "aliases": [
       "Sean Sharaf"
     ],
-    "source": "https://www.ufc.com/athlete/sean-sharaf"
+    "source": "https://www.ufc.com/athlete/sean-sharaf",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-alonzo-menifield",
@@ -937,7 +1401,11 @@
     "aliases": [
       "Alonzo Menifield"
     ],
-    "source": "https://www.ufc.com/athlete/alonzo-menifield"
+    "source": "https://www.ufc.com/athlete/alonzo-menifield",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-iwo-baraniewski",
@@ -945,7 +1413,11 @@
     "aliases": [
       "Iwo Baraniewski"
     ],
-    "source": "https://www.ufc.com/athlete/iwo-baraniewski"
+    "source": "https://www.ufc.com/athlete/iwo-baraniewski",
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-jalin-turner",
@@ -953,7 +1425,11 @@
     "aliases": [
       "Jalin Turner"
     ],
-    "source": "https://www.ufc.com/athlete/jalin-turner"
+    "source": "https://www.ufc.com/athlete/jalin-turner",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-kaue-fernandes",
@@ -961,7 +1437,11 @@
     "aliases": [
       "Kaue Fernandes"
     ],
-    "source": "https://www.ufc.com/athlete/kaue-fernandes"
+    "source": "https://www.ufc.com/athlete/kaue-fernandes",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-mansur-abdul-malik",
@@ -969,7 +1449,11 @@
     "aliases": [
       "Mansur Abdul-Malik"
     ],
-    "source": "https://www.ufc.com/athlete/mansur-abdul-malik"
+    "source": "https://www.ufc.com/athlete/mansur-abdul-malik",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-dustin-stoltzfus",
@@ -977,7 +1461,11 @@
     "aliases": [
       "Dustin Stoltzfus"
     ],
-    "source": "https://www.ufc.com/athlete/dustin-stoltzfus"
+    "source": "https://www.ufc.com/athlete/dustin-stoltzfus",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-edson-barboza",
@@ -985,7 +1473,11 @@
     "aliases": [
       "Edson Barboza"
     ],
-    "source": "https://www.ufc.com/athlete/edson-barboza"
+    "source": "https://www.ufc.com/athlete/edson-barboza",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-330",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-conor-mcgregor",
@@ -993,7 +1485,11 @@
     "aliases": [
       "Conor McGregor"
     ],
-    "source": "https://www.ufc.com/athlete/conor-mcgregor"
+    "source": "https://www.ufc.com/athlete/conor-mcgregor",
+    "code": "IE",
+    "country": "Ireland",
+    "countrySource": "https://www.ufc.com/event/ufc-329",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-terrance-mckinney",
@@ -1001,7 +1497,11 @@
     "aliases": [
       "Terrance McKinney"
     ],
-    "source": "https://www.ufc.com/athlete/terrance-mckinney"
+    "source": "https://www.ufc.com/athlete/terrance-mckinney",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-jeremy-stephens",
@@ -1009,7 +1509,11 @@
     "aliases": [
       "Jeremy Stephens"
     ],
-    "source": "https://www.ufc.com/athlete/jeremy-stephens"
+    "source": "https://www.ufc.com/athlete/jeremy-stephens",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-328",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-johnny-walker",
@@ -1017,7 +1521,11 @@
     "aliases": [
       "Johnny Walker"
     ],
-    "source": "https://www.ufc.com/athlete/johnny-walker"
+    "source": "https://www.ufc.com/athlete/johnny-walker",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-332",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-cub-swanson",
@@ -1025,7 +1533,11 @@
     "aliases": [
       "Cub Swanson"
     ],
-    "source": "https://www.ufc.com/athlete/cub-swanson"
+    "source": "https://www.ufc.com/athlete/cub-swanson",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-327",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-nate-landwehr",
@@ -1033,7 +1545,11 @@
     "aliases": [
       "Nate Landwehr"
     ],
-    "source": "https://www.ufc.com/athlete/nate-landwehr"
+    "source": "https://www.ufc.com/athlete/nate-landwehr",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-reinier-de-ridder",
@@ -1041,7 +1557,11 @@
     "aliases": [
       "Reinier de Ridder"
     ],
-    "source": "https://www.ufc.com/athlete/reinier-de-ridder"
+    "source": "https://www.ufc.com/athlete/reinier-de-ridder",
+    "code": "NL",
+    "country": "Netherlands",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-22-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-rob-font",
@@ -1049,7 +1569,11 @@
     "aliases": [
       "Rob Font"
     ],
-    "source": "https://www.ufc.com/athlete/rob-font"
+    "source": "https://www.ufc.com/athlete/rob-font",
+    "code": "PR",
+    "country": "Puerto Rico",
+    "countrySource": "https://www.ufc.com/event/ufc-326",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-raul-rosas-jr",
@@ -1057,7 +1581,11 @@
     "aliases": [
       "Raul Rosas Jr."
     ],
-    "source": "https://www.ufc.com/athlete/raul-rosas-jr"
+    "source": "https://www.ufc.com/athlete/raul-rosas-jr",
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-september-26-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-drew-dober",
@@ -1065,7 +1593,11 @@
     "aliases": [
       "Drew Dober"
     ],
-    "source": "https://www.ufc.com/athlete/drew-dober"
+    "source": "https://www.ufc.com/athlete/drew-dober",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-michael-johnson",
@@ -1073,7 +1605,11 @@
     "aliases": [
       "Michael Johnson"
     ],
-    "source": "https://www.ufc.com/athlete/michael-johnson"
+    "source": "https://www.ufc.com/athlete/michael-johnson",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-326",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-brunno-ferreira",
@@ -1081,7 +1617,11 @@
     "aliases": [
       "Brunno Ferreira"
     ],
-    "source": "https://www.ufc.com/athlete/brunno-ferreira"
+    "source": "https://www.ufc.com/athlete/brunno-ferreira",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-dan-hooker",
@@ -1089,7 +1629,11 @@
     "aliases": [
       "Dan Hooker"
     ],
-    "source": "https://www.ufc.com/athlete/dan-hooker"
+    "source": "https://www.ufc.com/athlete/dan-hooker",
+    "code": "NZ",
+    "country": "New Zealand",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-rafael-fiziev",
@@ -1097,7 +1641,11 @@
     "aliases": [
       "Rafael Fiziev"
     ],
-    "source": "https://www.ufc.com/athlete/rafael-fiziev"
+    "source": "https://www.ufc.com/athlete/rafael-fiziev",
+    "code": "AZ",
+    "country": "Azerbaijan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-27-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-tai-tuivasa",
@@ -1105,7 +1653,11 @@
     "aliases": [
       "Tai Tuivasa"
     ],
-    "source": "https://www.ufc.com/athlete/tai-tuivasa"
+    "source": "https://www.ufc.com/athlete/tai-tuivasa",
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-331",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-tallison-teixeira",
@@ -1113,7 +1665,11 @@
     "aliases": [
       "Tallison Teixeira"
     ],
-    "source": "https://www.ufc.com/athlete/tallison-teixeira"
+    "source": "https://www.ufc.com/athlete/tallison-teixeira",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-jamie-mullarkey",
@@ -1121,7 +1677,11 @@
     "aliases": [
       "Jamie Mullarkey"
     ],
-    "source": "https://www.ufc.com/athlete/jamie-mullarkey"
+    "source": "https://www.ufc.com/athlete/jamie-mullarkey",
+    "code": "AU",
+    "country": "Australia",
+    "countrySource": "https://www.ufc.com/event/ufc-325",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-derrick-lewis",
@@ -1129,7 +1689,11 @@
     "aliases": [
       "Derrick Lewis"
     ],
-    "source": "https://www.ufc.com/athlete/derrick-lewis"
+    "source": "https://www.ufc.com/athlete/derrick-lewis",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-freedom-250",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-matheus-camilo",
@@ -1137,7 +1701,11 @@
     "aliases": [
       "Matheus Camilo"
     ],
-    "source": "https://www.ufc.com/athlete/matheus-camilo"
+    "source": "https://www.ufc.com/athlete/matheus-camilo",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-jai-herbert",
@@ -1145,7 +1713,11 @@
     "aliases": [
       "Jai Herbert"
     ],
-    "source": "https://www.ufc.com/athlete/jai-herbert"
+    "source": "https://www.ufc.com/athlete/jai-herbert",
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-ketlen-souza",
@@ -1153,7 +1725,11 @@
     "aliases": [
       "Ketlen Souza"
     ],
-    "source": "https://www.ufc.com/athlete/ketlen-souza"
+    "source": "https://www.ufc.com/athlete/ketlen-souza",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-andre-fili",
@@ -1161,7 +1737,11 @@
     "aliases": [
       "Andre Fili"
     ],
-    "source": "https://www.ufc.com/athlete/andre-fili"
+    "source": "https://www.ufc.com/athlete/andre-fili",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-kai-kamaka-iii",
@@ -1169,7 +1749,11 @@
     "aliases": [
       "Kai Kamaka III"
     ],
-    "source": "https://www.ufc.com/athlete/kai-kamaka-iii"
+    "source": "https://www.ufc.com/athlete/kai-kamaka-iii",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-malcolm-wellmaker",
@@ -1177,7 +1761,11 @@
     "aliases": [
       "Malcolm Wellmaker"
     ],
-    "source": "https://www.ufc.com/athlete/malcolm-wellmaker"
+    "source": "https://www.ufc.com/athlete/malcolm-wellmaker",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-otari-tanzilovi",
@@ -1185,6 +1773,10 @@
     "aliases": [
       "Otari Tanzilovi"
     ],
-    "source": "https://www.ufc.com/athlete/otari-tanzilovi"
+    "source": "https://www.ufc.com/athlete/otari-tanzilovi",
+    "code": "GE",
+    "country": "Georgia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   }
 ]

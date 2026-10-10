@@ -37,8 +37,13 @@ def parse_profile(page, athlete, date):
     division = division.replace("Women's ", "")
     division = DIVISIONS.get(division, division) + (" femenino" if feminine else "")
     parts = name.split(" ", 1)
+    # Verified representation is retained from the manifest. Birthplace is separate.
+    registry_path = Path(__file__).resolve().parents[1] / "docs/fighter-country-sources.json"
+    registry = json.loads(registry_path.read_text()) if registry_path.exists() else {}
+    country = registry.get(athlete["source"].rstrip("/").rsplit("/", 1)[-1], {})
     return {
         **athlete, "name": name, "first": parts[0], "last": parts[1] if len(parts) > 1 else "",
+        **country,
         "supplemental": True, "division": division,
         "record": (field("hero-profile__division-body") or "No indicado").replace(" (W-L-D)", ""),
         "nickname": (field("hero-profile__nickname") or "").strip('"'),

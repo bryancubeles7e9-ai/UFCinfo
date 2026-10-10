@@ -34,6 +34,10 @@ jobs:
         run: node tests/test-fighter-records-feed.mjs
       - name: Comprobar cobertura de la cartelera del 10 de octubre
         run: node tests/test-october-10-card.mjs
+      - name: Comprobar etiquetas de países
+        run: |
+          node tests/test-fighter-country.mjs
+          python3 tests/test_fighter_countries.py
       - name: Comprobar perfiles reales de UFC
         if: github.event_name != 'schedule'
         run: python3 scripts/sync-ufc-fighter-records.py --probe
