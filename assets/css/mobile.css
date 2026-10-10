@@ -165,13 +165,13 @@
 
 @media (max-width: 480px) {
   .fighter-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
-  .fighter-card { display: grid; grid-template-columns: 104px minmax(0, 1fr); }
-  .fighter-card > .fighter-portrait { height: 100%; min-height: 220px; }
-  .fighter-card .fighter-photo { width: 100%; height: 100%; left: 0; transform: none; object-fit: contain; object-position: top center; }
+  .fighter-card { display: block; }
+  .fighter-card > .fighter-portrait { height: 250px; min-height: 0; }
+  .fighter-card .fighter-photo { width: 100%; max-width: 100%; height: 100%; left: 0; transform: none; object-fit: contain; object-position: center bottom; }
   .fighter-card .portrait-label { left: 8px; right: 8px; bottom: 10px; font-size: 9px; letter-spacing: 0; line-height: 1.5; }
   .fighter-card .portrait-number { left: 10px; }
-  .fighter-card > .favorite-button { left: 8px; top: 40px; right: auto; }
-  .fighter-card-body { padding: 14px 14px 0; }
+  .fighter-card > .favorite-button { left: auto; top: 12px; right: 12px; }
+  .fighter-card-body { padding: 16px 18px 0; }
   .fighter-name { margin-top: 12px; font-size: 22px; }
   .fighter-name strong { font-size: 30px; line-height: 1.05; }
   .fighter-card-footer { margin-top: 12px; padding: 8px 0; }
