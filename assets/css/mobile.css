@@ -179,3 +179,77 @@
   .official-facts dl { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .rumor-review-names { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Second mobile pass: readable feeds and full-screen detail sheets. */
+@media (max-width: 700px) {
+  .rumor-toolbar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .rumor-toolbar .search-box, #rumor-source { grid-column: 1 / -1; }
+  .rumor-toolbar select { width: 100%; min-width: 0; }
+  .rumor-matchup {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 8px;
+    align-items: center;
+  }
+  .rumor-matchup .rumor-fighter { font-size: clamp(21px, 5.8vw, 30px); line-height: 1.15; }
+  .rumor-matchup .rumor-fighter:last-child { text-align: right; }
+  .rumor-summary { font-size: 15px; line-height: 1.75; }
+  .rumor-actions { gap: 8px 16px; }
+  .rumor-group-sources a { display: inline-flex; align-items: center; min-height: 44px; }
+  .rumor-group-sources small { font-size: 12px; line-height: 1.6; }
+  .following-stats span, .followed-ranking, .followed-fighter-heading p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .following-stats article { min-width: 0; overflow-wrap: anywhere; }
+  .followed-fighter-name, .following-bout-actions > * {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .following-bout-actions { gap: 8px 16px; }
+  .account-actions > button { flex: 1 1 140px; }
+  .follow-picker > div { flex-wrap: wrap; }
+  .follow-picker select { flex-basis: 220px; width: 100%; }
+  .follow-picker .button { flex-grow: 1; }
+  .auth-tabs > button { flex: 1; min-width: 0; }
+  .auth-import-local { align-items: center; min-height: 44px; }
+  .auth-import-local input { width: 20px; height: 20px; margin: 0; }
+  dialog .dialog-close { z-index: 5; }
+  .official-facts dd, .lab-fighter h2 { overflow-wrap: anywhere; }
+  .lab-fighter-photo img { max-width: 100%; }
+  .event-info .button, .event-info .outline-button { min-height: 48px; }
+  .event-kind-buttons { width: 100%; }
+  .event-kind-buttons > button { flex: 1; }
+  .backup-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+  .backup-buttons > button { flex: 1; }
+}
+
+@media (max-width: 480px) {
+  /* Use the full viewport for long profiles and cards, including iPhone safe areas. */
+  #fighter-dialog, #event-dialog {
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100vh;
+    max-height: 100dvh;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    padding: max(12px, env(safe-area-inset-top))
+      max(16px, env(safe-area-inset-right))
+      max(24px, env(safe-area-inset-bottom))
+      max(16px, env(safe-area-inset-left));
+  }
+  .event-dialog-title { font-size: clamp(30px, 9vw, 42px); line-height: 1.1; }
+  .fighter-card-footer { flex-wrap: wrap; gap: 8px; }
+  .lab-fighter-summaries { gap: 8px; }
+  .lab-fighter h2 { font-size: 22px; line-height: 1.2; }
+  .lab-table thead th:first-child { width: 40%; }
+  .official-bout-names { gap: 8px; }
+}
