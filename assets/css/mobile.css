@@ -331,3 +331,53 @@
     background: #101010bf;
   }
 }
+
+/* Mobile motion stays brief and uses only opacity and transforms. */
+@media (max-width: 700px) and (prefers-reduced-motion: no-preference) {
+  .view:not([hidden]) { animation: mobile-view-enter 240ms ease-out; }
+
+  .view:not([hidden]) :is(.fighter-grid, .rumor-list, .following-fighter-grid) > :is(.fighter-card, .rumor-card, .followed-fighter) {
+    animation: mobile-card-enter 340ms cubic-bezier(.2,.7,.3,1) backwards;
+  }
+  .view:not([hidden]) :is(.fighter-grid, .rumor-list, .following-fighter-grid) > :nth-child(2) { animation-delay: 45ms; }
+  .view:not([hidden]) :is(.fighter-grid, .rumor-list, .following-fighter-grid) > :nth-child(3) { animation-delay: 90ms; }
+  .view:not([hidden]) :is(.fighter-grid, .rumor-list, .following-fighter-grid) > :nth-child(4) { animation-delay: 135ms; }
+
+  #fighter-dialog[open], #event-dialog[open], #auth-dialog[open] {
+    animation: mobile-sheet-enter 280ms cubic-bezier(.2,.8,.25,1);
+  }
+  .header.mobile-menu-open nav,
+  .header.mobile-menu-open .header-actions,
+  #fighter-filters.mobile-filters-open {
+    animation: mobile-panel-enter 180ms ease-out;
+  }
+  .button, .outline-button, .icon-button, .favorite-button,
+  .fighter-name, .segmented button {
+    transition: transform 120ms ease-out, background-color 160ms ease-out, color 160ms ease-out;
+  }
+  :is(.button, .outline-button, .icon-button, .favorite-button, .fighter-name, .segmented button):not(:disabled):active {
+    transform: scale(.97);
+  }
+  .favorite-button.selected { animation: mobile-follow-pop 240ms ease-out; }
+}
+
+@keyframes mobile-view-enter {
+  from { opacity: .5; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes mobile-card-enter {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes mobile-sheet-enter {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes mobile-panel-enter {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes mobile-follow-pop {
+  0%, 100% { transform: scale(1); }
+  45% { transform: scale(1.12); }
+}
