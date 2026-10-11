@@ -7,8 +7,8 @@ All times below use Europe/Madrid (including daylight saving changes).
 | Job | Schedule | cron-job.org ID | Workflow |
 | --- | --- | --- | --- |
 | Rumors and official confirmations | Every hour, minute 0 | 8616997 | rumor-sync.yml |
-| Events, results and official rankings | 02:17 and 14:17 | 8620496 | ufc-events.yml |
-| Fighter records and statistics | 11:47 daily | 8620521 | fighter-records.yml |
+| Events, results, rankings, fighter records and statistics | 02:17 and 14:17 | 8620496 | ufc-events.yml |
+| Legacy fighter dispatch (job skipped without full_refresh) | 11:47 daily | 8620521 | fighter-records.yml |
 
 Requests use POST to the repository workflow dispatch endpoint with body
 `{"ref":"main"}`. Authentication is stored only in cron-job.org, never here.
@@ -22,7 +22,9 @@ Official rumor confirmations are also checked inside the hourly rumor workflow.
 GitHub must still accept and execute each dispatch: an HTTP 204 confirms acceptance,
 not successful completion. Check Actions logs as well as cron-job.org history.
 
-Fighter updates still require a completed card, complete results and at least
-24 hours since event start. Unchanged official records are retried later.
+Fighter updates run after the cards in the same workflow. They require a completed
+card and a result for each selected bout, without a 24-hour wait. Cards from the
+last 14 days are checked again even when processed; unchanged records no longer
+block statistics. Full manual refresh uses full_refresh=true in fighter-records.yml.
 Only registered fighters are updated. The ten main-card fighters for 10 October
 2026 are covered by tests/test-october-10-card.mjs; prelim coverage is not implied.

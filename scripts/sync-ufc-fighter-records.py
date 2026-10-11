@@ -1,4 +1,5 @@
-"""Read official UFC profiles only for fighters on newly completed cards."""
+"""Refresh verified UFC profiles after cards, with an explicit full refresh mode."""
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone, timedelta
 from html.parser import HTMLParser
 import json
@@ -109,7 +110,7 @@ def directory():
       import { fighters } from './assets/js/data.js';
       import { additionalFighters } from './assets/js/fighter-directory-data.js';
       console.log(JSON.stringify([...fighters, ...additionalFighters].map(f =>
-        ({id:f.id, name:f.name || `${f.first} ${f.last}`, aliases:f.aliases || [], source:f.source, record:f.record}))));
+        ({id:f.id, name:f.name || `${f.first} ${f.last}`, aliases:[...(f.aliases || []), ...(f.id === "zhang" ? ["Zhang Weili"] : [])], source:f.source, record:f.record}))));
     """], cwd=ROOT, text=True)
     return json.loads(output)
 
@@ -121,7 +122,18 @@ def save(state):
     Path(tmp.name).replace(STATE)
 
 
-def sync(events, state, fighters, fetch=fetch_profile, now=None):
+def store_profile(state, fighter, profile, now):
+    previous = state["records"].get(fighter["id"], {})
+    state["records"][fighter["id"]] = {
+        "record": profile["record"], "source": "UFC", "sourceUrl": fighter["source"],
+        "updatedAt": now.isoformat(),
+        "info": {**previous.get("info", {}), **profile["info"],
+                 "statisticsSource": fighter["source"], "statisticsConsulted": now.date().isoformat()},
+    }
+    save(state)
+
+
+def sync(events, state, fighters, fetch=fetch_profile, now=None, full=False):
     now = now or datetime.now(timezone.utc)
     by_name = {}
     for fighter in fighters:
@@ -130,45 +142,63 @@ def sync(events, state, fighters, fetch=fetch_profile, now=None):
             if key in by_name and by_name[key] != fighter:
                 raise ValueError("Duplicate fighter identity in directory")
             by_name[key] = fighter
-    used = 0
-    for event in sorted(events, key=lambda e: e["date"]):
-        if event.get("status") != "completed" or event["id"] in state["processedEventIds"]:
+    targets = {}
+    eligible = {}
+    for event in sorted(events, key=lambda e: e["date"], reverse=True):
+        start = datetime.fromisoformat(event["date"].replace("Z", "+00:00"))
+        if event.get("status") != "completed" or start > now:
             continue
-        if datetime.fromisoformat(event["date"].replace("Z", "+00:00")) > now - timedelta(hours=24):
-            continue  # Give official profile editors time after the event starts.
-        if not event.get("bouts") or any(not b.get("winner") and b.get("outcome") not in ("draw", "no-contest") for b in event["bouts"]):
+        recent = start >= now - timedelta(days=14)
+        if event["id"] in state["processedEventIds"] and not recent:
             continue
-        done = state["completedFighters"].setdefault(event["id"], [])
         required = set()
-        for bout in event["bouts"]:
+        for bout in event.get("bouts", []):
+            if not bout.get("winner") and bout.get("outcome") not in ("draw", "no-contest"):
+                continue
             for side in ("red", "blue"):
                 fighter = by_name.get(normalize(bout[side]))
-                if not fighter:
-                    continue
-                required.add(fighter["id"])
-                if fighter["id"] in done:
-                    continue
-                if used >= MAX_PROFILES:
-                    save(state)
-                    return used
-                used += 1
-                try:
-                    profile = fetch(fighter)
-                    record = profile["record"]
-                    previous = state["records"].get(fighter["id"], {}).get("record", fighter["record"])
-                    if record == previous and bout.get("outcome") != "no-contest":
-                        raise ValueError("Official record unchanged; retry after profile update")
-                    state["records"][fighter["id"]] = {"record": record, "source": "UFC", "sourceUrl": fighter["source"], "updatedAt": now.isoformat(),
-                        "info": {**profile["info"], "statisticsSource": fighter["source"], "statisticsConsulted": now.date().isoformat()}}
-                    done.append(fighter["id"])
-                    save(state)
-                except Exception as error:
-                    print(f"Record unchanged for {fighter['id']}: {error}", file=sys.stderr)
+                if fighter:
+                    required.add(fighter["id"])
+                    if recent or fighter["id"] not in state["completedFighters"].get(event["id"], []):
+                        targets[fighter["id"]] = fighter
+        if required:
+            eligible[event["id"]] = required
+    targets = list(fighters) if full else list(targets.values())
+    # Oldest consultation first prevents starvation when recent cards exceed the cap.
+    if not full:
+        targets.sort(key=lambda f: state["records"].get(f["id"], {}).get("updatedAt", ""))
+        targets = targets[:MAX_PROFILES]
+    successes, failures = set(), []
+    def consult(fighter):
+        try:
+            return fighter, fetch(fighter), None
+        except Exception as error:
+            return fighter, None, str(error)
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        for fighter, profile, error in pool.map(consult, targets):
+            if error:
+                failures.append(fighter["id"])
+                print(f"::warning::Profile preserved for {fighter['id']}: {error}", file=sys.stderr)
+                continue
+            # A successful consultation is not proof UFC has incorporated the last
+            # fight. Recent events stay eligible for repeated checks for 14 days.
+            store_profile(state, fighter, profile, now)
+            successes.add(fighter["id"])
+    for event_id, required in eligible.items():
+        done = set(state["completedFighters"].get(event_id, [])) | (required & successes)
         if required.issubset(done):
-            state["processedEventIds"].append(event["id"])
-            state["completedFighters"].pop(event["id"], None)
-            save(state)
-    return used
+            if event_id not in state["processedEventIds"]:
+                state["processedEventIds"].append(event_id)
+            state["completedFighters"].pop(event_id, None)
+        else:
+            state["completedFighters"][event_id] = sorted(done)
+    state["lastSync"] = {"checkedAt": now.isoformat(), "mode": "all" if full else "events",
+                         "attempted": len(targets), "succeeded": len(successes), "failedIds": failures}
+    if full and len(successes) == len(fighters):
+        state["fullRefreshCompletedAt"] = now.isoformat()
+    save(state)
+    print(f"Profiles checked: {len(targets)}; saved: {len(successes)}; preserved after error: {len(failures)}")
+    return len(targets)
 
 
 def main():
@@ -182,7 +212,8 @@ def main():
     if state.get("source") != "UFC":
         raise SystemExit("Official UFC baseline missing")
     events = json.loads((ROOT / "assets/data/ufc-events.json").read_text(encoding="utf-8"))["events"]
-    print("Official UFC profiles consulted:", sync(events, state, fighters))
+    full = "--all" in sys.argv or ("--ensure-full" in sys.argv and not state.get("fullRefreshCompletedAt"))
+    print("Official UFC profiles consulted:", sync(events, state, fighters, full=full))
 
 
 if __name__ == "__main__":

@@ -1,12 +1,13 @@
 name: Actualizar récords de luchadores
 on:
-  # cron-job.org dispatches daily at 11:47 Europe/Madrid.
+  # Regular updates now run inside ufc-events.yml. Old empty cron dispatches
+  # intentionally skip this job to avoid a separate third daily refresh.
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - scripts/sync-ufc-fighter-records.py
-      - .github/workflows/fighter-records.yml
+    inputs:
+      full_refresh:
+        description: 'Consultar todos los luchadores (actualización global manual)'
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -14,6 +15,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   sync:
+    if: inputs.full_refresh == true
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:
@@ -42,11 +44,8 @@ jobs:
         run: |
           node tests/test-fighter-stances.mjs
           python3 tests/test_fighter_stances.py
-      - name: Comprobar perfiles reales de UFC
-        if: github.event_name != 'schedule'
-        run: python3 scripts/sync-ufc-fighter-records.py --probe
-      - name: Actualizar solo luchadores de eventos terminados
-        run: python3 scripts/sync-ufc-fighter-records.py
+      - name: Actualizar todos los récords y estadísticas
+        run: python3 scripts/sync-ufc-fighter-records.py --all
       - name: Guardar fichas verificadas
         run: |
           git add assets/data/fighter-records.json

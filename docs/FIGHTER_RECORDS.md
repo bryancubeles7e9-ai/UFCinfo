@@ -1,13 +1,23 @@
-# Récords de luchadores
+# Récords y estadísticas de luchadores
 
-Las fichas de `assets/js/data.js` y `assets/js/fighter-directory-data.js` son la copia inicial. Las actualizaciones posteriores se guardan en `assets/data/fighter-records.json`, con fuente y fecha. Se mantienen los eventos históricos como procesados para evitar una descarga masiva inicial.
+Las fichas de `assets/js/data.js` y `assets/js/fighter-directory-data.js` son la copia inicial. Las consultas verificadas se guardan en `assets/data/fighter-records.json`, con fuente y fecha; el navegador aplica este archivo sobre el directorio.
 
-El workflow **Actualizar récords de luchadores** se ejecuta cada día a las 09:47 UTC y se puede lanzar manualmente. No necesita claves ni consume llamadas de Cito o API-Sports. Lee directamente las fichas oficiales enlazadas por el directorio de UFCinfo.
+## Sincronización con las carteleras
 
-Solo consulta a luchadores del directorio que aparezcan en carteleras recién terminadas, al menos 24 horas después de la hora de inicio del evento. Máximo 40 fichas por ejecución. Si el récord aún no ha cambiado, una descarga falla o la identidad no coincide, conserva el anterior y lo deja pendiente para la siguiente ejecución. Los éxitos se guardan individualmente para no repetir las descargas. Si el HTML oficial cambia, será necesario adaptar el extractor. La cobertura depende de las peleas presentes en el feed: hoy solo carteleras principales; preliminares cuando se incorporen.
+Desde el 11 de octubre de 2026, `ufc-events.yml` consulta las fichas después de sincronizar las carteleras. Cron-job.org activa ese workflow a las **02:17 y 14:17 Europe/Madrid**; también se ejecuta con sus disparadores de código. No existe la espera anterior de 24 horas. Solo se consultan participantes registrados de peleas con resultado, en eventos terminados.
 
-API-Sports queda sin uso tras comprobar el 9 de octubre de 2026 que devuelve récords vacíos para Joshua Van, Ilia Topuria, Deiveson Figueiredo y Natalia Silva. Su script anterior permanece como referencia, pero no se ejecuta en este workflow. `API_SPORTS_MMA_KEY` ya no es necesario para la actualización activa.
+Los eventos de los últimos 14 días se vuelven a revisar aunque figuren como procesados. Esto permite recoger estadísticas que UFC publique después del récord y corrige el caso de UFC 332, incluido prematuramente en el listado histórico procesado. Los eventos antiguos no procesados también son elegibles. Máximo 40 perfiles por ejecución, priorizando los menos recientemente consultados; una misma persona solo se descarga una vez por ejecución.
 
-## Estadísticas después de combates
+Un récord sin cambios ya no impide guardar estadísticas. Una consulta correcta no demuestra que UFC haya incorporado la última pelea: las fechas visibles indican consulta, no una garantía de actualización de la fuente. Las revisiones de eventos recientes continúan durante 14 días; las correcciones posteriores requieren la consulta global manual.
 
-Desde el mismo HTML se actualizan también golpes significativos conectados y recibidos por minuto, precisión y defensa de golpeo, derribos por 15 minutos, precisión y defensa de derribos, intentos de sumisión, knockdowns y victorias por KO/sumisión y finalizaciones en primer asalto. Los valores opcionales ausentes conservan su dato anterior; una ficha sin las cuatro medias básicas se rechaza completa. Los datos biográficos conservan su fecha original y las estadísticas llevan una fecha propia. Una descarga por ficha actualiza récord y estadísticas conjuntamente. La actualización empieza con los próximos eventos pendientes, sin volver a descargar el archivo histórico.
+## Actualización global
+
+El workflow usa `--ensure-full`: mientras no exista `fullRefreshCompletedAt`, consulta todo el catálogo. La marca solo se guarda tras verificar todos los perfiles. Después pasa automáticamente a las consultas limitadas por evento.
+
+`python3 scripts/sync-ufc-fighter-records.py --all` consulta todo el directorio sin depender del estado de las carteleras. También se puede ejecutar `fighter-records.yml` manualmente marcando `full_refresh`. Los antiguos dispatches vacíos de las 11:47 omiten el trabajo, evitando una tercera actualización diaria.
+
+Se valida la identidad, récord y cuatro estadísticas básicas de cada perfil. Si falla, se conserva su última copia. Las estadísticas opcionales ausentes conservan sus valores anteriores. Se guardan los éxitos individualmente y `lastSync` registra fecha, modo, intentos, éxitos e IDs fallidos. Un fallo se registra como advertencia de Actions para no perder el resto del progreso.
+
+La fuente activa es UFC.com, sin clave y sin consumir puntos de Cito o API-Sports. La actualización global cubre todo el directorio; la actualización habitual depende de las peleas presentes en el feed, actualmente cartelera principal. No se calculan récords sumando resultados ni se inventan estadísticas.
+
+Las métricas incluyen golpeo conectado/recibido, precisión y defensa, derribos, sumisiones, knockdowns y finalizaciones cuando están disponibles. Los datos biográficos mantienen su fecha original; récords y estadísticas muestran su fecha propia de consulta.

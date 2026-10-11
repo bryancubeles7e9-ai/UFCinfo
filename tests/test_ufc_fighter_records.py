@@ -31,28 +31,42 @@ class OfficialRecordsTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             module.parse_record(page.replace("11-2-0", "No record"), {"name": "A Fighter"})
 
-    def test_checkpoint_retry_and_no_duplicate_download(self):
-        state = {"source": "UFC", "records": {}, "processedEventIds": [], "completedFighters": {}}
-        fighters = [{"id": "a", "name": "A Fighter", "source": "https://www.ufc.com/athlete/a", "record": "10-2-0"},
-                    {"id": "b", "name": "B Fighter", "source": "https://www.ufc.com/athlete/b", "record": "5-1-0"}]
-        event = {"id": "new", "date": "2026-10-01T02:00:00Z", "status": "completed", "bouts": [{"red": "A Fighter", "blue": "B Fighter", "winner": "A Fighter"}]}
-        values = {"a": "11-2-0", "b": "5-1-0"}
-        calls = []
-        def fetch(fighter):
-            calls.append(fighter["id"])
-            return {"record": values[fighter["id"]], "info": {"strikesLanded": 4.5, "takedownAverage": 0}}
+    def test_recent_processed_card_refreshes_immediately_with_unchanged_record(self):
+        state = {"source": "UFC", "records": {}, "processedEventIds": ["new"], "completedFighters": {}}
+        fighter = {"id": "a", "name": "A Fighter", "source": "https://www.ufc.com/athlete/a", "record": "10-2-0"}
+        event = {"id": "new", "date": "2026-10-03T00:00:00Z", "status": "completed", "bouts": [{"red": "A Fighter", "blue": "Unknown", "winner": "A Fighter"}]}
         with tempfile.TemporaryDirectory() as tmp, patch.object(module, "STATE", Path(tmp) / "feed.json"):
-            now = datetime(2026, 10, 3, tzinfo=timezone.utc)
-            module.sync([event], state, fighters, fetch=fetch, now=now)
-            self.assertEqual(state["completedFighters"]["new"], ["a"])
-            self.assertEqual(state["processedEventIds"], [])
-            values["b"] = "5-2-0"
-            module.sync([event], state, fighters, fetch=fetch, now=now)
-            self.assertEqual(calls, ["a", "b", "b"])
+            now = datetime(2026, 10, 3, 3, tzinfo=timezone.utc)
+            for value in (4.5, 5.5):
+                calls = []
+                def fetch(f):
+                    calls.append(f["id"])
+                    return {"record": "10-2-0", "info": {"strikesLanded": value}}
+                module.sync([event], state, [fighter], fetch=fetch, now=now)
+                self.assertEqual(calls, ["a"])
+                self.assertEqual(state["records"]["a"]["info"]["strikesLanded"], value)
             self.assertEqual(state["processedEventIds"], ["new"])
-            self.assertEqual(state["records"]["a"]["info"]["strikesLanded"], 4.5)
-            module.sync([event], state, fighters, fetch=fetch, now=now)
-            self.assertEqual(calls, ["a", "b", "b"])
+
+    def test_full_refresh_preserves_failed_fighter_and_optional_stats(self):
+        state = {"source": "UFC", "records": {"a": {"record": "1-0-0", "info": {"koWins": 1}}, "b": {"record": "5-2-0"}}, "processedEventIds": [], "completedFighters": {}}
+        fighters = [{"id": x, "name": x, "source": "https://www.ufc.com/athlete/"+x, "record": "1-0-0"} for x in ('a','b')]
+        def fetch(f):
+            if f['id'] == 'b': raise ValueError('incomplete statistics')
+            return {"record": "2-0-0", "info": {"strikesLanded": 4}}
+        with tempfile.TemporaryDirectory() as tmp, patch.object(module, "STATE", Path(tmp) / "feed.json"):
+            module.sync([], state, fighters, fetch=fetch, full=True)
+        self.assertEqual(state['records']['a']['info']['koWins'], 1)
+        self.assertEqual(state['records']['b'], {"record": "5-2-0"})
+        self.assertEqual(state['lastSync']['failedIds'], ['b'])
+
+    def test_old_processed_and_unfinished_bouts_not_queried(self):
+        state = {"source": "UFC", "records": {}, "processedEventIds": ['old'], "completedFighters": {}}
+        fighter = {"id": "a", "name": "A", "source": "https://www.ufc.com/athlete/a", "record": "1-0-0"}
+        events = [{"id": "old", "date": "2026-01-01T00:00:00Z", "status": "completed", "bouts": [{"red": "A", "blue": "B", "winner": "A"}]},
+                  {"id": "new", "date": "2026-10-03T00:00:00Z", "status": "completed", "bouts": [{"red": "A", "blue": "B", "winner": None}]}]
+        with tempfile.TemporaryDirectory() as tmp, patch.object(module, "STATE", Path(tmp) / "feed.json"):
+            used = module.sync(events, state, [fighter], fetch=lambda f: self.fail('unexpected request'), now=datetime(2026,10,3,3,tzinfo=timezone.utc))
+        self.assertEqual(used, 0)
 
 
 if __name__ == "__main__":
