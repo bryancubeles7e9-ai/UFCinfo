@@ -38,6 +38,10 @@ jobs:
         run: |
           node tests/test-fighter-country.mjs
           python3 tests/test_fighter_countries.py
+      - name: Comprobar guardias y fuentes
+        run: |
+          node tests/test-fighter-stances.mjs
+          python3 tests/test_fighter_stances.py
       - name: Comprobar perfiles reales de UFC
         if: github.event_name != 'schedule'
         run: python3 scripts/sync-ufc-fighter-records.py --probe

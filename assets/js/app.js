@@ -33,6 +33,8 @@ import {
   championshipBadge,
   compactCombatInfo,
   renderCombatDetails,
+  renderStanceDetails,
+  matchesStance,
   renderChampionships,
 } from "./fighter-details.js";
 
@@ -72,12 +74,12 @@ function animateFollow(id, fromDialog = false) {
   }
 }
 function additionalFighterCard(fighter) {
-  return `<article class="fighter-card">${portrait(fighter)}${followButton(fighter, true)}<div class="fighter-card-body"><div class="fighter-card-meta"><span>${esc(countryLabel(fighter, getLocale()) || "PERFIL OFICIAL UFC")}</span></div><button class="fighter-name" data-profile="${esc(fighter.id)}">${esc(fighter.first)}<strong>${esc(fighter.last)}</strong></button><p class="fighter-division">${esc(fighter.division)}</p><p class="mobile-card-record"><span>RÉCORD · V-D-E</span><strong>${esc(fighter.record || "—")}</strong></p><p>${esc(fighter.nickname || fighter.officialStyle || "Trayectoria y estadísticas oficiales")}</p><dl class="card-combat-info"><div><dt>RÉCORD · V-D-E</dt><dd>${esc(fighter.record)}</dd></div><div><dt>EQUIPO / GIMNASIO</dt><dd>${esc(fighter.info.gym || "No indicado")}</dd></div></dl><div class="fighter-card-footer"><span>EXPLORAR PERFIL</span><button class="icon-button" data-profile="${esc(fighter.id)}" aria-label="Ver ficha de ${esc(fullName(fighter))}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 5 7 7-7 7"/></svg></button></div></div></article>`;
+  return `<article class="fighter-card">${portrait(fighter)}${followButton(fighter, true)}<div class="fighter-card-body"><div class="fighter-card-meta"><span>${esc(countryLabel(fighter, getLocale()) || "PERFIL OFICIAL UFC")}</span></div><button class="fighter-name" data-profile="${esc(fighter.id)}">${esc(fighter.first)}<strong>${esc(fighter.last)}</strong></button><p class="fighter-division">${esc(fighter.division)}</p><p class="mobile-card-record"><span>RÉCORD · V-D-E</span><strong>${esc(fighter.record || "—")}</strong></p><p>${esc(fighter.nickname || fighter.officialStyle || "Trayectoria y estadísticas oficiales")}</p><dl class="card-combat-info">${stanceNames[fighter.stance] ? `<div><dt>GUARDIA</dt><dd>${esc(stanceNames[fighter.stance].short)}</dd></div>` : ""}<div><dt>RÉCORD · V-D-E</dt><dd>${esc(fighter.record)}</dd></div><div><dt>EQUIPO / GIMNASIO</dt><dd>${esc(fighter.info.gym || "No indicado")}</dd></div></dl><div class="fighter-card-footer"><span>EXPLORAR PERFIL</span><button class="icon-button" data-profile="${esc(fighter.id)}" aria-label="Ver ficha de ${esc(fullName(fighter))}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 5 7 7-7 7"/></svg></button></div></div></article>`;
 }
 function additionalFighterProfile(fighter) {
   const dimension = (v) => v == null ? "No indicado" : `${v} cm`;
   const rows = [["País representado", countryLabel(fighter, getLocale()) || "No indicado"], ["División", fighter.division], ["Récord · V-D-E", fighter.record], ["Apodo", fighter.nickname || "No indicado"], ["Estilo indicado por UFC", fighter.officialStyle || "No indicado"], ["Altura", dimension(fighter.heightCm)], ["Alcance", dimension(fighter.reachCm)], ["Lugar de nacimiento", fighter.birthplace || "No indicado"]];
-  return `<div class="profile-layout">${portrait(fighter, "large")}<div class="profile-copy"><p class="eyebrow">${esc(fighter.division)} · PERFIL UFC</p><h2>${esc(fighter.first)}<br>${esc(fighter.last)}</h2><section class="official-facts"><span class="badge orange">DATOS DEL PERFIL UFC</span><dl>${rows.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl>${renderFighterConsultation(fighter)}</section>${renderExtendedFighterInfo(fighter)}<a class="button small" href="${esc(fighter.source)}" target="_blank" rel="noopener noreferrer">Perfil oficial UFC ›</a>${followButton(fighter)}<p class="data-note">Fotografía y datos del perfil oficial de UFC. El lugar de nacimiento no implica nacionalidad deportiva.</p></div></div>`;
+  return `<div class="profile-layout">${portrait(fighter, "large")}<div class="profile-copy"><p class="eyebrow">${esc(fighter.division)} · PERFIL UFC</p><h2>${esc(fighter.first)}<br>${esc(fighter.last)}</h2><section class="official-facts"><span class="badge orange">DATOS DEL PERFIL UFC</span><dl>${rows.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl>${renderFighterConsultation(fighter)}</section>${renderStanceDetails(fighter)}${renderExtendedFighterInfo(fighter)}<a class="button small" href="${esc(fighter.source)}" target="_blank" rel="noopener noreferrer">Perfil oficial UFC ›</a>${followButton(fighter)}<p class="data-note">Fotografía y datos del perfil oficial de UFC. El lugar de nacimiento no implica nacionalidad deportiva.</p></div></div>`;
 }
 function fighterCard(fighter) {
   const favorite = store.state.favorites.includes(fighter.id);
@@ -161,7 +163,7 @@ function renderFighters() {
         .includes(query) &&
       (style === "all" || f.style === style) &&
       (division === "all" || f.division === division) &&
-      (stance === "all" || f.stance === stance) &&
+      matchesStance(f, stance) &&
       (belts === "all" ||
         (belts === "current"
           ? hasCurrentBelt(f)
@@ -170,10 +172,10 @@ function renderFighters() {
             : f.championships.length > 0)) &&
       (!onlyFavorites || store.state.favorites.includes(f.id)),
   );
-  if (style === "all" && stance === "all" && belts === "all") {
+  if (style === "all" && belts === "all") {
     list.push(...additionalFighters.filter((f) =>
-      normalizeFighterName(`${fullName(f)} ${f.aliases.join(" ")} ${f.nickname} ${f.division} ${f.birthplace || ""} ${f.officialStyle || ""} ${f.info.gym || ""}`).includes(normalizeFighterName(query)) &&
-      (division === "all" || f.division === division) && (!onlyFavorites || store.state.favorites.includes(f.id))));
+      normalizeFighterName(`${fullName(f)} ${f.aliases.join(" ")} ${f.nickname} ${f.division} ${f.birthplace || ""} ${f.officialStyle || ""} ${f.info.gym || ""} ${stanceNames[f.stance]?.short || ""}`).includes(normalizeFighterName(query)) &&
+      (division === "all" || f.division === division) && matchesStance(f, stance) && (!onlyFavorites || store.state.favorites.includes(f.id))));
   }
   if ($("#fighter-sort").value === "name")
     list.sort((a, b) => fullName(a).localeCompare(fullName(b), "es"));

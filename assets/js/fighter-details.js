@@ -50,6 +50,18 @@ export function renderCombatDetails(fighter) {
   return `<section class="combat-details"><div class="combat-stance"><span class="stance-emblem">${stance?.code || "—"}</span><div><p class="eyebrow">GUARDIA REGISTRADA</p><h3>${esc(stance?.label || "No indicada")}</h3><a class="text-link" href="${esc(fighter.stanceSource)}" target="_blank" rel="noopener noreferrer">Fuente: UFC Stats ›</a></div></div><div class="martial-base"><p class="eyebrow">BASE / FORMACIÓN MARCIAL</p><h3>${esc(fighter.martialBase)}</h3><p>${esc(fighter.martialBaseNote)}</p><a class="text-link" href="${esc(fighter.martialBaseSource)}" target="_blank" rel="noopener noreferrer">Formación en UFC ›</a></div></section>`;
 }
 
+export function renderStanceDetails(fighter) {
+  const stance = stanceNames[fighter.stance];
+  if (!stance) return "";
+  const source = /^https?:\/\//.test(fighter.stanceSource || "")
+    ? `<a class="text-link" href="${esc(fighter.stanceSource)}" target="_blank" rel="noopener noreferrer">${esc(fighter.stanceSourceLabel || "UFC Stats")} ›</a>` : "";
+  return `<section class="combat-details"><div class="combat-stance"><span class="stance-emblem">${stance.code}</span><div><p class="eyebrow">GUARDIA REGISTRADA</p><h3>${esc(stance.label)}</h3>${source}${fighter.stanceConsulted ? `<p class="data-note">Consulta: ${esc(fighter.stanceConsulted)}</p>` : ""}</div></div></section>`;
+}
+
+export function matchesStance(fighter, stance) {
+  return stance === "all" || fighter.stance === stance;
+}
+
 export function renderChampionships(fighter) {
   const belts = [...fighter.championships].sort(
     (a, b) => Number(b.status === "current") - Number(a.status === "current"),
