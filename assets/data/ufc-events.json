@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-11T00:17:23.852132+00:00",
+  "synchronizedAt": "2026-10-11T09:54:36.185667+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -673,51 +673,51 @@
           "red": "Brendan Allen",
           "blue": "Christian Leroy Duncan",
           "division": "Middleweight",
-          "winner": null,
+          "winner": "Brendan Allen",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Submission",
+          "round": "5",
+          "time": "2:46"
         },
         {
           "red": "Matheus Camilo",
           "blue": "Jai Herbert",
           "division": "Lightweight",
-          "winner": null,
+          "winner": "Jai Herbert",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
           "red": "Loopy Godinez",
           "blue": "Ketlen Souza",
           "division": "Women's Strawweight",
-          "winner": null,
+          "winner": "Loopy Godinez",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
           "red": "Andre Fili",
           "blue": "Kai Kamaka III",
           "division": "Featherweight",
-          "winner": null,
+          "winner": "Andre Fili",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "0:22"
         },
         {
           "red": "Malcolm Wellmaker",
           "blue": "Otari Tanzilovi",
           "division": "Bantamweight",
-          "winner": null,
+          "winner": "Otari Tanzilovi",
           "outcome": null,
-          "method": "",
-          "round": "1",
-          "time": "3:24"
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "2:39"
         }
       ],
       "dataSource": "Cito",
