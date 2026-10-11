@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-11T18:00:55.729Z",
-  "lastSearchedAt": "2026-10-11T18:00:55.729Z",
+  "updatedAt": "2026-10-11T19:00:53.597Z",
+  "lastSearchedAt": "2026-10-11T19:00:53.597Z",
   "groups": [
     {
       "id": "2107747599155708089",
@@ -241,6 +241,14 @@
           "sourceId": "championship-rounds",
           "postUrl": "https://x.com/ChampRDS/status/2106593647596654854",
           "publishedAt": "2026-10-04T03:53:58.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        },
+        {
+          "id": "2109356935690768861",
+          "sourceId": "upfront-mma",
+          "postUrl": "https://x.com/upfrontmma/status/2109356935690768861",
+          "publishedAt": "2026-10-11T18:54:18.000Z",
           "language": "en",
           "attributedAccounts": []
         }
