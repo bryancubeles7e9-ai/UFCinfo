@@ -31,10 +31,10 @@ export const fighters = [
     image: "assets/images/fighters/ilia-topuria.png",
     stance: "Orthodox",
     stanceSource: "http://ufcstats.com/fighter-details/54f64b5e283b0ce7",
-    martialBase: "Jiu-jitsu brasileño",
+    martialBase: "Lucha / Jiu-jitsu brasileño",
     martialBaseNote:
-      "Su ficha describe un inicio en jiu-jitsu a los cuatro años y un cinturón negro de BJJ.",
-    martialBaseSource: "https://www.ufc.com/athlete/ilia-topuria",
+      "Ilia identifica la lucha y el BJJ como su formación de base en una entrevista de UFC. Su perfil oficial acredita cinturón negro de BJJ e incluye boxeo, kickboxing y taekwondo entre las disciplinas que entrena.",
+    martialBaseSource: "https://www.ufc.com/news/unshakeable-confidence-ilia-topuria-featured-prelim-ufc-270",
     championships: [
       {
         name: "Peso pluma",
