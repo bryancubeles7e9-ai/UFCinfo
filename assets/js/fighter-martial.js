@@ -18,6 +18,7 @@ export function martialDetails(fighter) {
   if (fighter.martialBase) return {
     label: fighter.martialBase, kind: 'base',
     note: fighter.martialBaseNote || '', source: fighter.martialBaseSource,
+    consulted: fighter.martialBaseConsulted, sourceLabel: fighter.martialBaseSourceLabel,
   };
   const style = fighter.officialStyle;
   if (disciplines[style]) return {
@@ -42,6 +43,6 @@ export function compactMartialInfo(fighter) {
 export function renderMartialDetails(fighter) {
   const data = martialDetails(fighter);
   const source = /^https?:\/\//.test(data.source || '')
-    ? `<a class="text-link" href="${esc(data.source)}" target="_blank" rel="noopener noreferrer">Fuente: perfil UFC ›</a>` : '';
+    ? `<a class="text-link" href="${esc(data.source)}" target="_blank" rel="noopener noreferrer">Fuente: ${esc(data.sourceLabel || 'perfil UFC')} ›</a>` : '';
   return `<section class="combat-details"><div class="martial-base"><p class="eyebrow">${data.kind === 'discipline' ? 'DISCIPLINA INDICADA POR UFC' : 'BASE / FORMACIÓN MARCIAL'}</p><h3>${esc(data.label)}</h3><p>${esc(data.note)}</p>${source}${data.consulted ? `<p class="data-note">Consulta: ${esc(data.consulted)}</p>` : ''}</div></section>`;
 }

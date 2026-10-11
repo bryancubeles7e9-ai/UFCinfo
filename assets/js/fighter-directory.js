@@ -1,11 +1,13 @@
 import { fighters, fullName } from "./data.js";
 import { additionalFighters } from "./fighter-directory-data.js";
 import { fighterStances } from "./fighter-stance-data.js";
+import { fighterMartialBases } from "./fighter-martial-data.js";
 import { escapeHTML as esc } from "./utils.js";
 
 // Keep the original objects: record/statistics refreshes share these references.
 for (const fighter of additionalFighters) {
   Object.assign(fighter, fighterStances[fighter.id] || {});
+  Object.assign(fighter, fighterMartialBases[fighter.id] || {});
 }
 export { additionalFighters };
 export const directoryFighters = [...fighters, ...additionalFighters];
