@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-10T22:11:38.767228+00:00",
+  "synchronizedAt": "2026-10-11T00:17:23.852132+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -519,7 +519,7 @@
       "location": "Etihad Arena",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-333",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-10-11",
       "bouts": [
         {
           "red": "Alexander Volkanovski",
@@ -588,7 +588,7 @@
       "location": "Rogers Place",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-10-11",
       "bouts": [
         {
           "red": "Joaquin Buckley",
@@ -662,12 +662,12 @@
       "eventKind": "fight-night",
       "title": "UFC Fight Night",
       "subtitle": "Brendan Allen vs Christian Leroy Duncan",
-      "status": "scheduled",
+      "status": "completed",
       "date": "2026-10-11T00:00:00+00:00",
       "location": "Meta APEX",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
-      "checkedAt": "2026-10-10",
+      "checkedAt": "2026-10-11",
       "bouts": [
         {
           "red": "Brendan Allen",
@@ -716,8 +716,8 @@
           "winner": null,
           "outcome": null,
           "method": "",
-          "round": "",
-          "time": ""
+          "round": "1",
+          "time": "3:24"
         }
       ],
       "dataSource": "Cito",
