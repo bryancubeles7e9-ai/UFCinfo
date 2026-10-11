@@ -58,6 +58,16 @@ class OfficialRecordsTest(unittest.TestCase):
         self.assertEqual(state['records']['a']['info']['koWins'], 1)
         self.assertEqual(state['records']['b'], {"record": "5-2-0"})
         self.assertEqual(state['lastSync']['failedIds'], ['b'])
+        self.assertNotIn('fullRefreshCompletedAt', state)
+        calls = []
+        def retry(f):
+            calls.append(f['id'])
+            return {"record": "5-2-0", "info": {"strikesLanded": 3}}
+        with tempfile.TemporaryDirectory() as tmp, patch.object(module, "STATE", Path(tmp) / "feed.json"):
+            module.sync([], state, fighters, fetch=retry)
+        self.assertEqual(calls, ['b'])
+        self.assertEqual(state['pendingProfileIds'], [])
+        self.assertIn('fullRefreshCompletedAt', state)
 
     def test_old_processed_and_unfinished_bouts_not_queried(self):
         state = {"source": "UFC", "records": {}, "processedEventIds": ['old'], "completedFighters": {}}

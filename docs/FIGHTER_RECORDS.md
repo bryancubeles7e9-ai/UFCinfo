@@ -12,7 +12,7 @@ Un récord sin cambios ya no impide guardar estadísticas. Una consulta correcta
 
 ## Actualización global
 
-El workflow usa `--ensure-full`: mientras no exista `fullRefreshCompletedAt`, consulta todo el catálogo. La marca solo se guarda tras verificar todos los perfiles. Después pasa automáticamente a las consultas limitadas por evento.
+El workflow usa `--ensure-full`: en la primera ejecución consulta todo el catálogo. `fullRefreshAttemptedAt` registra ese intento; los perfiles fallidos se guardan en `pendingProfileIds` y se reintentan junto con los participantes de eventos, sin volver a descargar todo el catálogo. `fullRefreshCompletedAt` solo se guarda cuando no quedan pendientes.
 
 `python3 scripts/sync-ufc-fighter-records.py --all` consulta todo el directorio sin depender del estado de las carteleras. También se puede ejecutar `fighter-records.yml` manualmente marcando `full_refresh`. Los antiguos dispatches vacíos de las 11:47 omiten el trabajo, evitando una tercera actualización diaria.
 

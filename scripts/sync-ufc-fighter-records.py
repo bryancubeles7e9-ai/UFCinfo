@@ -163,6 +163,10 @@ def sync(events, state, fighters, fetch=fetch_profile, now=None, full=False):
                         targets[fighter["id"]] = fighter
         if required:
             eligible[event["id"]] = required
+    pending = set(state.get("pendingProfileIds", state.get("lastSync", {}).get("failedIds", [])))
+    for fighter in fighters:
+        if fighter["id"] in pending:
+            targets[fighter["id"]] = fighter
     targets = list(fighters) if full else list(targets.values())
     # Oldest consultation first prevents starvation when recent cards exceed the cap.
     if not full:
@@ -194,8 +198,11 @@ def sync(events, state, fighters, fetch=fetch_profile, now=None, full=False):
             state["completedFighters"][event_id] = sorted(done)
     state["lastSync"] = {"checkedAt": now.isoformat(), "mode": "all" if full else "events",
                          "attempted": len(targets), "succeeded": len(successes), "failedIds": failures}
-    if full and len(successes) == len(fighters):
-        state["fullRefreshCompletedAt"] = now.isoformat()
+    state["pendingProfileIds"] = sorted((pending - successes) | set(failures))
+    if full:
+        state["fullRefreshAttemptedAt"] = now.isoformat()
+    if state.get("fullRefreshAttemptedAt") and not state["pendingProfileIds"]:
+        state.setdefault("fullRefreshCompletedAt", now.isoformat())
     save(state)
     print(f"Profiles checked: {len(targets)}; saved: {len(successes)}; preserved after error: {len(failures)}")
     return len(targets)
@@ -212,7 +219,9 @@ def main():
     if state.get("source") != "UFC":
         raise SystemExit("Official UFC baseline missing")
     events = json.loads((ROOT / "assets/data/ufc-events.json").read_text(encoding="utf-8"))["events"]
-    full = "--all" in sys.argv or ("--ensure-full" in sys.argv and not state.get("fullRefreshCompletedAt"))
+    if state.get("lastSync", {}).get("mode") == "all":
+        state.setdefault("fullRefreshAttemptedAt", state["lastSync"]["checkedAt"])
+    full = "--all" in sys.argv or ("--ensure-full" in sys.argv and not state.get("fullRefreshAttemptedAt"))
     print("Official UFC profiles consulted:", sync(events, state, fighters, full=full))
 
 
