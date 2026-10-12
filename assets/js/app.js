@@ -1,3 +1,4 @@
+import { matchesChampionship } from "./fighter-championships.js";
 import { countryBadge, countryLabel } from "./fighter-country.js";
 import { initializeRumors } from "./rumors.js";
 import { initializeMobileNavigation } from "./mobile-navigation.js";
@@ -76,12 +77,12 @@ function animateFollow(id, fromDialog = false) {
   }
 }
 function additionalFighterCard(fighter) {
-  return `<article class="fighter-card">${portrait(fighter)}${followButton(fighter, true)}<div class="fighter-card-body"><div class="fighter-card-meta"><span>${esc(countryLabel(fighter, getLocale()) || "PERFIL OFICIAL UFC")}</span></div><button class="fighter-name" data-profile="${esc(fighter.id)}">${esc(fighter.first)}<strong>${esc(fighter.last)}</strong></button><p class="fighter-division">${esc(fighter.division)}</p><p class="mobile-card-record"><span>RÉCORD · V-D-E</span><strong>${esc(fighter.record || "—")}</strong></p><p>${esc(fighter.nickname || fighter.officialStyle || "Trayectoria y estadísticas oficiales")}</p><dl class="card-combat-info">${stanceNames[fighter.stance] ? `<div><dt>GUARDIA</dt><dd>${esc(stanceNames[fighter.stance].short)}</dd></div>` : ""}${compactMartialInfo(fighter)}<div><dt>RÉCORD · V-D-E</dt><dd>${esc(fighter.record)}</dd></div><div><dt>EQUIPO / GIMNASIO</dt><dd>${esc(fighter.info.gym || "No indicado")}</dd></div></dl><div class="fighter-card-footer"><span>EXPLORAR PERFIL</span><button class="icon-button" data-profile="${esc(fighter.id)}" aria-label="Ver ficha de ${esc(fullName(fighter))}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 5 7 7-7 7"/></svg></button></div></div></article>`;
+  return `<article class="fighter-card">${portrait(fighter)}${followButton(fighter, true)}<div class="fighter-card-body"><div class="fighter-card-meta"><span>${esc(countryLabel(fighter, getLocale()) || "PERFIL OFICIAL UFC")}</span></div>${championshipBadge(fighter)}<button class="fighter-name" data-profile="${esc(fighter.id)}">${esc(fighter.first)}<strong>${esc(fighter.last)}</strong></button><p class="fighter-division">${esc(fighter.division)}</p><p class="mobile-card-record"><span>RÉCORD · V-D-E</span><strong>${esc(fighter.record || "—")}</strong></p><p>${esc(fighter.nickname || fighter.officialStyle || "Trayectoria y estadísticas oficiales")}</p><dl class="card-combat-info">${stanceNames[fighter.stance] ? `<div><dt>GUARDIA</dt><dd>${esc(stanceNames[fighter.stance].short)}</dd></div>` : ""}${compactMartialInfo(fighter)}<div><dt>RÉCORD · V-D-E</dt><dd>${esc(fighter.record)}</dd></div><div><dt>EQUIPO / GIMNASIO</dt><dd>${esc(fighter.info.gym || "No indicado")}</dd></div></dl><div class="fighter-card-footer"><span>EXPLORAR PERFIL</span><button class="icon-button" data-profile="${esc(fighter.id)}" aria-label="Ver ficha de ${esc(fullName(fighter))}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 5 7 7-7 7"/></svg></button></div></div></article>`;
 }
 function additionalFighterProfile(fighter) {
   const dimension = (v) => v == null ? "No indicado" : `${v} cm`;
   const rows = [["País representado", countryLabel(fighter, getLocale()) || "No indicado"], ["División", fighter.division], ["Récord · V-D-E", fighter.record], ["Apodo", fighter.nickname || "No indicado"], ["Estilo indicado por UFC", fighter.officialStyle || "No indicado"], ["Altura", dimension(fighter.heightCm)], ["Alcance", dimension(fighter.reachCm)], ["Lugar de nacimiento", fighter.birthplace || "No indicado"]];
-  return `<div class="profile-layout">${portrait(fighter, "large")}<div class="profile-copy"><p class="eyebrow">${esc(fighter.division)} · PERFIL UFC</p><h2>${esc(fighter.first)}<br>${esc(fighter.last)}</h2><section class="official-facts"><span class="badge orange">DATOS DEL PERFIL UFC</span><dl>${rows.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl>${renderFighterConsultation(fighter)}</section>${renderStanceDetails(fighter)}${renderMartialDetails(fighter)}${renderExtendedFighterInfo(fighter)}<a class="button small" href="${esc(fighter.source)}" target="_blank" rel="noopener noreferrer">Perfil oficial UFC ›</a>${followButton(fighter)}<p class="data-note">Fotografía y datos del perfil oficial de UFC. El lugar de nacimiento no implica nacionalidad deportiva.</p></div></div>`;
+  return `<div class="profile-layout">${portrait(fighter, "large")}<div class="profile-copy"><p class="eyebrow">${esc(fighter.division)} · PERFIL UFC</p><h2>${esc(fighter.first)}<br>${esc(fighter.last)}</h2><section class="official-facts"><span class="badge orange">DATOS DEL PERFIL UFC</span><dl>${rows.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl>${renderFighterConsultation(fighter)}</section>${renderStanceDetails(fighter)}${renderMartialDetails(fighter)}${renderChampionships(fighter)}${renderExtendedFighterInfo(fighter)}<a class="button small" href="${esc(fighter.source)}" target="_blank" rel="noopener noreferrer">Perfil oficial UFC ›</a>${followButton(fighter)}<p class="data-note">Fotografía y datos del perfil oficial de UFC. El lugar de nacimiento no implica nacionalidad deportiva.</p></div></div>`;
 }
 function fighterCard(fighter) {
   const favorite = store.state.favorites.includes(fighter.id);
@@ -107,7 +108,7 @@ function eventPoster(event, featured = false) {
 }
 function feedNote() {
   const date = new Date(eventsFeed.synchronizedAt).toLocaleString(getLocale(), { dateStyle: "medium", timeStyle: "short" });
-  return `Fuente: ${eventsFeed.source} · Última ${eventsFeed.automatic ? "sincronización" : "consulta"}: ${date} · ${eventsFeed.unavailable ? "Últimos datos disponibles; no se pudo comprobar una actualización." : eventsFeed.automatic ? "Actualización programada cada 12 horas." : "Copia inicial; pendiente de activar la sincronización."}`;
+  return `Fuente: ${eventsFeed.source} · Última ${eventsFeed.automatic ? "sincronización" : "consulta"}: ${date} · ${eventsFeed.unavailable ? "Últimos datos disponibles; no se pudo comprobar una actualización." : eventsFeed.automatic ? "Actualización programada a las 08:00 y 14:17 (hora peninsular)." : "Copia inicial; pendiente de activar la sincronización."}`;
 }
 function renderEventFeedStatus() {
   $("#event-feed-status").textContent = `${feedNote()} Fechas y horas en tu zona local. Eventos numerados, Fight Night y especiales: próximos anunciados y finalizados de este año. Solo cartelera principal.`;
@@ -166,18 +167,13 @@ function renderFighters() {
       (style === "all" || f.style === style) &&
       (division === "all" || f.division === division) &&
       matchesStance(f, stance) &&
-      (belts === "all" ||
-        (belts === "current"
-          ? hasCurrentBelt(f)
-          : belts === "former"
-            ? f.championships.some((belt) => belt.status === "former")
-            : f.championships.length > 0)) &&
+      matchesChampionship(f, belts) &&
       (!onlyFavorites || store.state.favorites.includes(f.id)),
   );
-  if (style === "all" && belts === "all") {
+  if (style === "all") {
     list.push(...additionalFighters.filter((f) =>
       normalizeFighterName(`${fullName(f)} ${f.aliases.join(" ")} ${f.nickname} ${f.division} ${f.birthplace || ""} ${f.officialStyle || ""} ${martialDetails(f).label} ${f.info.gym || ""} ${stanceNames[f.stance]?.short || ""}`).includes(normalizeFighterName(query)) &&
-      (division === "all" || f.division === division) && matchesStance(f, stance) && (!onlyFavorites || store.state.favorites.includes(f.id))));
+      (division === "all" || f.division === division) && matchesChampionship(f, belts) && matchesStance(f, stance) && (!onlyFavorites || store.state.favorites.includes(f.id))));
   }
   if ($("#fighter-sort").value === "name")
     list.sort((a, b) => fullName(a).localeCompare(fullName(b), "es"));
@@ -486,7 +482,10 @@ $("#confirm-dialog").addEventListener("close", () => {
   $("#accept-confirm").textContent = "Eliminar";
   confirmAction = null;
 });
-document.addEventListener("octagon:rankings-updated", renderSaved);
+document.addEventListener("octagon:rankings-updated", () => {
+  renderAll();
+  if ($("#fighter-dialog").open && $("#fighter-detail").dataset.fighterId) showProfile($("#fighter-detail").dataset.fighterId);
+});
 window.addEventListener("hashchange", navigate);
 $("#current-date").textContent = new Date().toLocaleDateString(getLocale(), {
   day: "numeric",

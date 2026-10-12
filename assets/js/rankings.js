@@ -1,3 +1,4 @@
+import { synchronizeChampionships } from "./fighter-championships.js";
 import { getLocale } from "./i18n.js";
 import { directoryFighterByName, fighterNameLink } from "./fighter-directory.js";
 import { $, escapeHTML as esc } from "./utils.js";
@@ -5,9 +6,8 @@ import { $, escapeHTML as esc } from "./utils.js";
 // Respaldo del top 10 de «All Rankings», no de «All Meta Rankings».
 export const rankingSnapshot = {
   "source": "https://www.ufc.com/rankings",
-  "consulted": "2026-10-05",
   "published": "How are rankings determined?",
-  "synchronizedAt": "2026-10-05T10:08:47.759560+00:00"
+  "synchronizedAt": "2026-10-12T06:01:11.803915+00:00"
 };
 export const rankingCategories = [
   {
@@ -116,10 +116,10 @@ export const rankingCategories = [
       "Umar Nurmagomedov",
       "Mario Bautista",
       "Cory Sandhagen",
+      "Payton Talbott",
       "Aiemann Zahabi",
       "David Martinez",
-      "Deiveson Figueiredo",
-      "Marlon Vera"
+      "Raul Rosas Jr."
     ],
     "ranks": [
       1,
@@ -271,10 +271,10 @@ export const rankingCategories = [
       "Khalil Rountree Jr.",
       "Navajo Stirling",
       "Paulo Costa",
-      "Jamahal Hill",
       "Azamat Murzakanov",
+      "Dominick Reyes",
       "Jan Błachowicz",
-      "Dominick Reyes"
+      "Bogdan Guskov"
     ],
     "ranks": [
       1,
@@ -356,15 +356,15 @@ export const rankingCategories = [
     "label": "Peso mosca · Femenino",
     "short": "Peso mosca femenino",
     "description": "La campeona y el top 10 de esta división.",
-    "champion": "Valentina Shevchenko",
+    "champion": "Natalia Silva",
     "names": [
-      "Natalia Silva",
+      "Valentina Shevchenko",
       "Alexa Grasso",
       "Manon Fiorot",
       "Erin Blanchfield",
       "Rose Namajunas",
-      "Maycee Barber",
       "Jasmine Jasudavicius",
+      "Maycee Barber",
       "Wang Cong",
       "Tracy Cortez",
       "Miranda Maverick"
@@ -376,7 +376,7 @@ export const rankingCategories = [
       4,
       5,
       6,
-      7,
+      6,
       8,
       9,
       10
@@ -396,15 +396,15 @@ export const rankingCategories = [
       "Norma Dumont",
       "Yana Santos",
       "Luana Santos",
-      "Macy Chiasson",
       "Jacqueline Cavalcanti",
+      "Macy Chiasson",
       "Karol Rosa"
     ],
     "ranks": [
       1,
       2,
       3,
-      3,
+      4,
       5,
       6,
       7,
@@ -416,6 +416,8 @@ export const rankingCategories = [
 ];
 
 let updatingRankings = false;
+synchronizeChampionships(rankingCategories, rankingSnapshot);
+
 export async function refreshRankings() {
   if (updatingRankings) return false;
   updatingRankings = true;
@@ -447,6 +449,7 @@ export async function refreshRankings() {
     }
     rankingSnapshot.published = feed.published;
     rankingSnapshot.synchronizedAt = feed.synchronizedAt;
+    synchronizeChampionships(rankingCategories, rankingSnapshot);
     document.dispatchEvent?.(new Event("octagon:rankings-updated"));
     return true;
   } catch {

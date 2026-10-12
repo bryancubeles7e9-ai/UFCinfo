@@ -14,7 +14,7 @@ export const stanceNames = {
   },
 };
 export function hasCurrentBelt(fighter) {
-  return fighter.championships.some((belt) => belt.status === "current");
+  return (fighter.championships || []).some((belt) => belt.status === "current");
 }
 const women = new Set([
   "zhang",
@@ -29,14 +29,14 @@ const women = new Set([
 const beltIcon = `<svg viewBox="0 0 64 30" aria-hidden="true"><path d="M2 9h14l5-5h22l5 5h14v12H48l-5 5H21l-5-5H2Z" fill="currentColor"/><path d="M24 8h16l5 7-5 7H24l-5-7Z" fill="none" stroke="var(--surface)" stroke-width="2"/><path d="M6 12h7v6H6Zm45 0h7v6h-7Z" fill="var(--surface)" opacity=".6"/></svg>`;
 
 export function championshipBadge(fighter) {
-  if (!fighter.championships.length) return "";
+  if (!fighter.championships?.length) return "";
   const current = hasCurrentBelt(fighter);
   const onlyBMF = fighter.championships
     .filter((belt) => belt.status === "current")
     .every((belt) => belt.name === "BMF");
   const title = current
-    ? `${women.has(fighter.id) ? "Campeona" : "Campeón"} ${onlyBMF ? "BMF" : "UFC"}`
-    : `${women.has(fighter.id) ? "Excampeona" : "Excampeón"} UFC`;
+    ? `${(women.has(fighter.id) || fighter.division?.includes("femenino")) ? "Campeona" : "Campeón"} ${onlyBMF ? "BMF" : "UFC"}`
+    : `${(women.has(fighter.id) || fighter.division?.includes("femenino")) ? "Excampeona" : "Excampeón"} UFC`;
   return `<span class="championship-badge ${current ? "current" : "former"}" title="${esc(fighter.championships.map((belt) => `${belt.name}: ${belt.status === "current" ? "actual" : "anterior"}`).join(" · "))}">${beltIcon}${title}</span>`;
 }
 
@@ -63,8 +63,8 @@ export function matchesStance(fighter, stance) {
 }
 
 export function renderChampionships(fighter) {
-  const belts = [...fighter.championships].sort(
+  const belts = [...(fighter.championships || [])].sort(
     (a, b) => Number(b.status === "current") - Number(a.status === "current"),
   );
-  return `<section class="championship-history"><div class="championship-heading"><h3>Cinturones UFC</h3><span class="badge">${belts.length} ${belts.length === 1 ? "CINTURÓN" : "CINTURONES"}</span></div>${belts.length ? `<ul>${belts.map((belt) => `<li class="belt-row ${belt.status}"><span class="belt-symbol">${beltIcon}</span><div><strong>${esc(belt.name)}</strong><small>${belt.type === "special" ? "Título especial BMF" : "Título absoluto de división"}</small></div><span class="belt-status">${belt.status === "current" ? "ACTUAL" : "ANTERIOR"}</span></li>`).join("")}</ul>` : '<p class="no-belts">Sin cinturones UFC absolutos o BMF registrados en esta ficha.</p>'}<p class="belt-scope">Títulos absolutos y BMF. No incluye cinturones interinos. Consulta: 2 de octubre de 2026.</p></section>`;
+  return `<section class="championship-history"><div class="championship-heading"><h3>Cinturones UFC</h3><span class="badge">${belts.length} ${belts.length === 1 ? "CINTURÓN" : "CINTURONES"}</span></div>${belts.length ? `<ul>${belts.map((belt) => `<li class="belt-row ${belt.status}"><span class="belt-symbol">${beltIcon}</span><div><strong>${esc(belt.name)}</strong><small>${belt.type === "special" ? "Título especial BMF" : "Título absoluto de división"}</small></div><span class="belt-status">${belt.status === "current" ? "ACTUAL" : "ANTERIOR"}</span></li>`).join("")}</ul>` : '<p class="no-belts">Sin cinturones UFC absolutos o BMF registrados en esta ficha.</p>'}<p class="belt-scope">Títulos absolutos y BMF. No incluye cinturones interinos. Consulta: ${fighter.championshipConsultedAt ? esc(new Date(fighter.championshipConsultedAt).toLocaleString("es-ES")) + " · Rankings oficiales UFC" : "2 de octubre de 2026"}.</p></section>`;
 }

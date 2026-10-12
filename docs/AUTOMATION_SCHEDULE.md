@@ -7,7 +7,7 @@ All times below use Europe/Madrid (including daylight saving changes).
 | Job | Schedule | cron-job.org ID | Workflow |
 | --- | --- | --- | --- |
 | Rumors and official confirmations | Every hour, minute 0 | 8616997 | rumor-sync.yml |
-| Events, results, rankings, fighter records and statistics | 02:17 and 14:17 | 8620496 | ufc-events.yml |
+| Events, results, rankings, fighter records and statistics | 08:00 and 14:17 | 8620496 (08:00), 8625854 (14:17) | ufc-events.yml |
 | Legacy fighter dispatch (job skipped without full_refresh) | 11:47 daily | 8620521 | fighter-records.yml |
 
 Requests use POST to the repository workflow dispatch endpoint with body

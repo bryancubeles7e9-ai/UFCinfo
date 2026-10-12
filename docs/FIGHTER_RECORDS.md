@@ -4,7 +4,7 @@ Las fichas de `assets/js/data.js` y `assets/js/fighter-directory-data.js` son la
 
 ## Sincronización con las carteleras
 
-Desde el 11 de octubre de 2026, `ufc-events.yml` consulta las fichas después de sincronizar las carteleras. Cron-job.org activa ese workflow a las **02:17 y 14:17 Europe/Madrid**; también se ejecuta con sus disparadores de código. No existe la espera anterior de 24 horas. Solo se consultan participantes registrados de peleas con resultado, en eventos terminados.
+Desde el 11 de octubre de 2026, `ufc-events.yml` consulta las fichas después de sincronizar las carteleras. Cron-job.org activa ese workflow a las **08:00 y 14:17 Europe/Madrid**; también se ejecuta con sus disparadores de código. No existe la espera anterior de 24 horas. Solo se consultan participantes registrados de peleas con resultado, en eventos terminados.
 
 Los eventos de los últimos 14 días se vuelven a revisar aunque figuren como procesados. Esto permite recoger estadísticas que UFC publique después del récord y corrige el caso de UFC 332, incluido prematuramente en el listado histórico procesado. Los eventos antiguos no procesados también son elegibles. Máximo 40 perfiles por ejecución, priorizando los menos recientemente consultados; una misma persona solo se descarga una vez por ejecución.
 
@@ -21,3 +21,5 @@ Se valida la identidad, récord y cuatro estadísticas básicas de cada perfil. 
 La fuente activa es UFC.com, sin clave y sin consumir puntos de Cito o API-Sports. La actualización global cubre todo el directorio; la actualización habitual depende de las peleas presentes en el feed, actualmente cartelera principal. No se calculan récords sumando resultados ni se inventan estadísticas.
 
 Las métricas incluyen golpeo conectado/recibido, precisión y defensa, derribos, sumisiones, knockdowns y finalizaciones cuando están disponibles. Los datos biográficos mantienen su fecha original; récords y estadísticas muestran su fecha propia de consulta.
+
+Las etiquetas y el filtro de campeones se sincronizan con el feed validado de rankings. Los títulos absolutos anteriores se conservan como históricos y el BMF se mantiene separado. Las fichas adicionales también muestran los cinturones y la fecha de consulta del ranking.
