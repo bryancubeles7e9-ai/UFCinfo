@@ -1,10 +1,14 @@
 import { directoryFighters } from './fighter-directory.js';
 const byId = new Map(directoryFighters.map(f => [f.id, f]));
-const original = new Map(directoryFighters.map(f => [f.id, {image:f.image,
-  champion:(f.championships || []).some(b => b.status === 'current' && b.type === 'undisputed')} ]));
+function photoMode(fighter) {
+  const current = (fighter.championships || []).filter(b => b.status === 'current');
+  return current.some(b => b.type === 'undisputed') ? 'champion' : current.some(b => b.name === 'BMF') ? 'bmf' : 'regular';
+}
+const original = new Map(directoryFighters.map(f => [f.id, {image:f.image, mode:photoMode(f)}]));
 let snapshot = null;
 function validPhoto(photo) {
   if (!photo || !Number.isFinite(Date.parse(photo.consultedAt))) return false;
+  if (photo.image !== undefined && !/^assets\/images\/(?:fighter-variants\/[a-f0-9]{64}\.(?:png|jpg)|fighters\/[a-z0-9-]+\.png)$/.test(photo.image)) return false;
   try {
     const url = new URL(photo.url), source = new URL(photo.sourceUrl);
     return url.protocol === 'https:' && source.protocol === 'https:' &&
@@ -18,15 +22,15 @@ export function applyFighterPhotos() {
   if (!snapshot) return false;
   for (const [id, variants] of Object.entries(snapshot.photos)) {
     const fighter = byId.get(id);
-    const champion = (fighter.championships || []).some(b => b.status === 'current' && b.type === 'undisputed');
-    const photo = variants[champion ? 'champion' : 'regular'];
+    const mode = photoMode(fighter);
+    const photo = variants[mode] || variants.regular;
     if (photo) {
-      fighter.image = photo.url;
+      fighter.image = photo.image || photo.url;
       fighter.photoCredit = photo.source;
       fighter.photoConsultedAt = photo.consultedAt;
     } else {
       const fallback = original.get(id);
-      fighter.image = !variants.pendingNeutral && fallback.champion === champion ? fallback.image : '';
+      fighter.image = !variants.pendingNeutral && fallback.mode === mode ? fallback.image : '';
       fighter.photoCredit = 'UFC';
     }
   }
@@ -40,7 +44,7 @@ export async function refreshFighterPhotos() {
     if (feed.schemaVersion !== 1 || !feed.photos || typeof feed.photos !== 'object' || Array.isArray(feed.photos)) return false;
     if (Object.entries(feed.photos).some(([id, variants]) => !byId.has(id) || !variants || (variants.pendingNeutral !== undefined && typeof variants.pendingNeutral !== 'boolean') ||
         typeof variants !== 'object' || Array.isArray(variants) ||
-        ['champion', 'regular'].some(key => variants[key] !== undefined && !validPhoto(variants[key])))) return false;
+        ['champion', 'regular', 'bmf'].some(key => variants[key] !== undefined && !validPhoto(variants[key])))) return false;
     snapshot = feed;
     return applyFighterPhotos();
   } catch { return false; }

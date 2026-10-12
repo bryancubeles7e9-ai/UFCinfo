@@ -1,6 +1,9 @@
 import importlib.util
 from pathlib import Path
 import unittest
+from unittest.mock import patch
+import tempfile
+import io
 spec = importlib.util.spec_from_file_location('photos', Path(__file__).resolve().parents[1] / 'scripts/sync-fighter-photos.py')
 photos = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(photos)
@@ -26,5 +29,27 @@ class PhotoTests(unittest.TestCase):
         photos.sync([fighter],rankings,state,consult=fail,verify=lambda u:None)
         self.assertIn('champion',state['photos']['silva'])
         self.assertEqual(state['failedIds'],['silva'])
+
+    def test_archive_survives_url_changes(self):
+        data = b'\x89PNG\r\n\x1a\n' + b'x' * 150
+        with tempfile.TemporaryDirectory() as folder, patch.object(photos, 'ROOT', Path(folder)):
+            with patch.object(photos, 'urlopen', return_value=io.BytesIO(data)):
+                first = photos.verify_image('https://www.ufc.com/images/a.png')
+            with patch.object(photos, 'urlopen', return_value=io.BytesIO(data)):
+                second = photos.verify_image('https://www.ufc.com/images/b.png')
+            self.assertEqual(first, second)
+            self.assertEqual((Path(folder) / first).read_bytes(), data)
+
+    def test_bmf_never_overwrites_regular(self):
+        fighter={'id':'max','name':'Max Holloway','source':'https://www.ufc.com/athlete/max-holloway',
+                 'championships':[{'name':'BMF','type':'special','status':'current'}]}
+        state={'photos':{'max':{'regular':{'url':'neutral'}}}}
+        photos.sync([fighter],{'categories':[]},state,consult=lambda f:'https://www.ufc.com/images/BMF_BELT.png',verify=lambda u:None)
+        self.assertIn('bmf',state['photos']['max'])
+        self.assertEqual(state['photos']['max']['regular']['url'],'neutral')
+        fighter['championships'][0]['status']='former'
+        photos.sync([fighter],{'categories':[]},state,consult=lambda f:'https://www.ufc.com/images/BMF_BELT.png',verify=lambda u:None)
+        self.assertTrue(state['photos']['max']['pendingNeutral'])
+        self.assertEqual(state['photos']['max']['regular']['url'],'neutral')
 
 if __name__ == '__main__': unittest.main()
