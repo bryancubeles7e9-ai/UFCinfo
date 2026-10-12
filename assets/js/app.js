@@ -1,3 +1,4 @@
+import { applyFighterPhotos, refreshFighterPhotos } from "./fighter-photos-feed.js";
 import { matchesChampionship } from "./fighter-championships.js";
 import { countryBadge, countryLabel } from "./fighter-country.js";
 import { initializeRumors } from "./rumors.js";
@@ -60,7 +61,7 @@ function persist() {
     toast("El navegador no permite guardar. Puedes exportar tus datos.");
 }
 function portrait(fighter, size = "") {
-  return `<div class="fighter-portrait ${size}" style="--fighter-color:${fighter.color || "#d75032"}"><div class="portrait-grid"></div>${countryBadge(fighter, getLocale())}<span class="portrait-initials" aria-hidden="true">${fighter.first[0]}${fighter.last[0]}</span><img class="fighter-photo" src="${esc(fighter.image)}" alt="${esc(fullName(fighter))}, fotografía de su perfil oficial de UFC" loading="${size === "large" ? "eager" : "lazy"}" decoding="async" width="460" height="700"><span class="portrait-label">FOTOGRAFÍA: UFC · PERFIL OFICIAL</span></div>`;
+  return `<div class="fighter-portrait ${size} ${fighter.photoCredit === "ESPN" ? "neutral-headshot" : ""}" style="--fighter-color:${fighter.color || "#d75032"}"><div class="portrait-grid"></div>${countryBadge(fighter, getLocale())}<span class="portrait-initials" aria-hidden="true">${fighter.first[0]}${fighter.last[0]}</span><img class="fighter-photo" src="${esc(fighter.image || "assets/images/fighter-placeholder.svg")}" alt="${esc(fullName(fighter))}, fotografía de ${esc(fighter.photoCredit || "UFC")}" loading="${size === "large" ? "eager" : "lazy"}" decoding="async" width="460" height="700"><span class="portrait-label">${fighter.image ? `FOTOGRAFÍA: ${esc(fighter.photoCredit || "UFC")}` : "FOTOGRAFÍA PENDIENTE"}</span></div>`;
 }
 function followButton(fighter, compact = false) {
   const following = store.state.favorites.includes(fighter.id);
@@ -82,7 +83,7 @@ function additionalFighterCard(fighter) {
 function additionalFighterProfile(fighter) {
   const dimension = (v) => v == null ? "No indicado" : `${v} cm`;
   const rows = [["País representado", countryLabel(fighter, getLocale()) || "No indicado"], ["División", fighter.division], ["Récord · V-D-E", fighter.record], ["Apodo", fighter.nickname || "No indicado"], ["Estilo indicado por UFC", fighter.officialStyle || "No indicado"], ["Altura", dimension(fighter.heightCm)], ["Alcance", dimension(fighter.reachCm)], ["Lugar de nacimiento", fighter.birthplace || "No indicado"]];
-  return `<div class="profile-layout">${portrait(fighter, "large")}<div class="profile-copy"><p class="eyebrow">${esc(fighter.division)} · PERFIL UFC</p><h2>${esc(fighter.first)}<br>${esc(fighter.last)}</h2><section class="official-facts"><span class="badge orange">DATOS DEL PERFIL UFC</span><dl>${rows.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl>${renderFighterConsultation(fighter)}</section>${renderStanceDetails(fighter)}${renderMartialDetails(fighter)}${renderChampionships(fighter)}${renderExtendedFighterInfo(fighter)}<a class="button small" href="${esc(fighter.source)}" target="_blank" rel="noopener noreferrer">Perfil oficial UFC ›</a>${followButton(fighter)}<p class="data-note">Fotografía y datos del perfil oficial de UFC. El lugar de nacimiento no implica nacionalidad deportiva.</p></div></div>`;
+  return `<div class="profile-layout">${portrait(fighter, "large")}<div class="profile-copy"><p class="eyebrow">${esc(fighter.division)} · PERFIL UFC</p><h2>${esc(fighter.first)}<br>${esc(fighter.last)}</h2><section class="official-facts"><span class="badge orange">DATOS DEL PERFIL UFC</span><dl>${rows.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl>${renderFighterConsultation(fighter)}</section>${renderStanceDetails(fighter)}${renderMartialDetails(fighter)}${renderChampionships(fighter)}${renderExtendedFighterInfo(fighter)}<a class="button small" href="${esc(fighter.source)}" target="_blank" rel="noopener noreferrer">Perfil oficial UFC ›</a>${followButton(fighter)}<p class="data-note">Fotografía: ${esc(fighter.photoCredit || "UFC")}. Datos del perfil oficial de UFC. El lugar de nacimiento no implica nacionalidad deportiva.</p></div></div>`;
 }
 function fighterCard(fighter) {
   const favorite = store.state.favorites.includes(fighter.id);
@@ -270,7 +271,7 @@ function showProfile(id) {
     return;
   }
   $("#fighter-detail").innerHTML =
-    `<div class="profile-layout">${portrait(fighter, "large")}<div class="profile-copy"><p class="eyebrow">${esc(fighter.country)} · ${styleNames[fighter.style]}</p><h2>${esc(fighter.first)}<br>${esc(fighter.last)}</h2><p>${esc(fighter.tagline)}</p><section class="official-facts"><span class="badge orange">DATOS DEL PERFIL UFC</span><dl><div><dt>División</dt><dd>${esc(fighter.division)}</dd></div><div><dt>Récord · V-D-E</dt><dd>${esc(fighter.record)}</dd></div><div><dt>Apodo</dt><dd>${esc(fighter.nickname || "No indicado")}</dd></div><div><dt>Estilo indicado por UFC</dt><dd>${esc(fighter.officialStyle || "No indicado")}</dd></div><div><dt>Altura / alcance</dt><dd>${fighter.heightCm ?? "—"} cm / ${fighter.reachCm ?? "—"} cm</dd></div><div><dt>Lugar de nacimiento</dt><dd>${esc(fighter.birthplace || "No indicado")}</dd></div></dl>${renderFighterConsultation(fighter)}</section>${renderCombatDetails(fighter)}${renderChampionships(fighter)}${renderExtendedFighterInfo(fighter)}<a class="button small" href="${fighter.source}" target="_blank" rel="noopener noreferrer">Perfil oficial UFC ›</a><button class="outline-button small" data-favorite="${fighter.id}">${store.state.favorites.includes(id) ? "✓ Siguiendo · Dejar de seguir" : "♡ Seguir luchador"}</button><p class="data-note">Fotografía y datos consultados en el perfil oficial de UFC. Consulta la fuente para cambios posteriores.</p></div></div>`;
+    `<div class="profile-layout">${portrait(fighter, "large")}<div class="profile-copy"><p class="eyebrow">${esc(fighter.country)} · ${styleNames[fighter.style]}</p><h2>${esc(fighter.first)}<br>${esc(fighter.last)}</h2><p>${esc(fighter.tagline)}</p><section class="official-facts"><span class="badge orange">DATOS DEL PERFIL UFC</span><dl><div><dt>División</dt><dd>${esc(fighter.division)}</dd></div><div><dt>Récord · V-D-E</dt><dd>${esc(fighter.record)}</dd></div><div><dt>Apodo</dt><dd>${esc(fighter.nickname || "No indicado")}</dd></div><div><dt>Estilo indicado por UFC</dt><dd>${esc(fighter.officialStyle || "No indicado")}</dd></div><div><dt>Altura / alcance</dt><dd>${fighter.heightCm ?? "—"} cm / ${fighter.reachCm ?? "—"} cm</dd></div><div><dt>Lugar de nacimiento</dt><dd>${esc(fighter.birthplace || "No indicado")}</dd></div></dl>${renderFighterConsultation(fighter)}</section>${renderCombatDetails(fighter)}${renderChampionships(fighter)}${renderExtendedFighterInfo(fighter)}<a class="button small" href="${fighter.source}" target="_blank" rel="noopener noreferrer">Perfil oficial UFC ›</a><button class="outline-button small" data-favorite="${fighter.id}">${store.state.favorites.includes(id) ? "✓ Siguiendo · Dejar de seguir" : "♡ Seguir luchador"}</button><p class="data-note">Fotografía: ${esc(fighter.photoCredit || "UFC")}. Datos consultados en el perfil oficial de UFC. Consulta la fuente para cambios posteriores.</p></div></div>`;
   if (!$("#fighter-dialog").open) $("#fighter-dialog").showModal();
 }
 function updateCountdowns() {
@@ -483,6 +484,7 @@ $("#confirm-dialog").addEventListener("close", () => {
   confirmAction = null;
 });
 document.addEventListener("octagon:rankings-updated", () => {
+  applyFighterPhotos();
   renderAll();
   if ($("#fighter-dialog").open && $("#fighter-detail").dataset.fighterId) showProfile($("#fighter-detail").dataset.fighterId);
 });
@@ -546,7 +548,8 @@ async function updateEventFeed() {
 }
 updateEventFeed();
 async function updateFighterRecords() {
-  if (await refreshFighterRecords()) {
+  const results = await Promise.all([refreshFighterRecords(), refreshFighterPhotos()]);
+  if (results.some(Boolean)) {
     renderAll();
     if ($("#fighter-dialog").open && $("#fighter-detail").dataset.fighterId) showProfile($("#fighter-detail").dataset.fighterId);
   }

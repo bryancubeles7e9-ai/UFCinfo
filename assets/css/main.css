@@ -2914,3 +2914,9 @@ button.ranking-name:hover {
   #fighter-dialog .profile-copy > a,
   #fighter-dialog .profile-copy > button { justify-self: start; margin-left: 0; }
 }
+
+/* Neutral headshots use their original proportions in cards and profile dialogs. */
+.fighter-portrait.neutral-headshot .fighter-photo {
+  width: 100%; max-width: 100%; height: 100%; left: 0; bottom: 0;
+  transform: none; object-fit: contain; object-position: center bottom;
+}

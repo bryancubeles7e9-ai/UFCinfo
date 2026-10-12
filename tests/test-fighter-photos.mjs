@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { directoryFighterByName } from '../assets/js/fighter-directory.js';
+import { synchronizeChampionships } from '../assets/js/fighter-championships.js';
+import { refreshFighterPhotos, applyFighterPhotos } from '../assets/js/fighter-photos-feed.js';
+const rankings = JSON.parse(await readFile(new URL('../assets/data/ufc-rankings.json', import.meta.url)));
+const photos = JSON.parse(await readFile(new URL('../assets/data/fighter-photos.json', import.meta.url)));
+synchronizeChampionships(rankings.categories, rankings);
+globalThis.fetch = async () => ({ok:true,json:async()=>photos});
+assert.equal(await refreshFighterPhotos(), true);
+const natalia = directoryFighterByName('Natalia Silva'), valentina = directoryFighterByName('Valentina Shevchenko');
+assert.match(natalia.image, /SILVA_NATALIA_L_BELT/);
+assert.equal(valentina.image, photos.photos.shevchenko.regular.url);
+assert.equal(valentina.photoCredit, 'ESPN');
+synchronizeChampionships([{id:'flyweight-women',champion:'Valentina Shevchenko'}], rankings);
+applyFighterPhotos();
+assert.match(valentina.image, /SHEVCHENKO_VALENTINA_L_BELT/);
+assert.ok(!natalia.image.includes('BELT'));
+synchronizeChampionships(rankings.categories, rankings);
+applyFighterPhotos();
+const before = natalia.image;
+for (const url of ['https://evil.test/photo.png','javascript:alert(1)']) {
+ const invalid=structuredClone(photos); invalid.photos.silva.champion.url=url;
+ globalThis.fetch = async () => ({ok:true,json:async()=>invalid});
+ assert.equal(await refreshFighterPhotos(),false);
+ assert.equal(natalia.image,before);
+}
+globalThis.fetch = async () => {throw Error('offline');};
+assert.equal(await refreshFighterPhotos(),false);
+assert.equal(natalia.image,before);
+console.log('PASS: champion/neutral photos follow rankings, regain title, valid sources, failure preservation');
