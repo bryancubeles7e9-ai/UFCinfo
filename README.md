@@ -1,79 +1,116 @@
 # UFCinfo — Inside the fight
 
-Portal de aficionados al universo UFC hecho con HTML, CSS y JavaScript, sin compilación. El modo invitado es estático; las cuentas utilizan un servidor Python con SQLite.
+**Una web para seguir UFC y reunir en un mismo lugar sus eventos, luchadores, rankings y posibles próximos combates.**
 
-## Abrir la web
+UFCinfo nace de la perspectiva de un aficionado: consultar una cartelera, conocer mejor a sus protagonistas y seguir a los luchadores favoritos sin tener que buscar cada dato por separado. Es un proyecto personal e independiente, sin afiliación oficial con UFC.
 
-Para publicar con cuentas y solicitar que Google encuentre la página de inicio, consulta [docs/PUBLICACION.md](docs/PUBLICACION.md). La cuenta de alojamiento y el despliegue público siguen pendientes.
+**[Entrar en UFCinfo](https://ufcinfo.onrender.com)**
 
-Para usar cuentas: ejecuta `python3 server.py` y abre `http://127.0.0.1:8780`. Registro e inicio de sesión guardan el seguimiento en el servidor. Consulta [docs/CUENTAS.md](docs/CUENTAS.md) para publicarlo y acceder desde otros ordenadores.
+## Qué puedes hacer
 
-Abre esta carpeta en VS Code, pulsa con el botón derecho en `index.html` y selecciona **Open with Live Server**. Los módulos JavaScript necesitan un servidor HTTP: abrir el archivo con doble clic no es suficiente.
+| Sección | Qué encontrarás |
+| --- | --- |
+| **Inicio** | El próximo evento disponible y accesos a las principales secciones. |
+| **Carteleras** | Eventos numerados, Fight Night y especiales, con próximos combates, resultados disponibles, cuenta atrás y descarga de calendario `.ics`. |
+| **Luchadores** | Un catálogo con fotografías, récords, datos físicos, guardia, formación marcial y estadísticas disponibles. Puedes buscar y filtrar, consultar las fuentes y abrir la ficha de cada atleta. |
+| **Rankings** | El top 10 de las 11 divisiones y las dos listas libra por libra, con el campeón separado cuando corresponde y acceso a los perfiles. |
+| **Fight Lab** | Comparación de dos luchadores: perfil, trayectoria y estadísticas de golpeo, derribos y finalizaciones. |
+| **Rumores** | Publicaciones de fuentes seleccionadas sobre posibles combates, agrupadas por pelea y con atribución a su origen. |
+| **Mi esquina** | Tus luchadores seguidos, sus próximos combates anunciados, posiciones en los rankings y resultados recientes disponibles. |
 
-## Funciones
+La interfaz está disponible en **español, inglés y catalán**, tiene tema claro y oscuro y se adapta a móvil y ordenador.
 
-- Siete vistas: inicio, carteleras, luchadores, rankings, Fight Lab, Rumores y Mi esquina.
-- Rumores: recopilación y publicación automática con TwitterAPI.io cada hora mediante GitHub Actions, resúmenes bilingües, filtro de boxeo, agrupación, atribuciones y control duradero de créditos; revisión local opcional. Requiere el secreto de API y conectar el despliegue; confirmación oficial de grupos pendiente. Consulta [docs/RUMORES.md](docs/RUMORES.md).
-- Catálogo de 165 luchadores con fotografías locales y datos consultados en sus perfiles oficiales UFC; 141 fichas nuevas para cubrir rankings y carteleras.
-- Búsqueda por nombre, apodo, país y base marcial; filtros por división, estilo, guardia y cinturones.
-- Distintivos de campeón actual/excampeón y palmarés de títulos UFC absolutos y BMF, excluyendo interinos.
-- Fichas ampliadas: edad, gimnasio, peso, debut, alcance de pierna y estadísticas oficiales de golpeo, derribos y finalizaciones con fuente y fecha.
-- Guardia de UFC Stats y disciplina de formación con notas y enlaces de procedencia.
-- Próximos eventos numerados anunciados y pestañas Próximos / Finalizados / Todos UFC, con imágenes existentes o aviso de póster pendiente. La actualización de carteleras usa Cito.
-- Historial UFC 324–332 de 2026: cartelera principal y resultados disponibles; la sincronización incremental con Cito requiere clave.
-- Consulta de carteleras, cuenta atrás y descarga de calendario `.ics`. Solo se muestran carteleras oficiales UFC. La creación y las vistas de demostración y eventos personales se han retirado; los datos históricos se conservan en las copias exportadas.
-- Rankings: top 10 de las 11 divisiones de peso y las dos listas libra por libra, campeón separado, búsqueda y acceso a fichas; sincronización oficial cada 12 horas sin clave de API.
-- Fight Lab: comparación de dos de los 165 luchadores, con 27 datos y estadísticas oficiales, fotografías, fuentes y fechas de consulta.
-- Mi esquina: seguimiento de los 165 luchadores, próximos combates, agenda UFC, rankings y últimos resultados; exportación/importación del seguimiento.
-- Registro e inicio de sesión con nombre de usuario único y contraseña, guardado del seguimiento por cuenta y separación del modo invitado.
-- Modo sin spoilers activo al entrar: oculta resultados en carteleras y Mi esquina, con revelado por combate o control global. Se reactiva al recargar; las fichas y rankings mantienen sus datos publicados.
-- Selector Español / English / Català en la cabecera, con elección guardada en el navegador, traducción de la interfaz y formatos de fechas y cifras según el idioma.
-- Tema claro/oscuro, diseño adaptable y navegación con teclado.
+## Cómo empezar
 
-## Estructura
+1. Entra en **Carteleras** para consultar la próxima velada o un evento finalizado.
+2. Abre **Luchadores**, busca a tus favoritos y pulsa el corazón o **Seguir luchador**.
+3. Visita **Mi esquina** para reunir sus próximos combates y resultados. Si sigues a ambos rivales, la pelea aparece una sola vez.
+4. Usa **Fight Lab** cuando quieras comparar las cifras disponibles de dos atletas.
 
-```text
-mi-web/
-├── index.html
-├── assets/
-│   ├── css/main.css
-│   ├── images/       # octágono SVG, favicon y fighters/ con 24 fotografías
-│   └── js/
-│       ├── app.js     # navegación, renderizado e interacciones
-│       ├── fighter-details.js # cinturones, guardia y formación marcial
-│       ├── data.js    # perfiles y eventos de demostración
-│       ├── lab.js     # comparador de datos y estadísticas oficiales
-│       ├── rankings.js # copia fechada y vista de rankings
-│       ├── store.js   # persistencia y validación de copias
-│       └── utils.js   # fechas, cuenta atrás y utilidades
-├── archive/nexo/     # copia de la web anterior
-└── docs/            # DATOS.md y fighter-sources.json con procedencia
+No necesitas una cuenta para explorar la web. Como invitado, tu seguimiento se guarda en ese navegador. Con una cuenta, la lista de luchadores seguidos se guarda en el servidor y puedes recuperarla desde otros dispositivos. También puedes exportar e importar una copia del seguimiento.
+
+El **modo sin spoilers** está activo al entrar y se reactiva al recargar. Oculta los resultados de combates en Carteleras y Mi esquina; puedes revelarlos individualmente o desactivar el modo. Las fichas, los récords y los rankings mantienen sus datos publicados, por lo que pueden reflejar el desenlace de un evento.
+
+## De dónde salen los datos
+
+La web combina un catálogo de perfiles con copias de datos que actualizan tareas automáticas. Cada visita consulta esas copias: **abrir una ficha no lanza una nueva consulta de pago al proveedor**.
+
+| Información | Fuente y funcionamiento |
+| --- | --- |
+| **Eventos y resultados** | Cito actualiza las carteleras cercanas y conserva el historial disponible. La cobertura actual se centra en las carteleras principales. |
+| **Rankings** | Se consultan las clasificaciones publicadas en UFC.com. |
+| **Récords y estadísticas** | Se consultan los perfiles oficiales de UFC de los luchadores registrados que participan en los combates seleccionados. |
+| **Campeones y fotografías** | Los títulos absolutos actuales se sincronizan con los rankings válidos. Se revisan las fotografías y se conservan variantes para campeón y no campeón cuando están disponibles. El BMF tiene una gestión separada. |
+| **Guardias y bases marciales** | Datos documentados de UFC, UFC Stats y otras fuentes enlazadas. Su cobertura depende de la información disponible y no todos estos campos se revisan automáticamente. |
+| **Rumores** | TwitterAPI.io busca publicaciones de una lista de cuentas seleccionadas. Después se aplican filtros y comprobaciones con las carteleras oficiales. |
+
+Las fichas y los feeds incluyen fuentes y fechas de consulta cuando están disponibles. **La fecha de consulta indica cuándo se revisó la fuente, no cuándo esta modificó sus datos.**
+
+## Cuándo se actualiza
+
+Los horarios se interpretan en **Europe/Madrid**, con el cambio de hora de verano e invierno.
+
+| Proceso | Programación habitual |
+| --- | --- |
+| Carteleras, resultados, rankings, fotografías, récords y estadísticas | Cada día a las **08:00 y 14:00**. |
+| Búsqueda de rumores y comprobación de confirmaciones oficiales | **Cada hora en punto**. |
+| Lectura de las copias publicadas desde la web | Al abrir la página y periódicamente, aproximadamente cada **cinco minutos** para los principales feeds. |
+
+cron-job.org solicita las ejecuciones y GitHub Actions realiza el trabajo. Los cambios de datos se guardan en el repositorio y Render publica la web. También existen ejecuciones manuales y disparadores por determinados cambios de código; los rumores cuentan con comprobaciones de respaldo que evitan repetir la búsqueda de pago dentro de la misma hora.
+
+Después de actualizar las carteleras, el proceso revisa récords y estadísticas de los luchadores seleccionados con resultados en eventos completados de los últimos 14 días. Repite las comprobaciones aunque el récord no haya cambiado para poder recoger estadísticas publicadas más tarde. **No se consulta todo el catálogo en cada ejecución.**
+
+Los horarios son de inicio previsto: la ejecución, la publicación y la disponibilidad de los datos en la fuente pueden introducir retrasos. Puedes consultar el detalle técnico en [Horarios de automatización](docs/AUTOMATION_SCHEDULE.md).
+
+## Cómo se tratan los rumores
+
+La búsqueda revisa una ventana solapada de las últimas 24 horas para recuperar publicaciones que aparezcan tarde en el buscador. El sistema evita duplicados, agrupa referencias a un mismo posible combate y filtra contenido ajeno a UFC o que no identifica una pelea válida. También contrasta las propuestas con las carteleras oficiales disponibles para evitar presentar peleas ya anunciadas como nuevas especulaciones.
+
+Una búsqueda puede completarse sin añadir nada: puede no haber publicaciones nuevas válidas o pueden descartarse por los filtros. **Un rumor no equivale a un combate confirmado.** Las comprobaciones dependen de la cobertura y actualización de las fuentes.
+
+Más información: [Funcionamiento de rumores](docs/RUMORES.md) y [criterios del filtro](docs/RUMOR_FILTER.md).
+
+## Alcance actual
+
+- Los resultados y las estadísticas son copias actualizadas periódicamente; no hay seguimiento en directo golpe a golpe.
+- La cobertura de eventos se centra en la **cartelera principal**. No se garantiza que estén todas las preliminares ni todos sus luchadores.
+- Algunos perfiles tienen campos pendientes porque no hay información suficientemente documentada. Los datos ausentes no se inventan.
+- Una fuente puede tardar en actualizar un récord, una estadística o una fotografía después del combate.
+- Fight Lab compara datos publicados; no calcula probabilidades de victoria ni predicciones.
+
+El proyecto busca ser útil para otros seguidores, sostenible y una muestra de desarrollo personal. La evolución prevista incluye ampliar la cobertura de luchadores y preliminares, seguir mejorando la experiencia móvil y explorar una aplicación y otras promotoras de MMA. Consulta la [hoja de ruta](docs/ROADMAP.md).
+
+## Ejecutar el proyecto en local
+
+La interfaz utiliza **HTML, CSS y JavaScript**, sin proceso de compilación. El servidor de cuentas utiliza **Python y SQLite**.
+
+Con Python 3.10 o posterior y soporte para `hashlib.scrypt`, desde la raíz del repositorio:
+
+```bash
+python3 server.py
 ```
 
-La aplicación utiliza la clave `octagon-workspace-v1` en `localStorage`, distinta de la de Nexo. Sus datos pertenecen al navegador y al origen (host/puerto) donde abras la web. Exporta una copia para trasladarlos. Las cuentas y el guardado del seguimiento requieren `server.py`; no hay resultados en directo. Las fuentes tipográficas se descargan de Google Fonts; existen fuentes de respaldo si no hay conexión.
+Abre **http://127.0.0.1:8780**. No se necesitan paquetes adicionales para el servidor. La base de datos local se crea en `.ufcinfo-data/accounts.sqlite3` y no debe añadirse al repositorio.
 
-## Fight Lab
+Un servidor estático como Live Server permite explorar el modo invitado, pero no ejecuta las cuentas. Abrir `index.html` directamente con doble clic no basta para cargar los módulos JavaScript.
 
-Selecciona dos luchadores distintos del catálogo para comparar perfil, datos físicos, formación y trayectoria, golpeo, derribos, sumisiones y finalizaciones. Puedes intercambiar las esquinas y abrir la ficha completa o la fuente oficial. Las barras muestran únicamente porcentajes oficiales de precisión y defensa. Los campos ausentes se indican; la falta de documentación sobre cinturones no se interpreta como ausencia de títulos. No hay puntuaciones ficticias, pesos, índice de victoria ni creación de análisis. Las copias antiguas siguen siendo compatibles; los datos históricos se conservan al exportar, aunque ya no aparecen en Mi esquina.
+Las claves de los proveedores se configuran en el entorno de las automatizaciones y nunca deben incluirse en el código ni enviarse al navegador. Para usar la copia de datos existente en local no necesitas contratar esas APIs.
 
-Las cifras son copias fechadas. Las carteleras muestran únicamente eventos oficiales de UFC. No hay resultados en directo. Consulta `docs/DATOS.md`.
+## Organización del repositorio
 
-## Mi esquina
+| Ruta | Contenido |
+| --- | --- |
+| `index.html` | Estructura de la interfaz. |
+| `assets/css/` y `assets/js/` | Estilos, navegación, vistas e interacciones. |
+| `assets/data/` | Copias publicadas de eventos, rankings, rumores y datos de luchadores. |
+| `assets/images/` | Recursos gráficos y fotografías. |
+| `server.py` | Servidor web y API de cuentas y seguimiento. |
+| `scripts/` | Importadores y tareas de sincronización. |
+| `.github/workflows/` | Ejecución de las automatizaciones y sus comprobaciones. |
+| `tests/` | Pruebas de datos, interfaz y servidor. |
+| `docs/` | Fuentes, decisiones y guías técnicas. |
+| `render.yaml` | Configuración de alojamiento en Render. |
 
-Sigue cualquiera de los 165 luchadores desde su ficha, la tarjeta del catálogo o el selector de Mi esquina. La sección reúne los próximos combates anunciados y en curso, una agenda con descarga `.ics`, los últimos seis combates disponibles de los atletas seguidos y tarjetas con récord, posiciones de ranking y próxima cita. Si sigues a ambos rivales, el combate aparece una sola vez.
+Para profundizar: [datos y procedencia](docs/DATOS.md), [APIs y eventos](docs/API.md), [récords y estadísticas](docs/FIGHTER_RECORDS.md), [cuentas](docs/CUENTAS.md) y [publicación](docs/PUBLICACION.md).
 
-En modo invitado, el seguimiento se guarda en el navegador; con sesión iniciada, se sincroniza con la cuenta en el servidor. Admite exportación/importación de copias. Los favoritos previos se mantienen. La agenda utiliza exclusivamente carteleras principales de eventos numerados incluidos en la copia disponible, con fuente y fecha; no se deduce un próximo combate cuando no hay anuncio. Se actualiza al seguir/dejar de seguir y al recargar las fuentes de eventos y rankings.
-
-## Actualizaciones automáticas de eventos
-
-Consulta [docs/API.md](docs/API.md) para activar `CITO_API_KEY` y la tarea de GitHub Actions. El navegador carga `assets/data/ufc-events.json` al abrir la web, cada cinco minutos y al volver a la pestaña. La clave nunca se envía al navegador. Sin clave se mantiene la copia inicial. La publicación opcional con GitHub Pages requiere configuración adicional; la sincronización del repositorio funciona de forma independiente.
-
-Verificación: `python3 -m unittest discover -s tests -p 'test_*.py'`.
-
-Los rankings se sincronizan de forma independiente de UFCalendar, cada 12 horas desde UFC.com. Consulta `docs/API.md`. Verificación adicional: `node tests/test-rankings-feed.mjs`.
-
-La agenda incluye eventos numerados y Fight Night de 2026 (celebrados este año y próximos anunciados). El selector de tipo se combina con el estado y la búsqueda. El banner de inicio muestra el próximo evento disponible de ambos tipos. La sincronización incremental de Cito necesita `CITO_API_KEY`; preserva el archivo histórico y actualiza hasta tres carteleras cercanas por ejecución. Para actualizar manualmente la copia previa, descarga las páginas de Fight Night enlazadas en el calendario UFC y ejecuta `python3 scripts/import-fight-nights.py CARPETA`. Solo se muestra la cartelera principal.
-
-UFC Freedom 250 se incluye como evento especial, visible en Todos UFC, Finalizados y en el selector Eventos especiales. La sincronización conserva su identidad oficial sin tratarlo como UFC 250.
-
-Carteleras muestra únicamente eventos oficiales. Los botones Numerados, Fight Night y Especiales están junto a Próximos y Finalizados y se combinan con ellos. Se ha retirado la creación de eventos y las pestañas Demo y Mis eventos.
+Si detectas un dato incorrecto o un fallo, puedes [abrir una incidencia](https://github.com/bryancubeles7e9-ai/UFCinfo/issues) indicando la sección, el luchador o evento afectado y, si es posible, una fuente o los pasos para reproducirlo.
