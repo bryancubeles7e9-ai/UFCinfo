@@ -1,5 +1,5 @@
 import { getLocale } from "./i18n.js";
-import { directoryFighters, directoryFighterById } from "./fighter-directory.js";
+import { directoryFighters, directoryFighterById, directoryFighterByName } from "./fighter-directory.js";
 import { fullName } from "./data.js";
 import { fighterInfo } from "./fighter-info-data.js";
 import { stanceNames } from "./fighter-details.js";
@@ -71,13 +71,22 @@ export function renderComparison(red, blue) {
   return comparisonGroups(red, blue).map(group => `<table class="lab-table"><caption>${esc(group.title)}</caption><thead><tr><th scope="col">Dato / estadística</th><th scope="col">${esc(fullName(red))}</th><th scope="col">${esc(fullName(blue))}</th></tr></thead><tbody>${group.rows.map(row => `<tr><th scope="row">${esc(row.label)}</th>${cell(row.red, row.redPercent, "red")}${cell(row.blue, row.bluePercent, "blue")}</tr>`).join("")}</tbody></table>`).join("");
 }
 
+export function nextMainEventPair(events, now = Date.now()) {
+  const event = events.filter(e => e.type === 'official' && ['announced', 'scheduled'].includes(e.status) && Date.parse(e.date) >= now)
+    .sort((a,b) => Date.parse(a.date) - Date.parse(b.date))[0];
+  const bout = event?.bouts?.find(b => !b.section || b.section === 'main');
+  const red = bout && directoryFighterByName(bout.red), blue = bout && directoryFighterByName(bout.blue);
+  return red && blue && red.id !== blue.id ? {red:red.id, blue:blue.id} : null;
+}
+
 export function initializeLab() {
+  let manualSelection = false;
   const options = [...directoryFighters].sort((a, b) => fullName(a).localeCompare(fullName(b), "es"))
     .map(f => `<option value="${esc(f.id)}">${esc(fullName(f))} · ${esc(f.division)}</option>`).join("");
-  $("#red-fighter").innerHTML = options;
-  $("#blue-fighter").innerHTML = options;
-  $("#red-fighter").value = "topuria";
-  $("#blue-fighter").value = "holloway";
+  $("#red-fighter").innerHTML = '<option value="">—</option>' + options;
+  $("#blue-fighter").innerHTML = '<option value="">—</option>' + options;
+  $("#red-fighter").value = "";
+  $("#blue-fighter").value = "";
   function draw() {
     const red = directoryFighterById($("#red-fighter").value), blue = directoryFighterById($("#blue-fighter").value);
     const invalid = !red || !blue || red.id === blue.id;
@@ -86,8 +95,9 @@ export function initializeLab() {
     $("#comparison-tables").innerHTML = invalid ? "" : renderComparison(red, blue);
     $("#comparison-notes").hidden = invalid;
   }
-  for (const selector of ["#red-fighter", "#blue-fighter"]) $(selector).addEventListener("change", draw);
+  for (const selector of ["#red-fighter", "#blue-fighter"]) $(selector).addEventListener("change", () => { manualSelection = true; draw(); });
   $("#swap-fighters").addEventListener("click", () => {
+    manualSelection = true;
     const old = $("#red-fighter").value;
     $("#red-fighter").value = $("#blue-fighter").value;
     $("#blue-fighter").value = old;
@@ -97,9 +107,17 @@ export function initializeLab() {
   draw();
   const compare = (red, blue) => {
     if (!directoryFighterById(red) || !directoryFighterById(blue)) return;
+    manualSelection = true;
     $("#red-fighter").value = red;
     $("#blue-fighter").value = blue;
     draw();
   };
-  return { compare, load: ({ red, blue }) => compare(red, blue) };
+  const updateDefault = (events, now = Date.now()) => {
+    if (manualSelection) { draw(); return; }
+    const pair = nextMainEventPair(events, now);
+    $("#red-fighter").value = pair?.red || "";
+    $("#blue-fighter").value = pair?.blue || "";
+    draw();
+  };
+  return { compare, updateDefault, load: ({ red, blue }) => compare(red, blue) };
 }

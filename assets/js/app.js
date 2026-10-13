@@ -50,6 +50,7 @@ let eventFilter = "upcoming",
   onlyFavorites = false,
   confirmAction = null;
 const lab = initializeLab();
+lab.updateDefault(eventsFeed.events);
 const rumors = initializeRumors();
 function persist() {
   const saved = store.save();
@@ -545,6 +546,7 @@ setInterval(updateCountdowns, 1000);
 
 async function updateEventFeed() {
   await refreshEvents();
+  lab.updateDefault(eventsFeed.events);
   renderOverview();
   renderEvents();
   renderSaved();
