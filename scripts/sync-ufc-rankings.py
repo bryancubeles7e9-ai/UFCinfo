@@ -83,10 +83,10 @@ def parse_rankings(html, now):
             if not re.fullmatch(r'\d+', value):
                 raise ValueError('Invalid ranking position')
             rank = int(value)
-            if 1 <= rank <= 10:
+            if 1 <= rank <= 15:
                 rows.append((rank, names[0].text()))
-        if len(rows) < 10 or max((r for r, _ in rows), default=0) != 10 or any(r > i + 1 for i, (r, _) in enumerate(rows)) or len(rows) > 20 or any(not name for _, name in rows) or len({name for _, name in rows}) != len(rows):
-            raise ValueError('Incomplete or duplicate top 10')
+        if len(rows) < 15 or max((r for r, _ in rows), default=0) != 15 or any(r > i + 1 for i, (r, _) in enumerate(rows)) or len(rows) > 20 or any(not name for _, name in rows) or len({name for _, name in rows}) != len(rows):
+            raise ValueError('Incomplete or duplicate top 15')
         if rows != sorted(rows, key=lambda row: row[0]):
             raise ValueError('Ranking positions out of order')
         p4p = CATEGORIES[label].startswith('p4p-')

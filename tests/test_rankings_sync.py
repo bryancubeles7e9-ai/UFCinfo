@@ -19,15 +19,15 @@ def fixture():
 class RankingsTests(unittest.TestCase):
     def parse(self, html):
         return module.parse_rankings(html, datetime(2026, 10, 5, tzinfo=timezone.utc))
-    def test_official_section_champion_and_top_ten(self):
+    def test_official_section_champion_and_top_fifteen(self):
         feed = self.parse(fixture())
         self.assertEqual(len(feed['categories']), 13)
         self.assertEqual(feed['published'], 'Tuesday, Sep. 29')
         for c in feed['categories']:
-            self.assertEqual(c['ranks'], list(range(1, 11)))
+            self.assertEqual(c['ranks'], list(range(1, 16)))
             self.assertEqual(c['champion'], None if c['id'].startswith('p4p-') else 'Champion & Name')
     def test_partial_or_meta_only_rejected(self):
-        for html in (fixture().replace('>10</td>', '>11</td>'), fixture().replace('view-display-id-block_1', 'view-display-id-block_2'), fixture().replace('Lightweight', 'Unknown')):
+        for html in (fixture().replace('>15</td>', '>16</td>'), fixture().replace('view-display-id-block_1', 'view-display-id-block_2'), fixture().replace('Lightweight', 'Unknown')):
             with self.assertRaises(ValueError):
                 self.parse(html)
     def test_competition_tie_skips_next_position(self):

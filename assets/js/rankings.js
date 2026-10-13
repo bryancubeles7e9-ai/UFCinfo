@@ -3,11 +3,11 @@ import { getLocale } from "./i18n.js";
 import { directoryFighterByName, fighterNameLink } from "./fighter-directory.js";
 import { $, escapeHTML as esc } from "./utils.js";
 
-// Respaldo del top 10 de «All Rankings», no de «All Meta Rankings».
+// Respaldo del top 15 de «All Rankings», no de «All Meta Rankings».
 export const rankingSnapshot = {
   "source": "https://www.ufc.com/rankings",
   "published": "How are rankings determined?",
-  "synchronizedAt": "2026-10-12T06:01:11.803915+00:00"
+  "synchronizedAt": "2026-10-13T06:23:32.641409+00:00"
 };
 export const rankingCategories = [
   {
@@ -26,7 +26,12 @@ export const rankingCategories = [
       "Sean Strickland",
       "Tom Aspinall",
       "Merab Dvalishvili",
-      "Alex Pereira"
+      "Alex Pereira",
+      "Ciryl Gane",
+      "Khamzat Chimaev",
+      "Arman Tsarukyan",
+      "Alexandre Pantoja",
+      "Carlos Ulberg"
     ],
     "ranks": [
       1,
@@ -38,7 +43,12 @@ export const rankingCategories = [
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
     ]
   },
   {
@@ -57,7 +67,12 @@ export const rankingCategories = [
       "Manon Fiorot",
       "Erin Blanchfield",
       "Tatiana Suarez",
-      "Julianna Peña"
+      "Julianna Peña",
+      "Virna Jandiroba",
+      "Rose Namajunas",
+      "Raquel Pennington",
+      "Denise Gomes",
+      "Maycee Barber"
     ],
     "ranks": [
       1,
@@ -69,14 +84,19 @@ export const rankingCategories = [
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
     ]
   },
   {
     "id": "flyweight",
     "label": "Peso mosca · Masculino",
     "short": "Peso mosca masculino",
-    "description": "El campeón y el top 10 de esta división.",
+    "description": "El campeón y el top 15 de esta división.",
     "champion": "Joshua Van",
     "names": [
       "Alexandre Pantoja",
@@ -88,7 +108,12 @@ export const rankingCategories = [
       "Asu Almabayev",
       "Brandon Moreno",
       "Amir Albazi",
-      "Ramazan Temirov"
+      "Ramazan Temirov",
+      "Tim Elliott",
+      "Steve Erceg",
+      "Sumudaerji",
+      "Tagir Ulanbekov",
+      "Alex Perez"
     ],
     "ranks": [
       1,
@@ -100,14 +125,19 @@ export const rankingCategories = [
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
     ]
   },
   {
     "id": "bantamweight",
     "label": "Peso gallo · Masculino",
     "short": "Peso gallo masculino",
-    "description": "El campeón y el top 10 de esta división.",
+    "description": "El campeón y el top 15 de esta división.",
     "champion": "Petr Yan",
     "names": [
       "Merab Dvalishvili",
@@ -119,7 +149,12 @@ export const rankingCategories = [
       "Payton Talbott",
       "Aiemann Zahabi",
       "David Martinez",
-      "Raul Rosas Jr."
+      "Raul Rosas Jr.",
+      "Marlon Vera",
+      "Deiveson Figueiredo",
+      "Farid Basharat",
+      "Marcus McGhee",
+      "Raoni Barcelos"
     ],
     "ranks": [
       1,
@@ -131,14 +166,19 @@ export const rankingCategories = [
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
     ]
   },
   {
     "id": "featherweight",
     "label": "Peso pluma · Masculino",
     "short": "Peso pluma masculino",
-    "description": "El campeón y el top 10 de esta división.",
+    "description": "El campeón y el top 15 de esta división.",
     "champion": "Alexander Volkanovski",
     "names": [
       "Movsar Evloev",
@@ -150,7 +190,12 @@ export const rankingCategories = [
       "Arnold Allen",
       "Youssef Zalal",
       "Kevin Vallejos",
-      "Steve Garcia"
+      "Steve Garcia",
+      "Aaron Pico",
+      "Melquizael Costa",
+      "Brian Ortega",
+      "Patricio Pitbull",
+      "David Onama"
     ],
     "ranks": [
       1,
@@ -162,14 +207,19 @@ export const rankingCategories = [
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
     ]
   },
   {
     "id": "lightweight",
     "label": "Peso ligero · Masculino",
     "short": "Peso ligero masculino",
-    "description": "El campeón y el top 10 de esta división.",
+    "description": "El campeón y el top 15 de esta división.",
     "champion": "Justin Gaethje",
     "names": [
       "Ilia Topuria",
@@ -181,7 +231,12 @@ export const rankingCategories = [
       "Quillan Salkilld",
       "Mauricio Ruffy",
       "Salahdine Parnasse",
-      "Mateusz Gamrot"
+      "Mateusz Gamrot",
+      "Rafael Fiziev",
+      "Renato Moicano",
+      "Dan Hooker",
+      "Tom Nolan",
+      "Beneil Dariush"
     ],
     "ranks": [
       1,
@@ -193,14 +248,19 @@ export const rankingCategories = [
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
     ]
   },
   {
     "id": "welterweight",
     "label": "Peso wélter · Masculino",
     "short": "Peso wélter masculino",
-    "description": "El campeón y el top 10 de esta división.",
+    "description": "El campeón y el top 15 de esta división.",
     "champion": "Islam Makhachev",
     "names": [
       "Ian Machado Garry",
@@ -212,7 +272,12 @@ export const rankingCategories = [
       "Belal Muhammad",
       "Leon Edwards",
       "Kamaru Usman",
-      "Joaquin Buckley"
+      "Joaquin Buckley",
+      "Yaroslav Amosov",
+      "Uroš Medić",
+      "Mike Malott",
+      "Daniel Rodriguez",
+      "Neil Magny"
     ],
     "ranks": [
       1,
@@ -224,14 +289,19 @@ export const rankingCategories = [
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
     ]
   },
   {
     "id": "middleweight",
     "label": "Peso medio · Masculino",
     "short": "Peso medio masculino",
-    "description": "El campeón y el top 10 de esta división.",
+    "description": "El campeón y el top 15 de esta división.",
     "champion": "Sean Strickland",
     "names": [
       "Khamzat Chimaev",
@@ -243,7 +313,12 @@ export const rankingCategories = [
       "Gregory Rodrigues",
       "Anthony Hernandez",
       "Israel Adesanya",
-      "Christian Leroy Duncan"
+      "Christian Leroy Duncan",
+      "Jared Cannonier",
+      "Abus Magomedov",
+      "Ikram Aliskerov",
+      "Bo Nickal",
+      "Shara Magomedov"
     ],
     "ranks": [
       1,
@@ -255,14 +330,19 @@ export const rankingCategories = [
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
     ]
   },
   {
     "id": "light-heavyweight",
     "label": "Peso semipesado · Masculino",
     "short": "Peso semipesado masculino",
-    "description": "El campeón y el top 10 de esta división.",
+    "description": "El campeón y el top 15 de esta división.",
     "champion": "Carlos Ulberg",
     "names": [
       "Magomed Ankalaev",
@@ -274,7 +354,12 @@ export const rankingCategories = [
       "Azamat Murzakanov",
       "Dominick Reyes",
       "Jan Błachowicz",
-      "Bogdan Guskov"
+      "Bogdan Guskov",
+      "Robert Whittaker",
+      "Alonzo Menifield",
+      "Muhammad Saidov",
+      "Reinier de Ridder",
+      "Nikita Krylov"
     ],
     "ranks": [
       1,
@@ -286,14 +371,19 @@ export const rankingCategories = [
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
     ]
   },
   {
     "id": "heavyweight",
     "label": "Peso pesado · Masculino",
     "short": "Peso pesado masculino",
-    "description": "El campeón y el top 10 de esta división.",
+    "description": "El campeón y el top 15 de esta división.",
     "champion": "Ciryl Gane",
     "names": [
       "Tom Aspinall",
@@ -305,7 +395,12 @@ export const rankingCategories = [
       "Rizvan Kuniev",
       "Vitor Petrino",
       "Serghei Spivac",
-      "Ante Delija"
+      "Ante Delija",
+      "Valter Walker",
+      "Tyrell Fortune",
+      "Derrick Lewis",
+      "Aleksandar Rakić",
+      "Mario Pinto"
     ],
     "ranks": [
       1,
@@ -317,14 +412,19 @@ export const rankingCategories = [
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
     ]
   },
   {
     "id": "strawweight-women",
     "label": "Peso paja · Femenino",
     "short": "Peso paja femenino",
-    "description": "La campeona y el top 10 de esta división.",
+    "description": "La campeona y el top 15 de esta división.",
     "champion": "Mackenzie Dern",
     "names": [
       "Zhang Weili",
@@ -336,7 +436,12 @@ export const rankingCategories = [
       "Fatima Kline",
       "Loopy Godinez",
       "Alexia Thainara",
-      "Jéssica Andrade"
+      "Jéssica Andrade",
+      "Tabatha Ricci",
+      "Amanda Lemos",
+      "Amanda Ribas",
+      "Angela Hill",
+      "Mizuki"
     ],
     "ranks": [
       1,
@@ -348,14 +453,19 @@ export const rankingCategories = [
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
     ]
   },
   {
     "id": "flyweight-women",
     "label": "Peso mosca · Femenino",
     "short": "Peso mosca femenino",
-    "description": "La campeona y el top 10 de esta división.",
+    "description": "La campeona y el top 15 de esta división.",
     "champion": "Natalia Silva",
     "names": [
       "Valentina Shevchenko",
@@ -367,7 +477,12 @@ export const rankingCategories = [
       "Maycee Barber",
       "Wang Cong",
       "Tracy Cortez",
-      "Miranda Maverick"
+      "Miranda Maverick",
+      "Karine Silva",
+      "Casey O'Neill",
+      "Eduarda Moura",
+      "Regina Tarin",
+      "Gabriella Fernandes"
     ],
     "ranks": [
       1,
@@ -379,14 +494,19 @@ export const rankingCategories = [
       6,
       8,
       9,
-      10
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
     ]
   },
   {
     "id": "bantamweight-women",
     "label": "Peso gallo · Femenino",
     "short": "Peso gallo femenino",
-    "description": "La campeona y el top 10 de esta división.",
+    "description": "La campeona y el top 15 de esta división.",
     "champion": "Kayla Harrison",
     "names": [
       "Julianna Peña",
@@ -398,7 +518,12 @@ export const rankingCategories = [
       "Luana Santos",
       "Jacqueline Cavalcanti",
       "Macy Chiasson",
-      "Karol Rosa"
+      "Karol Rosa",
+      "Bia Mesquita",
+      "Michelle Montague",
+      "Nora Cornolle",
+      "Melissa Croden",
+      "Daria Zhelezniakova"
     ],
     "ranks": [
       1,
@@ -410,7 +535,12 @@ export const rankingCategories = [
       7,
       8,
       9,
-      10
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
     ]
   }
 ];
@@ -436,11 +566,11 @@ export async function refreshRankings() {
         new Set(feed.categories.map(c => c?.id)).size !== ids.length ||
         !feed.categories.every(c => c && ids.includes(c.id) &&
           (c.id.startsWith('p4p-') ? c.champion === null : nameValid(c.champion)) &&
-          Array.isArray(c.names) && c.names.length >= 10 && c.names.length <= 20 &&
+          Array.isArray(c.names) && c.names.length >= 15 && c.names.length <= 20 &&
           c.names.every(nameValid) && new Set(c.names).size === c.names.length &&
           Array.isArray(c.ranks) && c.ranks.length === c.names.length &&
-          c.ranks.every((r, i) => Number.isInteger(r) && r >= 1 && r <= 10 && r <= i + 1 && (!i || r >= c.ranks[i - 1])) &&
-          Math.max(...c.ranks) === 10)) throw new Error('Invalid rankings');
+          c.ranks.every((r, i) => Number.isInteger(r) && r >= 1 && r <= 15 && r <= i + 1 && (!i || r >= c.ranks[i - 1])) &&
+          Math.max(...c.ranks) === 15)) throw new Error('Invalid rankings');
     for (const category of rankingCategories) {
       const next = feed.categories.find(c => c.id === category.id);
       category.champion = next.champion;

@@ -10,6 +10,10 @@ code = code.replace(/^import .*;\n/gm, '').replace("new URL('../data/ufc-ranking
 code = "const synchronizeChampionships = globalThis.synchronizeChampionships; const {directoryFighterByName, fighterNameLink} = globalThis.rankingDirectory; const getLocale = () => 'es-ES'; const fighters = []; const esc = s => s; const $ = s => globalThis.rankingElements.get(s); const document = {addEventListener() {}}; const setInterval = () => {};\n" + code;
 const { refreshRankings, rankingCategories, rankingSnapshot, initializeRankings } = await import('data:text/javascript;base64,' + Buffer.from(code).toString('base64'));
 const feed = JSON.parse(await readFile(new URL('../assets/data/ufc-rankings.json', import.meta.url)));
+for (const category of feed.categories) {
+  assert.ok(category.names.length >= 15);
+  assert.equal(Math.max(...category.ranks), 15);
+}
 let options;
 globalThis.fetch = async (_, opts) => { options = opts; return {ok: true, json: async () => feed}; };
 assert.equal(await refreshRankings(), true);
@@ -17,7 +21,7 @@ assert.equal(options.cache, 'no-store');
 assert.equal(rankingSnapshot.synchronizedAt, feed.synchronizedAt);
 const previous = JSON.stringify(rankingCategories);
 const previousBelts = JSON.stringify(directoryFighters.map(f => f.championships));
-for (const mutate of [f => f.categories.pop(), f => f.categories[0].names[0] = '', f => f.categories[0].ranks[0] = 99, f => f.categories[0].ranks[1] = 5, f => f.source = 'https://example.test', f => f.synchronizedAt = 'invalid']) {
+for (const mutate of [f => f.categories.pop(), f => { f.categories[0].names = f.categories[0].names.slice(0, 10); f.categories[0].ranks = f.categories[0].ranks.slice(0, 10); }, f => f.categories[0].names[0] = '', f => f.categories[0].ranks[0] = 99, f => f.categories[0].ranks[1] = 5, f => f.source = 'https://example.test', f => f.synchronizedAt = 'invalid']) {
   const invalid = structuredClone(feed); mutate(invalid);
   globalThis.fetch = async () => ({ok: true, json: async () => invalid});
   assert.equal(await refreshRankings(), false);
