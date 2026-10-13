@@ -58,6 +58,7 @@ try {
  const recovered=await syncRumors({projectRoot:root,configOverride:config,now:new Date('2026-10-08T18:00:00Z'),fetchImpl:delayedAPI});
  assert.equal(recovered.added,1);
  assert.equal(recovered.receivedPosts,1);
+ assert.deepEqual(recovered.feed.lastCollection,{checkedAt:'2026-10-08T18:00:00.000Z',receivedPosts:1,added:1});
  assert.equal(recovered.acceptedPosts,1);
  const repeated=await syncRumors({projectRoot:root,configOverride:config,now:new Date('2026-10-08T19:00:00Z'),fetchImpl:delayedAPI});
  assert.equal(repeated.added,0);

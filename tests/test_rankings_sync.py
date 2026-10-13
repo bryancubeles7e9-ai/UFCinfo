@@ -33,6 +33,9 @@ class RankingsTests(unittest.TestCase):
     def test_competition_tie_skips_next_position(self):
         feed = self.parse(fixture().replace('>4</td>', '>3</td>'))
         self.assertEqual(feed['categories'][-1]['ranks'][:5], [1, 2, 3, 3, 5])
+    def test_methodology_is_not_a_publication_date(self):
+        feed = self.parse(fixture().replace('Last updated: Tuesday, Sep. 29', 'How are rankings determined?'))
+        self.assertIsNone(feed['published'])
     def test_missing_new_division_rejected(self):
         with self.assertRaises(ValueError):
             self.parse(fixture().replace("Women's Bantamweight", 'Unknown'))

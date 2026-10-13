@@ -2959,3 +2959,11 @@ button.ranking-name:hover {
 }
 
 .bout-section-heading { margin: 28px 0 12px; padding: 12px 0; border-bottom: 2px solid var(--accent); font: 700 24px var(--display); }
+
+.data-health { margin: 24px auto; padding: 18px; width: min(1200px, calc(100% - 32px)); border: 1px solid var(--line); box-sizing: border-box; }
+.data-health summary { cursor: pointer; font-weight: 600; }
+.data-health-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 16px; margin-top: 18px; }
+.data-health-item { display: flex; flex-direction: column; gap: 8px; }
+.data-health-state { font-size: 13px; }
+.data-health-state:not([data-status="recent"]) { color: var(--accent); }
+.data-health-list > .data-note { grid-column: 1 / -1; }

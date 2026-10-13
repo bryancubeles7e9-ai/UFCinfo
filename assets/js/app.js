@@ -1,3 +1,4 @@
+import { initializeDataHealth } from "./data-health.js";
 import { applyFighterPhotos, refreshFighterPhotos } from "./fighter-photos-feed.js";
 import { matchesChampionship } from "./fighter-championships.js";
 import { countryBadge, countryLabel } from "./fighter-country.js";
@@ -582,3 +583,5 @@ document.addEventListener("ufcinfo:language-changed", () => {
 initializeMobileNavigation();
 initializeMobileFilters();
 initializeLanguage();
+
+initializeDataHealth();

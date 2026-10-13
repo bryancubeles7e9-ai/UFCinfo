@@ -96,7 +96,7 @@ def parse_rankings(html, now):
     if len(categories) != len(CATEGORIES) or {c['id'] for c in categories} != set(CATEGORIES.values()):
         raise ValueError('Required categories missing or duplicated')
     dates = parser.root.find(lambda n: n.attrs.get('data-rankings-footer') == 'media')
-    published = dates[0].text().replace('Last updated:', '').strip() if dates else None
+    published = next((n.text().split('Last updated:', 1)[1].strip() for n in dates if 'Last updated:' in n.text()), None)
     return {'schemaVersion': 1, 'source': SOURCE, 'synchronizedAt': now.isoformat(), 'published': published, 'categories': categories}
 
 

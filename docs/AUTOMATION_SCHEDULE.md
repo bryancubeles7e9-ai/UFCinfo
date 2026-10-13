@@ -30,3 +30,11 @@ Only registered fighters are updated. The ten main-card fighters for 10 October
 2026 are covered by tests/test-october-10-card.mjs; preliminary participants are updated only when they already have a registered profile. Cards now include all available sections.
 
 Rumor searches overlap the configured last 24 hours even after a successful hourly search, to recover delayed search indexing. The same-hour guard and maximum three paid pages remain. Keywords include possible/potential/rumored/booked/matchup. Logs and the separate accounting ledger retain collection counts and query time bounds, with no post texts or credentials. HTTP-200 provider error payloads do not advance the public search time. An empty response is distinguished from candidates rejected by the publication filter.
+
+The public “Estado de los datos” panel checks the saved feeds every five minutes.
+It labels rumor snapshots older than 90 minutes and daily snapshots older than
+20 hours as delayed, and reports pending fighter/photo failures separately.
+These are freshness checks, not a claim that a workflow succeeded or the upstream
+source changed. A feed request failure is displayed as unable to check; previous
+consultation dates remain visible. Rumor runs publish received-post and added-group
+counts without exposing post bodies, API keys or accounting data.

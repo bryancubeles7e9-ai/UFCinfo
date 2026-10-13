@@ -109,6 +109,7 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
     if (requests > 0) result.feed.lastSearchedAt=now.toISOString();
     state.lastCollection={checkedAt:now.toISOString(),windowStart:new Date(windowStart*1000).toISOString(),windowEnd:new Date(windowEnd*1000).toISOString(),requests,receivedPosts,acceptedPosts,added:result.added,skipped:result.skipped,collectionSkips,skipReasons:result.skipReasons};
     await saveState();
+    if (requests > 0) result.feed.lastCollection={checkedAt:now.toISOString(),receivedPosts,added:result.added};
     await atomicJSON(output,result.feed);
     return {...result,collectionSkips,receivedPosts,acceptedPosts,windowStart:state.lastCollection.windowStart,windowEnd:state.lastCollection.windowEnd,requests,truncated,reservedCredits:state.reservedCredits,estimatedCredits:state.estimatedCredits,mode:'automatic'};
   } finally {await lock.close();await unlink(lockPath);}
