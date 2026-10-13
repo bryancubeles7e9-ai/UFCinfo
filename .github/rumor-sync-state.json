@@ -4,5 +4,20 @@
   "estimatedCredits": 10335,
   "lastSuccessAt": "2026-10-13T11:03:57.689Z",
   "pending": null,
-  "archive": []
+  "archive": [],
+  "lastCollection": {
+    "checkedAt": "2026-10-13T11:03:57.689Z",
+    "windowStart": "2026-10-12T11:03:57.000Z",
+    "windowEnd": "2026-10-13T11:03:57.000Z",
+    "requests": 2,
+    "receivedPosts": 6,
+    "acceptedPosts": 6,
+    "added": 1,
+    "skipped": 5,
+    "collectionSkips": {},
+    "skipReasons": {
+      "fighters-not-detected": 5,
+      "other-promotion": 2
+    }
+  }
 }
