@@ -68,13 +68,18 @@ function followButton(fighter, compact = false) {
   return `<button class="${compact ? `favorite-button ${following ? "selected" : ""}` : "outline-button small"}" data-favorite="${esc(fighter.id)}" aria-pressed="${following}" aria-label="${following ? "Dejar de seguir a" : "Seguir a"} ${esc(fullName(fighter))}">${compact ? following ? "♥" : "♡" : following ? "✓ Siguiendo · Dejar de seguir" : "♡ Seguir luchador"}</button>`;
 }
 function animateFollow(id, fromDialog = false) {
-  if (!window.matchMedia("(max-width: 700px) and (prefers-reduced-motion: no-preference)").matches) return;
+  if (!window.matchMedia("(prefers-reduced-motion: no-preference)").matches) return;
   const scope = fromDialog ? $("#fighter-dialog") : document.querySelector(".view:not([hidden])");
   if (!scope) return;
   const buttons = [...scope.querySelectorAll("[data-favorite]")].filter(button => button.dataset.favorite === id);
   for (const button of buttons) {
     button.classList.add("follow-celebrate");
-    window.setTimeout(() => button.classList.remove("follow-celebrate"), 600);
+    const card = button.closest(".fighter-card, .followed-fighter, .profile-copy");
+    if (window.matchMedia("(min-width: 701px)").matches) card?.classList.add("follow-card-celebrate");
+    window.setTimeout(() => {
+      button.classList.remove("follow-celebrate");
+      card?.classList.remove("follow-card-celebrate");
+    }, 900);
   }
 }
 function additionalFighterCard(fighter) {
