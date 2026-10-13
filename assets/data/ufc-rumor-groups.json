@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T14:01:03.085Z",
-  "lastSearchedAt": "2026-10-13T14:01:03.085Z",
+  "updatedAt": "2026-10-13T15:01:07.590Z",
+  "lastSearchedAt": "2026-10-13T15:01:07.590Z",
   "groups": [
     {
       "id": "2109911118147919963",
@@ -32,6 +32,14 @@
           "attributedAccounts": [
             "KOlmeneroMMA"
           ]
+        },
+        {
+          "id": "2110013161927577631",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2110013161927577631",
+          "publishedAt": "2026-10-13T14:21:54.000Z",
+          "language": "es",
+          "attributedAccounts": []
         }
       ],
       "official": null
