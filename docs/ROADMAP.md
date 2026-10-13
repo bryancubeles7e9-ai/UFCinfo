@@ -1,37 +1,46 @@
-# Plan de futuras actualizaciones de UFCinfo
+# Hoja de ruta de UFCinfo
 
-Plan definido el 8 de octubre de 2026. Las fases siguen el orden de prioridad acordado; no tienen fechas de entrega fijadas. Este documento describe trabajo previsto, no funcionalidades ya terminadas.
+Actualizada el 13 de octubre de 2026. Los siguientes objetivos siguen este orden de prioridad, sin fechas de entrega fijadas. Son trabajo previsto; cada fase se dará por completada tras comprobar su funcionamiento.
 
-## 1. Terminar las APIs y las automatizaciones
+## 1. Pulir la web y el funcionamiento de las APIs
 
-Completar la configuración de las APIs y comprobar que todas las integraciones funcionen. La prioridad es que la web sea dinámica y autónoma, con actualización automática de eventos, carteleras, resultados, rankings y rumores, reduciendo la intervención manual habitual.
+Consolidar la web actual para que sea cómoda de usar y sus datos se actualicen de forma fiable.
 
-Verificar el recorrido completo desde la obtención de datos hasta su publicación en la web, y disponer de controles para detectar fallos de actualización.
+- Corregir errores y mejorar el diseño, la navegación y el rendimiento en móvil y ordenador.
+- Revisar las fichas, las carteleras, los rankings y los rumores para detectar datos incompletos, duplicados o inconsistentes.
+- Comprobar las APIs, los importadores y las automatizaciones de principio a fin: consulta, validación, guardado y publicación.
+- Revisar horarios, consumo de consultas, filtros y recuperación ante fallos, conservando la última información válida.
+- Mostrar fechas de consulta claras y facilitar la detección de actualizaciones fallidas.
 
-## 2. Ampliar la información y el catálogo de luchadores
+**Resultado esperado:** una web estable, con las funciones principales verificadas y actualizaciones habituales que requieran poca intervención manual.
 
-Aumentar la información disponible y las fichas de luchadores. Ampliar la cobertura de las carteleras para incluir:
+## 2. Publicar y lanzar la página web
 
-- Cartelera principal.
-- Preliminares.
-- Preliminares tempranas (early prelims).
+La web ya está accesible en Render. Esta fase consiste en consolidar su publicación y preparar el lanzamiento para usuarios externos.
 
-Incorporar los luchadores que participan en esas carteleras y sus datos disponibles.
+- Revisar el alojamiento, el despliegue y el acceso público.
+- Verificar HTTPS, persistencia de las cuentas y copias de seguridad.
+- Preparar la presentación del proyecto y la información necesaria para que un visitante entienda cómo usarlo.
+- Comprobar los recorridos principales desde distintos dispositivos: consultar eventos, abrir fichas, seguir luchadores y acceder a una cuenta.
+- Recoger las primeras incidencias y comentarios de usuarios para ajustar la web.
 
-## 3. Optimizar la vista móvil
+**Resultado esperado:** una versión pública lista para compartir y utilizar de forma habitual.
 
-Mejorar la experiencia de la web en teléfonos: navegación, distribución del contenido, filtros, fichas y rendimiento.
+## 3. Implementar una aplicación móvil
 
-## 4. Explorar una aplicación móvil
+Con la web y sus automatizaciones consolidadas, desarrollar una aplicación móvil que permita consultar los datos y seguir a los luchadores desde el teléfono.
 
-Una vez consolidadas las funciones y la experiencia móvil de la web, estudiar cómo crear una aplicación móvil y abordar su desarrollo según la opción elegida.
+- Definir el alcance de la primera versión y elegir la tecnología y las plataformas.
+- Adaptar la navegación y las funciones principales a la experiencia de una aplicación.
+- Reutilizar las fuentes de datos y el sistema de cuentas y seguimiento cuando corresponda.
+- Probar la aplicación en dispositivos reales y preparar su distribución.
 
-## 5. Incorporar más promotoras de MMA
+**Resultado esperado:** una primera aplicación funcional, conectada con los datos del proyecto. La tecnología, las plataformas y el canal de distribución quedan por decidir.
 
-Ampliar en el futuro la cobertura a otras promotoras de MMA, con sus eventos, luchadores y resultados. Las promotoras concretas se decidirán más adelante.
+## Más adelante: otras promotoras de MMA
 
-Tener en cuenta esta futura ampliación al desarrollar las integraciones y el modelo de datos, para facilitar que convivan varias promotoras.
+Mantener como objetivo futuro la incorporación de otras promotoras, con sus eventos, luchadores y resultados. Su elección y las fuentes de datos se decidirán después de las prioridades anteriores.
 
-## Retoques durante todas las fases
+## Mejoras continuas
 
-Realizar pequeños ajustes, mejoras y correcciones entre fases conforme se vayan indicando, manteniendo el orden de prioridades del plan.
+Seguir realizando pequeños retoques y correcciones durante todas las fases. La ampliación de perfiles y datos, y las mejoras de la experiencia móvil, forman parte de ese mantenimiento continuo.
