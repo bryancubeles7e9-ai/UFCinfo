@@ -1,8 +1,41 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T06:00:56.520Z",
-  "lastSearchedAt": "2026-10-13T06:00:56.520Z",
+  "updatedAt": "2026-10-13T11:03:57.689Z",
+  "lastSearchedAt": "2026-10-13T11:03:57.689Z",
   "groups": [
+    {
+      "id": "2109911118147919963",
+      "fighterNames": [
+        "Carlos Prates",
+        "Islam Makhachev"
+      ],
+      "matchupKey": "carlosprates|islammakhachev|2027-01-30",
+      "eventDateHint": "2027-01-30",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Championship Rounds comenta un posible cruce entre Carlos Prates y Islam Makhachev; la publicación menciona el 30 de enero. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds discusses a possible matchup between Carlos Prates and Islam Makhachev; the post mentions January 30. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-13T11:03:57.689Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-13T07:36:25.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2109911118147919963",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2109911118147919963",
+          "publishedAt": "2026-10-13T07:36:25.000Z",
+          "language": "en",
+          "attributedAccounts": [
+            "KOlmeneroMMA"
+          ]
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2107747599155708089",
       "fighterNames": [
