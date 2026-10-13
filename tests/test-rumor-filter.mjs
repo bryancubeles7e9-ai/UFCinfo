@@ -17,11 +17,13 @@ for (const text of ['ilia topuria vs max holloway is targeted','TOPURIA vs HOLLO
 }
 assert.deepEqual(filter('topuria vs holloway is targeted').feed.groups[0].fighterNames,['Ilia Topuria','Max Holloway']);
 assert.deepEqual(filter('Ian Garry vs Michael Morales is targeted').feed.groups[0].fighterNames,['Ian Machado Garry','Michael Morales']);
-// Names not yet in the directory are retained only for an explicit prospective UFC report.
+// Unknown prospects require explicit UFC context; registered athletes do not.
+assert.equal(filter('Arturo Example vs Bruno Sample is targeted for UFC on November 28').added,1);
+assert.equal(filter('Hecher Sosa vs Abdul Hussein is targeted').added,1);
 assert.equal(filter('Hecher Sosa vs Abdul Hussein is targeted for UFC on November 28').added,1);
 for(const [text,reason] of [
  ['Random Person vs Another Person','unverified-fighters'],
- ['Hecher Sosa vs Abdul Hussein is targeted','unverified-fighters'],
+ ['Arturo Example vs Bruno Sample is targeted','unverified-fighters'],
  ['Breaking News vs Main Event is targeted for UFC','unverified-fighters'],
  ['Ilia Topuria vs Max Holloway: who wins?','opinion'],
  ['Ojalá Ilia Topuria vs Max Holloway','opinion'],

@@ -6,7 +6,12 @@ import {githubRumorState} from './github-rumor-state.mjs';
 
 const root=resolve(import.meta.dirname,'..');
 const endpoint='https://api.twitterapi.io/twitter/tweet/advanced_search';
-const keywords='(fight OR pelea OR combate OR vs OR rematch OR revancha OR offers OR challenge OR rumor OR rival OR targeted OR targeting OR possible OR potential OR rumored OR rumoured OR booked OR scheduled OR matchup OR talks OR posible OR responds OR response OR responde OR reta OR agreed OR accepted OR negotiations OR negociaciones OR enfrentará OR peleará OR bout OR versus)';
+const keywords='(fight OR pelea OR combate OR vs OR rematch OR revancha OR rumor OR targeted OR targeting OR possible OR potential OR rumored OR booked OR scheduled OR matchup OR talks OR posible OR agreed OR bout OR versus)';
+export function buildSearchQuery(sources,start,end) {
+  const query=`(${sources.map(source=>'from:'+source.handle).join(' OR ')}) ${keywords} -filter:retweets -filter:replies since_time:${start} until_time:${end}`;
+  if (query.length>512) throw Error('Search query exceeds 512 characters. No API request made.');
+  return query;
+}
 async function readJSON(path,fallback) {
   try {return JSON.parse((await readFile(path,'utf8')).replace(/^\uFEFF/,''));}
   catch(error) {if (error.code==='ENOENT' && fallback!==undefined) return fallback;throw error;}
@@ -58,7 +63,7 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
     if (!key) throw Error('Missing TwitterAPI.io key.');
     const end=Math.floor(now.getTime()/1000);
     const start=backfillHours ? end-backfillHours*3600 : state.lastSuccessAt ? Math.max(Math.min(Math.floor(Date.parse(state.lastSuccessAt)/1000)-120,end-config.lookbackHours*3600),end-168*3600) : end-config.lookbackHours*3600;
-    const query=state.pending?.query ?? `(${sources.map(source=>'from:'+source.handle).join(' OR ')}) ${keywords} -filter:retweets -filter:replies since_time:${start} until_time:${end}`;
+    const query=state.pending?.query ?? buildSearchQuery(sources,start,end);
     const until=state.pending?.until ?? now.toISOString();
     let cursor=state.pending?.cursor ?? '',requests=0,truncated=false;
     let receivedPosts=0,acceptedPosts=0;
