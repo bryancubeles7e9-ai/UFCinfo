@@ -37,7 +37,7 @@ La web combina un catálogo de perfiles con copias de datos que actualizan tarea
 
 | Información | Fuente y funcionamiento |
 | --- | --- |
-| **Eventos y resultados** | Cito actualiza las carteleras cercanas y conserva el historial disponible. La cobertura actual se centra en las carteleras principales. |
+| **Eventos y resultados** | Cito actualiza las carteleras cercanas y conserva el historial disponible. Incluye cartelera principal, preliminares y preliminares previas cuando están publicadas. |
 | **Rankings** | Se consultan las clasificaciones publicadas en UFC.com. |
 | **Récords y estadísticas** | Se consultan los perfiles oficiales de UFC de los luchadores registrados que participan en los combates seleccionados. |
 | **Campeones y fotografías** | Los títulos absolutos actuales se sincronizan con los rankings válidos. Se revisan las fotografías y se conservan variantes para campeón y no campeón cuando están disponibles. El BMF tiene una gestión separada. |
@@ -73,7 +73,7 @@ Más información: [Funcionamiento de rumores](docs/RUMORES.md) y [criterios del
 ## Alcance actual
 
 - Los resultados y las estadísticas son copias actualizadas periódicamente; no hay seguimiento en directo golpe a golpe.
-- La cobertura de eventos se centra en la **cartelera principal**. No se garantiza que estén todas las preliminares ni todos sus luchadores.
+- Las carteleras incluyen **preliminares y preliminares previas disponibles**. Las veladas futuras pueden estar incompletas y algunos participantes todavía no tienen ficha en el catálogo.
 - Algunos perfiles tienen campos pendientes porque no hay información suficientemente documentada. Los datos ausentes no se inventan.
 - Una fuente puede tardar en actualizar un récord, una estadística o una fotografía después del combate.
 - Fight Lab compara datos publicados; no calcula probabilidades de victoria ni predicciones.

@@ -84,10 +84,20 @@ def corner_name(bout, corner):
 
 
 def normalize_bouts(value, completed):
-    main = [bout for bout in rows(value) if str(bout.get('cardSection', '')).lower() == 'main card' and bout.get('status') != 'cancelled']
-    if completed and not main:
+    sections = {'main card': 'main', 'prelims': 'prelims', 'preliminary card': 'prelims',
+                'early prelims': 'early-prelims', 'early preliminary card': 'early-prelims'}
+    main = []
+    for bout in rows(value):
+        if str(bout.get('status', '')).lower() in ('cancelled', 'canceled'):
+            continue
+        section = sections.get(str(bout.get('cardSection', '')).strip().lower())
+        if section is None:
+            raise SyncError('Unknown card section')
+        main.append({**bout, '_section': section})
+    if completed and not any(b['_section'] == 'main' for b in main):
         raise SyncError('Missing completed main card')
-    main.sort(key=lambda bout: (not bool(bout.get('isMainEvent')), bout.get('boutOrder') if isinstance(bout.get('boutOrder'), int) else 9999))
+    order = {'main': 0, 'prelims': 1, 'early-prelims': 2}
+    main.sort(key=lambda bout: (order[bout['_section']], not bool(bout.get('isMainEvent')), bout.get('boutOrder') if isinstance(bout.get('boutOrder'), int) else 9999))
     result = []
     for bout in main:
         red, red_corner = corner_name(bout, 'red')
@@ -110,7 +120,7 @@ def normalize_bouts(value, completed):
         if winner is None and completed:
             if re.search(r'no.?contest', method, re.I): outcome = 'Sin resultado (No contest)'
             elif re.search(r'draw|empate', method, re.I): outcome = 'Empate'
-        result.append({'red': red, 'blue': blue, 'division': division, 'winner': red if winner == 'red' else blue if winner == 'blue' else None, 'outcome': outcome, 'method': method, 'round': str(round_value) if round_value is not None else '', 'time': time_value})
+        result.append({'section': bout['_section'], 'red': red, 'blue': blue, 'division': division, 'winner': red if winner == 'red' else blue if winner == 'blue' else None, 'outcome': outcome, 'method': method, 'round': str(round_value) if round_value is not None else '', 'time': time_value})
     return result
 
 

@@ -27,6 +27,6 @@ card and a result for each selected bout, without a 24-hour wait. Cards from the
 last 14 days are checked again even when processed; unchanged records no longer
 block statistics. Full manual refresh uses full_refresh=true in fighter-records.yml.
 Only registered fighters are updated. The ten main-card fighters for 10 October
-2026 are covered by tests/test-october-10-card.mjs; prelim coverage is not implied.
+2026 are covered by tests/test-october-10-card.mjs; preliminary participants are updated only when they already have a registered profile. Cards now include all available sections.
 
 Rumor searches overlap the configured last 24 hours even after a successful hourly search, to recover delayed search indexing. The same-hour guard and maximum three paid pages remain. Keywords include possible/potential/rumored/booked/matchup. Logs and the separate accounting ledger retain collection counts and query time bounds, with no post texts or credentials. HTTP-200 provider error payloads do not advance the public search time. An empty response is distinguished from candidates rejected by the publication filter.

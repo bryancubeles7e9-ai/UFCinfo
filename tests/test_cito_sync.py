@@ -34,10 +34,11 @@ class CitoSyncTests(unittest.TestCase):
             calls.append(path)
             if path == '/upcoming': return upcoming
             if path == '/recent': return recent
-            return [bout('Prelims'), bout(winner='red')]
+            return [bout('Prelims'), bout(winner='red'), bout('Early Prelims')]
         feed = sync.synchronize(fetch, old, NOW)
         self.assertEqual(feed['source'], 'Cito')
         self.assertEqual(len(calls), 5)
+        self.assertEqual([b['section'] for b in feed['events'][0]['bouts']], ['main', 'prelims', 'early-prelims'])
         self.assertEqual(feed['events'][0]['id'], 'ufc-fight-night-october-31-2026')
         self.assertEqual(feed['events'][-1]['bouts'][0]['winner'], 'Alpha')
         self.assertEqual(feed['events'][-1]['bouts'][0]['division'], 'Lightweight')
