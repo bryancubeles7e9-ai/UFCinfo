@@ -11,7 +11,7 @@ const config={enabled:true,intervalMinutes:60,alignToHour:true,maxPagesPerRun:1,
 process.env.TWITTERAPI_IO_KEY='fake-test-key';
 const root=await mkdtemp(join(tmpdir(),'ufcinfo-search-time-'));
 let requests=0;
-const api=async()=>{requests++;return new Response(JSON.stringify({tweets:[],has_next_page:false}));};
+const api=async url=>{requests++; const q=new URL(url).searchParams.get('query'); const from=Number(q.match(/since_time:(\d+)/)[1]); const to=Number(q.match(/until_time:(\d+)/)[1]); assert.ok(to-from >= 24*3600); assert.ok(q.includes('possible OR potential')); return new Response(JSON.stringify({tweets:[],has_next_page:false}));};
 try {
  await mkdir(join(root,'assets/data'),{recursive:true});
  await writeFile(join(root,'assets/data/ufc-rumors.json'),JSON.stringify({sources}));
@@ -43,6 +43,27 @@ try {
  assert.equal(backup.requests,0);assert.equal(backup.feed.lastSearchedAt,paginated.feed.lastSearchedAt);
  const resumed=await syncRumors({projectRoot:root,configOverride:config,now:new Date('2026-10-08T16:17:00Z'),fetchImpl:async url=>{assert.equal(new URL(url).searchParams.get('cursor'),'page-2');return new Response(JSON.stringify({tweets:[],has_next_page:false}));}});
  assert.equal(resumed.requests,1);assert.equal(resumed.truncated,false);
+ // The search provider can index a post after an empty hourly search completed.
+ const delayedTweet={id:'2107747599155708999',text:'Hecher Sosa vs Abdul Hussein is targeted for UFC on November 28',author:{userName:'test'},createdAt:'2026-10-08T16:55:00Z',lang:'en'};
+ const delayedAPI=async url=>{
+   const query=new URL(url).searchParams.get('query');
+   const since=Number(query.match(/since_time:(\d+)/)[1]);
+   const tweets=Date.parse(delayedTweet.createdAt)/1000>=since ? [delayedTweet] : [];
+   return new Response(JSON.stringify({tweets,has_next_page:false}));
+ };
+ await syncRumors({projectRoot:root,configOverride:config,now:new Date('2026-10-08T17:00:00Z'),fetchImpl:async()=>new Response(JSON.stringify({tweets:[],has_next_page:false}))});
+ const recovered=await syncRumors({projectRoot:root,configOverride:config,now:new Date('2026-10-08T18:00:00Z'),fetchImpl:delayedAPI});
+ assert.equal(recovered.added,1);
+ assert.equal(recovered.receivedPosts,1);
+ assert.equal(recovered.acceptedPosts,1);
+ const repeated=await syncRumors({projectRoot:root,configOverride:config,now:new Date('2026-10-08T19:00:00Z'),fetchImpl:delayedAPI});
+ assert.equal(repeated.added,0);
+ assert.equal(repeated.feed.groups.length,1);
+ const beforeProviderError=await readFile(join(root,'assets/data/ufc-rumor-groups.json'),'utf8');
+ await assert.rejects(syncRumors({projectRoot:root,configOverride:config,now:new Date('2026-10-08T20:00:00Z'),fetchImpl:async()=>new Response(JSON.stringify({status:'error',tweets:[],has_next_page:false}))}),/provider error/);
+ assert.equal(await readFile(join(root,'assets/data/ufc-rumor-groups.json'),'utf8'),beforeProviderError);
+ console.log('PASS: delayed indexing recovery, rolling-window deduplication, provider errors preserve search time');
+
 } finally {await rm(root,{recursive:true,force:true});}
 const workflow=await readFile(new URL('../.github/workflows/rumor-sync.yml',import.meta.url),'utf8');
 assert.ok(workflow.includes("cron: '17,37,57 * * * *'"));

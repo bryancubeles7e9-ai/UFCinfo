@@ -6,7 +6,7 @@ import {githubRumorState} from './github-rumor-state.mjs';
 
 const root=resolve(import.meta.dirname,'..');
 const endpoint='https://api.twitterapi.io/twitter/tweet/advanced_search';
-const keywords='(fight OR pelea OR combate OR vs OR rematch OR revancha OR offers OR challenge OR rumor OR rival OR targeted OR talks OR posible OR responds OR response OR responde OR reta OR agreed OR accepted OR negotiations OR negociaciones OR enfrentará OR peleará OR bout OR versus)';
+const keywords='(fight OR pelea OR combate OR vs OR rematch OR revancha OR offers OR challenge OR rumor OR rival OR targeted OR targeting OR possible OR potential OR rumored OR rumoured OR booked OR scheduled OR matchup OR talks OR posible OR responds OR response OR responde OR reta OR agreed OR accepted OR negotiations OR negociaciones OR enfrentará OR peleará OR bout OR versus)';
 async function readJSON(path,fallback) {
   try {return JSON.parse((await readFile(path,'utf8')).replace(/^\uFEFF/,''));}
   catch(error) {if (error.code==='ENOENT' && fallback!==undefined) return fallback;throw error;}
@@ -57,10 +57,13 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
     const key=process.env.TWITTERAPI_IO_KEY?.trim() || (await readFile(resolve(projectRoot,'.ufcinfo-data/twitterapi.key'),'utf8')).trim();
     if (!key) throw Error('Missing TwitterAPI.io key.');
     const end=Math.floor(now.getTime()/1000);
-    const start=backfillHours ? end-backfillHours*3600 : state.lastSuccessAt ? Math.max(Math.floor(Date.parse(state.lastSuccessAt)/1000)-120,end-168*3600) : end-config.lookbackHours*3600;
+    const start=backfillHours ? end-backfillHours*3600 : state.lastSuccessAt ? Math.max(Math.min(Math.floor(Date.parse(state.lastSuccessAt)/1000)-120,end-config.lookbackHours*3600),end-168*3600) : end-config.lookbackHours*3600;
     const query=state.pending?.query ?? `(${sources.map(source=>'from:'+source.handle).join(' OR ')}) ${keywords} -filter:retweets -filter:replies since_time:${start} until_time:${end}`;
     const until=state.pending?.until ?? now.toISOString();
     let cursor=state.pending?.cursor ?? '',requests=0,truncated=false;
+    let receivedPosts=0,acceptedPosts=0;
+    const windowStart=Number(query.match(/since_time:(\d+)/)?.[1] ?? start);
+    const windowEnd=Number(query.match(/until_time:(\d+)/)?.[1] ?? end);
     const known=new Map(state.archive.map(report=>[report.id,report]));
     const collectionSkips={};
     for (let page=0;page<(backfillHours ? 10 : config.maxPagesPerRun);page++) {
@@ -76,13 +79,16 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
       const body=await response.text();
       if (body.length>4_000_000) throw Error('API response too large.');
       const data=JSON.parse(body);
+      if (data?.success === false || ['error','failed'].includes(data?.status) || data?.error) throw Error('TwitterAPI.io reported a provider error; feed preserved.');
       if (!Array.isArray(data.tweets) || data.tweets.length>20 || typeof data.has_next_page!=='boolean') throw Error('Unexpected API response; feed preserved.');
+      receivedPosts+=data.tweets.length;
       state.estimatedCredits+=(Math.max(1,data.tweets.length)*config.creditsPerTweet);
       for (const tweet of data.tweets) {
         const source=sources.find(source=>source.handle.toLowerCase()===String(tweet.author?.userName).toLowerCase());
         const reason=!source ? 'unknown-source' : typeof tweet.id!=='string' || !/^\d{10,22}$/.test(tweet.id) || typeof tweet.text!=='string' || !tweet.text.trim() || tweet.text.length>30000 ? 'invalid-post' : tweet.isReply ? 'reply' : tweet.retweeted_tweet || tweet.text.startsWith('RT @') ? 'retweet' : isBoxingPost(tweet.text) ? 'boxing' : null;
         if(reason){collectionSkips[reason]=(collectionSkips[reason]??0)+1;continue;}
         const date=new Date(tweet.createdAt);if(!Number.isFinite(date.getTime()) || date>now){collectionSkips['invalid-post-date']=(collectionSkips['invalid-post-date']??0)+1;continue;}
+        acceptedPosts++;
         known.set(tweet.id,{id:tweet.id,sourceId:source.id,postUrl:`https://x.com/${source.handle}/status/${tweet.id}`,text:tweet.text,publishedAt:date.toISOString(),language:['es','en'].includes(tweet.lang)?tweet.lang:source.language,status:'unverified'});
       }
       state.archive=[...known.values()].filter(report=>Date.parse(report.publishedAt)>=now.getTime()-7*86400000).sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt)).slice(0,500);
@@ -96,8 +102,10 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
     const result=automaticFeed({checkedAt:now.toISOString(),candidates:state.archive},sources,previous,now,eventFeed);
     // Only successful real API requests advance the public search timestamp.
     if (requests > 0) result.feed.lastSearchedAt=now.toISOString();
+    state.lastCollection={checkedAt:now.toISOString(),windowStart:new Date(windowStart*1000).toISOString(),windowEnd:new Date(windowEnd*1000).toISOString(),requests,receivedPosts,acceptedPosts,added:result.added,skipped:result.skipped,collectionSkips,skipReasons:result.skipReasons};
+    await saveState();
     await atomicJSON(output,result.feed);
-    return {...result,collectionSkips,requests,truncated,reservedCredits:state.reservedCredits,estimatedCredits:state.estimatedCredits,mode:'automatic'};
+    return {...result,collectionSkips,receivedPosts,acceptedPosts,windowStart:state.lastCollection.windowStart,windowEnd:state.lastCollection.windowEnd,requests,truncated,reservedCredits:state.reservedCredits,estimatedCredits:state.estimatedCredits,mode:'automatic'};
   } finally {await lock.close();await unlink(lockPath);}
 }
 
@@ -112,6 +120,7 @@ if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
       const backfillHours=process.env.UFCINFO_RUMOR_BACKFILL==='true' ? 168 : undefined;
       const result=await syncRumors({fromFile,stateStore,backfillHours});
       console.log(`Sync: ${result.mode}; requests: ${result.requests}; added: ${result.added}; published groups: ${result.feed.groups.length}; skipped: ${result.skipped}.`);
+      if(result.mode==='automatic') console.log(`Collection: received posts: ${result.receivedPosts}; accepted posts: ${result.acceptedPosts}; window: ${result.windowStart} to ${result.windowEnd}.`);
       if(result.calendarChecked) console.log(`Calendar cross-check: snapshot ${result.calendarSynchronizedAt}; previous confirmed groups removed: ${result.removedConfirmed}.`);
       else if(result.mode!=='not-due') console.log('Calendar cross-check unavailable; no confirmation inferred.');
       const labels={'fighters-not-detected':'No se detectaron dos luchadores', 'unverified-fighters':'Nombres fuera del catalogo sin contexto UFC y negociacion', 'confirmed-in-calendar':'Pelea ya anunciada en las carteleras', 'other-promotion':'Otra promotora', 'past-result':'Resultado o recuerdo de un combate','date-not-detected':'No se detecto una fecha','no-ufc-reference':'Sin referencia a UFC','no-booking-language':'Sin lenguaje de negociacion o pelea prevista',boxing:'Boxeo','official-announcement':'Anuncio oficial',opinion:'Opinion','invalid-event-date':'Fecha de combate invalida','past-event':'Combate pasado','event-too-far-ahead':'Combate a mas de 183 dias','unknown-source':'Fuente no configurada','invalid-post':'Publicacion invalida',reply:'Respuesta',retweet:'Retuit','invalid-post-date':'Fecha de publicacion invalida'};
@@ -123,7 +132,7 @@ if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
     catch(error) {
       // Only report known application errors or numeric transport codes, never response bodies or credentials.
       const message=String(error?.message??'');
-      const known=/^(?:TwitterAPI\.io HTTP \d{3}; no retries\. Reserved credits retained\.|GitHub state-store HTTP \d{3}\. No paid query permitted\.|Unexpected API response; feed preserved\.|API response too large\.|Invalid pagination cursor\.|Invalid generated feed; refusing to publish\.|Invalid existing public feed; refusing to overwrite\.|Grupo no válido\.|Publicación no válida\.|Fecha de publicación no válida\.|La publicación no pertenece a una fuente configurada\.|Publicación duplicada o desconocida\.|Invalid accounting state\. No API request made\.|GitHub did not confirm durable accounting\.)$/;
+      const known=/^(?:TwitterAPI\.io HTTP \d{3}; no retries\. Reserved credits retained\.|GitHub state-store HTTP \d{3}\. No paid query permitted\.|Unexpected API response; feed preserved\.|TwitterAPI\.io reported a provider error; feed preserved\.|API response too large\.|Invalid pagination cursor\.|Invalid generated feed; refusing to publish\.|Invalid existing public feed; refusing to overwrite\.|Grupo no válido\.|Publicación no válida\.|Fecha de publicación no válida\.|La publicación no pertenece a una fuente configurada\.|Publicación duplicada o desconocida\.|Invalid accounting state\. No API request made\.|GitHub did not confirm durable accounting\.)$/;
       if(known.test(message))console.error('Sync error: '+message);
       else if(error instanceof SyntaxError)console.error('Sync error: invalid JSON response or stored JSON.');
       else if(error?.name==='TimeoutError' || error?.name==='AbortError')console.error('Sync error: request timed out.');

@@ -20,7 +20,7 @@ export function githubRumorState({token=process.env.GITHUB_TOKEN,repository=proc
       return JSON.parse(Buffer.from(file.content,'base64').toString('utf8'));
     },
     async save(state) {
-      const metadata={schemaVersion:1,reservedCredits:state.reservedCredits,estimatedCredits:state.estimatedCredits,lastSuccessAt:state.lastSuccessAt,pending:state.pending,archive:[]};
+      const metadata={schemaVersion:1,reservedCredits:state.reservedCredits,estimatedCredits:state.estimatedCredits,lastSuccessAt:state.lastSuccessAt,pending:state.pending,archive:[],...(state.lastCollection ? {lastCollection:state.lastCollection} : {})};
       const result=await request(`/contents/${path}`,'PUT',{message:'chore: update durable rumor credit accounting',branch,content:Buffer.from(JSON.stringify(metadata,null,2)+'\n').toString('base64'),...(sha?{sha}:{})});
       if (!result.content?.sha)throw Error('GitHub did not confirm durable accounting.');
       sha=result.content.sha;
