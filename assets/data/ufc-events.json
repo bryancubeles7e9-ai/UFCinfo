@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-12T12:17:33.187468+00:00",
+  "synchronizedAt": "2026-10-13T05:58:00.205084+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -519,7 +519,7 @@
       "location": "Etihad Arena",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-333",
-      "checkedAt": "2026-10-12",
+      "checkedAt": "2026-10-13",
       "bouts": [
         {
           "red": "Alexander Volkanovski",
@@ -588,7 +588,7 @@
       "location": "Rogers Place",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "checkedAt": "2026-10-12",
+      "checkedAt": "2026-10-13",
       "bouts": [
         {
           "red": "Joaquin Buckley",
@@ -667,7 +667,7 @@
       "location": "Meta APEX",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
-      "checkedAt": "2026-10-12",
+      "checkedAt": "2026-10-13",
       "bouts": [
         {
           "red": "Brendan Allen",
