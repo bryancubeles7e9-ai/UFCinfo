@@ -324,7 +324,7 @@
       "record": "21-5-1",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/natalia-silva",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
         "strikesLanded": 4.72,
         "strikesAbsorbed": 2.66,
@@ -338,7 +338,7 @@
         "koWins": 5.0,
         "submissionWins": 7.0,
         "statisticsSource": "https://www.ufc.com/athlete/natalia-silva",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "dern": {
@@ -913,7 +913,7 @@
       "record": "25-8-1",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/deiveson-figueiredo",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
         "strikesLanded": 2.56,
         "strikesAbsorbed": 3.5,
@@ -928,7 +928,7 @@
         "submissionWins": 9.0,
         "firstRoundFinishes": 11.0,
         "statisticsSource": "https://www.ufc.com/athlete/deiveson-figueiredo",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-marlon-vera": {
@@ -1520,22 +1520,22 @@
       "record": "28-7-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/brendan-allen",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
-        "strikesLanded": 3.75,
-        "strikesAbsorbed": 3.78,
-        "takedownAverage": 1.52,
-        "submissionAverage": 1.06,
-        "strikingDefense": 48.0,
+        "strikesLanded": 3.61,
+        "strikesAbsorbed": 3.86,
+        "takedownAverage": 1.63,
+        "submissionAverage": 1.08,
+        "strikingDefense": 47.0,
         "takedownDefense": 58.0,
-        "knockdownAverage": 0.27,
+        "knockdownAverage": 0.24,
         "strikingAccuracy": 52,
-        "takedownAccuracy": 4,
+        "takedownAccuracy": 3,
         "koWins": 6.0,
         "submissionWins": 15.0,
         "firstRoundFinishes": 11.0,
         "statisticsSource": "https://www.ufc.com/athlete/brendan-allen",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-caio-borralho": {
@@ -1651,22 +1651,22 @@
       "record": "15-3-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/christian-leroy-duncan",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
-        "strikesLanded": 4.45,
-        "strikesAbsorbed": 2.36,
-        "takedownAverage": 0.43,
+        "strikesLanded": 4.49,
+        "strikesAbsorbed": 2.34,
+        "takedownAverage": 0.35,
         "submissionAverage": 0.0,
         "strikingDefense": 54.0,
-        "takedownDefense": 58.0,
-        "knockdownAverage": 0.43,
+        "takedownDefense": 59.0,
+        "knockdownAverage": 0.35,
         "strikingAccuracy": 58,
         "takedownAccuracy": 0,
         "koWins": 10.0,
         "submissionWins": 1.0,
         "firstRoundFinishes": 5.0,
         "statisticsSource": "https://www.ufc.com/athlete/christian-leroy-duncan",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-carlos-ulberg": {
@@ -2258,22 +2258,22 @@
       "record": "15-6-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/loopy-godinez",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
         "strikesLanded": 4.43,
-        "strikesAbsorbed": 3.94,
-        "takedownAverage": 2.99,
-        "submissionAverage": 0.82,
+        "strikesAbsorbed": 3.96,
+        "takedownAverage": 2.93,
+        "submissionAverage": 0.77,
         "strikingDefense": 62.0,
         "takedownDefense": 77.0,
         "knockdownAverage": 0.07,
         "strikingAccuracy": 49,
-        "takedownAccuracy": 16,
+        "takedownAccuracy": 14,
         "koWins": 1.0,
         "submissionWins": 2.0,
         "firstRoundFinishes": 2.0,
         "statisticsSource": "https://www.ufc.com/athlete/loopy-godinez",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-alexia-thainara": {
@@ -2389,7 +2389,7 @@
       "record": "10-2-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/wang-cong",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
         "strikesLanded": 6.08,
         "strikesAbsorbed": 3.15,
@@ -2404,7 +2404,7 @@
         "submissionWins": 2.0,
         "firstRoundFinishes": 3.0,
         "statisticsSource": "https://www.ufc.com/athlete/wang-cong",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-tracy-cortez": {
@@ -2822,7 +2822,7 @@
       "record": "12-1-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/payton-talbott",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
         "strikesLanded": 6.75,
         "strikesAbsorbed": 3.38,
@@ -2837,14 +2837,14 @@
         "submissionWins": 1.0,
         "firstRoundFinishes": 2.0,
         "statisticsSource": "https://www.ufc.com/athlete/payton-talbott",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-king-green": {
       "record": "36-18-1",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/king-green",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
         "strikesLanded": 6.49,
         "strikesAbsorbed": 3.69,
@@ -2859,14 +2859,14 @@
         "submissionWins": 10.0,
         "firstRoundFinishes": 13.0,
         "statisticsSource": "https://www.ufc.com/athlete/king-green",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-esteban-ribovics": {
       "record": "17-3-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/esteban-ribovics",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
         "strikesLanded": 7.48,
         "strikesAbsorbed": 5.78,
@@ -2881,14 +2881,14 @@
         "submissionWins": 5.0,
         "firstRoundFinishes": 8.0,
         "statisticsSource": "https://www.ufc.com/athlete/esteban-ribovics",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-roberto-soldic": {
       "record": "22-4-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/roberto-soldic",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
         "strikesLanded": 6.27,
         "strikesAbsorbed": 1.8,
@@ -2902,14 +2902,14 @@
         "submissionWins": 1.0,
         "firstRoundFinishes": 11.0,
         "statisticsSource": "https://www.ufc.com/athlete/roberto-soldic",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-khaos-williams": {
       "record": "16-6-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/khaos-williams",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
         "strikesLanded": 4.57,
         "strikesAbsorbed": 5.45,
@@ -2924,14 +2924,14 @@
         "submissionWins": 1.0,
         "firstRoundFinishes": 8.0,
         "statisticsSource": "https://www.ufc.com/athlete/khaos-williams",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-ateba-gautier": {
       "record": "11-2-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/ateba-gautier",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
         "strikesLanded": 4.15,
         "strikesAbsorbed": 2.87,
@@ -2945,14 +2945,14 @@
         "koWins": 9.0,
         "firstRoundFinishes": 7.0,
         "statisticsSource": "https://www.ufc.com/athlete/ateba-gautier",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-roman-kopylov": {
       "record": "16-5-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/roman-kopylov",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
         "strikesLanded": 4.57,
         "strikesAbsorbed": 5.02,
@@ -2966,7 +2966,7 @@
         "koWins": 13.0,
         "firstRoundFinishes": 2.0,
         "statisticsSource": "https://www.ufc.com/athlete/roman-kopylov",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-patricio-freire": {
@@ -3600,156 +3600,157 @@
       "record": "11-4-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/matheus-camilo",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
-        "strikesLanded": 2.22,
-        "strikesAbsorbed": 3.05,
-        "takedownAverage": 4.16,
-        "submissionAverage": 0.59,
-        "strikingDefense": 67.0,
-        "knockdownAverage": 0.59,
-        "strikingAccuracy": 43,
-        "takedownAccuracy": 15,
+        "strikesLanded": 2.46,
+        "strikesAbsorbed": 3.26,
+        "takedownAverage": 3.36,
+        "submissionAverage": 0.37,
+        "strikingDefense": 66.0,
+        "knockdownAverage": 0.37,
+        "strikingAccuracy": 46,
+        "takedownAccuracy": 12,
         "koWins": 5.0,
         "submissionWins": 2.0,
         "firstRoundFinishes": 4.0,
         "statisticsSource": "https://www.ufc.com/athlete/matheus-camilo",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13",
+        "takedownDefense": 100.0
       }
     },
     "ufc-jai-herbert": {
       "record": "15-6-1",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/jai-herbert",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
-        "strikesLanded": 3.19,
-        "strikesAbsorbed": 3.34,
-        "takedownAverage": 0.42,
+        "strikesLanded": 3.24,
+        "strikesAbsorbed": 3.29,
+        "takedownAverage": 0.37,
         "submissionAverage": 0.0,
         "strikingDefense": 53.0,
-        "takedownDefense": 67.0,
-        "knockdownAverage": 0.84,
-        "strikingAccuracy": 42,
+        "takedownDefense": 65.0,
+        "knockdownAverage": 0.74,
+        "strikingAccuracy": 40,
         "takedownAccuracy": 0,
         "koWins": 10.0,
         "submissionWins": 1.0,
         "firstRoundFinishes": 5.0,
         "statisticsSource": "https://www.ufc.com/athlete/jai-herbert",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-ketlen-souza": {
       "record": "17-7-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/ketlen-souza",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
-        "strikesLanded": 4.11,
-        "strikesAbsorbed": 3.89,
-        "takedownAverage": 0.45,
-        "submissionAverage": 0.23,
+        "strikesLanded": 4.13,
+        "strikesAbsorbed": 4.0,
+        "takedownAverage": 0.37,
+        "submissionAverage": 0.18,
         "strikingDefense": 53.0,
-        "takedownDefense": 54.0,
-        "knockdownAverage": 0.45,
-        "strikingAccuracy": 57,
+        "takedownDefense": 63.0,
+        "knockdownAverage": 0.37,
+        "strikingAccuracy": 53,
         "takedownAccuracy": 0,
         "koWins": 9.0,
         "submissionWins": 2.0,
         "firstRoundFinishes": 6.0,
         "statisticsSource": "https://www.ufc.com/athlete/ketlen-souza",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-andre-fili": {
       "record": "26-14-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/andre-fili",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
-        "strikesLanded": 3.89,
-        "strikesAbsorbed": 4.55,
-        "takedownAverage": 2.24,
-        "submissionAverage": 0.21,
+        "strikesLanded": 3.99,
+        "strikesAbsorbed": 4.58,
+        "takedownAverage": 2.2,
+        "submissionAverage": 0.2,
         "strikingDefense": 50.0,
         "takedownDefense": 72.0,
-        "knockdownAverage": 0.31,
+        "knockdownAverage": 0.36,
         "strikingAccuracy": 38,
         "takedownAccuracy": 25,
         "koWins": 11.0,
         "submissionWins": 3.0,
         "firstRoundFinishes": 8.0,
         "statisticsSource": "https://www.ufc.com/athlete/andre-fili",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-kai-kamaka-iii": {
       "record": "18-9-1",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/kai-kamaka-iii",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
-        "strikesLanded": 5.49,
-        "strikesAbsorbed": 6.03,
-        "takedownAverage": 1.45,
-        "submissionAverage": 0.21,
+        "strikesLanded": 5.53,
+        "strikesAbsorbed": 6.25,
+        "takedownAverage": 1.35,
+        "submissionAverage": 0.19,
         "strikingDefense": 55.0,
         "takedownDefense": 55.0,
-        "knockdownAverage": 0.21,
-        "strikingAccuracy": 59,
+        "knockdownAverage": 0.19,
+        "strikingAccuracy": 58,
         "takedownAccuracy": 54,
         "koWins": 3.0,
         "submissionWins": 1.0,
         "statisticsSource": "https://www.ufc.com/athlete/kai-kamaka-iii",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-malcolm-wellmaker": {
       "record": "10-3-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/malcolm-wellmaker",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
-        "strikesLanded": 4.58,
-        "strikesAbsorbed": 4.23,
+        "strikesLanded": 4.12,
+        "strikesAbsorbed": 4.37,
         "takedownAverage": 0.0,
         "submissionAverage": 0.0,
-        "strikingDefense": 52.0,
+        "strikingDefense": 50.0,
         "takedownDefense": 47.0,
-        "knockdownAverage": 1.44,
-        "strikingAccuracy": 55,
+        "knockdownAverage": 1.54,
+        "strikingAccuracy": 50,
         "takedownAccuracy": 0,
         "koWins": 6.0,
         "submissionWins": 2.0,
         "firstRoundFinishes": 6.0,
         "statisticsSource": "https://www.ufc.com/athlete/malcolm-wellmaker",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     },
     "ufc-otari-tanzilovi": {
       "record": "11-2-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/otari-tanzilovi",
-      "updatedAt": "2026-10-12T12:17:43.363470+00:00",
+      "updatedAt": "2026-10-13T05:58:19.290747+00:00",
       "info": {
-        "strikesLanded": 4.2,
-        "strikesAbsorbed": 4.2,
-        "takedownAverage": 4.5,
+        "strikesLanded": 4.36,
+        "strikesAbsorbed": 3.8,
+        "takedownAverage": 4.38,
         "submissionAverage": 0.0,
-        "strikingDefense": 50.0,
+        "strikingDefense": 54.0,
         "takedownDefense": 86.0,
-        "knockdownAverage": 0.0,
-        "strikingAccuracy": 69,
+        "knockdownAverage": 0.4,
+        "strikingAccuracy": 66,
         "takedownAccuracy": 0,
         "koWins": 7.0,
         "firstRoundFinishes": 5.0,
         "statisticsSource": "https://www.ufc.com/athlete/otari-tanzilovi",
-        "statisticsConsulted": "2026-10-12"
+        "statisticsConsulted": "2026-10-13"
       }
     }
   },
   "lastSync": {
-    "checkedAt": "2026-10-12T12:17:43.363470+00:00",
+    "checkedAt": "2026-10-13T05:58:19.290747+00:00",
     "mode": "events",
     "attempted": 21,
     "succeeded": 20,
