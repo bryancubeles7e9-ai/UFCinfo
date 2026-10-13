@@ -1,5 +1,7 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+"Catálogo de perfiles oficiales de UFC. Cada ficha muestra su fecha y fuente. Los filtros de estilo, guardia y cinturones se aplican a los datos documentados. Puedes seguir a los luchadores y compararlos en Fight Lab.":"Catàleg de perfils oficials d’UFC. Cada fitxa mostra la data i la font. Els filtres d’estil, guàrdia i cinturons s’apliquen a les dades documentades. Pots seguir els lluitadors i comparar-los a Fight Lab.",
+
 "Cartelera principal":"Cartellera principal",
 "Preliminares":"Preliminars",
 "Preliminares previas":"Preliminars previs",
@@ -77,7 +79,7 @@ export const catalan = {
   "COMPARA SUS ESTADÍSTICAS.": "COMPARA LES SEVES ESTADÍSTIQUES.",
   "Dos luchadores.": "Dos lluitadors.",
   "Sus datos, cara a cara.": "Les seves dades, cara a cara.",
-  "Compara récords, datos físicos, golpeo, derribos y finalizaciones de los 165 luchadores del catálogo.": "Compara rècords, dades físiques, cops, enderrocaments i finalitzacions dels 165 lluitadors del catàleg.",
+  "Compara récords, datos físicos, golpeo, derribos y finalizaciones de los luchadores del catálogo.": "Compara rècords, dades físiques, cops, enderrocaments i finalitzacions dels lluitadors del catàleg.",
   "Abrir Fight Lab": "Obre Fight Lab",
   "EL AÑO DENTRO DEL OCTÁGONO": "L’ANY DINS DE L’OCTÀGON",
   "Próximos eventos UFC anunciados y resultados de este año, con cartelera principal y preliminares disponibles.": "Pròxims esdeveniments UFC anunciats i resultats d’aquest any, amb cartellera principal i preliminars disponibles.",

@@ -88,3 +88,22 @@ El modo invitado conserva el almacenamiento anterior. Con sesión iniciada, la l
 ## UFC Freedom 250
 
 Evento especial oficial incluido junto a los eventos numerados, con identificador `ufc-freedom-250` y sin número de serie. Cartelera de siete combates y resultados consultados el 6 de octubre de 2026 en https://www.ufc.com/news/ufc-freedom-250-official-scorecards-judges y https://www.ufc.com/news/ufc-freedom-250-results-highlights-interviews . Horario de cartelera principal: 14 de junio, 20:00 EDT (15 de junio, 00:00 UTC), según https://www.ufc.com/events?fa=news.detail&gid=17041&page=2 .
+
+## Participantes de la temporada 2026
+
+El catálogo se amplía a partir de los nombres de las carteleras finalizadas de 2026
+incluidas en `assets/data/ufc-events.json`, también preliminares y preliminares previas.
+`scripts/import-season-fighters.py` recupera los enlaces a los atletas de las páginas
+oficiales de esos eventos y verifica la identidad y el récord del perfil antes de
+incorporarlo. Conserva las fichas existentes y evita duplicados por nombre e ID.
+
+Las nuevas fotografías enlazan al recurso oficial de UFC y se cargan de forma
+diferida; la interfaz dispone de un estado de fotografía no disponible. Nacionalidad
+representada y lugar de nacimiento son campos distintos: la primera se toma de las
+banderas de las carteleras, no se deduce del segundo. Los campos no documentados se
+mantienen ausentes. Las guardias que proceden de UFC Stats conservan la fecha y el
+enlace de la instantánea usada; no se presentan como una consulta en directo.
+
+Las nuevas fichas se registran también en `docs/fighter-directory-sources.json`,
+que permite seguirlas desde una cuenta. La sincronización posterior de récords y
+estadísticas las incluye cuando cumplen los criterios de combates recientes.

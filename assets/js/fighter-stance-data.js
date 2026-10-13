@@ -887,5 +887,2345 @@ export const fighterStances = {
     "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
     "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
     "stanceConsulted": "2026-10-11"
+  },
+  "ufc-julius-walker": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-gerald-meerschaert": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-francisco-prado": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ismael-bonfim": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-niko-price": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-leon-shahbazyan": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-felipe-franco": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-brendson-ribeiro": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-allen-frye-jr": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-alice-pereira": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-dariya-zheleznyakova": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ernesta-kareckaite": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-melissa-gatto": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-imanol-rodriguez": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-alden-coria": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-damian-pinas": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-andrey-pulyaev": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-marcus-mcghee": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-anthony-romero-0": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-mick-parkin": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jacobe-smith": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-rafael-dos-anjos": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-alexander-hernandez": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-marvin-vettori": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ismail-naurdiev": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-court-mcgee": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-eric-nolan": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-raoni-barcelos": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-sedriques-dumas": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-brady-hiestand": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-rinya-nakamura": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-rodolfo-vieira": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-robert-bryczek": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-rodolfo-bellato": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-christian-edwards": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-elves-brener": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-josiah-harrell": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-montel-jackson": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ricky-simon": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-john-castaneda": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-heili-alateng": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-vanessa-demopulos": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-yazmin-jauregui": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-charles-jourdain": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-robelis-despaigne": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-michael-aswell-jr": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-joosang-yoo": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ryan-gandra": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ozzy-diaz": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-etomen-shiyahashian": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-casey-oneill": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-eduarda-moura": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-giga-chikadze": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-joanderson-brito": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-joseph-morales": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-tommy-mcmillen": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-marwan-rahiki": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-dan-ige": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-tim-elliott": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-edgar-chairez": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ignacio-bahamondes": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-muslim-salikhov": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-djorden-santos": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-drakkar-klose": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-thomas-gantt": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-rafa-garcia": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-rong-zhu": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jj-aldrich": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-regina-malpica-rivera": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-fares-ziam": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-axel-sola": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-nursulton-ruziboev": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-daniil-donchenko": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-punahele-soriano": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kurtis-campbell": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-trevor-peek": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-losene-keita": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-muhammad-naimov": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-morgan-charriere": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-felipe-lima": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-mario-pinto": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ryan-spann": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-oumar-sy": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-modestas-bukauskas": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-nathaniel-wood": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-nora-cornolle": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-klaudia-sygula": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-matthieu-letho-duclos": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-sofia-montenegro": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-aoriqileng": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kai-asakura": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-alex-perez": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-sumudaerji": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-levi-rodrigues-jr": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-namsrai-batbayar": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-andre-lima": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-rei-tsuruya": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kevin-borjas": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jack-jenkins": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-sean-woodson": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-shiyao-ron": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-lawrence-lui": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-xiong-jingnan": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kori-makkenna-7": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ding-meng": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-roman-dolidze": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-marquel-mederos": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-mason-jones": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-carli-judice": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jeisla-chaves": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jamall-emmers": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-lerryan-douglas": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kennedy-nzechukwu": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-shamil-gaziev": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-chris-padilla": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-nasrat-haqparast": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-marcio-barbosa": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-gauge-young": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-wes-schultz": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jackson-mcvey": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-shanelle-dyer": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-karlos-olberg-3": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-bruno-korea-0": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-joel-alvarez": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-charles-johnson": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-eduardo-chapolin": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-donte-johnson": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-eric-mcconico": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-vicente-luque": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-tresean-gore": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-rafael-tobias": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-neil-magny": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ramiz-brahimaj": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jeremiah-wells": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-myktybek-orolbai": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-diego-ferreira": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-billy-quarantillo": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-darren-elkins": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-yadier-del-valle": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-amanda-lemos": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-billy-goff": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ty-miller": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-steven-asplund": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-guilherme-pat": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-diyar-nurgozhay": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-bruno-lopes": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-louie-sutherland": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-manoel-sousa": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-miles-johns": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-gianni-vazquez": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-juliana-miller": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ravena-oliveira-morais": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-carol-foro": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-daniel-rodriguez": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-aleksandar-rakic": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-marcin-tybura": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-dusko-todorovic": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-robert-valentin-frey": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kiruhato-uruhina": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-rutohito-kurain": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-tofiq-musayev": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-oban-elliott": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-michael-oliveira": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-mark-vologdin": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-dennis-buzukja": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-bogdan-grad": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-mateusz-rebecki": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kyle-prepolec": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-hailey-cowan": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jovan-leka": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-alexander-poppeck": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-stephanie-bruna-luciano": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-bogdan-guskov": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-steve-erceg": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-magomed-zaynukov": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-tyrell-fortune": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-valter-walker": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-thomas-petersen": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-dustin-jacoby": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-santiago-ponzinibbio": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-sam-patterson": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-nurullo-aliev": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-cody-gibson": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jared-cannonier": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-chase-hooper": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-mitch-ramirez": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-tabatha-ricci": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-alberto-montes": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-austin-bashi": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jean-paul-lebosnoyani": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-seokhyeon-ko": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-stewart-nicoll": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-alvin-hines": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-dione-barbosa": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-nikita-krylov": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-robert-whittaker": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-elisha-ellison": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-cody-garbrandt": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-adrian-yanez": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-luke-riley": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-cesar-almeida": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-farid-basharat": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-alessandro-costa": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-cody-durden": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-manuel-torres": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-shara-magomedov": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-michel-pereira": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-nazim-sadykhov": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ikram-aliskerov": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-abus-magomedov": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-michal-oleksiejczuk": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-farman-hasanov": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-abdulrakhman-yakhyaev": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kaan-ofli": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-javier-reyes": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-theodor-berggren": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-bekzat-almakhan": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jean-matsumoto": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-tahir-abdullayev": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jefferson-nascimento": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ion-cutelaba": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-hyder-amil": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ches-skelli-0": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-melsik-baghdasaryan": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-murtazali-magomedov": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-vinicius-oliveira": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-bia-mesquita": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-melissa-mullins": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-allan-nascimento": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-mitch-raposo": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-gaston-bolanos": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-levan-chokheli": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-shane-collins": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-michael-chandler": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kyle-daukaus": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-tom-nolan": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-bryce-mitchell": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-santiago-luna": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-shiyunia-tafua": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-matt-schnell": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-john-yannis": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-priscila-cachoeira": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-chelsea-chandler": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jordan-leavitt": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-yuneisy-duben": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ariane-carnelossi": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-guram-kutateladze-1": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-cameron-smotherman": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jake-matthews": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-carlston-harris": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-yi-sak-lee": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jose-henrique": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-cody-haddon": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-angela-hill": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-zhu-kangjie": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-rodrigo-vera": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-loma-lookboonmee": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jaqueline-amorim": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-melquizael-costa": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-daniel-santos": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-juan-diaz": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-timothy-cuamba": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-benardo-sopaj": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-nikolay-veretennikov": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-tuco-tokkos": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ivan-erslan": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-artur-minev": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ketlen-vieira": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-dzhonatan-pirs-1": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-andre-petroski": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-alice-ardelean": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-polyana-viana": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-lyudovit-klayn-1": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-shauna-bannon": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-nicolle-caliari": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-yaroslav-amosov": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-grant-dawson": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jim-miller": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jared-gordon": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-marco-tulio": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-pat-sabatini": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-william-gomis": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-baisangur-susurkaev": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-clayton-carpenter": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jose-ochoa": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-beneil-dariush": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ollie-schmid": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-brando-pericic": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-cam-rowston": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kevin-christian": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jacob-malkoun": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-colby-thicknesse": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-vince-morales": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-benjamin-johnston": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jonathan-micallef": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-themba-gorimbo": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-dom-mar-fan": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kody-steele": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-davey-grant": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-juan-martinetti": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-marcus-buchecha": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-mayra-bueno-silva": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-michelle-montague": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jafel-filho": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-francis-marshall": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-lucas-brennan": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-max-griffin": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-talita-alencar": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-gilbert-burns": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-mike-malott": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kyler-phillips": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-mandel-nallo": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-karine-silva": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-thiago-moises": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-julien-leblanc": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-tanner-boser": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-gokhan-saricam": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-melissa-croden": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jamey-lyn-horth": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jamie-siraj": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-randy-brown": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kelvin-gastelum": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-charles-radtke": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-renato-moicano": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-chris-duncan": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ethyn-ewing": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-rafael-estevam": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-manolo-zecchini": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jose-delano": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-robert-ruchala": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-lando-vannata": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-darrius-flowers": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-azamat-bekoev": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-michael-chiesa": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-julian-erosa": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kyle-nelson": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-lance-gibson-jr": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-gabriella-fernandes": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-bruna-brasil": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-austen-lane": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-danny-silva": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-mantas-kondratavicius": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-antonio-trocoli": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-shem-rock": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-abdul-kareem-al-selwady": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-josh-emmett": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-harry-hardwick": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-chris-curtis": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-elijah-smith": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-suyoung-you": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-bolaji-oki": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-brad-tavares": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-eryk-anders": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-montserrat-rendon": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-luan-lacerda": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-hecher-sosa": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-piera-rodriguez": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-samu-hiyusu": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ricky-turcios": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-nyamjargal-tumendemberel": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jesus-aguilar": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-luke-fernandez": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-daniel-zellhuber": {
+    "stance": "Switch",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-felipe-bunes": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-angel-pacheco": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jose-daniel-medina": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-trevin-dzhayls-6": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-kameron-els-7": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-douglas-silva-de-andrade": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-erik-silva": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-geoff-neal": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-carlos-leal": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-ode-osbourne": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-alibi-idiris": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-philip-rowe": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jailton-almeida": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-marc-andre-barriault": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-alex-morono": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-trevin-dzhayls-4": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-muin-gafurov": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-jakub-wiklacz": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-billy-elekana": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-torrez-finney": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-yi-zha": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-sangwook-kim": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-keiichiro-nakamura": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-sebastian-szalay": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-sulang-rangbo": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-denzel-freeman": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
+  },
+  "ufc-adam-fugitt": {
+    "stance": "Southpaw",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-13"
   }
 };
