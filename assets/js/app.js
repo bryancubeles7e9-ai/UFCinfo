@@ -1,3 +1,4 @@
+import { createCatalogPagination } from "./catalog-pagination.js";
 import { initializeDataHealth } from "./data-health.js";
 import { applyFighterPhotos, refreshFighterPhotos } from "./fighter-photos-feed.js";
 import { matchesChampionship } from "./fighter-championships.js";
@@ -161,6 +162,7 @@ function renderOverview() {
     .map(fighterCard)
     .join("");
 }
+const catalogPagination = createCatalogPagination(24);
 function renderFighters() {
   const query = $("#fighter-search").value.toLocaleLowerCase("es").trim(),
     style = $("#style-filter").value,
@@ -187,8 +189,16 @@ function renderFighters() {
     list.sort((a, b) => fullName(a).localeCompare(fullName(b), "es"));
   if ($("#fighter-sort").value === "power")
     list.sort((a, b) => (b.stats?.[2] ?? -1) - (a.stats?.[2] ?? -1));
+  const page = catalogPagination.select(list, [query, style, division, stance, belts, $("#fighter-sort").value, onlyFavorites]);
+  const language = getLocale().slice(0, 2);
+  const words = {es: ['Mostrando', 'de', 'luchadores', 'Cargar más'], en: ['Showing', 'of', 'fighters', 'Load more'], ca: ['Mostrant', 'de', 'lluitadors', 'Carrega’n més']}[language] || ['Mostrando', 'de', 'luchadores', 'Cargar más'];
+  const count = `${words[0]} ${page.shown} ${words[1]} ${page.total} ${words[2]}`;
+  $("#fighter-results-count").textContent = count;
+  $("#fighter-load-more").hidden = !page.hasMore;
+  $("#fighter-load-more").textContent = words[3];
+  $("#fighter-load-more").setAttribute('aria-label', `${words[3]} · ${count}`);
   $("#fighter-list").innerHTML = list.length
-    ? list.map((f) => f.supplemental ? additionalFighterCard(f) : fighterCard(f)).join("")
+    ? page.items.map((f) => f.supplemental ? additionalFighterCard(f) : fighterCard(f)).join("")
     : empty("Ningún luchador coincide. Prueba otros filtros.");
 }
 function renderHomeBanner() {
@@ -405,6 +415,13 @@ for (const selector of [
     selector === "#fighter-search" ? "input" : "change",
     renderFighters,
   );
+$("#fighter-load-more").addEventListener("click", () => {
+  const previousCount = $("#fighter-list").children.length;
+  catalogPagination.more();
+  renderFighters();
+  // Move keyboard focus into the newly revealed results, including the final batch.
+  $("#fighter-list").children[previousCount]?.querySelector('[data-profile]')?.focus({preventScroll:true});
+});
 $("#follow-selected").addEventListener("click", () => {
   const id = $("#follow-fighter").value;
   if (!directoryFighterById(id) || store.state.favorites.includes(id)) return;

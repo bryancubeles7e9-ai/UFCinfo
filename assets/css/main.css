@@ -2967,3 +2967,6 @@ button.ranking-name:hover {
 .data-health-state { font-size: 13px; }
 .data-health-state:not([data-status="recent"]) { color: var(--accent); }
 .data-health-list > .data-note { grid-column: 1 / -1; }
+
+.catalog-more { display: flex; justify-content: center; margin: 24px 0 40px; }
+.catalog-more button { min-height: 44px; min-width: 180px; }

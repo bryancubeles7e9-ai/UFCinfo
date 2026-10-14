@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {createCatalogPagination} from '../assets/js/catalog-pagination.js';
+const all=Array.from({length:613},(_,id)=>({id}));
+const pager=createCatalogPagination();
+assert.equal(pager.select(all,['all']).shown,24);
+pager.more();assert.equal(pager.select(all,['all']).shown,48);
+assert.equal(pager.select([...all],['all']).shown,48,'refresh/profile return retains expanded results');
+assert.equal(pager.select(all,['search']).shown,24,'changed filters start at first batch');
+assert.equal(pager.select(all.slice(0,3),['small']).hasMore,false);
+assert.equal(pager.select([],['empty']).shown,0);
+const final=createCatalogPagination();for(let i=0;i<25;i++)final.more();
+final.select(all,['all']);for(let i=0;i<25;i++)final.more();
+const page=final.select(all,['all']);assert.equal(page.shown,613);assert.equal(page.hasMore,false);
+assert.equal(new Set(page.items.map(f=>f.id)).size,613);
+console.log('PASS: batching, full coverage, filter reset, empty results and preserved expansion');
