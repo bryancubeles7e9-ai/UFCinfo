@@ -10,7 +10,7 @@ assert.equal(countryLabel({code: 'EN', country: 'England', countrySource: 'offic
 assert.ok(countryBadge({code: 'ES · GE', country: 'España / Georgia'}).includes('ES · GE'));
 for (const fighter of additionalFighters) {
   if (!fighter.code) continue;
-  assert.match(fighter.countrySource, /^https:\/\/www\.ufc\.com\/event\//);
+  assert.match(fighter.countrySource, /^https:\/\/www\.ufc\.com\/(?:event|news|athlete)\//);
   assert.ok(fighter.countryConsulted);
   assert.ok(countryBadge(fighter).includes(fighter.code));
 }

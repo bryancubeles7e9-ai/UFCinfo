@@ -1,5 +1,8 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "País no documentado": "País no documentat",
+  "Sin una fuente verificada para este dato.": "Sense una font verificada per a aquesta dada.",
+
 "Catálogo de perfiles oficiales de UFC. Cada ficha muestra su fecha y fuente. Los filtros de estilo, guardia y cinturones se aplican a los datos documentados. Puedes seguir a los luchadores y compararlos en Fight Lab.":"Catàleg de perfils oficials d’UFC. Cada fitxa mostra la data i la font. Els filtres d’estil, guàrdia i cinturons s’apliquen a les dades documentades. Pots seguir els lluitadors i comparar-los a Fight Lab.",
 
 "Cartelera principal":"Cartellera principal",

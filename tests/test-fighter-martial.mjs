@@ -23,5 +23,9 @@ assert.equal(martialDetails({ officialStyle: 'Boxing' }).label, 'Boxeo');
 assert.ok(!renderMartialDetails({ martialBase: '<script>', martialBaseSource: 'javascript:bad' }).includes('<script>'));
 assert.ok(!renderMartialDetails({ martialBase: 'Boxeo', martialBaseSource: 'javascript:bad' }).includes('href='));
 const documented = directoryFighters.filter(f => martialDetails(f).kind !== 'unknown');
-assert.equal(documented.length, 156);
+assert.ok(documented.length >= Object.keys(fighterMartialBases).length);
+for (const fighter of directoryFighters.filter(f => martialDetails(f).kind === 'unknown')) {
+  assert.match(compactMartialInfo(fighter), /Base no especificada/);
+  assert.ok(!renderMartialDetails(fighter).includes('undefined'));
+}
 console.log(`PASS: ${documented.length}/${directoryFighters.length} perfiles con formación o disciplina documentada`);

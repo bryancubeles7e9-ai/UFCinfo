@@ -650,5 +650,19 @@ export const fighterMartialBases = {
     "martialBaseSource": "https://www.ufc.com/news/khalil-rountree-jr-serious-and-secure-ufc-320",
     "martialBaseConsulted": "2026-10-11",
     "martialBaseSourceLabel": "Reportaje UFC"
+  },
+  "ufc-shem-rock": {
+    "martialBase": "Jiu-jitsu brasileño",
+    "martialBaseNote": "Su biografía UFC declara cinturón marrón en BJJ; no identifica una base inicial exclusiva.",
+    "martialBaseSource": "https://www.ufc.com/athlete/shem-rock",
+    "martialBaseConsulted": "2026-10-14",
+    "martialBaseSourceLabel": "Biografía UFC"
+  },
+  "ufc-themba-gorimbo": {
+    "martialBase": "Jiu-jitsu",
+    "martialBaseNote": "Su biografía UFC declara cinturón azul en jiu-jitsu; no identifica una base inicial exclusiva.",
+    "martialBaseSource": "https://www.ufc.com/athlete/themba-gorimbo",
+    "martialBaseConsulted": "2026-10-14",
+    "martialBaseSourceLabel": "Biografía UFC"
   }
 };

@@ -10922,7 +10922,11 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/michael-page",
       "statisticsConsulted": "2026-10-13"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/news/michael-venom-page-mvp-reintroduce-myself-ufc-paris",
+    "countryConsulted": "2026-10-14"
   },
   {
     "id": "ufc-nursulton-ruziboev",
@@ -18954,7 +18958,11 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/farid-basharat",
       "statisticsConsulted": "2026-10-13"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "code": "AF",
+    "country": "Afghanistan",
+    "countrySource": "https://www.ufc.com/news/farid-basharat-always-focused-moving-forward-ufc-329",
+    "countryConsulted": "2026-10-14"
   },
   {
     "id": "ufc-john-garza",
@@ -23703,7 +23711,11 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/themba-gorimbo",
       "statisticsConsulted": "2026-10-13"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "code": "ZW",
+    "country": "Zimbabwe",
+    "countrySource": "https://www.ufc.com/news/themba-gorimbo-welcome-to-the-mamba-show-ufc-vegas-110",
+    "countryConsulted": "2026-10-14"
   },
   {
     "id": "ufc-dom-mar-fan",
@@ -27860,7 +27872,11 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/trevin-dzhayls-4",
       "statisticsConsulted": "2026-10-13"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "code": "AF",
+    "country": "Afghanistan",
+    "countrySource": "https://www.ufc.com/news/javid-basharat-just-wants-fight-ufc-vegas-113",
+    "countryConsulted": "2026-10-14"
   },
   {
     "id": "ufc-muin-gafurov",

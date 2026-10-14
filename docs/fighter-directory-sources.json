@@ -2781,7 +2781,11 @@
     "aliases": [
       "Michael Venom Page"
     ],
-    "source": "https://www.ufc.com/athlete/michael-page"
+    "source": "https://www.ufc.com/athlete/michael-page",
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/news/michael-venom-page-mvp-reintroduce-myself-ufc-paris",
+    "countryConsulted": "2026-10-14"
   },
   {
     "id": "ufc-nursulton-ruziboev",
@@ -4745,7 +4749,11 @@
     "aliases": [
       "Farid Basharat"
     ],
-    "source": "https://www.ufc.com/athlete/farid-basharat"
+    "source": "https://www.ufc.com/athlete/farid-basharat",
+    "code": "AF",
+    "country": "Afghanistan",
+    "countrySource": "https://www.ufc.com/news/farid-basharat-always-focused-moving-forward-ufc-329",
+    "countryConsulted": "2026-10-14"
   },
   {
     "id": "ufc-john-garza",
@@ -5905,7 +5913,11 @@
     "aliases": [
       "Themba Gorimbo"
     ],
-    "source": "https://www.ufc.com/athlete/themba-gorimbo"
+    "source": "https://www.ufc.com/athlete/themba-gorimbo",
+    "code": "ZW",
+    "country": "Zimbabwe",
+    "countrySource": "https://www.ufc.com/news/themba-gorimbo-welcome-to-the-mamba-show-ufc-vegas-110",
+    "countryConsulted": "2026-10-14"
   },
   {
     "id": "ufc-dom-mar-fan",
@@ -6917,7 +6929,11 @@
     "aliases": [
       "Javid Basharat"
     ],
-    "source": "https://www.ufc.com/athlete/trevin-dzhayls-4"
+    "source": "https://www.ufc.com/athlete/trevin-dzhayls-4",
+    "code": "AF",
+    "country": "Afghanistan",
+    "countrySource": "https://www.ufc.com/news/javid-basharat-just-wants-fight-ufc-vegas-113",
+    "countryConsulted": "2026-10-14"
   },
   {
     "id": "ufc-muin-gafurov",

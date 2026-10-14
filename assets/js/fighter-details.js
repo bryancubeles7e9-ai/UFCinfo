@@ -52,7 +52,7 @@ export function renderCombatDetails(fighter) {
 
 export function renderStanceDetails(fighter) {
   const stance = stanceNames[fighter.stance];
-  if (!stance) return "";
+  if (!stance) return `<section class="combat-details"><div class="combat-stance"><span class="stance-emblem">—</span><div><p class="eyebrow">GUARDIA</p><h3>No indicada</h3><p class="data-note">Sin una fuente verificada para este dato.</p></div></div></section>`;
   const source = /^https?:\/\//.test(fighter.stanceSource || "")
     ? `<a class="text-link" href="${esc(fighter.stanceSource)}" target="_blank" rel="noopener noreferrer">${esc(fighter.stanceSourceLabel || "UFC Stats")} ›</a>` : "";
   return `<section class="combat-details"><div class="combat-stance"><span class="stance-emblem">${stance.code}</span><div><p class="eyebrow">GUARDIA REGISTRADA</p><h3>${esc(stance.label)}</h3>${source}${fighter.stanceConsulted ? `<p class="data-note">Consulta: ${esc(fighter.stanceConsulted)}</p>` : ""}</div></div></section>`;

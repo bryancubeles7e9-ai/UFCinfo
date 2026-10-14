@@ -1,5 +1,8 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "País no documentado": "Country not documented",
+  "Sin una fuente verificada para este dato.": "No verified source for this detail.",
+
 "Catálogo de perfiles oficiales de UFC. Cada ficha muestra su fecha y fuente. Los filtros de estilo, guardia y cinturones se aplican a los datos documentados. Puedes seguir a los luchadores y compararlos en Fight Lab.":"Catalog of official UFC profiles. Each profile shows its date and source. Style, stance and title filters use documented data. You can follow fighters and compare them in Fight Lab.",
 
 "Cartelera principal":"Main card",
