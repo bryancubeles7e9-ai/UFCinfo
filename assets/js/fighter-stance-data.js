@@ -3227,5 +3227,41 @@ export const fighterStances = {
     "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
     "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
     "stanceConsulted": "2026-10-13"
+  },
+  "ufc-georges-st-pierre": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-14"
+  },
+  "ufc-khabib-nurmagomedov": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-14"
+  },
+  "ufc-daniel-cormier": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-14"
+  },
+  "ufc-joanna-jedrzejczyk": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-14"
+  },
+  "ufc-frankie-edgar": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-14"
+  },
+  "ufc-mauricio-rua": {
+    "stance": "Orthodox",
+    "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
+    "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
+    "stanceConsulted": "2026-10-14"
   }
 };

@@ -664,5 +664,33 @@ export const fighterMartialBases = {
     "martialBaseSource": "https://www.ufc.com/athlete/themba-gorimbo",
     "martialBaseConsulted": "2026-10-14",
     "martialBaseSourceLabel": "Biografía UFC"
+  },
+  "ufc-khabib-nurmagomedov": {
+    "martialBase": "Sambo de combate",
+    "martialBaseNote": "Su biografía UFC documenta títulos rusos de sambo de combate y títulos mundiales de sambo.",
+    "martialBaseSource": "https://www.ufc.com/athlete/khabib-nurmagomedov",
+    "martialBaseConsulted": "2026-10-14",
+    "martialBaseSourceLabel": "Biografía UFC"
+  },
+  "ufc-joanna-jedrzejczyk": {
+    "martialBase": "Muay Thai",
+    "martialBaseNote": "Su biografía UFC documenta títulos mundiales amateurs y profesionales de Muay Thai.",
+    "martialBaseSource": "https://www.ufc.com/athlete/joanna-jedrzejczyk",
+    "martialBaseConsulted": "2026-10-14",
+    "martialBaseSourceLabel": "Biografía UFC"
+  },
+  "ufc-frankie-edgar": {
+    "martialBase": "Jiu-jitsu brasileño",
+    "martialBaseNote": "Su biografía UFC declara cinturón negro en BJJ; no identifica una base inicial exclusiva.",
+    "martialBaseSource": "https://www.ufc.com/athlete/frankie-edgar",
+    "martialBaseConsulted": "2026-10-14",
+    "martialBaseSourceLabel": "Biografía UFC"
+  },
+  "ufc-daniel-cormier": {
+    "martialBase": "Lucha libre",
+    "martialBaseNote": "UFC documenta su trayectoria en la selección olímpica estadounidense de lucha libre.",
+    "martialBaseSource": "https://www.ufc.com/news/a-spot-ufc-hall-fame-was-always-daniel-cormier-destiny-2022",
+    "martialBaseConsulted": "2026-10-14",
+    "martialBaseSourceLabel": "UFC Hall of Fame"
   }
 };

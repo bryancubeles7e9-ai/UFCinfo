@@ -1,5 +1,14 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "Filtrar por estatus y cinturones": "Filter by status and titles",
+  "Leyendas retiradas": "Retired legends",
+  "Leyenda": "Legend",
+  "Retirado": "Retired",
+  "Retirada": "Retired",
+  "Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado.": "Historic career. UFCinfo’s selection of legends with documented retirement.",
+  "Trayectoria en UFC": "UFC career",
+  "Trayectoria histórica · Retiro documentado": "Historic career · Documented retirement",
+
   "País no documentado": "Country not documented",
   "Sin una fuente verificada para este dato.": "No verified source for this detail.",
 

@@ -1,5 +1,14 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "Filtrar por estatus y cinturones": "Filtra per estat i cinturons",
+  "Leyendas retiradas": "Llegendes retirades",
+  "Leyenda": "Llegenda",
+  "Retirado": "Retirat",
+  "Retirada": "Retirada",
+  "Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado.": "Trajectòria històrica. Selecció de llegendes d’UFCinfo amb retirada documentada.",
+  "Trayectoria en UFC": "Trajectòria a UFC",
+  "Trayectoria histórica · Retiro documentado": "Trajectòria històrica · Retirada documentada",
+
   "País no documentado": "País no documentat",
   "Sin una fuente verificada para este dato.": "Sense una font verificada per a aquesta dada.",
 

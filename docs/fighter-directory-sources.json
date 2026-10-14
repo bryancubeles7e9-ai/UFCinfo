@@ -7066,5 +7066,173 @@
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-324",
     "countryConsulted": "2026-10-13"
+  },
+  {
+    "id": "ufc-georges-st-pierre",
+    "name": "Georges St-Pierre",
+    "aliases": [
+      "Georges St-Pierre"
+    ],
+    "source": "https://www.ufc.com/athlete/georges-st-pierre",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/hof/georges-st-pierre-hall-of-fame",
+    "legendConsulted": "2026-10-14",
+    "retirementSource": "https://www.ufc.com/athlete/georges-st-pierre",
+    "championships": [
+      {
+        "name": "Peso wélter",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/hof/georges-st-pierre-hall-of-fame"
+      },
+      {
+        "name": "Peso medio",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/hof/georges-st-pierre-hall-of-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-10-14",
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-217",
+    "countryConsulted": "2026-10-14"
+  },
+  {
+    "id": "ufc-khabib-nurmagomedov",
+    "name": "Khabib Nurmagomedov",
+    "aliases": [
+      "Khabib Nurmagomedov"
+    ],
+    "source": "https://www.ufc.com/athlete/khabib-nurmagomedov",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/news/khabib-eagle-nurmagomedov-named-ufc-hall-fame-class-2022",
+    "legendConsulted": "2026-10-14",
+    "retirementSource": "https://www.ufc.com/athlete/khabib-nurmagomedov",
+    "championships": [
+      {
+        "name": "Peso ligero",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/news/khabib-eagle-nurmagomedov-named-ufc-hall-fame-class-2022"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-10-14",
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-254",
+    "countryConsulted": "2026-10-14"
+  },
+  {
+    "id": "ufc-daniel-cormier",
+    "name": "Daniel Cormier",
+    "aliases": [
+      "Daniel Cormier"
+    ],
+    "source": "https://www.ufc.com/athlete/daniel-cormier",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/hof/daniel-cormier-hall-of-fame",
+    "legendConsulted": "2026-10-14",
+    "retirementSource": "https://www.ufc.com/athlete/daniel-cormier",
+    "championships": [
+      {
+        "name": "Peso semipesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/hof/daniel-cormier-hall-of-fame"
+      },
+      {
+        "name": "Peso pesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/hof/daniel-cormier-hall-of-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-10-14",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-241",
+    "countryConsulted": "2026-10-14"
+  },
+  {
+    "id": "ufc-joanna-jedrzejczyk",
+    "name": "Joanna Jędrzejczyk",
+    "aliases": [
+      "Joanna Jędrzejczyk"
+    ],
+    "source": "https://www.ufc.com/athlete/joanna-jedrzejczyk",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/news/joanna-jedrzejczyk-named-ufc-hall-fame-class-2024",
+    "legendConsulted": "2026-10-14",
+    "retirementSource": "https://www.ufc.com/athlete/joanna-jedrzejczyk",
+    "championships": [
+      {
+        "name": "Peso paja femenino",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/news/joanna-jedrzejczyk-named-ufc-hall-fame-class-2024"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-10-14",
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-275",
+    "countryConsulted": "2026-10-14"
+  },
+  {
+    "id": "ufc-frankie-edgar",
+    "name": "Frankie Edgar",
+    "aliases": [
+      "Frankie Edgar"
+    ],
+    "source": "https://www.ufc.com/athlete/frankie-edgar",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/news/frankie-answer-edgar-named-ufc-hall-fame-class-2024",
+    "legendConsulted": "2026-10-14",
+    "retirementSource": "https://www.ufc.com/athlete/frankie-edgar",
+    "championships": [
+      {
+        "name": "Peso ligero",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/news/frankie-answer-edgar-named-ufc-hall-fame-class-2024"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-10-14",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-281",
+    "countryConsulted": "2026-10-14"
+  },
+  {
+    "id": "ufc-mauricio-rua",
+    "name": "Mauricio Rua",
+    "aliases": [
+      "Maurício Rua"
+    ],
+    "source": "https://www.ufc.com/athlete/mauricio-rua",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/news/mauricio-shogun-rua-named-ufc-hall-fame-class-2024",
+    "legendConsulted": "2026-10-14",
+    "retirementSource": "https://www.ufc.com/news/mauricio-shogun-rua-named-ufc-hall-fame-class-2024",
+    "championships": [
+      {
+        "name": "Peso semipesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/news/mauricio-shogun-rua-named-ufc-hall-fame-class-2024"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-10-14",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-283",
+    "countryConsulted": "2026-10-14"
   }
 ]

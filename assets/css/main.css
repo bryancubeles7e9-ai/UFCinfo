@@ -2970,3 +2970,35 @@ button.ranking-name:hover {
 
 .catalog-more { display: flex; justify-content: center; margin: 24px 0 40px; }
 .catalog-more button { min-height: 44px; min-width: 180px; }
+
+/* Retired legends: violet laurels; gold remains reserved for current champions. */
+.legend-badge {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  padding: 7px 10px;
+  margin: 12px 8px 0 0;
+  border: 1px solid #bba0ed70;
+  background: #a78bfa12;
+  color: #d8c4ff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.legend-badge svg { width: 23px; height: 23px; flex: 0 0 auto; }
+.legend-status { border-left: 1px solid currentColor; padding-left: 8px; font-size: 9px; font-weight: 400; }
+.fighter-card.fighter-legend, .followed-fighter.fighter-legend {
+  border-top: 3px solid #ae8cde;
+  background: linear-gradient(135deg, #a78bfa0c, transparent 55%), var(--surface);
+}
+.legacy-details { margin: 18px 0; padding: 16px; border-left: 3px solid #ae8cde; background: #a78bfa0c; }
+.legacy-details .legend-badge { margin-top: 0; }
+.legacy-details > p { margin: 12px 0; }
+.light .legend-badge { color: #69449b; background: #7854ad0c; border-color: #7854ad70; }
+@media (max-width: 700px) {
+  .legend-badge { letter-spacing: .5px; padding: 6px 8px; }
+  .legacy-details { padding: 12px; }
+}

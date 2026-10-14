@@ -12,7 +12,7 @@ UFCinfo nace de la perspectiva de un aficionado: consultar una cartelera, conoce
 | --- | --- |
 | **Inicio** | El próximo evento disponible y accesos a las principales secciones. |
 | **Carteleras** | Eventos numerados, Fight Night y especiales, con próximos combates, resultados disponibles, cuenta atrás y descarga de calendario `.ics`. |
-| **Luchadores** | Un catálogo que incluye a los participantes de los eventos finalizados de 2026 disponibles en la web, con fotografías, récords, datos físicos, guardia, formación marcial y estadísticas documentadas. Puedes buscar y filtrar, consultar las fuentes y abrir la ficha de cada atleta. |
+| **Luchadores** | Un catálogo que incluye a los participantes de los eventos finalizados de 2026 disponibles en la web, con fotografías, récords, datos físicos, guardia, formación marcial y estadísticas documentadas. Puedes buscar y filtrar, consultar las fuentes y abrir la ficha de cada atleta. Incluye una selección de leyendas retiradas con insignia violeta y filtro propio. |
 | **Rankings** | El top 15 de las 11 divisiones y las dos listas libra por libra, con el campeón separado cuando corresponde y acceso a los perfiles. |
 | **Fight Lab** | Comparación de dos luchadores: perfil, trayectoria y estadísticas de golpeo, derribos y finalizaciones. |
 | **Rumores** | Publicaciones de fuentes seleccionadas sobre posibles combates, agrupadas por pelea y con atribución a su origen. |

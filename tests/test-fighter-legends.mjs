@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { directoryFighters, directoryFighterByName } from '../assets/js/fighter-directory.js';
+import { isLegend, legendBadge, renderLegacyDetails } from '../assets/js/fighter-legacy.js';
+import { matchesChampionship, synchronizeChampionships } from '../assets/js/fighter-championships.js';
+import { martialDetails } from '../assets/js/fighter-martial.js';
+const expected = ['Georges St-Pierre', 'Khabib Nurmagomedov', 'Daniel Cormier', 'Joanna Jędrzejczyk', 'Frankie Edgar', 'Mauricio Rua'];
+const legends = expected.map(directoryFighterByName);
+assert.equal(new Set(directoryFighters.map(f => f.id)).size, directoryFighters.length);
+for (const fighter of legends) {
+  assert.ok(fighter);
+  assert.ok(isLegend(fighter));
+  assert.ok(matchesChampionship(fighter, 'legend'));
+  assert.ok(matchesChampionship(fighter, 'former'));
+  assert.ok(!matchesChampionship(fighter, 'current'));
+  assert.ok(fighter.code && fighter.image && fighter.stance && fighter.retirementSource);
+  assert.notEqual(martialDetails(fighter).kind, 'unknown');
+  assert.match(legendBadge(fighter), /Leyenda/);
+  assert.match(renderLegacyDetails(fighter), /Trayectoria histórica/);
+}
+assert.match(legendBadge(legends[3]), /Retirada/);
+assert.equal(legendBadge({}), '');
+assert.ok(!isLegend({legend: true, careerStatus: 'active'}));
+assert.ok(!isLegend({careerStatus: 'retired'}), 'Retirement alone does not grant editorial legend status');
+assert.ok(!renderLegacyDetails({...legends[0], legendSource:'javascript:alert(1)'}).includes('href='));
+const feed = JSON.parse(await readFile(new URL('../assets/data/ufc-rankings.json', import.meta.url)));
+synchronizeChampionships(feed.categories, feed);
+for (const f of legends) assert.ok(isLegend(f) && f.championships.every(b => b.status === 'former'));
+synchronizeChampionships([{id:'lightweight',champion:'Khabib Nurmagomedov'}], feed);
+assert.ok(!matchesChampionship(legends[1], 'current'), 'Stale rankings must not promote a documented retired fighter');
+console.log('PASS: six retired legends, complete profiles, separate status, historic titles and ranking refresh');

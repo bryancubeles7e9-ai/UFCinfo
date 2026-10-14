@@ -4234,5 +4234,41 @@
     "country": "Afghanistan",
     "countrySource": "https://www.ufc.com/news/javid-basharat-just-wants-fight-ufc-vegas-113",
     "countryConsulted": "2026-10-14"
+  },
+  "georges-st-pierre": {
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-217",
+    "countryConsulted": "2026-10-14"
+  },
+  "khabib-nurmagomedov": {
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-254",
+    "countryConsulted": "2026-10-14"
+  },
+  "daniel-cormier": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-241",
+    "countryConsulted": "2026-10-14"
+  },
+  "joanna-jedrzejczyk": {
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-275",
+    "countryConsulted": "2026-10-14"
+  },
+  "frankie-edgar": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-281",
+    "countryConsulted": "2026-10-14"
+  },
+  "mauricio-rua": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-283",
+    "countryConsulted": "2026-10-14"
   }
 }

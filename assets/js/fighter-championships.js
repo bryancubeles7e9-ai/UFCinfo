@@ -1,3 +1,4 @@
+import { isLegend } from "./fighter-legacy.js";
 import { directoryFighters, directoryFighterByName } from "./fighter-directory.js";
 
 const divisions = {
@@ -15,7 +16,7 @@ export function synchronizeChampionships(categories, snapshot) {
   for (const category of categories) {
     const division = divisions[category.id];
     const champion = category.champion && directoryFighterByName(category.champion);
-    if (!division || !champion) continue;
+    if (!division || !champion || champion.careerStatus === "retired") continue;
     for (const fighter of directoryFighters) {
       const belts = fighter.championships ||= [];
       for (const belt of belts) {
@@ -34,6 +35,7 @@ export function synchronizeChampionships(categories, snapshot) {
 }
 
 export function matchesChampionship(fighter, filter) {
+  if (filter === "legend") return isLegend(fighter);
   const belts = fighter.championships || [];
   return filter === "all" || (filter === "current" || filter === "former"
     ? belts.some(b => b.status === filter) : belts.length > 0);
