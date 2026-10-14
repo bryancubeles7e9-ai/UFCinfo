@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-14T08:22:44.320101+00:00",
+  "synchronizedAt": "2026-10-14T19:46:56.904272+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -808,7 +808,7 @@
           "division": "Middleweight",
           "winner": "Brendan Allen",
           "outcome": null,
-          "method": "SUB",
+          "method": "Submission",
           "round": "5",
           "time": "2:46"
         },
@@ -819,7 +819,7 @@
           "division": "Lightweight",
           "winner": "Jai Herbert",
           "outcome": null,
-          "method": "U-DEC",
+          "method": "Decision - Unanimous",
           "round": "3",
           "time": "5:00"
         },
@@ -830,7 +830,7 @@
           "division": "Women's Strawweight",
           "winner": "Loopy Godinez",
           "outcome": null,
-          "method": "U-DEC",
+          "method": "Decision - Unanimous",
           "round": "3",
           "time": "5:00"
         },
@@ -896,7 +896,7 @@
           "division": "Light Heavyweight",
           "winner": "Brendson Ribeiro",
           "outcome": null,
-          "method": "SUB",
+          "method": "Submission",
           "round": "1",
           "time": "1:49"
         },
@@ -929,7 +929,7 @@
           "division": "Women's Flyweight",
           "winner": null,
           "outcome": null,
-          "method": "M-DEC",
+          "method": "Decision - Majority",
           "round": "3",
           "time": "5:00"
         }
