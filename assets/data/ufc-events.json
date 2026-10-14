@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-13T17:40:51.455714+00:00",
+  "synchronizedAt": "2026-10-14T08:02:19.669259+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -519,7 +519,7 @@
       "location": "Etihad Arena",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-333",
-      "checkedAt": "2026-10-13",
+      "checkedAt": "2026-10-14",
       "bouts": [
         {
           "section": "main",
@@ -637,7 +637,7 @@
       "location": "Rogers Place",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "checkedAt": "2026-10-13",
+      "checkedAt": "2026-10-14",
       "bouts": [
         {
           "section": "main",
@@ -664,7 +664,7 @@
         {
           "section": "main",
           "red": "Kyle Nelson",
-          "blue": "Cristian Perez Gonzalez",
+          "blue": "Cristian Perez",
           "division": "Lightweight",
           "winner": null,
           "outcome": null,
@@ -799,7 +799,7 @@
       "location": "Meta APEX",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
-      "checkedAt": "2026-10-13",
+      "checkedAt": "2026-10-14",
       "bouts": [
         {
           "section": "main",
