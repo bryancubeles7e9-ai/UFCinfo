@@ -692,5 +692,12 @@ export const fighterMartialBases = {
     "martialBaseSource": "https://www.ufc.com/news/a-spot-ufc-hall-fame-was-always-daniel-cormier-destiny-2022",
     "martialBaseConsulted": "2026-10-14",
     "martialBaseSourceLabel": "UFC Hall of Fame"
+  },
+  "ufc-dustin-poirier": {
+    "martialBase": "Jiu-jitsu brasileño",
+    "martialBaseNote": "Su biografía UFC documenta cinturón negro en BJJ; no implica que sea su única disciplina.",
+    "martialBaseSource": "https://www.ufc.com/athlete/dustin-poirier",
+    "martialBaseConsulted": "2026-10-14",
+    "martialBaseSourceLabel": "Biografía UFC"
   }
 };

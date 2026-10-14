@@ -3263,5 +3263,11 @@ export const fighterStances = {
     "stanceSource": "https://github.com/rfordatascience/tidytuesday/blob/107ff6c70de02dd807169e13aee7dc9d86ff88b6/data/2026/2026-07-07/ufcstats_data.csv",
     "stanceSourceLabel": "UFC Stats · TidyTuesday (2026-07-07)",
     "stanceConsulted": "2026-10-14"
+  },
+  "ufc-dustin-poirier": {
+    "stance": "Southpaw",
+    "stanceSource": "https://ufcstats.com/fighter-details/029eaff01e6bb8f0",
+    "stanceSourceLabel": "UFC Stats",
+    "stanceConsulted": "2026-10-14"
   }
 };

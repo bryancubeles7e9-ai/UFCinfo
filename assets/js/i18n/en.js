@@ -1,5 +1,7 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "Campeón interino del peso ligero de UFC en 2019.": "UFC interim lightweight champion in 2019.",
+
   "Filtrar por estatus y cinturones": "Filter by status and titles",
   "Leyendas retiradas": "Retired legends",
   "Leyenda": "Legend",

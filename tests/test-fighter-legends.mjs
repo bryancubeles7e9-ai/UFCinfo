@@ -29,3 +29,13 @@ for (const f of legends) assert.ok(isLegend(f) && f.championships.every(b => b.s
 synchronizeChampionships([{id:'lightweight',champion:'Khabib Nurmagomedov'}], feed);
 assert.ok(!matchesChampionship(legends[1], 'current'), 'Stale rankings must not promote a documented retired fighter');
 console.log('PASS: six retired legends, complete profiles, separate status, historic titles and ranking refresh');
+
+const dustin = directoryFighterByName('Dustin Poirier');
+assert.ok(dustin && isLegend(dustin));
+assert.ok(matchesChampionship(dustin, 'legend'));
+assert.ok(!matchesChampionship(dustin, 'current'));
+assert.equal(dustin.stance, 'Southpaw');
+assert.match(renderLegacyDetails(dustin), /Campeón interino/);
+assert.ok(!dustin.championships.some(b => b.type === 'undisputed' || b.name === 'BMF'));
+assert.ok(!renderLegacyDetails({...dustin,legacyNote:'<script>bad</script>'}).includes('<script>'));
+console.log('PASS: Dustin Poirier is a retired legend; interim title described accurately');

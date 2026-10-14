@@ -4270,5 +4270,11 @@
     "country": "Brazil",
     "countrySource": "https://www.ufc.com/event/ufc-283",
     "countryConsulted": "2026-10-14"
+  },
+  "dustin-poirier": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-318",
+    "countryConsulted": "2026-10-14"
   }
 }

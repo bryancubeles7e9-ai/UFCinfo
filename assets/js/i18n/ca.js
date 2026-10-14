@@ -1,5 +1,7 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "Campeón interino del peso ligero de UFC en 2019.": "Campió interí del pes lleuger de UFC el 2019.",
+
   "Filtrar por estatus y cinturones": "Filtra per estat i cinturons",
   "Leyendas retiradas": "Llegendes retirades",
   "Leyenda": "Llegenda",

@@ -7234,5 +7234,24 @@
     "country": "Brazil",
     "countrySource": "https://www.ufc.com/event/ufc-283",
     "countryConsulted": "2026-10-14"
+  },
+  {
+    "id": "ufc-dustin-poirier",
+    "name": "Dustin Poirier",
+    "aliases": [
+      "Dustin Poirier"
+    ],
+    "source": "https://www.ufc.com/athlete/dustin-poirier",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/news/dustin-poirier-diamond-last-dance-bmf-ufc-318",
+    "legendConsulted": "2026-10-14",
+    "retirementSource": "https://www.ufc.com/news/new-dustin-poirier-merch-one-last-dance",
+    "legacyNote": "Campeón interino del peso ligero de UFC en 2019.",
+    "championships": [],
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-318",
+    "countryConsulted": "2026-10-14"
   }
 ]

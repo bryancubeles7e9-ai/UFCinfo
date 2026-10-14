@@ -12,5 +12,5 @@ export function renderLegacyDetails(fighter) {
   if (!isLegend(fighter)) return '';
   const source = /^https:\/\/www\.ufc\.com\/(news|hof|athlete)\//.test(fighter.legendSource || '')
     ? `<a class="text-link" href="${esc(fighter.legendSource)}" target="_blank" rel="noopener noreferrer">Trayectoria en UFC ›</a>` : '';
-  return `<section class="legacy-details">${legendBadge(fighter)}<p>Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado.</p>${source}<p class="data-note">Consulta: ${esc(fighter.legendConsulted || '—')}</p></section>`;
+  return `<section class="legacy-details">${legendBadge(fighter)}<p>Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado.</p>${fighter.legacyNote ? `<p>${esc(fighter.legacyNote)}</p>` : ""}${source}<p class="data-note">Consulta: ${esc(fighter.legendConsulted || '—')}</p></section>`;
 }
