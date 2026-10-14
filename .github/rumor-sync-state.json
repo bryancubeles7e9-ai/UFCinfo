@@ -6,17 +6,15 @@
   "pending": null,
   "archive": [],
   "lastCollection": {
-    "checkedAt": "2026-10-14T12:01:03.949Z",
-    "windowStart": "2026-10-13T12:01:03.000Z",
-    "windowEnd": "2026-10-14T12:01:03.000Z",
+    "checkedAt": "2026-10-14T13:01:02.332Z",
+    "windowStart": "2026-10-13T13:01:02.000Z",
+    "windowEnd": "2026-10-14T13:01:02.000Z",
     "requests": 2,
-    "receivedPosts": 19,
+    "receivedPosts": 18,
     "acceptedPosts": 18,
     "added": 0,
     "skipped": 16,
-    "collectionSkips": {
-      "boxing": 1
-    },
+    "collectionSkips": {},
     "skipReasons": {
       "fighters-not-detected": 16
     }
