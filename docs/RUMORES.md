@@ -59,6 +59,7 @@ El catálogo incluye las fuentes seleccionadas por el usuario: Carlos Contreras 
 - MMA Latinoamérica: https://x.com/ClubDeLasMMA (cuenta con ese nombre; distinta de `MMALatinAmerica`).
 - UPFRONT MMA: https://x.com/upfrontmma y https://upfrontmma.com.
 - Pelunaton: https://x.com/pelunaton (perfil confirmado por el usuario).
+- @alphasigmawolf6: https://x.com/alphasigmawolf6 (añadida a petición del usuario; publicaciones en inglés, sujeta a los mismos filtros).
 - Championship Rounds: https://x.com/ChampRDS (añadida a petición del usuario como «championRDS»; el perfil identifica la cuenta como `ChampRDS`).
 
 La lista identifica fuentes propuestas; no afirma que la web ya esté leyendo sus cuentas. No se incluye ningún rumor de ejemplo en producción: hacen falta posts reales revisados. No hay publicaciones ni confirmaciones inventadas.
