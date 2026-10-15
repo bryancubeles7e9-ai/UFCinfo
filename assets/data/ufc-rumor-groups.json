@@ -1,8 +1,40 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-15T14:01:04.054Z",
-  "lastSearchedAt": "2026-10-15T14:01:04.054Z",
+  "updatedAt": "2026-10-15T15:01:06.223Z",
+  "lastSearchedAt": "2026-10-15T15:01:06.223Z",
   "groups": [
+    {
+      "id": "2110744258483478953",
+      "fighterNames": [
+        "Abdul Hussein",
+        "Hecher Sosa"
+      ],
+      "matchupKey": "abdulhussein|hechersosa|2026-12-05",
+      "eventDateHint": "2026-12-05",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Pelunaton comenta un posible cruce entre Abdul Hussein y Hecher Sosa; la publicación menciona el 5 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Pelunaton discusses a possible matchup between Abdul Hussein and Hecher Sosa; the post mentions December 5. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-15T15:01:06.223Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-15T14:47:01.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2110744258483478953",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2110744258483478953",
+          "publishedAt": "2026-10-15T14:47:01.000Z",
+          "language": "es",
+          "attributedAccounts": [],
+          "attribution": "faltan algunas semanas pero vista como esta la situación por Arabia Saudita parece complicado que ese evento siga adelante"
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2109911118147919963",
       "fighterNames": [
@@ -430,8 +462,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-15T14:01:04.054Z",
-    "receivedPosts": 5,
-    "added": 0
+    "checkedAt": "2026-10-15T15:01:06.223Z",
+    "receivedPosts": 8,
+    "added": 1
   }
 }
