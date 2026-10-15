@@ -1,8 +1,50 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-15T20:00:57.609Z",
-  "lastSearchedAt": "2026-10-15T20:00:57.609Z",
+  "updatedAt": "2026-10-15T21:00:59.178Z",
+  "lastSearchedAt": "2026-10-15T21:00:59.178Z",
   "groups": [
+    {
+      "id": "2110821997143904413",
+      "fighterNames": [
+        "Israel Adesanya",
+        "Shara Bullet"
+      ],
+      "matchupKey": "israeladesanya|sharabullet|2026-12-05",
+      "eventDateHint": "2026-12-05",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "MMA Latinoamérica comenta un posible cruce entre Israel Adesanya y Shara Bullet; la publicación menciona el 5 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "MMA Latinoamérica discusses a possible matchup between Israel Adesanya and Shara Bullet; the post mentions December 5. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-15T21:00:59.178Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-15T19:55:55.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2110821997143904413",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2110821997143904413",
+          "publishedAt": "2026-10-15T19:55:55.000Z",
+          "language": "es",
+          "attributedAccounts": [],
+          "attribution": "Ariel Helwani"
+        },
+        {
+          "id": "2110829178329174257",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2110829178329174257",
+          "publishedAt": "2026-10-15T20:24:28.000Z",
+          "language": "en",
+          "attributedAccounts": [
+            "arielhelwani"
+          ]
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2110744258483478953",
       "fighterNames": [
@@ -462,8 +504,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-15T20:00:57.609Z",
-    "receivedPosts": 5,
-    "added": 0
+    "checkedAt": "2026-10-15T21:00:59.178Z",
+    "receivedPosts": 7,
+    "added": 1
   }
 }
