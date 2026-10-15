@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-15T22:00:58.638Z",
-  "lastSearchedAt": "2026-10-15T22:00:58.638Z",
+  "updatedAt": "2026-10-15T23:00:57.904Z",
+  "lastSearchedAt": "2026-10-15T23:00:57.904Z",
   "groups": [
     {
       "id": "2110821997143904413",
@@ -40,6 +40,39 @@
           "language": "en",
           "attributedAccounts": [
             "arielhelwani"
+          ]
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2110769478132965849",
+      "fighterNames": [
+        "Magomed Ankalaev",
+        "Paulo Costa"
+      ],
+      "matchupKey": "magomedankalaev|paulocosta|undated:2026-10",
+      "eventDateHint": null,
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "alphasigmawolf6 comenta un posible cruce entre Magomed Ankalaev y Paulo Costa, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "alphasigmawolf6 discusses a possible matchup between Magomed Ankalaev and Paulo Costa, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-15T23:00:57.904Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-15T16:27:14.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2110769478132965849",
+          "sourceId": "alphasigmawolf6",
+          "postUrl": "https://x.com/alphasigmawolf6/status/2110769478132965849",
+          "publishedAt": "2026-10-15T16:27:14.000Z",
+          "language": "en",
+          "attributedAccounts": [
+            "TheMMAApe"
           ]
         }
       ],
@@ -504,8 +537,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-15T22:00:58.638Z",
-    "receivedPosts": 7,
-    "added": 0
+    "checkedAt": "2026-10-15T23:00:57.904Z",
+    "receivedPosts": 9,
+    "added": 1
   }
 }
