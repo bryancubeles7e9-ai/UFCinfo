@@ -1,8 +1,41 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-15T23:00:57.904Z",
-  "lastSearchedAt": "2026-10-15T23:00:57.904Z",
+  "updatedAt": "2026-10-16T00:00:58.985Z",
+  "lastSearchedAt": "2026-10-16T00:00:58.985Z",
   "groups": [
+    {
+      "id": "2110879395388826055",
+      "fighterNames": [
+        "Chase Hooper",
+        "Chris Padilla"
+      ],
+      "matchupKey": "chasehooper|chrispadilla|2026-12-12",
+      "eventDateHint": "2026-12-12",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "MMA Latinoamérica comenta un posible cruce entre Chase Hooper y Chris Padilla; la publicación menciona el 12 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "MMA Latinoamérica discusses a possible matchup between Chase Hooper and Chris Padilla; the post mentions December 12. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-16T00:00:58.985Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-15T23:44:00.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2110879395388826055",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2110879395388826055",
+          "publishedAt": "2026-10-15T23:44:00.000Z",
+          "language": "es",
+          "attributedAccounts": [
+            "chriswartaco"
+          ]
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2110821997143904413",
       "fighterNames": [
@@ -537,7 +570,7 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-15T23:00:57.904Z",
+    "checkedAt": "2026-10-16T00:00:58.985Z",
     "receivedPosts": 9,
     "added": 1
   }
