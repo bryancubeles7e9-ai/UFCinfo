@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-16T06:01:05.637666+00:00",
+  "synchronizedAt": "2026-10-16T12:01:14.217154+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -830,7 +830,7 @@
           "division": "Middleweight",
           "winner": "Brendan Allen",
           "outcome": null,
-          "method": "SUB",
+          "method": "Submission",
           "round": "5",
           "time": "2:46"
         },
@@ -841,7 +841,7 @@
           "division": "Lightweight",
           "winner": "Jai Herbert",
           "outcome": null,
-          "method": "U-DEC",
+          "method": "Decision - Unanimous",
           "round": "3",
           "time": "5:00"
         },
@@ -852,7 +852,7 @@
           "division": "Women's Strawweight",
           "winner": "Loopy Godinez",
           "outcome": null,
-          "method": "U-DEC",
+          "method": "Decision - Unanimous",
           "round": "3",
           "time": "5:00"
         },
@@ -918,7 +918,7 @@
           "division": "Light Heavyweight",
           "winner": "Brendson Ribeiro",
           "outcome": null,
-          "method": "SUB",
+          "method": "Submission",
           "round": "1",
           "time": "1:49"
         },
@@ -946,12 +946,12 @@
         },
         {
           "section": "prelims",
-          "red": "Ernesta Kareckaite",
+          "red": "Ernesta Kareckaitė",
           "blue": "Melissa Gatto",
           "division": "Women's Flyweight",
           "winner": null,
           "outcome": null,
-          "method": "M-DEC",
+          "method": "Decision - Majority",
           "round": "3",
           "time": "5:00"
         }
