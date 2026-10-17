@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-16T12:01:14.217154+00:00",
+  "synchronizedAt": "2026-10-17T06:01:04.194041+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -519,7 +519,7 @@
       "location": "Etihad Arena",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-333",
-      "checkedAt": "2026-10-16",
+      "checkedAt": "2026-10-17",
       "bouts": [
         {
           "section": "main",
@@ -659,7 +659,7 @@
       "location": "Rogers Place",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "checkedAt": "2026-10-16",
+      "checkedAt": "2026-10-17",
       "bouts": [
         {
           "section": "main",
@@ -821,7 +821,7 @@
       "location": "Meta APEX",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
-      "checkedAt": "2026-10-16",
+      "checkedAt": "2026-10-17",
       "bouts": [
         {
           "section": "main",
