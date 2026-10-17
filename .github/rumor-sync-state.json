@@ -6,9 +6,9 @@
   "pending": null,
   "archive": [],
   "lastCollection": {
-    "checkedAt": "2026-10-17T11:00:54.659Z",
-    "windowStart": "2026-10-16T11:00:54.000Z",
-    "windowEnd": "2026-10-17T11:00:54.000Z",
+    "checkedAt": "2026-10-17T12:01:05.437Z",
+    "windowStart": "2026-10-16T12:01:05.000Z",
+    "windowEnd": "2026-10-17T12:01:05.000Z",
     "requests": 2,
     "receivedPosts": 10,
     "acceptedPosts": 10,
@@ -17,7 +17,7 @@
     "collectionSkips": {},
     "skipReasons": {
       "fighters-not-detected": 10,
-      "other-promotion": 2
+      "other-promotion": 1
     }
   }
 }
