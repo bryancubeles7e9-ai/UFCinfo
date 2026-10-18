@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-17T12:01:13.001098+00:00",
+  "synchronizedAt": "2026-10-18T12:01:14.592748+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -384,18 +384,19 @@
       "number": null,
       "eventKind": "fight-night",
       "title": "UFC Fight Night",
-      "subtitle": "Moicano vs Nolan",
+      "subtitle": "Renato Moicano vs Tom Nolan",
+      "status": "scheduled",
       "date": "2026-11-01T00:00:00+00:00",
-      "location": "Meta APEX, Las Vegas United States",
-      "status": "announced",
+      "location": "Meta APEX",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
-      "checkedAt": "2026-10-07",
+      "checkedAt": "2026-10-18",
       "bouts": [
         {
+          "section": "main",
           "red": "Renato Moicano",
           "blue": "Tom Nolan",
-          "division": "Lightweight Bout",
+          "division": "Lightweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -403,9 +404,10 @@
           "time": ""
         },
         {
+          "section": "main",
           "red": "Randy Brown",
           "blue": "Carlos Leal",
-          "division": "Welterweight Bout",
+          "division": "Welterweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -413,19 +415,10 @@
           "time": ""
         },
         {
-          "red": "Lucia Szabova",
-          "blue": "Tainara Lisboa",
-          "division": "Women's Flyweight Bout",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
+          "section": "main",
           "red": "Yana Santos",
           "blue": "Luana Santos",
-          "division": "Women's Bantamweight Bout",
+          "division": "Women's Bantamweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -433,39 +426,10 @@
           "time": ""
         },
         {
-          "red": "Talita Alencar",
-          "blue": "Piera Rodriguez",
-          "division": "Women's Strawweight Bout",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "red": "Nick Klein",
-          "blue": "Joseph Kropschot",
-          "division": "Middleweight Bout",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "red": "Rodrigo Sezinando",
-          "blue": "Theodor Berggren",
-          "division": "Welterweight Bout",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
+          "section": "main",
           "red": "Jean-Paul Lebosnoyani",
           "blue": "Farman Hasanov",
-          "division": "Welterweight Bout",
+          "division": "Welterweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -473,29 +437,76 @@
           "time": ""
         },
         {
-          "red": "Azamat Bekoev",
-          "blue": "Andre Petroski",
-          "division": "Middleweight Bout",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "red": "Julian Erosa",
-          "blue": "JeongYeong Lee",
-          "division": "Featherweight Bout",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
+          "section": "prelims",
           "red": "Francis Marshall",
           "blue": "Gaston Bolanos",
-          "division": "Featherweight Bout",
+          "division": "Featherweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "prelims",
+          "red": "Azamat Bekoev",
+          "blue": "Andre Petroski",
+          "division": "Middleweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "prelims",
+          "red": "Rodrigo Sezinando",
+          "blue": "Theodor Berggren",
+          "division": "Welterweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "prelims",
+          "red": "Julian Erosa",
+          "blue": "JeongYeong Lee",
+          "division": "Featherweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "prelims",
+          "red": "Nick Klein",
+          "blue": "Joseph Kropschot",
+          "division": "Middleweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "prelims",
+          "red": "Talita Alencar",
+          "blue": "Piera Rodriguez",
+          "division": "Women's Strawweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "prelims",
+          "red": "Lucia Szabova",
+          "blue": "Tainara Lisboa",
+          "division": "Women's Flyweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -503,10 +514,10 @@
           "time": ""
         }
       ],
+      "dataSource": "Cito",
       "poster": "assets/images/events/ufc-fight-night-october-31-2026.jpg",
-      "posterAlt": "UFC lightweights Renato Moicano and Tom Nolan side by side over a red background",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/103126-ufc-fight-night-moicano-vs-nolan-TEMP-HERO.jpg?h=d1cb525d&itok=HAflfCIz",
-      "dataSource": "UFCalendar"
+      "posterAlt": "UFC lightweights Renato Moicano and Tom Nolan side by side over a red background"
     },
     {
       "id": "ufc-333",
@@ -519,7 +530,7 @@
       "location": "Etihad Arena",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-333",
-      "checkedAt": "2026-10-17",
+      "checkedAt": "2026-10-18",
       "bouts": [
         {
           "section": "main",
@@ -654,155 +665,144 @@
       "eventKind": "fight-night",
       "title": "UFC Fight Night",
       "subtitle": "Joaquin Buckley vs Mike Malott",
-      "status": "scheduled",
+      "status": "completed",
       "date": "2026-10-18T00:00:00+00:00",
       "location": "Rogers Place",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "checkedAt": "2026-10-17",
+      "checkedAt": "2026-10-18",
       "bouts": [
         {
           "section": "main",
           "red": "Joaquin Buckley",
           "blue": "Mike Malott",
           "division": "Welterweight",
-          "winner": null,
+          "winner": "Mike Malott",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "2:32"
         },
         {
           "section": "main",
           "red": "Erin Blanchfield",
           "blue": "Jasmine Jasudavicius",
           "division": "Women's Flyweight",
-          "winner": null,
+          "winner": "Jasmine Jasudavicius",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
           "section": "main",
           "red": "Kyle Nelson",
           "blue": "Cristian Perez",
           "division": "Lightweight",
-          "winner": null,
+          "winner": "Cristian Perez",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "0:27"
         },
         {
           "section": "main",
           "red": "Marc-Andre Barriault",
           "blue": "Kyle Daukaus",
           "division": "Middleweight",
-          "winner": null,
+          "winner": "Marc-Andre Barriault",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "4:28"
         },
         {
           "section": "main",
           "red": "Louis Jourdain",
           "blue": "Timmy Cuamba",
           "division": "Bantamweight",
-          "winner": null,
+          "winner": "Timmy Cuamba",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "section": "main",
-          "red": "Mandel Nallo",
-          "blue": "Nate Landwehr",
-          "division": "Lightweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Submission",
+          "round": "2",
+          "time": "2:48"
         },
         {
           "section": "prelims",
           "red": "Tanner Boser",
           "blue": "Jhonata Diniz",
           "division": "Heavyweight",
-          "winner": null,
+          "winner": "Tanner Boser",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "3",
+          "time": "4:26"
         },
         {
           "section": "prelims",
           "red": "Julien Leblanc",
           "blue": "Nick Galanti",
           "division": "Middleweight",
-          "winner": null,
+          "winner": "Nick Galanti",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Submission",
+          "round": "1",
+          "time": "1:26"
         },
         {
           "section": "prelims",
           "red": "Javad Mahjoub",
           "blue": "Joel Faglier",
           "division": "Heavyweight",
-          "winner": null,
+          "winner": "Joel Faglier",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "2:11"
         },
         {
           "section": "prelims",
           "red": "Katlyn Cerminara",
           "blue": "Mackenzie Stiller",
           "division": "Women's Flyweight",
-          "winner": null,
+          "winner": "Katlyn Cerminara",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "4:46"
         },
         {
           "section": "prelims",
           "red": "Chad Anheliger",
           "blue": "Steven Koslow",
           "division": "Bantamweight",
-          "winner": null,
+          "winner": "Steven Koslow",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Submission",
+          "round": "3",
+          "time": "4:31"
         },
         {
           "section": "prelims",
           "red": "Melissa Croden",
           "blue": "Chelsea Chandler",
           "division": "Women's Bantamweight",
-          "winner": null,
+          "winner": "Chelsea Chandler",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Submission",
+          "round": "1",
+          "time": "4:52"
         },
         {
           "section": "prelims",
           "red": "Cody Chovancek",
           "blue": "SuYoung You",
           "division": "Bantamweight",
-          "winner": null,
+          "winner": "SuYoung You",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Submission",
+          "round": "3",
+          "time": "4:19"
         }
       ],
       "dataSource": "Cito",
