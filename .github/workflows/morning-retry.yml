@@ -1,0 +1,57 @@
+name: Reintentar datos pendientes a las 10
+on:
+  # The existing external hourly dispatch supplies the primary clock signal.
+  # Its result does not matter: this job does not depend on rumor API success.
+  workflow_run:
+    workflows: [Publicar rumores automaticamente]
+    types: [completed]
+    branches: [main]
+  schedule:
+    # Summer/winter candidates; Python enforces Europe/Madrid and one run/day.
+    - cron: '7 8,9 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: octagon-ufc-sync
+  cancel-in-progress: false
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Comprobar hora de Madrid
+        id: clock
+        run: |
+          python3 - <<'PY'
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('due='+str(datetime.now(ZoneInfo('Europe/Madrid')).hour==10).lower()+'\n')
+          PY
+      - uses: actions/checkout@v6
+        if: steps.clock.outputs.due == 'true'
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        if: steps.clock.outputs.due == 'true'
+        with:
+          node-version: '22'
+      - name: Reintentar únicamente datos pendientes
+        if: steps.clock.outputs.due == 'true'
+        run: python3 scripts/retry-morning-data.py
+      - name: Guardar resultados y control de duplicados
+        if: steps.clock.outputs.due == 'true'
+        run: |
+          if [ ! -f assets/data/morning-retry.json ]; then exit 0; fi
+          git add assets/data/morning-retry.json assets/data/ufc-events.json assets/data/fighter-records.json assets/js/fighter-directory-data.js docs/fighter-directory-sources.json
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Reintentar datos pendientes de la velada a las 10'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

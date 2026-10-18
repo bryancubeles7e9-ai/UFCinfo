@@ -1,6 +1,10 @@
 # Actualización de eventos y perfiles
 
-Las ejecuciones siguen siendo a las 08:00 y 14:00 de Europe/Madrid.
+Las actualizaciones completas siguen siendo a las 08:00 y 14:00 de Europe/Madrid.
+
+A las 10:00 se añade un reintento condicional de las veladas de las últimas 48 horas: resultados incompletos o cuya verificación falló, participantes ausentes y perfiles pendientes/no consultados desde el evento. No consulta Cito, rankings ni fotografías. Si todo está al día, no consulta fuentes. Conserva el límite de 40 perfiles y un registro diario para evitar duplicados.
+
+Se activa al terminar la ejecución horaria existente de rumores, independientemente de su resultado, con respaldo de GitHub a las 08:07/09:07 UTC. La comprobación `Europe/Madrid` selecciona la hora correcta en verano/invierno. Se ejecuta dentro de la franja de las 10:00, sujeto a la cola de GitHub; no garantiza el minuto exacto. No modifica la lógica ni las fuentes de rumores.
 
 1. Consulta rankings oficiales y las tres carteleras seleccionadas de Cito (hasta cinco solicitudes Cito contando las dos listas).
 2. Verifica hasta tres eventos de los últimos 14 días directamente en UFC.com. Este paso también se ejecuta si Cito falla. Valida fecha, identidad, participantes y resultados antes de sustituir datos; conserva combates anteriores omitidos y señala los resultados pendientes.
