@@ -4824,25 +4824,25 @@
       "record": "18-4-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/jack-della-maddalena",
-      "updatedAt": "2026-10-18T13:43:20.854524+00:00"
+      "updatedAt": "2026-10-18T19:39:10.599596+00:00"
     },
     "ufc-javad-mahjoub": {
       "record": "5-1-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/javad-mahjoub",
-      "updatedAt": "2026-10-18T13:43:20.854524+00:00"
+      "updatedAt": "2026-10-18T19:39:10.599596+00:00"
     },
     "ufc-joel-faglier": {
       "record": "7-0-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/joel-faglier",
-      "updatedAt": "2026-10-18T13:43:20.854524+00:00"
+      "updatedAt": "2026-10-18T19:39:10.599596+00:00"
     },
     "ufc-mackenzie-stiller": {
       "record": "6-2-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/mackenzie-stiller",
-      "updatedAt": "2026-10-18T13:43:20.854524+00:00"
+      "updatedAt": "2026-10-18T19:39:10.599596+00:00"
     },
     "ufc-ernesta-kareckaite": {
       "record": "6-2-2",
@@ -4889,12 +4889,22 @@
     }
   },
   "lastSync": {
-    "checkedAt": "2026-10-18T15:17:26.469183+00:00",
+    "checkedAt": "2026-10-18T19:39:10.599596+00:00",
     "mode": "events",
-    "attempted": 40,
-    "succeeded": 40,
-    "failedIds": [],
-    "recordOnlyIds": []
+    "attempted": 4,
+    "succeeded": 0,
+    "failedIds": [
+      "ufc-jack-della-maddalena",
+      "ufc-javad-mahjoub",
+      "ufc-joel-faglier",
+      "ufc-mackenzie-stiller"
+    ],
+    "recordOnlyIds": [
+      "ufc-jack-della-maddalena",
+      "ufc-javad-mahjoub",
+      "ufc-joel-faglier",
+      "ufc-mackenzie-stiller"
+    ]
   },
   "fullRefreshAttemptedAt": "2026-10-11T19:06:44.957692+00:00",
   "pendingProfileIds": [

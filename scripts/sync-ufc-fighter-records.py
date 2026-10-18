@@ -182,7 +182,11 @@ def sync(events, state, fighters, fetch=fetch_profile, now=None, full=False):
     # Oldest consultation first prevents starvation when recent cards exceed the cap.
     if not full:
         targets.sort(key=lambda f: state["records"].get(f["id"], {}).get("updatedAt", ""))
-        targets = targets[:MAX_PROFILES]
+        # Reserve up to ten slots for retries; an updated record must not push
+        # its still-missing statistics behind every fully refreshed profile.
+        retries = [f for f in targets if f["id"] in pending][:10]
+        retry_ids = {f["id"] for f in retries}
+        targets = retries + [f for f in targets if f["id"] not in retry_ids][:MAX_PROFILES-len(retries)]
     successes, failures, record_only = set(), [], []
     def consult(fighter):
         try:

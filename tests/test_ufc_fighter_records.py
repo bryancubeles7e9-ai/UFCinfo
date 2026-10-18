@@ -80,6 +80,21 @@ class OfficialRecordsTest(unittest.TestCase):
         self.assertEqual(state['pendingProfileIds'], ['a'])
         self.assertEqual(state['lastSync']['recordOnlyIds'], ['a'])
 
+    def test_pending_statistics_get_reserved_slots_within_budget(self):
+        fighters = [{"id": str(i), "name": str(i), "source": "https://www.ufc.com/athlete/"+str(i)} for i in range(44)]
+        pending = [str(i) for i in range(40,44)]
+        state = {"records": {f["id"]: {"updatedAt": "2026-10-18" if f["id"] in pending else "2026-10-01"} for f in fighters}, "processedEventIds": [], "completedFighters": {}, "pendingProfileIds": pending}
+        event = {"id": "recent", "date": "2026-10-18T00:00:00Z", "status": "completed", "bouts": [{"red": str(i), "blue": str(i+1), "winner": str(i)} for i in range(0,44,2)]}
+        calls = []
+        def fetch(f):
+            calls.append(f['id'])
+            return {"record": "1-0-0", "info": {"strikesLanded": 3}}
+        with tempfile.TemporaryDirectory() as tmp, patch.object(module, "STATE", Path(tmp)/"feed.json"):
+            module.sync([event], state, fighters, fetch=fetch, now=datetime(2026,10,18,19,tzinfo=timezone.utc))
+        self.assertEqual(len(calls), 40)
+        self.assertTrue(set(pending).issubset(calls))
+        self.assertEqual(state['pendingProfileIds'], [])
+
     def test_old_processed_and_unfinished_bouts_not_queried(self):
         state = {"source": "UFC", "records": {}, "processedEventIds": ['old'], "completedFighters": {}}
         fighter = {"id": "a", "name": "A", "source": "https://www.ufc.com/athlete/a", "record": "1-0-0"}
