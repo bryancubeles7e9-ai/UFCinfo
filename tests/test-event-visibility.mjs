@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {isAwaitingResults, visibleOfficialEvents} from '../assets/js/event-visibility.js';
+const now=Date.parse('2026-10-18T06:00:00Z');
+const event={type:'official',status:'scheduled',date:'2026-10-18T00:00:00Z'};
+assert.deepEqual(visibleOfficialEvents([event],now),[event]);
+assert.equal(isAwaitingResults(event,now),true);
+assert.equal(isAwaitingResults({...event,status:'completed'},now),false);
+assert.equal(isAwaitingResults({...event,date:'2026-10-25T00:00:00Z'},now),false);
+assert.equal(visibleOfficialEvents([{...event,status:'completed'}],now).length,1);
+assert.equal(visibleOfficialEvents([{...event,date:'2025-01-01T00:00:00Z'}],now).length,0);
+console.log('PASS: delayed results remain visible, without labeling an unverified card completed');

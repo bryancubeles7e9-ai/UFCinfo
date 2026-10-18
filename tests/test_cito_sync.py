@@ -66,6 +66,16 @@ class CitoSyncTests(unittest.TestCase):
         with self.assertRaises(sync.SyncError):
             sync.normalize_bouts([bout('Early Prelims')], True)
 
+    def test_truncated_provider_cannot_remove_saved_result(self):
+        saved = {'red': 'Nallo', 'blue': 'Landwehr', 'winner': 'Nallo', 'section': 'main'}
+        old = {'source': 'Cito', 'events': [{'id': 'ufc-332', 'date': '2026-10-04T00:00:00Z', 'status': 'completed', 'bouts': [saved]}]}
+        def fetch(path):
+            if path == '/upcoming': return []
+            if path == '/recent': return [event('ufc-332', '2026-10-04T00:00:00Z', 'UFC 332')]
+            return [bout(winner='red')]
+        feed = sync.synchronize(fetch, old, NOW)
+        self.assertIn(saved, feed['events'][0]['bouts'])
+
     def test_http_error_does_not_leak_key(self):
         error = HTTPError('https://api.citoapi.com/', 429, 'quota', {}, None)
         with patch.object(sync, 'urlopen', side_effect=error):

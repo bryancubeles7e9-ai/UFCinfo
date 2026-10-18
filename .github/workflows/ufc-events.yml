@@ -9,6 +9,8 @@ on:
       - 'assets/**'
       - 'scripts/sync-ufc-events.py'
       - 'scripts/sync-cito-events.py'
+      - 'scripts/reconcile-official-results.py'
+      - 'scripts/import-season-fighters.py'
       - 'scripts/sync-ufc-rankings.py'
       - 'scripts/sync-ufc-fighter-records.py'
       - 'scripts/sync-fighter-photos.py'
@@ -45,7 +47,10 @@ jobs:
         with:
           node-version: '22'
       - name: Test carga dinámica
-        run: node tests/test-events-feed.mjs
+        run: |
+          node tests/test-events-feed.mjs
+          node tests/test-event-visibility.mjs
+          node tests/test-data-health.mjs
       - name: Test rankings dinámicos
         run: node tests/test-rankings-feed.mjs
       - name: Test récords y estadísticas dinámicos
@@ -75,12 +80,14 @@ jobs:
             echo '::notice::Configura CITO_API_KEY en los secretos del repositorio para activar Cito. Se conserva la copia actual.'
           fi
       - name: Consultar Cito
+        continue-on-error: true
         if: steps.key.outputs.configured == 'true'
         env:
           CITO_API_KEY: ${{ secrets.CITO_API_KEY }}
         run: python3 scripts/sync-cito-events.py
+      - name: Verificar resultados recientes con UFC
+        run: python3 scripts/reconcile-official-results.py
       - name: Guardar datos actualizados
-        if: steps.key.outputs.configured == 'true'
         run: |
           git add assets/data/ufc-events.json
           if [ -d assets/images/events ]; then git add assets/images/events; fi
@@ -91,9 +98,23 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+      - name: Incorporar participantes nuevos verificados
+        continue-on-error: true
+        run: python3 scripts/import-season-fighters.py --recent
+      - name: Guardar participantes verificados
+        run: |
+          git add assets/js/fighter-directory-data.js docs/fighter-directory-sources.json
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Incorporar participantes recientes de UFC'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
       - name: Test selección de fotografías
         run: node tests/test-fighter-photos.mjs
       - name: Actualizar fotografías de campeones y excampeones
+        continue-on-error: true
         run: python3 scripts/sync-fighter-photos.py
       - name: Guardar fotografías consultadas
         run: |

@@ -1,5 +1,8 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "RESULTADOS PENDIENTES": 'RESULTATS PENDENTS',
+  "Resultados pendientes de actualización": 'Resultats pendents d’actualització',
+
   "Campeón interino del peso ligero de UFC en 2019.": "Campió interí del pes lleuger de UFC el 2019.",
 
   "Filtrar por estatus y cinturones": "Filtra per estat i cinturons",

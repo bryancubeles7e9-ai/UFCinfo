@@ -1,5 +1,8 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "RESULTADOS PENDIENTES": 'RESULTS PENDING',
+  "Resultados pendientes de actualización": 'Results awaiting update',
+
   "Campeón interino del peso ligero de UFC en 2019.": "UFC interim lightweight champion in 2019.",
 
   "Filtrar por estatus y cinturones": "Filter by status and titles",

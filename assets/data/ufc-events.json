@@ -673,10 +673,10 @@
       "checkedAt": "2026-10-18",
       "bouts": [
         {
-          "section": "main",
           "red": "Joaquin Buckley",
           "blue": "Mike Malott",
-          "division": "Welterweight",
+          "section": "main",
+          "division": "Welterweight Bout",
           "winner": "Mike Malott",
           "outcome": null,
           "method": "KO/TKO",
@@ -684,10 +684,10 @@
           "time": "2:32"
         },
         {
-          "section": "main",
           "red": "Erin Blanchfield",
           "blue": "Jasmine Jasudavicius",
-          "division": "Women's Flyweight",
+          "section": "main",
+          "division": "Women's Flyweight Bout",
           "winner": "Jasmine Jasudavicius",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -695,10 +695,10 @@
           "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Kyle Nelson",
           "blue": "Cristian Perez",
-          "division": "Lightweight",
+          "section": "main",
+          "division": "Lightweight Bout",
           "winner": "Cristian Perez",
           "outcome": null,
           "method": "KO/TKO",
@@ -706,10 +706,10 @@
           "time": "0:27"
         },
         {
-          "section": "main",
           "red": "Marc-Andre Barriault",
           "blue": "Kyle Daukaus",
-          "division": "Middleweight",
+          "section": "main",
+          "division": "Middleweight Bout",
           "winner": "Marc-Andre Barriault",
           "outcome": null,
           "method": "KO/TKO",
@@ -717,15 +717,92 @@
           "time": "4:28"
         },
         {
-          "section": "main",
           "red": "Louis Jourdain",
           "blue": "Timmy Cuamba",
-          "division": "Bantamweight",
+          "section": "main",
+          "division": "Bantamweight Bout",
           "winner": "Timmy Cuamba",
           "outcome": null,
           "method": "Submission",
           "round": "2",
           "time": "2:48"
+        },
+        {
+          "red": "Mandel Nallo",
+          "blue": "Nate Landwehr",
+          "section": "main",
+          "division": "Lightweight Bout",
+          "winner": "Mandel Nallo",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "0:47"
+        },
+        {
+          "red": "Julien Leblanc",
+          "blue": "Nick Galanti",
+          "section": "prelims",
+          "division": "Middleweight Bout",
+          "winner": "Nick Galanti",
+          "outcome": null,
+          "method": "Submission",
+          "round": "1",
+          "time": "1:26"
+        },
+        {
+          "red": "Javad Mahjoub",
+          "blue": "Joel Faglier",
+          "section": "prelims",
+          "division": "Heavyweight Bout",
+          "winner": "Joel Faglier",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "2:11"
+        },
+        {
+          "red": "Katlyn Cerminara",
+          "blue": "Mackenzie Stiller",
+          "section": "prelims",
+          "division": "Women's Flyweight Bout",
+          "winner": "Katlyn Cerminara",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "4:46"
+        },
+        {
+          "red": "Chad Anheliger",
+          "blue": "Steven Koslow",
+          "section": "prelims",
+          "division": "Bantamweight Bout",
+          "winner": "Steven Koslow",
+          "outcome": null,
+          "method": "Submission",
+          "round": "3",
+          "time": "4:31"
+        },
+        {
+          "red": "Melissa Croden",
+          "blue": "Chelsea Chandler",
+          "section": "prelims",
+          "division": "Women's Bantamweight Bout",
+          "winner": "Chelsea Chandler",
+          "outcome": null,
+          "method": "Submission",
+          "round": "1",
+          "time": "4:52"
+        },
+        {
+          "red": "Cody Chovancek",
+          "blue": "SuYoung You",
+          "section": "prelims",
+          "division": "Bantamweight Bout",
+          "winner": "SuYoung You",
+          "outcome": null,
+          "method": "Submission",
+          "round": "3",
+          "time": "4:19"
         },
         {
           "section": "prelims",
@@ -737,78 +814,14 @@
           "method": "KO/TKO",
           "round": "3",
           "time": "4:26"
-        },
-        {
-          "section": "prelims",
-          "red": "Julien Leblanc",
-          "blue": "Nick Galanti",
-          "division": "Middleweight",
-          "winner": "Nick Galanti",
-          "outcome": null,
-          "method": "Submission",
-          "round": "1",
-          "time": "1:26"
-        },
-        {
-          "section": "prelims",
-          "red": "Javad Mahjoub",
-          "blue": "Joel Faglier",
-          "division": "Heavyweight",
-          "winner": "Joel Faglier",
-          "outcome": null,
-          "method": "KO/TKO",
-          "round": "2",
-          "time": "2:11"
-        },
-        {
-          "section": "prelims",
-          "red": "Katlyn Cerminara",
-          "blue": "Mackenzie Stiller",
-          "division": "Women's Flyweight",
-          "winner": "Katlyn Cerminara",
-          "outcome": null,
-          "method": "KO/TKO",
-          "round": "1",
-          "time": "4:46"
-        },
-        {
-          "section": "prelims",
-          "red": "Chad Anheliger",
-          "blue": "Steven Koslow",
-          "division": "Bantamweight",
-          "winner": "Steven Koslow",
-          "outcome": null,
-          "method": "Submission",
-          "round": "3",
-          "time": "4:31"
-        },
-        {
-          "section": "prelims",
-          "red": "Melissa Croden",
-          "blue": "Chelsea Chandler",
-          "division": "Women's Bantamweight",
-          "winner": "Chelsea Chandler",
-          "outcome": null,
-          "method": "Submission",
-          "round": "1",
-          "time": "4:52"
-        },
-        {
-          "section": "prelims",
-          "red": "Cody Chovancek",
-          "blue": "SuYoung You",
-          "division": "Bantamweight",
-          "winner": "SuYoung You",
-          "outcome": null,
-          "method": "Submission",
-          "round": "3",
-          "time": "4:19"
         }
       ],
       "dataSource": "Cito",
       "poster": "assets/images/events/ufc-fight-night-october-17-2026.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-10/101726-ufc-fight-night-buckey-vs-malott-EVENT-ART.jpg?h=d1cb525d&itok=9nlcHO-H",
-      "posterAlt": "Joaquin Buckley and Mike Malott side by side over a blue and red background"
+      "posterAlt": "Joaquin Buckley and Mike Malott side by side over a blue and red background",
+      "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+      "resultsCheckedAt": "2026-10-18T13:40:43.206429+00:00"
     },
     {
       "id": "ufc-fight-night-october-10-2026",

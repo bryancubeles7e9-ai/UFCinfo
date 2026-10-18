@@ -7253,5 +7253,135 @@
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-318",
     "countryConsulted": "2026-10-14"
+  },
+  {
+    "id": "ufc-cristian-perez-gonzalez",
+    "name": "Cristian Perez",
+    "aliases": [
+      "Cristian Perez"
+    ],
+    "source": "https://www.ufc.com/athlete/cristian-perez-gonzalez",
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-18"
+  },
+  {
+    "id": "ufc-louis-jourdain",
+    "name": "Louis Jourdain",
+    "aliases": [
+      "Louis Jourdain"
+    ],
+    "source": "https://www.ufc.com/athlete/louis-jourdain",
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-18"
+  },
+  {
+    "id": "ufc-nick-galanti",
+    "name": "Nick Galanti",
+    "aliases": [
+      "Nick Galanti"
+    ],
+    "source": "https://www.ufc.com/athlete/nick-galanti",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-18"
+  },
+  {
+    "id": "ufc-javad-mahjoub",
+    "name": "Javad Mahjoub",
+    "aliases": [
+      "Javad Mahjoub"
+    ],
+    "source": "https://www.ufc.com/athlete/javad-mahjoub",
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-18"
+  },
+  {
+    "id": "ufc-joel-faglier",
+    "name": "Joel Faglier",
+    "aliases": [
+      "Joel Faglier"
+    ],
+    "source": "https://www.ufc.com/athlete/joel-faglier",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-18"
+  },
+  {
+    "id": "ufc-katlyn-chookagian",
+    "name": "Katlyn Cerminara",
+    "aliases": [
+      "Katlyn Cerminara"
+    ],
+    "source": "https://www.ufc.com/athlete/katlyn-chookagian",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-18"
+  },
+  {
+    "id": "ufc-mackenzie-stiller",
+    "name": "Mackenzie Stiller",
+    "aliases": [
+      "Mackenzie Stiller"
+    ],
+    "source": "https://www.ufc.com/athlete/mackenzie-stiller",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-18"
+  },
+  {
+    "id": "ufc-meyson-dzhons-0",
+    "name": "Chad Anheliger",
+    "aliases": [
+      "Chad Anheliger"
+    ],
+    "source": "https://www.ufc.com/athlete/meyson-dzhons-0",
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-18"
+  },
+  {
+    "id": "ufc-steven-koslow",
+    "name": "Steven Koslow",
+    "aliases": [
+      "Steven Koslow"
+    ],
+    "source": "https://www.ufc.com/athlete/steven-koslow",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-18"
+  },
+  {
+    "id": "ufc-cody-chovancek",
+    "name": "Cody Chovancek",
+    "aliases": [
+      "Cody Chovancek"
+    ],
+    "source": "https://www.ufc.com/athlete/cody-chovancek",
+    "code": "CA",
+    "country": "Canada",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
+    "countryConsulted": "2026-10-18"
+  },
+  {
+    "id": "ufc-jhonata-diniz",
+    "name": "Jhonata Diniz",
+    "aliases": [],
+    "source": "https://www.ufc.com/athlete/jhonata-diniz",
+    "code": "BR",
+    "country": "Brasil",
+    "countrySource": "https://www.ufc.com/news/jhonata-diniz-adrenaline-junkie-ufc-rio",
+    "countryConsulted": "2026-10-18"
   }
 ]

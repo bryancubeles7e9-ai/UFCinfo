@@ -149,6 +149,11 @@ def synchronize(fetch, previous, now):
         slug = row.get('slug') or row.get('eventSlug')
         bouts = normalize_bouts(fetch('/' + quote(slug, safe='') + '/bouts'), is_recent)
         prior = old.get(eid, {})
+        pairs = {frozenset((b['red'].casefold(), b['blue'].casefold())) for b in bouts}
+        for saved in prior.get('bouts', []):
+            if (saved.get('winner') or saved.get('outcome')) and frozenset((saved['red'].casefold(), saved['blue'].casefold())) not in pairs:
+                bouts.append(saved)
+        bouts.sort(key=lambda b: {'main': 0, 'prelims': 1, 'early-prelims': 2}.get(b.get('section', 'main'), 0))
         name = row.get('name') or row.get('title') or ''
         if not isinstance(name, str): raise SyncError('Invalid event name')
         venue = row.get('venue') or row.get('location') or ''

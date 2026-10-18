@@ -102,7 +102,14 @@ def fetch_profile(fighter):
         html = response.read(2_000_001)
     if len(html) > 2_000_000:
         raise ValueError("Official profile response too large")
-    return parse_profile(html.decode("utf-8"), fighter)
+    page = html.decode("utf-8")
+    try:
+        return parse_profile(page, fighter)
+    except ValueError as error:
+        if str(error) != "Official combat statistics incomplete":
+            raise
+        # UFC can publish the record before all statistics, especially on debuts.
+        return {"record": parse_record(page, fighter), "info": None}
 
 
 def directory():
@@ -127,8 +134,9 @@ def store_profile(state, fighter, profile, now):
     state["records"][fighter["id"]] = {
         "record": profile["record"], "source": "UFC", "sourceUrl": fighter["source"],
         "updatedAt": now.isoformat(),
-        "info": {**previous.get("info", {}), **profile["info"],
-                 "statisticsSource": fighter["source"], "statisticsConsulted": now.date().isoformat()},
+        **({"info": {**previous.get("info", {}), **profile["info"],
+                 "statisticsSource": fighter["source"], "statisticsConsulted": now.date().isoformat()}}
+           if profile["info"] is not None else ({"info": previous["info"]} if "info" in previous else {})),
     }
     save(state)
 
@@ -144,6 +152,7 @@ def sync(events, state, fighters, fetch=fetch_profile, now=None, full=False):
             by_name[key] = fighter
     targets = {}
     eligible = {}
+    unmatched = {}
     for event in sorted(events, key=lambda e: e["date"], reverse=True):
         start = datetime.fromisoformat(event["date"].replace("Z", "+00:00"))
         if event.get("status") != "completed" or start > now:
@@ -153,10 +162,12 @@ def sync(events, state, fighters, fetch=fetch_profile, now=None, full=False):
             continue
         required = set()
         for bout in event.get("bouts", []):
-            if not bout.get("winner") and bout.get("outcome") not in ("draw", "no-contest"):
+            if not bout.get("winner") and bout.get("outcome") not in ("draw", "no-contest", "Empate", "Sin resultado (No contest)"):
                 continue
             for side in ("red", "blue"):
                 fighter = by_name.get(normalize(bout[side]))
+                if not fighter:
+                    unmatched.setdefault(event['id'], set()).add(bout[side])
                 if fighter:
                     required.add(fighter["id"])
                     if recent or fighter["id"] not in state["completedFighters"].get(event["id"], []):
@@ -172,7 +183,7 @@ def sync(events, state, fighters, fetch=fetch_profile, now=None, full=False):
     if not full:
         targets.sort(key=lambda f: state["records"].get(f["id"], {}).get("updatedAt", ""))
         targets = targets[:MAX_PROFILES]
-    successes, failures = set(), []
+    successes, failures, record_only = set(), [], []
     def consult(fighter):
         try:
             return fighter, fetch(fighter), None
@@ -187,17 +198,27 @@ def sync(events, state, fighters, fetch=fetch_profile, now=None, full=False):
             # A successful consultation is not proof UFC has incorporated the last
             # fight. Recent events stay eligible for repeated checks for 14 days.
             store_profile(state, fighter, profile, now)
-            successes.add(fighter["id"])
+            if profile["info"] is None:
+                failures.append(fighter["id"])
+                record_only.append(fighter["id"])
+                print(f"::warning::Record updated; statistics still pending for {fighter['id']}", file=sys.stderr)
+            else:
+                successes.add(fighter["id"])
     for event_id, required in eligible.items():
         done = set(state["completedFighters"].get(event_id, [])) | (required & successes)
-        if required.issubset(done):
+        if required.issubset(done) and event_id not in unmatched:
             if event_id not in state["processedEventIds"]:
                 state["processedEventIds"].append(event_id)
             state["completedFighters"].pop(event_id, None)
         else:
+            if event_id in state["processedEventIds"]:
+                state["processedEventIds"].remove(event_id)
             state["completedFighters"][event_id] = sorted(done)
+    state["unmatchedEventFighters"] = {eid: sorted(names) for eid, names in unmatched.items()}
+    for eid, names in state["unmatchedEventFighters"].items():
+        print(f"::warning::Unmatched participants in {eid}: {names}", file=sys.stderr)
     state["lastSync"] = {"checkedAt": now.isoformat(), "mode": "all" if full else "events",
-                         "attempted": len(targets), "succeeded": len(successes), "failedIds": failures}
+                         "attempted": len(targets), "succeeded": len(successes), "failedIds": failures, "recordOnlyIds": record_only}
     state["pendingProfileIds"] = sorted((pending - successes) | set(failures))
     if full:
         state["fullRefreshAttemptedAt"] = now.isoformat()

@@ -8,3 +8,6 @@ assert.equal(assessFeed('records',{lastSync:{checkedAt:'2026-10-13T16:55:00Z'},p
 assert.equal(assessFeed('rankings',{synchronizedAt:'2026-10-14T12:00:00Z'},now).status,'unknown');
 assert.equal(assessFeed('rumors',{},now).status,'unknown');
 console.log('PASS: freshness, partial failures, missing and future timestamps');
+
+assert.equal(assessFeed('records',{lastSync:{checkedAt:'2026-10-13T16:55:00Z'},unmatchedEventFighters:{event:['Missing']}},now).status,'partial');
+assert.equal(assessFeed('events',{synchronizedAt:'2026-10-13T16:55:00Z',resultsVerification:{failedIds:['event']}},now).status,'partial');

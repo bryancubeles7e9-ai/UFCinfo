@@ -5,8 +5,9 @@ const labels={es:['Estado de los datos','Carteleras y resultados','Rankings','R�
 export function assessFeed(kind,feed,now=Date.now()) {
   const stamp=kind==='rumors'?feed?.lastSearchedAt:kind==='records'?feed?.lastSync?.checkedAt:feed?.synchronizedAt;
   const time=Date.parse(stamp);
-  const failures=kind==='records'?feed?.pendingProfileIds:feed?.failedIds;
-  const pending=Array.isArray(failures)?failures.length:0;
+  const failures=kind==='records'?feed?.pendingProfileIds:kind==='events'?feed?.resultsVerification?.failedIds:feed?.failedIds;
+  const unmatched=kind==='records'?new Set(Object.values(feed?.unmatchedEventFighters||{}).flat()).size:0;
+  const pending=(Array.isArray(failures)?failures.length:0)+unmatched;
   const status=!Number.isFinite(time)||time>now+300000?'unknown':now-time>(kind==='rumors'?90:1200)*60000?'delayed':pending?'partial':'recent';
   return {stamp,status,pending};
 }
@@ -24,7 +25,7 @@ export function initializeDataHealth() {
       const date=Number.isFinite(Date.parse(state.stamp))?new Date(state.stamp).toLocaleString(getLocale()):'—';
       const counts=entry?.feed?.lastCollection;
       const summary=kind==='rumors'&&counts&&counts.checkedAt===entry.feed.lastSearchedAt&&Number.isSafeInteger(counts.receivedPosts)&&Number.isSafeInteger(counts.added)?`<small>${text[14]}: ${counts.receivedPosts} · ${text[15]}: ${counts.added}</small>`:'';
-      return `<div class="data-health-item"><strong>${text[i+1]}</strong><span class="data-health-state" data-status="${status}">${text[label]}</span><small>${text[11]}: ${esc(date)}</small>${state.pending?`<small>${text[16]}: ${state.pending}</small>`:''}${summary}${status!=='recent'?`<small>${text[12]}</small>`:''}</div>`;
+      return `<div class="data-health-item"><strong>${text[i+1]}</strong><span class="data-health-state" data-status="${status}">${text[label]}</span><small>${text[11]}: ${esc(date)}</small>${state.pending?`<small>${kind==='events'?(getLocale().startsWith('en')?'Pending events':getLocale().startsWith('ca')?'Esdeveniments pendents':'Eventos pendientes'):text[16]}: ${state.pending}</small>`:''}${summary}${status!=='recent'?`<small>${text[12]}</small>`:''}</div>`;
     }).join('')+`<p class="data-note">${text[13]}</p>`;
   }
   async function refresh(){

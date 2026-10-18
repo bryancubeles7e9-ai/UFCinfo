@@ -4,12 +4,13 @@ Run from the repository root. Existing profiles are preserved; unverifiable prof
 are reported. Photos use the official URL, with the interface's existing fallback.
 """
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import importlib.util
 import json
 from pathlib import Path
 import re
 import subprocess
+import sys
 from urllib.request import Request, urlopen
 from urllib.parse import urlsplit
 
@@ -57,12 +58,20 @@ def main():
     date = datetime.now(timezone.utc).date().isoformat()
     feed = json.loads((ROOT / 'assets/data/ufc-events.json').read_text())
     events = sorted([e for e in feed['events'] if e.get('status') == 'completed' and datetime.fromisoformat(e['date'].replace('Z', '+00:00')).year == feed['year']], key=lambda e:e['date'], reverse=True)
+    if '--recent' in sys.argv:
+        cutoff = datetime.now(timezone.utc) - timedelta(days=14)
+        events = [e for e in events if datetime.fromisoformat(e['date'].replace('Z', '+00:00')) >= cutoff]
     existing_names = json.loads(subprocess.check_output(['node', '--input-type=module', '-e', "import {directoryFighters} from './assets/js/fighter-directory.js'; console.log(JSON.stringify(directoryFighters.flatMap(f=>[`${f.first} ${f.last}`,...(f.aliases||[])])));"], cwd=ROOT, text=True))
     known = {records.normalize(n) for n in existing_names}
     missing = {records.normalize(n):n for e in events for b in e['bouts'] for n in (b['red'],b['blue']) if records.normalize(n) not in known}
+    events = [e for e in events if any(records.normalize(b[k]) in missing for b in e['bouts'] for k in ('red', 'blue'))]
+    if not missing:
+        print('No missing participants')
+        return
     found = {}
     def card(e):
-        try:return e, fetch(e['source'])
+        try:
+            return e, fetch(e['source'])
         except Exception as ex:return e, ex
     with ThreadPoolExecutor(max_workers=8) as pool:
         for e, page in pool.map(card, events):

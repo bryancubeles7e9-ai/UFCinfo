@@ -45,7 +45,8 @@ class OfficialRecordsTest(unittest.TestCase):
                 module.sync([event], state, [fighter], fetch=fetch, now=now)
                 self.assertEqual(calls, ["a"])
                 self.assertEqual(state["records"]["a"]["info"]["strikesLanded"], value)
-            self.assertEqual(state["processedEventIds"], ["new"])
+            self.assertEqual(state["processedEventIds"], [])
+            self.assertEqual(state["unmatchedEventFighters"], {"new": ["Unknown"]})
 
     def test_full_refresh_preserves_failed_fighter_and_optional_stats(self):
         state = {"source": "UFC", "records": {"a": {"record": "1-0-0", "info": {"koWins": 1}}, "b": {"record": "5-2-0"}}, "processedEventIds": [], "completedFighters": {}}
@@ -68,6 +69,16 @@ class OfficialRecordsTest(unittest.TestCase):
         self.assertEqual(calls, ['b'])
         self.assertEqual(state['pendingProfileIds'], [])
         self.assertIn('fullRefreshCompletedAt', state)
+
+    def test_record_only_update_retains_stats_timestamp_and_retries(self):
+        state = {"records": {"a": {"record": "1-0-0", "info": {"strikesLanded": 3, "statisticsConsulted": "2026-10-01"}}}, "processedEventIds": [], "completedFighters": {}, "pendingProfileIds": ["a"]}
+        fighter = {"id": "a", "name": "A", "source": "https://www.ufc.com/athlete/a"}
+        with tempfile.TemporaryDirectory() as tmp, patch.object(module, "STATE", Path(tmp)/"feed.json"):
+            module.sync([], state, [fighter], fetch=lambda f: {"record": "2-0-0", "info": None})
+        self.assertEqual(state['records']['a']['record'], '2-0-0')
+        self.assertEqual(state['records']['a']['info']['statisticsConsulted'], '2026-10-01')
+        self.assertEqual(state['pendingProfileIds'], ['a'])
+        self.assertEqual(state['lastSync']['recordOnlyIds'], ['a'])
 
     def test_old_processed_and_unfinished_bouts_not_queried(self):
         state = {"source": "UFC", "records": {}, "processedEventIds": ['old'], "completedFighters": {}}
