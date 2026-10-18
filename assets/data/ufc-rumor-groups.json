@@ -1,8 +1,39 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-18T04:00:58.716Z",
-  "lastSearchedAt": "2026-10-18T04:00:58.716Z",
+  "updatedAt": "2026-10-18T05:00:58.109Z",
+  "lastSearchedAt": "2026-10-18T05:00:58.109Z",
   "groups": [
+    {
+      "id": "2111672184066527481",
+      "fighterNames": [
+        "Mauricio Ruffy",
+        "Salahdine Parnasse"
+      ],
+      "matchupKey": "mauricioruffy|salahdineparnasse|2026-12-12",
+      "eventDateHint": "2026-12-12",
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "UPFRONT MMA comenta un posible cruce entre Mauricio Ruffy y Salahdine Parnasse; la publicación menciona el 12 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "UPFRONT MMA discusses a possible matchup between Mauricio Ruffy and Salahdine Parnasse; the post mentions December 12. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-18T05:00:58.109Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-18T04:14:16.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2111672184066527481",
+          "sourceId": "upfront-mma",
+          "postUrl": "https://x.com/upfrontmma/status/2111672184066527481",
+          "publishedAt": "2026-10-18T04:14:16.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2110879395388826055",
       "fighterNames": [
@@ -570,8 +601,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-18T04:00:58.716Z",
-    "receivedPosts": 24,
-    "added": 0
+    "checkedAt": "2026-10-18T05:00:58.109Z",
+    "receivedPosts": 25,
+    "added": 1
   }
 }
