@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-18T12:01:14.592748+00:00",
+  "synchronizedAt": "2026-10-18T15:17:17.835213+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -739,6 +739,17 @@
           "time": "0:47"
         },
         {
+          "red": "Tanner Boser",
+          "blue": "Jhonata Diniz",
+          "section": "prelims",
+          "division": "Heavyweight Bout",
+          "winner": "Tanner Boser",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "3",
+          "time": "4:26"
+        },
+        {
           "red": "Julien Leblanc",
           "blue": "Nick Galanti",
           "section": "prelims",
@@ -803,17 +814,6 @@
           "method": "Submission",
           "round": "3",
           "time": "4:19"
-        },
-        {
-          "section": "prelims",
-          "red": "Tanner Boser",
-          "blue": "Jhonata Diniz",
-          "division": "Heavyweight",
-          "winner": "Tanner Boser",
-          "outcome": null,
-          "method": "KO/TKO",
-          "round": "3",
-          "time": "4:26"
         }
       ],
       "dataSource": "Cito",
@@ -821,7 +821,7 @@
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-10/101726-ufc-fight-night-buckey-vs-malott-EVENT-ART.jpg?h=d1cb525d&itok=9nlcHO-H",
       "posterAlt": "Joaquin Buckley and Mike Malott side by side over a blue and red background",
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "resultsCheckedAt": "2026-10-18T13:40:43.206429+00:00"
+      "resultsCheckedAt": "2026-10-18T15:17:21.223115+00:00"
     },
     {
       "id": "ufc-fight-night-october-10-2026",
@@ -834,13 +834,13 @@
       "location": "Meta APEX",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
-      "checkedAt": "2026-10-17",
+      "checkedAt": "2026-10-18",
       "bouts": [
         {
-          "section": "main",
           "red": "Brendan Allen",
           "blue": "Christian Leroy Duncan",
-          "division": "Middleweight",
+          "section": "main",
+          "division": "Middleweight Bout",
           "winner": "Brendan Allen",
           "outcome": null,
           "method": "Submission",
@@ -848,10 +848,10 @@
           "time": "2:46"
         },
         {
-          "section": "main",
           "red": "Matheus Camilo",
           "blue": "Jai Herbert",
-          "division": "Lightweight",
+          "section": "main",
+          "division": "Lightweight Bout",
           "winner": "Jai Herbert",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -859,10 +859,10 @@
           "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Loopy Godinez",
           "blue": "Ketlen Souza",
-          "division": "Women's Strawweight",
+          "section": "main",
+          "division": "Women's Strawweight Bout",
           "winner": "Loopy Godinez",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -870,10 +870,10 @@
           "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Andre Fili",
           "blue": "Kai Kamaka III",
-          "division": "Featherweight",
+          "section": "main",
+          "division": "Featherweight Bout",
           "winner": "Andre Fili",
           "outcome": null,
           "method": "KO/TKO",
@@ -881,10 +881,10 @@
           "time": "0:22"
         },
         {
-          "section": "main",
           "red": "Malcolm Wellmaker",
           "blue": "Otari Tanzilovi",
-          "division": "Bantamweight",
+          "section": "main",
+          "division": "Bantamweight Bout",
           "winner": "Otari Tanzilovi",
           "outcome": null,
           "method": "KO/TKO",
@@ -892,10 +892,10 @@
           "time": "2:39"
         },
         {
-          "section": "prelims",
           "red": "Julius Walker",
           "blue": "Gerald Meerschaert",
-          "division": "Light Heavyweight",
+          "section": "prelims",
+          "division": "Light Heavyweight Bout",
           "winner": "Julius Walker",
           "outcome": null,
           "method": "KO/TKO",
@@ -903,10 +903,10 @@
           "time": "3:35"
         },
         {
-          "section": "prelims",
           "red": "Francisco Prado",
           "blue": "Ismael Bonfim",
-          "division": "Lightweight",
+          "section": "prelims",
+          "division": "Lightweight Bout",
           "winner": "Francisco Prado",
           "outcome": null,
           "method": "KO/TKO",
@@ -914,10 +914,10 @@
           "time": "4:23"
         },
         {
-          "section": "prelims",
           "red": "Niko Price",
           "blue": "Leon Shahbazyan",
-          "division": "Welterweight",
+          "section": "prelims",
+          "division": "Welterweight Bout",
           "winner": "Niko Price",
           "outcome": null,
           "method": "KO/TKO",
@@ -925,10 +925,10 @@
           "time": "1:58"
         },
         {
-          "section": "prelims",
           "red": "Felipe Franco",
           "blue": "Brendson Ribeiro",
-          "division": "Light Heavyweight",
+          "section": "prelims",
+          "division": "Light Heavyweight Bout",
           "winner": "Brendson Ribeiro",
           "outcome": null,
           "method": "Submission",
@@ -936,10 +936,10 @@
           "time": "1:49"
         },
         {
-          "section": "prelims",
           "red": "Allen Frye Jr.",
           "blue": "RJ Harris",
-          "division": "Heavyweight",
+          "section": "prelims",
+          "division": "Heavyweight Bout",
           "winner": "Allen Frye Jr.",
           "outcome": null,
           "method": "KO/TKO",
@@ -947,10 +947,10 @@
           "time": "2:59"
         },
         {
-          "section": "prelims",
           "red": "Alice Pereira",
           "blue": "Daria Zhelezniakova",
-          "division": "Women's Bantamweight",
+          "section": "prelims",
+          "division": "Women's Bantamweight Bout",
           "winner": "Alice Pereira",
           "outcome": null,
           "method": "KO/TKO",
@@ -958,12 +958,12 @@
           "time": "5:00"
         },
         {
-          "section": "prelims",
           "red": "Ernesta Kareckaitė",
           "blue": "Melissa Gatto",
-          "division": "Women's Flyweight",
+          "section": "prelims",
+          "division": "Women's Flyweight Bout",
           "winner": null,
-          "outcome": null,
+          "outcome": "Empate",
           "method": "Decision - Majority",
           "round": "3",
           "time": "5:00"
@@ -972,7 +972,9 @@
       "dataSource": "Cito",
       "poster": "assets/images/events/ufc-fight-night-october-10-2026.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/101026-ufc-fight-night-allen-vs-duncan-EVENT-ART.jpg?h=d1cb525d&itok=Giih5XjD",
-      "posterAlt": "UFC middleweights Brendan Allen and Christian Leroy Duncan stand side-by-side over a green and black background"
+      "posterAlt": "UFC middleweights Brendan Allen and Christian Leroy Duncan stand side-by-side over a green and black background",
+      "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
+      "resultsCheckedAt": "2026-10-18T15:17:21.223115+00:00"
     },
     {
       "id": "ufc-332",
@@ -6390,5 +6392,13 @@
       "prelimsSource": "https://www.ufc.com/event/ufc-324",
       "prelimsCheckedAt": "2026-10-13T06:32:24.020041+00:00"
     }
-  ]
+  ],
+  "resultsVerification": {
+    "checkedAt": "2026-10-18T15:17:21.223115+00:00",
+    "verifiedIds": [
+      "ufc-fight-night-october-17-2026",
+      "ufc-fight-night-october-10-2026"
+    ],
+    "failedIds": []
+  }
 }
