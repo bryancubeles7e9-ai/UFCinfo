@@ -12,7 +12,7 @@ UFCinfo nace de la perspectiva de un aficionado: consultar una cartelera, conoce
 | --- | --- |
 | **Inicio** | El próximo evento disponible y accesos a las principales secciones. |
 | **Carteleras** | Eventos numerados, Fight Night y especiales, con próximos combates, resultados disponibles, cuenta atrás y descarga de calendario `.ics`. |
-| **Luchadores** | Un catálogo que incluye a los participantes de los eventos finalizados de 2026 disponibles en la web, con fotografías, récords, datos físicos, guardia, formación marcial y estadísticas documentadas. Puedes buscar y filtrar, consultar las fuentes y abrir la ficha de cada atleta. Incluye una selección de leyendas retiradas con insignia violeta y filtro propio. |
+| **Luchadores** | Un catálogo que incluye a los participantes de los eventos finalizados de 2026 disponibles en la web, con fotografías, récords, datos físicos, guardia, formación marcial y estadísticas documentadas. Puedes elegir entre lista compacta y tarjetas, buscar y filtrar por Todos, Siguiendo, Campeones o Leyendas. Los perfiles se organizan en **Resumen, Estadísticas e Historial**, con fuentes y fechas de consulta. El historial reúne los combates presentes en las carteleras disponibles; no representa necesariamente toda la carrera. Incluye una selección de leyendas retiradas con insignia violeta y filtro propio. |
 | **Rankings** | El top 15 de las 11 divisiones y las dos listas libra por libra, con el campeón separado cuando corresponde y acceso a los perfiles. |
 | **Fight Lab** | Comparación de dos luchadores: perfil, trayectoria y estadísticas de golpeo, derribos y finalizaciones. |
 | **Rumores** | Publicaciones de fuentes seleccionadas sobre posibles combates, agrupadas por pelea y con atribución a su origen. |
@@ -29,7 +29,7 @@ La interfaz está disponible en **español, inglés y catalán**, tiene tema cla
 
 No necesitas una cuenta para explorar la web. Como invitado, tu seguimiento se guarda en ese navegador. Con una cuenta, la lista de luchadores seguidos se guarda en el servidor y puedes recuperarla desde otros dispositivos. También puedes exportar e importar una copia del seguimiento.
 
-El **modo sin spoilers** está activo al entrar y se reactiva al recargar. Oculta los resultados de combates en Carteleras y Mi esquina; puedes revelarlos individualmente o desactivar el modo. Las fichas, los récords y los rankings mantienen sus datos publicados, por lo que pueden reflejar el desenlace de un evento.
+El **modo sin spoilers** está activo al entrar y se reactiva al recargar. Oculta los resultados de combates en Carteleras, Mi esquina y el Historial del perfil; puedes revelarlos individualmente o desactivar el modo. Las fichas, los récords y los rankings mantienen sus datos publicados, por lo que pueden reflejar el desenlace de un evento.
 
 ## De dónde salen los datos
 
@@ -37,7 +37,7 @@ La web combina un catálogo de perfiles con copias de datos que actualizan tarea
 
 | Información | Fuente y funcionamiento |
 | --- | --- |
-| **Eventos y resultados** | Cito actualiza las carteleras cercanas y conserva el historial disponible. Incluye cartelera principal, preliminares y preliminares previas cuando están publicadas. |
+| **Eventos y resultados** | Cito actualiza las carteleras cercanas y conserva el historial disponible. Una comprobación adicional en UFC.com verifica los resultados recientes y puede recuperar información aunque Cito falle. Incluye cartelera principal, preliminares y preliminares previas cuando están publicadas. |
 | **Rankings** | Se consultan las clasificaciones publicadas en UFC.com. |
 | **Récords y estadísticas** | Se consultan los perfiles oficiales de UFC de los luchadores registrados que participan en los combates seleccionados. |
 | **Campeones y fotografías** | Los títulos absolutos actuales se sincronizan con los rankings válidos. Se revisan las fotografías y se conservan variantes para campeón y no campeón cuando están disponibles. El BMF tiene una gestión separada. |
@@ -53,6 +53,7 @@ Los horarios se interpretan en **Europe/Madrid**, con el cambio de hora de veran
 | Proceso | Programación habitual |
 | --- | --- |
 | Carteleras, resultados, rankings, fotografías, récords y estadísticas | Cada día a las **08:00 y 14:00**. |
+| Reintento condicional tras una velada | En la franja de las **10:00**, para eventos de las últimas 48 horas con resultados o perfiles pendientes. No consulta Cito, rankings ni fotografías. |
 | Búsqueda de rumores y comprobación de confirmaciones oficiales | **Cada hora en punto**. |
 | Lectura de las copias publicadas desde la web | Al abrir la página y periódicamente, aproximadamente cada **cinco minutos** para los principales feeds. |
 
@@ -60,7 +61,21 @@ cron-job.org solicita las ejecuciones y GitHub Actions realiza el trabajo. Los c
 
 Después de actualizar las carteleras, el proceso revisa récords y estadísticas de los luchadores seleccionados con resultados en eventos completados de los últimos 14 días. Repite las comprobaciones aunque el récord no haya cambiado para poder recoger estadísticas publicadas más tarde. **No se consulta todo el catálogo en cada ejecución.**
 
+El reintento de las 10:00 aprovecha la finalización de la ejecución horaria de rumores y dispone de respaldo en GitHub Actions. Comprueba si quedan resultados, participantes o perfiles pendientes, con un registro diario para evitar duplicados. Si todo está al día, no consulta fuentes. Véase [Actualización de eventos y perfiles](docs/EVENT_REFRESH.md).
+
 Los horarios son de inicio previsto: la ejecución, la publicación y la disponibilidad de los datos en la fuente pueden introducir retrasos. Puedes consultar el detalle técnico en [Horarios de automatización](docs/AUTOMATION_SCHEDULE.md).
+
+## Estado de validación
+
+Estado del proyecto a **19 de octubre de 2026**, según las comprobaciones realizadas y el seguimiento de uso:
+
+| Automatización | Estado | Qué falta comprobar |
+| --- | --- | --- |
+| **Rumores** | Validada en uso. | Se considera terminada; quedan posibles ajustes futuros de fuentes y filtros. |
+| **Actualización tras una velada** | Parcialmente validada; parche y reintento de las 10:00 implementados. | Comprobar en la próxima velada que resultados, récords y estadísticas se completan, y que la cartelera sigue visible si la fuente se retrasa. |
+| **Incorporación de nuevos eventos** | Pendiente de validación con un nuevo anuncio. | Confirmar que detecta el evento y lo incorpora automáticamente a la web. |
+
+Que una tarea termine sin errores no garantiza que el proveedor ya haya publicado toda la información. La fase de automatización se dará por cerrada cuando estos tres procesos estén comprobados con casos reales.
 
 ## Cómo se tratan los rumores
 
@@ -78,7 +93,17 @@ Más información: [Funcionamiento de rumores](docs/RUMORES.md) y [criterios del
 - Una fuente puede tardar en actualizar un récord, una estadística o una fotografía después del combate.
 - Fight Lab compara datos publicados; no calcula probabilidades de victoria ni predicciones.
 
-El proyecto busca ser útil para otros seguidores, sostenible y una muestra de desarrollo personal. La evolución prevista incluye ampliar la cobertura de luchadores y preliminares, seguir mejorando la experiencia móvil y explorar una aplicación y otras promotoras de MMA. Consulta la [hoja de ruta](docs/ROADMAP.md).
+## Próxima fase
+
+El proyecto busca ser útil para otros seguidores, autosostenible y una muestra de desarrollo personal. La web ya está online; el siguiente objetivo es prepararla para un lanzamiento público más amplio.
+
+1. **Cerrar la validación de las automatizaciones** con una nueva velada y un nuevo anuncio de evento.
+2. **Pulir la experiencia:** móvil, velocidad, navegación y datos incompletos.
+3. **Probarla con seguidores de UFC** y corregir los problemas que encuentren al usarla sin explicaciones.
+4. **Preparar el lanzamiento público:** dominio propio, presentación y difusión del proyecto.
+5. **Explorar la aplicación móvil**, valorando primero una web instalable (PWA).
+
+La aplicación, la PWA y la ampliación a otras promotoras de MMA son objetivos futuros, no funciones disponibles actualmente. Consulta también la [hoja de ruta](docs/ROADMAP.md).
 
 ## Ejecutar el proyecto en local
 
