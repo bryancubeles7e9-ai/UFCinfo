@@ -4868,7 +4868,7 @@
       "record": "7-0-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/joel-faglier",
-      "updatedAt": "2026-10-19T06:14:20.136787+00:00"
+      "updatedAt": "2026-10-19T08:01:19.869714+00:00"
     },
     "ufc-mackenzie-stiller": {
       "record": "6-2-0",
@@ -4935,17 +4935,15 @@
     }
   },
   "lastSync": {
-    "checkedAt": "2026-10-19T06:14:20.136787+00:00",
+    "checkedAt": "2026-10-19T08:01:19.869714+00:00",
     "mode": "events",
-    "attempted": 40,
-    "succeeded": 38,
+    "attempted": 1,
+    "succeeded": 0,
     "failedIds": [
-      "ufc-joel-faglier",
-      "ufc-jack-della-maddalena"
+      "ufc-joel-faglier"
     ],
     "recordOnlyIds": [
-      "ufc-joel-faglier",
-      "ufc-jack-della-maddalena"
+      "ufc-joel-faglier"
     ]
   },
   "fullRefreshAttemptedAt": "2026-10-11T19:06:44.957692+00:00",
