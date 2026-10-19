@@ -1,3 +1,4 @@
+import { compactFighterRow, fighterProfile } from './fighter-presentation.js';
 import { isAwaitingResults, visibleOfficialEvents } from './event-visibility.js';
 import { isLegend, legendBadge, renderLegacyDetails } from "./fighter-legacy.js";
 import { createCatalogPagination } from "./catalog-pagination.js";
@@ -48,6 +49,8 @@ import { compactMartialInfo, renderMartialDetails, martialDetails } from "./figh
 
 const store = createStore();
 let account = null;
+let catalogView = 'compact';
+try { catalogView = localStorage.getItem('ufcinfo-catalog-view') === 'cards' ? 'cards' : 'compact'; } catch {}
 initializeRankings();
 let eventFilter = "upcoming",
   eventKindFilter = "all",
@@ -79,7 +82,7 @@ function animateFollow(id, fromDialog = false) {
   const buttons = [...scope.querySelectorAll("[data-favorite]")].filter(button => button.dataset.favorite === id);
   for (const button of buttons) {
     button.classList.add("follow-celebrate");
-    const card = button.closest(".fighter-card, .followed-fighter, .profile-copy");
+    const card = button.closest(".fighter-card, .fighter-row, .followed-fighter, .fighter-profile-hero, .profile-copy");
     if (window.matchMedia("(min-width: 701px)").matches) card?.classList.add("follow-card-celebrate");
     window.setTimeout(() => {
       button.classList.remove("follow-celebrate");
@@ -89,11 +92,6 @@ function animateFollow(id, fromDialog = false) {
 }
 function additionalFighterCard(fighter) {
   return `<article class="fighter-card ${isLegend(fighter) ? "fighter-legend" : ""}">${portrait(fighter)}${followButton(fighter, true)}<div class="fighter-card-body"><div class="fighter-card-meta"><span>${esc(countryLabel(fighter, getLocale()) || "País no documentado")}</span></div>${legendBadge(fighter)}${championshipBadge(fighter)}<button class="fighter-name" data-profile="${esc(fighter.id)}">${esc(fighter.first)}<strong>${esc(fighter.last)}</strong></button><p class="fighter-division">${esc(fighter.division)}</p><p class="mobile-card-record"><span>RÉCORD · V-D-E</span><strong>${esc(fighter.record || "—")}</strong></p><p>${esc(fighter.nickname || fighter.officialStyle || "Trayectoria y estadísticas oficiales")}</p><dl class="card-combat-info"><div><dt>GUARDIA</dt><dd>${esc(stanceNames[fighter.stance]?.short || "No indicada")}</dd></div>${compactMartialInfo(fighter)}<div><dt>RÉCORD · V-D-E</dt><dd>${esc(fighter.record)}</dd></div><div><dt>EQUIPO / GIMNASIO</dt><dd>${esc(fighter.info.gym || "No indicado")}</dd></div></dl><div class="fighter-card-footer"><span>EXPLORAR PERFIL</span><button class="icon-button" data-profile="${esc(fighter.id)}" aria-label="Ver ficha de ${esc(fullName(fighter))}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 5 7 7-7 7"/></svg></button></div></div></article>`;
-}
-function additionalFighterProfile(fighter) {
-  const dimension = (v) => v == null ? "No indicado" : `${v} cm`;
-  const rows = [["País representado", countryLabel(fighter, getLocale()) || "No indicado"], ["División", fighter.division], ["Récord · V-D-E", fighter.record], ["Apodo", fighter.nickname || "No indicado"], ["Estilo indicado por UFC", fighter.officialStyle || "No indicado"], ["Altura", dimension(fighter.heightCm)], ["Alcance", dimension(fighter.reachCm)], ["Lugar de nacimiento", fighter.birthplace || "No indicado"]];
-  return `<div class="profile-layout ${isLegend(fighter) ? "profile-legend" : ""}">${portrait(fighter, "large")}<div class="profile-copy"><p class="eyebrow">${esc(fighter.division)} · PERFIL UFC</p><h2>${esc(fighter.first)}<br>${esc(fighter.last)}</h2>${renderLegacyDetails(fighter)}<section class="official-facts"><span class="badge orange">DATOS DEL PERFIL UFC</span><dl>${rows.map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("")}</dl>${renderFighterConsultation(fighter)}</section>${renderStanceDetails(fighter)}${renderMartialDetails(fighter)}${renderChampionships(fighter)}${renderExtendedFighterInfo(fighter)}<a class="button small" href="${esc(fighter.source)}" target="_blank" rel="noopener noreferrer">Perfil oficial UFC ›</a>${followButton(fighter)}<p class="data-note">Fotografía: ${esc(fighter.photoCredit || "UFC")}. Datos del perfil oficial de UFC. El lugar de nacimiento no implica nacionalidad deportiva.</p></div></div>`;
 }
 function fighterCard(fighter) {
   const favorite = store.state.favorites.includes(fighter.id);
@@ -197,8 +195,14 @@ function renderFighters() {
   $("#fighter-load-more").hidden = !page.hasMore;
   $("#fighter-load-more").textContent = words[3];
   $("#fighter-load-more").setAttribute('aria-label', `${words[3]} · ${count}`);
+  document.querySelectorAll('[data-catalog-view]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.catalogView === catalogView)));
+  document.querySelectorAll('[data-fighter-scope]').forEach(button => {
+    const active = onlyFavorites ? 'following' : ['current', 'legend'].includes(belts) ? belts : belts === 'all' ? 'all' : '';
+    button.setAttribute('aria-pressed', String(button.dataset.fighterScope === active));
+  });
+  $("#fighter-list").className = catalogView === 'compact' ? 'fighter-directory-list' : 'fighter-grid';
   $("#fighter-list").innerHTML = list.length
-    ? page.items.map((f) => f.supplemental ? additionalFighterCard(f) : fighterCard(f)).join("")
+    ? page.items.map((f) => catalogView === 'compact' ? compactFighterRow(f, followButton(f, true)) : f.supplemental ? additionalFighterCard(f) : fighterCard(f)).join("")
     : empty("Ningún luchador coincide. Prueba otros filtros.");
 }
 function renderHomeBanner() {
@@ -262,6 +266,7 @@ function renderSaved() {
 function refreshSpoilerViews() {
   renderSaved();
   rumors.draw();
+  if ($("#fighter-dialog").open) showProfile($("#fighter-detail").dataset.fighterId);
   const id = $("#event-detail").dataset.officialEventId;
   if ($("#event-dialog").open && id) showOfficialEvent(id);
 }
@@ -279,16 +284,13 @@ function renderAll() {
   renderSaved();
 }
 function showProfile(id) {
-  $("#fighter-detail").dataset.fighterId = id;
   const fighter = directoryFighterById(id);
   if (!fighter) return;
-  if (fighter.supplemental) {
-    $("#fighter-detail").innerHTML = additionalFighterProfile(fighter);
-    if (!$("#fighter-dialog").open) $("#fighter-dialog").showModal();
-    return;
-  }
-  $("#fighter-detail").innerHTML =
-    `<div class="profile-layout ${isLegend(fighter) ? "profile-legend" : ""}">${portrait(fighter, "large")}<div class="profile-copy"><p class="eyebrow">${esc(fighter.country)} · ${styleNames[fighter.style]}</p><h2>${esc(fighter.first)}<br>${esc(fighter.last)}</h2><p>${esc(fighter.tagline)}</p><section class="official-facts"><span class="badge orange">DATOS DEL PERFIL UFC</span><dl><div><dt>División</dt><dd>${esc(fighter.division)}</dd></div><div><dt>Récord · V-D-E</dt><dd>${esc(fighter.record)}</dd></div><div><dt>Apodo</dt><dd>${esc(fighter.nickname || "No indicado")}</dd></div><div><dt>Estilo indicado por UFC</dt><dd>${esc(fighter.officialStyle || "No indicado")}</dd></div><div><dt>Altura / alcance</dt><dd>${fighter.heightCm ?? "—"} cm / ${fighter.reachCm ?? "—"} cm</dd></div><div><dt>Lugar de nacimiento</dt><dd>${esc(fighter.birthplace || "No indicado")}</dd></div></dl>${renderFighterConsultation(fighter)}</section>${renderCombatDetails(fighter)}${renderChampionships(fighter)}${renderExtendedFighterInfo(fighter)}<a class="button small" href="${fighter.source}" target="_blank" rel="noopener noreferrer">Perfil oficial UFC ›</a><button class="outline-button small" data-favorite="${fighter.id}">${store.state.favorites.includes(id) ? "✓ Siguiendo · Dejar de seguir" : "♡ Seguir luchador"}</button><p class="data-note">Fotografía: ${esc(fighter.photoCredit || "UFC")}. Datos consultados en el perfil oficial de UFC. Consulta la fuente para cambios posteriores.</p></div></div>`;
+  const detail = $("#fighter-detail");
+  const active = detail.dataset.fighterId === id ? detail.dataset.section || 'summary' : 'summary';
+  detail.dataset.fighterId = id;
+  detail.dataset.section = active;
+  detail.innerHTML = fighterProfile(fighter, {follow: followButton(fighter), events: eventsFeed.events, active});
   if (!$("#fighter-dialog").open) $("#fighter-dialog").showModal();
 }
 function updateCountdowns() {
@@ -415,6 +417,26 @@ for (const selector of [
     selector === "#fighter-search" ? "input" : "change",
     renderFighters,
   );
+document.querySelectorAll('[data-catalog-view]').forEach(button => button.addEventListener('click', () => {
+  catalogView = button.dataset.catalogView;
+  try { localStorage.setItem('ufcinfo-catalog-view', catalogView); } catch {}
+  renderFighters();
+}));
+document.querySelectorAll('[data-fighter-scope]').forEach(button => button.addEventListener('click', () => {
+  const scope = button.dataset.fighterScope;
+  onlyFavorites = scope === 'following';
+  $("#favorites-only").setAttribute('aria-pressed', String(onlyFavorites));
+  $("#championship-filter").value = ['current', 'legend'].includes(scope) ? scope : 'all';
+  $("#championship-filter").dispatchEvent(new Event('change', {bubbles:true}));
+}));
+$("#fighter-detail").addEventListener('click', event => {
+  const button = event.target.closest('[data-profile-section]');
+  if (!button) return;
+  const section = button.dataset.profileSection;
+  $("#fighter-detail").dataset.section = section;
+  document.querySelectorAll('[data-profile-section]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+  for (const name of ['summary', 'statistics', 'history']) $("#fighter-panel-" + name).hidden = name !== section;
+});
 $("#fighter-load-more").addEventListener("click", () => {
   const previousCount = $("#fighter-list").children.length;
   catalogPagination.more();
@@ -546,6 +568,12 @@ document.addEventListener(
       event.target.closest("figure").querySelector("figcaption").textContent = "PÓSTER NO DISPONIBLE";
       return;
     }
+    if (event.target.matches?.('.fighter-row-identity img, .fighter-profile-photo img')) {
+      if (event.target.dataset.fallback) return;
+      event.target.dataset.fallback = 'true';
+      event.target.src = 'assets/images/fighter-placeholder.svg';
+      return;
+    }
     if (!event.target.matches?.(".fighter-photo")) return;
     event.target.hidden = true;
     const portrait = event.target.closest(".fighter-portrait");
@@ -565,6 +593,7 @@ setInterval(updateCountdowns, 1000);
 async function updateEventFeed() {
   await refreshEvents();
   lab.updateDefault(eventsFeed.events);
+  if ($("#fighter-dialog").open) showProfile($("#fighter-detail").dataset.fighterId);
   renderOverview();
   renderEvents();
   renderSaved();

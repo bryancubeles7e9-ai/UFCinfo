@@ -1,5 +1,21 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "Menú": "Menú",
+  "Colecciones de luchadores": "Col·leccions de lluitadors",
+  "Vista del catálogo": "Vista del catàleg",
+  "Siguiendo": "Seguint",
+  "Campeones": "Campions",
+  "Leyendas": "Llegendes",
+  "Lista": "Llista",
+  "Tarjetas": "Targetes",
+  "Secciones del perfil": "Seccions del perfil",
+  "Resumen": "Resum",
+  "Estadísticas": "Estadístiques",
+  "Historial": "Historial",
+  "Combates presentes en las carteleras de UFCinfo. Este historial puede no incluir toda su carrera.": "Combats presents a les cartelleres d’UFCinfo. Aquest historial pot no incloure tota la seva carrera.",
+  "Todavía no hay combates de este luchador en las carteleras disponibles.": "Encara no hi ha combats d’aquest lluitador a les cartelleres disponibles.",
+  "No hay estadísticas verificadas disponibles para este perfil.": "No hi ha estadístiques verificades disponibles per a aquest perfil.",
+  "El lugar de nacimiento no implica nacionalidad deportiva.": "El lloc de naixement no implica nacionalitat esportiva.",
   "RESULTADOS PENDIENTES": 'RESULTATS PENDENTS',
   "Resultados pendientes de actualización": 'Resultats pendents d’actualització',
 

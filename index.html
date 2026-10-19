@@ -17,6 +17,7 @@
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/mobile.css" />
+    <link rel="stylesheet" href="assets/css/refinement.css" />
     <script type="module" src="assets/js/app.js"></script>
   </head>
   <body>
@@ -221,6 +222,18 @@
             >
               ♥ Seguidos
             </button>
+          </div>
+        </div>
+        <div class="catalog-browse-bar">
+          <div class="catalog-scopes" role="group" aria-label="Colecciones de luchadores">
+            <button data-fighter-scope="all" aria-pressed="true">Todos</button>
+            <button data-fighter-scope="following" aria-pressed="false">Siguiendo</button>
+            <button data-fighter-scope="current" aria-pressed="false">Campeones</button>
+            <button data-fighter-scope="legend" aria-pressed="false">Leyendas</button>
+          </div>
+          <div class="catalog-view-switch" role="group" aria-label="Vista del catálogo">
+            <button data-catalog-view="compact" aria-pressed="true" aria-controls="fighter-list">Lista</button>
+            <button data-catalog-view="cards" aria-pressed="false" aria-controls="fighter-list">Tarjetas</button>
           </div>
         </div>
         <p class="data-note">

@@ -1,5 +1,20 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "Colecciones de luchadores": "Fighter collections",
+  "Vista del catálogo": "Catalog view",
+  "Siguiendo": "Following",
+  "Campeones": "Champions",
+  "Leyendas": "Legends",
+  "Lista": "List",
+  "Tarjetas": "Cards",
+  "Secciones del perfil": "Profile sections",
+  "Resumen": "Overview",
+  "Estadísticas": "Statistics",
+  "Historial": "Fight history",
+  "Combates presentes en las carteleras de UFCinfo. Este historial puede no incluir toda su carrera.": "Bouts listed on UFCinfo event cards. This history may not cover their entire career.",
+  "Todavía no hay combates de este luchador en las carteleras disponibles.": "No bouts for this fighter are listed on the available event cards yet.",
+  "No hay estadísticas verificadas disponibles para este perfil.": "No verified statistics are available for this profile.",
+  "El lugar de nacimiento no implica nacionalidad deportiva.": "Place of birth does not imply sporting nationality.",
   "RESULTADOS PENDIENTES": 'RESULTS PENDING',
   "Resultados pendientes de actualización": 'Results awaiting update',
 
