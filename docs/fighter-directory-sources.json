@@ -7383,5 +7383,29 @@
     "country": "Brasil",
     "countrySource": "https://www.ufc.com/news/jhonata-diniz-adrenaline-junkie-ufc-rio",
     "countryConsulted": "2026-10-18"
+  },
+  {
+    "id": "ufc-asaf-chopurov",
+    "name": "Asaf Chopurov",
+    "aliases": [
+      "Asaf Chopurov"
+    ],
+    "source": "https://www.ufc.com/athlete/asaf-chopurov",
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-20"
+  },
+  {
+    "id": "ufc-iasmin-lucindo",
+    "name": "Iasmin Lucindo",
+    "aliases": [
+      "Iasmin Lucindo"
+    ],
+    "source": "https://www.ufc.com/athlete/iasmin-lucindo",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-333",
+    "countryConsulted": "2026-10-20"
   }
 ]
