@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {estimateBoutStart, renderBoutTime} from '../assets/js/bout-schedule.js';
+const bouts = ['main','main','main','main','main','prelims','prelims','prelims','prelims','early-prelims','early-prelims','early-prelims','early-prelims','early-prelims'].map((section,i)=>({section,red:`Red ${i}`,blue:`Blue ${i}`,time:'04:59'}));
+const event={status:'scheduled',date:'2026-12-13T03:00:00Z',bouts};
+assert.equal(estimateBoutStart(event,bouts[4]),'2026-12-13T03:00:00.000Z');
+assert.equal(estimateBoutStart(event,bouts[0]),'2026-12-13T05:00:00.000Z');
+assert.equal(estimateBoutStart(event,bouts[8]),'2026-12-13T01:00:00.000Z');
+assert.equal(estimateBoutStart(event,bouts[13]),'2026-12-12T23:00:00.000Z');
+assert.ok(Date.parse(estimateBoutStart(event,bouts[9])) < Date.parse(estimateBoutStart(event,bouts[8])));
+assert.equal(estimateBoutStart({...event,date:'invalid'},bouts[0]),null);
+assert.equal(estimateBoutStart({...event,status:'completed'},bouts[0]),null);
+assert.equal(estimateBoutStart({...event,bouts:[{red:'Announced'}]},bouts[0]),null);
+assert.equal(estimateBoutStart(event,{...bouts[0]}),null);
+assert.equal(renderBoutTime({...event,status:'completed'},bouts[0]),'');
+assert.ok(renderBoutTime(event,bouts[0]).includes('Hora aproximada'));
+assert.ok(!renderBoutTime(event,bouts[0]).includes('04:59'));
+assert.ok(renderBoutTime({...event,bouts:[{red:'Announced'}]},bouts[0]).includes('Horario por confirmar'));
+console.log('PASS: chronological order, section boundaries, midnight, missing order, past events and elapsed-result isolation');

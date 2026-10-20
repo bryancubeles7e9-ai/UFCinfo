@@ -1,5 +1,7 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "hora local · inicio de la principal": "local time · main card start",
+  "Horas orientativas, no oficiales: principal desde la hora publicada, preliminares unas 2 h antes y previas unas 4 h antes; hasta 30 min por pelea según el orden disponible. Pueden cambiar por duración, pausas o cambios de cartelera.": "Unofficial estimates: main card from the published start, prelims about 2 h earlier and early prelims about 4 h earlier; up to 30 min per bout in the available running order. Duration, breaks and card changes can shift these times.",
   "Colecciones de luchadores": "Fighter collections",
   "Vista del catálogo": "Catalog view",
   "Siguiendo": "Following",
