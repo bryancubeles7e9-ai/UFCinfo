@@ -177,7 +177,8 @@ export const officialEvents = [
         "outcome": null,
         "method": "",
         "round": "",
-        "time": ""
+        "time": "",
+        "section": "main"
       },
       {
         "red": "Kayla Harrison",
@@ -187,7 +188,8 @@ export const officialEvents = [
         "outcome": null,
         "method": "",
         "round": "",
-        "time": ""
+        "time": "",
+        "section": "main"
       },
       {
         "red": "Caio Borralho",
@@ -197,7 +199,8 @@ export const officialEvents = [
         "outcome": null,
         "method": "",
         "round": "",
-        "time": ""
+        "time": "",
+        "section": "main"
       },
       {
         "red": "Uros Medic",
@@ -207,7 +210,8 @@ export const officialEvents = [
         "outcome": null,
         "method": "",
         "round": "",
-        "time": ""
+        "time": "",
+        "section": "main"
       },
       {
         "red": "Bilal Hasan",
@@ -217,13 +221,16 @@ export const officialEvents = [
         "outcome": null,
         "method": "",
         "round": "",
-        "time": ""
+        "time": "",
+        "section": "main"
       }
     ],
     "poster": "assets/images/events/ufc-334.jpg",
     "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/image/2026-09/111426-polymarket-ufc-334-gane-vs-hokit-TEMP-HERO.jpg?h=d1cb525d&itok=mNOcXTSi",
     "posterAlt": "Ciryl Gane and Josh Hokit side by side over a black and gold background",
-    "dataSource": "UFCalendar"
+    "dataSource": "UFCalendar",
+    "scheduleSource": "https://www.ufc.com/event/ufc-334",
+    "scheduleCheckedAt": "2026-10-20T11:44:05.043624+00:00"
   },
   {
     "id": "ufc-fight-night-november-07-2026",
@@ -246,7 +253,8 @@ export const officialEvents = [
         "outcome": null,
         "method": "",
         "round": "",
-        "time": ""
+        "time": "",
+        "section": "main"
       },
       {
         "red": "Tatiana Suarez",
@@ -256,77 +264,8 @@ export const officialEvents = [
         "outcome": null,
         "method": "",
         "round": "",
-        "time": ""
-      },
-      {
-        "red": "Mantas Kondratavičius",
-        "blue": "Wes Schultz",
-        "division": "Middleweight Bout",
-        "winner": null,
-        "outcome": null,
-        "method": "",
-        "round": "",
-        "time": ""
-      },
-      {
-        "red": "Billy Elekana",
-        "blue": "Lucas Fernando",
-        "division": "Light Heavyweight Bout",
-        "winner": null,
-        "outcome": null,
-        "method": "",
-        "round": "",
-        "time": ""
-      },
-      {
-        "red": "Austin Bashi",
-        "blue": "Lucas Brennan",
-        "division": "Featherweight Bout",
-        "winner": null,
-        "outcome": null,
-        "method": "",
-        "round": "",
-        "time": ""
-      },
-      {
-        "red": "Karine Silva",
-        "blue": "Gabriella Fernandes",
-        "division": "Women's Flyweight Bout",
-        "winner": null,
-        "outcome": null,
-        "method": "",
-        "round": "",
-        "time": ""
-      },
-      {
-        "red": "Keiichiro Nakamura",
-        "blue": "Ollie Schmid",
-        "division": "Featherweight Bout",
-        "winner": null,
-        "outcome": null,
-        "method": "",
-        "round": "",
-        "time": ""
-      },
-      {
-        "red": "Seokhyeon Ko",
-        "blue": "Wellington Turman",
-        "division": "Welterweight Bout",
-        "winner": null,
-        "outcome": null,
-        "method": "",
-        "round": "",
-        "time": ""
-      },
-      {
-        "red": "Jonny Parsons",
-        "blue": "José Souza",
-        "division": "Welterweight Bout",
-        "winner": null,
-        "outcome": null,
-        "method": "",
-        "round": "",
-        "time": ""
+        "time": "",
+        "section": "main"
       },
       {
         "red": "Davey Grant",
@@ -336,17 +275,41 @@ export const officialEvents = [
         "outcome": null,
         "method": "",
         "round": "",
-        "time": ""
+        "time": "",
+        "section": "main"
       },
       {
-        "red": "Jose Delano",
-        "blue": "Murtazali Magomedov",
-        "division": "Featherweight Bout",
+        "red": "Seokhyeon Ko",
+        "blue": "Wellington Turman",
+        "division": "Welterweight Bout",
         "winner": null,
         "outcome": null,
         "method": "",
         "round": "",
-        "time": ""
+        "time": "",
+        "section": "main"
+      },
+      {
+        "red": "Billy Elekana",
+        "blue": "Lucas Fernando",
+        "division": "Light Heavyweight Bout",
+        "winner": null,
+        "outcome": null,
+        "method": "",
+        "round": "",
+        "time": "",
+        "section": "main"
+      },
+      {
+        "red": "Mantas Kondratavičius",
+        "blue": "Wes Schultz",
+        "division": "Middleweight Bout",
+        "winner": null,
+        "outcome": null,
+        "method": "",
+        "round": "",
+        "time": "",
+        "section": "main"
       },
       {
         "red": "Gabriel Lorenco",
@@ -356,7 +319,52 @@ export const officialEvents = [
         "outcome": null,
         "method": "",
         "round": "",
-        "time": ""
+        "time": "",
+        "section": "prelims"
+      },
+      {
+        "red": "Karine Silva",
+        "blue": "Gabriella Fernandes",
+        "division": "Women's Flyweight Bout",
+        "winner": null,
+        "outcome": null,
+        "method": "",
+        "round": "",
+        "time": "",
+        "section": "prelims"
+      },
+      {
+        "red": "Jose Delano",
+        "blue": "Murtazali Magomedov",
+        "division": "Featherweight Bout",
+        "winner": null,
+        "outcome": null,
+        "method": "",
+        "round": "",
+        "time": "",
+        "section": "prelims"
+      },
+      {
+        "red": "Keiichiro Nakamura",
+        "blue": "Ollie Schmid",
+        "division": "Featherweight Bout",
+        "winner": null,
+        "outcome": null,
+        "method": "",
+        "round": "",
+        "time": "",
+        "section": "prelims"
+      },
+      {
+        "red": "Austin Bashi",
+        "blue": "Lucas Brennan",
+        "division": "Featherweight Bout",
+        "winner": null,
+        "outcome": null,
+        "method": "",
+        "round": "",
+        "time": "",
+        "section": "prelims"
       },
       {
         "red": "Priscila Cachoeira",
@@ -366,13 +374,27 @@ export const officialEvents = [
         "outcome": null,
         "method": "",
         "round": "",
-        "time": ""
+        "time": "",
+        "section": "prelims"
+      },
+      {
+        "red": "Jonny Parsons",
+        "blue": "José Souza",
+        "division": "Welterweight Bout",
+        "winner": null,
+        "outcome": null,
+        "method": "",
+        "round": "",
+        "time": "",
+        "section": "prelims"
       }
     ],
     "poster": "assets/images/events/ufc-fight-night-november-07-2026.jpg",
     "posterAlt": "UFC welterweights Gabriel Bonfim and Sean Brady side by side over a red and black background",
     "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/110726-ufc-fight-night-bonfim-vs-brady-TEMP-HERO.jpg?h=d1cb525d&itok=vmUARwy5",
-    "dataSource": "UFCalendar"
+    "dataSource": "UFCalendar",
+    "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "scheduleCheckedAt": "2026-10-20T11:44:05.063105+00:00"
   },
   {
     "id": "ufc-fight-night-october-31-2026",
