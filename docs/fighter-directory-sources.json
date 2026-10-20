@@ -7407,5 +7407,77 @@
     "country": "Brazil",
     "countrySource": "https://www.ufc.com/event/ufc-333",
     "countryConsulted": "2026-10-20"
+  },
+  {
+    "id": "ufc-rodrigo-sezinando",
+    "name": "Rodrigo Sezinando",
+    "aliases": [
+      "Rodrigo Sezinando"
+    ],
+    "source": "https://www.ufc.com/athlete/rodrigo-sezinando",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-20"
+  },
+  {
+    "id": "ufc-jeongyeong-lee",
+    "name": "JeongYeong Lee",
+    "aliases": [
+      "JeongYeong Lee"
+    ],
+    "source": "https://www.ufc.com/athlete/jeongyeong-lee",
+    "code": "KR",
+    "country": "South Korea",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-20"
+  },
+  {
+    "id": "ufc-nick-klein",
+    "name": "Nick Klein",
+    "aliases": [
+      "Nick Klein"
+    ],
+    "source": "https://www.ufc.com/athlete/nick-klein",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-20"
+  },
+  {
+    "id": "ufc-joseph-kropschot",
+    "name": "Joseph Kropschot",
+    "aliases": [
+      "Joseph Kropschot"
+    ],
+    "source": "https://www.ufc.com/athlete/joseph-kropschot",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-20"
+  },
+  {
+    "id": "ufc-lucia-szabova",
+    "name": "Lucia Szabova",
+    "aliases": [
+      "Lucia Szabova"
+    ],
+    "source": "https://www.ufc.com/athlete/lucia-szabova",
+    "code": "SK",
+    "country": "Slovakia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-20"
+  },
+  {
+    "id": "ufc-tainara-lisboa",
+    "name": "Tainara Lisboa",
+    "aliases": [
+      "Tainara Lisboa"
+    ],
+    "source": "https://www.ufc.com/athlete/tainara-lisboa",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-20"
   }
 ]
