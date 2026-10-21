@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://www.ufc.com/rankings",
-  "synchronizedAt": "2026-10-21T12:01:16.494500+00:00",
+  "synchronizedAt": "2026-10-21T22:06:37.042318+00:00",
   "published": "Tuesday, Oct. 20",
   "categories": [
     {
@@ -14,8 +14,8 @@
         "Petr Yan",
         "Ilia Topuria",
         "Joshua Van",
-        "Tom Aspinall",
         "Sean Strickland",
+        "Tom Aspinall",
         "Merab Dvalishvili",
         "Alex Pereira",
         "Ciryl Gane",
@@ -209,8 +209,8 @@
         "Kamaru Usman",
         "Mike Malott",
         "Yaroslav Amosov",
-        "Joaquin Buckley",
         "Uroš Medić",
+        "Joaquin Buckley",
         "Daniel Rodriguez",
         "Neil Magny"
       ],
@@ -323,8 +323,8 @@
         "Serghei Spivac",
         "Ante Delija",
         "Valter Walker",
-        "Tyrell Fortune",
         "Derrick Lewis",
+        "Tyrell Fortune",
         "Aleksandar Rakić",
         "Mario Pinto"
       ],
