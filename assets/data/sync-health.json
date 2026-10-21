@@ -24,6 +24,14 @@
       "lastSuccessAt": "2026-10-21T22:06:42.546153+00:00",
       "finishedAt": "2026-10-21T22:06:42.546177+00:00",
       "exitCode": 0
+    },
+    "photos": {
+      "attemptedAt": "2026-10-21T22:06:44.511339+00:00",
+      "status": "success",
+      "pending": 0,
+      "lastSuccessAt": "2026-10-21T22:06:48.899866+00:00",
+      "finishedAt": "2026-10-21T22:06:48.899883+00:00",
+      "exitCode": 0
     }
   }
 }
