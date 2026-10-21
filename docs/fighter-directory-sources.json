@@ -7479,5 +7479,65 @@
     "country": "Brazil",
     "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
     "countryConsulted": "2026-10-20"
+  },
+  {
+    "id": "ufc-brian-ortega",
+    "name": "Brian Ortega",
+    "aliases": [
+      "Brian Ortega"
+    ],
+    "source": "https://www.ufc.com/athlete/brian-ortega",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-21"
+  },
+  {
+    "id": "ufc-aleksandre-topuria",
+    "name": "Aleksandre Topuria",
+    "aliases": [
+      "Aleksandre Topuria"
+    ],
+    "source": "https://www.ufc.com/athlete/aleksandre-topuria",
+    "code": "GE",
+    "country": "Georgia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-10-21"
+  },
+  {
+    "id": "ufc-wellington-turman",
+    "name": "Wellington Turman",
+    "aliases": [
+      "Wellington Turman"
+    ],
+    "source": "https://www.ufc.com/athlete/wellington-turman",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-21"
+  },
+  {
+    "id": "ufc-gabriel-lorenco",
+    "name": "Gabriel Lorenco",
+    "aliases": [
+      "Gabriel Lorenco"
+    ],
+    "source": "https://www.ufc.com/athlete/gabriel-lorenco",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-21"
+  },
+  {
+    "id": "ufc-norma-dyumont-viana-3",
+    "name": "Jonny Parsons",
+    "aliases": [
+      "Jonny Parsons"
+    ],
+    "source": "https://www.ufc.com/athlete/norma-dyumont-viana-3",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-10-21"
   }
 ]

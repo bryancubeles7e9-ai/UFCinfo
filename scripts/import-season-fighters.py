@@ -4,6 +4,7 @@ Run from the repository root. Existing profiles are preserved; unverifiable prof
 are reported. Photos use the official URL, with the interface's existing fallback.
 Use --next to import missing participants of the next announced/scheduled card.
 Use --next-fight-night to select the next Fight Night instead.
+Use --upcoming to cover every upcoming card in the feed.
 """
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone, timedelta
@@ -60,6 +61,9 @@ def main():
     date = datetime.now(timezone.utc).date().isoformat()
     feed = json.loads((ROOT / 'assets/data/ufc-events.json').read_text())
     events = sorted([e for e in feed['events'] if e.get('status') == 'completed' and datetime.fromisoformat(e['date'].replace('Z', '+00:00')).year == feed['year']], key=lambda e:e['date'], reverse=True)
+    if '--upcoming' in sys.argv:
+        now = datetime.now(timezone.utc)
+        events = [e for e in feed['events'] if e.get('status') in ('scheduled', 'announced') and datetime.fromisoformat(e['date'].replace('Z', '+00:00')) > now]
     if '--next' in sys.argv or '--next-fight-night' in sys.argv:
         now = datetime.now(timezone.utc)
         events = sorted([e for e in feed['events'] if e.get('status') in ('scheduled', 'announced') and datetime.fromisoformat(e['date'].replace('Z', '+00:00')) > now and ('--next-fight-night' not in sys.argv or 'fight-night' in e['id'])], key=lambda e:e['date'])[:1]
