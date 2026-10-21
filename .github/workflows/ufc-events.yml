@@ -98,6 +98,9 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+      - name: Incorporar perfiles de próximas carteleras
+        continue-on-error: true
+        run: python3 scripts/import-season-fighters.py --upcoming
       - name: Incorporar participantes nuevos verificados
         continue-on-error: true
         run: python3 scripts/import-season-fighters.py --recent
@@ -107,7 +110,7 @@ jobs:
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git commit -m 'Incorporar participantes recientes de UFC'
+            git commit -m 'Incorporar participantes recientes y próximos de UFC'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
