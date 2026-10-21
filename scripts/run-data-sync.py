@@ -40,7 +40,8 @@ def run(kind, args=(), root=ROOT, execute=subprocess.run, clock=lambda: datetime
     script, filename = JOBS[kind]
     path = root / 'assets/data/sync-health.json'
     state = json.loads(path.read_text()) if path.exists() else {'schemaVersion': 1, 'jobs': {}}
-    entry = {**state['jobs'].get(kind, {}), 'attemptedAt': clock().isoformat(), 'status': 'running', 'pending': 0}
+    previous = state['jobs'].get(kind, {})
+    entry = {**previous, 'attemptedAt': clock().isoformat(), 'status': 'running'}
     entry.pop('finishedAt', None)
     entry.pop('exitCode', None)
     state['jobs'][kind] = entry
@@ -61,6 +62,11 @@ def run(kind, args=(), root=ROOT, execute=subprocess.run, clock=lambda: datetime
         code = 1
         entry['status'] = 'failed'
     finally:
+        entry['consecutiveFailures'] = previous.get('consecutiveFailures', 0) + 1 if entry['status'] == 'failed' else 0
+        if entry.get('pending'):
+            entry.setdefault('pendingSince', entry['attemptedAt'])
+        elif entry['status'] == 'success':
+            entry.pop('pendingSince', None)
         entry.update(finishedAt=clock().isoformat(), exitCode=code)
         write(path, state)
     return code

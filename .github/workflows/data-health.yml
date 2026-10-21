@@ -1,0 +1,28 @@
+name: Vigilar automatizaciones UFCinfo
+on:
+  schedule:
+    - cron: '43 */3 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/check-data-health.py'
+      - '.github/workflows/data-health.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - name: Revisar fuentes e historial sin consumir APIs deportivas
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/check-data-health.py

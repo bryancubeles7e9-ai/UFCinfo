@@ -31,8 +31,16 @@ class SyncHealthTests(unittest.TestCase):
             self.assertEqual(feed.read_bytes(),before)
             self.assertNotIn('secret-must-not-be-published',path.read_text())
             self.assertEqual(json.loads(path.read_text())['jobs']['records']['status'],'failed')
+            failed=json.loads(path.read_text())['jobs']['records']
+            self.assertEqual(failed['consecutiveFailures'],1)
+            self.assertEqual(failed['pendingSince'],clock().isoformat())
+            m.run('records',root=root,execute=fail,clock=clock)
+            self.assertEqual(json.loads(path.read_text())['jobs']['records']['consecutiveFailures'],2)
             feed.write_text('{}'); m.run('records',root=root,execute=success,clock=clock)
             self.assertEqual(json.loads(path.read_text())['jobs']['records']['status'],'success')
+            recovered=json.loads(path.read_text())['jobs']['records']
+            self.assertEqual(recovered['consecutiveFailures'],0)
+            self.assertNotIn('pendingSince',recovered)
 
     def test_malformed_output_cannot_be_reported_successful(self):
         with tempfile.TemporaryDirectory() as tmp:
