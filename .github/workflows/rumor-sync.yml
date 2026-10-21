@@ -11,6 +11,10 @@ on:
     paths:
       - '.github/workflows/rumor-sync.yml'
       - 'scripts/sync-rumors.mjs'
+      - 'scripts/rumor-fighter-names.mjs'
+      - 'scripts/rumor-auto-feed.mjs'
+      - 'tests/test-rumor-filter.mjs'
+      - 'tests/test-rumor-calendar.mjs'
       - 'tests/test-rumor-search-time.mjs'
   schedule:
     # Backup opportunities; the script skips an already searched hour.
@@ -30,7 +34,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Comprobar configuracion y credenciales
+      - name: Probar filtros y confirmaciones sin consultar APIs
+        run: |
+          node tests/test-rumor-auto-sync.mjs
+          node tests/test-rumor-filter.mjs
+          node tests/test-rumor-calendar.mjs
+          node tests/test-rumor-search-time.mjs
+          node tests/test-rumor-candidate-groups.mjs
+          python3 tests/test_rumor_confirmations.py
+      - name: Comprobar credenciales de búsqueda
         env:
           TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
         run: |
@@ -38,12 +50,6 @@ jobs:
             echo 'Falta el secreto TWITTERAPI_IO_KEY. No se ha consultado la API.'
             exit 1
           fi
-          node tests/test-rumor-auto-sync.mjs
-          node tests/test-rumor-filter.mjs
-          node tests/test-rumor-calendar.mjs
-          node tests/test-rumor-search-time.mjs
-          node tests/test-rumor-candidate-groups.mjs
-          python3 tests/test_rumor_confirmations.py
       - name: Recopilar, filtrar y publicar rumores
         env:
           TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}

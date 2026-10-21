@@ -46,6 +46,8 @@ La web combina un catálogo de perfiles con copias de datos que actualizan tarea
 
 Las fichas y los feeds incluyen fuentes y fechas de consulta cuando están disponibles. **La fecha de consulta indica cuándo se revisó la fuente, no cuándo esta modificó sus datos.**
 
+El panel **Estado de los datos** distingue el último intento conocido, la última sincronización sin incidencias y los elementos pendientes. Una consulta fallida conserva la fecha de la última sincronización correcta registrada. Las carteleras y la verificación de resultados oficiales se muestran por separado. Las automatizaciones disponen además de una [simulación de velada y pruebas sin consultar APIs](docs/DATA_VALIDATION.md).
+
 ## Cuándo se actualiza
 
 Los horarios se interpretan en **Europe/Madrid**, con el cambio de hora de verano e invierno.

@@ -1,0 +1,45 @@
+name: Validar automatizaciones sin consultar APIs
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+      - 'assets/js/**'
+      - '.github/workflows/**'
+  pull_request:
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+      - 'assets/js/**'
+      - '.github/workflows/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Probar importadores y recuperación tras velada
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
+      - name: Probar filtros y confirmaciones de rumores
+        run: |
+          node tests/test-rumor-auto-sync.mjs
+          node tests/test-rumor-filter.mjs
+          node tests/test-rumor-calendar.mjs
+          node tests/test-rumor-search-time.mjs
+          node tests/test-rumor-candidate-groups.mjs
+      - name: Probar datos publicados y estado visible
+        run: |
+          node tests/test-events-feed.mjs
+          node tests/test-event-visibility.mjs
+          node tests/test-data-health.mjs
+          node tests/test-following.mjs

@@ -9,6 +9,7 @@ on:
       - 'assets/**'
       - 'scripts/sync-ufc-events.py'
       - 'scripts/sync-cito-events.py'
+      - 'scripts/run-data-sync.py'
       - 'scripts/reconcile-official-results.py'
       - 'scripts/import-season-fighters.py'
       - 'scripts/sync-ufc-rankings.py'
@@ -41,11 +42,11 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.13'
-      - name: Test importador
-        run: python3 -m unittest discover -s tests -p 'test_*.py'
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Test importador
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
       - name: Test carga dinámica
         run: |
           node tests/test-events-feed.mjs
@@ -57,10 +58,10 @@ jobs:
         run: node tests/test-fighter-records-feed.mjs
       - name: Actualizar rankings oficiales
         continue-on-error: true
-        run: python3 scripts/sync-ufc-rankings.py
+        run: python3 scripts/run-data-sync.py rankings
       - name: Guardar rankings actualizados
         run: |
-          git add assets/data/ufc-rankings.json
+          git add assets/data/ufc-rankings.json assets/data/sync-health.json
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -84,12 +85,12 @@ jobs:
         if: steps.key.outputs.configured == 'true'
         env:
           CITO_API_KEY: ${{ secrets.CITO_API_KEY }}
-        run: python3 scripts/sync-cito-events.py
+        run: python3 scripts/run-data-sync.py events
       - name: Verificar resultados recientes con UFC
-        run: python3 scripts/reconcile-official-results.py
+        run: python3 scripts/run-data-sync.py results
       - name: Guardar datos actualizados
         run: |
-          git add assets/data/ufc-events.json
+          git add assets/data/ufc-events.json assets/data/sync-health.json
           if [ -d assets/images/events ]; then git add assets/images/events; fi
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
@@ -118,10 +119,10 @@ jobs:
         run: node tests/test-fighter-photos.mjs
       - name: Actualizar fotografías de campeones y excampeones
         continue-on-error: true
-        run: python3 scripts/sync-fighter-photos.py
+        run: python3 scripts/run-data-sync.py photos
       - name: Guardar fotografías consultadas
         run: |
-          git add assets/data/fighter-photos.json
+          git add assets/data/fighter-photos.json assets/data/sync-health.json
           if [ -d assets/images/fighter-variants ]; then git add assets/images/fighter-variants; fi
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
@@ -131,14 +132,27 @@ jobs:
             git push origin HEAD:main
           fi
       - name: Actualizar récords y estadísticas tras las carteleras
-        run: python3 scripts/sync-ufc-fighter-records.py --ensure-full
+        run: python3 scripts/run-data-sync.py records --ensure-full
       - name: Guardar perfiles consultados
         run: |
-          git add assets/data/fighter-records.json
+          git add assets/data/fighter-records.json assets/data/sync-health.json
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git commit -m 'Actualizar récords y estadísticas tras las carteleras UFC'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Guardar estado incluso tras un fallo
+        if: always()
+        run: |
+          git add assets/data/sync-health.json assets/data/ufc-events.json assets/data/ufc-rankings.json assets/data/fighter-records.json assets/data/fighter-photos.json assets/js/fighter-directory-data.js docs/fighter-directory-sources.json
+          if [ -d assets/images/events ]; then git add assets/images/events; fi
+          if [ -d assets/images/fighter-variants ]; then git add assets/images/fighter-variants; fi
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Registrar estado de las sincronizaciones'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
