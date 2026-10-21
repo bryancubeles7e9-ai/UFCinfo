@@ -61,3 +61,13 @@ globalThis.fetch=async()=>({ok:true,json:async()=>freedom});
 assert.equal(await refreshEvents(),true);
 assert.equal(eventsFeed.events[0].eventKind,'special');
 console.log('PASS: UFC Freedom special event accepted');
+
+for (const status of ['cancelled', 'postponed']) {
+ const inactive=structuredClone(freedom);
+ inactive.events[0].status=status;
+ globalThis.fetch=async()=>({ok:true,json:async()=>inactive});
+ assert.equal(await refreshEvents(),true);
+ assert.equal(eventsFeed.events.length,0);
+ assert.equal(eventsFeed.unavailable,false);
+}
+console.log('PASS: cancelled and postponed cards remain out of the active feed');

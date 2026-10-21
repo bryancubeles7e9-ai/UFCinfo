@@ -57,11 +57,13 @@ def completed_card(page, event, now):
     if not bouts or len(bouts) > 30 or len(pairs) != len(bouts):
         raise ValueError('Invalid official bout count')
     previous = event.get('bouts', [])
+    if len(bouts) < (len(previous) + 1) // 2:
+        raise ValueError('Official card appears truncated; preserve saved bouts')
     if previous and not pairs.intersection(pair(b) for b in previous):
         raise ValueError('Official card identity mismatch')
     # Never erase a previously verified result because another source omits it.
     for saved in previous:
-        if pair(saved) not in pairs:
+        if pair(saved) not in pairs and (saved.get('winner') or saved.get('outcome')):
             bouts.append(saved)
     bouts.sort(key=lambda b: {'main': 0, 'prelims': 1, 'early-prelims': 2}.get(b.get('section', 'main'), 0))
     if len(bouts) > 30:
@@ -82,11 +84,17 @@ def fetch(event):
 
 def reconcile(feed, fetch_page=fetch, now=None):
     now = now or datetime.now(timezone.utc)
-    targets = [e for e in feed['events'] if now - timedelta(days=14) <= datetime.fromisoformat(e['date'].replace('Z', '+00:00')) <= now]
+    targets = [e for e in feed['events'] if e.get('status') not in ('cancelled', 'postponed') and now - timedelta(days=14) <= datetime.fromisoformat(e['date'].replace('Z', '+00:00')) <= now]
     failed, updated = [], []
     for event in sorted(targets, key=lambda e: e['date'], reverse=True)[:3]:
         try:
             bouts = completed_card(fetch_page(event), event, now)
+            removed = [b for b in event.get('bouts', []) if pair(b) not in {pair(current) for current in bouts}]
+            if removed:
+                event['cardChanges'] = (event.get('cardChanges', []) + [
+                    {'kind': 'removed-from-card', 'checkedAt': now.isoformat(), 'source': 'UFC', 'bout': b}
+                    for b in removed])[-100:]
+            event.pop('pendingBoutRemovals', None)
             event.update(bouts=bouts, status='completed', checkedAt=now.date().isoformat(),
                          resultsSource=event['source'], resultsCheckedAt=now.isoformat())
             updated.append(event['id'])

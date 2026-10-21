@@ -15,11 +15,11 @@ export function confirmedCalendar(feed) {
     if (!event || typeof event.id!=='string' || !/^ufc-[a-z0-9-]{1,100}$/.test(event.id) || ids.has(event.id) ||
         event.type!=='official' || event.source!==`https://www.ufc.com/event/${event.id}` ||
         !Number.isFinite(timestamp(event.date)) || !Array.isArray(event.bouts) || event.bouts.length>30 ||
-        !['announced','scheduled','live','completed','cancelled'].includes(event.status)) return unavailable;
+        !['announced','scheduled','live','completed','cancelled','postponed'].includes(event.status)) return unavailable;
     ids.add(event.id);
     for (const bout of event.bouts) {
       if (!bout || !validName(bout.red) || !validName(bout.blue) || identity(bout.red)===identity(bout.blue)) return unavailable;
-      if (event.status==='cancelled' || bout.status==='cancelled') continue;
+      if (['cancelled','postponed'].includes(event.status) || bout.status==='cancelled') continue;
       bouts.push({key:pairKey([bout.red,bout.blue]),eventId:event.id,date:event.date,status:event.status,url:event.source});
     }
   }

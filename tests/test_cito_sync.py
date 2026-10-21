@@ -1,4 +1,5 @@
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+from copy import deepcopy
 import importlib.util
 import json
 from pathlib import Path
@@ -34,7 +35,12 @@ class CitoSyncTests(unittest.TestCase):
             calls.append(path)
             if path == '/upcoming': return upcoming
             if path == '/recent': return recent
-            return [bout('Prelims'), bout(winner='red'), bout('Early Prelims')]
+            fights = [bout('Prelims'), bout(winner='red'), bout('Early Prelims')]
+            for i, fight in enumerate(fights):
+                if i != 1:
+                    for fighter in fight['fighters']:
+                        fighter['fighterName'] += str(i)
+            return fights
         feed = sync.synchronize(fetch, old, NOW)
         self.assertEqual(feed['source'], 'Cito')
         self.assertEqual(len(calls), 5)
@@ -82,6 +88,129 @@ class CitoSyncTests(unittest.TestCase):
             with self.assertRaises(sync.SyncError) as context:
                 sync.request_json('/recent', 'secret-do-not-log')
         self.assertNotIn('secret-do-not-log', str(context.exception))
+
+    def test_missing_bout_requires_consistent_comparable_snapshots_one_hour_apart(self):
+        a, b = dict(red='A', blue='B'), dict(red='C', blue='D')
+        prior = {'bouts': [a, b]}
+        prior['bouts'] = sync.merge_bouts(prior, [a], set(), NOW)
+        self.assertIn(b, prior['bouts'])
+        prior['bouts'] = sync.merge_bouts(prior, [a], set(), NOW + timedelta(minutes=10))
+        self.assertIn(b, prior['bouts'])
+        prior['bouts'] = sync.merge_bouts(prior, [a], set(), NOW + timedelta(hours=6))
+        self.assertEqual(prior['bouts'], [a])
+        self.assertEqual(prior['cardChanges'][-1]['kind'], 'removed-from-card')
+        self.assertEqual(prior['pendingBoutRemovals'], {})
+
+    def test_empty_or_massively_partial_response_preserves_card(self):
+        saved = [dict(red=f'A{i}', blue=f'B{i}') for i in range(10)]
+        for incoming in ([], saved[:1]):
+            prior = {'bouts': deepcopy(saved)}
+            for hours in (0, 6, 24):
+                prior['bouts'] = sync.merge_bouts(prior, incoming, set(), NOW + timedelta(hours=hours))
+                self.assertEqual(len(prior['bouts']), 10)
+
+    def test_replacement_cancellation_and_result_preservation(self):
+        a, b, result = dict(red='A', blue='B'), dict(red='C', blue='D'), dict(red='E', blue='F', winner='E')
+        replacement = dict(red='A', blue='G')
+        prior = {'bouts': [a, b, result]}
+        merged = sync.merge_bouts(prior, [replacement], {sync.pair(b), sync.pair(result)}, NOW)
+        self.assertEqual(merged, [replacement, result])
+        self.assertEqual([c['kind'] for c in prior['cardChanges']], ['replaced', 'cancelled', 'added'])
+        stale = dict(red='E', blue='F', winner=None)
+        self.assertEqual(sync.merge_bouts({'bouts': [result]}, [stale], set(), NOW), [result])
+
+    def test_reappearing_pair_clears_pending_and_normalizes_accents(self):
+        a = dict(red='José Aldo', blue='Max Holloway')
+        b = dict(red='C', blue='D')
+        prior = {'bouts': [a, b]}
+        prior['bouts'] = sync.merge_bouts(prior, [b], set(), NOW)
+        returned = dict(red='max holloway', blue='Jose Aldo')
+        prior['bouts'] = sync.merge_bouts(prior, [returned, b], set(), NOW + timedelta(hours=6))
+        self.assertEqual(len(prior['bouts']), 2)
+        self.assertEqual(prior['pendingBoutRemovals'], {})
+
+    def test_changed_snapshot_resets_confirmation(self):
+        a, b, c = [dict(red=x, blue=x+'2') for x in ('A', 'B', 'C')]
+        prior = {'bouts': [a, b, c]}
+        prior['bouts'] = sync.merge_bouts(prior, [a, b], set(), NOW)
+        prior['bouts'] = sync.merge_bouts(prior, [a], set(), NOW + timedelta(hours=6))
+        self.assertIn(c, prior['bouts'])
+
+    def test_rescheduled_fight_night_keeps_identity_and_five_request_budget(self):
+        row = event('ufc-fight-night-test', '2026-11-01T00:00:00Z', 'UFC Fight Night')
+        def fetch(path):
+            if path == '/upcoming': return [row]
+            if path == '/recent': return []
+            return [bout()]
+        first = sync.synchronize(fetch, {'events': []}, NOW)
+        old_id = first['events'][0]['id']
+        original = deepcopy(first)
+        row['startsAt'] = '2026-11-08T00:00:00Z'
+        second = sync.synchronize(fetch, first, NOW + timedelta(hours=6))
+        self.assertEqual(first, original)
+        self.assertEqual(len(second['events']), 1)
+        self.assertEqual(second['events'][0]['id'], old_id)
+        self.assertEqual(second['events'][0]['date'], '2026-11-08T00:00:00+00:00')
+        self.assertEqual(second['events'][0]['cardChanges'][-1]['kind'], 'rescheduled')
+
+    def test_inactive_events_require_explicit_reactivation(self):
+        row = event('ufc-333', '2026-10-25T00:00:00Z', 'UFC 333')
+        calls = []
+        def fetch(path):
+            calls.append(path)
+            if path == '/upcoming': return [row]
+            if path == '/recent': return []
+            return [bout()]
+        feed = sync.synchronize(fetch, {'events': []}, NOW)
+        for status in ('cancelled', '', 'postponed', ''):
+            row['status'] = status
+            calls.clear()
+            feed = sync.synchronize(fetch, feed, NOW)
+            self.assertIn(feed['events'][0]['status'], ('cancelled', 'postponed'))
+            self.assertEqual(len(calls), 2)
+        row['status'] = 'scheduled'
+        feed = sync.synchronize(fetch, feed, NOW)
+        self.assertEqual(feed['events'][0]['status'], 'scheduled')
+
+    def test_transfer_is_recorded_only_after_origin_removal(self):
+        cards = [event('ufc-333', '2026-10-25T00:00:00Z', 'UFC 333'), event('ufc-334', '2026-11-15T00:00:00Z', 'UFC 334')]
+        cancelled = bout(); cancelled['status'] = 'cancelled'
+        previous = {'events': [{'id': 'ufc-333', 'status': 'scheduled', 'date': cards[0]['startsAt'], 'bouts': sync.normalize_bouts([bout()], False)}]}
+        def fetch(path):
+            if path == '/upcoming': return cards
+            if path == '/recent': return []
+            return [cancelled] if path == '/ufc-333/bouts' else [bout()]
+        feed = sync.synchronize(fetch, previous, NOW)
+        origin = next(e for e in feed['events'] if e['id'] == 'ufc-333')
+        self.assertEqual(origin['bouts'], [])
+        self.assertEqual(origin['cardChanges'][-1]['kind'], 'moved')
+        self.assertEqual(origin['cardChanges'][-1]['destinationEventId'], 'ufc-334')
+
+    def test_listing_updates_distant_date_without_extra_bout_request(self):
+        cards = [event(f'ufc-{333+i}', f'2026-11-{1+i*7:02d}T00:00:00Z', f'UFC {333+i}') for i in range(4)]
+        old = {'events': [{'id': 'ufc-336', 'status': 'scheduled', 'date': '2026-11-20T00:00:00Z', 'bouts': []}]}
+        calls = []
+        def fetch(path):
+            calls.append(path)
+            if path == '/upcoming': return cards
+            if path == '/recent': return []
+            return [bout()]
+        feed = sync.synchronize(fetch, old, NOW)
+        distant = next(e for e in feed['events'] if e['id'] == 'ufc-336')
+        self.assertEqual(distant['date'], '2026-11-22T00:00:00+00:00')
+        self.assertEqual(len(calls), 5)
+        self.assertNotIn('/ufc-336/bouts', calls)
+
+    def test_duplicate_pairs_are_rejected_and_omitted_event_is_preserved(self):
+        with self.assertRaises(sync.SyncError):
+            sync.merge_bouts({}, [dict(red='A', blue='B'), dict(red='B', blue='A')], set(), NOW)
+        old = {'events': [{'id': 'ufc-336', 'status': 'scheduled', 'date': '2026-11-20T00:00:00Z', 'bouts': []}]}
+        def fetch(path):
+            if path == '/upcoming': return [event('ufc-333', '2026-10-25T00:00:00Z', 'UFC 333')]
+            if path == '/recent': return []
+            return [bout()]
+        feed = sync.synchronize(fetch, old, NOW)
+        self.assertEqual(next(e for e in feed['events'] if e['id']=='ufc-336')['status'], 'scheduled')
 
 
 if __name__ == '__main__':

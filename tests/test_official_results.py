@@ -32,4 +32,25 @@ class OfficialResultsTests(unittest.TestCase):
     def test_date_mismatch_rejected(self):
         with self.assertRaises(ValueError):m.completed_card(page().replace('1792281600','1700000000'),event(),NOW)
 
+    def test_removed_announced_fight_does_not_reappear_after_results(self):
+        e=event(); e['bouts'].append(dict(red='Old', blue='Opponent', winner=None))
+        feed={'events':[e]}
+        m.reconcile(feed,lambda _:page(),NOW)
+        self.assertEqual(len(e['bouts']),2)
+        self.assertNotIn('Old',[b['red'] for b in e['bouts']])
+        self.assertEqual(e['cardChanges'][0]['kind'],'removed-from-card')
+        self.assertEqual(feed['resultsVerification']['failedIds'],[])
+
+    def test_cancelled_and_postponed_cards_are_not_resurrected(self):
+        for status in ('cancelled','postponed'):
+            e=event();e['status']=status
+            m.reconcile({'events':[e]},lambda _:self.fail('Inactive card fetched'),NOW)
+            self.assertEqual(e['status'],status)
+
+    def test_truncated_official_card_preserves_previous_card(self):
+        e=event()
+        e['bouts'] += [dict(red=str(i),blue=str(i)+'b',winner=None) for i in range(8)]
+        with self.assertRaisesRegex(ValueError,'truncated'):
+            m.completed_card(page(),e,NOW)
+
 if __name__=='__main__':unittest.main()

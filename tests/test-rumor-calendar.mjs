@@ -28,6 +28,10 @@ const cancelled=structuredClone(feed);cancelled.events[0].bouts[0].status='cance
 assert.equal(confirmedCalendar(cancelled).match(record),null);
 const cancelledEvent=structuredClone(feed);cancelledEvent.events[0].status='cancelled';
 assert.equal(confirmedCalendar(cancelledEvent).match(record),null);
+const postponedEvent=structuredClone(cancelledEvent);
+postponedEvent.events[0].status='postponed';
+assert.equal(confirmedCalendar(postponedEvent).available,true);
+assert.equal(confirmedCalendar(postponedEvent).match(record),null);
 const completed=structuredClone(feed);
 completed.events[0].status='completed';
 const mixedReports={...record,publishedAt:'2026-12-13T03:42:13Z',reports:[{publishedAt:'2026-12-10T22:44:51Z'},{publishedAt:'2026-12-13T03:42:13Z'}]};

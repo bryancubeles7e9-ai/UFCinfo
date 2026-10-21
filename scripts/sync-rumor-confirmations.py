@@ -128,6 +128,8 @@ def verify_feeds(feed, grouped, events, fetch_card, now, names=None):
         posted = as_date(record['publishedAt'])
         candidates = []
         for event in events:
+            if event.get('status') in ('cancelled', 'postponed'):
+                continue
             url = event_url(event)
             if not url:
                 continue

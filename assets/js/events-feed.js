@@ -15,7 +15,7 @@ function validEvent(event, year) {
     event.source === `https://www.ufc.com/event/${event.id}` &&
     ['title', 'subtitle', 'location', 'date', 'checkedAt'].every(k => typeof event[k] === 'string') &&
     Number.isFinite(Date.parse(event.date)) &&
-    ['completed', 'announced', 'scheduled', 'live'].includes(event.status || 'completed') &&
+    ['completed', 'announced', 'scheduled', 'live', 'cancelled', 'postponed'].includes(event.status || 'completed') &&
     ((event.status || 'completed') !== 'completed' || new Date(event.date).getUTCFullYear() === year) &&
     (event.poster == null || event.poster === `assets/images/events/${event.id}.jpg`) &&
     (event.posterAlt == null || typeof event.posterAlt === 'string') &&
@@ -42,7 +42,8 @@ export async function refreshEvents() {
         (feed.synchronizedAt !== null && (typeof feed.synchronizedAt !== 'string' || !Number.isFinite(Date.parse(feed.synchronizedAt)))) ||
         (feed.source !== 'UFC' && !feed.synchronizedAt) ||
         !feed.events.every(e => validEvent(e, feed.year)) || new Set(feed.events.map(e => e.id)).size !== feed.events.length) throw new Error('Invalid feed');
-    eventsFeed.events = feed.events;
+    // Keep inactive cards in the source archive, out of upcoming cards/Fight Lab.
+    eventsFeed.events = feed.events.filter(e => !['cancelled', 'postponed'].includes(e.status));
     eventsFeed.source = feed.source;
     eventsFeed.sourceUrl = feed.sourceUrl;
     eventsFeed.synchronizedAt = feed.synchronizedAt || eventsFeed.synchronizedAt;

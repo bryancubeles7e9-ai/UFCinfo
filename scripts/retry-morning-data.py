@@ -25,6 +25,8 @@ def plan(events, state, fighters, now, failed_event_ids=()):
     names = {records.normalize(n):f for f in fighters for n in [f['name'],*f.get('aliases',[])]}
     cards, ids, missing = [], set(), False
     for event in events:
+        if event.get('status') in ('cancelled', 'postponed'):
+            continue
         start = datetime.fromisoformat(event['date'].replace('Z','+00:00'))
         if not now-timedelta(hours=48) <= start <= now:
             continue

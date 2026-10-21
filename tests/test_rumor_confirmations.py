@@ -98,6 +98,12 @@ class AutomaticGroupTests(unittest.TestCase):
         result,grouped=self.verify([self.group()],fetch=lambda url:self.fail('Must not fetch'),events=[event])
         self.assertEqual(result['checkedCards'],0)
         self.assertEqual(len(grouped['groups']),1)
+    def test_inactive_event_does_not_confirm_rumor(self):
+        for status in ('cancelled', 'postponed'):
+            event=self.event();event['status']=status
+            result,grouped=self.verify([self.group()],fetch=lambda url:self.fail('Must not fetch'),events=[event])
+            self.assertEqual(result['checkedCards'],0)
+            self.assertEqual(len(grouped['groups']),1)
     def test_legacy_reviewed_rumor_still_gets_confirmation(self):
         feed={'rumors':[{'id':'old','fighters':['jiri','navajo'],'publishedAt':'2026-10-07T08:00:00Z','official':None}]}
         module.verify_feeds(feed,{'groups':[]},[self.event()],lambda url:self.html(),'2026-10-07T16:00:00Z',{'jiri':'Jiří Procházka','navajo':'Navajo Stirling'})

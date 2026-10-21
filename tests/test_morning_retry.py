@@ -20,6 +20,10 @@ class MorningRetryTests(unittest.TestCase):
         self.assertEqual(m.plan([e],state,fighters,now),([] ,{'B'},False))
         e['status']='scheduled'
         self.assertEqual(m.plan([e],state,fighters,now)[0],[e])
+        for status in ('cancelled','postponed'):
+            e['status']=status
+            self.assertEqual(m.plan([e],state,fighters,now),([],set(),False))
+        e['status']='scheduled'
         e['date']='2026-10-10T00:00:00Z'
         self.assertEqual(m.plan([e],state,fighters,now),([],set(),False))
 if __name__=='__main__':unittest.main()

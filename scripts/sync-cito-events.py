@@ -11,6 +11,8 @@ import os
 import re
 import sys
 import tempfile
+import unicodedata
+from copy import deepcopy
 
 API = 'https://api.citoapi.com/api/v1/ufc/events'
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,6 +21,64 @@ SOURCE_URL = 'https://citoapi.com/ufc-api/'
 
 class SyncError(Exception):
     pass
+
+
+def pair(bout):
+    def name(value):
+        return re.sub(r'[^a-z0-9]', '', unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode().lower())
+    return tuple(sorted(name(bout[k]) for k in ('red', 'blue')))
+
+
+def change(event, kind, now, **details):
+    entry = {'kind': kind, 'checkedAt': now.isoformat(), 'source': 'Cito', **details}
+    event['cardChanges'] = (event.get('cardChanges', []) + [entry])[-100:]
+
+
+def merge_bouts(prior, incoming, cancelled, now):
+    """Absence is not cancellation: require a second comparable snapshot."""
+    current = {pair(b): b for b in incoming}
+    if len(current) != len(incoming) or any(len(set(key)) != 2 for key in current):
+        raise SyncError('Duplicate or invalid fight pairing')
+    saved = prior.get('bouts', [])
+    pending = {}
+    result = list(incoming)
+    # A major drop or an empty response is treated as incomplete, indefinitely.
+    comparable = bool(incoming) and len(incoming) >= max(1, (len(saved) + 1) // 2)
+    snapshot = sorted('|'.join(key) for key in current)
+    for bout in saved:
+        key = pair(bout)
+        if key in current:
+            if bout.get('winner') or bout.get('outcome'):
+                # A stale provider response must not erase a verified result.
+                if not current[key].get('winner') and not current[key].get('outcome'):
+                    result[result.index(current[key])] = bout
+            continue
+        if bout.get('winner') or bout.get('outcome'):
+            result.append(bout)
+            continue
+        if key in cancelled:
+            change(prior, 'cancelled', now, bout=bout)
+            continue
+        replacements = [b for b in incoming if set(pair(b)) & set(key) and pair(b) not in {pair(s) for s in saved}]
+        if len(replacements) == 1:
+            change(prior, 'replaced', now, bout=bout, replacement=replacements[0])
+            continue
+        token = '|'.join(key)
+        old_pending = prior.get('pendingBoutRemovals', {}).get(token, {})
+        first = old_pending.get('firstSeenAt')
+        enough_time = first and now - datetime.fromisoformat(first) >= timedelta(hours=1)
+        consistent = old_pending.get('snapshot') == snapshot
+        if comparable and enough_time and old_pending.get('comparable') and consistent:
+            change(prior, 'removed-from-card', now, bout=bout)
+            continue
+        pending[token] = {'firstSeenAt': first if comparable and old_pending.get('comparable') and consistent else now.isoformat(),
+                          'comparable': comparable, 'snapshot': snapshot, 'bout': bout}
+        result.append(bout)
+    prior['pendingBoutRemovals'] = pending
+    for bout in incoming:
+        if pair(bout) not in {pair(s) for s in saved}:
+            change(prior, 'added', now, bout=bout)
+    return result
 
 
 def request_json(path, key):
@@ -125,7 +185,7 @@ def normalize_bouts(value, completed):
 
 
 def synchronize(fetch, previous, now):
-    old = {e['id']: {**e, 'dataSource': e.get('dataSource') or previous.get('source', 'UFC')}
+    old = {e['id']: {**deepcopy(e), 'dataSource': e.get('dataSource') or previous.get('source', 'UFC')}
            for e in previous.get('events', []) if isinstance(e, dict) and isinstance(e.get('id'), str)}
     upcoming, recent = rows(fetch('/upcoming')), rows(fetch('/recent'))
     candidates = {}
@@ -133,6 +193,13 @@ def synchronize(fetch, previous, now):
         for row in listing:
             eid, number, kind = identity(row)
             if eid is None: continue
+            slug = row.get('slug') or row.get('eventSlug')
+            matches = [e for e in old.values() if e.get('citoSlug') == slug]
+            if len(matches) > 1:
+                raise SyncError('Ambiguous saved provider identity')
+            if matches:
+                # Keep links/favourites stable when a Fight Night changes date.
+                eid = matches[0]['id']
             date = date_of(row)
             if is_recent and (date.year != now.year or date > now + timedelta(days=1)): continue
             if not is_recent and date < now - timedelta(days=2): continue
@@ -140,19 +207,47 @@ def synchronize(fetch, previous, now):
             candidates[eid] = (row, number, kind, is_recent, date)
     if not candidates:
         raise SyncError('No UFC events found in Cito lists')
-    near_recent = sorted(((eid, c) for eid, c in candidates.items() if c[3] and c[4] >= now - timedelta(days=14)), key=lambda pair: pair[1][4], reverse=True)
-    future = sorted(((eid, c) for eid, c in candidates.items() if not c[3]), key=lambda pair: pair[1][4])
+    inactive = set()
+    for eid, (row, number, kind, is_recent, date) in candidates.items():
+        prior = old.get(eid)
+        status = str(row.get('status', '')).lower()
+        if status in ('cancelled', 'canceled', 'postponed'):
+            inactive.add(eid)
+            if prior and prior.get('status') != 'completed':
+                target_status = 'postponed' if status == 'postponed' else 'cancelled'
+                if prior.get('status') != target_status:
+                    change(prior, target_status, now)
+                prior.update(status=target_status, checkedAt=now.date().isoformat(), citoSlug=row.get('slug') or row.get('eventSlug'))
+            continue
+        if prior and prior.get('status') != 'completed':
+            if date_of({'startsAt': prior['date']}) != date:
+                change(prior, 'rescheduled', now, previousDate=prior['date'], date=date.isoformat())
+                prior['date'] = date.isoformat()
+            prior['citoSlug'] = row.get('slug') or row.get('eventSlug')
+            # An unknown/absent status cannot silently reactivate a cancelled card.
+            if prior.get('status') in ('cancelled', 'postponed'):
+                if status in ('scheduled', 'announced'):
+                    change(prior, 'reinstated', now)
+                    prior['status'] = status
+                else:
+                    inactive.add(eid)
+    near_recent = sorted(((eid, c) for eid, c in candidates.items() if eid not in inactive and c[3] and c[4] >= now - timedelta(days=14)), key=lambda pair: pair[1][4], reverse=True)
+    future = sorted(((eid, c) for eid, c in candidates.items() if eid not in inactive and not c[3]), key=lambda pair: pair[1][4])
     selected = near_recent[:1] + future[:2]
     if len(selected) < 3:
         selected += [pair for pair in future[2:] + near_recent[1:] if pair not in selected][:3-len(selected)]
     for eid, (row, number, kind, is_recent, date) in selected:
         slug = row.get('slug') or row.get('eventSlug')
-        bouts = normalize_bouts(fetch('/' + quote(slug, safe='') + '/bouts'), is_recent)
+        raw_bouts = rows(fetch('/' + quote(slug, safe='') + '/bouts'))
+        bouts = normalize_bouts(raw_bouts, is_recent)
         prior = old.get(eid, {})
-        pairs = {frozenset((b['red'].casefold(), b['blue'].casefold())) for b in bouts}
-        for saved in prior.get('bouts', []):
-            if (saved.get('winner') or saved.get('outcome')) and frozenset((saved['red'].casefold(), saved['blue'].casefold())) not in pairs:
-                bouts.append(saved)
+        cancelled = {pair({'red': corner_name(b, 'red')[0], 'blue': corner_name(b, 'blue')[0]})
+                     for b in raw_bouts if str(b.get('status', '')).lower() in ('cancelled', 'canceled')}
+        if cancelled.intersection(pair(b) for b in bouts):
+            raise SyncError('Conflicting active and cancelled pairing')
+        bouts = merge_bouts(prior, bouts, cancelled, now)
+        if len(bouts) > 30:
+            raise SyncError('Merged card exceeds capacity')
         bouts.sort(key=lambda b: {'main': 0, 'prelims': 1, 'early-prelims': 2}.get(b.get('section', 'main'), 0))
         name = row.get('name') or row.get('title') or ''
         if not isinstance(name, str): raise SyncError('Invalid event name')
@@ -160,21 +255,33 @@ def synchronize(fetch, previous, now):
         if isinstance(venue, dict):
             venue = ', '.join(str(venue[k]) for k in ('name', 'city', 'country') if venue.get(k))
         if not isinstance(venue, str): raise SyncError('Invalid venue')
-        status = 'completed' if is_recent else 'scheduled'
-        old[eid] = {'id': eid, 'number': number, 'eventKind': kind,
+        status = 'completed' if is_recent or prior.get('status') == 'completed' else 'scheduled'
+        old[eid] = {**prior, 'id': eid, 'number': number, 'eventKind': kind, 'citoSlug': slug,
                     'title': f'UFC {number}' if number else 'UFC Freedom 250' if kind == 'special' else 'UFC Fight Night',
                     'subtitle': f"{bouts[0]['red']} vs {bouts[0]['blue']}" if bouts else 'Cartelera pendiente de anuncio',
                     'status': status, 'date': date.isoformat(), 'location': venue or prior.get('location') or 'Recinto no indicado',
                     'type': 'official', 'source': f'https://www.ufc.com/event/{eid}', 'checkedAt': now.date().isoformat(),
                     'bouts': bouts, 'dataSource': 'Cito',
                     'poster': prior.get('poster'), 'posterSource': prior.get('posterSource'), 'posterAlt': prior.get('posterAlt')}
+    # Label a transfer only after removal at the origin has been confirmed.
+    # Merely finding the same pair elsewhere is not enough (it could be a rematch).
+    for origin in old.values():
+        for entry in origin.get('cardChanges', []):
+            if entry['kind'] not in ('cancelled', 'removed-from-card') or entry['checkedAt'] != now.isoformat() or 'bout' not in entry:
+                continue
+            destinations = [e for e in old.values() if e['id'] != origin['id']
+                            and e.get('status') in ('scheduled', 'announced')
+                            and date_of({'startsAt': e['date']}) > now
+                            and any(pair(b) == pair(entry['bout']) for b in e.get('bouts', []))]
+            if len(destinations) == 1:
+                entry.update(kind='moved', destinationEventId=destinations[0]['id'])
     # A Cito outage, limited recent window, or incomplete card cannot erase the archive.
     events = [e for e in old.values() if e.get('status') != 'completed' or date_of({'startsAt': e['date']}).year == now.year]
     events.sort(key=lambda e: e['date'], reverse=True)
     if len(events) > 100: raise SyncError('Events feed exceeds capacity')
     old_providers = {e['dataSource'] for e in events}
     source = 'Cito + UFCalendar' if 'UFCalendar' in old_providers else 'Cito'
-    return {'schemaVersion': 1, 'year': now.year, 'source': source, 'sourceUrl': SOURCE_URL, 'synchronizedAt': now.isoformat(), 'events': events}
+    return {**previous, 'schemaVersion': 1, 'year': now.year, 'source': source, 'sourceUrl': SOURCE_URL, 'synchronizedAt': now.isoformat(), 'events': events}
 
 
 def main():

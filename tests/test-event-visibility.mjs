@@ -8,4 +8,8 @@ assert.equal(isAwaitingResults({...event,status:'completed'},now),false);
 assert.equal(isAwaitingResults({...event,date:'2026-10-25T00:00:00Z'},now),false);
 assert.equal(visibleOfficialEvents([{...event,status:'completed'}],now).length,1);
 assert.equal(visibleOfficialEvents([{...event,date:'2025-01-01T00:00:00Z'}],now).length,0);
+for (const status of ['cancelled','postponed']) {
+ assert.equal(visibleOfficialEvents([{...event,status}],now).length,0);
+ assert.equal(isAwaitingResults({...event,status},now),false);
+}
 console.log('PASS: delayed results remain visible, without labeling an unverified card completed');
