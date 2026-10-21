@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-21T12:01:18.375365+00:00",
+  "synchronizedAt": "2026-10-21T22:06:39.079720+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -51,7 +51,8 @@
       "poster": "assets/images/events/ufc-335.jpg",
       "posterSource": "https://www.ufc.com/s3/files/styles/background_image_sm/s3/2026-10/0000000000_335_BoutAnn_CO-DL_Endpage.jpg?h=d1cb525d&itok=lvjtmVB1",
       "posterAlt": "Charles Oliveira and Diego Lopes over a gold and black background",
-      "dataSource": "UFCalendar"
+      "dataSource": "UFCalendar",
+      "citoSlug": "ufc-335"
     },
     {
       "id": "ufc-fight-night-november-21-2026",
@@ -160,7 +161,8 @@
       "poster": "assets/images/events/ufc-fight-night-november-21-2026.jpg",
       "posterAlt": "UFC light heavyweights Jiri Prochazka and Navajo Stirling stand side by side over a red background",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/_Endpage.jpg?h=d1cb525d&itok=EL8X6ZKz",
-      "dataSource": "UFCalendar"
+      "dataSource": "UFCalendar",
+      "citoSlug": "ufc-fight-night-november-21-2026"
     },
     {
       "id": "ufc-334",
@@ -235,7 +237,8 @@
       "posterAlt": "Ciryl Gane and Josh Hokit side by side over a black and gold background",
       "dataSource": "UFCalendar",
       "scheduleSource": "https://www.ufc.com/event/ufc-334",
-      "scheduleCheckedAt": "2026-10-20T11:44:05.043624+00:00"
+      "scheduleCheckedAt": "2026-10-20T11:44:05.043624+00:00",
+      "citoSlug": "ufc-334"
     },
     {
       "id": "ufc-fight-night-november-07-2026",
@@ -399,7 +402,8 @@
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/110726-ufc-fight-night-bonfim-vs-brady-TEMP-HERO.jpg?h=d1cb525d&itok=vmUARwy5",
       "dataSource": "UFCalendar",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-      "scheduleCheckedAt": "2026-10-20T11:44:05.063105+00:00"
+      "scheduleCheckedAt": "2026-10-20T11:44:05.063105+00:00",
+      "citoSlug": "ufc-fight-night-november-07-2026"
     },
     {
       "id": "ufc-fight-night-october-31-2026",
@@ -539,7 +543,9 @@
       "dataSource": "Cito",
       "poster": "assets/images/events/ufc-fight-night-october-31-2026.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/103126-ufc-fight-night-moicano-vs-nolan-TEMP-HERO.jpg?h=d1cb525d&itok=HAflfCIz",
-      "posterAlt": "UFC lightweights Renato Moicano and Tom Nolan side by side over a red background"
+      "posterAlt": "UFC lightweights Renato Moicano and Tom Nolan side by side over a red background",
+      "citoSlug": "ufc-fight-night-october-31-2026",
+      "pendingBoutRemovals": {}
     },
     {
       "id": "ufc-333",
@@ -712,7 +718,9 @@
       "dataSource": "Cito",
       "poster": "assets/images/events/ufc-333.jpg",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/102426-ufc-333-volkanovski-vs-evloev-EVENT-ART.jpg?h=d1cb525d&itok=ceS_oo8W",
-      "posterAlt": "UFC featherweight champion Alexander Volkanovski and Movsar Evloev side by side over a black and gold background"
+      "posterAlt": "UFC featherweight champion Alexander Volkanovski and Movsar Evloev side by side over a black and gold background",
+      "citoSlug": "ufc-333",
+      "pendingBoutRemovals": {}
     },
     {
       "id": "ufc-fight-night-october-17-2026",
@@ -876,7 +884,8 @@
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-10/101726-ufc-fight-night-buckey-vs-malott-EVENT-ART.jpg?h=d1cb525d&itok=9nlcHO-H",
       "posterAlt": "Joaquin Buckley and Mike Malott side by side over a blue and red background",
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "resultsCheckedAt": "2026-10-21T12:01:20.477001+00:00"
+      "resultsCheckedAt": "2026-10-21T22:06:42.280764+00:00",
+      "citoSlug": "ufc-fight-night-october-17-2026"
     },
     {
       "id": "ufc-fight-night-october-10-2026",
@@ -1029,7 +1038,7 @@
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/101026-ufc-fight-night-allen-vs-duncan-EVENT-ART.jpg?h=d1cb525d&itok=Giih5XjD",
       "posterAlt": "UFC middleweights Brendan Allen and Christian Leroy Duncan stand side-by-side over a green and black background",
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
-      "resultsCheckedAt": "2026-10-21T12:01:20.477001+00:00"
+      "resultsCheckedAt": "2026-10-21T22:06:42.280764+00:00"
     },
     {
       "id": "ufc-332",
@@ -6449,7 +6458,7 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-10-21T12:01:20.477001+00:00",
+    "checkedAt": "2026-10-21T22:06:42.280764+00:00",
     "verifiedIds": [
       "ufc-fight-night-october-17-2026",
       "ufc-fight-night-october-10-2026"
