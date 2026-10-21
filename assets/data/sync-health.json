@@ -38,10 +38,12 @@
       "exitCode": 0
     },
     "records": {
-      "attemptedAt": "2026-10-21T22:06:50.493356+00:00",
+      "attemptedAt": "2026-10-21T22:22:11.527571+00:00",
       "status": "partial",
       "pending": 1,
-      "finishedAt": "2026-10-21T22:06:52.843541+00:00",
+      "consecutiveFailures": 0,
+      "pendingSince": "2026-10-21T22:22:11.527571+00:00",
+      "finishedAt": "2026-10-21T22:22:12.803481+00:00",
       "exitCode": 0
     }
   }
