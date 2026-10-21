@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "source": "https://www.ufc.com/rankings",
-  "synchronizedAt": "2026-10-20T12:01:16.275730+00:00",
-  "published": "Tuesday, Oct. 06",
+  "synchronizedAt": "2026-10-21T06:01:00.827280+00:00",
+  "published": "Tuesday, Oct. 20",
   "categories": [
     {
       "id": "p4p-men",
@@ -14,8 +14,8 @@
         "Petr Yan",
         "Ilia Topuria",
         "Joshua Van",
-        "Sean Strickland",
         "Tom Aspinall",
+        "Sean Strickland",
         "Merab Dvalishvili",
         "Alex Pereira",
         "Ciryl Gane",
@@ -32,7 +32,7 @@
         5,
         6,
         7,
-        8,
+        7,
         9,
         10,
         11,
@@ -91,14 +91,14 @@
         "Mario Bautista",
         "Cory Sandhagen",
         "Payton Talbott",
-        "Aiemann Zahabi",
         "David Martinez",
+        "Aiemann Zahabi",
         "Raul Rosas Jr.",
         "Marlon Vera",
         "Deiveson Figueiredo",
-        "Farid Basharat",
         "Marcus McGhee",
-        "Raoni Barcelos"
+        "Raoni Barcelos",
+        "Bryce Mitchell"
       ],
       "ranks": [
         1,
@@ -207,10 +207,10 @@
         "Belal Muhammad",
         "Leon Edwards",
         "Kamaru Usman",
-        "Joaquin Buckley",
-        "Yaroslav Amosov",
-        "Uroš Medić",
         "Mike Malott",
+        "Yaroslav Amosov",
+        "Joaquin Buckley",
+        "Uroš Medić",
         "Daniel Rodriguez",
         "Neil Magny"
       ],
@@ -227,7 +227,7 @@
         10,
         11,
         12,
-        13,
+        12,
         14,
         15
       ]
@@ -341,7 +341,7 @@
         10,
         11,
         12,
-        13,
+        12,
         14,
         15
       ]
@@ -357,14 +357,14 @@
         "Mackenzie Dern",
         "Alexa Grasso",
         "Manon Fiorot",
-        "Erin Blanchfield",
         "Tatiana Suarez",
+        "Erin Blanchfield",
         "Julianna Peña",
         "Virna Jandiroba",
+        "Jasmine Jasudavicius",
         "Rose Namajunas",
         "Raquel Pennington",
-        "Denise Gomes",
-        "Maycee Barber"
+        "Denise Gomes"
       ],
       "ranks": [
         1,
@@ -429,9 +429,9 @@
         "Valentina Shevchenko",
         "Alexa Grasso",
         "Manon Fiorot",
+        "Jasmine Jasudavicius",
         "Erin Blanchfield",
         "Rose Namajunas",
-        "Jasmine Jasudavicius",
         "Maycee Barber",
         "Wang Cong",
         "Tracy Cortez",
@@ -439,8 +439,8 @@
         "Karine Silva",
         "Casey O'Neill",
         "Eduarda Moura",
-        "Regina Tarin",
-        "Gabriella Fernandes"
+        "Gabriella Fernandes",
+        "Regina Tarin"
       ],
       "ranks": [
         1,
@@ -449,7 +449,7 @@
         4,
         5,
         6,
-        6,
+        7,
         8,
         9,
         10,
@@ -467,8 +467,8 @@
         "Julianna Peña",
         "Joselyne Edwards",
         "Ailin Perez",
-        "Raquel Pennington",
         "Norma Dumont",
+        "Raquel Pennington",
         "Yana Santos",
         "Luana Santos",
         "Jacqueline Cavalcanti",
@@ -477,8 +477,8 @@
         "Bia Mesquita",
         "Michelle Montague",
         "Nora Cornolle",
-        "Melissa Croden",
-        "Daria Zhelezniakova"
+        "Chelsea Chandler",
+        "Alice Pereira"
       ],
       "ranks": [
         1,
