@@ -1,8 +1,39 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-21T09:00:57.729Z",
-  "lastSearchedAt": "2026-10-21T09:00:57.729Z",
+  "updatedAt": "2026-10-21T22:00:59.628Z",
+  "lastSearchedAt": "2026-10-21T22:00:59.628Z",
   "groups": [
+    {
+      "id": "2112861333578522824",
+      "fighterNames": [
+        "Islam Dulatov",
+        "Levan Chokheli"
+      ],
+      "matchupKey": "islamdulatov|levanchokheli|2026-12-05",
+      "eventDateHint": "2026-12-05",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Pelunaton comenta un posible cruce entre Islam Dulatov y Levan Chokheli; la publicación menciona el 5 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Pelunaton discusses a possible matchup between Islam Dulatov and Levan Chokheli; the post mentions December 5. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-21T22:00:59.628Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-21T10:59:31.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2112861333578522824",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2112861333578522824",
+          "publishedAt": "2026-10-21T10:59:31.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2111672184066527481",
       "fighterNames": [
@@ -601,8 +632,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-21T09:00:57.729Z",
-    "receivedPosts": 7,
-    "added": 0
+    "checkedAt": "2026-10-21T22:00:59.628Z",
+    "receivedPosts": 10,
+    "added": 1
   }
 }
