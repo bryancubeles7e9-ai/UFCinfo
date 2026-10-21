@@ -1,6 +1,6 @@
 import {confirmedCalendar} from './confirmed-rumor-matchups.mjs';
 import {groupCandidates} from './group-rumor-candidates.mjs';
-import {canonicalFighter,normalizeName} from './rumor-fighter-names.mjs';
+import {canonicalFighter,normalizeName,isAmbiguousFighter} from './rumor-fighter-names.mjs';
 import {candidateImport,validateGroupFeed} from '../assets/js/rumor-groups.js';
 
 export const boxingPattern=/\b(boxing|boxeo|boxeador(?:es)?|boxeadoras?|pugilismo|tyson\s+fury|anthony\s+joshua|fury\s+vs\.?\s+joshua|aj[- ]fury)\b/i;
@@ -57,6 +57,7 @@ export function automaticFeed(payload,sources,previous={schemaVersion:1,updatedA
     if(normalized.some(text=>resultPattern.test(text)) && !normalized.some(text=>bookingPattern.test(text))) reasons.push('past-result');
     if(texts.some(text=>otherPromotionPattern.test(text)) && !texts.some(text=>ufcPattern.test(text))) reasons.push('other-promotion');
     if(candidate.fighters.length===2 && candidate.fighters.some(name=>!canonicalFighter(name))) {
+      if(candidate.fighters.some(isAmbiguousFighter)) reasons.push('ambiguous-fighters');
       // Prospects outside the directory need both explicit UFC context and a future booking report.
       if(!texts.some(text=>ufcPattern.test(text) && bookingPattern.test(normalizeName(text))) || candidate.fighters.some(name=>invalidNamePattern.test(name))) reasons.push('unverified-fighters');
     }

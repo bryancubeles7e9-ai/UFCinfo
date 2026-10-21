@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {automaticFeed,isBoxingPost} from '../scripts/rumor-auto-feed.mjs';
-import {catalogMatchup} from '../scripts/rumor-fighter-names.mjs';
+import {catalogMatchup,canonicalFighter,isAmbiguousFighter} from '../scripts/rumor-fighter-names.mjs';
 const sources=[{id:'test',name:'Test reporter',handle:'test',language:'en',profile:'https://x.com/test'}];
 const now=new Date('2026-10-08T12:00:00Z');
 let id=2200000000000000000n;
@@ -9,13 +9,18 @@ function filter(text,previous) {
  const report=candidate(text);report.postUrl=`https://x.com/test/status/${report.id}`;
  return automaticFeed({checkedAt:now.toISOString(),candidates:[report]},sources,previous,now);
 }
-for (const text of ['ilia topuria vs max holloway is targeted','TOPURIA vs HOLLOWAY is targeted','Topuria vs Holloway is targeted for UFC','Ian Garry vs Michael Morales is targeted','Ilia Topuria is in talks for a fight against Max Holloway','Mansur Abdul-Malik vs Sean Strickland is targeted']) {
+for (const text of ['ilia topuria vs max holloway is targeted','ILIA TOPURIA vs HOLLOWAY is targeted','Ilia Topuria vs Holloway is targeted for UFC','Ian Garry vs Michael Morales is targeted','Ilia Topuria is in talks for a fight against Max Holloway','Mansur Abdul-Malik vs Sean Strickland is targeted']) {
  const result=filter(text);
  assert.equal(result.added,1,text);
  assert.equal(result.feed.groups[0].official,null);
  assert.equal(result.feed.groups[0].eventDateHint,null);
 }
-assert.deepEqual(filter('topuria vs holloway is targeted').feed.groups[0].fighterNames,['Ilia Topuria','Max Holloway']);
+assert.deepEqual(filter('ilia topuria vs holloway is targeted').feed.groups[0].fighterNames,['Ilia Topuria','Max Holloway']);
+assert.equal(canonicalFighter('Topuria'),null);
+assert.equal(isAmbiguousFighter('TOPURIA'),true);
+assert.equal(canonicalFighter('Aleksandre Topuria'),'Aleksandre Topuria');
+for (const text of ['Topuria vs Holloway is targeted for UFC','TOPURIA vs HOLLOWAY is targeted','topuria vs holloway is targeted']) assert.equal(filter(text).added,0,text);
+assert.deepEqual(filter('Aleksandre Topuria vs Santiago Luna is targeted for UFC').feed.groups[0].fighterNames,['Aleksandre Topuria','Santiago Luna']);
 assert.deepEqual(filter('Ian Garry vs Michael Morales is targeted').feed.groups[0].fighterNames,['Ian Machado Garry','Michael Morales']);
 // Unknown prospects require explicit UFC context; registered athletes do not.
 assert.equal(filter('Arturo Example vs Bruno Sample is targeted for UFC on November 28').added,1);
@@ -46,7 +51,7 @@ assert.equal(isBoxingPost('UFC star Ilia Topuria vs Max Holloway in a boxing mat
 assert.equal(filter('Ian Garry reveals he agreed to a fight with Michael Morales').added,1);
 assert.equal(filter('Ilia Topuria vs Max Holloway targeted; not confirmed by UFC').added,1);
 assert.equal(filter('Ilia Topuria vs Max Holloway targeted; aún no está confirmado por UFC').added,1);
-const first=filter('topuria vs holloway targeted for UFC on November 28');
+const first=filter('ilia topuria vs holloway targeted for UFC on November 28');
 const duplicate=filter('Ilia Topuria vs Max Holloway targeted for UFC on November 28',first.feed);
 assert.equal(duplicate.feed.groups.length,1);
 assert.equal(duplicate.feed.groups[0].reports.length,2);

@@ -15,6 +15,7 @@ for (const fighter of [...fighters, ...additionalFighters]) {
   if (fighter.id === 'zhang') add('Zhang Weili', canonical);
 }
 export const canonicalFighter = name => registry.get(normalizeName(name)) ?? null;
+export const isAmbiguousFighter = name => registry.get(normalizeName(name)) === null;
 const escape = value => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 // Use complete aliases and only unambiguous surnames. Never infer a person from a first name.
 const aliases = [...registry].filter(([, value]) => value).map(([key]) => escape(key).replaceAll(' ', '[\\s\x27-]+')).sort((a,b) => b.length-a.length);
