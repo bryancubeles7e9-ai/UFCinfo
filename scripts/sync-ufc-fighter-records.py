@@ -117,7 +117,7 @@ def directory():
       import { fighters } from './assets/js/data.js';
       import { additionalFighters } from './assets/js/fighter-directory-data.js';
       console.log(JSON.stringify([...fighters, ...additionalFighters].map(f =>
-        ({id:f.id, name:f.name || `${f.first} ${f.last}`, aliases:[...(f.aliases || []), ...(f.id === "zhang" ? ["Zhang Weili"] : [])], source:f.source, record:f.record}))));
+        ({id:f.id, name:f.name || `${f.first} ${f.last}`, aliases:[...(f.aliases || []), ...(f.id === "zhang" ? ["Zhang Weili"] : [])], source:f.source, record:f.record, info:f.info}))));
     """], cwd=ROOT, text=True)
     return json.loads(output)
 
@@ -129,8 +129,48 @@ def save(state):
     Path(tmp.name).replace(STATE)
 
 
+def validate_progress(fighter, previous, profile):
+    """Quarantine regressions; official corrections require human review.
+
+    Rates and percentages may legitimately decrease after a fight. Career
+    totals may not silently decrease or replace the directory's verified record.
+    """
+    def record_parts(value):
+        if isinstance(value, str) and re.fullmatch(r"\d{1,3}-\d{1,3}-\d{1,3}", value):
+            return tuple(map(int, value.split('-')))
+        return None
+
+    incoming = record_parts(profile.get('record'))
+    if incoming is None or any(value > 200 for value in incoming):
+        raise ValueError('Invalid incoming career record')
+    for baseline in (fighter, previous):
+        old = record_parts(baseline.get('record'))
+        if old and any(new < saved for new, saved in zip(incoming, old)):
+            raise ValueError(f"Career record regression: {baseline['record']} -> {profile['record']}")
+    stats = profile.get('info')
+    if stats is None:
+        return
+    for key, value in stats.items():
+        if key not in STAT_KEYS:
+            continue
+        if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0:
+            raise ValueError('Invalid incoming statistic: ' + key)
+        if key in PERCENT_STATS and value > 100:
+            raise ValueError('Incoming percentage outside range: ' + key)
+    for baseline in (fighter, previous):
+        old_stats = baseline.get('info') or {}
+        for key in ('koWins', 'submissionWins', 'firstRoundFinishes'):
+            old = old_stats.get(key)
+            if isinstance(old, (int, float)) and key in stats and stats[key] < old:
+                raise ValueError('Career statistic regression: ' + key)
+        if (all(stats.get(key) == 0 for key in CORE_STATS)
+                and any(isinstance(old_stats.get(key), (int, float)) and old_stats[key] > 0 for key in CORE_STATS)):
+            raise ValueError('Combat statistics unexpectedly reset to zero')
+
+
 def store_profile(state, fighter, profile, now):
     previous = state["records"].get(fighter["id"], {})
+    validate_progress(fighter, previous, profile)
     state["records"][fighter["id"]] = {
         "record": profile["record"], "source": "UFC", "sourceUrl": fighter["source"],
         "updatedAt": now.isoformat(),
@@ -201,7 +241,19 @@ def sync(events, state, fighters, fetch=fetch_profile, now=None, full=False):
                 continue
             # A successful consultation is not proof UFC has incorporated the last
             # fight. Recent events stay eligible for repeated checks for 14 days.
-            store_profile(state, fighter, profile, now)
+            try:
+                store_profile(state, fighter, profile, now)
+            except ValueError as error:
+                failures.append(fighter['id'])
+                state.setdefault('profileReview', {})[fighter['id']] = {
+                    'checkedAt': now.isoformat(), 'reason': str(error),
+                    'sourceUrl': fighter['source'], 'receivedRecord': profile.get('record'),
+                    'savedRecord': state['records'].get(fighter['id'], {}).get('record'),
+                    'directoryRecord': fighter.get('record'),
+                }
+                print(f"::warning::Profile preserved for {fighter['id']}: {error}", file=sys.stderr)
+                continue
+            state.get('profileReview', {}).pop(fighter['id'], None)
             if profile["info"] is None:
                 failures.append(fighter["id"])
                 record_only.append(fighter["id"])
@@ -209,7 +261,7 @@ def sync(events, state, fighters, fetch=fetch_profile, now=None, full=False):
             else:
                 successes.add(fighter["id"])
     for event_id, required in eligible.items():
-        done = set(state["completedFighters"].get(event_id, [])) | (required & successes)
+        done = (set(state["completedFighters"].get(event_id, [])) - set(failures)) | (required & successes)
         if required.issubset(done) and event_id not in unmatched:
             if event_id not in state["processedEventIds"]:
                 state["processedEventIds"].append(event_id)

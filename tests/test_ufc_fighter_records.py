@@ -1,4 +1,5 @@
 import importlib.util
+import copy
 from datetime import datetime, timezone
 from pathlib import Path
 import tempfile
@@ -11,6 +12,45 @@ SPEC.loader.exec_module(module)
 
 
 class OfficialRecordsTest(unittest.TestCase):
+    def test_regressions_preserve_entire_profile_and_retry_until_valid(self):
+        fighter = {'id': 'a', 'name': 'A', 'record': '8-1-0', 'source': 'https://www.ufc.com/athlete/a'}
+        saved = {'record': '8-1-0', 'updatedAt': '2026-10-01',
+                 'info': {'strikesLanded': 4, 'koWins': 5, 'statisticsConsulted': '2026-10-01'}}
+        state = {'records': {'a': copy.deepcopy(saved)}, 'processedEventIds': ['card'],
+                 'completedFighters': {'card': ['a']}}
+        event = {'id': 'card', 'date': '2026-10-20T00:00:00Z', 'status': 'completed',
+                 'bouts': [{'red': 'A', 'blue': 'A', 'winner': 'A'}]}
+        now = datetime(2026, 10, 21, tzinfo=timezone.utc)
+        with tempfile.TemporaryDirectory() as tmp, patch.object(module, 'STATE', Path(tmp) / 'feed.json'):
+            for bad in ({'record': '1-0-0', 'info': None},
+                        {'record': '8-0-1', 'info': {'strikesLanded': 3}},
+                        {'record': '9-1-0', 'info': {'koWins': 0}},
+                        {'record': '9-1-0', 'info': dict.fromkeys(module.CORE_STATS, 0)}):
+                module.sync([event], state, [fighter], fetch=lambda f: bad, now=now)
+                self.assertEqual(state['records']['a'], saved)
+                self.assertEqual(state['pendingProfileIds'], ['a'])
+                self.assertEqual(state['lastSync']['succeeded'], 0)
+                self.assertNotIn('card', state['processedEventIds'])
+                self.assertIn('a', state['profileReview'])
+            module.sync([event], state, [fighter], fetch=lambda f: {
+                'record': '9-1-0', 'info': {'strikesLanded': 3, 'koWins': 5}}, now=now)
+        self.assertEqual(state['records']['a']['record'], '9-1-0')
+        self.assertEqual(state['records']['a']['info']['strikesLanded'], 3)
+        self.assertEqual(state['pendingProfileIds'], [])
+        self.assertEqual(state['profileReview'], {})
+        self.assertIn('card', state['processedEventIds'])
+
+    def test_directory_record_protects_first_sync_and_corrupt_existing_state(self):
+        fighter = {'record': '8-1-0'}
+        for previous in ({}, {'record': '1-0-0'}):
+            with self.assertRaisesRegex(ValueError, 'regression'):
+                module.validate_progress(fighter, previous, {'record': '1-0-0', 'info': None})
+        module.validate_progress(fighter, {}, {'record': '8-2-0', 'info': None})
+
+    def test_valid_zero_rates_and_decreasing_percentages_are_allowed(self):
+        module.validate_progress({}, {'record': '8-1-0', 'info': {'takedownAverage': 1, 'strikingDefense': 60}},
+                                 {'record': '8-2-0', 'info': {'takedownAverage': 0, 'strikingDefense': 55}})
+
     def test_stats_require_complete_core_and_preserve_missing_optional(self):
         page = '<h1 class="hero-profile__name">A Fighter</h1><p class="hero-profile__division-body">11-2-0 (W-L-D)</p>'
         for label, value in [("Sig. Str. Landed", 4.2), ("Sig. Str. Absorbed", 2.3), ("Takedown avg", 0), ("Submission avg", 0.5)]:
