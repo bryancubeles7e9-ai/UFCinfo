@@ -1,6 +1,7 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
   "hora local · inicio de la principal": "local time · main card start",
+  "Horas por pelea orientativas, no oficiales. Usamos el inicio oficial de cada bloque cuando está disponible; si falta, estimamos preliminares 2 h antes y previas 4 h antes de la principal. Hasta 30 min por pelea, ajustados al bloque. Pueden cambiar por duración, pausas o cambios de cartelera.": "Bout times are unofficial estimates. We use official section starts when available; otherwise prelims are estimated 2 h before the main card and early prelims 4 h before. Up to 30 min per bout, fitted to the section. Duration, breaks and card changes can shift these times.",
   "Horas orientativas, no oficiales: principal desde la hora publicada, preliminares unas 2 h antes y previas unas 4 h antes; hasta 30 min por pelea según el orden disponible. Pueden cambiar por duración, pausas o cambios de cartelera.": "Unofficial estimates: main card from the published start, prelims about 2 h earlier and early prelims about 4 h earlier; up to 30 min per bout in the available running order. Duration, breaks and card changes can shift these times.",
   "Colecciones de luchadores": "Fighter collections",
   "Vista del catálogo": "Catalog view",

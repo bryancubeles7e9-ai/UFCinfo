@@ -88,6 +88,9 @@ jobs:
         run: python3 scripts/run-data-sync.py events
       - name: Verificar resultados recientes con UFC
         run: python3 scripts/run-data-sync.py results
+      - name: Consultar horarios oficiales de los próximos bloques
+        continue-on-error: true
+        run: python3 scripts/sync-event-schedules.py
       - name: Guardar datos actualizados
         run: |
           git add assets/data/ufc-events.json assets/data/sync-health.json

@@ -403,7 +403,16 @@
       "dataSource": "UFCalendar",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
       "scheduleCheckedAt": "2026-10-20T11:44:05.063105+00:00",
-      "citoSlug": "ufc-fight-night-november-07-2026"
+      "citoSlug": "ufc-fight-night-november-07-2026",
+      "sectionSchedule": {
+        "eventDate": "2026-11-08T01:00:00+00:00",
+        "source": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+        "checkedAt": "2026-10-22T19:06:03.337679+00:00",
+        "starts": {
+          "main": "2026-11-08T01:00:00+00:00",
+          "prelims": "2026-11-07T22:00:00+00:00"
+        }
+      }
     },
     {
       "id": "ufc-fight-night-october-31-2026",
@@ -545,7 +554,16 @@
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/103126-ufc-fight-night-moicano-vs-nolan-TEMP-HERO.jpg?h=d1cb525d&itok=HAflfCIz",
       "posterAlt": "UFC lightweights Renato Moicano and Tom Nolan side by side over a red background",
       "citoSlug": "ufc-fight-night-october-31-2026",
-      "pendingBoutRemovals": {}
+      "pendingBoutRemovals": {},
+      "sectionSchedule": {
+        "eventDate": "2026-11-01T00:00:00+00:00",
+        "source": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+        "checkedAt": "2026-10-22T19:06:03.337679+00:00",
+        "starts": {
+          "main": "2026-11-01T00:00:00+00:00",
+          "prelims": "2026-10-31T21:00:00+00:00"
+        }
+      }
     },
     {
       "id": "ufc-333",
@@ -720,7 +738,17 @@
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/102426-ufc-333-volkanovski-vs-evloev-EVENT-ART.jpg?h=d1cb525d&itok=ceS_oo8W",
       "posterAlt": "UFC featherweight champion Alexander Volkanovski and Movsar Evloev side by side over a black and gold background",
       "citoSlug": "ufc-333",
-      "pendingBoutRemovals": {}
+      "pendingBoutRemovals": {},
+      "sectionSchedule": {
+        "eventDate": "2026-10-24T18:00:00+00:00",
+        "source": "https://www.ufc.com/event/ufc-333",
+        "checkedAt": "2026-10-22T19:06:03.337679+00:00",
+        "starts": {
+          "main": "2026-10-24T18:00:00+00:00",
+          "prelims": "2026-10-24T16:00:00+00:00",
+          "early-prelims": "2026-10-24T14:00:00+00:00"
+        }
+      }
     },
     {
       "id": "ufc-fight-night-october-17-2026",
@@ -6463,6 +6491,10 @@
       "ufc-fight-night-october-17-2026",
       "ufc-fight-night-october-10-2026"
     ],
+    "failedIds": []
+  },
+  "scheduleVerification": {
+    "checkedAt": "2026-10-22T19:06:03.337679+00:00",
     "failedIds": []
   }
 }

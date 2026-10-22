@@ -1,6 +1,7 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
   "hora local · inicio de la principal": "hora local · inici de la principal",
+  "Horas por pelea orientativas, no oficiales. Usamos el inicio oficial de cada bloque cuando está disponible; si falta, estimamos preliminares 2 h antes y previas 4 h antes de la principal. Hasta 30 min por pelea, ajustados al bloque. Pueden cambiar por duración, pausas o cambios de cartelera.": "Hores per combat orientatives, no oficials. Fem servir l’inici oficial de cada bloc quan està disponible; si falta, estimem preliminars 2 h abans i prèvies 4 h abans de la principal. Fins a 30 min per combat, ajustats al bloc. Poden canviar per la durada, les pauses o els canvis de cartellera.",
   "Horas orientativas, no oficiales: principal desde la hora publicada, preliminares unas 2 h antes y previas unas 4 h antes; hasta 30 min por pelea según el orden disponible. Pueden cambiar por duración, pausas o cambios de cartelera.": "Hores orientatives, no oficials: principal des de l’hora publicada, preliminars unes 2 h abans i prèvies unes 4 h abans; fins a 30 min per combat segons l’ordre disponible. Poden canviar per la durada, les pauses o els canvis de cartellera.",
   "Menú": "Menú",
   "Colecciones de luchadores": "Col·leccions de lluitadors",
