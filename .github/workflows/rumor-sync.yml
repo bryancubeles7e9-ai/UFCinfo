@@ -65,7 +65,24 @@ jobs:
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git commit -m 'Actualizar rumores UFC automaticamente'
-            git pull --rebase origin main
-            git push origin HEAD:main
+            # Other data workflows can advance main between pull and push.
+            # Retry only publication; never repeat the paid rumor search.
+            published=false
+            for attempt in 1 2 3 4 5; do
+              if ! git pull --rebase origin main; then
+                git rebase --abort || true
+                echo "::error::No se pudo integrar main; se conserva el fallo para revisión."
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                published=true
+                break
+              fi
+              if [ "$attempt" -lt 5 ]; then sleep $((attempt * 2)); fi
+            done
+            if [ "$published" != true ]; then
+              echo "::error::No se pudo publicar rumores tras cinco intentos."
+              exit 1
+            fi
           fi
       # Render auto-deploys main on commit; avoid a second deploy via hook.
