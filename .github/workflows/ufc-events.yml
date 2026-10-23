@@ -66,8 +66,25 @@ jobs:
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git commit -m 'Actualizar rankings oficiales UFC'
-            git pull --rebase origin main
-            git push origin HEAD:main
+            # Retry publication if another workflow advances main.
+            # The source/API steps are not repeated.
+            published=false
+            for attempt in 1 2 3 4 5; do
+              if ! git pull --rebase origin main; then
+                git rebase --abort || true
+                echo "::error::No se pudo integrar main; requiere revisión."
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                published=true
+                break
+              fi
+              if [ "$attempt" -lt 5 ]; then sleep $((attempt * 2)); fi
+            done
+            if [ "$published" != true ]; then
+              echo "::error::No se pudieron publicar los datos tras cinco intentos."
+              exit 1
+            fi
           fi
       - name: Comprobar clave
         id: key
@@ -99,8 +116,25 @@ jobs:
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git commit -m 'Actualizar carteleras y resultados UFC'
-            git pull --rebase origin main
-            git push origin HEAD:main
+            # Retry publication if another workflow advances main.
+            # The source/API steps are not repeated.
+            published=false
+            for attempt in 1 2 3 4 5; do
+              if ! git pull --rebase origin main; then
+                git rebase --abort || true
+                echo "::error::No se pudo integrar main; requiere revisión."
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                published=true
+                break
+              fi
+              if [ "$attempt" -lt 5 ]; then sleep $((attempt * 2)); fi
+            done
+            if [ "$published" != true ]; then
+              echo "::error::No se pudieron publicar los datos tras cinco intentos."
+              exit 1
+            fi
           fi
       - name: Incorporar perfiles de próximas carteleras
         continue-on-error: true
@@ -115,8 +149,25 @@ jobs:
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git commit -m 'Incorporar participantes recientes y próximos de UFC'
-            git pull --rebase origin main
-            git push origin HEAD:main
+            # Retry publication if another workflow advances main.
+            # The source/API steps are not repeated.
+            published=false
+            for attempt in 1 2 3 4 5; do
+              if ! git pull --rebase origin main; then
+                git rebase --abort || true
+                echo "::error::No se pudo integrar main; requiere revisión."
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                published=true
+                break
+              fi
+              if [ "$attempt" -lt 5 ]; then sleep $((attempt * 2)); fi
+            done
+            if [ "$published" != true ]; then
+              echo "::error::No se pudieron publicar los datos tras cinco intentos."
+              exit 1
+            fi
           fi
       - name: Test selección de fotografías
         run: node tests/test-fighter-photos.mjs
@@ -131,8 +182,25 @@ jobs:
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git commit -m 'Actualizar fotografías de campeones y excampeones'
-            git pull --rebase origin main
-            git push origin HEAD:main
+            # Retry publication if another workflow advances main.
+            # The source/API steps are not repeated.
+            published=false
+            for attempt in 1 2 3 4 5; do
+              if ! git pull --rebase origin main; then
+                git rebase --abort || true
+                echo "::error::No se pudo integrar main; requiere revisión."
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                published=true
+                break
+              fi
+              if [ "$attempt" -lt 5 ]; then sleep $((attempt * 2)); fi
+            done
+            if [ "$published" != true ]; then
+              echo "::error::No se pudieron publicar los datos tras cinco intentos."
+              exit 1
+            fi
           fi
       - name: Actualizar récords y estadísticas tras las carteleras
         run: python3 scripts/run-data-sync.py records --ensure-full
@@ -143,8 +211,25 @@ jobs:
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git commit -m 'Actualizar récords y estadísticas tras las carteleras UFC'
-            git pull --rebase origin main
-            git push origin HEAD:main
+            # Retry publication if another workflow advances main.
+            # The source/API steps are not repeated.
+            published=false
+            for attempt in 1 2 3 4 5; do
+              if ! git pull --rebase origin main; then
+                git rebase --abort || true
+                echo "::error::No se pudo integrar main; requiere revisión."
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                published=true
+                break
+              fi
+              if [ "$attempt" -lt 5 ]; then sleep $((attempt * 2)); fi
+            done
+            if [ "$published" != true ]; then
+              echo "::error::No se pudieron publicar los datos tras cinco intentos."
+              exit 1
+            fi
           fi
       - name: Guardar estado incluso tras un fallo
         if: always()
@@ -156,8 +241,25 @@ jobs:
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git commit -m 'Registrar estado de las sincronizaciones'
-            git pull --rebase origin main
-            git push origin HEAD:main
+            # Retry publication if another workflow advances main.
+            # The source/API steps are not repeated.
+            published=false
+            for attempt in 1 2 3 4 5; do
+              if ! git pull --rebase origin main; then
+                git rebase --abort || true
+                echo "::error::No se pudo integrar main; requiere revisión."
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                published=true
+                break
+              fi
+              if [ "$attempt" -lt 5 ]; then sleep $((attempt * 2)); fi
+            done
+            if [ "$published" != true ]; then
+              echo "::error::No se pudieron publicar los datos tras cinco intentos."
+              exit 1
+            fi
           fi
       - name: Identificar versión
         id: revision
