@@ -11,8 +11,8 @@ UFCinfo nace de la perspectiva de un aficionado: consultar una cartelera, conoce
 | Sección | Qué encontrarás |
 | --- | --- |
 | **Inicio** | El próximo evento disponible y accesos a las principales secciones. |
-| **Carteleras** | Eventos numerados, Fight Night y especiales, con próximos combates, resultados disponibles, cuenta atrás y descarga de calendario `.ics`. |
-| **Luchadores** | Un catálogo que incluye a los participantes de los eventos finalizados de 2026 disponibles en la web, con fotografías, récords, datos físicos, guardia, formación marcial y estadísticas documentadas. Puedes elegir entre lista compacta y tarjetas, buscar y filtrar por Todos, Siguiendo, Campeones o Leyendas. Los perfiles se organizan en **Resumen, Estadísticas e Historial**, con fuentes y fechas de consulta. El historial reúne los combates presentes en las carteleras disponibles; no representa necesariamente toda la carrera. Incluye una selección de leyendas retiradas con insignia violeta y filtro propio. |
+| **Carteleras** | Eventos numerados, Fight Night y especiales, con próximos combates, resultados disponibles, horarios aproximados por pelea, cuenta atrás y descarga de calendario `.ics`. |
+| **Luchadores** | Un catálogo con participantes de veladas recientes y próximas, con fotografías, récords, datos físicos, guardia, formación marcial y estadísticas documentadas. Puedes elegir entre lista compacta y tarjetas, buscar y filtrar por Todos, Siguiendo, Campeones o Leyendas. Los perfiles se organizan en **Resumen, Estadísticas e Historial**, con fuentes y fechas de consulta. El historial reúne los combates presentes en las carteleras disponibles; no representa necesariamente toda la carrera. Incluye una selección de leyendas retiradas con insignia violeta y filtro propio. |
 | **Rankings** | El top 15 de las 11 divisiones y las dos listas libra por libra, con el campeón separado cuando corresponde y acceso a los perfiles. |
 | **Fight Lab** | Comparación de dos luchadores: perfil, trayectoria y estadísticas de golpeo, derribos y finalizaciones. |
 | **Rumores** | Publicaciones de fuentes seleccionadas sobre posibles combates, agrupadas por pelea y con atribución a su origen. |
@@ -38,6 +38,7 @@ La web combina un catálogo de perfiles con copias de datos que actualizan tarea
 | Información | Fuente y funcionamiento |
 | --- | --- |
 | **Eventos y resultados** | Cito actualiza las carteleras cercanas y conserva el historial disponible. Una comprobación adicional en UFC.com verifica los resultados recientes y puede recuperar información aunque Cito falle. Incluye cartelera principal, preliminares y preliminares previas cuando están publicadas. |
+| **Horarios de las veladas** | Las páginas públicas de UFC proporcionan los inicios oficiales de los bloques de las próximas tres veladas. Cada combate mantiene una hora estimada, claramente identificada. Esta consulta no consume puntos de Cito. |
 | **Rankings** | Se consultan las clasificaciones publicadas en UFC.com. |
 | **Récords y estadísticas** | Se consultan los perfiles oficiales de UFC de los luchadores registrados que participan en los combates seleccionados. |
 | **Campeones y fotografías** | Los títulos absolutos actuales se sincronizan con los rankings válidos. Se revisan las fotografías y se conservan variantes para campeón y no campeón cuando están disponibles. El BMF tiene una gestión separada. |
@@ -48,20 +49,33 @@ Las fichas y los feeds incluyen fuentes y fechas de consulta cuando están dispo
 
 El panel **Estado de los datos** distingue el último intento conocido, la última sincronización sin incidencias y los elementos pendientes. Una consulta fallida conserva la fecha de la última sincronización correcta registrada. Las carteleras y la verificación de resultados oficiales se muestran por separado. Las automatizaciones disponen además de una [simulación de velada y pruebas sin consultar APIs](docs/DATA_VALIDATION.md).
 
+## Horarios oficiales y estimaciones por pelea
+
+Las horas se muestran en la **zona horaria del dispositivo**, con su fecha local y el cambio de horario de verano o invierno.
+
+- **Inicio de bloque:** se utiliza la hora oficial publicada por UFC para la principal, las preliminares y las previas cuando está disponible y corresponde a la fecha del evento.
+- **Hora de cada pelea:** aparece como **«Hora aproximada»**. Se calcula a partir del bloque y del orden disponible, con intervalos de hasta 30 minutos ajustados al tiempo disponible. La duración de los combates y las pausas pueden adelantarla o retrasarla.
+- **Información incompleta:** si falta una hora oficial, se estiman las preliminares dos horas antes y las previas cuatro horas antes de la principal. Si falta el orden de la cartelera, se muestra **«Horario por confirmar»**.
+
+Los horarios antiguos se ignoran si cambia la fecha del evento. Más detalles en [Horarios de las carteleras](docs/EVENT_TIMES.md).
+
 ## Cuándo se actualiza
 
-Los horarios se interpretan en **Europe/Madrid**, con el cambio de hora de verano e invierno.
+Los horarios de las tareas diarias se interpretan en **Europe/Madrid**, con el cambio de hora de verano e invierno. El vigilante tiene una programación independiente en UTC.
 
 | Proceso | Programación habitual |
 | --- | --- |
-| Carteleras, resultados, rankings, fotografías, récords y estadísticas | Cada día a las **08:00 y 14:00**. |
+| Carteleras, horarios oficiales por bloque, resultados, rankings, fotografías, récords y estadísticas | Cada día a las **08:00 y 14:00**. |
 | Reintento condicional tras una velada | En la franja de las **10:00**, para eventos de las últimas 48 horas con resultados o perfiles pendientes. No consulta Cito, rankings ni fotografías. |
 | Búsqueda de rumores y comprobación de confirmaciones oficiales | **Cada hora en punto**. |
+| Vigilancia de automatizaciones | Cada **tres horas**, al minuto 43 del calendario UTC de GitHub Actions; puede haber retrasos de ejecución. |
 | Lectura de las copias publicadas desde la web | Al abrir la página y periódicamente, aproximadamente cada **cinco minutos** para los principales feeds. |
 
 cron-job.org solicita las ejecuciones y GitHub Actions realiza el trabajo. Los cambios de datos se guardan en el repositorio y Render publica la web. También existen ejecuciones manuales y disparadores por determinados cambios de código; los rumores cuentan con comprobaciones de respaldo que evitan repetir la búsqueda de pago dentro de la misma hora.
 
-Después de actualizar las carteleras, el proceso revisa récords y estadísticas de los luchadores seleccionados con resultados en eventos completados de los últimos 14 días. Repite las comprobaciones aunque el récord no haya cambiado para poder recoger estadísticas publicadas más tarde. **No se consulta todo el catálogo en cada ejecución.**
+Después de actualizar las carteleras, se intenta incorporar los perfiles que faltan de sus próximos participantes y de los eventos recientes, usando información oficial disponible. La importación puede quedar pendiente si la fuente no permite verificar una ficha.
+
+El proceso revisa récords y estadísticas de los luchadores seleccionados con resultados en eventos completados de los últimos 14 días. Repite las comprobaciones aunque el récord no haya cambiado para poder recoger estadísticas publicadas más tarde. **No se consulta todo el catálogo en cada ejecución.**
 
 Las carteleras también gestionan cancelaciones explícitas, sustituciones y cambios de fecha. Una pelea que desaparece sin explicación se conserva hasta confirmar su ausencia en dos respuestas comparables separadas por al menos una hora. Las respuestas vacías o con una pérdida masiva de combates no borran la cartelera. Los eventos cancelados o aplazados se conservan en el archivo de datos, pero salen de las vistas activas. Véase [Gestión de cambios de cartelera](docs/CARD_CHANGES.md) para los límites y el registro de cambios.
 
@@ -71,21 +85,32 @@ El reintento de las 10:00 aprovecha la finalización de la ejecución horaria de
 
 Los horarios son de inicio previsto: la ejecución, la publicación y la disponibilidad de los datos en la fuente pueden introducir retrasos. Puedes consultar el detalle técnico en [Horarios de automatización](docs/AUTOMATION_SCHEDULE.md).
 
+## Alertas y comprobaciones
+
+El workflow **Vigilar automatizaciones UFCinfo** revisa los archivos publicados y el historial de GitHub Actions. Señala dos fallos consecutivos, rumores sin una búsqueda verificable durante más de tres horas, datos sin una sincronización verificable durante más de 30 horas o pendientes continuos durante más de 48 horas.
+
+El resumen aparece en [GitHub Actions](https://github.com/bryancubeles7e9-ai/UFCinfo/actions). La recepción de notificaciones depende de las preferencias de cada usuario en GitHub. Una búsqueda sin rumores nuevos es válida y no genera una alerta por sí sola. El vigilante no consulta APIs deportivas ni corrige datos automáticamente. Véase [Alertas de automatización](docs/DATA_ALERTS.md) para los umbrales y sus límites.
+
+Las pruebas automáticas simulan fallos del proveedor, resultados incompletos y recuperación de perfiles. Se ejecutan sin claves ni consultas de pago; complementan la comprobación con veladas reales.
+
 ## Estado de validación
 
-Estado del proyecto a **19 de octubre de 2026**, según las comprobaciones realizadas y el seguimiento de uso:
+Documentación revisada a **23 de octubre de 2026**. El estado distingue funciones implementadas de verificaciones reales todavía pendientes:
 
 | Automatización | Estado | Qué falta comprobar |
 | --- | --- | --- |
-| **Rumores** | Validada en uso. | Se considera terminada; quedan posibles ajustes futuros de fuentes y filtros. |
+| **Rumores** | Búsqueda y publicación comprobadas en uso; reintentos de guardado incorporados. | Seguir observando las ejecuciones y ajustar fuentes o filtros cuando sea necesario. |
 | **Actualización tras una velada** | Parcialmente validada; parche y reintento de las 10:00 implementados. | Comprobar en la próxima velada que resultados, récords y estadísticas se completan, y que la cartelera sigue visible si la fuente se retrasa. |
 | **Incorporación de nuevos eventos** | Pendiente de validación con un nuevo anuncio. | Confirmar que detecta el evento y lo incorpora automáticamente a la web. |
+| **Horarios por bloque** | Consulta oficial y cálculo de estimaciones implementados para las próximas tres veladas. | Seguir verificando cambios de horario y de orden antes de cada evento. |
 
 Que una tarea termine sin errores no garantiza que el proveedor ya haya publicado toda la información. La fase de automatización se dará por cerrada cuando estos tres procesos estén comprobados con casos reales.
 
 ## Cómo se tratan los rumores
 
 La búsqueda revisa una ventana solapada de las últimas 24 horas para recuperar publicaciones que aparezcan tarde en el buscador. El sistema evita duplicados, agrupa referencias a un mismo posible combate y filtra contenido ajeno a UFC o que no identifica una pelea válida. También contrasta las propuestas con las carteleras oficiales disponibles para evitar presentar peleas ya anunciadas como nuevas especulaciones.
+
+Cuando otra automatización actualiza el repositorio al mismo tiempo, la publicación de rumores reintenta el guardado hasta cinco veces sin repetir la búsqueda de pago. Un conflicto que no se pueda integrar queda marcado como fallo para revisión.
 
 Una búsqueda puede completarse sin añadir nada: puede no haber publicaciones nuevas válidas o pueden descartarse por los filtros. **Un rumor no equivale a un combate confirmado.** Las comprobaciones dependen de la cobertura y actualización de las fuentes.
 
