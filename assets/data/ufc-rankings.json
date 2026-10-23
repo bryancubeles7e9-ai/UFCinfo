@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://www.ufc.com/rankings",
-  "synchronizedAt": "2026-10-23T10:35:10.840855+00:00",
+  "synchronizedAt": "2026-10-23T12:01:16.331835+00:00",
   "published": "Tuesday, Oct. 20",
   "categories": [
     {
@@ -209,8 +209,8 @@
         "Kamaru Usman",
         "Mike Malott",
         "Yaroslav Amosov",
-        "Uroš Medić",
         "Joaquin Buckley",
+        "Uroš Medić",
         "Daniel Rodriguez",
         "Neil Magny"
       ],
