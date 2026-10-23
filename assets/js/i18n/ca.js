@@ -1,5 +1,23 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "ELIGE A TUS GANADORES": "TRIA ELS TEUS GUANYADORS",
+  "Haz tus pronósticos para el próximo evento UFC.": "Fes els teus pronòstics per al proper esdeveniment UFC.",
+  "Próxima cartelera pendiente": "Propera cartellera pendent",
+  "El Pick’em estará disponible cuando se anuncie el próximo evento.": "El Pick’em estarà disponible quan s’anunciï el proper esdeveniment.",
+  "TU PRÓXIMA VELADA": "LA TEVA PROPERA VETLLADA",
+  "Pronósticos elegidos": "Pronòstics triats",
+  "Hora local · inicio de la principal": "Hora local · inici de la principal",
+  "Los pronósticos se guardan solo en este navegador, sin sincronización con tu cuenta.": "Els pronòstics es guarden només en aquest navegador, sense sincronització amb el teu compte.",
+  "Cierre al inicio de la velada; si falta el horario oficial, cuatro horas antes de la principal.": "Tancament a l’inici de la vetllada; si falta l’horari oficial, quatre hores abans de la principal.",
+  "Pronósticos cerrados": "Pronòstics tancats",
+  "Puedes cambiar tus elecciones hasta el cierre": "Pots canviar les teves eleccions fins al tancament",
+  "Si cambia un rival, elige de nuevo en ese combate. Esto es un juego personal, sin apuestas ni clasificación pública.": "Si canvia un rival, torna a triar en aquell combat. És un joc personal, sense apostes ni classificació pública.",
+  "Guardado automático en este navegador": "Desament automàtic en aquest navegador",
+  "No se ha podido guardar. Tus elecciones se perderán al cerrar esta página.": "No s’ha pogut desar. Les teves eleccions es perdran en tancar aquesta pàgina.",
+  "Tu elección": "La teva elecció",
+  "Elegir ganador": "Tria el guanyador",
+  "Combates pendientes de anuncio.": "Combats pendents d’anunci.",
+
   "hora local · inicio de la principal": "hora local · inici de la principal",
   "Horas por pelea orientativas, no oficiales. Usamos el inicio oficial de cada bloque cuando está disponible; si falta, estimamos preliminares 2 h antes y previas 4 h antes de la principal. Hasta 30 min por pelea, ajustados al bloque. Pueden cambiar por duración, pausas o cambios de cartelera.": "Hores per combat orientatives, no oficials. Fem servir l’inici oficial de cada bloc quan està disponible; si falta, estimem preliminars 2 h abans i prèvies 4 h abans de la principal. Fins a 30 min per combat, ajustats al bloc. Poden canviar per la durada, les pauses o els canvis de cartellera.",
   "Horas orientativas, no oficiales: principal desde la hora publicada, preliminares unas 2 h antes y previas unas 4 h antes; hasta 30 min por pelea según el orden disponible. Pueden cambiar por duración, pausas o cambios de cartelera.": "Hores orientatives, no oficials: principal des de l’hora publicada, preliminars unes 2 h abans i prèvies unes 4 h abans; fins a 30 min per combat segons l’ordre disponible. Poden canviar per la durada, les pauses o els canvis de cartellera.",

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/mobile.css" />
     <link rel="stylesheet" href="assets/css/refinement.css" />
+    <link rel="stylesheet" href="assets/css/pickem.css" />
     <script type="module" src="assets/js/app.js"></script>
   </head>
   <body>
@@ -41,6 +42,7 @@
         ><a href="#rankings" data-nav="rankings">Rankings</a
         ><a href="#laboratorio" data-nav="laboratorio"
           >Fight Lab <span>NEW</span></a
+        ><a href="#pickem" data-nav="pickem">Pick’em</a
         ><a href="#rumores" data-nav="rumores">Rumores</a
         ><a href="#guardados" data-nav="guardados"
           >Mi esquina <b id="saved-count">0</b></a
@@ -344,6 +346,10 @@
             </section>
           </aside>
         </div>
+      </section>
+      <section class="view" data-view="pickem" hidden>
+        <div class="section-heading"><div><p class="eyebrow">ELIGE A TUS GANADORES</p><h1>Pick’em</h1><p>Haz tus pronósticos para el próximo evento UFC.</p></div></div>
+        <div id="pickem-content"></div>
       </section>
       <section class="view" data-view="laboratorio" hidden>
         <div class="page-heading">

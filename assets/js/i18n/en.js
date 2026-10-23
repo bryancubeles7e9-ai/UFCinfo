@@ -1,5 +1,23 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "ELIGE A TUS GANADORES": "PICK YOUR WINNERS",
+  "Haz tus pronósticos para el próximo evento UFC.": "Make your picks for the next UFC event.",
+  "Próxima cartelera pendiente": "Next card pending",
+  "El Pick’em estará disponible cuando se anuncie el próximo evento.": "Pick’em will be available when the next event is announced.",
+  "TU PRÓXIMA VELADA": "YOUR NEXT EVENT",
+  "Pronósticos elegidos": "Picks made",
+  "Hora local · inicio de la principal": "Local time · main card start",
+  "Los pronósticos se guardan solo en este navegador, sin sincronización con tu cuenta.": "Picks are saved only in this browser, without account synchronization.",
+  "Cierre al inicio de la velada; si falta el horario oficial, cuatro horas antes de la principal.": "Picks close at the start of the event; without official times, four hours before the main card.",
+  "Pronósticos cerrados": "Picks closed",
+  "Puedes cambiar tus elecciones hasta el cierre": "You can change your picks until closing",
+  "Si cambia un rival, elige de nuevo en ese combate. Esto es un juego personal, sin apuestas ni clasificación pública.": "If an opponent changes, pick again for that bout. This is a personal game, with no betting or public leaderboard.",
+  "Guardado automático en este navegador": "Automatically saved in this browser",
+  "No se ha podido guardar. Tus elecciones se perderán al cerrar esta página.": "Unable to save. Your picks will be lost when you close this page.",
+  "Tu elección": "Your pick",
+  "Elegir ganador": "Pick winner",
+  "Combates pendientes de anuncio.": "Bouts awaiting announcement.",
+
   "hora local · inicio de la principal": "local time · main card start",
   "Horas por pelea orientativas, no oficiales. Usamos el inicio oficial de cada bloque cuando está disponible; si falta, estimamos preliminares 2 h antes y previas 4 h antes de la principal. Hasta 30 min por pelea, ajustados al bloque. Pueden cambiar por duración, pausas o cambios de cartelera.": "Bout times are unofficial estimates. We use official section starts when available; otherwise prelims are estimated 2 h before the main card and early prelims 4 h before. Up to 30 min per bout, fitted to the section. Duration, breaks and card changes can shift these times.",
   "Horas orientativas, no oficiales: principal desde la hora publicada, preliminares unas 2 h antes y previas unas 4 h antes; hasta 30 min por pelea según el orden disponible. Pueden cambiar por duración, pausas o cambios de cartelera.": "Unofficial estimates: main card from the published start, prelims about 2 h earlier and early prelims about 4 h earlier; up to 30 min per bout in the available running order. Duration, breaks and card changes can shift these times.",

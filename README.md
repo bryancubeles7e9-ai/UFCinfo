@@ -170,3 +170,9 @@ Las claves de los proveedores se configuran en el entorno de las automatizacione
 Para profundizar: [datos y procedencia](docs/DATOS.md), [APIs y eventos](docs/API.md), [récords y estadísticas](docs/FIGHTER_RECORDS.md), [cuentas](docs/CUENTAS.md) y [publicación](docs/PUBLICACION.md).
 
 Si detectas un dato incorrecto o un fallo, puedes [abrir una incidencia](https://github.com/bryancubeles7e9-ai/UFCinfo/issues) indicando la sección, el luchador o evento afectado y, si es posible, una fuente o los pasos para reproducirlo.
+
+### Pick’em del próximo evento
+
+En **Pick’em** puedes elegir al ganador de cada combate anunciado, incluidas las preliminares. La sección usa el mismo feed de carteleras y cambia automáticamente al siguiente evento; no genera consultas adicionales a APIs. Las elecciones se guardan automáticamente **solo en el navegador y dispositivo actuales**, independientemente de la cuenta; no se sincronizan ni forman parte de su exportación.
+
+Las elecciones se identifican por evento y pareja de luchadores, por lo que reordenar la cartelera no las desplaza a otra pelea. Un cambio de rival exige un nuevo pronóstico. El cierre usa el primer bloque oficial disponible; sin horarios completos, se fija de forma conservadora cuatro horas antes de la principal. Durante la velada las elecciones quedan bloqueadas. Es un juego personal, sin apuestas, clasificación pública ni validación competitiva en servidor; el bloqueo depende del reloj del dispositivo. Incluye español, catalán e inglés.

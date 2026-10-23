@@ -1,3 +1,4 @@
+import { initializePickem } from './pickem.js';
 import { renderBoutTime, scheduleExplanation } from './bout-schedule.js';
 import { compactFighterRow, fighterProfile } from './fighter-presentation.js';
 import { isAwaitingResults, visibleOfficialEvents } from './event-visibility.js';
@@ -57,6 +58,8 @@ let eventFilter = "upcoming",
   eventKindFilter = "all",
   onlyFavorites = false,
   confirmAction = null;
+const pickem = initializePickem();
+pickem.update(eventsFeed.events);
 const lab = initializeLab();
 lab.updateDefault(eventsFeed.events);
 const rumors = initializeRumors();
@@ -309,6 +312,7 @@ function navigate() {
       "luchadores",
       "rankings",
       "laboratorio",
+      "pickem",
       "guardados",
       "rumores",
     ].includes(view)
@@ -322,7 +326,7 @@ function navigate() {
     if (link.dataset.nav === view) link.setAttribute("aria-current", "page");
     else link.removeAttribute("aria-current");
   });
-  document.title = view === "inicio" ? "UFCinfo — Carteleras UFC, luchadores y rankings MMA" : `${{ eventos: "Carteleras", luchadores: "Luchadores", rankings: "Rankings", laboratorio: "Fight Lab", guardados: "Mi esquina", rumores: "Rumores" }[view]} — UFCinfo`;
+  document.title = view === "inicio" ? "UFCinfo — Carteleras UFC, luchadores y rankings MMA" : `${{ eventos: "Carteleras", luchadores: "Luchadores", rankings: "Rankings", laboratorio: "Fight Lab", pickem: "Pick’em", guardados: "Mi esquina", rumores: "Rumores" }[view]} — UFCinfo`;
   window.scrollTo({ top: 0, behavior: "instant" });
 }
 function download(blob, filename) {
@@ -594,6 +598,7 @@ setInterval(updateCountdowns, 1000);
 async function updateEventFeed() {
   await refreshEvents();
   lab.updateDefault(eventsFeed.events);
+  pickem.update(eventsFeed.events);
   if ($("#fighter-dialog").open) showProfile($("#fighter-detail").dataset.fighterId);
   renderOverview();
   renderEvents();
