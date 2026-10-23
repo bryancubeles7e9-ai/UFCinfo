@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-23T10:20:54.526995+00:00",
+  "synchronizedAt": "2026-10-23T10:31:37.263936+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -407,7 +407,7 @@
       "sectionSchedule": {
         "eventDate": "2026-11-08T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-        "checkedAt": "2026-10-23T10:20:57.434824+00:00",
+        "checkedAt": "2026-10-23T10:31:40.824012+00:00",
         "starts": {
           "main": "2026-11-08T01:00:00+00:00",
           "prelims": "2026-11-07T22:00:00+00:00"
@@ -558,7 +558,7 @@
       "sectionSchedule": {
         "eventDate": "2026-11-01T00:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
-        "checkedAt": "2026-10-23T10:20:57.434824+00:00",
+        "checkedAt": "2026-10-23T10:31:40.824012+00:00",
         "starts": {
           "main": "2026-11-01T00:00:00+00:00",
           "prelims": "2026-10-31T21:00:00+00:00"
@@ -742,7 +742,7 @@
       "sectionSchedule": {
         "eventDate": "2026-10-24T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-333",
-        "checkedAt": "2026-10-23T10:20:57.434824+00:00",
+        "checkedAt": "2026-10-23T10:31:40.824012+00:00",
         "starts": {
           "main": "2026-10-24T18:00:00+00:00",
           "prelims": "2026-10-24T16:00:00+00:00",
@@ -912,7 +912,7 @@
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-10/101726-ufc-fight-night-buckey-vs-malott-EVENT-ART.jpg?h=d1cb525d&itok=9nlcHO-H",
       "posterAlt": "Joaquin Buckley and Mike Malott side by side over a blue and red background",
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "resultsCheckedAt": "2026-10-23T10:20:57.192127+00:00",
+      "resultsCheckedAt": "2026-10-23T10:31:40.352644+00:00",
       "citoSlug": "ufc-fight-night-october-17-2026"
     },
     {
@@ -1066,7 +1066,7 @@
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/101026-ufc-fight-night-allen-vs-duncan-EVENT-ART.jpg?h=d1cb525d&itok=Giih5XjD",
       "posterAlt": "UFC middleweights Brendan Allen and Christian Leroy Duncan stand side-by-side over a green and black background",
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
-      "resultsCheckedAt": "2026-10-23T10:20:57.192127+00:00"
+      "resultsCheckedAt": "2026-10-23T10:31:40.352644+00:00"
     },
     {
       "id": "ufc-332",
@@ -6486,7 +6486,7 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-10-23T10:20:57.192127+00:00",
+    "checkedAt": "2026-10-23T10:31:40.352644+00:00",
     "verifiedIds": [
       "ufc-fight-night-october-17-2026",
       "ufc-fight-night-october-10-2026"
@@ -6494,7 +6494,7 @@
     "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-10-23T10:20:57.434824+00:00",
+    "checkedAt": "2026-10-23T10:31:40.824012+00:00",
     "failedIds": []
   }
 }
