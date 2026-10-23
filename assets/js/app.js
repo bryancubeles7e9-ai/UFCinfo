@@ -611,6 +611,7 @@ async function updateFighterRecords() {
   const results = await Promise.all([refreshFighterRecords(), refreshFighterPhotos()]);
   if (results.some(Boolean)) {
     renderAll();
+    pickem.render();
     if ($("#fighter-dialog").open && $("#fighter-detail").dataset.fighterId) showProfile($("#fighter-detail").dataset.fighterId);
   }
 }

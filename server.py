@@ -15,7 +15,8 @@ from html import escape
 from http.cookies import SimpleCookie
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import urlsplit, unquote
+from urllib.parse import urlsplit, unquote, parse_qs
+from pickem import Competition, PickemError
 
 ROOT = Path(__file__).resolve().parent
 SESSION_SECONDS = 30 * 24 * 60 * 60
@@ -90,6 +91,7 @@ def make_handler(database, public_origin, fighter_ids):
         allowed_origins.add(f"{parsed.scheme}://{'localhost' if parsed.hostname == '127.0.0.1' else '127.0.0.1'}:{parsed.port}")
     allowed_hosts = {urlsplit(origin).netloc for origin in allowed_origins}
     password_slots = threading.BoundedSemaphore(2)
+    competition = Competition(database, ROOT / "assets/data/ufc-events.json")
 
     class Handler(SimpleHTTPRequestHandler):
         def __init__(self, *args, **kwargs):
@@ -179,6 +181,23 @@ def make_handler(database, public_origin, fighter_ids):
                 if self.command == "GET" and path == "/api/health":
                     return self.json_response(200, {"ok": True})
                 self.verify_origin()
+                if self.command == "GET" and path == "/api/pickem/state":
+                    row = self.session(False)
+                    return self.json_response(200, competition.state(row["id"] if row else None))
+                if self.command == "GET" and path == "/api/pickem/ranking":
+                    query = parse_qs(urlsplit(self.path).query)
+                    scope = query.get("scope", ["all"])[0]
+                    try:
+                        page = int(query.get("page", ["1"])[0])
+                        if not 1 <= page <= 100000: raise ValueError()
+                    except ValueError:
+                        raise APIError(400, "Página no válida.")
+                    return self.json_response(200, competition.leaderboard(scope, page))
+                if self.command == "PUT" and path == "/api/me/pickem":
+                    row = self.session()
+                    if not hmac.compare_digest(self.headers.get("X-Octagon-CSRF", ""), row["csrf"]):
+                        raise APIError(403, "La sesión no pudo validar la solicitud.")
+                    return self.json_response(200, competition.save(row["id"], self.body()))
                 if self.command == "GET" and path == "/api/auth/session":
                     row = self.session(False)
                     return self.json_response(200, self.user_response(row) if row else {"user": None})
@@ -251,7 +270,7 @@ def make_handler(database, public_origin, fighter_ids):
                         raise APIError(409, "Hay cambios desde otro dispositivo.", **self.user_response(latest))
                     return self.json_response(200, self.user_response(latest))
                 raise APIError(404, "Ruta no disponible.")
-            except APIError as error:
+            except (APIError, PickemError) as error:
                 self.json_response(error.status, error.body)
             except (sqlite3.Error, OSError, ValueError):
                 self.json_response(500, {"error": "No se pudieron guardar los datos. Inténtalo de nuevo."})

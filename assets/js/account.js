@@ -126,6 +126,7 @@ export function initializeAccount({store, onChange}) {
     status(dirty ? "Recuperando cambios pendientes…" : "Seguimiento guardado en tu cuenta.");
     $("#auth-password").value = "";
     render();
+    document.dispatchEvent(new Event("ufcinfo:account-changed"));
     if (dirty) await sync();
   }
   function notifyLocalChange() {
@@ -177,6 +178,7 @@ export function initializeAccount({store, onChange}) {
       if (dirty && !expired) { status("Hay cambios sin guardar. Reintenta la sincronización antes de cerrar sesión."); return; }
       if (!expired) await accountRequest("auth/logout", {method:"POST", csrf, body:{}});
       generation++; user=null; expired=false; csrf=""; base=[]; dirty=false;
+      document.dispatchEvent(new Event("ufcinfo:account-changed"));
       store.useScope(); onChange(); status("Modo invitado · Datos guardados en este navegador.");
       if ($("#auth-dialog").open) $("#auth-dialog").close();
     } catch (error) { status(error.message); }
