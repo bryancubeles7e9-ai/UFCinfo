@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-23T17:00:59.589Z",
-  "lastSearchedAt": "2026-10-23T17:00:59.589Z",
+  "updatedAt": "2026-10-23T18:01:04.591Z",
+  "lastSearchedAt": "2026-10-23T18:01:04.591Z",
   "groups": [
     {
       "id": "2112861333578522824",
@@ -370,6 +370,17 @@
             "AS_HugoPalomar"
           ],
           "attribution": "UFC Edmonton"
+        },
+        {
+          "id": "2113679289489256866",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2113679289489256866",
+          "publishedAt": "2026-10-23T17:09:47.000Z",
+          "language": "en",
+          "attributedAccounts": [
+            "AgFight"
+          ],
+          "attribution": "@AgFight"
         }
       ],
       "official": null
@@ -632,8 +643,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-23T17:00:59.589Z",
-    "receivedPosts": 10,
+    "checkedAt": "2026-10-23T18:01:04.591Z",
+    "receivedPosts": 13,
     "added": 0
   }
 }
