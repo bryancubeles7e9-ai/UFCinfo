@@ -1,8 +1,39 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-24T22:00:56.810Z",
-  "lastSearchedAt": "2026-10-24T22:00:56.810Z",
+  "updatedAt": "2026-10-24T23:00:56.106Z",
+  "lastSearchedAt": "2026-10-24T23:00:56.106Z",
   "groups": [
+    {
+      "id": "2114109790674636896",
+      "fighterNames": [
+        "Merab Dvalishvili",
+        "Petr Yan"
+      ],
+      "matchupKey": "merabdvalishvili|petryan|undated:2026-10",
+      "eventDateHint": null,
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "MMA Latinoamérica comenta un posible cruce entre Merab Dvalishvili y Petr Yan, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "MMA Latinoamérica discusses a possible matchup between Merab Dvalishvili and Petr Yan, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-24T23:00:56.106Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-24T21:40:27.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2114109790674636896",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2114109790674636896",
+          "publishedAt": "2026-10-24T21:40:27.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2114078734131294580",
       "fighterNames": [
@@ -798,8 +829,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-24T22:00:56.810Z",
-    "receivedPosts": 0,
-    "added": 0
+    "checkedAt": "2026-10-24T23:00:56.106Z",
+    "receivedPosts": 54,
+    "added": 1
   }
 }
