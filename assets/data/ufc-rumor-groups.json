@@ -1,8 +1,70 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-24T18:00:56.288Z",
-  "lastSearchedAt": "2026-10-24T18:00:56.288Z",
+  "updatedAt": "2026-10-24T19:00:58.659Z",
+  "lastSearchedAt": "2026-10-24T19:00:58.659Z",
   "groups": [
+    {
+      "id": "2114065875221229807",
+      "fighterNames": [
+        "Carlos Prates",
+        "Michael Morales"
+      ],
+      "matchupKey": "carlosprates|michaelmorales|undated:2026-10",
+      "eventDateHint": null,
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "MMA Latinoamérica comenta un posible cruce entre Carlos Prates y Michael Morales, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "MMA Latinoamérica discusses a possible matchup between Carlos Prates and Michael Morales, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-24T19:00:58.659Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-24T18:45:56.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2114065875221229807",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2114065875221229807",
+          "publishedAt": "2026-10-24T18:45:56.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2114057464924586086",
+      "fighterNames": [
+        "Aaron Pico",
+        "Losene Keita"
+      ],
+      "matchupKey": "aaronpico|losenekeita|undated:2026-10",
+      "eventDateHint": null,
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "MMA Latinoamérica comenta un posible cruce entre Aaron Pico y Losene Keita, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "MMA Latinoamérica discusses a possible matchup between Aaron Pico and Losene Keita, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-24T19:00:58.659Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-24T18:12:31.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2114057464924586086",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2114057464924586086",
+          "publishedAt": "2026-10-24T18:12:31.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2112861333578522824",
       "fighterNames": [
@@ -643,8 +705,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-24T18:00:56.288Z",
-    "receivedPosts": 21,
-    "added": 0
+    "checkedAt": "2026-10-24T19:00:58.659Z",
+    "receivedPosts": 25,
+    "added": 2
   }
 }
