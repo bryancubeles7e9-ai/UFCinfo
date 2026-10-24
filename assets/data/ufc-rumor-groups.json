@@ -1,8 +1,101 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-24T19:00:58.659Z",
-  "lastSearchedAt": "2026-10-24T19:00:58.659Z",
+  "updatedAt": "2026-10-24T20:00:54.935Z",
+  "lastSearchedAt": "2026-10-24T20:00:54.935Z",
   "groups": [
+    {
+      "id": "2114078734131294580",
+      "fighterNames": [
+        "Joshua Van",
+        "Manel Kape"
+      ],
+      "matchupKey": "joshuavan|manelkape|2027-01-30",
+      "eventDateHint": "2027-01-30",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Championship Rounds comenta un posible cruce entre Joshua Van y Manel Kape; la publicación menciona el 30 de enero. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds discusses a possible matchup between Joshua Van and Manel Kape; the post mentions January 30. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-24T20:00:54.935Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-24T19:37:02.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2114078734131294580",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2114078734131294580",
+          "publishedAt": "2026-10-24T19:37:02.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2114078596335894537",
+      "fighterNames": [
+        "Carlos Prates",
+        "Michael Morales"
+      ],
+      "matchupKey": "carlosprates|michaelmorales|2027-01-30",
+      "eventDateHint": "2027-01-30",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Championship Rounds comenta un posible cruce entre Carlos Prates y Michael Morales; la publicación menciona el 30 de enero. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds discusses a possible matchup between Carlos Prates and Michael Morales; the post mentions January 30. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-24T20:00:54.935Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-24T19:36:29.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2114078596335894537",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2114078596335894537",
+          "publishedAt": "2026-10-24T19:36:29.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2114072986747850970",
+      "fighterNames": [
+        "Lone’er Kavanagh",
+        "Ramazan Temirov"
+      ],
+      "matchupKey": "loneerkavanagh|ramazantemirov|undated:2026-10",
+      "eventDateHint": null,
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "Pelunaton comenta un posible cruce entre Lone’er Kavanagh y Ramazan Temirov, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Pelunaton discusses a possible matchup between Lone’er Kavanagh and Ramazan Temirov, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-24T20:00:54.935Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-24T19:14:12.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2114072986747850970",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2114072986747850970",
+          "publishedAt": "2026-10-24T19:14:12.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2114065875221229807",
       "fighterNames": [
@@ -705,8 +798,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-24T19:00:58.659Z",
-    "receivedPosts": 25,
-    "added": 2
+    "checkedAt": "2026-10-24T20:00:54.935Z",
+    "receivedPosts": 33,
+    "added": 3
   }
 }
