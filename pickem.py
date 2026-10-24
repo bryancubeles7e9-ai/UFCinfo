@@ -1,7 +1,6 @@
 """Server-authoritative Pick'em. Uses the published event feed, never provider APIs."""
 import json
 import re
-import sqlite3
 import time
 from datetime import datetime, timezone
 
@@ -47,6 +46,15 @@ def score(event, picks):
     return {'correct': correct, 'total': len(active), 'resolved': resolved,
             'score': round(100 * correct / len(active), 2) if active else None,
             'final': final, 'void': not active}
+
+
+def public_name(username, previous_alias, user_id):
+    # Legacy email logins must not become public leaderboard names.
+    if re.fullmatch(r'[A-Za-z0-9_-]{3,24}', username or ''):
+        return username
+    if re.fullmatch(r'[A-Za-z0-9_-]{3,24}', previous_alias or ''):
+        return previous_alias
+    return 'Usuario-' + user_id[:8]
 
 
 class Competition:
@@ -109,7 +117,7 @@ class Competition:
         with self.database.connect() as db:
             db.execute('BEGIN IMMEDIATE')
             self.sync(db, now)
-            profile = db.execute('SELECT alias FROM pickem_profiles WHERE user_id=?', (user_id,)).fetchone()
+            profile = db.execute('SELECT u.username, p.alias FROM users u LEFT JOIN pickem_profiles p ON p.user_id=u.id WHERE u.id=?', (user_id,)).fetchone()
             own = {r['event_id']: r for r in db.execute('SELECT * FROM pickem_entries WHERE user_id=?', (user_id,))}
             items = []
             for row in db.execute('SELECT * FROM pickem_events'):
@@ -121,7 +129,7 @@ class Competition:
                               'joined': bool(entry), 'revision': entry['revision'] if entry else 0,
                               'picks': picks, 'result': score(event, picks) if entry else None})
             items.sort(key=lambda r: timestamp(r['event']['date']), reverse=True)
-            return {'serverTime': now * 1000, 'alias': profile['alias'] if profile else None,
+            return {'serverTime': now * 1000, 'alias': public_name(profile['username'], profile['alias'], user_id) if profile else None,
                     'authenticated': user_id is not None, 'events': items}
 
     def save(self, user_id, data):
@@ -144,15 +152,7 @@ class Competition:
             old = db.execute('SELECT revision FROM pickem_entries WHERE user_id=? AND event_id=?', (user_id, event['id'])).fetchone()
             if data['revision'] != (old['revision'] if old else 0):
                 raise PickemError(409, 'Hay pronósticos más recientes en otro dispositivo. Actualiza antes de guardar.')
-            profile = db.execute('SELECT alias FROM pickem_profiles WHERE user_id=?', (user_id,)).fetchone()
-            if not profile:
-                alias = data.get('alias', '')
-                if not isinstance(alias, str) or not re.fullmatch(r'[A-Za-z0-9_-]{3,24}', alias):
-                    raise PickemError(400, 'El alias público debe tener de 3 a 24 letras, números o guiones.')
-                try:
-                    db.execute('INSERT INTO pickem_profiles VALUES (?,?)', (user_id, alias))
-                except sqlite3.IntegrityError:
-                    raise PickemError(409, 'Este alias público ya está en uso.')
+            # Identity comes from the authenticated account, never from request data.
             db.execute('INSERT INTO pickem_entries VALUES (?,?,?,?,?) ON CONFLICT(user_id,event_id) DO UPDATE SET picks=excluded.picks, revision=excluded.revision, updated_at=excluded.updated_at',
                        (user_id, event['id'], json.dumps(picks), data['revision'] + 1, now))
         return self.state(user_id)
@@ -165,13 +165,13 @@ class Competition:
             events = {r['id']: json.loads(r['snapshot']) for r in db.execute('SELECT * FROM pickem_events')}
             rows = {}
             year = datetime.now(timezone.utc).year
-            for entry in db.execute('SELECT e.*, p.alias FROM pickem_entries e JOIN pickem_profiles p ON p.user_id=e.user_id'):
+            for entry in db.execute('SELECT e.*, u.username, p.alias FROM pickem_entries e JOIN users u ON u.id=e.user_id LEFT JOIN pickem_profiles p ON p.user_id=e.user_id'):
                 event = events[entry['event_id']]
                 if scope == 'year' and datetime.fromtimestamp(timestamp(event['date']), timezone.utc).year != year:
                     continue
                 if scope not in {'all', 'year'} and entry['event_id'] != scope:
                     continue
-                r = rows.setdefault(entry['user_id'], {'alias': entry['alias'], 'scores': [], 'correct': 0, 'total': 0, 'played': 0, 'pending': 0})
+                r = rows.setdefault(entry['user_id'], {'alias': public_name(entry['username'], entry['alias'], entry['user_id']), 'scores': [], 'correct': 0, 'total': 0, 'played': 0, 'pending': 0})
                 result = score(event, json.loads(entry['picks']))
                 # Pending events never dilute averages or reward incomplete result feeds.
                 if result['final'] and not result['void']:

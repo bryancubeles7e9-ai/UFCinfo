@@ -1,5 +1,6 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "Los pronósticos guardados participan en el ranking con tu nombre de usuario.": "Els pronòstics desats participen en la classificació amb el teu nom d’usuari.",
   "Ranking Pick’em": "Classificació Pick’em",
   "Media sobre 100 de las veladas finalizadas. Las pendientes no modifican la media.": "Mitjana sobre 100 de les vetllades finalitzades. Les pendents no modifiquen la mitjana.",
   "Clasificación": "Classificació",

@@ -1,5 +1,6 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "Los pronósticos guardados participan en el ranking con tu nombre de usuario.": "Saved picks enter the leaderboard under your account username.",
   "Ranking Pick’em": "Pick’em leaderboard",
   "Media sobre 100 de las veladas finalizadas. Las pendientes no modifican la media.": "Average out of 100 across completed events. Pending events do not affect the average.",
   "Clasificación": "Leaderboard",

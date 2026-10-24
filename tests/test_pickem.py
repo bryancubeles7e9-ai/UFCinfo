@@ -32,7 +32,7 @@ class PickemTests(unittest.TestCase):
         self.clock=patch('pickem.time.time',return_value=NOW); self.clock.start()
         with self.db.connect() as db:
             for user in ['one','two']:
-                db.execute('INSERT INTO users (id,username,salt,password,updated_at) VALUES (?,?,?,?,?)',(user,user+'@private.test',b's',b'p',NOW))
+                db.execute('INSERT INTO users (id,username,salt,password,updated_at) VALUES (?,?,?,?,?)',(user,user,b's',b'p',NOW))
     def tearDown(self):
         self.clock.stop(); self.tmp.cleanup()
     def write(self,*events):
@@ -40,7 +40,7 @@ class PickemTests(unittest.TestCase):
     def picks(self,event=None):
         return {key(b):b['red'] for b in (event or self.event)['bouts']}
     def save(self,user='one',revision=0,**extra):
-        return self.game.save(user,{'eventId':self.event['id'],'revision':revision,'alias':user,'picks':self.picks(),**extra})
+        return self.game.save(user,{'eventId':self.event['id'],'revision':revision,'picks':self.picks(),**extra})
     def finish(self,correct=9):
         for i,b in enumerate(self.event['bouts']): b['winner']=b['red'] if i<correct else b['blue']
         self.event['status']='completed';self.write(self.event)
@@ -97,9 +97,27 @@ class PickemTests(unittest.TestCase):
         self.assertEqual(e.exception.status,409)
         self.assertFalse(self.game.state('two')['events'][0]['joined'])
         self.assertEqual(self.game.state('two')['events'][0]['picks'],{})
-        with self.assertRaises(PickemError):self.save('two',alias='ONE')
-        with self.assertRaises(PickemError):self.save('two',alias='email@private.test')
+        self.save('two',alias='ONE')
+        self.assertEqual(self.game.state('two')['alias'], 'two')
         with self.assertRaises(PickemError):self.save('two',picks={'bad':'intruder'})
+
+    def test_account_name_overrides_legacy_alias_and_survives_restart(self):
+        self.save(alias='invented')
+        with self.db.connect() as db:
+            db.execute('INSERT INTO pickem_profiles VALUES (?,?)', ('one','old-alias'))
+        self.finish()
+        game=Competition(Database(self.root/'db.sqlite'),self.feed)
+        for scope in ['all','year',self.event['id']]:
+            self.assertEqual(game.leaderboard(scope)['rows'][0]['alias'], 'one')
+        self.assertEqual(game.state('one')['alias'], 'one')
+        self.assertEqual(game.state('one')['events'][0]['result']['score'], 75)
+
+    def test_legacy_email_is_not_public(self):
+        self.save()
+        with self.db.connect() as db:
+            db.execute('UPDATE users SET username=? WHERE id=?', ('old@private.test','one'))
+        self.assertNotIn('old@private.test', json.dumps(self.game.leaderboard()))
+        self.assertEqual(self.game.state('one')['alias'], 'Usuario-one')
 
     def test_archive_survives_feed_rollover_and_restart(self):
         self.save();self.finish();self.game.state('one')
@@ -154,7 +172,7 @@ class PickemTests(unittest.TestCase):
                 self.assertEqual(request('PUT','/api/me/pickem',body)[0],200)
                 self.assertEqual(request('GET','/api/pickem/state',cookie=False)[1]['events'][0]['picks'],{})
                 status,board=request('GET','/api/pickem/ranking',cookie=False)
-                self.assertEqual(status,200);self.assertEqual(board['rows'][0]['alias'],'public-one')
+                self.assertEqual(status,200);self.assertEqual(board['rows'][0]['alias'],'one')
                 self.assertNotIn('picks',json.dumps(board));self.assertNotIn('@private.test',json.dumps(board))
             finally:server.shutdown();server.server_close();thread.join()
 

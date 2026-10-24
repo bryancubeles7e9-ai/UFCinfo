@@ -11,7 +11,7 @@ export function initializePickem() {
   let storage;
   try { storage = window.localStorage; } catch {}
   let local = readPicks(storage), events = [], state = null, selected = '', draft = {}, dirty = false;
-  let busy = false, generation = 0, message = '', alias = '', scope = 'all', page = 1, ranking = null, rankingError = false;
+  let busy = false, generation = 0, message = '', scope = 'all', page = 1, ranking = null, rankingError = false;
   let serverOffset = 0, rankGeneration = 0, draftRevision = 0;
   const now = () => Date.now() + serverOffset;
   const date = value => new Date(value).toLocaleString(getLocale(), {dateStyle:'medium', timeStyle:'short'});
@@ -24,7 +24,7 @@ export function initializePickem() {
     return item ? item.closed || now() >= item.closesAt : !eventData() || isClosed(eventData());
   }
   function useState(next) {
-    state = next; serverOffset = next.serverTime - Date.now(); alias = next.alias || alias;
+    state = next; serverOffset = next.serverTime - Date.now();
     if (!selected || !next.events.some(item => item.event.id === selected)) {
       selected = nextPickEvent(next.events.map(item => item.event), now())?.id || next.events.find(item => item.joined)?.event.id || '';
     }
@@ -34,7 +34,7 @@ export function initializePickem() {
   function board() {
     return `<section class="panel pickem-ranking"><h2>Ranking Pick’em</h2><p>Media sobre 100 de las veladas finalizadas. Las pendientes no modifican la media.</p>
     <label>Clasificación <select id="pickem-scope"><option value="all" ${scope==='all'?'selected':''}>Histórica</option><option value="year" ${scope==='year'?'selected':''}>Temporada actual</option>${eventData()?`<option value="event" ${scope==='event'?'selected':''}>Esta velada</option>`:''}</select></label>
-    ${rankingError ? '<p role="status">No se pudo cargar el ranking.</p>' : !ranking ? '<p>Cargando ranking…</p>' : `<div class="pickem-table"><table><thead><tr><th>Posición</th><th>Alias</th><th>Puntuación / 100</th><th>Veladas</th><th>Aciertos</th><th>Pendientes</th></tr></thead><tbody>${ranking.rows.map(r=>`<tr><td>${r.position ?? '—'}</td><td translate="no">${esc(r.alias)}</td><td>${r.score === null ? '—' : r.score.toLocaleString(getLocale(),{maximumFractionDigits:2})}</td><td>${r.played}</td><td>${r.correct} / ${r.total}</td><td>${r.pending}</td></tr>`).join('') || '<tr><td colspan="6">Todavía no hay participantes.</td></tr>'}</tbody></table></div><div class="pickem-pagination"><button class="outline-button small" data-rank-page="-1" ${page<=1?'disabled':''}>Anterior</button><span>${page} / ${Math.max(1,Math.ceil(ranking.total/50))}</span><button class="outline-button small" data-rank-page="1" ${page*50>=ranking.total?'disabled':''}>Siguiente</button></div>`}</section>`;
+    ${rankingError ? '<p role="status">No se pudo cargar el ranking.</p>' : !ranking ? '<p>Cargando ranking…</p>' : `<div class="pickem-table"><table><thead><tr><th>Posición</th><th>Nombre de usuario</th><th>Puntuación / 100</th><th>Veladas</th><th>Aciertos</th><th>Pendientes</th></tr></thead><tbody>${ranking.rows.map(r=>`<tr><td>${r.position ?? '—'}</td><td translate="no">${esc(r.alias)}</td><td>${r.score === null ? '—' : r.score.toLocaleString(getLocale(),{maximumFractionDigits:2})}</td><td>${r.played}</td><td>${r.correct} / ${r.total}</td><td>${r.pending}</td></tr>`).join('') || '<tr><td colspan="6">Todavía no hay participantes.</td></tr>'}</tbody></table></div><div class="pickem-pagination"><button class="outline-button small" data-rank-page="-1" ${page<=1?'disabled':''}>Anterior</button><span>${page} / ${Math.max(1,Math.ceil(ranking.total/50))}</span><button class="outline-button small" data-rank-page="1" ${page*50>=ranking.total?'disabled':''}>Siguiente</button></div>`}</section>`;
   }
   function render() {
     const event = eventData(), item = current();
@@ -50,7 +50,7 @@ export function initializePickem() {
       <p><strong>${locked ? 'Pronósticos cerrados' : 'Puedes cambiar tus elecciones hasta el cierre'}</strong> · <time translate="no">${esc(date(item?.closesAt || closingTime(event)))}</time></p>
       ${item?.joined ? `<p><strong>${item.result.void ? 'Velada anulada' : `${item.result.final ? 'Puntuación final' : 'Puntuación provisional'}: ${item.result.score ?? '—'} / 100`}</strong> · ${item.result.correct} / ${item.result.total} <span>Aciertos</span></p>` : ''}
       <div class="panel pickem-save">
-      ${authenticated ? `<p>Los pronósticos guardados participan en el ranking público con tu alias.</p>${state.alias ? `<p><span>Alias público</span>: <strong translate="no">${esc(state.alias)}</strong></p>` : `<label>Alias público <input id="pickem-alias" value="${esc(alias)}" minlength="3" maxlength="24" pattern="[A-Za-z0-9_-]{3,24}" placeholder="Tu alias" autocomplete="off"></label><p class="data-note">De 3 a 24 letras, números o guiones. No uses tu correo.</p>`}
+      ${authenticated ? `<p>Los pronósticos guardados participan en el ranking con tu nombre de usuario.</p><p><span>Nombre de usuario</span>: <strong translate="no">${esc(state.alias || "")}</strong></p>
       <button class="button small" id="pickem-save" ${locked || busy || !count || !dirty ? 'disabled' : ''}>${busy?'Guardando…':'Guardar pronósticos'}</button>
       ${!locked && Object.keys(picksFor(event,local[event.id])).length ? '<button class="outline-button small" id="pickem-import">Recuperar picks de este navegador</button>' : ''}` : '<p>Modo invitado: tus picks son locales y no puntúan. Inicia sesión para participar en el ranking.</p><button class="button small" id="pickem-login">Iniciar sesión</button>'}
       <p id="pickem-save-status" role="status">${esc(message || (dirty ? 'Cambios sin guardar' : authenticated ? (item?.joined ? 'Pronósticos guardados en tu cuenta' : 'Elige tus ganadores y guarda para participar') : 'Guardado local en este navegador'))}</p>
@@ -84,7 +84,6 @@ export function initializePickem() {
     render(); await loadRanking();
   }
   root.addEventListener('error',e=>{if(e.target.tagName==='IMG'&&!e.target.dataset.fallback){e.target.dataset.fallback='true';e.target.src='assets/images/fighter-placeholder.svg';}},true);
-  root.addEventListener('input',e=>{if(e.target.id==='pickem-alias')alias=e.target.value;});
   root.addEventListener('change',e=>{
     if(e.target.id==='pickem-event'){selected=e.target.value;draft=picksFor(current().event,current().picks);draftRevision=current().revision;dirty=false;message='';render();if(scope==='event'){page=1;loadRanking();}}
     if(e.target.id==='pickem-scope'){scope=e.target.value;page=1;ranking=null;render();loadRanking();}
@@ -103,7 +102,7 @@ export function initializePickem() {
         const session=await accountRequest('auth/session');
         if(ticket!==generation)return;
         if(!session.user)throw Error('Inicia sesión para guardar tus pronósticos.');
-        const data=await accountRequest('me/pickem',{method:'PUT',csrf:session.csrf,body:{eventId:event.id,picks:picksFor(event,draft),revision:draftRevision,alias}});
+        const data=await accountRequest('me/pickem',{method:'PUT',csrf:session.csrf,body:{eventId:event.id,picks:picksFor(event,draft),revision:draftRevision}});
         if(ticket!==generation)return;
         useState(data);message='Pronósticos guardados en tu cuenta';
       } catch(error){if(ticket!==generation)return;message=error.status ? error.message : 'No se ha confirmado el guardado. Actualiza los datos y vuelve a intentarlo.';}
@@ -119,7 +118,7 @@ export function initializePickem() {
     const i=button.dataset.pickBout,side=button.dataset.pickSide;render();root.querySelector(`[data-pick-bout="${i}"][data-pick-side="${side}"]`)?.focus({preventScroll:true});
   });
   document.addEventListener('ufcinfo:language-changed',render);
-  document.addEventListener('ufcinfo:account-changed',()=>{generation++;state=null;draft={};dirty=false;alias='';message='';render();refresh();});
+  document.addEventListener('ufcinfo:account-changed',()=>{generation++;state=null;draft={};dirty=false;message='';render();refresh();});
   window.addEventListener('storage',e=>{if(e.key==='ufcinfo-pickem-v1'||e.key===null){local=readPicks(storage);render();}});
   setInterval(()=>{if(eventData()&&closed()&&root.querySelector('[data-pick-bout]:not(:disabled)'))render();},15000);
   return {render, update(next){events=next;render();refresh();}};
