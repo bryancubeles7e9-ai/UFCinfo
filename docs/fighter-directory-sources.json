@@ -7539,5 +7539,17 @@
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
     "countryConsulted": "2026-10-21"
+  },
+  {
+    "id": "ufc-mickey-gall",
+    "name": "Mickey Gall",
+    "aliases": [
+      "Mickey Gall"
+    ],
+    "source": "https://www.ufc.com/athlete/mickey-gall",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-24"
   }
 ]

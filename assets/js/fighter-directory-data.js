@@ -30042,5 +30042,54 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-10-21"
     },
     "photoCredit": "UFC"
+  },
+  {
+    "id": "ufc-mickey-gall",
+    "name": "Mickey Gall",
+    "aliases": [
+      "Mickey Gall"
+    ],
+    "source": "https://www.ufc.com/athlete/mickey-gall",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+    "countryConsulted": "2026-10-24",
+    "first": "Mickey",
+    "last": "Gall",
+    "supplemental": true,
+    "division": "Peso medio",
+    "record": "7-7-0",
+    "nickname": "",
+    "birthplace": "Livingston, United States",
+    "officialStyle": "Brazilian Jiu-Jitsu",
+    "heightCm": 188,
+    "reachCm": 188,
+    "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/GALL_MICKEY_L_09-26.png?itok=IAd0wFGh",
+    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/GALL_MICKEY_L_09-26.png?itok=IAd0wFGh",
+    "consulted": "2026-10-24",
+    "info": {
+      "age": 34.0,
+      "gym": "Gracie New Jersey",
+      "weightKg": 77.5,
+      "legReachCm": 104.1,
+      "debut": "Feb. 7, 2016",
+      "strikesLanded": 3.5,
+      "strikesAbsorbed": 4.72,
+      "takedownAverage": 1.15,
+      "submissionAverage": 1.58,
+      "strikingDefense": 50.0,
+      "takedownDefense": 38.0,
+      "knockdownAverage": 0.29,
+      "strikingAccuracy": 50,
+      "takedownAccuracy": 16,
+      "koWins": null,
+      "submissionWins": 6.0,
+      "firstRoundFinishes": 5.0,
+      "source": "https://www.ufc.com/athlete/mickey-gall",
+      "consulted": "2026-10-24",
+      "statisticsSource": "https://www.ufc.com/athlete/mickey-gall",
+      "statisticsConsulted": "2026-10-24"
+    },
+    "photoCredit": "UFC"
   }
 ];
