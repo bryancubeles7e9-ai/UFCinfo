@@ -1,5 +1,7 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "Elige al ganador de cada combate del próximo evento. Inicia sesión y guarda antes del cierre para participar en el ranking: tu porcentaje de aciertos será tu puntuación sobre 100.": "Tria el guanyador de cada combat del proper esdeveniment. Inicia sessió i desa abans del tancament per participar en la classificació: el teu percentatge d’encerts serà la teva puntuació sobre 100.",
+  "Solo puedes hacer pronósticos para el próximo evento.": "Només pots fer pronòstics per al proper esdeveniment.",
   "Los pronósticos guardados participan en el ranking con tu nombre de usuario.": "Els pronòstics desats participen en la classificació amb el teu nom d’usuari.",
   "Ranking Pick’em": "Classificació Pick’em",
   "Media sobre 100 de las veladas finalizadas. Las pendientes no modifican la media.": "Mitjana sobre 100 de les vetllades finalitzades. Les pendents no modifiquen la mitjana.",

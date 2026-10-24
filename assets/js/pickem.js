@@ -21,12 +21,13 @@ export function initializePickem() {
   function eventData() { return current()?.event || nextPickEvent(events); }
   function closed() {
     const item = current();
-    return item ? item.closed || now() >= item.closesAt : !eventData() || isClosed(eventData());
+    return item ? item.event.id !== state.nextEventId || item.closed || now() >= item.closesAt : !eventData() || isClosed(eventData());
   }
   function useState(next) {
+    const wasNext = selected === state?.nextEventId;
     state = next; serverOffset = next.serverTime - Date.now();
-    if (!selected || !next.events.some(item => item.event.id === selected)) {
-      selected = nextPickEvent(next.events.map(item => item.event), now())?.id || next.events.find(item => item.joined)?.event.id || '';
+    if (!selected || (wasNext && selected !== next.nextEventId) || !next.events.some(item => item.event.id === selected)) {
+      selected = next.nextEventId || next.events.find(item => item.joined)?.event.id || '';
     }
     const item = current();
     draft = item ? picksFor(item.event, item.picks) : {}; draftRevision = item?.revision || 0; dirty = false;
@@ -42,8 +43,8 @@ export function initializePickem() {
     const authenticated = !!state?.authenticated;
     const picks = authenticated ? picksFor(event, draft) : picksFor(event, local[event.id]);
     const locked = closed(), count = Object.keys(picks).length;
-    const options = state?.events.filter(r => r.joined || ['announced','scheduled','live'].includes(r.event.status)) || [];
-    root.innerHTML = `${options.length ? `<label>Velada <select id="pickem-event">${options.map(r=>`<option value="${esc(r.event.id)}" ${r.event.id===selected?'selected':''}>${esc(r.event.title)} · ${esc(date(r.event.date))}</option>`).join('')}</select></label>` : ''}
+    const options = state?.events.filter(r => r.joined || r.event.id === state.nextEventId) || [];
+    root.innerHTML = `<p class="data-note">Elige al ganador de cada combate del próximo evento. Inicia sesión y guarda antes del cierre para participar en el ranking: tu porcentaje de aciertos será tu puntuación sobre 100.</p>${options.length ? `<label>Velada <select id="pickem-event">${options.map(r=>`<option value="${esc(r.event.id)}" ${r.event.id===selected?'selected':''}>${esc(r.event.title)} · ${esc(date(r.event.date))}</option>`).join('')}</select></label>` : ''}
       <div class="panel pickem-summary"><div><p class="eyebrow">TUS PRONÓSTICOS UFC</p><h2 translate="no">${esc(event.title)}</h2><p translate="no">${esc(date(event.date))}</p><p class="data-note">Hora local · inicio de la principal</p></div><div class="pickem-progress"><strong>${count} / ${event.bouts.filter(b=>!b._void).length}</strong><span>Pronósticos elegidos</span><progress max="${Math.max(1,event.bouts.length)}" value="${count}" aria-label="Pronósticos elegidos"></progress></div></div>
       <p><strong>100 puntos por velada</strong> · Aciertos ÷ combates válidos × 100. Las peleas sin elegir cuentan como falladas; empates, no contest y cancelaciones quedan anulados.</p>
       <p class="data-note">El cierre usa el primer bloque oficial disponible; sin horarios completos, cuatro horas antes de la principal. Lo controla el servidor.</p>

@@ -139,6 +139,33 @@ class PickemTests(unittest.TestCase):
         self.assertEqual([r['score'] for r in board],[50,50])
         self.assertEqual([r['position'] for r in board],[1,1])
 
+    def test_only_next_event_is_available_and_server_rejects_later(self):
+        later = fixture('later', NOW+172800)
+        self.write(later, self.event)
+        state = self.game.state('one')
+        self.assertEqual(state['nextEventId'], 'event')
+        self.assertEqual([i['event']['id'] for i in state['events']], ['event'])
+        with self.assertRaises(PickemError) as error:
+            self.game.save('one', {'eventId':'later','revision':0,'picks':self.picks(later)})
+        self.assertEqual(error.exception.status, 409)
+        self.save()
+        # A closed current card does not let users skip ahead to later events.
+        with patch('pickem.time.time', return_value=closing_time(self.event)+1):
+            with self.assertRaises(PickemError):
+                self.game.save('one', {'eventId':'later','revision':0,'picks':self.picks(later)})
+        self.event['status'] = 'completed'
+        self.write(self.event, later)
+        state = self.game.state('one')
+        self.assertEqual(state['nextEventId'], 'later')
+        self.assertTrue(next(i for i in state['events'] if i['event']['id']=='event')['closed'])
+        self.game.save('one', {'eventId':'later','revision':0,'picks':self.picks(later)})
+
+    def test_cancelled_next_event_is_skipped(self):
+        later = fixture('later', NOW+172800)
+        self.event['status'] = 'cancelled'
+        self.write(self.event, later)
+        self.assertEqual(self.game.state('one')['nextEventId'], 'later')
+
     def test_official_closing_and_stale_schedule(self):
         e=self.event;e['bouts'][0]['section']='prelims'
         e['sectionSchedule']={'eventDate':e['date'],'source':e['source'],'starts':{'main':e['date'],'prelims':iso(NOW+86400-7200)}}

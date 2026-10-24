@@ -112,24 +112,33 @@ class Competition:
             db.execute('INSERT INTO pickem_events VALUES (?,?,?,?) ON CONFLICT(id) DO UPDATE SET snapshot=excluded.snapshot, closes_at=excluded.closes_at, locked=excluded.locked',
                        (event['id'], json.dumps(event), close, int(locked)))
 
+    def next_event_id(self, db, now):
+        candidates = [json.loads(row['snapshot']) for row in db.execute('SELECT snapshot FROM pickem_events')]
+        candidates = [e for e in candidates if e.get('status') in {'announced', 'scheduled', 'live'}
+                      and timestamp(e.get('date')) + 43200 > now]
+        return min(candidates, key=lambda e: (timestamp(e['date']), e['id']))['id'] if candidates else None
+
     def state(self, user_id=None):
         now = time.time()
         with self.database.connect() as db:
             db.execute('BEGIN IMMEDIATE')
             self.sync(db, now)
             profile = db.execute('SELECT u.username, p.alias FROM users u LEFT JOIN pickem_profiles p ON p.user_id=u.id WHERE u.id=?', (user_id,)).fetchone()
+            next_id = self.next_event_id(db, now)
             own = {r['event_id']: r for r in db.execute('SELECT * FROM pickem_entries WHERE user_id=?', (user_id,))}
             items = []
             for row in db.execute('SELECT * FROM pickem_events'):
                 event = json.loads(row['snapshot'])
                 entry = own.get(row['id'])
+                if row['id'] != next_id and not entry:
+                    continue
                 picks = json.loads(entry['picks']) if entry else {}
                 items.append({'event': event, 'closesAt': row['closes_at'] * 1000,
-                              'closed': bool(row['locked']) or now >= row['closes_at'],
+                              'closed': row['id'] != next_id or bool(row['locked']) or now >= row['closes_at'],
                               'joined': bool(entry), 'revision': entry['revision'] if entry else 0,
                               'picks': picks, 'result': score(event, picks) if entry else None})
             items.sort(key=lambda r: timestamp(r['event']['date']), reverse=True)
-            return {'serverTime': now * 1000, 'alias': public_name(profile['username'], profile['alias'], user_id) if profile else None,
+            return {'serverTime': now * 1000, 'nextEventId': next_id, 'alias': public_name(profile['username'], profile['alias'], user_id) if profile else None,
                     'authenticated': user_id is not None, 'events': items}
 
     def save(self, user_id, data):
@@ -139,6 +148,8 @@ class Competition:
         with self.database.connect() as db:
             db.execute('BEGIN IMMEDIATE')
             self.sync(db, now)
+            if data['eventId'] != self.next_event_id(db, now):
+                raise PickemError(409, 'Solo puedes hacer pronósticos para el próximo evento.')
             row = db.execute('SELECT * FROM pickem_events WHERE id=?', (data['eventId'],)).fetchone()
             if not row or row['locked'] or now >= row['closes_at']:
                 raise PickemError(409, 'Los pronósticos de esta velada están cerrados.')

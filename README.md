@@ -173,7 +173,7 @@ Si detectas un dato incorrecto o un fallo, puedes [abrir una incidencia](https:/
 
 ### Pick’em y ranking sobre 100
 
-Elige un ganador por combate en **Pick’em**, con una pelea por fila, foto, récord y nacionalidad. Como invitado puedes preparar picks en este navegador. Para competir, inicia sesión y pulsa **Guardar pronósticos**. Las elecciones de invitado se pueden recuperar explícitamente antes del cierre; no se importan automáticamente ni se aceptan después de cerrar.
+Solo se admiten pronósticos para el **próximo evento**; el servidor rechaza los de veladas posteriores y el historial queda en modo consulta. Al finalizar la velada actual (o transcurrir 12 horas desde su hora principal si sigue pendiente), se habilita la siguiente. Elige un ganador por combate en **Pick’em**, con una pelea por fila, foto, récord y nacionalidad. Como invitado puedes preparar picks en este navegador. Para competir, inicia sesión y pulsa **Guardar pronósticos**. Las elecciones de invitado se pueden recuperar explícitamente antes del cierre; no se importan automáticamente ni se aceptan después de cerrar.
 
 - **Velada:** aciertos ÷ combates válidos × 100, con dos decimales. Las peleas válidas sin elegir cuentan como falladas; cancelaciones, empates y no contest no cuentan. Si todas se anulan, la velada no afecta a la media.
 - **Ranking histórico y anual:** media de las puntuaciones de las veladas finalizadas, siempre sobre 100. También hay clasificación por evento. Se muestran veladas jugadas, aciertos y eventos pendientes; no hay mínimo de participación. Los empates a dos decimales comparten posición. Los participantes sin resultados aparecen pendientes, sin posición.

@@ -1,5 +1,7 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "Elige al ganador de cada combate del próximo evento. Inicia sesión y guarda antes del cierre para participar en el ranking: tu porcentaje de aciertos será tu puntuación sobre 100.": "Pick the winner of each bout in the next event. Sign in and save before picks close to join the leaderboard: your correct-pick percentage is your score out of 100.",
+  "Solo puedes hacer pronósticos para el próximo evento.": "You can only make picks for the next event.",
   "Los pronósticos guardados participan en el ranking con tu nombre de usuario.": "Saved picks enter the leaderboard under your account username.",
   "Ranking Pick’em": "Pick’em leaderboard",
   "Media sobre 100 de las veladas finalizadas. Las pendientes no modifican la media.": "Average out of 100 across completed events. Pending events do not affect the average.",
