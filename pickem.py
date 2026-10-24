@@ -44,7 +44,7 @@ def score(event, picks):
     resolved = sum(b.get('winner') in (b['red'], b['blue']) for b in active)
     final = event.get('status') == 'completed' and resolved == len(active)
     return {'correct': correct, 'total': len(active), 'resolved': resolved,
-            'score': round(100 * correct / len(active), 2) if active else None,
+            'score': 100 * correct,
             'final': final, 'void': not active}
 
 
@@ -182,17 +182,16 @@ class Competition:
                     continue
                 if scope not in {'all', 'year'} and entry['event_id'] != scope:
                     continue
-                r = rows.setdefault(entry['user_id'], {'alias': public_name(entry['username'], entry['alias'], entry['user_id']), 'scores': [], 'correct': 0, 'total': 0, 'played': 0, 'pending': 0})
+                r = rows.setdefault(entry['user_id'], {'alias': public_name(entry['username'], entry['alias'], entry['user_id']), 'correct': 0, 'total': 0, 'played': 0, 'pending': 0})
                 result = score(event, json.loads(entry['picks']))
-                # Pending events never dilute averages or reward incomplete result feeds.
+                # Only final results count in the public totals; pending cards remain provisional.
                 if result['final'] and not result['void']:
-                    r['scores'].append(100 * result['correct'] / result['total'])
                     r['correct'] += result['correct']; r['total'] += result['total']; r['played'] += 1
                 elif not result['void']:
                     r['pending'] += 1
             values = []
             for r in rows.values():
-                r['score'] = round(sum(r.pop('scores')) / r['played'], 2) if r['played'] else None
+                r['score'] = 100 * r['correct'] if r['played'] else None
                 values.append(r)
             values.sort(key=lambda r: (r['score'] is None, -(r['score'] or 0), r['alias'].lower()))
             last_score, position = object(), 0

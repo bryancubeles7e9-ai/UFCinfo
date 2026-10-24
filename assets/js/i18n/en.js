@@ -1,5 +1,11 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "Elige al ganador de cada combate del próximo evento. Inicia sesión y guarda antes del cierre: cada pick acertado suma 100 puntos; los fallos suman 0.": "Pick the winner of each bout in the next event. Sign in and save before picks close: every correct pick earns 100 points; misses earn 0.",
+  "Cada pick acertado suma 100 puntos. El ranking acumula los puntos de las veladas finalizadas.": "Each correct pick earns 100 points. The leaderboard adds up points from completed events.",
+  "100 puntos por acierto": "100 points per correct pick",
+  "Cada acierto suma 100 puntos; los fallos y las peleas sin elegir suman 0. Empates, no contest y cancelaciones no dan puntos.": "Each correct pick earns 100 points; misses and unpicked bouts earn 0. Draws, no contests and cancellations award no points.",
+  "Puntos": "Points",
+  "puntos": "points",
   "Elige al ganador de cada combate del próximo evento. Inicia sesión y guarda antes del cierre para participar en el ranking: tu porcentaje de aciertos será tu puntuación sobre 100.": "Pick the winner of each bout in the next event. Sign in and save before picks close to join the leaderboard: your correct-pick percentage is your score out of 100.",
   "Solo puedes hacer pronósticos para el próximo evento.": "You can only make picks for the next event.",
   "Los pronósticos guardados participan en el ranking con tu nombre de usuario.": "Saved picks enter the leaderboard under your account username.",

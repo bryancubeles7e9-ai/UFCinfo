@@ -45,12 +45,14 @@ class PickemTests(unittest.TestCase):
         for i,b in enumerate(self.event['bouts']): b['winner']=b['red'] if i<correct else b['blue']
         self.event['status']='completed';self.write(self.event)
 
-    def test_score_out_of_100_and_unpicked_count(self):
+    def test_each_correct_pick_is_100_and_unpicked_is_zero(self):
         self.save();self.finish()
         state=self.game.state('one')['events'][0]
-        self.assertEqual(state['result']['score'],75)
-        self.assertEqual(self.game.leaderboard()['rows'][0]['score'],75)
-        self.assertEqual(score(self.event,{key(self.event['bouts'][0]):'R0'})['score'],8.33)
+        self.assertEqual(state['result']['score'],900)
+        self.assertEqual(self.game.leaderboard()['rows'][0]['score'],900)
+        self.assertEqual(score(self.event,{key(self.event['bouts'][0]):'R0'})['score'],100)
+        self.assertEqual(score(self.event,{})['score'],0)
+        self.assertEqual(score(self.event,{key(self.event['bouts'][0]):'B0'})['score'],0)
         self.assertEqual(self.game.leaderboard()['rows'][0]['alias'],'one')
         self.assertNotIn('@private.test',json.dumps(self.game.leaderboard()))
 
@@ -59,10 +61,10 @@ class PickemTests(unittest.TestCase):
         self.event['bouts'][10]['outcome']='Draw';self.event['bouts'][10]['winner']=None
         self.event['bouts'][11]['outcome']='No contest';self.event['bouts'][11]['winner']=None
         self.write(self.event)
-        self.assertEqual(self.game.leaderboard()['rows'][0]['score'],100)
-        self.assertEqual(self.game.leaderboard()['rows'][0]['score'],100)
+        self.assertEqual(self.game.leaderboard()['rows'][0]['score'],1000)
+        self.assertEqual(self.game.leaderboard()['rows'][0]['score'],1000)
         self.event['bouts'][0]['winner']='B0';self.write(self.event)
-        self.assertEqual(self.game.leaderboard()['rows'][0]['score'],90)
+        self.assertEqual(self.game.leaderboard()['rows'][0]['score'],900)
 
     def test_partial_results_do_not_enter_average(self):
         self.save();self.event['status']='completed';self.event['bouts'][0]['winner']='R0';self.write(self.event)
@@ -110,7 +112,7 @@ class PickemTests(unittest.TestCase):
         for scope in ['all','year',self.event['id']]:
             self.assertEqual(game.leaderboard(scope)['rows'][0]['alias'], 'one')
         self.assertEqual(game.state('one')['alias'], 'one')
-        self.assertEqual(game.state('one')['events'][0]['result']['score'], 75)
+        self.assertEqual(game.state('one')['events'][0]['result']['score'], 900)
 
     def test_legacy_email_is_not_public(self):
         self.save()
@@ -123,20 +125,20 @@ class PickemTests(unittest.TestCase):
         self.save();self.finish();self.game.state('one')
         self.write(fixture('next',NOW+864000))
         game=Competition(Database(self.root/'db.sqlite'),self.feed)
-        self.assertEqual(game.leaderboard()['rows'][0]['score'],75)
+        self.assertEqual(game.leaderboard()['rows'][0]['score'],900)
         self.assertTrue(any(r['joined'] for r in game.state('one')['events']))
 
-    def test_average_ties_and_cancelled_event(self):
+    def test_total_points_ties_and_cancelled_event(self):
         self.save();self.save('two');self.finish(6);self.game.state()
         self.event=fixture('second',NOW+172800);self.write(self.event)
         self.save();self.finish(12)
         board=self.game.leaderboard()['rows']
-        self.assertEqual(board[0]['score'],75);self.assertEqual(board[0]['played'],2)
-        self.assertEqual(board[1]['score'],50)
-        self.assertEqual(self.game.leaderboard('second')['rows'][0]['score'],100)
+        self.assertEqual(board[0]['score'],1800);self.assertEqual(board[0]['played'],2)
+        self.assertEqual(board[1]['score'],600)
+        self.assertEqual(self.game.leaderboard('second')['rows'][0]['score'],1200)
         self.event['status']='cancelled';self.write(self.event)
         board=self.game.leaderboard()['rows']
-        self.assertEqual([r['score'] for r in board],[50,50])
+        self.assertEqual([r['score'] for r in board],[600,600])
         self.assertEqual([r['position'] for r in board],[1,1])
 
     def test_only_next_event_is_available_and_server_rejects_later(self):

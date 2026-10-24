@@ -1,5 +1,11 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "Elige al ganador de cada combate del próximo evento. Inicia sesión y guarda antes del cierre: cada pick acertado suma 100 puntos; los fallos suman 0.": "Tria el guanyador de cada combat del proper esdeveniment. Inicia sessió i desa abans del tancament: cada pick encertat suma 100 punts; les errades sumen 0.",
+  "Cada pick acertado suma 100 puntos. El ranking acumula los puntos de las veladas finalizadas.": "Cada pick encertat suma 100 punts. La classificació acumula els punts de les vetllades finalitzades.",
+  "100 puntos por acierto": "100 punts per encert",
+  "Cada acierto suma 100 puntos; los fallos y las peleas sin elegir suman 0. Empates, no contest y cancelaciones no dan puntos.": "Cada encert suma 100 punts; les errades i les baralles sense triar sumen 0. Empats, no contest i cancel·lacions no donen punts.",
+  "Puntos": "Punts",
+  "puntos": "punts",
   "Elige al ganador de cada combate del próximo evento. Inicia sesión y guarda antes del cierre para participar en el ranking: tu porcentaje de aciertos será tu puntuación sobre 100.": "Tria el guanyador de cada combat del proper esdeveniment. Inicia sessió i desa abans del tancament per participar en la classificació: el teu percentatge d’encerts serà la teva puntuació sobre 100.",
   "Solo puedes hacer pronósticos para el próximo evento.": "Només pots fer pronòstics per al proper esdeveniment.",
   "Los pronósticos guardados participan en el ranking con tu nombre de usuario.": "Els pronòstics desats participen en la classificació amb el teu nom d’usuari.",
