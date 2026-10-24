@@ -5,10 +5,15 @@ export function githubRumorState({token=process.env.GITHUB_TOKEN,repository=proc
   const base=`https://api.github.com/repos/${repository}`;
   let sha;
   async function request(path,method='GET',body) {
-    const response=await fetchImpl(base+path,{method,headers:{Authorization:`Bearer ${token}`,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2026-03-10','Content-Type':'application/json'},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(25000),redirect:'error'});
+    try {
+    const response=await fetchImpl(base+path,{method,headers:{Authorization:`Bearer ${token}`,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2026-03-10','Content-Type':'application/json'},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(60000),redirect:'error'});
     if(response.status===404 && method==='GET')return null;
     if(!response.ok)throw Error(`GitHub state-store HTTP ${response.status}. No paid query permitted.`);
-    return response.json();
+    return await response.json();
+    } catch(error) {
+      error.rumorService='GitHub';
+      throw error; // A timed-out PUT may have committed; never blindly replay it.
+    }
   }
   return {
     async load() {

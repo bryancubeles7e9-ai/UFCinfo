@@ -78,10 +78,16 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
       state.reservedCredits+=reservation;
       await saveState();
       const url=new URL(endpoint);url.searchParams.set('query',query);url.searchParams.set('queryType','Latest');if(cursor)url.searchParams.set('cursor',cursor);
-      const response=await fetchImpl(url,{headers:{'X-API-Key':key,Accept:'application/json'},signal:AbortSignal.timeout(25000),redirect:'error'});
-      requests++;
-      if (!response.ok) throw Error(`TwitterAPI.io HTTP ${response.status}; no retries. Reserved credits retained.`);
-      const body=await response.text();
+      let body;
+      try {
+        const response=await fetchImpl(url,{headers:{'X-API-Key':key,Accept:'application/json'},signal:AbortSignal.timeout(60000),redirect:'error'});
+        requests++;
+        if (!response.ok) throw Error(`TwitterAPI.io HTTP ${response.status}; no retries. Reserved credits retained.`);
+        body=await response.text();
+      } catch(error) {
+        error.rumorService='TwitterAPI.io';
+        throw error; // Never repeat an ambiguously billed request.
+      }
       if (body.length>4_000_000) throw Error('API response too large.');
       const data=JSON.parse(body);
       if (data?.success === false || ['error','failed'].includes(data?.status) || data?.error) throw Error('TwitterAPI.io reported a provider error; feed preserved.');
@@ -141,7 +147,7 @@ if (process.argv[1] && import.meta.url===pathToFileURL(process.argv[1]).href) {
       const known=/^(?:TwitterAPI\.io HTTP \d{3}; no retries\. Reserved credits retained\.|GitHub state-store HTTP \d{3}\. No paid query permitted\.|Unexpected API response; feed preserved\.|TwitterAPI\.io reported a provider error; feed preserved\.|API response too large\.|Invalid pagination cursor\.|Invalid generated feed; refusing to publish\.|Invalid existing public feed; refusing to overwrite\.|Grupo no válido\.|Publicación no válida\.|Fecha de publicación no válida\.|La publicación no pertenece a una fuente configurada\.|Publicación duplicada o desconocida\.|Invalid accounting state\. No API request made\.|GitHub did not confirm durable accounting\.)$/;
       if(known.test(message))console.error('Sync error: '+message);
       else if(error instanceof SyntaxError)console.error('Sync error: invalid JSON response or stored JSON.');
-      else if(error?.name==='TimeoutError' || error?.name==='AbortError')console.error('Sync error: request timed out.');
+      else if(error?.name==='TimeoutError' || error?.name==='AbortError')console.error('Sync error: '+(['TwitterAPI.io','GitHub'].includes(error.rumorService)?error.rumorService:'unknown service')+' request timed out; no immediate retry.');
       else if(error?.cause?.code && /^[A-Z0-9_]{1,60}$/.test(error.cause.code))console.error('Sync network error: '+error.cause.code);
       else console.error('Sync error category: '+(['TypeError','Error'].includes(error?.name)?error.name:'unknown')+'.');
       console.error('Existing public data preserved; no automatic retry.');

@@ -15,3 +15,17 @@ assert.equal(saved.reservedCredits,300);assert.deepEqual(saved.archive,[]);asser
 assert.equal((await githubRumorState(settings).load()).reservedCredits,300);
 saved=null;await assert.rejects(githubRumorState(settings).load(),/Refusing budget reset/);
 console.log('PASS: persistent GitHub accounting, safe metadata, no raw text or keys, and missing-ledger protection');
+for (const phase of ['headers','body']) {
+ let attempts=0;
+ const timeout=()=>{throw new DOMException('timeout','TimeoutError');};
+ const failing=githubRumorState({...settings,fetchImpl:async()=>{
+   attempts++;
+   if(phase==='headers')timeout();
+   return {ok:true,status:200,json:async()=>timeout()};
+ }});
+ await assert.rejects(failing.load(),error=>error.name==='TimeoutError' && error.rumorService==='GitHub');
+ assert.equal(attempts,1);
+ await assert.rejects(failing.save(saved??{}),error=>error.name==='TimeoutError' && error.rumorService==='GitHub');
+ assert.equal(attempts,2);
+}
+console.log('PASS: GitHub header/body timeouts identify service without replaying writes');

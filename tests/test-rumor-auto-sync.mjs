@@ -79,6 +79,21 @@ try {
  assert.equal(await readFile(join(root,'assets/data/ufc-rumor-groups.json'),'utf8'),before);
  assert.equal(JSON.parse(await readFile(join(root,'.ufcinfo-data/rumor-sync-state.json'),'utf8')).reservedCredits,300);
  await assert.rejects(syncRumors({projectRoot:root,configOverride:{...config,enabled:false},fetchImpl:()=>{throw Error('Must not fetch');},now}),/disabled/);
+ for (const phase of ['headers','body']) {
+   let attempts=0;
+   await writeFile(join(root,'.ufcinfo-data/rumor-sync-state.json'),JSON.stringify({schemaVersion:1,reservedCredits:0,estimatedCredits:0,lastSuccessAt:null,pending:null,archive:[]}));
+   const timeout=()=>{throw new DOMException('timeout','TimeoutError');};
+   await assert.rejects(syncRumors({projectRoot:root,configOverride:config,now,fetchImpl:async()=>{
+     attempts++;
+     if(phase==='headers')timeout();
+     return {ok:true,text:async()=>timeout()};
+   }}),error=>error.name==='TimeoutError' && error.rumorService==='TwitterAPI.io');
+   assert.equal(attempts,1);
+   assert.equal(await readFile(join(root,'assets/data/ufc-rumor-groups.json'),'utf8'),before);
+   const ledger=JSON.parse(await readFile(join(root,'.ufcinfo-data/rumor-sync-state.json'),'utf8'));
+   assert.equal(ledger.reservedCredits,300);
+   assert.equal(ledger.lastSuccessAt,null);
+ }
  let durableSaved=false,paidCalls=0;
  const stateStore={load:async()=>({schemaVersion:1,reservedCredits:0,estimatedCredits:0,lastSuccessAt:null,pending:null,archive:[]}),save:async state=>{assert.ok(state.reservedCredits>=300);durableSaved=true;}};
  await syncRumors({projectRoot:root,configOverride:config,stateStore,fetchImpl:async()=>{assert.ok(durableSaved);paidCalls++;return new Response(JSON.stringify({tweets:[],has_next_page:false}));},now});
