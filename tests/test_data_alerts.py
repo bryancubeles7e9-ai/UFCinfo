@@ -38,6 +38,30 @@ class AlertTests(unittest.TestCase):
         self.feeds['records']['lastSync'] = {'checkedAt': self.stamp}
         self.assertEqual(self.check(), [])
 
+    def test_missing_source_statistics_warns_but_real_failures_still_fail(self):
+        self.state['jobs']['records']['pendingSince'] = (self.now - timedelta(hours=49)).isoformat()
+        feed = self.feeds['records']
+        feed.update(pendingProfileIds=['jack'], lastSync={
+            'checkedAt': self.stamp, 'failedIds': ['jack'], 'recordOnlyIds': ['jack']})
+        warnings = []
+        self.assertEqual(m.assess(self.state, self.feeds, self.rumors, self.now, warnings), [])
+        self.assertEqual(len(warnings), 1)
+        self.assertIn('jack', warnings[0])
+        for extra in ({'profileReview': {'jack': {'reason': 'regression'}}},
+                      {'unmatchedEventFighters': {'card': ['Missing']}},
+                      {'pendingProfileIds': ['jack', 'other']}):
+            original = dict(feed)
+            feed.update(extra)
+            self.assertTrue(self.check())
+            feed.clear(); feed.update(original)
+        feed['lastSync']['failedIds'].append('network-error')
+        self.assertTrue(self.check())
+        feed['lastSync']['failedIds'].pop()
+        feed['lastSync']['checkedAt'] = (self.now - timedelta(hours=31)).isoformat()
+        self.assertTrue(self.check())
+        feed['lastSync']['checkedAt'] = (self.now + timedelta(hours=1)).isoformat()
+        self.assertTrue(self.check())
+
     def test_run_history(self):
         run = lambda c: {'head_branch': 'main', 'status': 'completed', 'conclusion': c}
         self.assertFalse(m.repeated_failures([run('success'), run('failure')]))

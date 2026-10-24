@@ -22,8 +22,22 @@ def hours(value, now):
         return None
 
 
-def assess(state, feeds, rumors, now):
+def source_statistics_pending(feed, now):
+    """Only downgrade missing source statistics after a recent verified record fetch."""
+    sync = feed.get('lastSync', {})
+    age = hours(sync.get('checkedAt'), now)
+    pending = set(feed.get('pendingProfileIds', []))
+    record_only = set(sync.get('recordOnlyIds', []))
+    return (age is not None and 0 <= age <= 30 and bool(pending)
+            and pending <= record_only
+            and set(sync.get('failedIds', [])) <= record_only
+            and not feed.get('profileReview')
+            and not any(feed.get('unmatchedEventFighters', {}).values()))
+
+
+def assess(state, feeds, rumors, now, warnings=None):
     alerts = []
+    warnings = warnings if warnings is not None else []
     age = hours(rumors.get('lastSearchedAt'), now)
     if age is None or age > 3 or age < -1:
         alerts.append('Rumores: última búsqueda ausente, inválida o de hace más de 3 horas.')
@@ -44,7 +58,12 @@ def assess(state, feeds, rumors, now):
             alerts.append(f'{kind}: dos o más consultas consecutivas fallidas.')
         pending_age = hours(job.get('pendingSince'), now)
         if monitor.pending_count(kind, feed) and pending_age is not None and pending_age > 48:
-            alerts.append(f'{kind}: hay datos pendientes de forma continua desde hace más de 48 horas.')
+            if kind == 'records' and source_statistics_pending(feed, now):
+                ids = ', '.join(sorted(feed['pendingProfileIds']))
+                warnings.append(f'records: UFC sigue sin publicar estadísticas completas para {ids}. '
+                                'Récord consultado recientemente; estadísticas previas conservadas y reintento pendiente.')
+            else:
+                alerts.append(f'{kind}: hay datos pendientes de forma continua desde hace más de 48 horas.')
     return alerts
 
 
@@ -58,11 +77,12 @@ def repeated_failures(runs):
 
 def main():
     alerts = []
+    warnings = []
     try:
         read = lambda name: json.loads((ROOT / 'assets/data' / name).read_text())
         alerts = assess(read('sync-health.json'),
                         {kind: read(filename) for kind, (_, filename) in monitor.JOBS.items()},
-                        read('ufc-rumor-groups.json'), datetime.now(timezone.utc))
+                        read('ufc-rumor-groups.json'), datetime.now(timezone.utc), warnings)
     except (OSError, ValueError, TypeError, KeyError):
         alerts.append('No se puede verificar el estado: faltan datos o el formato es inválido.')
     if os.environ.get('GITHUB_TOKEN'):
@@ -77,10 +97,14 @@ def main():
             except (OSError, ValueError, KeyError):
                 alerts.append(f'{workflow}: no se ha podido consultar el historial de Actions.')
     report = '## Estado de las automatizaciones\n\n' + ('\n'.join('- ' + a for a in alerts) if alerts else 'Sin incidencias que superen los umbrales de alerta.')
+    if warnings:
+        report += '\n\n### Datos pendientes en la fuente\n\n' + '\n'.join('- ' + w for w in warnings)
     print(report)
     if os.environ.get('GITHUB_STEP_SUMMARY'):
         with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
             out.write(report + '\n')
+    for warning in warnings:
+        print('::warning::' + warning)
     for alert in alerts:
         print('::error::' + alert)
     return bool(alerts)
