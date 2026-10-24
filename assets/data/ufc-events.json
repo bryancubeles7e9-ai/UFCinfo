@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-23T19:06:59.864391+00:00",
+  "synchronizedAt": "2026-10-24T06:01:10.298511+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -407,7 +407,7 @@
       "sectionSchedule": {
         "eventDate": "2026-11-08T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-        "checkedAt": "2026-10-23T19:07:16.133570+00:00",
+        "checkedAt": "2026-10-24T06:01:17.197805+00:00",
         "starts": {
           "main": "2026-11-08T01:00:00+00:00",
           "prelims": "2026-11-07T22:00:00+00:00"
@@ -425,7 +425,7 @@
       "location": "Meta APEX",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
-      "checkedAt": "2026-10-23",
+      "checkedAt": "2026-10-24",
       "bouts": [
         {
           "section": "main",
@@ -441,7 +441,7 @@
         {
           "section": "main",
           "red": "Randy Brown",
-          "blue": "Carlos Leal",
+          "blue": "Jacobe Smith",
           "division": "Welterweight",
           "winner": null,
           "outcome": null,
@@ -462,6 +462,28 @@
         },
         {
           "section": "main",
+          "red": "Ode' Osbourne",
+          "blue": "Cody Durden",
+          "division": "Flyweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "main",
+          "red": "Zachary Reese",
+          "blue": "Mickey Gall",
+          "division": "Middleweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "main",
           "red": "Jean-Paul Lebosnoyani",
           "blue": "Farman Hasanov",
           "division": "Welterweight",
@@ -472,10 +494,65 @@
           "time": ""
         },
         {
-          "section": "prelims",
+          "section": "main",
           "red": "Francis Marshall",
-          "blue": "Gaston Bolanos",
+          "blue": "Dakota Hope",
           "division": "Featherweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "main",
+          "red": "Rodrigo Sezinando",
+          "blue": "Theodor Berggren",
+          "division": "Welterweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "main",
+          "red": "Julian Erosa",
+          "blue": "JeongYeong Lee",
+          "division": "Featherweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "main",
+          "red": "Nick Klein",
+          "blue": "Joseph Kropschot",
+          "division": "Middleweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "main",
+          "red": "Talita Alencar",
+          "blue": "Piera Rodriguez",
+          "division": "Women's Strawweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "main",
+          "red": "Lucia Szabova",
+          "blue": "Tainara Lisboa",
+          "division": "Women's Flyweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -487,61 +564,6 @@
           "red": "Azamat Bekoev",
           "blue": "Andre Petroski",
           "division": "Middleweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "section": "prelims",
-          "red": "Rodrigo Sezinando",
-          "blue": "Theodor Berggren",
-          "division": "Welterweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "section": "prelims",
-          "red": "Julian Erosa",
-          "blue": "JeongYeong Lee",
-          "division": "Featherweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "section": "prelims",
-          "red": "Nick Klein",
-          "blue": "Joseph Kropschot",
-          "division": "Middleweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "section": "prelims",
-          "red": "Talita Alencar",
-          "blue": "Piera Rodriguez",
-          "division": "Women's Strawweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "section": "prelims",
-          "red": "Lucia Szabova",
-          "blue": "Tainara Lisboa",
-          "division": "Women's Flyweight",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -563,7 +585,127 @@
           "main": "2026-11-01T00:00:00+00:00",
           "prelims": "2026-10-31T21:00:00+00:00"
         }
-      }
+      },
+      "cardChanges": [
+        {
+          "kind": "replaced",
+          "checkedAt": "2026-10-24T06:01:10.298511+00:00",
+          "source": "Cito",
+          "bout": {
+            "section": "main",
+            "red": "Randy Brown",
+            "blue": "Carlos Leal",
+            "division": "Welterweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          },
+          "replacement": {
+            "section": "main",
+            "red": "Randy Brown",
+            "blue": "Jacobe Smith",
+            "division": "Welterweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "replaced",
+          "checkedAt": "2026-10-24T06:01:10.298511+00:00",
+          "source": "Cito",
+          "bout": {
+            "section": "prelims",
+            "red": "Francis Marshall",
+            "blue": "Gaston Bolanos",
+            "division": "Featherweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          },
+          "replacement": {
+            "section": "main",
+            "red": "Francis Marshall",
+            "blue": "Dakota Hope",
+            "division": "Featherweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-10-24T06:01:10.298511+00:00",
+          "source": "Cito",
+          "bout": {
+            "section": "main",
+            "red": "Randy Brown",
+            "blue": "Jacobe Smith",
+            "division": "Welterweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-10-24T06:01:10.298511+00:00",
+          "source": "Cito",
+          "bout": {
+            "section": "main",
+            "red": "Ode' Osbourne",
+            "blue": "Cody Durden",
+            "division": "Flyweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-10-24T06:01:10.298511+00:00",
+          "source": "Cito",
+          "bout": {
+            "section": "main",
+            "red": "Zachary Reese",
+            "blue": "Mickey Gall",
+            "division": "Middleweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-10-24T06:01:10.298511+00:00",
+          "source": "Cito",
+          "bout": {
+            "section": "main",
+            "red": "Francis Marshall",
+            "blue": "Dakota Hope",
+            "division": "Featherweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        }
+      ]
     },
     {
       "id": "ufc-333",
@@ -576,7 +718,7 @@
       "location": "Etihad Arena",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-333",
-      "checkedAt": "2026-10-23",
+      "checkedAt": "2026-10-24",
       "bouts": [
         {
           "section": "main",
@@ -742,7 +884,7 @@
       "sectionSchedule": {
         "eventDate": "2026-10-24T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-333",
-        "checkedAt": "2026-10-23T19:07:16.133570+00:00",
+        "checkedAt": "2026-10-24T06:01:17.197805+00:00",
         "starts": {
           "main": "2026-10-24T18:00:00+00:00",
           "prelims": "2026-10-24T16:00:00+00:00",
@@ -761,7 +903,7 @@
       "location": "Rogers Place",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "checkedAt": "2026-10-23",
+      "checkedAt": "2026-10-24",
       "bouts": [
         {
           "red": "Joaquin Buckley",
@@ -912,7 +1054,7 @@
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-10/101726-ufc-fight-night-buckey-vs-malott-EVENT-ART.jpg?h=d1cb525d&itok=9nlcHO-H",
       "posterAlt": "Joaquin Buckley and Mike Malott side by side over a blue and red background",
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "resultsCheckedAt": "2026-10-23T19:07:15.928518+00:00",
+      "resultsCheckedAt": "2026-10-24T06:01:16.895061+00:00",
       "citoSlug": "ufc-fight-night-october-17-2026"
     },
     {
@@ -926,7 +1068,7 @@
       "location": "Meta APEX",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
-      "checkedAt": "2026-10-23",
+      "checkedAt": "2026-10-24",
       "bouts": [
         {
           "red": "Brendan Allen",
@@ -1066,7 +1208,7 @@
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/101026-ufc-fight-night-allen-vs-duncan-EVENT-ART.jpg?h=d1cb525d&itok=Giih5XjD",
       "posterAlt": "UFC middleweights Brendan Allen and Christian Leroy Duncan stand side-by-side over a green and black background",
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-10-2026",
-      "resultsCheckedAt": "2026-10-23T19:07:15.928518+00:00"
+      "resultsCheckedAt": "2026-10-24T06:01:16.895061+00:00"
     },
     {
       "id": "ufc-332",
@@ -6486,7 +6628,7 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-10-23T19:07:15.928518+00:00",
+    "checkedAt": "2026-10-24T06:01:16.895061+00:00",
     "verifiedIds": [
       "ufc-fight-night-october-17-2026",
       "ufc-fight-night-october-10-2026"
@@ -6494,7 +6636,9 @@
     "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-10-23T19:07:16.133570+00:00",
-    "failedIds": []
+    "checkedAt": "2026-10-24T06:01:17.197805+00:00",
+    "failedIds": [
+      "ufc-fight-night-october-31-2026"
+    ]
   }
 }
