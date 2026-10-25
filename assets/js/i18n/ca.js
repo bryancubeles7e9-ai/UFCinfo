@@ -1,5 +1,8 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "Principal": "Principal",
+  "Previas": "Prèvies",
+  "Bloques de la cartelera": "Blocs de la cartellera",
   "Inicio": "Inici",
   "02 / AGENDA": "02 / AGENDA",
   "Hacer mis picks": "Fer els meus pronòstics",

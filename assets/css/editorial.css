@@ -210,3 +210,12 @@ main{max-width:var(--max);padding-bottom:64px}
 .pickem-bout.is-followed:not(.has-result){border-color:color-mix(in srgb,var(--accent) 45%,var(--line));border-radius:10px;background:color-mix(in srgb,var(--accent) 3%,var(--surface))}
 .light .followed-bout-badge{color:#a93619}
 @media(max-width:700px){.bout.is-followed{padding:14px}.followed-bout-badge{font-size:10px}}
+
+/* Shortcuts stay within the open card; they do not change the page route. */
+#event-dialog{scroll-padding-top:80px}
+.event-section-nav{position:sticky;top:0;z-index:1;display:flex;gap:6px;margin:22px 0 8px;padding:8px 44px 8px 0;background:var(--surface);border-bottom:1px solid var(--line)}
+.event-section-nav button{flex:1;min-width:0;min-height:44px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--ink);font:600 12px var(--body);cursor:pointer}
+.event-section-nav button:hover{border-color:var(--accent);color:var(--accent)}
+.event-section-nav button:focus-visible,.bout-section-heading:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+#event-detail .bout-section-heading{scroll-margin-top:12px}
+@media(max-width:700px){.event-section-nav{gap:5px;padding-right:42px}.event-section-nav button{font-size:11px;padding:10px 5px}}

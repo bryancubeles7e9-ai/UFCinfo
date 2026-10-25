@@ -1,5 +1,8 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "Principal": "Main card",
+  "Previas": "Early prelims",
+  "Bloques de la cartelera": "Fight card sections",
   "Inicio": "Home",
   "02 / AGENDA": "02 / SCHEDULE",
   "Hacer mis picks": "Make my picks",

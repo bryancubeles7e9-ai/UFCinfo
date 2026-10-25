@@ -142,8 +142,11 @@ function showOfficialEvent(id) {
   const event = availableOfficialEvents().find(e => e.id === id);
   if (!event) return;
   const upcoming = isUpcomingEvent(event);
+  const sections = [['main', 'Principal'], ['prelims', 'Preliminares'], ['early-prelims', 'Previas']]
+    .filter(([section]) => event.bouts.some(b => (b.section || 'main') === section));
+  const sectionNav = sections.length ? `<nav class="event-section-nav" aria-label="Bloques de la cartelera">${sections.map(([section, label]) => `<button type="button" data-event-section="${section}" aria-controls="event-section-${section}-${event.bouts.findIndex(b => (b.section || 'main') === section)}">${label}</button>`).join('')}</nav>` : '';
   $("#event-detail").dataset.officialEventId = id;
-  $("#event-detail").innerHTML = `<p class="eyebrow">${eventKindLabel(event)} · ${eventStatus(event)}</p><h2 class="event-dialog-title" translate="no">${esc(event.title)} · ${esc(event.subtitle)}</h2><p class="muted"><span translate="no">${esc(event.location)}</span> · ${formatDate(event.date)} · ${formatTime(event.date)} (hora local)</p><p class="data-note">${upcoming ? "Combates anunciados; pueden cambiar antes del evento." : "Cartelera principal y preliminares disponibles."} ${esc(feedNote())}</p>${upcoming ? `<p class="data-note bout-schedule-note">${scheduleExplanation}</p>` : ""}<div class="bout-list">${event.bouts.length ? event.bouts.map((b,i) => `${i === 0 || (b.section || 'main') !== (event.bouts[i-1].section || 'main') ? `<h3 class="bout-section-heading">${({'main':'Cartelera principal','prelims':'Preliminares','early-prelims':'Preliminares previas'})[b.section || 'main']}</h3>` : ''}<article class="bout${followedBoutFighters(b, store.state.favorites).length ? ' is-followed' : ''}">${followedBoutBadge(b, store.state.favorites)}<div class="bout-heading"><span>${(b.section || "main") === "main" && i === 0 ? "COMBATE ESTELAR" : (b.section || "main") === "main" && i === 1 ? "COMBATE COESTELAR" : `COMBATE ${i+1}`}</span><span>${esc(b.division)}</span></div><div class="official-bout-names">${fighterNameLink(b.red, "bout-fighter-name")}<span>VS</span>${fighterNameLink(b.blue, "bout-fighter-name")}</div>${renderBoutTime(event, b)}<p class="official-result">${isAwaitingResults(event) ? "Resultados pendientes de actualización" : upcoming ? "Combate anunciado · Sin resultado" : officialResult(b, boutPinKey(event, b))}</p></article>`).join("") : empty("La cartelera principal todavía no se ha anunciado.")}</div><a class="button small" href="${esc(event.source)}" target="_blank" rel="noopener noreferrer">Cartelera oficial UFC ›</a>`;
+  $("#event-detail").innerHTML = `<p class="eyebrow">${eventKindLabel(event)} · ${eventStatus(event)}</p><h2 class="event-dialog-title" translate="no">${esc(event.title)} · ${esc(event.subtitle)}</h2><p class="muted"><span translate="no">${esc(event.location)}</span> · ${formatDate(event.date)} · ${formatTime(event.date)} (hora local)</p><p class="data-note">${upcoming ? "Combates anunciados; pueden cambiar antes del evento." : "Cartelera principal y preliminares disponibles."} ${esc(feedNote())}</p>${upcoming ? `<p class="data-note bout-schedule-note">${scheduleExplanation}</p>` : ""}${sectionNav}<div class="bout-list">${event.bouts.length ? event.bouts.map((b,i) => `${i === 0 || (b.section || 'main') !== (event.bouts[i-1].section || 'main') ? `<h3 class="bout-section-heading" id="event-section-${esc(b.section || 'main')}-${i}" tabindex="-1">${({'main':'Cartelera principal','prelims':'Preliminares','early-prelims':'Preliminares previas'})[b.section || 'main']}</h3>` : ''}<article class="bout${followedBoutFighters(b, store.state.favorites).length ? ' is-followed' : ''}">${followedBoutBadge(b, store.state.favorites)}<div class="bout-heading"><span>${(b.section || "main") === "main" && i === 0 ? "COMBATE ESTELAR" : (b.section || "main") === "main" && i === 1 ? "COMBATE COESTELAR" : `COMBATE ${i+1}`}</span><span>${esc(b.division)}</span></div><div class="official-bout-names">${fighterNameLink(b.red, "bout-fighter-name")}<span>VS</span>${fighterNameLink(b.blue, "bout-fighter-name")}</div>${renderBoutTime(event, b)}<p class="official-result">${isAwaitingResults(event) ? "Resultados pendientes de actualización" : upcoming ? "Combate anunciado · Sin resultado" : officialResult(b, boutPinKey(event, b))}</p></article>`).join("") : empty("La cartelera principal todavía no se ha anunciado.")}</div><a class="button small" href="${esc(event.source)}" target="_blank" rel="noopener noreferrer">Cartelera oficial UFC ›</a>`;
   if (!$("#event-dialog").open) $("#event-dialog").showModal();
 }
 function renderOverview() {
@@ -347,6 +350,15 @@ function exportCalendar(id) {
   toast("Calendario descargado");
 }
 document.addEventListener("click", (event) => {
+  const sectionButton = event.target.closest("#event-dialog [data-event-section]");
+  if (sectionButton) {
+    const target = document.getElementById(sectionButton.getAttribute("aria-controls"));
+    if (target && $("#event-dialog").contains(target)) {
+      target.focus({preventScroll: true});
+      target.scrollIntoView({block: "start", behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth"});
+    }
+    return;
+  }
   const reveal = event.target.closest("[data-reveal-result]");
   if (reveal) {
     revealResult(reveal.dataset.revealResult);
