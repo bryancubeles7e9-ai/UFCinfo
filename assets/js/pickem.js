@@ -1,4 +1,4 @@
-import {nextPickEvent, closingTime, isClosed, pickKey, picksFor, readPicks, pickResult, pickSummary, selection, pickMethods, pickPoints} from './pickem-model.js';
+import {nextPickEvent, closingTime, isClosed, pickKey, picksFor, readPicks, pickResult, pickSummary, selection, pickMethods, pickPoints, resultMethod} from './pickem-model.js';
 import {directoryFighterByName} from './fighter-directory.js';
 import {escapeHTML as esc} from './utils.js';
 import {getLocale} from './i18n.js';
@@ -50,6 +50,14 @@ export function initializePickem() {
       <dl class="pickem-result-stats"><div><dt>Puntos</dt><dd>${item.result.score}</dd></div><div><dt>Aciertos</dt><dd>${counts.correct}</dd></div><div><dt>Fallos</dt><dd>${counts.wrong}</dd></div><div><dt>Sin elegir</dt><dd>${counts.unpicked}</dd></div><div><dt>Resultados pendientes</dt><dd>${counts.pending}</dd></div><div><dt>Empates y anulados</dt><dd>${counts.void}</dd></div></dl>
       ${!item.result.final && !item.result.void ? '<p class="data-note">El resumen se actualizará cuando se confirmen los resultados. Los puntos se incorporan al ranking al finalizar la velada.</p>' : ''}</section>`;
   }
+  function resultBorder(bout, item) {
+    if (!item?.joined || !item.closed) return '';
+    const status = pickResult(bout, item.picks);
+    if (resultMethod(bout.method) === 'other' || status === 'void') return 'has-result result-neutral';
+    if (status === 'correct') return 'has-result result-correct';
+    if (status === 'wrong' || status === 'unpicked') return 'has-result result-wrong';
+    return '';
+  }
   function boutResult(bout, item) {
     if (!item?.joined || !item.closed) return '';
     const status = pickResult(bout, item.picks);
@@ -75,7 +83,7 @@ export function initializePickem() {
       ${!locked && Object.keys(picksFor(event,local[event.id])).length ? '<button class="outline-button small" id="pickem-import">Recuperar picks de este navegador</button>' : ''}` : '<p>Modo invitado: tus picks son locales y no puntúan. Inicia sesión para participar en el ranking.</p><button class="button small" id="pickem-login">Iniciar sesión</button>'}
       <p id="pickem-save-status" role="status">${esc(message || (dirty ? 'Cambios sin guardar' : authenticated ? (item?.joined ? 'Pronósticos guardados en tu cuenta' : 'Elige tus ganadores y guarda para participar') : 'Guardado local en este navegador'))}</p>
       <button class="outline-button small" id="pickem-refresh" ${busy?'disabled':''}>Recargar pronósticos guardados</button></div>
-      <div class="pickem-grid">${event.bouts.map((bout,i)=>`<fieldset class="pickem-bout"><legend>${esc({'main':'Principal','prelims':'Preliminares','early-prelims':'Preliminares previas'}[bout.section]||'Combate')} · ${esc(bout.division)}</legend>${bout._void?'<p>Combate anulado</p>':renderBoutTime(event,bout)}<div class="pickem-options">${[bout.red,bout.blue].map((name,side)=>{
+      <div class="pickem-grid">${event.bouts.map((bout,i)=>`<fieldset class="pickem-bout ${resultBorder(bout,item)}"><legend>${esc({'main':'Principal','prelims':'Preliminares','early-prelims':'Preliminares previas'}[bout.section]||'Combate')} · ${esc(bout.division)}</legend>${bout._void?'<p>Combate anulado</p>':renderBoutTime(event,bout)}<div class="pickem-options">${[bout.red,bout.blue].map((name,side)=>{
         const fighter=directoryFighterByName(name), chosen=selection(picks[pickKey(bout)],bout);
         const labels={general:'Victoria general',ko:'KO/TKO',submission:'Sumisión',decision:'Decisión'};
         return `<div class="pickem-choice pickem-fighter ${chosen?.winner===name?'is-picked':''}"><img src="${esc(fighter?.image||'assets/images/fighter-placeholder.svg')}" alt="" loading="lazy" width="140" height="150"><span translate="no">${esc(name)}</span><small class="pickem-fighter-info"><span>Récord</span>: <span translate="no">${esc(fighter?.record || "—")}</span>${fighter && countryLabel(fighter,getLocale()) ? ` · <span translate="no">${esc(countryLabel(fighter,getLocale()))}</span>` : ""}</small><div class="pickem-methods" role="group" aria-label="${esc(name)}">${pickMethods.map(method=>{
