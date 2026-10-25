@@ -42,6 +42,7 @@ jobs:
           node tests/test-events-feed.mjs
           node tests/test-event-visibility.mjs
           node tests/test-bout-schedule.mjs
+          node tests/test-bout-links.mjs
           node tests/test-data-health.mjs
           node tests/test-following.mjs
           node tests/test-home-hero.mjs

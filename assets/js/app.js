@@ -1,3 +1,4 @@
+import {boutShareKey, boutShareUrl, parseBoutLink, resolveBoutLink} from './bout-links.js';
 import {renderHomeHero} from './home-hero.js';
 import { initializePickem } from './pickem.js';
 import { renderBoutTime, scheduleExplanation } from './bout-schedule.js';
@@ -52,6 +53,7 @@ import { compactMartialInfo, renderMartialDetails, martialDetails } from "./figh
 
 const store = createStore();
 let account = null;
+let eventFeedReady = false, pendingBoutLink = null;
 let catalogView = 'compact';
 try { catalogView = localStorage.getItem('ufcinfo-catalog-view') === 'cards' ? 'cards' : 'compact'; } catch {}
 initializeRankings();
@@ -139,16 +141,52 @@ function officialEventCard(event, featured = false) {
   const upcoming = isUpcomingEvent(event);
   return `<article class="event-card official-event-card ${featured ? "featured" : ""}"><div class="event-info"><span class="badge orange event-type-badge">${eventKindLabel(event)} · ${eventStatus(event)}</span><p class="eyebrow">CARTELERA · ${event.bouts.length ? `${event.bouts.length} COMBATES${upcoming ? " ANUNCIADOS" : ""}` : "PENDIENTE DE ANUNCIO"}</p><h3 translate="no">${esc(event.title)}</h3><p>${esc(event.subtitle)}</p><div class="event-location" translate="no">${esc(event.location)}</div><div class="event-date">${formatDate(event.date)} · ${formatTime(event.date)} <small>hora local · inicio de la principal</small></div>${upcoming ? `<div class="countdown" data-official-countdown="${esc(event.date)}"></div>` : ""}<button class="button small" data-official-event="${esc(event.id)}">${upcoming ? "Ver combates anunciados" : "Ver cartelera y resultados"} ›</button><p><a class="text-link" href="${esc(event.source)}" target="_blank" rel="noopener noreferrer">Evento oficial UFC ›</a></p>${upcoming ? '<p class="data-note">Cartelera anunciada; los combates y horarios pueden cambiar.</p>' : ""}</div>${eventPoster(event, featured)}</article>`;
 }
-function showOfficialEvent(id) {
-  const event = availableOfficialEvents().find(e => e.id === id);
+function showOfficialEvent(id, focusBoutKey = undefined) {
+  const event = eventsFeed.events.find(e => e.type === 'official' && e.id === id && !['cancelled', 'postponed'].includes(e.status));
   if (!event) return;
   const upcoming = isUpcomingEvent(event);
   const sections = [['main', 'Principal'], ['prelims', 'Preliminares'], ['early-prelims', 'Previas']]
     .filter(([section]) => event.bouts.some(b => (b.section || 'main') === section));
   const sectionNav = sections.length ? `<nav class="event-section-nav" aria-label="Bloques de la cartelera">${sections.map(([section, label]) => `<button type="button" data-event-section="${section}" aria-controls="event-section-${section}-${event.bouts.findIndex(b => (b.section || 'main') === section)}">${label}</button>`).join('')}</nav>` : '';
-  $("#event-detail").dataset.officialEventId = id;
-  $("#event-detail").innerHTML = `<p class="eyebrow">${eventKindLabel(event)} · ${eventStatus(event)}</p><h2 class="event-dialog-title" translate="no">${esc(event.title)} · ${esc(event.subtitle)}</h2><p class="muted"><span translate="no">${esc(event.location)}</span> · ${formatDate(event.date)} · ${formatTime(event.date)} (hora local)</p><p class="data-note">${upcoming ? "Combates anunciados; pueden cambiar antes del evento." : "Cartelera principal y preliminares disponibles."} ${esc(feedNote())}</p>${upcoming ? `<p class="data-note bout-schedule-note">${scheduleExplanation}</p>` : ""}${sectionNav}<div class="bout-list">${event.bouts.length ? event.bouts.map((b,i) => `${i === 0 || (b.section || 'main') !== (event.bouts[i-1].section || 'main') ? `<h3 class="bout-section-heading" id="event-section-${esc(b.section || 'main')}-${i}" tabindex="-1">${({'main':'Cartelera principal','prelims':'Preliminares','early-prelims':'Preliminares previas'})[b.section || 'main']}</h3>` : ''}<article class="bout${followedBoutFighters(b, store.state.favorites).length ? ' is-followed' : ''}">${followedBoutBadge(b, store.state.favorites)}<div class="bout-heading"><span>${(b.section || "main") === "main" && i === 0 ? "COMBATE ESTELAR" : (b.section || "main") === "main" && i === 1 ? "COMBATE COESTELAR" : `COMBATE ${i+1}`}</span><span>${esc(b.division)}</span></div><div class="official-bout-names">${fighterNameLink(b.red, "bout-fighter-name")}<span>VS</span>${fighterNameLink(b.blue, "bout-fighter-name")}</div>${renderBoutTime(event, b)}<p class="official-result">${isAwaitingResults(event) ? "Resultados pendientes de actualización" : upcoming ? "Combate anunciado · Sin resultado" : officialResult(b, boutPinKey(event, b))}</p></article>`).join("") : empty("La cartelera principal todavía no se ha anunciado.")}</div><a class="button small" href="${esc(event.source)}" target="_blank" rel="noopener noreferrer">Cartelera oficial UFC ›</a>`;
+  const detail = $("#event-detail");
+  const sharedKey = focusBoutKey !== undefined ? focusBoutKey || '' : (detail.dataset.officialEventId === id ? detail.dataset.sharedBoutKey || '' : '');
+  detail.dataset.sharedBoutKey = sharedKey;
+  detail.dataset.officialEventId = id;
+  detail.innerHTML = `<p class="eyebrow">${eventKindLabel(event)} · ${eventStatus(event)}</p><h2 class="event-dialog-title" translate="no">${esc(event.title)} · ${esc(event.subtitle)}</h2><p class="muted"><span translate="no">${esc(event.location)}</span> · ${formatDate(event.date)} · ${formatTime(event.date)} (hora local)</p><p class="data-note">${upcoming ? "Combates anunciados; pueden cambiar antes del evento." : "Cartelera principal y preliminares disponibles."} ${esc(feedNote())}</p>${upcoming ? `<p class="data-note bout-schedule-note">${scheduleExplanation}</p>` : ""}${sectionNav}<div class="bout-list">${event.bouts.length ? event.bouts.map((b,i) => `${i === 0 || (b.section || 'main') !== (event.bouts[i-1].section || 'main') ? `<h3 class="bout-section-heading" id="event-section-${esc(b.section || 'main')}-${i}" tabindex="-1">${({'main':'Cartelera principal','prelims':'Preliminares','early-prelims':'Preliminares previas'})[b.section || 'main']}</h3>` : ''}<article class="bout${followedBoutFighters(b, store.state.favorites).length ? ' is-followed' : ''}${boutShareKey(b) === sharedKey ? ' is-shared' : ''}" id="event-bout-${i}" tabindex="-1">${followedBoutBadge(b, store.state.favorites)}<div class="bout-heading"><span>${(b.section || "main") === "main" && i === 0 ? "COMBATE ESTELAR" : (b.section || "main") === "main" && i === 1 ? "COMBATE COESTELAR" : `COMBATE ${i+1}`}</span><span>${esc(b.division)}</span></div><div class="official-bout-names">${fighterNameLink(b.red, "bout-fighter-name")}<span>VS</span>${fighterNameLink(b.blue, "bout-fighter-name")}</div>${renderBoutTime(event, b)}<p class="official-result">${isAwaitingResults(event) ? "Resultados pendientes de actualización" : upcoming ? "Combate anunciado · Sin resultado" : officialResult(b, boutPinKey(event, b))}</p><div class="bout-share-actions"><button type="button" class="text-link bout-share-button" data-share-bout="${esc(boutShareKey(b))}" aria-label="Compartir combate: ${esc(b.red)} vs ${esc(b.blue)}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m10 13 4-4M8 16l-2 2a4.2 4.2 0 0 1-6-6l5-5a4.2 4.2 0 0 1 6 0M16 8l2-2a4.2 4.2 0 0 1 6 6l-5 5a4.2 4.2 0 0 1-6 0" transform="translate(1 0) scale(.9)"/></svg><span>Compartir combate</span></button></div><label class="bout-share-fallback" hidden><span>Enlace del combate</span><input type="text" readonly value="${esc(boutShareUrl(event,b))}"></label></article>`).join("") : empty("La cartelera principal todavía no se ha anunciado.")}</div><a class="button small" href="${esc(event.source)}" target="_blank" rel="noopener noreferrer">Cartelera oficial UFC ›</a>`;
   if (!$("#event-dialog").open) $("#event-dialog").showModal();
+  if (focusBoutKey) requestAnimationFrame(() => {
+    if (!$("#event-dialog").open || detail.dataset.officialEventId !== id) return;
+    const target = detail.querySelector('.bout.is-shared');
+    target?.focus({preventScroll:true});
+    target?.scrollIntoView({block:'start', behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+  });
+}
+function openPendingBoutLink() {
+  if (!pendingBoutLink || !eventFeedReady) return;
+  const link = pendingBoutLink;
+  pendingBoutLink = null;
+  const {event, bout} = resolveBoutLink(eventsFeed.events, link);
+  if (!event) { if ($("#event-dialog").open) $("#event-dialog").close(); toast('La velada compartida no está disponible en los datos actuales.'); return; }
+  showOfficialEvent(event.id, bout ? boutShareKey(bout) : null);
+  if (!bout) toast('La pelea compartida ya no está en esta cartelera.');
+}
+async function copyBoutLink(button) {
+  const id = $("#event-detail").dataset.officialEventId;
+  const {event, bout} = resolveBoutLink(eventsFeed.events, {eventId:id, boutKey:button.dataset.shareBout});
+  if (!bout) { toast('La pelea compartida ya no está en esta cartelera.'); return; }
+  const url = boutShareUrl(event,bout);
+  try {
+    await navigator.clipboard.writeText(url);
+    toast('Enlace del combate copiado');
+  } catch {
+    const field = button.closest('.bout').querySelector('.bout-share-fallback');
+    if (!field.isConnected) { toast('No se ha podido copiar el enlace. Vuelve a intentarlo.'); return; }
+    field.hidden = false;
+    const input = field.querySelector('input');
+    input.value = url;
+    input.focus({preventScroll:true}); input.select();
+    toast('Copia el enlace que aparece debajo del combate.');
+  }
 }
 function renderOverview() {
   $("#fighter-count").textContent = String(directoryFighters.length).padStart(2, "0");
@@ -315,7 +353,7 @@ function updateCountdowns() {
   });
 }
 function navigate() {
-  let view = location.hash.slice(1) || "inicio";
+  let view = location.hash.slice(1).split('?')[0] || "inicio";
   if (
     ![
       "inicio",
@@ -339,6 +377,8 @@ function navigate() {
   });
   document.title = view === "inicio" ? "UFCinfo — Carteleras UFC, luchadores y rankings MMA" : `${{ eventos: "Carteleras", luchadores: "Luchadores", rankings: "Rankings", laboratorio: "Fight Lab", pickem: "Pick’em", guardados: "Mi esquina", rumores: "Rumores" }[view]} — UFCinfo`;
   window.scrollTo({ top: 0, behavior: "instant" });
+  pendingBoutLink = parseBoutLink(location.hash);
+  openPendingBoutLink();
 }
 function download(blob, filename) {
   const url = URL.createObjectURL(blob),
@@ -355,6 +395,8 @@ function exportCalendar(id) {
   toast("Calendario descargado");
 }
 document.addEventListener("click", (event) => {
+  const shareButton = event.target.closest('#event-dialog [data-share-bout]');
+  if (shareButton) { copyBoutLink(shareButton); return; }
   const sectionButton = event.target.closest("#event-dialog [data-event-section]");
   if (sectionButton) {
     const target = document.getElementById(sectionButton.getAttribute("aria-controls"));
@@ -628,6 +670,7 @@ setInterval(updateCountdowns, 1000);
 
 async function updateEventFeed() {
   await refreshEvents();
+  eventFeedReady = true;
   lab.updateDefault(eventsFeed.events);
   pickem.update(eventsFeed.events);
   if ($("#fighter-dialog").open) showProfile($("#fighter-detail").dataset.fighterId);
@@ -636,6 +679,7 @@ async function updateEventFeed() {
   renderSaved();
   const officialId = $("#event-detail").dataset.officialEventId;
   if ($("#event-dialog").open && officialId) showOfficialEvent(officialId);
+  openPendingBoutLink();
 }
 updateEventFeed();
 async function updateFighterRecords() {

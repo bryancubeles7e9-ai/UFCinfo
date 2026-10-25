@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import {boutShareKey, boutShareUrl, parseBoutLink, resolveBoutLink} from '../assets/js/bout-links.js';
+const bout={red:'Jiří Procházka',blue:'Diego Lopes',section:'main'};
+const event={id:'ufc-340',type:'official',status:'scheduled',bouts:[bout]};
+const url=new URL(boutShareUrl(event,bout,'https://ufcinfo.onrender.com/?v=preview&review=local#inicio'));
+assert.equal(url.origin,'https://ufcinfo.onrender.com');
+assert.equal(url.search,'');
+const link=parseBoutLink(url.hash);
+assert.equal(link.eventId,event.id);
+assert.equal(resolveBoutLink([event],link).bout,bout);
+assert.equal(boutShareKey({...bout,red:'Jiri Prochazka'}),link.boutKey);
+assert.equal(boutShareKey({...bout,red:bout.blue,blue:bout.red}),link.boutKey);
+const earlier={red:'Ilia Topuria',blue:'Max Holloway',section:'main'};
+const reordered={...event,bouts:[earlier,{...bout,section:'prelims'}]};
+assert.equal(resolveBoutLink([reordered],link).index,1);
+assert.equal(resolveBoutLink([reordered],link).bout.section,'prelims');
+assert.equal(resolveBoutLink([{...event,id:'ufc-341'}],link).event,null); // Rematches are scoped to their event.
+assert.equal(resolveBoutLink([{...event,bouts:[{...bout,blue:'Max Holloway'}]}],link).bout,null);
+assert.equal(resolveBoutLink([{...event,bouts:[]}],link).event.id,event.id);
+assert.equal(resolveBoutLink([{...event,status:'cancelled'}],link).event,null);
+assert.equal(resolveBoutLink([{...event,status:'postponed'}],link).event,null);
+assert.equal(resolveBoutLink([{...event,type:'custom'}],link).event,null);
+for(const hash of ['#inicio','#eventos','#pickem?evento=ufc-340&combate=a~b','#eventos?evento=ufc-340','#eventos?evento=%3Cscript%3E&combate=a~b','#eventos?evento=ufc-340&combate=a~','#eventos?evento=ufc-340&combate=a~b&combate=c~d','#eventos?evento=ufc-340&evento=ufc-341&combate=a~b'])assert.equal(parseBoutLink(hash),null,hash);
+const unknown={red:'New Fighter',blue:'Another Fighter'};
+assert.ok(parseBoutLink(new URL(boutShareUrl(event,unknown,'https://example.com/')).hash));
+console.log('PASS fight links: clean URL, round trip, aliases, corners/order/section changes, rematches, replacements, inactive or missing events and malformed input');
