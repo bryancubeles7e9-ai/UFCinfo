@@ -184,9 +184,24 @@ def normalize_bouts(value, completed):
     return result
 
 
+def inconsistent_number(number, date, events):
+    # Numbered cards cannot precede an already completed lower-date card
+    # in the numbering sequence, even if a provider assigns a new future date.
+    return number is not None and any(
+        isinstance(e.get('number'), int) and e.get('status') == 'completed'
+        and date_of({'startsAt': e['date']}) < date and e['number'] > number
+        for e in events)
+
+
 def synchronize(fetch, previous, now):
     old = {e['id']: {**deepcopy(e), 'dataSource': e.get('dataSource') or previous.get('source', 'UFC')}
            for e in previous.get('events', []) if isinstance(e, dict) and isinstance(e.get('id'), str)}
+    excluded = {e['id']: e for e in previous.get('excludedEvents', [])}
+    baseline = list(old.values())
+    for eid, event in list(old.items()):
+        if event.get('status') != 'completed' and inconsistent_number(event.get('number'), date_of({'startsAt': event['date']}), baseline):
+            excluded[eid] = {'id': eid, 'reason': 'numbering-before-completed-event', 'event': event}
+            del old[eid]
     upcoming, recent = rows(fetch('/upcoming')), rows(fetch('/recent'))
     candidates = {}
     for is_recent, listing in ((False, upcoming), (True, recent)):
@@ -201,6 +216,10 @@ def synchronize(fetch, previous, now):
                 # Keep links/favourites stable when a Fight Night changes date.
                 eid = matches[0]['id']
             date = date_of(row)
+            if not is_recent and inconsistent_number(number, date, baseline):
+                excluded.setdefault(eid, {'id': eid, 'reason': 'numbering-before-completed-event', 'providerRow': row})
+                print(f'::warning::Excluded upcoming event with inconsistent numbering: {eid}')
+                continue
             if is_recent and (date.year != now.year or date > now + timedelta(days=1)): continue
             if not is_recent and date < now - timedelta(days=2): continue
             if eid in candidates: raise SyncError('Duplicate event in Cito lists')
@@ -302,7 +321,7 @@ def synchronize(fetch, previous, now):
     if len(events) > 100: raise SyncError('Events feed exceeds capacity')
     old_providers = {e['dataSource'] for e in events}
     source = 'Cito + UFCalendar' if 'UFCalendar' in old_providers else 'Cito'
-    return {**previous, 'schemaVersion': 1, 'year': now.year, 'source': source, 'sourceUrl': SOURCE_URL, 'synchronizedAt': now.isoformat(), 'events': events}
+    return {**previous, 'schemaVersion': 1, 'year': now.year, 'source': source, 'sourceUrl': SOURCE_URL, 'synchronizedAt': now.isoformat(), 'events': events, 'excludedEvents': list(excluded.values())}
 
 
 def main():

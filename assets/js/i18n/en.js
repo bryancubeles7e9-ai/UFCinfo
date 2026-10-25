@@ -1,5 +1,6 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "Velada pasada": "Previous event",
   "Resumen de tus resultados": "Your results summary",
   "Fallos": "Wrong picks",
   "Sin elegir": "Unpicked",

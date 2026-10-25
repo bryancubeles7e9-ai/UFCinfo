@@ -32,9 +32,14 @@ export function initializePickem() {
     const item = current();
     draft = item ? picksFor(item.event, item.picks) : {}; draftRevision = item?.revision || 0; dirty = false;
   }
+  function pastEvent() {
+    const archived = state?.events.map(item => item.event) || [];
+    return [...archived, ...events].filter(e => e.status === 'completed' && Date.parse(e.date) < now())
+      .sort((a,b) => Date.parse(b.date) - Date.parse(a.date))[0] || null;
+  }
   function board() {
     return `<section class="panel pickem-ranking"><h2>Ranking Pick’em</h2><p>Cada pick acertado suma 100 puntos. El ranking acumula los puntos de las veladas finalizadas.</p>
-    <label>Clasificación <select id="pickem-scope"><option value="all" ${scope==='all'?'selected':''}>Histórica</option>${eventData()?`<option value="event" ${scope==='event'?'selected':''}>Esta velada</option>`:''}</select></label>
+    <label>Clasificación <select id="pickem-scope"><option value="all" ${scope==='all'?'selected':''}>Histórica</option>${eventData()?`<option value="event" ${scope==='event'?'selected':''}>Esta velada</option>`:''}${pastEvent()?`<option value="past" ${scope==='past'?'selected':''}>Velada pasada</option>`:''}</select></label>
     ${rankingError ? '<p role="status">No se pudo cargar el ranking.</p>' : !ranking ? '<p>Cargando ranking…</p>' : `<div class="pickem-table"><table><thead><tr><th>Posición</th><th>Nombre de usuario</th><th>Puntos</th><th>Veladas</th><th>Aciertos</th><th>Pendientes</th></tr></thead><tbody>${ranking.rows.map(r=>`<tr><td>${r.position ?? '—'}</td><td translate="no">${esc(r.alias)}</td><td>${r.score === null ? '—' : r.score.toLocaleString(getLocale(),{maximumFractionDigits:2})}</td><td>${r.played}</td><td>${r.correct} / ${r.total}</td><td>${r.pending}</td></tr>`).join('') || '<tr><td colspan="6">Todavía no hay participantes.</td></tr>'}</tbody></table></div><div class="pickem-pagination"><button class="outline-button small" data-rank-page="-1" ${page<=1?'disabled':''}>Anterior</button><span>${page} / ${Math.max(1,Math.ceil(ranking.total/50))}</span><button class="outline-button small" data-rank-page="1" ${page*50>=ranking.total?'disabled':''}>Siguiente</button></div>`}</section>`;
   }
   function results(event, item) {
@@ -78,7 +83,7 @@ export function initializePickem() {
   async function loadRanking() {
     const ticket=++rankGeneration;
     try {
-      const data=await accountRequest(`pickem/ranking?scope=${encodeURIComponent(scope==='event'?eventData()?.id||'all':scope)}&page=${page}`);
+      const data=await accountRequest(`pickem/ranking?scope=${encodeURIComponent(scope==='past'?pastEvent()?.id||'all':scope==='event'?eventData()?.id||'all':scope)}&page=${page}`);
       if(ticket!==rankGeneration)return;
       ranking=data; rankingError=false;
     } catch { if(ticket!==rankGeneration)return; rankingError=true; }

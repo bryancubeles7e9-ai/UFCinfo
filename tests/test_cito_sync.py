@@ -71,6 +71,23 @@ class CitoSyncTests(unittest.TestCase):
         self.assertEqual(next(e for e in again['events'] if e['id'] == 'ufc-336')['bouts'], january['bouts'])
         self.assertEqual(len(calls), 5)
 
+    def test_old_numbered_events_cannot_reappear_with_future_dates(self):
+        archive = {'id':'ufc-333','number':333,'date':'2026-10-04T00:00:00Z', 'status':'completed','bouts':[]}
+        bogus = {'id':'ufc-176','number':176,'date':'2026-12-11T22:00:00Z','status':'announced','bouts':[]}
+        old = {'events':[archive,bogus]}
+        calls = []
+        def fetch(path):
+            calls.append(path)
+            if path == '/upcoming': return [event('ufc-117','2026-12-11T22:00:00Z','UFC 117'),event('ufc-176','2026-12-11T22:00:00Z','UFC 176'),event('ufc-336','2027-01-31T02:00:00Z','UFC 336')]
+            if path == '/recent': return []
+            return [bout()]
+        feed = sync.synchronize(fetch,old,NOW)
+        self.assertEqual({e['id'] for e in feed['events']},{'ufc-333','ufc-336'})
+        self.assertEqual({e['id'] for e in feed['excludedEvents']},{'ufc-117','ufc-176'})
+        self.assertNotIn('/ufc-117/bouts',calls)
+        self.assertNotIn('/ufc-176/bouts',calls)
+        self.assertEqual(len(calls),3)
+
     def test_past_archive_remains_with_attribution(self):
         previous = {'source': 'UFCalendar', 'events': [{'id': 'ufc-331', 'status': 'completed', 'date': '2026-09-20T00:00:00Z', 'bouts': [{'red': 'A'}]}]}
         def fetch(path):

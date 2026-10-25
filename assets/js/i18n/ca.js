@@ -1,5 +1,6 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "Velada pasada": "Vetllada passada",
   "Resumen de tus resultados": "Resum dels teus resultats",
   "Fallos": "Errors",
   "Sin elegir": "Sense triar",

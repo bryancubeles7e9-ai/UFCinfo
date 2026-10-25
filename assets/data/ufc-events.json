@@ -135,25 +135,6 @@
       "citoSlug": "ufc-335"
     },
     {
-      "id": "ufc-176",
-      "number": 176,
-      "eventKind": "numbered",
-      "citoSlug": "ufc-176",
-      "title": "UFC 176",
-      "subtitle": "Cartelera pendiente de anuncio",
-      "status": "announced",
-      "date": "2026-12-11T22:00:00+00:00",
-      "location": "Principality Stadium",
-      "type": "official",
-      "source": "https://www.ufc.com/event/ufc-176",
-      "checkedAt": "2026-10-25",
-      "bouts": [],
-      "dataSource": "Cito",
-      "poster": null,
-      "posterSource": null,
-      "posterAlt": null
-    },
-    {
       "id": "ufc-fight-night-november-21-2026",
       "number": null,
       "eventKind": "fight-night",
@@ -6796,5 +6777,30 @@
     "failedIds": [
       "ufc-fight-night-october-31-2026"
     ]
-  }
+  },
+  "excludedEvents": [
+    {
+      "id": "ufc-176",
+      "reason": "numbering-before-completed-event",
+      "event": {
+        "id": "ufc-176",
+        "number": 176,
+        "eventKind": "numbered",
+        "citoSlug": "ufc-176",
+        "title": "UFC 176",
+        "subtitle": "Cartelera pendiente de anuncio",
+        "status": "announced",
+        "date": "2026-12-11T22:00:00+00:00",
+        "location": "Principality Stadium",
+        "type": "official",
+        "source": "https://www.ufc.com/event/ufc-176",
+        "checkedAt": "2026-10-25",
+        "bouts": [],
+        "dataSource": "Cito",
+        "poster": null,
+        "posterSource": null,
+        "posterAlt": null
+      }
+    }
+  ]
 }

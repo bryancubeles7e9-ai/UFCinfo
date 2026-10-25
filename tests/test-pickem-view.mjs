@@ -18,7 +18,7 @@ globalThis.fetch = async url=>{
  return new Response(JSON.stringify(url.includes('ranking')?{rows:[],total:0}:state),{headers:{'Content-Type':'application/json'}});
 };
 const {initializePickem} = await import('../assets/js/pickem.js');
-const app=initializePickem();app.update([next]);
+const app=initializePickem();app.update([next,past]);
 await new Promise(resolve=>setTimeout(resolve,0));
 assert.ok(!root.innerHTML.includes('Resumen de tus resultados'));
 assert.ok(!root.innerHTML.includes('value="year"'));
@@ -33,3 +33,10 @@ listeners.change({target:{id:'pickem-scope',value:'event'}});
 await new Promise(resolve=>setTimeout(resolve,0));
 assert.ok(requests.some(url=>url.includes('scope=past')));
 console.log('PASS Pick’em view: past results, saved choices, locked history, event leaderboard and no season filter');
+
+assert.ok(root.innerHTML.includes('value="past"'));
+listeners.change({target:{id:'pickem-event',value:'next'}});
+listeners.change({target:{id:'pickem-scope',value:'past'}});
+await new Promise(resolve=>setTimeout(resolve,0));
+assert.ok(requests.at(-1).includes('scope=past'));
+console.log('PASS Pick’em ranking: previous completed event remains available when next event is selected');
