@@ -328,7 +328,7 @@
       "sectionSchedule": {
         "eventDate": "2026-11-15T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-334",
-        "checkedAt": "2026-10-25T17:01:15.412813+00:00",
+        "checkedAt": "2026-10-25T17:14:10.257976+00:00",
         "starts": {
           "main": "2026-11-15T02:00:00+00:00",
           "prelims": "2026-11-15T00:00:00+00:00",
@@ -503,7 +503,7 @@
       "sectionSchedule": {
         "eventDate": "2026-11-08T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-        "checkedAt": "2026-10-25T17:01:15.412813+00:00",
+        "checkedAt": "2026-10-25T17:14:10.257976+00:00",
         "starts": {
           "main": "2026-11-08T01:00:00+00:00",
           "prelims": "2026-11-07T22:00:00+00:00"
@@ -1033,7 +1033,7 @@
         }
       },
       "resultsSource": "https://www.ufc.com/event/ufc-333",
-      "resultsCheckedAt": "2026-10-25T17:01:15.116946+00:00"
+      "resultsCheckedAt": "2026-10-25T17:14:09.857092+00:00"
     },
     {
       "id": "ufc-fight-night-october-17-2026",
@@ -1197,7 +1197,7 @@
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-10/101726-ufc-fight-night-buckey-vs-malott-EVENT-ART.jpg?h=d1cb525d&itok=9nlcHO-H",
       "posterAlt": "Joaquin Buckley and Mike Malott side by side over a blue and red background",
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "resultsCheckedAt": "2026-10-25T17:01:15.116946+00:00",
+      "resultsCheckedAt": "2026-10-25T17:14:09.857092+00:00",
       "citoSlug": "ufc-fight-night-october-17-2026"
     },
     {
@@ -6771,7 +6771,7 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-10-25T17:01:15.116946+00:00",
+    "checkedAt": "2026-10-25T17:14:09.857092+00:00",
     "verifiedIds": [
       "ufc-333",
       "ufc-fight-night-october-17-2026"
@@ -6779,7 +6779,7 @@
     "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-10-25T17:01:15.412813+00:00",
+    "checkedAt": "2026-10-25T17:14:10.257976+00:00",
     "failedIds": [
       "ufc-fight-night-october-31-2026"
     ]
