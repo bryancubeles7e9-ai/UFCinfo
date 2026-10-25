@@ -88,6 +88,20 @@ class CitoSyncTests(unittest.TestCase):
         self.assertNotIn('/ufc-176/bouts',calls)
         self.assertEqual(len(calls),3)
 
+    def test_planned_rounds_are_separate_from_results_and_survive_missing_fields(self):
+        incoming=bout();incoming['scheduledRounds']=5
+        saved=sync.normalize_bouts([incoming],False)[0]
+        self.assertEqual(saved['scheduledRounds'],5)
+        incoming.pop('scheduledRounds'); incoming['result']['round']=5
+        fresh=sync.normalize_bouts([incoming],False)[0]
+        self.assertNotIn('scheduledRounds',fresh)
+        now=datetime(2026,10,8,tzinfo=timezone.utc)
+        merged=sync.merge_bouts({'bouts':[saved]},[fresh],set(),now)
+        self.assertEqual(merged[0]['scheduledRounds'],5)
+        fresh=sync.normalize_bouts([incoming],False)[0];fresh['blue']='Replacement'
+        merged=sync.merge_bouts({'bouts':[saved]},[fresh],set(),now)
+        self.assertNotIn('scheduledRounds',merged[0])
+
     def test_past_archive_remains_with_attribution(self):
         previous = {'source': 'UFCalendar', 'events': [{'id': 'ufc-331', 'status': 'completed', 'date': '2026-09-20T00:00:00Z', 'bouts': [{'red': 'A'}]}]}
         def fetch(path):

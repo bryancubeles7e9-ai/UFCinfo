@@ -38,7 +38,7 @@ La web combina un catálogo de perfiles con copias de datos que actualizan tarea
 | Información | Fuente y funcionamiento |
 | --- | --- |
 | **Eventos y resultados** | Cito actualiza las carteleras cercanas y conserva el historial disponible. Una comprobación adicional en UFC.com verifica los resultados recientes y puede recuperar información aunque Cito falle. Incluye cartelera principal, preliminares y preliminares previas cuando están publicadas. |
-| **Horarios de las veladas** | Las páginas públicas de UFC proporcionan los inicios oficiales de los bloques de las próximas tres veladas. Cada combate mantiene una hora estimada, claramente identificada. Esta consulta no consume puntos de Cito. |
+| **Horarios de las veladas** | Las páginas públicas de UFC proporcionan los inicios oficiales de los bloques de las próximas tres veladas. Cada combate muestra una franja estimada, claramente identificada. Esta consulta no consume puntos de Cito. |
 | **Rankings** | Se consultan las clasificaciones publicadas en UFC.com. |
 | **Récords y estadísticas** | Se consultan los perfiles oficiales de UFC de los luchadores registrados que participan en los combates seleccionados. |
 | **Campeones y fotografías** | Los títulos absolutos actuales se sincronizan con los rankings válidos. Se revisan las fotografías y se conservan variantes para campeón y no campeón cuando están disponibles. El BMF tiene una gestión separada. |
@@ -54,7 +54,7 @@ El panel **Estado de los datos** distingue el último intento conocido, la últi
 Las horas se muestran en la **zona horaria del dispositivo**, con su fecha local y el cambio de horario de verano o invierno.
 
 - **Inicio de bloque:** se utiliza la hora oficial publicada por UFC para la principal, las preliminares y las previas cuando está disponible y corresponde a la fecha del evento.
-- **Hora de cada pelea:** aparece como **«Hora aproximada»**. Se calcula a partir del bloque y del orden disponible, con intervalos de hasta 30 minutos ajustados al tiempo disponible. La duración de los combates y las pausas pueden adelantarla o retrasarla.
+- **Hora de cada pelea:** aparece como **«Franja estimada»**. El cálculo reserva 30 minutos por combate de tres asaltos y 50 por uno confirmado a cinco, con margen mayor hacia el final. Las preliminares se ajustan al bloque disponible. Si no hay duración confirmada, se usan 30 minutos. Son estimaciones previas, no un seguimiento en directo.
 - **Información incompleta:** si falta una hora oficial, se estiman las preliminares dos horas antes y las previas cuatro horas antes de la principal. Si falta el orden de la cartelera, se muestra **«Horario por confirmar»**.
 
 Los horarios antiguos se ignoran si cambia la fecha del evento. Más detalles en [Horarios de las carteleras](docs/EVENT_TIMES.md).

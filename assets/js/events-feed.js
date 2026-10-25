@@ -22,6 +22,7 @@ function validEvent(event, year) {
     Array.isArray(event.bouts) && ((event.status || 'completed') !== 'completed' || event.bouts.length > 0) && event.bouts.length <= 30 &&
     event.bouts.every(b => b && ['red', 'blue', 'division', 'method', 'round', 'time'].every(k => typeof b[k] === 'string') && b.red && b.blue &&
       (b.winner === null || b.winner === b.red || b.winner === b.blue) &&
+      (b.scheduledRounds == null || [3,5].includes(b.scheduledRounds)) &&
       (b.section == null || ['main', 'prelims', 'early-prelims'].includes(b.section)) &&
       (b.outcome == null || typeof b.outcome === 'string'));
 }

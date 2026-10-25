@@ -1,5 +1,6 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "Horas por pelea orientativas, no oficiales. Usamos el inicio oficial de cada bloque cuando está disponible; si falta, estimamos preliminares 2 h antes y previas 4 h antes de la principal. Calculamos 30 min por combate de 3 asaltos y 50 min por uno de 5; sin duración confirmada usamos 30 min. Ajustamos las preliminares al bloque y ampliamos el margen hacia el final. Pueden cambiar por duración, pausas o cambios de cartelera.": "Franges per combat orientatives, no oficials. Fem servir l’inici oficial de cada bloc quan està disponible; si falta, estimem preliminars 2 h abans i prèvies 4 h abans de la principal. Calculem 30 min per combat de 3 assalts i 50 min per un de 5; sense durada confirmada fem servir 30 min. Ajustem els preliminars al bloc i ampliem el marge cap al final. Poden canviar per la durada, les pauses o els canvis de cartellera.",
   "Tu clasificación": "La teva classificació",
   "Tu posición aparecerá cuando participes en esta clasificación.": "La teva posició apareixerà quan participis en aquesta classificació.",
   "Tus resultados están pendientes. La posición se asignará al finalizar la velada.": "Els teus resultats estan pendents. La posició s’assignarà en finalitzar la vetllada.",

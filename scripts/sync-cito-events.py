@@ -48,6 +48,12 @@ def merge_bouts(prior, incoming, cancelled, now):
     for bout in saved:
         key = pair(bout)
         if key in current:
+            # Preserve explicit round information for the same matchup/section
+            # when the provider omits it. New opponents never inherit it.
+            fresh = current[key]
+            if (fresh.get('scheduledRounds') not in (3, 5) and bout.get('scheduledRounds') in (3, 5)
+                    and fresh.get('section') == bout.get('section')):
+                fresh.update({field: bout[field] for field in ('scheduledRounds','roundsSource') if field in bout})
             if bout.get('winner') or bout.get('outcome'):
                 # A stale provider response must not erase a verified result.
                 if not current[key].get('winner') and not current[key].get('outcome'):
@@ -181,6 +187,10 @@ def normalize_bouts(value, completed):
             if re.search(r'no.?contest', method, re.I): outcome = 'Sin resultado (No contest)'
             elif re.search(r'draw|empate', method, re.I): outcome = 'Empate'
         result.append({'section': bout['_section'], 'red': red, 'blue': blue, 'division': division, 'winner': red if winner == 'red' else blue if winner == 'blue' else None, 'outcome': outcome, 'method': method, 'round': str(round_value) if round_value is not None else '', 'time': time_value})
+        # Never use resultRound/result.round as the planned fight length.
+        scheduled = bout.get('scheduledRounds')
+        if type(scheduled) is int and scheduled in (3, 5):
+            result[-1].update(scheduledRounds=scheduled, roundsSource='Cito')
     return result
 
 

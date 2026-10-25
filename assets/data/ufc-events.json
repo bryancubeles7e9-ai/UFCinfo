@@ -115,7 +115,9 @@
           "outcome": null,
           "method": "",
           "round": "",
-          "time": ""
+          "time": "",
+          "scheduledRounds": 5,
+          "roundsSource": "https://www.t-mobilearena.com/events/detail/ufc-335"
         },
         {
           "red": "Joe Pyfer",
@@ -265,7 +267,9 @@
           "method": "",
           "round": "",
           "time": "",
-          "section": "main"
+          "section": "main",
+          "scheduledRounds": 5,
+          "roundsSource": "https://www.ufc.com/event/ufc-334"
         },
         {
           "red": "Kayla Harrison",
@@ -276,7 +280,9 @@
           "method": "",
           "round": "",
           "time": "",
-          "section": "main"
+          "section": "main",
+          "scheduledRounds": 5,
+          "roundsSource": "https://www.ufc.com/event/ufc-334"
         },
         {
           "red": "Caio Borralho",

@@ -14,4 +14,18 @@ class ScheduleTests(unittest.TestCase):
         for bad in ['',page.replace('1793480400','1793491201'),page.replace('1793491200','1793577600')]:
             with self.assertRaises(ValueError):m.parse_schedule(bad,event,datetime.now(timezone.utc))
 
+    def test_only_matching_official_title_bouts_confirm_five_rounds(self):
+        event={'date':'2026-11-01T00:00:00+00:00','source':'https://www.ufc.com/event/test','bouts':[
+            {'red':'Alpha','blue':'Beta'}, {'red':'Charlie','blue':'Delta'}, {'red':'Else','blue':'Other'}]}
+        page='<div class="c-hero__headline-suffix" data-timestamp="1793491200"></div>'
+        for red,blue,label in [('Alpha','Beta','Lightweight Bout'),('Charlie','Delta','Heavyweight Title Bout')]:
+            page+=f'<div class="c-listing-fight"><div class="c-listing-fight__corner-name--red">{red}</div><div class="c-listing-fight__corner-name--blue">{blue}</div><div class="c-listing-fight__class-text">{label}</div></div>'
+        m.confirm_title_rounds(page,event)
+        self.assertNotIn('scheduledRounds',event['bouts'][0])
+        self.assertEqual(event['bouts'][1]['scheduledRounds'],5)
+        self.assertNotIn('scheduledRounds',event['bouts'][2])
+        event['bouts'][1].pop('scheduledRounds')
+        m.confirm_title_rounds(page.replace('1793491200','1793577600'),event)
+        self.assertNotIn('scheduledRounds',event['bouts'][1])
+
 if __name__=='__main__':unittest.main()

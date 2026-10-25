@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {estimateBoutStart, renderBoutTime} from '../assets/js/bout-schedule.js';
+import {estimateBoutStart, estimateBoutWindow, renderBoutTime} from '../assets/js/bout-schedule.js';
 const bouts = ['main','main','main','main','main','prelims','prelims','prelims','prelims','early-prelims','early-prelims','early-prelims','early-prelims','early-prelims'].map((section,i)=>({section,red:`Red ${i}`,blue:`Blue ${i}`,time:'04:59'}));
 const event={status:'scheduled',date:'2026-12-13T03:00:00Z',bouts};
 assert.equal(estimateBoutStart(event,bouts[4]),'2026-12-13T03:00:00.000Z');
@@ -12,7 +12,7 @@ assert.equal(estimateBoutStart({...event,status:'completed'},bouts[0]),null);
 assert.equal(estimateBoutStart({...event,bouts:[{red:'Announced'}]},bouts[0]),null);
 assert.equal(estimateBoutStart(event,{...bouts[0]}),null);
 assert.equal(renderBoutTime({...event,status:'completed'},bouts[0]),'');
-assert.ok(renderBoutTime(event,bouts[0]).includes('Hora aproximada'));
+assert.ok(renderBoutTime(event,bouts[0]).includes('Franja estimada'));
 assert.ok(!renderBoutTime(event,bouts[0]).includes('04:59'));
 assert.ok(renderBoutTime({...event,bouts:[{red:'Announced'}]},bouts[0]).includes('Horario por confirmar'));
 console.log('PASS: chronological order, section boundaries, midnight, missing order, past events and elapsed-result isolation');
@@ -25,3 +25,37 @@ assert.ok(Date.parse(estimateBoutStart(fn,fnBouts[0])) < Date.parse(fn.date));
 assert.equal(estimateBoutStart({...fn,date:'2026-11-02T00:00:00Z'},fnBouts[6]),'2026-11-01T22:00:00.000Z');
 assert.equal(estimateBoutStart({...fn,sectionSchedule:{...fn.sectionSchedule,starts:{prelims:'invalid'}}},fnBouts[6]),'2026-10-31T22:00:00.000Z');
 console.log('PASS: official three-hour block, Madrid winter time, rescheduling and invalid time fallback');
+
+const fiveBouts=Array.from({length:5},(_,i)=>({section:'main',red:`R${i}`,blue:`B${i}`,scheduledRounds:i===1?5:3}));
+const five={status:'scheduled',date:'2026-12-13T03:00:00Z',bouts:fiveBouts};
+assert.equal(estimateBoutStart(five,fiveBouts[1]),'2026-12-13T04:30:00.000Z');
+assert.equal(estimateBoutStart(five,fiveBouts[0]),'2026-12-13T05:20:00.000Z');
+assert.deepEqual(estimateBoutWindow(five,fiveBouts[0]),{start:'2026-12-13T05:00:00.000Z',end:'2026-12-13T05:40:00.000Z',estimate:'2026-12-13T05:20:00.000Z'});
+assert.deepEqual(estimateBoutWindow(five,fiveBouts[4]),{start:'2026-12-13T03:00:00.000Z',end:'2026-12-13T03:10:00.000Z',estimate:'2026-12-13T03:00:00.000Z'});
+fiveBouts[1].scheduledRounds=undefined;fiveBouts[1].round='5';fiveBouts[1].time='05:00';
+assert.equal(estimateBoutStart(five,fiveBouts[0]),'2026-12-13T05:00:00.000Z');
+fiveBouts[1]._void=true;
+assert.equal(estimateBoutStart(five,fiveBouts[0]),'2026-12-13T04:30:00.000Z');
+assert.equal(estimateBoutWindow(five,fiveBouts[1]),null);
+const midnight={status:'scheduled',date:'2026-12-13T00:00:00Z',bouts:[{section:'main'},{section:'main'}]};
+const range=estimateBoutWindow(midnight,midnight.bouts[0]);
+assert.ok(renderBoutTime(midnight,midnight.bouts[0]).includes(`datetime="${range.start}"`));
+assert.ok(renderBoutTime(midnight,midnight.bouts[0]).includes(`datetime="${range.end}"`));
+const weightedPrelims={...five,bouts:fiveBouts.map(b=>({...b,section:'prelims',scheduledRounds:5,_void:false}))};
+assert.ok(Date.parse(estimateBoutStart(weightedPrelims,weightedPrelims.bouts[0])) < Date.parse(weightedPrelims.date));
+console.log('PASS: five-round co-main adds 20 minutes, time windows, unknown rounds, cancelled bouts and weighted prelim blocks');
+
+const savedTZ=process.env.TZ;
+try {
+  process.env.TZ='UTC';
+  const crossing={status:'scheduled',date:'2026-12-12T23:30:00Z',bouts:[{section:'main'},{section:'main'}]};
+  const markup=renderBoutTime(crossing,crossing.bouts[0]);
+  assert.ok(markup.includes('12 dic'));
+  assert.ok(markup.includes('13 dic'));
+  process.env.TZ='Europe/Madrid';
+  const dst={status:'scheduled',date:'2026-10-25T00:30:00Z',bouts:[{section:'main'},{section:'main'}]};
+  const dstMarkup=renderBoutTime(dst,dst.bouts[0]);
+  assert.ok(dstMarkup.includes('GMT+2'));
+  assert.ok(dstMarkup.includes('GMT+1'));
+} finally {if(savedTZ===undefined)delete process.env.TZ;else process.env.TZ=savedTZ;}
+console.log('PASS: both dates at midnight and explicit offsets across the autumn clock change');
