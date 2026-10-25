@@ -3,7 +3,7 @@ import {directoryFighterByName} from './fighter-directory.js';
 import {renderBoutTime} from './bout-schedule.js';
 
 function artwork(event, main, fighterByName) {
-  if (event.poster) return `<figure class="home-hero-art has-poster"><img class="event-poster-image" src="${esc(event.poster)}" alt="${esc(event.posterAlt || event.title)}" width="768" height="512" fetchpriority="high" decoding="async"><figcaption>IMAGEN PROMOCIONAL: UFC</figcaption></figure>`;
+  if (event.poster) return `<figure class="home-hero-art has-poster"><img class="poster-backdrop" src="${esc(event.poster)}" alt="" aria-hidden="true" decoding="async"><img class="event-poster-image" src="${esc(event.poster)}" alt="${esc(event.posterAlt || event.title)}" width="768" height="512" fetchpriority="high" decoding="async"><figcaption>IMAGEN PROMOCIONAL: UFC</figcaption></figure>`;
   const names = main ? [main.red, main.blue] : [];
   const fighters = names.map(name => fighterByName(name));
   const credits = [...new Set(fighters.filter(f=>f?.image).map(f=>f.photoCredit || 'UFC'))];

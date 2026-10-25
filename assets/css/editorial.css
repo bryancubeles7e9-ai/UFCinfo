@@ -42,8 +42,8 @@ main{max-width:var(--max);padding-bottom:64px}
 .hero-fighter-photo{width:100%;height:100%;max-height:440px;min-width:0;object-fit:contain;object-position:bottom;filter:drop-shadow(0 10px 18px #0004)}
 .home-art-vs{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);font:800 30px var(--display);color:#fff;background:#151619cc;border:1px solid #ffffff26;border-radius:50%;width:58px;height:58px;display:grid;place-items:center}
 .home-hero-art figcaption{z-index:1;position:absolute;bottom:0;left:0;right:0;padding:26px 18px 12px;text-align:center;background:linear-gradient(transparent,#111214e6);font-size:9px;letter-spacing:.12em;color:#b5b6bb}
-.home-hero-art.has-poster{padding:22px}
-.home-hero-art.has-poster img{width:100%;height:100%;max-height:450px;object-fit:contain;align-self:center}
+.home-hero-art.has-poster{padding:0;isolation:isolate}
+.home-hero-art.has-poster>.event-poster-image{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:contain}
 .home-art-pending{grid-column:1/-1;align-self:center;text-align:center;font:700 24px var(--display);color:#b5b6bb;padding:30px}
 .home-empty-art{display:grid;place-content:center;min-height:320px;font:900 clamp(80px,10vw,140px)/1 var(--display);color:var(--ink)}
 .home-empty-art span{color:var(--accent)}
@@ -88,7 +88,12 @@ main{max-width:var(--max);padding-bottom:64px}
 .official-event-card .event-location{font-size:13px;color:var(--muted);margin-top:14px}
 .official-event-card .event-date{font-size:14px;line-height:1.7}
 .official-event-card .event-type-badge{background:var(--surface-2);border-color:transparent;color:var(--muted);font-size:10px;letter-spacing:.06em;border-radius:5px}
-.official-event-card .event-poster{border-left:0;background:var(--surface-2)}
+.official-event-card .event-poster{position:relative;isolation:isolate;display:grid;align-content:center;overflow:hidden;border-left:0;background:#151619}
+/* Continue the poster's own colours into spare space, keeping the original intact. */
+.poster-backdrop{position:absolute;inset:-24px;width:calc(100% + 48px);height:calc(100% + 48px);max-height:none;object-fit:cover;filter:blur(24px) brightness(.65);opacity:.8;z-index:-1;pointer-events:none}
+.poster-backdrop[hidden]{display:none}
+.official-event-card .event-poster>.event-poster-image{position:relative;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}
+.official-event-card .event-poster figcaption{position:absolute;bottom:0;left:0;right:0;z-index:1;padding:28px 16px 10px;font-size:9px;color:#ddd;background:linear-gradient(transparent,#111214e6)}
 .official-event-card .event-poster-image{object-fit:contain}
 /* A consistent image frame, without stretching athlete photographs. */
 .fighter-grid{gap:24px}
@@ -149,8 +154,9 @@ main{max-width:var(--max);padding-bottom:64px}
  .hero-fighter-photo{max-height:230px}
  .home-art-word{top:10%;font-size:74px}
  .home-art-vs{height:42px;width:42px;font-size:22px}
- .home-hero-art.has-poster{min-height:220px;padding:16px}
- .home-hero-art.has-poster img{max-height:260px}
+ .home-hero-art.has-poster{min-height:0;display:block;padding:0}
+ .home-hero-art.has-poster>.event-poster-image{position:relative;inset:auto;height:auto;aspect-ratio:3/2;max-height:none}
+ .poster-backdrop{display:none}
  .home-hero-art figcaption{padding:22px 12px 8px;font-size:8px}
  .home-hero-bottom{grid-template-columns:minmax(0,1fr);padding:20px;gap:16px}
  .home-card-count{flex-direction:row;justify-content:flex-start;align-items:center;gap:10px}
@@ -192,6 +198,6 @@ main{max-width:var(--max);padding-bottom:64px}
 }
 @media(prefers-reduced-motion:reduce){.fighter-grid>.fighter-card{transition:none;transform:none}}
 
-.home-upcoming-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.home-upcoming-grid .official-event-card{grid-template-columns:minmax(0,1fr)}.home-upcoming-grid .event-poster{order:-1;max-height:230px;min-height:180px}.home-upcoming-grid .event-poster-image{height:210px;width:100%;object-fit:contain}.home-upcoming-grid .event-info{padding:26px}.home-upcoming-grid .event-info h3{font-size:38px}.home-upcoming-grid .event-info>.countdown{margin:16px 0}@media(max-width:700px){.home-upcoming-grid{grid-template-columns:minmax(0,1fr);gap:18px}.home-upcoming-grid .event-info{padding:22px 18px}}
+.home-upcoming-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.home-upcoming-grid .official-event-card{grid-template-columns:minmax(0,1fr)}.home-upcoming-grid .event-poster{order:-1;aspect-ratio:3/2;min-height:0;max-height:none}.home-upcoming-grid .event-info{padding:26px}.home-upcoming-grid .event-info h3{font-size:38px}.home-upcoming-grid .event-info>.countdown{margin:16px 0}@media(max-width:700px){.home-upcoming-grid{grid-template-columns:minmax(0,1fr);gap:18px}.home-upcoming-grid .event-info{padding:22px 18px}}
 .light #home-event-banner .eyebrow{color:var(--muted)}
 .fighter-grid>.fighter-card.fighter-legend{border-top-color:#a78acb}

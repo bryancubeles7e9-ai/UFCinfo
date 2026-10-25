@@ -116,7 +116,7 @@ function eventStatus(event) {
   return { announced: "ANUNCIADO", scheduled: "PROGRAMADO", live: "EN CURSO", completed: "FINALIZADO" }[event.status || "completed"];
 }
 function eventPoster(event, featured = false) {
-  return `<figure class="event-poster"><img class="event-poster-image" src="${esc(event.poster || "assets/images/event-poster-pending.svg")}" alt="${esc(event.poster ? event.posterAlt || `Imagen promocional oficial de ${event.title}` : `Póster pendiente de publicación: ${event.title}`)}" width="768" height="512" loading="${featured ? "eager" : "lazy"}" decoding="async"><figcaption>${event.poster ? "IMAGEN PROMOCIONAL: UFC" : "PÓSTER OFICIAL PENDIENTE"}</figcaption></figure>`;
+  return `<figure class="event-poster">${event.poster ? `<img class="poster-backdrop" src="${esc(event.poster)}" alt="" aria-hidden="true" loading="${featured ? "eager" : "lazy"}" decoding="async">` : ""}<img class="event-poster-image" src="${esc(event.poster || "assets/images/event-poster-pending.svg")}" alt="${esc(event.poster ? event.posterAlt || `Imagen promocional oficial de ${event.title}` : `Póster pendiente de publicación: ${event.title}`)}" width="768" height="512" loading="${featured ? "eager" : "lazy"}" decoding="async"><figcaption>${event.poster ? "IMAGEN PROMOCIONAL: UFC" : "PÓSTER OFICIAL PENDIENTE"}</figcaption></figure>`;
 }
 function feedNote() {
   const date = new Date(eventsFeed.synchronizedAt).toLocaleString(getLocale(), { dateStyle: "medium", timeStyle: "short" });
@@ -565,9 +565,16 @@ $("#division-filter").innerHTML =
 document.addEventListener(
   "error",
   (event) => {
+    if (event.target.matches?.(".poster-backdrop")) {
+      event.target.hidden = true;
+      return;
+    }
     if (event.target.matches?.(".event-poster-image")) {
       if (event.target.dataset.fallback) return;
       event.target.dataset.fallback = "true";
+      const figure = event.target.closest("figure");
+      const backdrop = figure?.querySelector(".poster-backdrop");
+      if (backdrop) backdrop.hidden = true;
       event.target.src = "assets/images/event-poster-pending.svg";
       event.target.alt = "Imagen del póster no disponible";
       event.target.closest("figure").querySelector("figcaption").textContent = "PÓSTER NO DISPONIBLE";
