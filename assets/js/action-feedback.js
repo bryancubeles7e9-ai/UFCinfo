@@ -61,3 +61,6 @@ export function highlightSection(heading, dialog) {
   dialog.addEventListener('scrollend', start, {once:true});
   timer = setTimeout(start, 650);
 }
+
+// Share cancellation and reduced-motion handling with the rest of the interface.
+export {run as animateInterface};

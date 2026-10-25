@@ -35,7 +35,7 @@ export function renderFighterHistory(fighter, events) {
   return `<p class="data-note">Combates presentes en las carteleras de UFCinfo. Este historial puede no incluir toda su carrera.</p>${history.length ? `<ol class="profile-history">${history.map(({event, bout, key}) => {
     const completed = event.status === 'completed';
     const result = completed ? resultHidden(key) ? hiddenResult(key) : `<span>${esc(bout.winner ? `Ganador: ${bout.winner}` : bout.outcome || 'Resultado aún no disponible')}</span><small>${esc([bout.method, bout.round ? `R${bout.round}` : '', bout.time].filter(Boolean).join(' · '))}</small>` : `<span>${Date.parse(event.date) < Date.now() ? 'Resultados pendientes de actualización' : 'Combate anunciado · Sin resultado'}</span>`;
-    return `<li><div><time datetime="${esc(event.date)}">${formatDate(event.date)}</time><button class="text-link" data-official-event="${esc(event.id)}" translate="no">${esc(event.title)} ›</button></div><div><strong translate="no">${esc(bout.red)} <span class="muted">vs</span> ${esc(bout.blue)}</strong><div class="profile-history-result">${result}</div></div></li>`;
+    return `<li><div><time datetime="${esc(event.date)}">${formatDate(event.date)}</time><button class="text-link" data-official-event="${esc(event.id)}" translate="no">${esc(event.title)} ›</button></div><div><strong translate="no">${esc(bout.red)} <span class="muted">vs</span> ${esc(bout.blue)}</strong><div class="profile-history-result" data-result-key="${esc(key)}">${result}</div></div></li>`;
   }).join('')}</ol>` : '<p class="profile-empty">Todavía no hay combates de este luchador en las carteleras disponibles.</p>'}`;
 }
 export function fighterProfile(fighter, { follow, events, active = 'summary' }) {

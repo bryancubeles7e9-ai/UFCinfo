@@ -248,3 +248,9 @@ main{max-width:var(--max);padding-bottom:64px}
  .is-confirmed .action-check-stroke{animation:action-check-draw 360ms ease-out both;animation-delay:var(--check-delay,0ms)}
 }
 @keyframes action-check-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+
+/* Motion adds context; the real selection, value and result remain in the DOM. */
+.lab-percent > span{transform-origin:left center}
+.has-filter-indicator{position:relative}
+.has-filter-indicator > .filter-indicator{position:absolute;left:0;top:0;height:3px;border-radius:3px;background:var(--accent);pointer-events:none;z-index:1}
+.has-filter-indicator > .filter-indicator[hidden]{display:none}

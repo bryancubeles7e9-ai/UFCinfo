@@ -1,3 +1,4 @@
+import {growLabBars} from './interface-motion.js';
 import { legendBadge } from "./fighter-legacy.js";
 import { getLocale } from "./i18n.js";
 import { directoryFighters, directoryFighterById, directoryFighterByName } from "./fighter-directory.js";
@@ -88,30 +89,31 @@ export function initializeLab() {
   $("#blue-fighter").innerHTML = '<option value="">—</option>' + options;
   $("#red-fighter").value = "";
   $("#blue-fighter").value = "";
-  function draw() {
+  function draw(animate = false) {
     const red = directoryFighterById($("#red-fighter").value), blue = directoryFighterById($("#blue-fighter").value);
     const invalid = !red || !blue || red.id === blue.id;
     $("#comparison-status").textContent = invalid ? "Selecciona dos luchadores distintos para comparar." : fullName(red) + " frente a " + fullName(blue);
     $("#lab-fighter-summaries").innerHTML = invalid ? "" : summary(red, "red") + summary(blue, "blue");
     $("#comparison-tables").innerHTML = invalid ? "" : renderComparison(red, blue);
     $("#comparison-notes").hidden = invalid;
+    if (animate && !invalid) growLabBars($("#comparison-tables"));
   }
-  for (const selector of ["#red-fighter", "#blue-fighter"]) $(selector).addEventListener("change", () => { manualSelection = true; draw(); });
+  for (const selector of ["#red-fighter", "#blue-fighter"]) $(selector).addEventListener("change", () => { manualSelection = true; draw(true); });
   $("#swap-fighters").addEventListener("click", () => {
     manualSelection = true;
     const old = $("#red-fighter").value;
     $("#red-fighter").value = $("#blue-fighter").value;
     $("#blue-fighter").value = old;
-    draw();
+    draw(true);
   });
-  document.addEventListener("ufcinfo:language-changed", draw);
+  document.addEventListener("ufcinfo:language-changed", () => draw());
   draw();
   const compare = (red, blue) => {
     if (!directoryFighterById(red) || !directoryFighterById(blue)) return;
     manualSelection = true;
     $("#red-fighter").value = red;
     $("#blue-fighter").value = blue;
-    draw();
+    draw(true);
   };
   const updateDefault = (events, now = Date.now()) => {
     if (manualSelection) { draw(); return; }
@@ -120,5 +122,5 @@ export function initializeLab() {
     $("#blue-fighter").value = pair?.blue || "";
     draw();
   };
-  return { compare, updateDefault, load: ({ red, blue }) => compare(red, blue) };
+  return { compare, updateDefault, animate: () => growLabBars($("#comparison-tables")), load: ({ red, blue }) => compare(red, blue) };
 }
