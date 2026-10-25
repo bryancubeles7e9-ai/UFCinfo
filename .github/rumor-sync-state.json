@@ -6,15 +6,22 @@
   "pending": null,
   "archive": [],
   "lastCollection": {
-    "checkedAt": "2026-10-25T20:00:54.617Z",
-    "windowStart": "2026-10-24T19:00:56.000Z",
-    "windowEnd": "2026-10-25T19:00:56.000Z",
-    "requests": 1,
-    "receivedPosts": 0,
-    "acceptedPosts": 0,
+    "checkedAt": "2026-10-25T21:00:53.992Z",
+    "windowStart": "2026-10-24T21:00:53.000Z",
+    "windowEnd": "2026-10-25T21:00:53.000Z",
+    "requests": 3,
+    "receivedPosts": 26,
+    "acceptedPosts": 25,
     "added": 0,
-    "skipped": 0,
-    "collectionSkips": {},
-    "skipReasons": {}
+    "skipped": 25,
+    "collectionSkips": {
+      "boxing": 1
+    },
+    "skipReasons": {
+      "fighters-not-detected": 22,
+      "opinion": 1,
+      "confirmed-in-calendar": 2,
+      "unverified-fighters": 1
+    }
   }
 }
