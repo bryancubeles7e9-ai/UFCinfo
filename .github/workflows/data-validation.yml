@@ -44,5 +44,6 @@ jobs:
           node tests/test-bout-schedule.mjs
           node tests/test-data-health.mjs
           node tests/test-following.mjs
+          node tests/test-home-hero.mjs
           node tests/test-pickem.mjs
           node tests/test-pickem-view.mjs

@@ -1,5 +1,17 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "Inicio": "Home",
+  "02 / AGENDA": "02 / SCHEDULE",
+  "Hacer mis picks": "Make my picks",
+  "LA CUENTA ATRÁS": "THE COUNTDOWN",
+  "TAMBIÉN EN LA CARTELERA": "ALSO ON THE CARD",
+  "Datos de la velada": "Event details",
+  "PRÓXIMAS VELADAS": "UPCOMING EVENTS",
+  "Lo que viene.": "Coming up.",
+  "CARTELERA POR ANUNCIAR": "FIGHT CARD TO BE ANNOUNCED",
+  "FOTOGRAFÍAS PENDIENTES": "PHOTOS PENDING",
+  "FOTOGRAFÍAS:": "PHOTOGRAPHS:",
+
   "Horas por pelea orientativas, no oficiales. Usamos el inicio oficial de cada bloque cuando está disponible; si falta, estimamos preliminares 2 h antes y previas 4 h antes de la principal. Calculamos 30 min por combate de 3 asaltos y 50 min por uno de 5; sin duración confirmada usamos 30 min. Ajustamos las preliminares al bloque y ampliamos el margen hacia el final. Pueden cambiar por duración, pausas o cambios de cartelera.": "Bout windows are unofficial estimates. We use official section starts when available; otherwise prelims are estimated 2 h before the main card and early prelims 4 h before. We allow 30 min for three-round bouts and 50 min for five-round bouts; unconfirmed durations use 30 min. Prelims fit within their section, with wider margins later in the card. Duration, breaks and card changes can shift these times.",
   "Tu clasificación": "Your ranking",
   "Tu posición aparecerá cuando participes en esta clasificación.": "Your position will appear once you participate in this leaderboard.",

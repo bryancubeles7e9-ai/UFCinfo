@@ -1,3 +1,4 @@
+import {renderHomeHero} from './home-hero.js';
 import { initializePickem } from './pickem.js';
 import { renderBoutTime, scheduleExplanation } from './bout-schedule.js';
 import { compactFighterRow, fighterProfile } from './fighter-presentation.js';
@@ -135,7 +136,7 @@ function officialResult(bout, key) {
 }
 function officialEventCard(event, featured = false) {
   const upcoming = isUpcomingEvent(event);
-  return `<article class="event-card official-event-card ${featured ? "featured" : ""}"><div class="event-info"><span class="badge orange">${eventKindLabel(event)} · ${eventStatus(event)}</span><p class="eyebrow">CARTELERA · ${event.bouts.length ? `${event.bouts.length} COMBATES${upcoming ? " ANUNCIADOS" : ""}` : "PENDIENTE DE ANUNCIO"}</p><h3 translate="no">${esc(event.title)}</h3><p>${esc(event.subtitle)}</p><div class="event-location" translate="no">${esc(event.location)}</div><div class="event-date">${formatDate(event.date)} · ${formatTime(event.date)} <small>hora local · inicio de la principal</small></div>${upcoming ? `<div class="countdown" data-official-countdown="${esc(event.date)}"></div>` : ""}<button class="button small" data-official-event="${esc(event.id)}">${upcoming ? "Ver combates anunciados" : "Ver cartelera y resultados"} ›</button><p><a class="text-link" href="${esc(event.source)}" target="_blank" rel="noopener noreferrer">Evento oficial UFC ›</a></p>${upcoming ? '<p class="data-note">Cartelera anunciada; los combates y horarios pueden cambiar.</p>' : ""}</div>${eventPoster(event, featured)}</article>`;
+  return `<article class="event-card official-event-card ${featured ? "featured" : ""}"><div class="event-info"><span class="badge orange event-type-badge">${eventKindLabel(event)} · ${eventStatus(event)}</span><p class="eyebrow">CARTELERA · ${event.bouts.length ? `${event.bouts.length} COMBATES${upcoming ? " ANUNCIADOS" : ""}` : "PENDIENTE DE ANUNCIO"}</p><h3 translate="no">${esc(event.title)}</h3><p>${esc(event.subtitle)}</p><div class="event-location" translate="no">${esc(event.location)}</div><div class="event-date">${formatDate(event.date)} · ${formatTime(event.date)} <small>hora local · inicio de la principal</small></div>${upcoming ? `<div class="countdown" data-official-countdown="${esc(event.date)}"></div>` : ""}<button class="button small" data-official-event="${esc(event.id)}">${upcoming ? "Ver combates anunciados" : "Ver cartelera y resultados"} ›</button><p><a class="text-link" href="${esc(event.source)}" target="_blank" rel="noopener noreferrer">Evento oficial UFC ›</a></p>${upcoming ? '<p class="data-note">Cartelera anunciada; los combates y horarios pueden cambiar.</p>' : ""}</div>${eventPoster(event, featured)}</article>`;
 }
 function showOfficialEvent(id) {
   const event = availableOfficialEvents().find(e => e.id === id);
@@ -153,11 +154,15 @@ function renderOverview() {
   );
   $("#pick-count").textContent = String(store.state.favorites.length).padStart(2, "0");
   const official = availableOfficialEvents();
-  const latestOfficial = official.filter(isUpcomingEvent).sort((a,b) => Date.parse(a.date)-Date.parse(b.date))[0] || official.filter(e => !isUpcomingEvent(e)).sort((a,b) => Date.parse(b.date)-Date.parse(a.date))[0];
-  $("#featured-event-label").textContent = latestOfficial && isUpcomingEvent(latestOfficial) ? "PRÓXIMO EVENTO UFC" : "ÚLTIMO EVENTO UFC";
-  $("#featured-event-title").textContent = latestOfficial && isUpcomingEvent(latestOfficial) ? "La próxima noche de combate." : "Así terminó la noche.";
-  $("#featured-event").innerHTML = latestOfficial
-    ? officialEventCard(latestOfficial, true)
+  const future = official.filter(e => isUpcomingEvent(e) && !isAwaitingResults(e)).sort((a,b)=>Date.parse(a.date)-Date.parse(b.date));
+  const later = future.slice(1,3);
+  const latestCompleted = official.filter(e=>!isUpcomingEvent(e)).sort((a,b)=>Date.parse(b.date)-Date.parse(a.date))[0];
+  const highlights = later.length ? later : latestCompleted ? [latestCompleted] : future.slice(0,1);
+  $("#featured-event-label").textContent = later.length ? "PRÓXIMAS VELADAS" : latestCompleted ? "ÚLTIMO EVENTO UFC" : "PRÓXIMO EVENTO UFC";
+  $("#featured-event-title").textContent = later.length ? "Lo que viene." : latestCompleted ? "Así terminó la noche." : "La próxima noche de combate.";
+  $("#featured-event").classList.toggle('home-upcoming-grid',highlights.length>1);
+  $("#featured-event").innerHTML = highlights.length
+    ? highlights.map(event=>officialEventCard(event,highlights.length===1)).join('')
     : empty("No hay eventos UFC disponibles.");
   $("#featured-fighters").innerHTML = fighters
     .slice(0, 3)
@@ -214,12 +219,7 @@ function renderHomeBanner() {
     .sort((a, b) => (a.status === "live" ? -1 : 0) - (b.status === "live" ? -1 : 0) || Date.parse(a.date) - Date.parse(b.date));
   const event = upcoming[0];
   const banner = $("#home-event-banner");
-  if (!event) {
-    banner.innerHTML = `<div class="hero-copy"><p class="eyebrow">TU AGENDA UFC</p><h1>La próxima noche<br>está por anunciar.</h1><p>No hay próximos eventos UFC en los datos disponibles.</p><a class="button" href="#eventos">Ver todas las carteleras ›</a><p class="data-note">${esc(feedNote())}</p></div><aside class="hero-agenda"><p class="eyebrow">EXPLORA UFCINFO</p><a class="outline-button" href="#rankings">Rankings ›</a><a class="outline-button" href="#luchadores">Explorar luchadores ›</a><a class="outline-button" href="#laboratorio">Entrar al Fight Lab →</a></aside>`;
-    return;
-  }
-  const main = event.bouts[0];
-  banner.innerHTML = `<div class="hero-copy"><div class="hero-tag"><span>${event.status === "live" ? "EN CURSO" : "PRÓXIMO EVENTO UFC"}</span><span translate="no">${esc(event.title)}</span></div><h1 translate="no">${main ? `${esc(main.red)}<span class="hero-versus">vs</span>${esc(main.blue)}` : esc(event.title)}</h1><dl class="hero-facts"><div><dt>FECHA Y HORA LOCAL</dt><dd>${formatDate(event.date)} · ${formatTime(event.date)}</dd></div><div><dt>SEDE</dt><dd translate="no">${esc(event.location)}</dd></div></dl><div class="hero-buttons"><button class="button" data-official-event="${esc(event.id)}">Ver combates anunciados ›</button><a class="outline-button" href="#eventos">Ver todas las carteleras ›</a></div><p class="data-note">${esc(feedNote())}</p></div><aside class="hero-agenda"><p class="eyebrow">CARTELERA</p><h2>${event.bouts.length ? `${event.bouts.length} <span>combates anunciados</span>` : "Pendiente de anuncio"}</h2>${event.status === "live" ? '<p class="badge orange">EN CURSO</p>' : `<div class="countdown" data-official-countdown="${esc(event.date)}"></div>`}<div class="hero-bouts">${event.bouts.slice(0, 3).map((bout, i) => `<div><span class="eyebrow">${i === 0 ? "COMBATE ESTELAR" : i === 1 ? "COMBATE COESTELAR" : "COMBATE ANUNCIADO"}</span><p translate="no">${esc(bout.red)} <span>vs</span> ${esc(bout.blue)}</p><small translate="no">${esc(bout.division)}</small>${renderBoutTime(event, bout)}</div>`).join("")}</div><p class="data-note">Cartelera anunciada; los combates y horarios pueden cambiar.</p><a class="text-link" href="${esc(event.source)}" target="_blank" rel="noopener noreferrer">Evento oficial UFC ›</a></aside>`;
+  banner.innerHTML = renderHomeHero(event, {note:feedNote()});
 }
 function renderEvents() {
   renderHomeBanner();
@@ -573,7 +573,7 @@ document.addEventListener(
       event.target.closest("figure").querySelector("figcaption").textContent = "PÓSTER NO DISPONIBLE";
       return;
     }
-    if (event.target.matches?.('.fighter-row-identity img, .fighter-profile-photo img')) {
+    if (event.target.matches?.('.fighter-row-identity img, .fighter-profile-photo img, .hero-fighter-photo')) {
       if (event.target.dataset.fallback) return;
       event.target.dataset.fallback = 'true';
       event.target.src = 'assets/images/fighter-placeholder.svg';
