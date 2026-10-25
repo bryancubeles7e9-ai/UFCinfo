@@ -1,5 +1,16 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "Resumen de tus resultados": "Your results summary",
+  "Fallos": "Wrong picks",
+  "Sin elegir": "Unpicked",
+  "Resultados pendientes": "Pending results",
+  "Combates anulados": "Voided bouts",
+  "El resumen se actualizará cuando se confirmen los resultados. Los puntos se incorporan al ranking al finalizar la velada.": "The summary will update as results are confirmed. Points enter the leaderboard when the event is finalized.",
+  "Pick acertado": "Correct pick",
+  "Pick fallado": "Wrong pick",
+  "Resultado pendiente": "Result pending",
+  "Ganador": "Winner",
+
   "Elige al ganador de cada combate del próximo evento. Inicia sesión y guarda antes del cierre: cada pick acertado suma 100 puntos; los fallos suman 0.": "Pick the winner of each bout in the next event. Sign in and save before picks close: every correct pick earns 100 points; misses earn 0.",
   "Cada pick acertado suma 100 puntos. El ranking acumula los puntos de las veladas finalizadas.": "Each correct pick earns 100 points. The leaderboard adds up points from completed events.",
   "100 puntos por acierto": "100 points per correct pick",
@@ -13,7 +24,6 @@ export const english = {
   "Media sobre 100 de las veladas finalizadas. Las pendientes no modifican la media.": "Average out of 100 across completed events. Pending events do not affect the average.",
   "Clasificación": "Leaderboard",
   "Histórica": "All-time",
-  "Temporada actual": "Current season",
   "Esta velada": "This event",
   "No se pudo cargar el ranking.": "Unable to load the leaderboard.",
   "Cargando ranking…": "Loading leaderboard…",

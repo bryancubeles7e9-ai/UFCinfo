@@ -1,4 +1,4 @@
-import {nextPickEvent, closingTime, isClosed, pickKey, picksFor, readPicks} from './pickem-model.js';
+import {nextPickEvent, closingTime, isClosed, pickKey, picksFor, readPicks, pickResult, pickSummary} from './pickem-model.js';
 import {directoryFighterByName} from './fighter-directory.js';
 import {escapeHTML as esc} from './utils.js';
 import {getLocale} from './i18n.js';
@@ -34,8 +34,22 @@ export function initializePickem() {
   }
   function board() {
     return `<section class="panel pickem-ranking"><h2>Ranking Pick’em</h2><p>Cada pick acertado suma 100 puntos. El ranking acumula los puntos de las veladas finalizadas.</p>
-    <label>Clasificación <select id="pickem-scope"><option value="all" ${scope==='all'?'selected':''}>Histórica</option><option value="year" ${scope==='year'?'selected':''}>Temporada actual</option>${eventData()?`<option value="event" ${scope==='event'?'selected':''}>Esta velada</option>`:''}</select></label>
+    <label>Clasificación <select id="pickem-scope"><option value="all" ${scope==='all'?'selected':''}>Histórica</option>${eventData()?`<option value="event" ${scope==='event'?'selected':''}>Esta velada</option>`:''}</select></label>
     ${rankingError ? '<p role="status">No se pudo cargar el ranking.</p>' : !ranking ? '<p>Cargando ranking…</p>' : `<div class="pickem-table"><table><thead><tr><th>Posición</th><th>Nombre de usuario</th><th>Puntos</th><th>Veladas</th><th>Aciertos</th><th>Pendientes</th></tr></thead><tbody>${ranking.rows.map(r=>`<tr><td>${r.position ?? '—'}</td><td translate="no">${esc(r.alias)}</td><td>${r.score === null ? '—' : r.score.toLocaleString(getLocale(),{maximumFractionDigits:2})}</td><td>${r.played}</td><td>${r.correct} / ${r.total}</td><td>${r.pending}</td></tr>`).join('') || '<tr><td colspan="6">Todavía no hay participantes.</td></tr>'}</tbody></table></div><div class="pickem-pagination"><button class="outline-button small" data-rank-page="-1" ${page<=1?'disabled':''}>Anterior</button><span>${page} / ${Math.max(1,Math.ceil(ranking.total/50))}</span><button class="outline-button small" data-rank-page="1" ${page*50>=ranking.total?'disabled':''}>Siguiente</button></div>`}</section>`;
+  }
+  function results(event, item) {
+    if (!item?.joined || !item.closed) return '';
+    const counts = pickSummary(event, item.picks);
+    return `<section class="panel pickem-results" aria-labelledby="pickem-results-title"><h2 id="pickem-results-title">Resumen de tus resultados</h2>
+      <p><strong>${item.result.void ? 'Velada anulada' : item.result.final ? 'Puntuación final' : 'Puntuación provisional'}</strong></p>
+      <dl class="pickem-result-stats"><div><dt>Puntos</dt><dd>${item.result.score}</dd></div><div><dt>Aciertos</dt><dd>${counts.correct}</dd></div><div><dt>Fallos</dt><dd>${counts.wrong}</dd></div><div><dt>Sin elegir</dt><dd>${counts.unpicked}</dd></div><div><dt>Resultados pendientes</dt><dd>${counts.pending}</dd></div><div><dt>Combates anulados</dt><dd>${counts.void}</dd></div></dl>
+      ${!item.result.final && !item.result.void ? '<p class="data-note">El resumen se actualizará cuando se confirmen los resultados. Los puntos se incorporan al ranking al finalizar la velada.</p>' : ''}</section>`;
+  }
+  function boutResult(bout, item) {
+    if (!item?.joined || !item.closed) return '';
+    const status = pickResult(bout, item.picks);
+    const labels = {correct:'Pick acertado', wrong:'Pick fallado', unpicked:'Sin elegir', pending:'Resultado pendiente', void:'Combate anulado'};
+    return `<p class="pickem-bout-result is-${status}"><strong>${labels[status]}</strong> · ${status==='pending'?'—':status==='correct'?100:0} <span>puntos</span>${!['pending','void'].includes(status)?`<br><span>Ganador</span>: <span translate="no">${esc(bout.winner)}</span>`:''}</p>`;
   }
   function render() {
     const event = eventData(), item = current();
@@ -49,7 +63,7 @@ export function initializePickem() {
       <p><strong>100 puntos por acierto</strong> · Cada acierto suma 100 puntos; los fallos y las peleas sin elegir suman 0. Empates, no contest y cancelaciones no dan puntos.</p>
       <p class="data-note">El cierre usa el primer bloque oficial disponible; sin horarios completos, cuatro horas antes de la principal. Lo controla el servidor.</p>
       <p><strong>${locked ? 'Pronósticos cerrados' : 'Puedes cambiar tus elecciones hasta el cierre'}</strong> · <time translate="no">${esc(date(item?.closesAt || closingTime(event)))}</time></p>
-      ${item?.joined ? `<p><strong>${item.result.void ? 'Velada anulada' : `${item.result.final ? 'Puntuación final' : 'Puntuación provisional'}: ${item.result.score ?? '—'} <span>puntos</span>`}</strong> · ${item.result.correct} / ${item.result.total} <span>Aciertos</span></p>` : ''}
+      ${results(event,item)}
       <div class="panel pickem-save">
       ${authenticated ? `<p>Los pronósticos guardados participan en el ranking con tu nombre de usuario.</p><p><span>Nombre de usuario</span>: <strong translate="no">${esc(state.alias || "")}</strong></p>
       <button class="button small" id="pickem-save" ${locked || busy || !count || !dirty ? 'disabled' : ''}>${busy?'Guardando…':'Guardar pronósticos'}</button>
@@ -59,7 +73,7 @@ export function initializePickem() {
       <div class="pickem-grid">${event.bouts.map((bout,i)=>`<fieldset class="pickem-bout"><legend>${esc({'main':'Principal','prelims':'Preliminares','early-prelims':'Preliminares previas'}[bout.section]||'Combate')} · ${esc(bout.division)}</legend>${bout._void?'<p>Combate anulado</p>':renderBoutTime(event,bout)}<div class="pickem-options">${[bout.red,bout.blue].map((name,side)=>{
         const fighter=directoryFighterByName(name), chosen=picks[pickKey(bout)]===name;
         return `<button type="button" class="pickem-choice ${chosen?'is-picked':''}" data-pick-bout="${i}" data-pick-side="${side}" aria-pressed="${chosen}" ${locked||busy||bout._void?'disabled':''}><img src="${esc(fighter?.image||'assets/images/fighter-placeholder.svg')}" alt="" loading="lazy" width="140" height="150"><span translate="no">${esc(name)}</span><small class="pickem-fighter-info"><span>Récord</span>: <span translate="no">${esc(fighter?.record || "—")}</span>${fighter && countryLabel(fighter,getLocale()) ? ` · <span translate="no">${esc(countryLabel(fighter,getLocale()))}</span>` : ""}</small><small>${chosen?'Tu elección':'Elegir ganador'}</small></button>`;
-      }).join('')}</div></fieldset>`).join('')}</div>${board()}`;
+      }).join('')}</div>${boutResult(bout,item)}</fieldset>`).join('')}</div>${board()}`;
   }
   async function loadRanking() {
     const ticket=++rankGeneration;

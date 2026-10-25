@@ -1,5 +1,16 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "Resumen de tus resultados": "Resum dels teus resultats",
+  "Fallos": "Errors",
+  "Sin elegir": "Sense triar",
+  "Resultados pendientes": "Resultats pendents",
+  "Combates anulados": "Combats anul·lats",
+  "El resumen se actualizará cuando se confirmen los resultados. Los puntos se incorporan al ranking al finalizar la velada.": "El resum s’actualitzarà quan es confirmin els resultats. Els punts s’incorporen al rànquing en finalitzar la vetllada.",
+  "Pick acertado": "Pronòstic encertat",
+  "Pick fallado": "Pronòstic fallat",
+  "Resultado pendiente": "Resultat pendent",
+  "Ganador": "Guanyador",
+
   "Elige al ganador de cada combate del próximo evento. Inicia sesión y guarda antes del cierre: cada pick acertado suma 100 puntos; los fallos suman 0.": "Tria el guanyador de cada combat del proper esdeveniment. Inicia sessió i desa abans del tancament: cada pick encertat suma 100 punts; les errades sumen 0.",
   "Cada pick acertado suma 100 puntos. El ranking acumula los puntos de las veladas finalizadas.": "Cada pick encertat suma 100 punts. La classificació acumula els punts de les vetllades finalitzades.",
   "100 puntos por acierto": "100 punts per encert",
@@ -13,7 +24,6 @@ export const catalan = {
   "Media sobre 100 de las veladas finalizadas. Las pendientes no modifican la media.": "Mitjana sobre 100 de les vetllades finalitzades. Les pendents no modifiquen la mitjana.",
   "Clasificación": "Classificació",
   "Histórica": "Històrica",
-  "Temporada actual": "Temporada actual",
   "Esta velada": "Aquesta vetllada",
   "No se pudo cargar el ranking.": "No s’ha pogut carregar la classificació.",
   "Cargando ranking…": "Carregant la classificació…",

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {closingTime,nextPickEvent,pickKey,picksFor,isClosed,readPicks} from '../assets/js/pickem-model.js';
+import {closingTime,nextPickEvent,pickKey,picksFor,isClosed,readPicks,pickResult,pickSummary} from '../assets/js/pickem-model.js';
 const bout = {red:'A',blue:'B',section:'main'}, other = {red:'C',blue:'D',section:'prelims'};
 const event = {id:'test',type:'official',status:'scheduled',date:'2026-10-24T18:00:00Z',source:'official',bouts:[bout,other]};
 event.sectionSchedule = {eventDate:event.date,source:event.source,starts:{main:event.date,prelims:'2026-10-24T16:00:00Z', 'early-prelims':'2026-10-24T14:00:00Z'}};
@@ -27,3 +27,19 @@ assert.deepEqual(readPicks({getItem(){throw Error('blocked')}}),{});
 assert.deepEqual(readPicks({getItem:()=>'{broken'}),{});
 assert.deepEqual(readPicks({getItem:()=> '[]'}),{});
 console.log('PASS Pick’em: persistence, invalid storage, card reorder/replacement, closing, rescheduling and event rollover');
+
+const resolved = {red:'A', blue:'B', winner:'A'};
+const saved = {[pickKey(resolved)]:'A'};
+assert.equal(pickResult(resolved,saved),'correct');
+assert.equal(pickResult(resolved,{[pickKey(resolved)]:'B'}),'wrong');
+assert.equal(pickResult(resolved,{}),'unpicked');
+assert.equal(pickResult({...resolved,winner:null},saved),'pending');
+assert.equal(pickResult({...resolved,winner:'unverified'},saved),'pending');
+for(const outcome of ['Empate','Sin resultado (No contest)','draw','cancelled'])
+  assert.equal(pickResult({...resolved,outcome},saved),'void');
+assert.equal(pickResult({...resolved,_void:true},saved),'void');
+assert.deepEqual(pickSummary({bouts:[resolved,{...resolved,winner:'B'},
+  {red:'C',blue:'D',winner:'C'},{red:'E',blue:'F',winner:null},
+  {...resolved,_void:true}]},saved),{correct:1,wrong:1,unpicked:1,pending:1,void:1});
+assert.deepEqual(pickSummary({bouts:[]},saved),{correct:0,wrong:0,unpicked:0,pending:0,void:0});
+console.log('PASS Pick’em results: correct, wrong, unpicked, pending and void bouts stay distinct');

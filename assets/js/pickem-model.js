@@ -35,3 +35,17 @@ export function readPicks(storage) {
   } catch { /* Invalid or blocked storage must not prevent using the page. */ }
   return {};
 }
+
+// Match the server's void rules; never infer a winner from an unfinished bout.
+export function pickResult(bout, picks) {
+  const outcome = String(bout.outcome || '').trim().toLowerCase();
+  if (bout._void || ['draw','empate','no contest','nc','n/c','cancelled','canceled'].includes(outcome) || outcome.includes('draw') || outcome.includes('no contest')) return 'void';
+  if (![bout.red,bout.blue].includes(bout.winner)) return 'pending';
+  const chosen = picksFor({bouts:[bout]}, picks)[pickKey(bout)];
+  return !chosen ? 'unpicked' : chosen === bout.winner ? 'correct' : 'wrong';
+}
+export function pickSummary(event, picks) {
+  const counts = {correct:0, wrong:0, unpicked:0, pending:0, void:0};
+  for (const bout of event.bouts) counts[pickResult(bout, picks)]++;
+  return counts;
+}
