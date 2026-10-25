@@ -11,21 +11,21 @@
       "exitCode": 0
     },
     "events": {
-      "attemptedAt": "2026-10-25T16:33:58.349998+00:00",
+      "attemptedAt": "2026-10-25T16:41:39.060645+00:00",
       "status": "failed",
       "pending": 0,
       "lastSuccessAt": "2026-10-25T16:24:50.821388+00:00",
-      "consecutiveFailures": 1,
-      "finishedAt": "2026-10-25T16:33:59.643544+00:00",
+      "consecutiveFailures": 2,
+      "finishedAt": "2026-10-25T16:41:39.586297+00:00",
       "exitCode": 1
     },
     "results": {
-      "attemptedAt": "2026-10-25T16:33:59.701148+00:00",
+      "attemptedAt": "2026-10-25T16:41:39.647008+00:00",
       "status": "success",
       "pending": 0,
-      "lastSuccessAt": "2026-10-25T16:34:00.005960+00:00",
+      "lastSuccessAt": "2026-10-25T16:41:39.929419+00:00",
       "consecutiveFailures": 0,
-      "finishedAt": "2026-10-25T16:34:00.005979+00:00",
+      "finishedAt": "2026-10-25T16:41:39.929430+00:00",
       "exitCode": 0
     },
     "photos": {
