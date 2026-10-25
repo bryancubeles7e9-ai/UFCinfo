@@ -1,4 +1,4 @@
-import {nextPickEvent, closingTime, isClosed, pickKey, picksFor, readPicks, pickResult, pickSummary, selection, pickMethods, pickPoints, resultMethod} from './pickem-model.js';
+import {nextPickEvent, closingTime, isClosed, pickKey, picksFor, readPicks, pickResult, pickSummary, selection, pickMethods, pickPoints, resultMethod, countdownText} from './pickem-model.js';
 import {directoryFighterByName} from './fighter-directory.js';
 import {escapeHTML as esc} from './utils.js';
 import {getLocale} from './i18n.js';
@@ -37,10 +37,32 @@ export function initializePickem() {
     return [...archived, ...events].filter(e => e.status === 'completed' && Date.parse(e.date) < now())
       .sort((a,b) => Date.parse(b.date) - Date.parse(a.date))[0] || null;
   }
+  function personalRanking() {
+    if (!state?.authenticated || !ranking || rankingError) return '';
+    const me = ranking.me;
+    if (!me) return '<div class="pickem-personal"><h3>Tu clasificación</h3><p>Tu posición aparecerá cuando participes en esta clasificación.</p></div>';
+    return `<div class="pickem-personal"><h3>Tu clasificación</h3><p translate="no">${esc(me.alias)}</p>
+      <dl class="pickem-personal-stats"><div><dt>Posición</dt><dd>${me.position === null ? '—' : '#' + me.position}</dd></div><div><dt>Puntos</dt><dd>${me.score === null ? '—' : me.score.toLocaleString(getLocale())}</dd></div><div><dt>Aciertos</dt><dd>${me.correct} / ${me.total}</dd></div><div><dt>Veladas</dt><dd>${me.played}</dd></div></dl>
+      ${me.score === null ? '<p class="data-note">Tus resultados están pendientes. La posición se asignará al finalizar la velada.</p>' : ''}
+      ${me.pending ? `<p><span>Veladas pendientes</span>: ${me.pending}</p>` : ''}
+      ${ranking.myPage && ranking.myPage !== page ? '<button class="outline-button small" id="pickem-find-me">Ver mi posición en la tabla</button>' : ''}</div>`;
+  }
+  function countdown(event, item) {
+    const remaining = countdownText(item?.closesAt || closingTime(event), now());
+    return `<div class="pickem-countdown"><span id="pickem-countdown-label">${closed() || !remaining ? 'Pronósticos cerrados' : 'Tiempo para el cierre'}</span>${!closed() && remaining ? `<output id="pickem-countdown" role="timer" aria-live="off" aria-labelledby="pickem-countdown-label" translate="no">${remaining}</output>` : ''}</div>`;
+  }
+  function tickCountdown() {
+    const timer = root.querySelector('#pickem-countdown');
+    if (!timer || !eventData()) return;
+    const remaining = countdownText(current()?.closesAt || closingTime(eventData()), now());
+    if (closed() || !remaining) { render(); return; }
+    timer.textContent = remaining;
+  }
   function board() {
     return `<section class="panel pickem-ranking"><h2>Ranking Pick’em</h2><p>Victoria general: 100 puntos. Ganador y método exactos: 350 puntos. El ranking suma los puntos de las veladas finalizadas.</p>
     <label>Clasificación <select id="pickem-scope"><option value="all" ${scope==='all'?'selected':''}>Histórica</option>${eventData()?`<option value="event" ${scope==='event'?'selected':''}>Esta velada</option>`:''}${pastEvent()?`<option value="past" ${scope==='past'?'selected':''}>Velada pasada</option>`:''}</select></label>
-    ${rankingError ? '<p role="status">No se pudo cargar el ranking.</p>' : !ranking ? '<p>Cargando ranking…</p>' : `<div class="pickem-table"><table><thead><tr><th>Posición</th><th>Nombre de usuario</th><th>Puntos</th><th>Veladas</th><th>Aciertos</th><th>Pendientes</th></tr></thead><tbody>${ranking.rows.map(r=>`<tr><td>${r.position ?? '—'}</td><td translate="no">${esc(r.alias)}</td><td>${r.score === null ? '—' : r.score.toLocaleString(getLocale(),{maximumFractionDigits:2})}</td><td>${r.played}</td><td>${r.correct} / ${r.total}</td><td>${r.pending}</td></tr>`).join('') || '<tr><td colspan="6">Todavía no hay participantes.</td></tr>'}</tbody></table></div><div class="pickem-pagination"><button class="outline-button small" data-rank-page="-1" ${page<=1?'disabled':''}>Anterior</button><span>${page} / ${Math.max(1,Math.ceil(ranking.total/50))}</span><button class="outline-button small" data-rank-page="1" ${page*50>=ranking.total?'disabled':''}>Siguiente</button></div>`}</section>`;
+    ${personalRanking()}
+    ${rankingError ? '<p role="status">No se pudo cargar el ranking.</p>' : !ranking ? '<p>Cargando ranking…</p>' : `<div class="pickem-table"><table><thead><tr><th>Posición</th><th>Nombre de usuario</th><th>Puntos</th><th>Veladas</th><th>Aciertos</th><th>Pendientes</th></tr></thead><tbody>${ranking.rows.map(r=>`<tr class="${r.isYou?'is-you':''}"><td>${r.position ?? '—'}</td><td><span translate="no">${esc(r.alias)}</span>${r.isYou?' <span class="pickem-you">Tú</span>':''}</td><td>${r.score === null ? '—' : r.score.toLocaleString(getLocale(),{maximumFractionDigits:2})}</td><td>${r.played}</td><td>${r.correct} / ${r.total}</td><td>${r.pending}</td></tr>`).join('') || '<tr><td colspan="6">Todavía no hay participantes.</td></tr>'}</tbody></table></div><div class="pickem-pagination"><button class="outline-button small" data-rank-page="-1" ${page<=1?'disabled':''}>Anterior</button><span>${page} / ${Math.max(1,Math.ceil(ranking.total/50))}</span><button class="outline-button small" data-rank-page="1" ${page*50>=ranking.total?'disabled':''}>Siguiente</button></div>`}</section>`;
   }
   function results(event, item) {
     if (!item?.joined || !item.closed) return '';
@@ -76,6 +98,7 @@ export function initializePickem() {
       <p><strong>100 o 350 puntos por acierto</strong> · Victoria general: 100 puntos si gana tu luchador. KO/TKO, sumisión o decisión: 350 puntos solo si aciertas ganador y método; no se suman a los 100. Si fallas el método, son 0 puntos. Empates, no contest y cancelaciones son neutrales: ni acierto ni error.</p>
       <p class="data-note">El cierre usa el primer bloque oficial disponible; sin horarios completos, cuatro horas antes de la principal. Lo controla el servidor.</p>
       <p><strong>${locked ? 'Pronósticos cerrados' : 'Puedes cambiar tus elecciones hasta el cierre'}</strong> · <time translate="no">${esc(date(item?.closesAt || closingTime(event)))}</time></p>
+      ${countdown(event,item)}
       ${results(event,item)}
       <div class="panel pickem-save">
       ${authenticated ? `<p>Los pronósticos guardados participan en el ranking con tu nombre de usuario.</p><p><span>Nombre de usuario</span>: <strong translate="no">${esc(state.alias || "")}</strong></p>
@@ -123,6 +146,7 @@ export function initializePickem() {
   root.addEventListener('click',async e=>{
     if(e.target.closest('#pickem-login')){document.querySelector('#account-open').click();return;}
     if(e.target.closest('#pickem-refresh')){await refresh(true);return;}
+    if(e.target.closest('#pickem-find-me') && ranking?.myPage){page=ranking.myPage;await loadRanking();return;}
     const pager=e.target.closest('[data-rank-page]');
     if(pager){page+=Number(pager.dataset.rankPage);await loadRanking();return;}
     const event=eventData(); if(!event||busy)return;
@@ -152,8 +176,9 @@ export function initializePickem() {
     const i=button.dataset.pickBout,side=button.dataset.pickSide;render();root.querySelector(`[data-pick-bout="${i}"][data-pick-side="${side}"][data-pick-method="${method}"]`)?.focus({preventScroll:true});
   });
   document.addEventListener('ufcinfo:language-changed',render);
-  document.addEventListener('ufcinfo:account-changed',()=>{generation++;state=null;draft={};dirty=false;message='';render();refresh();});
+  document.addEventListener('ufcinfo:account-changed',()=>{generation++;rankGeneration++;ranking=null;rankingError=false;page=1;state=null;draft={};dirty=false;message='';render();refresh();});
   window.addEventListener('storage',e=>{if(e.key==='ufcinfo-pickem-v1'||e.key===null){local=readPicks(storage);render();}});
-  setInterval(()=>{if(eventData()&&closed()&&root.querySelector('[data-pick-bout]:not(:disabled)'))render();},15000);
+  setInterval(tickCountdown,1000);
+  document.addEventListener('visibilitychange',tickCountdown);
   return {render, update(next){events=next;render();refresh();}};
 }

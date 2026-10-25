@@ -1,5 +1,13 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "Tu clasificación": "Your ranking",
+  "Tu posición aparecerá cuando participes en esta clasificación.": "Your position will appear once you participate in this leaderboard.",
+  "Tus resultados están pendientes. La posición se asignará al finalizar la velada.": "Your results are pending. Your position will be assigned when the event is finalized.",
+  "Veladas pendientes": "Pending events",
+  "Ver mi posición en la tabla": "Find my position in the table",
+  "Tiempo para el cierre": "Time until picks close",
+  "Tú": "You",
+
   "Victoria sin especificar": "Win by any method",
   "Elige un luchador y una de sus cuatro opciones por combate. Inicia sesión y guarda antes del cierre.": "Choose a fighter and one of their four options per bout. Sign in and save before picks close.",
   "Victoria general: 100 puntos. Ganador y método exactos: 350 puntos. El ranking suma los puntos de las veladas finalizadas.": "General win: 100 points. Exact winner and method: 350 points. The leaderboard adds up points from finalized events.",

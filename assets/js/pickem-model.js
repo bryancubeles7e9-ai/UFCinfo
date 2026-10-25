@@ -71,3 +71,12 @@ export function pickSummary(event, picks) {
   for (const bout of event.bouts) counts[pickResult(bout, picks)]++;
   return counts;
 }
+
+export function countdownText(closesAt, now = Date.now()) {
+  if (!Number.isFinite(closesAt) || !Number.isFinite(now) || closesAt <= now) return null;
+  const seconds = Math.ceil((closesAt - now) / 1000);
+  const days = Math.floor(seconds / 86400);
+  const clock = [Math.floor(seconds / 3600) % 24, Math.floor(seconds / 60) % 60, seconds % 60]
+    .map(value => String(value).padStart(2, '0')).join(':');
+  return (days ? `${days}d ` : '') + clock;
+}

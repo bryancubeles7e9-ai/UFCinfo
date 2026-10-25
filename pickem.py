@@ -216,7 +216,7 @@ class Competition:
                        (user_id, event['id'], json.dumps(picks), data['revision'] + 1, now))
         return self.state(user_id)
 
-    def leaderboard(self, scope='all', page=1):
+    def leaderboard(self, scope='all', page=1, user_id=None):
         now = time.time()
         with self.database.connect() as db:
             db.execute('BEGIN IMMEDIATE')
@@ -230,7 +230,7 @@ class Competition:
                     continue
                 if scope not in {'all', 'year'} and entry['event_id'] != scope:
                     continue
-                r = rows.setdefault(entry['user_id'], {'alias': public_name(entry['username'], entry['alias'], entry['user_id']), 'correct': 0, 'total': 0, 'played': 0, 'pending': 0, 'score': 0})
+                r = rows.setdefault(entry['user_id'], {'alias': public_name(entry['username'], entry['alias'], entry['user_id']), 'correct': 0, 'total': 0, 'played': 0, 'pending': 0, 'score': 0, 'isYou': entry['user_id'] == user_id})
                 result = score(event, json.loads(entry['picks']))
                 # Only final results count in the public totals; pending cards remain provisional.
                 if result['final'] and not result['void']:
@@ -247,5 +247,8 @@ class Competition:
                 if r['score'] != last_score: position = i + 1
                 r['position'] = position if r['score'] is not None else None
                 last_score = r['score']
+            me_index = next((i for i, r in enumerate(values) if r['isYou']), None)
             return {'scope': scope, 'page': page, 'total': len(values), 'pageSize': 50,
+                    'me': values[me_index] if me_index is not None else None,
+                    'myPage': me_index // 50 + 1 if me_index is not None else None,
                     'rows': values[(page-1)*50:page*50], 'year': year}

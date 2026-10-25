@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {closingTime,nextPickEvent,pickKey,picksFor,isClosed,readPicks,pickResult,pickSummary,pickPoints} from '../assets/js/pickem-model.js';
+import {closingTime,nextPickEvent,pickKey,picksFor,isClosed,readPicks,pickResult,pickSummary,pickPoints,countdownText} from '../assets/js/pickem-model.js';
 const bout = {red:'A',blue:'B',section:'main'}, other = {red:'C',blue:'D',section:'prelims'};
 const event = {id:'test',type:'official',status:'scheduled',date:'2026-10-24T18:00:00Z',source:'official',bouts:[bout,other]};
 event.sectionSchedule = {eventDate:event.date,source:event.source,starts:{main:event.date,prelims:'2026-10-24T16:00:00Z', 'early-prelims':'2026-10-24T14:00:00Z'}};
@@ -53,3 +53,12 @@ for(const test of cases){
 }
 assert.deepEqual(picksFor({bouts:[bout]},{[pickKey(bout)]:{winner:'A',method:'bonus'}}),{});
 console.log('PASS Pick’em shared scoring fixtures: general, methods, draws, unknown methods and legacy picks');
+
+assert.equal(countdownText(1000,0),'00:00:01');
+assert.equal(countdownText(1000,999),'00:00:01');
+assert.equal(countdownText(1000,1000),null);
+assert.equal(countdownText(1000,1001),null);
+assert.equal(countdownText(NaN,0),null);
+assert.equal(countdownText(90061000,0),'1d 01:01:01');
+assert.equal(countdownText(Date.parse('2026-10-25T02:00:00Z'),Date.parse('2026-10-25T00:00:00Z')),'02:00:00');
+console.log('PASS countdown: seconds, days, deadline, invalid timestamps and DST-independent elapsed time');

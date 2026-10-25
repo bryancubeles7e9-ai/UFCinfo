@@ -70,6 +70,37 @@ class PickemTests(unittest.TestCase):
             self.assertEqual(error.exception.status,400)
         self.assertEqual(self.game.state('one')['events'][0]['picks'],self.picks())
 
+    def test_personal_rank_is_available_off_page_and_uses_session_identity(self):
+        self.save()
+        with self.db.connect() as db:
+            db.execute("UPDATE users SET username='zzz' WHERE id='one'")
+            for i in range(52):
+                user=f'aaa{i:03}'
+                db.execute('INSERT INTO users (id,username,salt,password,updated_at) VALUES (?,?,?,?,?)',(user,user,b's',b'p',NOW))
+                db.execute('INSERT INTO pickem_entries VALUES (?,?,?,?,?)',(user,'event',json.dumps(self.picks()),1,NOW))
+        self.finish()
+        board=self.game.leaderboard(user_id='one')
+        self.assertEqual(board['myPage'],2)
+        self.assertEqual(board['me']['alias'],'zzz')
+        self.assertEqual(board['me']['score'],900)
+        self.assertEqual(board['me']['position'],1)  # Ties preserve the shared position.
+        self.assertTrue(board['me']['isYou'])
+        self.assertFalse(any(r['isYou'] for r in board['rows']))
+        page2=self.game.leaderboard(page=2,user_id='one')
+        self.assertEqual(sum(r['isYou'] for r in page2['rows']),1)
+        self.assertEqual(page2['me'],board['me'])
+        guest=self.game.leaderboard()
+        self.assertIsNone(guest['me']); self.assertIsNone(guest['myPage'])
+        self.assertFalse(any(r['isYou'] for r in guest['rows']))
+        self.assertIsNone(self.game.leaderboard(scope='other',user_id='one')['me'])
+        self.assertIsNone(self.game.leaderboard(user_id='two')['me'])
+
+    def test_pending_personal_rank_has_no_invented_position_or_points(self):
+        self.save()
+        me=self.game.leaderboard(user_id='one')['me']
+        self.assertIsNone(me['position']); self.assertIsNone(me['score'])
+        self.assertEqual(me['pending'],1)
+
     def tearDown(self):
         self.clock.stop(); self.tmp.cleanup()
     def write(self,*events):
@@ -239,6 +270,9 @@ class PickemTests(unittest.TestCase):
                 self.assertEqual(request('GET','/api/pickem/state',cookie=False)[1]['events'][0]['picks'],{})
                 status,board=request('GET','/api/pickem/ranking',cookie=False)
                 self.assertEqual(status,200);self.assertEqual(board['rows'][0]['alias'],'one')
+                self.assertIsNone(board['me']); self.assertFalse(board['rows'][0]['isYou'])
+                mine=request('GET','/api/pickem/ranking')[1]
+                self.assertEqual(mine['me']['alias'],'one'); self.assertTrue(mine['rows'][0]['isYou'])
                 self.assertNotIn('picks',json.dumps(board));self.assertNotIn('@private.test',json.dumps(board))
             finally:server.shutdown();server.server_close();thread.join()
 

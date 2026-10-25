@@ -1,5 +1,13 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "Tu clasificación": "La teva classificació",
+  "Tu posición aparecerá cuando participes en esta clasificación.": "La teva posició apareixerà quan participis en aquesta classificació.",
+  "Tus resultados están pendientes. La posición se asignará al finalizar la velada.": "Els teus resultats estan pendents. La posició s’assignarà en finalitzar la vetllada.",
+  "Veladas pendientes": "Vetllades pendents",
+  "Ver mi posición en la tabla": "Veure la meva posició a la taula",
+  "Tiempo para el cierre": "Temps fins al tancament",
+  "Tú": "Tu",
+
   "Victoria sin especificar": "Victòria sense especificar",
   "Elige un luchador y una de sus cuatro opciones por combate. Inicia sesión y guarda antes del cierre.": "Tria un lluitador i una de les seves quatre opcions per combat. Inicia sessió i desa abans del tancament.",
   "Victoria general: 100 puntos. Ganador y método exactos: 350 puntos. El ranking suma los puntos de las veladas finalizadas.": "Victòria general: 100 punts. Guanyador i mètode exactes: 350 punts. El rànquing suma els punts de les vetllades finalitzades.",

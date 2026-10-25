@@ -192,7 +192,8 @@ def make_handler(database, public_origin, fighter_ids):
                         if not 1 <= page <= 100000: raise ValueError()
                     except ValueError:
                         raise APIError(400, "Página no válida.")
-                    return self.json_response(200, competition.leaderboard(scope, page))
+                    row = self.session(False)
+                    return self.json_response(200, competition.leaderboard(scope, page, row["id"] if row else None))
                 if self.command == "PUT" and path == "/api/me/pickem":
                     row = self.session()
                     if not hmac.compare_digest(self.headers.get("X-Octagon-CSRF", ""), row["csrf"]):
