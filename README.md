@@ -42,7 +42,7 @@ El **modo sin spoilers** está activo al entrar y se reactiva al recargar. Ocult
 - **Accesos a los bloques:** Principal, Preliminares y Previas permanecen visibles al desplazarte dentro de la cartelera. Solo aparecen los bloques que contienen combates.
 - **Compartir combate:** copia un enlace que abre la velada y lleva hasta esa pelea, destacándola. Identifica a los participantes dentro del evento, por lo que admite cambios de orden, de bloque y de esquina. Si cambia un rival o desaparece la pelea, muestra un aviso y abre la cartelera disponible; si ya no está la velada, avisa de que no figura en los datos actuales. Si el navegador bloquea el portapapeles, muestra el enlace para copiarlo manualmente.
 
-Al abrir una cartelera, los combates entran de forma escalonada. Las tarjetas se desvanecen y se recolocan al cambiar los filtros, y una pelea abierta mediante un enlace compartido recibe **dos pulsos suaves**. Estos efectos son breves, respetan la preferencia del dispositivo de **reducir movimiento** y no se repiten en las actualizaciones automáticas de datos.
+Al abrir una cartelera, los combates entran de forma escalonada. Las tarjetas se desvanecen y se recolocan al cambiar los filtros, y una pelea abierta mediante un enlace compartido recibe **dos pulsos suaves**. Estos efectos están disponibles en **móvil y PC**, con desplazamientos y tiempos ligeramente mayores en escritorio para que se aprecien en pantallas grandes. Respetan la preferencia del dispositivo de **reducir movimiento** y no se repiten en las actualizaciones automáticas de datos.
 
 ## Pick’em y ranking por puntos
 
