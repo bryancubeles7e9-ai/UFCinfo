@@ -224,7 +224,7 @@ main{max-width:var(--max);padding-bottom:64px}
 .event-following-filter[aria-pressed="true"] svg{color:var(--accent)}
 #event-list .empty-state .outline-button{margin-top:16px}
 
-.bout-share-actions{display:flex;justify-content:flex-end;margin-top:12px}
+.bout-share-actions{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:6px 12px;margin-top:12px}
 .bout-share-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:8px 10px;color:var(--muted);font-size:12px}
 .bout-share-button:hover{color:var(--accent)}
 .bout-share-fallback{display:grid;gap:6px;margin-top:8px;color:var(--muted);font-size:12px}
@@ -232,3 +232,6 @@ main{max-width:var(--max);padding-bottom:64px}
 .bout-share-fallback input{width:100%;min-width:0;min-height:44px;font-size:13px}
 #event-detail .bout{scroll-margin-top:20px}
 #event-detail .bout.is-shared{outline:2px solid var(--accent);outline-offset:4px;border-radius:8px}
+
+.bout-share-status{font-size:11px;color:var(--ink)}
+.bout-share-notice{margin:16px 0;padding:12px;border-left:2px solid var(--accent);background:var(--surface-2);font-size:13px}
