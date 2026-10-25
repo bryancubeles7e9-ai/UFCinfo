@@ -1,3 +1,4 @@
+import {enterEventBouts, pulseSharedBout, transitionEventList} from './event-motion.js';
 import {boutShareKey, boutShareUrl, parseBoutLink, resolveBoutLink} from './bout-links.js';
 import {renderHomeHero} from './home-hero.js';
 import { initializePickem } from './pickem.js';
@@ -139,7 +140,7 @@ function officialResult(bout, key) {
 }
 function officialEventCard(event, featured = false) {
   const upcoming = isUpcomingEvent(event);
-  return `<article class="event-card official-event-card ${featured ? "featured" : ""}"><div class="event-info"><span class="badge orange event-type-badge">${eventKindLabel(event)} · ${eventStatus(event)}</span><p class="eyebrow">CARTELERA · ${event.bouts.length ? `${event.bouts.length} COMBATES${upcoming ? " ANUNCIADOS" : ""}` : "PENDIENTE DE ANUNCIO"}</p><h3 translate="no">${esc(event.title)}</h3><p>${esc(event.subtitle)}</p><div class="event-location" translate="no">${esc(event.location)}</div><div class="event-date">${formatDate(event.date)} · ${formatTime(event.date)} <small>hora local · inicio de la principal</small></div>${upcoming ? `<div class="countdown" data-official-countdown="${esc(event.date)}"></div>` : ""}<button class="button small" data-official-event="${esc(event.id)}">${upcoming ? "Ver combates anunciados" : "Ver cartelera y resultados"} ›</button><p><a class="text-link" href="${esc(event.source)}" target="_blank" rel="noopener noreferrer">Evento oficial UFC ›</a></p>${upcoming ? '<p class="data-note">Cartelera anunciada; los combates y horarios pueden cambiar.</p>' : ""}</div>${eventPoster(event, featured)}</article>`;
+  return `<article class="event-card official-event-card ${featured ? "featured" : ""}" data-event-card="${esc(event.id)}"><div class="event-info"><span class="badge orange event-type-badge">${eventKindLabel(event)} · ${eventStatus(event)}</span><p class="eyebrow">CARTELERA · ${event.bouts.length ? `${event.bouts.length} COMBATES${upcoming ? " ANUNCIADOS" : ""}` : "PENDIENTE DE ANUNCIO"}</p><h3 translate="no">${esc(event.title)}</h3><p>${esc(event.subtitle)}</p><div class="event-location" translate="no">${esc(event.location)}</div><div class="event-date">${formatDate(event.date)} · ${formatTime(event.date)} <small>hora local · inicio de la principal</small></div>${upcoming ? `<div class="countdown" data-official-countdown="${esc(event.date)}"></div>` : ""}<button class="button small" data-official-event="${esc(event.id)}">${upcoming ? "Ver combates anunciados" : "Ver cartelera y resultados"} ›</button><p><a class="text-link" href="${esc(event.source)}" target="_blank" rel="noopener noreferrer">Evento oficial UFC ›</a></p>${upcoming ? '<p class="data-note">Cartelera anunciada; los combates y horarios pueden cambiar.</p>' : ""}</div>${eventPoster(event, featured)}</article>`;
 }
 function showOfficialEvent(id, focusBoutKey = undefined) {
   const event = eventsFeed.events.find(e => e.type === 'official' && e.id === id && !['cancelled', 'postponed'].includes(e.status));
@@ -149,6 +150,7 @@ function showOfficialEvent(id, focusBoutKey = undefined) {
     .filter(([section]) => event.bouts.some(b => (b.section || 'main') === section));
   const sectionNav = sections.length ? `<nav class="event-section-nav" aria-label="Bloques de la cartelera">${sections.map(([section, label]) => `<button type="button" data-event-section="${section}" aria-controls="event-section-${section}-${event.bouts.findIndex(b => (b.section || 'main') === section)}">${label}</button>`).join('')}</nav>` : '';
   const detail = $("#event-detail");
+  const entering = !$("#event-dialog").open || detail.dataset.officialEventId !== id;
   const sharedKey = focusBoutKey !== undefined ? focusBoutKey || '' : (detail.dataset.officialEventId === id ? detail.dataset.sharedBoutKey || '' : '');
   const missingSharedBout = focusBoutKey === null || (focusBoutKey === undefined && detail.dataset.officialEventId === id && detail.dataset.sharedBoutMissing === 'true');
   detail.dataset.sharedBoutMissing = String(missingSharedBout);
@@ -156,11 +158,13 @@ function showOfficialEvent(id, focusBoutKey = undefined) {
   detail.dataset.officialEventId = id;
   detail.innerHTML = `<p class="eyebrow">${eventKindLabel(event)} · ${eventStatus(event)}</p><h2 class="event-dialog-title" translate="no">${esc(event.title)} · ${esc(event.subtitle)}</h2><p class="muted"><span translate="no">${esc(event.location)}</span> · ${formatDate(event.date)} · ${formatTime(event.date)} (hora local)</p>${missingSharedBout ? '<p class="bout-share-notice" role="status">La pelea compartida ya no está en esta cartelera.</p>' : ''}<p class="data-note">${upcoming ? "Combates anunciados; pueden cambiar antes del evento." : "Cartelera principal y preliminares disponibles."} ${esc(feedNote())}</p>${upcoming ? `<p class="data-note bout-schedule-note">${scheduleExplanation}</p>` : ""}${sectionNav}<div class="bout-list">${event.bouts.length ? event.bouts.map((b,i) => `${i === 0 || (b.section || 'main') !== (event.bouts[i-1].section || 'main') ? `<h3 class="bout-section-heading" id="event-section-${esc(b.section || 'main')}-${i}" tabindex="-1">${({'main':'Cartelera principal','prelims':'Preliminares','early-prelims':'Preliminares previas'})[b.section || 'main']}</h3>` : ''}<article class="bout${followedBoutFighters(b, store.state.favorites).length ? ' is-followed' : ''}${boutShareKey(b) === sharedKey ? ' is-shared' : ''}" id="event-bout-${i}" tabindex="-1">${followedBoutBadge(b, store.state.favorites)}<div class="bout-heading"><span>${(b.section || "main") === "main" && i === 0 ? "COMBATE ESTELAR" : (b.section || "main") === "main" && i === 1 ? "COMBATE COESTELAR" : `COMBATE ${i+1}`}</span><span>${esc(b.division)}</span></div><div class="official-bout-names">${fighterNameLink(b.red, "bout-fighter-name")}<span>VS</span>${fighterNameLink(b.blue, "bout-fighter-name")}</div>${renderBoutTime(event, b)}<p class="official-result">${isAwaitingResults(event) ? "Resultados pendientes de actualización" : upcoming ? "Combate anunciado · Sin resultado" : officialResult(b, boutPinKey(event, b))}</p><div class="bout-share-actions"><span class="bout-share-status" role="status" aria-live="polite"></span><button type="button" class="text-link bout-share-button" data-share-bout="${esc(boutShareKey(b))}" aria-label="Compartir combate: ${esc(b.red)} vs ${esc(b.blue)}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m10 13 4-4M8 16l-2 2a4.2 4.2 0 0 1-6-6l5-5a4.2 4.2 0 0 1 6 0M16 8l2-2a4.2 4.2 0 0 1 6 6l-5 5a4.2 4.2 0 0 1-6 0" transform="translate(1 0) scale(.9)"/></svg><span>Compartir combate</span></button></div><label class="bout-share-fallback" hidden><span>Enlace del combate</span><input type="text" readonly value="${esc(boutShareUrl(event,b))}"></label></article>`).join("") : empty("La cartelera principal todavía no se ha anunciado.")}</div><a class="button small" href="${esc(event.source)}" target="_blank" rel="noopener noreferrer">Cartelera oficial UFC ›</a>`;
   if (!$("#event-dialog").open) $("#event-dialog").showModal();
+  if (entering) enterEventBouts(detail, Boolean(focusBoutKey));
   if (focusBoutKey) requestAnimationFrame(() => {
     if (!$("#event-dialog").open || detail.dataset.officialEventId !== id) return;
     const target = detail.querySelector('.bout.is-shared');
     target?.focus({preventScroll:true});
     target?.scrollIntoView({block:'start', behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+    pulseSharedBout(target, $("#event-dialog"));
   });
 }
 function openPendingBoutLink() {
@@ -265,7 +269,7 @@ function renderHomeBanner() {
   const banner = $("#home-event-banner");
   banner.innerHTML = renderHomeHero(event, {note:feedNote()});
 }
-function renderEvents() {
+function renderEvents({animate = false} = {}) {
   renderHomeBanner();
   renderEventFeedStatus();
   const query = $("#event-search").value.toLocaleLowerCase("es").trim();
@@ -283,12 +287,14 @@ function renderEvents() {
       if (au !== bu) return au ? -1 : 1;
       return au ? Date.parse(a.date) - Date.parse(b.date) : Date.parse(b.date) - Date.parse(a.date);
     });
-  $("#event-list").innerHTML = list.length
+  transitionEventList($("#event-list"), () => {
+    $("#event-list").innerHTML = list.length
     ? list.map((e) => officialEventCard(e)).join("")
     : onlyFollowingEvents && !store.state.favorites.length
       ? empty("Tu esquina está vacía. Añade un luchador para seguir sus próximos combates.", '<a class="outline-button small" href="#luchadores">Explorar luchadores</a>')
       : empty(onlyFollowingEvents ? "Ninguna velada coincide con tus luchadores seguidos y los filtros actuales." : "No hay carteleras con estos filtros. Prueba otra selección.");
-  updateCountdowns();
+    updateCountdowns();
+  }, animate);
 }
 function empty(text, action = '') {
   return `<div class="empty-state"><span>◇</span><p>${esc(text)}</p>${action}</div>`;
@@ -527,7 +533,7 @@ $("#favorites-only").addEventListener("click", () => {
   $("#favorites-only").setAttribute("aria-pressed", String(onlyFavorites));
   renderFighters();
 });
-$("#event-search").addEventListener("input", renderEvents);
+$("#event-search").addEventListener("input", () => renderEvents({animate:true}));
 document.querySelectorAll("[data-event-kind]").forEach(button => {
   button.addEventListener("click", () => {
     eventKindFilter = button.dataset.eventKind;
@@ -535,7 +541,7 @@ document.querySelectorAll("[data-event-kind]").forEach(button => {
       b.classList.toggle("active", b === button);
       b.setAttribute("aria-pressed", String(b === button));
     });
-    renderEvents();
+    renderEvents({animate:true});
   });
 });
 document.querySelectorAll("[data-event-filter]").forEach((button) =>
@@ -545,12 +551,12 @@ document.querySelectorAll("[data-event-filter]").forEach((button) =>
       b.classList.toggle("active", b === button);
       b.setAttribute("aria-pressed", String(b === button));
     });
-    renderEvents();
+    renderEvents({animate:true});
   }),
 );
 $("#event-following-only").addEventListener("click", () => {
   onlyFollowingEvents = !onlyFollowingEvents;
-  renderEvents();
+  renderEvents({animate:true});
 });
 $("#theme-button").addEventListener("click", () => {
   store.state.theme = store.state.theme === "dark" ? "light" : "dark";
