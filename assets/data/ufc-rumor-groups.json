@@ -1,39 +1,8 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T07:00:19.392Z",
-  "lastSearchedAt": "2026-10-25T07:00:19.392Z",
+  "updatedAt": "2026-10-25T08:00:55.387Z",
+  "lastSearchedAt": "2026-10-25T08:00:55.387Z",
   "groups": [
-    {
-      "id": "2114109790674636896",
-      "fighterNames": [
-        "Merab Dvalishvili",
-        "Petr Yan"
-      ],
-      "matchupKey": "merabdvalishvili|petryan|undated:2026-10",
-      "eventDateHint": null,
-      "rematch": false,
-      "dateYearInferred": false,
-      "summary": {
-        "es": "MMA Latinoamérica comenta un posible cruce entre Merab Dvalishvili y Petr Yan, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "MMA Latinoamérica discusses a possible matchup between Merab Dvalishvili and Petr Yan, with no exact date stated by the source. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-10-24T23:00:56.106Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-10-24T21:40:27.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2114109790674636896",
-          "sourceId": "mma-latinoamerica",
-          "postUrl": "https://x.com/ClubDeLasMMA/status/2114109790674636896",
-          "publishedAt": "2026-10-24T21:40:27.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
     {
       "id": "2114078734131294580",
       "fighterNames": [
@@ -97,37 +66,6 @@
       "official": null
     },
     {
-      "id": "2114072986747850970",
-      "fighterNames": [
-        "Lone’er Kavanagh",
-        "Ramazan Temirov"
-      ],
-      "matchupKey": "loneerkavanagh|ramazantemirov|undated:2026-10",
-      "eventDateHint": null,
-      "rematch": false,
-      "dateYearInferred": false,
-      "summary": {
-        "es": "Pelunaton comenta un posible cruce entre Lone’er Kavanagh y Ramazan Temirov, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Pelunaton discusses a possible matchup between Lone’er Kavanagh and Ramazan Temirov, with no exact date stated by the source. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-10-24T20:00:54.935Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-10-24T19:14:12.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2114072986747850970",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2114072986747850970",
-          "publishedAt": "2026-10-24T19:14:12.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
       "id": "2114065875221229807",
       "fighterNames": [
         "Carlos Prates",
@@ -152,37 +90,6 @@
           "sourceId": "mma-latinoamerica",
           "postUrl": "https://x.com/ClubDeLasMMA/status/2114065875221229807",
           "publishedAt": "2026-10-24T18:45:56.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2114057464924586086",
-      "fighterNames": [
-        "Aaron Pico",
-        "Losene Keita"
-      ],
-      "matchupKey": "aaronpico|losenekeita|undated:2026-10",
-      "eventDateHint": null,
-      "rematch": false,
-      "dateYearInferred": false,
-      "summary": {
-        "es": "MMA Latinoamérica comenta un posible cruce entre Aaron Pico y Losene Keita, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "MMA Latinoamérica discusses a possible matchup between Aaron Pico and Losene Keita, with no exact date stated by the source. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-10-24T19:00:58.659Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-10-24T18:12:31.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2114057464924586086",
-          "sourceId": "mma-latinoamerica",
-          "postUrl": "https://x.com/ClubDeLasMMA/status/2114057464924586086",
-          "publishedAt": "2026-10-24T18:12:31.000Z",
           "language": "es",
           "attributedAccounts": []
         }
@@ -829,8 +736,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-25T07:00:19.392Z",
-    "receivedPosts": 57,
+    "checkedAt": "2026-10-25T08:00:55.387Z",
+    "receivedPosts": 0,
     "added": 0
   }
 }
