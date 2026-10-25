@@ -49,6 +49,28 @@ class CitoSyncTests(unittest.TestCase):
         self.assertEqual(feed['events'][-1]['bouts'][0]['winner'], 'Alpha')
         self.assertEqual(feed['events'][-1]['bouts'][0]['division'], 'Lightweight')
 
+    def test_discovers_next_year_without_extra_bout_queries(self):
+        upcoming = [event(f'ufc-{n}', date, f'UFC {n}') for n, date in (
+            (333, '2026-10-25T00:00:00Z'), (334, '2026-11-15T02:00:00Z'),
+            (335, '2026-12-13T02:00:00Z'), (336, '2027-01-31T02:00:00Z'))]
+        calls = []
+        def fetch(path):
+            calls.append(path)
+            if path == '/upcoming': return upcoming
+            if path == '/recent': return []
+            return [bout()]
+        feed = sync.synchronize(fetch, {'events': []}, NOW)
+        january = next(e for e in feed['events'] if e['id'] == 'ufc-336')
+        self.assertEqual(january['status'], 'announced')
+        self.assertEqual(january['bouts'], [])
+        self.assertEqual(len(calls), 5)
+        self.assertNotIn('/ufc-336/bouts', calls)
+        january['bouts'] = [{'red': 'Van', 'blue': 'Kape'}]
+        calls.clear()
+        again = sync.synchronize(fetch, feed, NOW)
+        self.assertEqual(next(e for e in again['events'] if e['id'] == 'ufc-336')['bouts'], january['bouts'])
+        self.assertEqual(len(calls), 5)
+
     def test_past_archive_remains_with_attribution(self):
         previous = {'source': 'UFCalendar', 'events': [{'id': 'ufc-331', 'status': 'completed', 'date': '2026-09-20T00:00:00Z', 'bouts': [{'red': 'A'}]}]}
         def fetch(path):

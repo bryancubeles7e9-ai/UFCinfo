@@ -233,6 +233,27 @@ def synchronize(fetch, previous, now):
                     inactive.add(eid)
     near_recent = sorted(((eid, c) for eid, c in candidates.items() if eid not in inactive and c[3] and c[4] >= now - timedelta(days=14)), key=lambda pair: pair[1][4], reverse=True)
     future = sorted(((eid, c) for eid, c in candidates.items() if eid not in inactive and not c[3]), key=lambda pair: pair[1][4])
+    # Discovery uses the already fetched list, not an extra paid bout request.
+    # Far-away cards (including next year) must be visible before they enter
+    # the three-card refresh window. Preserve any existing verified bouts.
+    for eid, (row, number, kind, is_recent, date) in future:
+        if eid in old:
+            continue
+        venue = row.get('venue') or row.get('location') or ''
+        if isinstance(venue, dict):
+            venue = ', '.join(str(venue[k]) for k in ('name', 'city', 'country') if venue.get(k))
+        if not isinstance(venue, str):
+            raise SyncError('Invalid venue')
+        old[eid] = {
+            'id': eid, 'number': number, 'eventKind': kind,
+            'citoSlug': row.get('slug') or row.get('eventSlug'),
+            'title': f'UFC {number}' if number else 'UFC Freedom 250' if kind == 'special' else 'UFC Fight Night',
+            'subtitle': 'Cartelera pendiente de anuncio', 'status': 'announced',
+            'date': date.isoformat(), 'location': venue or 'Recinto no indicado',
+            'type': 'official', 'source': f'https://www.ufc.com/event/{eid}',
+            'checkedAt': now.date().isoformat(), 'bouts': [], 'dataSource': 'Cito',
+            'poster': None, 'posterSource': None, 'posterAlt': None,
+        }
     selected = near_recent[:1] + future[:2]
     if len(selected) < 3:
         selected += [pair for pair in future[2:] + near_recent[1:] if pair not in selected][:3-len(selected)]

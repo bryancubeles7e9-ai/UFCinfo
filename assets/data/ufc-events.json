@@ -6,6 +6,47 @@
   "synchronizedAt": "2026-10-25T07:01:08.403220+00:00",
   "events": [
     {
+      "id": "ufc-336",
+      "number": 336,
+      "eventKind": "numbered",
+      "title": "UFC 336",
+      "subtitle": "Van vs Kape",
+      "status": "announced",
+      "date": "2027-01-31T02:00:00+00:00",
+      "location": "Scotiabank Arena, Toronto Canada",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-336",
+      "checkedAt": "2026-10-25",
+      "dataSource": "UFC",
+      "bouts": [
+        {
+          "section": "main",
+          "red": "Joshua Van",
+          "blue": "Manel Kape",
+          "division": "Flyweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "main",
+          "red": "Carlos Prates",
+          "blue": "Michael Morales",
+          "division": "Welterweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        }
+      ],
+      "poster": null,
+      "posterSource": null,
+      "posterAlt": null
+    },
+    {
       "id": "ufc-335",
       "number": 335,
       "title": "UFC 335",
