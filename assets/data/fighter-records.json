@@ -5302,20 +5302,18 @@
       "record": "11-1-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/asaf-chopurov",
-      "updatedAt": "2026-10-25T07:01:19.125669+00:00"
+      "updatedAt": "2026-10-25T09:01:31.958981+00:00"
     }
   },
   "lastSync": {
-    "checkedAt": "2026-10-25T07:01:19.125669+00:00",
+    "checkedAt": "2026-10-25T09:01:31.958981+00:00",
     "mode": "events",
-    "attempted": 40,
-    "succeeded": 38,
+    "attempted": 1,
+    "succeeded": 0,
     "failedIds": [
-      "ufc-jack-della-maddalena",
       "ufc-asaf-chopurov"
     ],
     "recordOnlyIds": [
-      "ufc-jack-della-maddalena",
       "ufc-asaf-chopurov"
     ]
   },
