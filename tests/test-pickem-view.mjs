@@ -13,9 +13,11 @@ const state = {serverTime:Date.now(),authenticated:true,alias:'Tester',nextEvent
  {event:past,joined:true,closed:true,closesAt:1,picks:{[pickKey(bout)]:'A'},revision:1,result:{score:100,correct:1,total:1,final:true,void:false}}
 ]};
 const requests=[];
-globalThis.fetch = async url=>{
+let submitted=null;
+globalThis.fetch = async (url,options)=>{
  requests.push(url);
- return new Response(JSON.stringify(url.includes('ranking')?{rows:[],total:0}:state),{headers:{'Content-Type':'application/json'}});
+ if(url.endsWith('/me/pickem'))submitted=JSON.parse(options.body);
+ return new Response(JSON.stringify(url.includes('ranking')?{rows:[],total:0}:url.endsWith('/auth/session')?{user:{username:'Tester'},csrf:'fake'}:state),{headers:{'Content-Type':'application/json'}});
 };
 const {initializePickem} = await import('../assets/js/pickem.js');
 const app=initializePickem();app.update([next,past]);
@@ -28,7 +30,7 @@ assert.ok(root.innerHTML.includes('Puntuación final'));
 assert.ok(root.innerHTML.includes('<dt>Puntos</dt><dd>100</dd>'));
 assert.ok(root.innerHTML.includes('Pick acertado'));
 assert.ok(root.innerHTML.includes('Ganador'));
-assert.ok(root.innerHTML.includes('data-pick-side="0" aria-pressed="true" disabled'));
+assert.ok(root.innerHTML.includes('data-pick-side="0" data-pick-method="general" aria-pressed="true" disabled'));
 listeners.change({target:{id:'pickem-scope',value:'event'}});
 await new Promise(resolve=>setTimeout(resolve,0));
 assert.ok(requests.some(url=>url.includes('scope=past')));
@@ -40,3 +42,25 @@ listeners.change({target:{id:'pickem-scope',value:'past'}});
 await new Promise(resolve=>setTimeout(resolve,0));
 assert.ok(requests.at(-1).includes('scope=past'));
 console.log('PASS Pick’em ranking: previous completed event remains available when next event is selected');
+
+assert.equal((root.innerHTML.match(/data-pick-method=/g)||[]).length,8);
+const methodButton = {dataset:{pickBout:'0',pickSide:'0',pickMethod:'ko'}};
+listeners.click({target:{closest:selector=>selector==='[data-pick-bout]'?methodButton:null}});
+assert.ok(root.innerHTML.includes('data-pick-method="ko" aria-pressed="true"'));
+assert.ok(!root.innerHTML.includes('data-pick-method="general" aria-pressed="true"'));
+assert.ok(root.innerHTML.includes('Cambios sin guardar'));
+console.log('PASS Pick’em method selection: four options per fighter, one selection per bout');
+
+await listeners.click({target:{closest:selector=>selector==='#pickem-save'?{}:null}});
+assert.deepEqual(submitted.picks[pickKey(bout)],{winner:'A',method:'ko'});
+assert.equal(submitted.eventId,'next');
+assert.equal(submitted.revision,0);
+state.events[1].picks={[pickKey(bout)]:{winner:'A',method:'ko'}};
+state.events[1].event.bouts[0].method='KO/TKO';
+state.events[1].result.score=350;
+await listeners.click({target:{closest:selector=>selector==='#pickem-refresh'?{}:null}});
+listeners.change({target:{id:'pickem-event',value:'past'}});
+assert.ok(root.innerHTML.includes('<dt>Puntos</dt><dd>350</dd>'));
+assert.ok(root.innerHTML.includes('Pick acertado</strong> · 350'));
+assert.ok(root.innerHTML.includes('data-pick-method="ko" aria-pressed="true" disabled'));
+console.log('PASS Pick’em save and history: method sent to API and 350-point result shown');

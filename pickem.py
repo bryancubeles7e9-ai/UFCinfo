@@ -2,6 +2,7 @@
 import json
 import re
 import time
+import unicodedata
 from datetime import datetime, timezone
 
 
@@ -33,19 +34,66 @@ def closing_time(event):
     return min(valid) if complete else main - 14400
 
 
+METHODS = {'general', 'ko', 'submission', 'decision'}
+
+
+def selection(value, bout):
+    # Existing saved names remain valid general-winner predictions.
+    if isinstance(value, str):
+        value = {'winner': value, 'method': 'general'}
+    if (not isinstance(value, dict) or set(value) != {'winner', 'method'}
+            or not isinstance(value.get('winner'), str)
+            or not isinstance(value.get('method'), str)
+            or value['winner'] not in (bout['red'], bout['blue'])
+            or value['method'] not in METHODS):
+        return None
+    return value
+
+
+def result_method(value):
+    text = unicodedata.normalize('NFKD', str(value or '')).encode('ascii', 'ignore').decode().lower()
+    if re.search(r'\b(ko|tko|knockout)\b', text):
+        return 'ko'
+    if re.search(r'\b(sub|submission|sumision)\b', text):
+        return 'submission'
+    if re.search(r'\b(dec|ud|sd|md|decision)\b', text):
+        return 'decision'
+    if re.search(r'\b(dq|disqualification|descalificacion)\b', text):
+        return 'other'
+    return None
+
+
 def void(bout):
-    text = str(bout.get('outcome') or '').strip().lower()
-    return bool(bout.get('_void')) or text in {'draw', 'empate', 'no contest', 'nc', 'n/c', 'cancelled', 'canceled'} or 'draw' in text or 'no contest' in text
+    text = str(bout.get('outcome') or bout.get('method') or '').strip().lower().replace('-', ' ')
+    return bool(bout.get('_void')) or text in {'empate', 'nc', 'n/c', 'cancelled', 'canceled'} or any(word in text for word in ('draw', 'empate', 'no contest'))
+
+
+def pick_result(bout, picks):
+    if void(bout):
+        return 'void', 0
+    if bout.get('winner') not in (bout['red'], bout['blue']):
+        return 'pending', 0
+    chosen = selection(picks.get(key(bout)), bout)
+    if not chosen:
+        return 'unpicked', 0
+    if chosen['winner'] != bout['winner']:
+        return 'wrong', 0
+    if chosen['method'] == 'general':
+        return 'correct', 100
+    method = result_method(bout.get('method'))
+    if method is None:
+        return 'pending', 0
+    return ('correct', 350) if method == chosen['method'] else ('wrong', 0)
 
 
 def score(event, picks):
-    active = [b for b in event['bouts'] if not void(b)]
-    correct = sum(b.get('winner') in (b['red'], b['blue']) and picks.get(key(b)) == b['winner'] for b in active)
-    resolved = sum(b.get('winner') in (b['red'], b['blue']) for b in active)
-    final = event.get('status') == 'completed' and resolved == len(active)
-    return {'correct': correct, 'total': len(active), 'resolved': resolved,
-            'score': 100 * correct,
-            'final': final, 'void': not active}
+    results = [pick_result(b, picks) for b in event['bouts'] if not void(b)]
+    correct = sum(status == 'correct' for status, _ in results)
+    resolved = sum(status != 'pending' for status, _ in results)
+    final = event.get('status') == 'completed' and resolved == len(results)
+    return {'correct': correct, 'total': len(results), 'resolved': resolved,
+            'score': sum(points for _, points in results),
+            'final': final, 'void': not results}
 
 
 def public_name(username, previous_alias, user_id):
@@ -157,8 +205,8 @@ class Competition:
             if event.get('status') not in {'announced', 'scheduled'}:
                 raise PickemError(409, 'Esta velada no admite pronósticos.')
             picks = data.get('picks')
-            allowed = {key(b): (b['red'], b['blue']) for b in event['bouts']}
-            if not isinstance(picks, dict) or not picks or len(picks) > 30 or any(k not in allowed or v not in allowed[k] for k,v in picks.items()):
+            allowed = {key(b): b for b in event['bouts']}
+            if not isinstance(picks, dict) or not picks or len(picks) > 30 or any(k not in allowed or selection(v, allowed[k]) is None for k,v in picks.items()):
                 raise PickemError(400, 'La cartelera ha cambiado o hay una elección no válida. Actualiza los pronósticos.')
             old = db.execute('SELECT revision FROM pickem_entries WHERE user_id=? AND event_id=?', (user_id, event['id'])).fetchone()
             if data['revision'] != (old['revision'] if old else 0):
@@ -182,16 +230,16 @@ class Competition:
                     continue
                 if scope not in {'all', 'year'} and entry['event_id'] != scope:
                     continue
-                r = rows.setdefault(entry['user_id'], {'alias': public_name(entry['username'], entry['alias'], entry['user_id']), 'correct': 0, 'total': 0, 'played': 0, 'pending': 0})
+                r = rows.setdefault(entry['user_id'], {'alias': public_name(entry['username'], entry['alias'], entry['user_id']), 'correct': 0, 'total': 0, 'played': 0, 'pending': 0, 'score': 0})
                 result = score(event, json.loads(entry['picks']))
                 # Only final results count in the public totals; pending cards remain provisional.
                 if result['final'] and not result['void']:
-                    r['correct'] += result['correct']; r['total'] += result['total']; r['played'] += 1
+                    r['correct'] += result['correct']; r['total'] += result['total']; r['played'] += 1; r['score'] += result['score']
                 elif not result['void']:
                     r['pending'] += 1
             values = []
             for r in rows.values():
-                r['score'] = 100 * r['correct'] if r['played'] else None
+                r['score'] = r['score'] if r['played'] else None
                 values.append(r)
             values.sort(key=lambda r: (r['score'] is None, -(r['score'] or 0), r['alias'].lower()))
             last_score, position = object(), 0

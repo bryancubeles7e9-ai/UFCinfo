@@ -1,0 +1,511 @@
+[
+  {
+    "name": "legacy wins",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "KO/TKO",
+      "outcome": null
+    },
+    "pick": "A",
+    "status": "correct",
+    "points": 100
+  },
+  {
+    "name": "general wins",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "KO/TKO",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "general"
+    },
+    "status": "correct",
+    "points": 100
+  },
+  {
+    "name": "KO",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "KO",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "TKO",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "TKO",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "KO/TKO",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "KO/TKO",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "Technical Knockout",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "Technical Knockout",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "TKO (doctor stoppage)",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "TKO (doctor stoppage)",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "Submission",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "Submission",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "submission"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "Technical Submission",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "Technical Submission",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "submission"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "Sumisión",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "Sumisión",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "submission"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "SUB",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "SUB",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "submission"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "Unanimous Decision",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "Unanimous Decision",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "decision"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "Split Decision",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "Split Decision",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "decision"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "Majority Decision",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "Majority Decision",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "decision"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "Technical Decision",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "Technical Decision",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "decision"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "UD",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "UD",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "decision"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "SD",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "SD",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "decision"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "MD",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "MD",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "decision"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "Decisión",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "Decisión",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "decision"
+    },
+    "status": "correct",
+    "points": 350
+  },
+  {
+    "name": "wrong method",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "Submission",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "wrong",
+    "points": 0
+  },
+  {
+    "name": "wrong winner",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "B",
+      "method": "KO/TKO",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "wrong",
+    "points": 0
+  },
+  {
+    "name": "Empate",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": null,
+      "method": "KO/TKO",
+      "outcome": "Empate"
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "void",
+    "points": 0
+  },
+  {
+    "name": "draw",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": null,
+      "method": "KO/TKO",
+      "outcome": "draw"
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "void",
+    "points": 0
+  },
+  {
+    "name": "majority draw",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": null,
+      "method": "KO/TKO",
+      "outcome": "majority draw"
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "void",
+    "points": 0
+  },
+  {
+    "name": "No Contest",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": null,
+      "method": "KO/TKO",
+      "outcome": "No Contest"
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "void",
+    "points": 0
+  },
+  {
+    "name": "no-contest",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": null,
+      "method": "KO/TKO",
+      "outcome": "no-contest"
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "void",
+    "points": 0
+  },
+  {
+    "name": "Sin resultado (No contest)",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": null,
+      "method": "KO/TKO",
+      "outcome": "Sin resultado (No contest)"
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "void",
+    "points": 0
+  },
+  {
+    "name": "missing method",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "pending",
+    "points": 0
+  },
+  {
+    "name": "unrecognized method",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "unconfirmed",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "pending",
+    "points": 0
+  },
+  {
+    "name": "no winner",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": null,
+      "method": "KO/TKO",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "pending",
+    "points": 0
+  },
+  {
+    "name": "DQ general",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "DQ",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "general"
+    },
+    "status": "correct",
+    "points": 100
+  },
+  {
+    "name": "DQ method",
+    "bout": {
+      "red": "A",
+      "blue": "B",
+      "winner": "A",
+      "method": "Disqualification",
+      "outcome": null
+    },
+    "pick": {
+      "winner": "A",
+      "method": "ko"
+    },
+    "status": "wrong",
+    "points": 0
+  }
+]

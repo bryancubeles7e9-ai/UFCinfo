@@ -1,5 +1,15 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "Elige un luchador y una de sus cuatro opciones por combate. Inicia sesión y guarda antes del cierre.": "Tria un lluitador i una de les seves quatre opcions per combat. Inicia sessió i desa abans del tancament.",
+  "Victoria general: 100 puntos. Ganador y método exactos: 350 puntos. El ranking suma los puntos de las veladas finalizadas.": "Victòria general: 100 punts. Guanyador i mètode exactes: 350 punts. El rànquing suma els punts de les vetllades finalitzades.",
+  "100 o 350 puntos por acierto": "100 o 350 punts per encert",
+  "Victoria general: 100 puntos si gana tu luchador. KO/TKO, sumisión o decisión: 350 puntos solo si aciertas ganador y método; no se suman a los 100. Si fallas el método, son 0 puntos. Empates, no contest y cancelaciones son neutrales: ni acierto ni error.": "Victòria general: 100 punts si guanya el teu lluitador. KO/TKO, submissió o decisió: 350 punts només si encertes guanyador i mètode; no se sumen als 100. Si falles el mètode, són 0 punts. Empats, no contest i cancel·lacions són neutrals: ni encert ni error.",
+  "Victoria general": "Victòria general",
+  "Sumisión": "Submissió",
+  "Decisión": "Decisió",
+  "Empates y anulados": "Empats i anul·lats",
+  "Resultado neutral": "Resultat neutral",
+
   "Velada pasada": "Vetllada passada",
   "Resumen de tus resultados": "Resum dels teus resultats",
   "Fallos": "Errors",

@@ -1,5 +1,15 @@
 // Spanish source copy and its English equivalent. Names and user content stay unchanged.
 export const english = {
+  "Elige un luchador y una de sus cuatro opciones por combate. Inicia sesión y guarda antes del cierre.": "Choose a fighter and one of their four options per bout. Sign in and save before picks close.",
+  "Victoria general: 100 puntos. Ganador y método exactos: 350 puntos. El ranking suma los puntos de las veladas finalizadas.": "General win: 100 points. Exact winner and method: 350 points. The leaderboard adds up points from finalized events.",
+  "100 o 350 puntos por acierto": "100 or 350 points per correct pick",
+  "Victoria general: 100 puntos si gana tu luchador. KO/TKO, sumisión o decisión: 350 puntos solo si aciertas ganador y método; no se suman a los 100. Si fallas el método, son 0 puntos. Empates, no contest y cancelaciones son neutrales: ni acierto ni error.": "General win: 100 points if your fighter wins. KO/TKO, submission or decision: 350 points only for the exact winner and method; not added to the 100. A wrong method earns 0. Draws, no contests and cancellations are neutral: neither correct nor wrong.",
+  "Victoria general": "General win",
+  "Sumisión": "Submission",
+  "Decisión": "Decision",
+  "Empates y anulados": "Draws and voided bouts",
+  "Resultado neutral": "Neutral result",
+
   "Velada pasada": "Previous event",
   "Resumen de tus resultados": "Your results summary",
   "Fallos": "Wrong picks",

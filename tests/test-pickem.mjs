@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {closingTime,nextPickEvent,pickKey,picksFor,isClosed,readPicks,pickResult,pickSummary} from '../assets/js/pickem-model.js';
+import {closingTime,nextPickEvent,pickKey,picksFor,isClosed,readPicks,pickResult,pickSummary,pickPoints} from '../assets/js/pickem-model.js';
 const bout = {red:'A',blue:'B',section:'main'}, other = {red:'C',blue:'D',section:'prelims'};
 const event = {id:'test',type:'official',status:'scheduled',date:'2026-10-24T18:00:00Z',source:'official',bouts:[bout,other]};
 event.sectionSchedule = {eventDate:event.date,source:event.source,starts:{main:event.date,prelims:'2026-10-24T16:00:00Z', 'early-prelims':'2026-10-24T14:00:00Z'}};
@@ -43,3 +43,13 @@ assert.deepEqual(pickSummary({bouts:[resolved,{...resolved,winner:'B'},
   {...resolved,_void:true}]},saved),{correct:1,wrong:1,unpicked:1,pending:1,void:1});
 assert.deepEqual(pickSummary({bouts:[]},saved),{correct:0,wrong:0,unpicked:0,pending:0,void:0});
 console.log('PASS Pick’em results: correct, wrong, unpicked, pending and void bouts stay distinct');
+
+const cases=JSON.parse(await (await import('node:fs/promises')).readFile(new URL('./fixtures/pickem-methods.json',import.meta.url),'utf8'));
+for(const test of cases){
+  const picks={[pickKey(test.bout)]:test.pick};
+  assert.equal(pickResult(test.bout,picks),test.status,test.name);
+  assert.equal(pickPoints(test.bout,picks),test.points,test.name);
+  assert.deepEqual(picksFor({bouts:[test.bout]},picks),picks,test.name);
+}
+assert.deepEqual(picksFor({bouts:[bout]},{[pickKey(bout)]:{winner:'A',method:'bonus'}}),{});
+console.log('PASS Pick’em shared scoring fixtures: general, methods, draws, unknown methods and legacy picks');

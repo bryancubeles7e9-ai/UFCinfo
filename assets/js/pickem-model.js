@@ -20,8 +20,8 @@ export function nextPickEvent(events, now = Date.now()) {
 export function picksFor(event, saved) {
   const valid = {};
   for (const bout of event.bouts) {
-    const key = pickKey(bout), winner = saved?.[key];
-    if ([bout.red, bout.blue].includes(winner)) valid[key] = winner;
+    const key = pickKey(bout), value = saved?.[key];
+    if (selection(value, bout)) valid[key] = value;
   }
   return valid;
 }
@@ -36,13 +36,35 @@ export function readPicks(storage) {
   return {};
 }
 
-// Match the server's void rules; never infer a winner from an unfinished bout.
+export const pickMethods = ['general', 'ko', 'submission', 'decision'];
+export function selection(value, bout) {
+  if (typeof value === 'string') value = {winner:value, method:'general'};
+  return value && typeof value === 'object' && !Array.isArray(value) &&
+    Object.keys(value).length === 2 && [bout.red,bout.blue].includes(value.winner) &&
+    pickMethods.includes(value.method) ? value : null;
+}
+export function resultMethod(value) {
+  const text = String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  if (/\b(ko|tko|knockout)\b/.test(text)) return 'ko';
+  if (/\b(sub|submission|sumision)\b/.test(text)) return 'submission';
+  if (/\b(dec|ud|sd|md|decision)\b/.test(text)) return 'decision';
+  if (/\b(dq|disqualification|descalificacion)\b/.test(text)) return 'other';
+  return null;
+}
+// Match server scoring; missing methods remain pending rather than guessed.
 export function pickResult(bout, picks) {
-  const outcome = String(bout.outcome || '').trim().toLowerCase();
-  if (bout._void || ['draw','empate','no contest','nc','n/c','cancelled','canceled'].includes(outcome) || outcome.includes('draw') || outcome.includes('no contest')) return 'void';
+  const outcome = String(bout.outcome || bout.method || '').trim().toLowerCase().replaceAll('-', ' ');
+  if (bout._void || ['empate','nc','n/c','cancelled','canceled'].includes(outcome) || ['draw','empate','no contest'].some(word=>outcome.includes(word))) return 'void';
   if (![bout.red,bout.blue].includes(bout.winner)) return 'pending';
-  const chosen = picksFor({bouts:[bout]}, picks)[pickKey(bout)];
-  return !chosen ? 'unpicked' : chosen === bout.winner ? 'correct' : 'wrong';
+  const chosen = selection(picks?.[pickKey(bout)], bout);
+  if (!chosen) return 'unpicked';
+  if (chosen.winner !== bout.winner) return 'wrong';
+  if (chosen.method === 'general') return 'correct';
+  const method = resultMethod(bout.method);
+  return method === null ? 'pending' : method === chosen.method ? 'correct' : 'wrong';
+}
+export function pickPoints(bout, picks) {
+  return pickResult(bout, picks) === 'correct' ? selection(picks[pickKey(bout)], bout).method === 'general' ? 100 : 350 : 0;
 }
 export function pickSummary(event, picks) {
   const counts = {correct:0, wrong:0, unpicked:0, pending:0, void:0};

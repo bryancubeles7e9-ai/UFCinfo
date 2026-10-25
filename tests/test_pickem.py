@@ -10,7 +10,7 @@ from pathlib import Path
 from unittest.mock import patch
 from http.server import ThreadingHTTPServer
 from server import Database, make_handler
-from pickem import Competition, PickemError, key, score, closing_time
+from pickem import Competition, PickemError, key, score, closing_time, pick_result
 
 NOW = 1792756800  # Before UFC 333; tests never call external providers.
 
@@ -33,6 +33,43 @@ class PickemTests(unittest.TestCase):
         with self.db.connect() as db:
             for user in ['one','two']:
                 db.execute('INSERT INTO users (id,username,salt,password,updated_at) VALUES (?,?,?,?,?)',(user,user,b's',b'p',NOW))
+    def test_method_scoring_shared_cases(self):
+        cases=json.loads((Path(__file__).parent/'fixtures/pickem-methods.json').read_text())
+        for case in cases:
+            with self.subTest(case=case['name']):
+                bout=case['bout']; picks={key(bout):case['pick']}
+                self.assertEqual(pick_result(bout,picks),(case['status'],case['points']))
+                result=score({'status':'completed','bouts':[bout]},picks)
+                self.assertEqual(result['score'],case['points'])
+                self.assertEqual(result['correct'],int(case['status']=='correct'))
+                self.assertEqual(result['total'],int(case['status']!='void'))
+                self.assertEqual(result['final'],case['status']!='pending')
+
+    def test_save_method_picks_and_ranking_sum_preserves_legacy(self):
+        picks=self.picks()
+        for i in range(3): picks[key(self.event['bouts'][i])]={'winner':f'R{i}','method':['ko','submission','decision'][i]}
+        result=self.save(picks=picks)
+        self.assertEqual(result['events'][0]['picks'],picks)
+        self.save(user='two')  # Existing name-only picks still earn 100 each.
+        for i,bout in enumerate(self.event['bouts']):
+            bout.update(winner=bout['red'],method=['KO/TKO','Submission','Unanimous Decision'][i%3])
+        self.event['status']='completed'; self.write(self.event)
+        game=Competition(self.db,self.feed)
+        rows=game.leaderboard()['rows']
+        self.assertEqual([r['score'] for r in rows],[1950,1200])
+        self.assertEqual([r['correct'] for r in rows],[12,12])
+        self.assertEqual(game.state('one')['events'][0]['result']['score'],1950)
+
+    def test_invalid_method_payload_is_rejected_without_overwriting_picks(self):
+        self.save()
+        for value in ({'winner':'R0','method':'bonus'}, {'winner':'R0','method':'ko','points':350},
+                      {'winner':'outsider','method':'ko'}, {'winner':'R0'}, ['R0','ko'],
+                      {'winner':'R0','method':[]}, {'winner':None,'method':'ko'}):
+            picks=self.picks(); picks[key(self.event['bouts'][0])]=value
+            with self.assertRaises(PickemError) as error: self.save(revision=1,picks=picks)
+            self.assertEqual(error.exception.status,400)
+        self.assertEqual(self.game.state('one')['events'][0]['picks'],self.picks())
+
     def tearDown(self):
         self.clock.stop(); self.tmp.cleanup()
     def write(self,*events):
