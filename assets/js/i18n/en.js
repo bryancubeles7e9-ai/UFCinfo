@@ -3,6 +3,8 @@ export const english = {
   "Principal": "Main card",
   "Previas": "Early prelims",
   "Bloques de la cartelera": "Fight card sections",
+  "Mostrar solo veladas con luchadores que sigues": "Show only events featuring fighters you follow",
+  "Ninguna velada coincide con tus luchadores seguidos y los filtros actuales.": "No events match your followed fighters and the current filters.",
   "Inicio": "Home",
   "02 / AGENDA": "02 / SCHEDULE",
   "Hacer mis picks": "Make my picks",

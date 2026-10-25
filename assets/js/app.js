@@ -57,6 +57,7 @@ try { catalogView = localStorage.getItem('ufcinfo-catalog-view') === 'cards' ? '
 initializeRankings();
 let eventFilter = "upcoming",
   eventKindFilter = "all",
+  onlyFollowingEvents = false,
   onlyFavorites = false,
   confirmAction = null;
 const pickem = initializePickem({getFavoriteIds: () => store.state.favorites});
@@ -228,7 +229,9 @@ function renderEvents() {
   renderHomeBanner();
   renderEventFeedStatus();
   const query = $("#event-search").value.toLocaleLowerCase("es").trim();
+  $("#event-following-only").setAttribute("aria-pressed", String(onlyFollowingEvents));
   const list = availableOfficialEvents()
+    .filter(e => !onlyFollowingEvents || e.bouts.some(b => followedBoutFighters(b, store.state.favorites).length))
     .filter(e => eventKindFilter === "all" || (e.type === "official" && (e.eventKind || "numbered") === eventKindFilter))
     .filter(
       (e) =>
@@ -242,11 +245,13 @@ function renderEvents() {
     });
   $("#event-list").innerHTML = list.length
     ? list.map((e) => officialEventCard(e)).join("")
-    : empty("No hay carteleras con estos filtros. Prueba otra selección.");
+    : onlyFollowingEvents && !store.state.favorites.length
+      ? empty("Tu esquina está vacía. Añade un luchador para seguir sus próximos combates.", '<a class="outline-button small" href="#luchadores">Explorar luchadores</a>')
+      : empty(onlyFollowingEvents ? "Ninguna velada coincide con tus luchadores seguidos y los filtros actuales." : "No hay carteleras con estos filtros. Prueba otra selección.");
   updateCountdowns();
 }
-function empty(text) {
-  return `<div class="empty-state"><span>◇</span><p>${esc(text)}</p></div>`;
+function empty(text, action = '') {
+  return `<div class="empty-state"><span>◇</span><p>${esc(text)}</p>${action}</div>`;
 }
 function renderSaved() {
   const activity = followingActivity(store.state.favorites, availableOfficialEvents());
@@ -499,6 +504,10 @@ document.querySelectorAll("[data-event-filter]").forEach((button) =>
     renderEvents();
   }),
 );
+$("#event-following-only").addEventListener("click", () => {
+  onlyFollowingEvents = !onlyFollowingEvents;
+  renderEvents();
+});
 $("#theme-button").addEventListener("click", () => {
   store.state.theme = store.state.theme === "dark" ? "light" : "dark";
   persist();

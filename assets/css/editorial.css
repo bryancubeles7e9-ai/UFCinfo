@@ -219,3 +219,7 @@ main{max-width:var(--max);padding-bottom:64px}
 .event-section-nav button:focus-visible,.bout-section-heading:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 #event-detail .bout-section-heading{scroll-margin-top:12px}
 @media(max-width:700px){.event-section-nav{gap:5px;padding-right:42px}.event-section-nav button{font-size:11px;padding:10px 5px}}
+
+.event-following-filter{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.event-following-filter[aria-pressed="true"] svg{color:var(--accent)}
+#event-list .empty-state .outline-button{margin-top:16px}

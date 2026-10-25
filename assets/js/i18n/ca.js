@@ -3,6 +3,8 @@ export const catalan = {
   "Principal": "Principal",
   "Previas": "Prèvies",
   "Bloques de la cartelera": "Blocs de la cartellera",
+  "Mostrar solo veladas con luchadores que sigues": "Mostra només vetllades amb lluitadors que segueixes",
+  "Ninguna velada coincide con tus luchadores seguidos y los filtros actuales.": "Cap vetllada coincideix amb els lluitadors que segueixes i els filtres actuals.",
   "Inicio": "Inici",
   "02 / AGENDA": "02 / AGENDA",
   "Hacer mis picks": "Fer els meus pronòstics",
