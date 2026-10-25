@@ -5,6 +5,18 @@ import { directoryFighterById, directoryFighterByName, fighterNameLink, normaliz
 import { fullName } from "./data.js";
 import { escapeHTML as esc, formatDate, formatTime } from "./utils.js";
 
+// Use the same catalogue identities as Mi esquina, including name aliases/accents.
+export function followedBoutFighters(bout, ids = []) {
+  const following = new Set(ids);
+  return [...new Map([bout.red, bout.blue].map(directoryFighterByName)
+    .filter(f => f && following.has(f.id)).map(f => [f.id, f])).values()];
+}
+export function followedBoutBadge(bout, ids = []) {
+  const tracked = followedBoutFighters(bout, ids);
+  if (!tracked.length) return '';
+  return `<span class="followed-bout-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span>Sigues a</span> <span translate="no">${esc(tracked.map(fullName).join(' · '))}</span></span>`;
+}
+
 // Identify the participants rather than their position in a changing card.
 export function boutPinKey(event, bout) {
   return JSON.stringify([event.id, ...[bout.red, bout.blue].map(normalizeFighterName).sort()]);

@@ -201,3 +201,12 @@ main{max-width:var(--max);padding-bottom:64px}
 .home-upcoming-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.home-upcoming-grid .official-event-card{grid-template-columns:minmax(0,1fr)}.home-upcoming-grid .event-poster{order:-1;aspect-ratio:3/2;min-height:0;max-height:none}.home-upcoming-grid .event-info{padding:26px}.home-upcoming-grid .event-info h3{font-size:38px}.home-upcoming-grid .event-info>.countdown{margin:16px 0}@media(max-width:700px){.home-upcoming-grid{grid-template-columns:minmax(0,1fr);gap:18px}.home-upcoming-grid .event-info{padding:22px 18px}}
 .light #home-event-banner .eyebrow{color:var(--muted)}
 .fighter-grid>.fighter-card.fighter-legend{border-top-color:#a78acb}
+
+/* Followed participants are visible in cards without changing result colours. */
+.followed-bout-badge{display:inline-flex;align-items:center;flex-wrap:wrap;gap:4px 6px;max-width:100%;margin:0 0 12px;padding:5px 9px;border-radius:6px;background:color-mix(in srgb,var(--accent) 10%,var(--surface));color:var(--accent);font-size:11px;line-height:1.6}
+.followed-bout-badge svg{flex:none}
+.followed-bout-badge [translate="no"]{overflow-wrap:anywhere;font-weight:600}
+.bout.is-followed{margin:12px 0;padding:18px;border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line));border-radius:10px;background:color-mix(in srgb,var(--accent) 3%,var(--surface))}
+.pickem-bout.is-followed:not(.has-result){border-color:color-mix(in srgb,var(--accent) 45%,var(--line));border-radius:10px;background:color-mix(in srgb,var(--accent) 3%,var(--surface))}
+.light .followed-bout-badge{color:#a93619}
+@media(max-width:700px){.bout.is-followed{padding:14px}.followed-bout-badge{font-size:10px}}
