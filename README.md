@@ -6,33 +6,57 @@ UFCinfo nace de la perspectiva de un aficionado: consultar una cartelera, conoce
 
 **[Entrar en UFCinfo](https://ufcinfo.onrender.com)**
 
-
-La portada destaca la próxima estelar con imágenes, cuenta atrás y accesos a cartelera y Pick’em. El diseño comparte tipografía, espacios y tarjetas entre secciones, con modos claro y oscuro y navegación adaptada a móvil.
+La portada destaca la próxima estelar con imágenes, cuenta atrás y accesos a Carteleras y Pick’em. El diseño comparte tipografía, espacios y tarjetas entre secciones, con modos claro y oscuro y navegación adaptada a móvil y ordenador. Los carteles mantienen su proporción y utilizan un fondo integrado cuando sobra espacio.
 
 ## Qué puedes hacer
 
 | Sección | Qué encontrarás |
 | --- | --- |
 | **Inicio** | El próximo evento disponible y accesos a las principales secciones. |
-| **Carteleras** | Eventos numerados, Fight Night y especiales, con próximos combates, resultados disponibles, horarios aproximados por pelea, cuenta atrás y descarga de calendario `.ics`. |
+| **Carteleras** | Eventos numerados, Fight Night y especiales, con próximos combates, resultados disponibles, franjas estimadas por pelea y cuenta atrás. Incluye filtros combinables, «Mi esquina», accesos entre bloques y enlaces para compartir cada combate. |
 | **Luchadores** | Un catálogo con participantes de veladas recientes y próximas, con fotografías, récords, datos físicos, guardia, formación marcial y estadísticas documentadas. Puedes elegir entre lista compacta y tarjetas, buscar y filtrar por Todos, Siguiendo, Campeones o Leyendas. Los perfiles se organizan en **Resumen, Estadísticas e Historial**, con fuentes y fechas de consulta. El historial reúne los combates presentes en las carteleras disponibles; no representa necesariamente toda la carrera. Incluye una selección de leyendas retiradas con insignia violeta y filtro propio. |
 | **Rankings** | El top 15 de las 11 divisiones y las dos listas libra por libra, con el campeón separado cuando corresponde y acceso a los perfiles. |
 | **Fight Lab** | Comparación de dos luchadores: perfil, trayectoria y estadísticas de golpeo, derribos y finalizaciones. |
+| **Pick’em** | Pronósticos para la próxima velada, con victoria general o método exacto, cuenta atrás, resultados personales y ranking por puntos con el nombre de tu cuenta. |
 | **Rumores** | Publicaciones de fuentes seleccionadas sobre posibles combates, agrupadas por pelea y con atribución a su origen. |
-| **Mi esquina** | Tus luchadores seguidos, sus próximos combates anunciados, posiciones en los rankings y resultados recientes disponibles. |
+| **Mi esquina** | Tus luchadores seguidos, sus próximos combates anunciados, posiciones en los rankings y resultados recientes disponibles. Puedes fijar un próximo combate y descargar su velada en formato calendario `.ics`. |
 
 La interfaz está disponible en **español, inglés y catalán**, tiene tema claro y oscuro y se adapta a móvil y ordenador.
 
 ## Cómo empezar
 
-1. Entra en **Carteleras** para consultar la próxima velada o un evento finalizado.
+1. Entra en **Carteleras** para consultar la próxima velada o un evento finalizado. Dentro de la cartelera, salta a **Principal**, **Preliminares** o **Previas**, según los bloques disponibles.
 2. Abre **Luchadores**, busca a tus favoritos y pulsa el corazón o **Seguir luchador**.
 3. Visita **Mi esquina** para reunir sus próximos combates y resultados. Si sigues a ambos rivales, la pelea aparece una sola vez.
-4. Usa **Fight Lab** cuando quieras comparar las cifras disponibles de dos atletas.
+4. Prepara tus pronósticos en **Pick’em**. Para participar en el ranking, inicia sesión y guarda antes de que termine la cuenta atrás.
+5. Usa **Fight Lab** cuando quieras comparar las cifras disponibles de dos atletas.
 
 No necesitas una cuenta para explorar la web. Como invitado, tu seguimiento se guarda en ese navegador. Con una cuenta, la lista de luchadores seguidos se guarda en el servidor y puedes recuperarla desde otros dispositivos. También puedes exportar e importar una copia del seguimiento.
 
 El **modo sin spoilers** está activo al entrar y se reactiva al recargar. Oculta los resultados de combates en Carteleras, Mi esquina y el Historial del perfil; puedes revelarlos individualmente o desactivar el modo. Las fichas, los récords y los rankings mantienen sus datos publicados, por lo que pueden reflejar el desenlace de un evento.
+
+## Carteleras para seguir y compartir
+
+- **Filtro «Mi esquina»:** muestra solo las veladas donde participa un luchador al que sigues. Se combina con Próximos, Finalizados, tipo de evento y búsqueda. La lista se actualiza al cambiar tu seguimiento. Si todavía no sigues a nadie, ofrece acceso a Luchadores.
+- **Combates de tus favoritos:** un corazón, el texto «Sigues a» y un borde naranja suave destacan sus peleas en Carteleras y Pick’em. En los resultados de Pick’em se conservan los bordes que indican acierto, fallo o resultado neutral.
+- **Accesos a los bloques:** Principal, Preliminares y Previas permanecen visibles al desplazarte dentro de la cartelera. Solo aparecen los bloques que contienen combates.
+- **Compartir combate:** copia un enlace que abre la velada y lleva hasta esa pelea, destacándola. Identifica a los participantes dentro del evento, por lo que admite cambios de orden, de bloque y de esquina. Si cambia un rival o desaparece la pelea, muestra un aviso y abre la cartelera disponible; si ya no está la velada, avisa de que no figura en los datos actuales. Si el navegador bloquea el portapapeles, muestra el enlace para copiarlo manualmente.
+
+Al abrir una cartelera, los combates entran de forma escalonada. Las tarjetas se desvanecen y se recolocan al cambiar los filtros, y una pelea abierta mediante un enlace compartido recibe **dos pulsos suaves**. Estos efectos son breves, respetan la preferencia del dispositivo de **reducir movimiento** y no se repiten en las actualizaciones automáticas de datos.
+
+## Pick’em y ranking por puntos
+
+Solo se admiten pronósticos para el **próximo evento**; el servidor rechaza los de veladas posteriores y el historial queda en modo consulta. Al finalizar la velada actual (o transcurrir 12 horas desde su hora principal si sigue pendiente), se habilita la siguiente. Elige un ganador y una opción de victoria por combate en **Pick’em**, con una pelea por fila, foto, récord y nacionalidad. Como invitado puedes preparar picks en este navegador. Para competir, inicia sesión y pulsa **Guardar pronósticos**. Las elecciones de invitado se pueden recuperar explícitamente antes del cierre; no se importan automáticamente ni se aceptan después de cerrar.
+
+- **Cuenta atrás:** tiempo hasta el cierre, actualizado cada segundo con la referencia del servidor. Al llegar a cero se bloquean las elecciones; el servidor valida también el plazo al guardar.
+- **Puntuación:** victoria general acertada, **100 puntos**; ganador y método exactos (**KO/TKO, sumisión o decisión**), **350 puntos en total**. Una única opción por combate. Si falla el ganador o el método elegido, suma 0. Empates, no contest y cancelaciones son neutrales y no cuentan como acierto ni error. Los picks antiguos se conservan como victorias generales. Si falta un método oficial necesario para resolver un pick, queda pendiente.
+- **Ranking histórico, de la velada seleccionada y de la pasada:** suma de los puntos de las veladas finalizadas. También hay clasificación por evento. Se muestran veladas jugadas, aciertos y eventos pendientes; no hay mínimo de participación. Los usuarios con los mismos puntos comparten posición. Los participantes sin resultados aparecen pendientes, sin posición. Tu posición, puntos, aciertos y veladas aparecen en un resumen personal, aunque tu fila esté en otra página. Puedes localizarla con «Ver mi posición en la tabla»; la identificación procede de la sesión, no del nombre público.
+- **Cierre:** validado por el reloj del servidor al inicio del primer bloque oficial; sin horarios completos, cuatro horas antes de la principal. Una vez cerrada, la velada no se reabre automáticamente. Los cambios de rival previos al cierre requieren revisar y guardar los picks; reemplazos posteriores quedan fuera de la puntuación.
+- **Resultados:** resumen de puntos, aciertos, fallos y pendientes en las veladas en las que participaste. Los picks acertados se marcan en verde, los fallados en rojo y los empates, anulados o descalificaciones en gris. La puntuación propia es provisional mientras falten resultados. Solo se incorpora al ranking cuando el evento está finalizado y todos sus combates válidos están resueltos. Cada lectura recalcula desde los resultados publicados, sin llamadas a Cito u otros proveedores ni sumar puntos dos veces. Las correcciones de resultados se reflejan mientras el evento siga presente en el feed.
+- **Persistencia:** tablas `pickem_profiles`, `pickem_events` y `pickem_entries` en la misma SQLite persistente de las cuentas. Conservan el historial cuando el feed cambia de año; las copias de seguridad deben incluir esa base. El ranking muestra el nombre de usuario de la cuenta, sin alias adicional. Las cuentas antiguas que acceden con correo conservan un nombre público seguro para no exponer su dirección. Los picks de otros usuarios no se publican.
+- **Concurrencia:** control de versión por usuario/velada, sesión y CSRF obligatorios al guardar. Si otro dispositivo guardó antes, se rechaza la versión antigua. «Recargar pronósticos guardados» descarta el borrador y recupera lo guardado en la cuenta.
+
+Es un juego de pronósticos sin apuestas ni premios. No utiliza cuotas ni APIs adicionales. Los resultados se actualizan al ritmo de las automatizaciones de datos existentes, no en directo.
 
 ## De dónde salen los datos
 
@@ -98,7 +122,7 @@ Las pruebas automáticas simulan fallos del proveedor, resultados incompletos y 
 
 ## Estado de validación
 
-Documentación revisada a **23 de octubre de 2026**. El estado distingue funciones implementadas de verificaciones reales todavía pendientes:
+Documentación revisada a **25 de octubre de 2026**. El estado distingue funciones implementadas de verificaciones reales todavía pendientes:
 
 | Automatización | Estado | Qué falta comprobar |
 | --- | --- | --- |
@@ -163,7 +187,8 @@ Las claves de los proveedores se configuran en el entorno de las automatizacione
 | `assets/css/` y `assets/js/` | Estilos, navegación, vistas e interacciones. |
 | `assets/data/` | Copias publicadas de eventos, rankings, rumores y datos de luchadores. |
 | `assets/images/` | Recursos gráficos y fotografías. |
-| `server.py` | Servidor web y API de cuentas y seguimiento. |
+| `server.py` | Servidor web y API de cuentas, seguimiento y Pick’em. |
+| `pickem.py` | Pronósticos, cierre, cálculo de puntos e historial del ranking. |
 | `scripts/` | Importadores y tareas de sincronización. |
 | `.github/workflows/` | Ejecución de las automatizaciones y sus comprobaciones. |
 | `tests/` | Pruebas de datos, interfaz y servidor. |
@@ -173,17 +198,3 @@ Las claves de los proveedores se configuran en el entorno de las automatizacione
 Para profundizar: [datos y procedencia](docs/DATOS.md), [APIs y eventos](docs/API.md), [récords y estadísticas](docs/FIGHTER_RECORDS.md), [cuentas](docs/CUENTAS.md) y [publicación](docs/PUBLICACION.md).
 
 Si detectas un dato incorrecto o un fallo, puedes [abrir una incidencia](https://github.com/bryancubeles7e9-ai/UFCinfo/issues) indicando la sección, el luchador o evento afectado y, si es posible, una fuente o los pasos para reproducirlo.
-
-### Pick’em y ranking por puntos
-
-Solo se admiten pronósticos para el **próximo evento**; el servidor rechaza los de veladas posteriores y el historial queda en modo consulta. Al finalizar la velada actual (o transcurrir 12 horas desde su hora principal si sigue pendiente), se habilita la siguiente. Elige un ganador y una opción de victoria por combate en **Pick’em**, con una pelea por fila, foto, récord y nacionalidad. Como invitado puedes preparar picks en este navegador. Para competir, inicia sesión y pulsa **Guardar pronósticos**. Las elecciones de invitado se pueden recuperar explícitamente antes del cierre; no se importan automáticamente ni se aceptan después de cerrar.
-
-- **Cuenta atrás:** tiempo hasta el cierre, actualizado cada segundo con la referencia del servidor. Al llegar a cero se bloquean las elecciones; el servidor valida también el plazo al guardar.
-- **Puntuación:** victoria general acertada, **100 puntos**; ganador y método exactos (**KO/TKO, sumisión o decisión**), **350 puntos en total**. Una única opción por combate. Si falla el ganador o el método elegido, suma 0. Empates, no contest y cancelaciones son neutrales y no cuentan como acierto ni error. Los picks antiguos se conservan como victorias generales. Si falta un método oficial necesario para resolver un pick, queda pendiente.
-- **Ranking histórico, de la velada seleccionada y de la pasada:** suma de los puntos de las veladas finalizadas. También hay clasificación por evento. Se muestran veladas jugadas, aciertos y eventos pendientes; no hay mínimo de participación. Los usuarios con los mismos puntos comparten posición. Los participantes sin resultados aparecen pendientes, sin posición. Tu posición, puntos, aciertos y veladas aparecen en un resumen personal, aunque tu fila esté en otra página. Puedes localizarla con «Ver mi posición en la tabla»; la identificación procede de la sesión, no del nombre público.
-- **Cierre:** validado por el reloj del servidor al inicio del primer bloque oficial; sin horarios completos, cuatro horas antes de la principal. Una vez cerrada, la velada no se reabre automáticamente. Los cambios de rival previos al cierre requieren revisar y guardar los picks; reemplazos posteriores quedan fuera de la puntuación.
-- **Resultados:** puntuación propia provisional mientras falten resultados. Solo se incorpora al ranking cuando el evento está finalizado y todos sus combates válidos están resueltos. Cada lectura recalcula desde los resultados publicados, sin llamadas a Cito u otros proveedores ni sumar puntos dos veces. Las correcciones de resultados se reflejan mientras el evento siga presente en el feed.
-- **Persistencia:** tablas `pickem_profiles`, `pickem_events` y `pickem_entries` en la misma SQLite persistente de las cuentas. Conservan el historial cuando el feed cambia de año; las copias de seguridad deben incluir esa base. El ranking muestra el nombre de usuario de la cuenta, sin alias adicional. Las cuentas antiguas que acceden con correo conservan un nombre público seguro para no exponer su dirección. Los picks de otros usuarios no se publican.
-- **Concurrencia:** control de versión por usuario/velada, sesión y CSRF obligatorios al guardar. Si otro dispositivo guardó antes, se rechaza la versión antigua. «Recargar pronósticos guardados» descarta el borrador y recupera lo guardado en la cuenta.
-
-Es un juego de pronósticos sin apuestas ni premios. No utiliza cuotas ni APIs adicionales. Los resultados se actualizan al ritmo de las automatizaciones de datos existentes, no en directo.
