@@ -9,3 +9,9 @@
 .pickem-fighter{cursor:default}.pickem-methods{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;width:100%;margin-top:auto}.pickem-method{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 8px;min-height:44px;padding:10px;border:1px solid var(--border,#555);border-radius:8px;background:transparent;color:inherit;font:inherit;font-size:.85rem;text-align:left;cursor:pointer}.pickem-method small{white-space:nowrap}.pickem-method.is-picked{border-color:#f4512a;background:rgba(244,81,42,.18)}.pickem-method:focus-visible{outline:3px solid #f4512a;outline-offset:2px}.pickem-method:disabled{cursor:default;opacity:.8}.pickem-choice.is-picked .pickem-method:not(.is-picked) small{color:inherit;font-weight:400}
 
 .pickem-bout.has-result{border-width:2px;border-color:var(--pickem-result-border)}.pickem-bout.result-correct{--pickem-result-border:#22c55e}.pickem-bout.result-wrong{--pickem-result-border:#ef4444}.pickem-bout.result-neutral{--pickem-result-border:#9ca3af}
+
+@media(min-width:901px){
+  .pickem-methods{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .pickem-methods .pickem-method{min-width:0;flex-direction:column;justify-content:center;text-align:center}
+  .pickem-methods .pickem-method[data-pick-method="general"]{grid-column:1 / -1;flex-direction:row;gap:12px}
+}

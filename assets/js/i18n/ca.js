@@ -1,5 +1,6 @@
 // Catalan interface copy keyed by the original Spanish phrases.
 export const catalan = {
+  "Victoria sin especificar": "Victòria sense especificar",
   "Elige un luchador y una de sus cuatro opciones por combate. Inicia sesión y guarda antes del cierre.": "Tria un lluitador i una de les seves quatre opcions per combat. Inicia sessió i desa abans del tancament.",
   "Victoria general: 100 puntos. Ganador y método exactos: 350 puntos. El ranking suma los puntos de las veladas finalizadas.": "Victòria general: 100 punts. Guanyador i mètode exactes: 350 punts. El rànquing suma els punts de les vetllades finalitzades.",
   "100 o 350 puntos por acierto": "100 o 350 punts per encert",
