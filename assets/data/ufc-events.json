@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-10-24T12:01:19.081067+00:00",
+  "synchronizedAt": "2026-10-25T07:01:08.403220+00:00",
   "events": [
     {
       "id": "ufc-335",
@@ -238,181 +238,237 @@
       "dataSource": "UFCalendar",
       "scheduleSource": "https://www.ufc.com/event/ufc-334",
       "scheduleCheckedAt": "2026-10-20T11:44:05.043624+00:00",
-      "citoSlug": "ufc-334"
+      "citoSlug": "ufc-334",
+      "sectionSchedule": {
+        "eventDate": "2026-11-15T02:00:00+00:00",
+        "source": "https://www.ufc.com/event/ufc-334",
+        "checkedAt": "2026-10-25T07:01:12.168470+00:00",
+        "starts": {
+          "main": "2026-11-15T02:00:00+00:00",
+          "prelims": "2026-11-15T00:00:00+00:00",
+          "early-prelims": "2026-11-14T22:00:00+00:00"
+        }
+      }
     },
     {
       "id": "ufc-fight-night-november-07-2026",
       "number": null,
       "eventKind": "fight-night",
       "title": "UFC Fight Night",
-      "subtitle": "Bonfim vs Brady",
+      "subtitle": "Gabriel Bonfim vs Sean Brady",
       "date": "2026-11-08T01:00:00+00:00",
-      "location": "Meta APEX, Las Vegas United States",
-      "status": "announced",
+      "location": "Meta APEX",
+      "status": "scheduled",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-      "checkedAt": "2026-10-07",
+      "checkedAt": "2026-10-25",
       "bouts": [
         {
+          "section": "main",
           "red": "Gabriel Bonfim",
           "blue": "Sean Brady",
-          "division": "Welterweight Bout",
+          "division": "Welterweight",
           "winner": null,
           "outcome": null,
           "method": "",
           "round": "",
-          "time": "",
-          "section": "main"
+          "time": ""
         },
         {
+          "section": "main",
           "red": "Tatiana Suarez",
           "blue": "Virna Jandiroba",
-          "division": "Women's Strawweight Bout",
+          "division": "Women's Strawweight",
           "winner": null,
           "outcome": null,
           "method": "",
           "round": "",
-          "time": "",
-          "section": "main"
+          "time": ""
         },
         {
+          "section": "main",
           "red": "Davey Grant",
           "blue": "Elijah Smith",
-          "division": "Bantamweight Bout",
+          "division": "Bantamweight",
           "winner": null,
           "outcome": null,
           "method": "",
           "round": "",
-          "time": "",
-          "section": "main"
+          "time": ""
         },
         {
+          "section": "main",
           "red": "Seokhyeon Ko",
           "blue": "Wellington Turman",
-          "division": "Welterweight Bout",
+          "division": "Welterweight",
           "winner": null,
           "outcome": null,
           "method": "",
           "round": "",
-          "time": "",
-          "section": "main"
+          "time": ""
         },
         {
+          "section": "main",
+          "red": "Mantas Kondratavičius",
+          "blue": "Andre Petroski",
+          "division": "Middleweight",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "main",
           "red": "Billy Elekana",
           "blue": "Lucas Fernando",
-          "division": "Light Heavyweight Bout",
+          "division": "Light Heavyweight",
           "winner": null,
           "outcome": null,
           "method": "",
           "round": "",
-          "time": "",
-          "section": "main"
+          "time": ""
         },
         {
-          "red": "Mantas Kondratavičius",
-          "blue": "Wes Schultz",
-          "division": "Middleweight Bout",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": "",
-          "section": "main"
-        },
-        {
+          "section": "prelims",
           "red": "Gabriel Lorenco",
           "blue": "Alvin Hines",
-          "division": "Heavyweight Bout",
+          "division": "Heavyweight",
           "winner": null,
           "outcome": null,
           "method": "",
           "round": "",
-          "time": "",
-          "section": "prelims"
+          "time": ""
         },
         {
+          "section": "prelims",
           "red": "Karine Silva",
           "blue": "Gabriella Fernandes",
-          "division": "Women's Flyweight Bout",
+          "division": "Women's Flyweight",
           "winner": null,
           "outcome": null,
           "method": "",
           "round": "",
-          "time": "",
-          "section": "prelims"
+          "time": ""
         },
         {
+          "section": "prelims",
           "red": "Jose Delano",
           "blue": "Murtazali Magomedov",
-          "division": "Featherweight Bout",
+          "division": "Featherweight",
           "winner": null,
           "outcome": null,
           "method": "",
           "round": "",
-          "time": "",
-          "section": "prelims"
+          "time": ""
         },
         {
+          "section": "prelims",
           "red": "Keiichiro Nakamura",
           "blue": "Ollie Schmid",
-          "division": "Featherweight Bout",
+          "division": "Featherweight",
           "winner": null,
           "outcome": null,
           "method": "",
           "round": "",
-          "time": "",
-          "section": "prelims"
+          "time": ""
         },
         {
+          "section": "prelims",
           "red": "Austin Bashi",
           "blue": "Lucas Brennan",
-          "division": "Featherweight Bout",
+          "division": "Featherweight",
           "winner": null,
           "outcome": null,
           "method": "",
           "round": "",
-          "time": "",
-          "section": "prelims"
+          "time": ""
         },
         {
+          "section": "prelims",
           "red": "Priscila Cachoeira",
           "blue": "Nina Milošević",
-          "division": "Women's Bantamweight Bout",
+          "division": "Women's Bantamweight",
           "winner": null,
           "outcome": null,
           "method": "",
           "round": "",
-          "time": "",
-          "section": "prelims"
+          "time": ""
         },
         {
+          "section": "prelims",
           "red": "Jonny Parsons",
           "blue": "José Souza",
-          "division": "Welterweight Bout",
+          "division": "Welterweight",
           "winner": null,
           "outcome": null,
           "method": "",
           "round": "",
-          "time": "",
-          "section": "prelims"
+          "time": ""
         }
       ],
       "poster": "assets/images/events/ufc-fight-night-november-07-2026.jpg",
       "posterAlt": "UFC welterweights Gabriel Bonfim and Sean Brady side by side over a red and black background",
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/110726-ufc-fight-night-bonfim-vs-brady-TEMP-HERO.jpg?h=d1cb525d&itok=vmUARwy5",
-      "dataSource": "UFCalendar",
+      "dataSource": "Cito",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
       "scheduleCheckedAt": "2026-10-20T11:44:05.063105+00:00",
       "citoSlug": "ufc-fight-night-november-07-2026",
       "sectionSchedule": {
         "eventDate": "2026-11-08T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-        "checkedAt": "2026-10-24T12:01:22.307772+00:00",
+        "checkedAt": "2026-10-25T07:01:12.168470+00:00",
         "starts": {
           "main": "2026-11-08T01:00:00+00:00",
           "prelims": "2026-11-07T22:00:00+00:00"
         }
-      }
+      },
+      "cardChanges": [
+        {
+          "kind": "replaced",
+          "checkedAt": "2026-10-25T07:01:08.403220+00:00",
+          "source": "Cito",
+          "bout": {
+            "red": "Mantas Kondratavičius",
+            "blue": "Wes Schultz",
+            "division": "Middleweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": "",
+            "section": "main"
+          },
+          "replacement": {
+            "section": "main",
+            "red": "Mantas Kondratavičius",
+            "blue": "Andre Petroski",
+            "division": "Middleweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-10-25T07:01:08.403220+00:00",
+          "source": "Cito",
+          "bout": {
+            "section": "main",
+            "red": "Mantas Kondratavičius",
+            "blue": "Andre Petroski",
+            "division": "Middleweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        }
+      ],
+      "pendingBoutRemovals": {}
     },
     {
       "id": "ufc-fight-night-october-31-2026",
@@ -425,7 +481,7 @@
       "location": "Meta APEX",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
-      "checkedAt": "2026-10-24",
+      "checkedAt": "2026-10-25",
       "bouts": [
         {
           "section": "main",
@@ -713,166 +769,177 @@
       "eventKind": "numbered",
       "title": "UFC 333",
       "subtitle": "Alexander Volkanovski vs Movsar Evloev",
-      "status": "scheduled",
+      "status": "completed",
       "date": "2026-10-24T18:00:00+00:00",
       "location": "Etihad Arena",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-333",
-      "checkedAt": "2026-10-24",
+      "checkedAt": "2026-10-25",
       "bouts": [
         {
-          "section": "main",
           "red": "Alexander Volkanovski",
           "blue": "Movsar Evloev",
-          "division": "Featherweight Title",
-          "winner": null,
+          "section": "main",
+          "division": "Featherweight Title Bout",
+          "winner": "Alexander Volkanovski",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "4:54"
         },
         {
-          "section": "main",
           "red": "Petr Yan",
           "blue": "Merab Dvalishvili",
-          "division": "Bantamweight Title",
-          "winner": null,
+          "section": "main",
+          "division": "Bantamweight Title Bout",
+          "winner": "Petr Yan",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "5",
+          "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Lone’er Kavanagh",
           "blue": "Ramazan Temirov",
-          "division": "Flyweight",
-          "winner": null,
+          "section": "main",
+          "division": "Flyweight Bout",
+          "winner": "Lone’er Kavanagh",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "4:28"
         },
         {
-          "section": "main",
           "red": "Alexander Volkov",
           "blue": "Rizvan Kuniev",
-          "division": "Heavyweight",
-          "winner": null,
+          "section": "main",
+          "division": "Heavyweight Bout",
+          "winner": "Alexander Volkov",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Aaron Pico",
+          "blue": "Losene Keita",
+          "section": "main",
+          "division": "Featherweight Bout",
+          "winner": "Aaron Pico",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "1:14"
         },
         {
           "section": "main",
-          "red": "Aaron Pico",
-          "blue": "Losene Keita",
-          "division": "Featherweight",
-          "winner": null,
+          "red": "Lone'er Kavanagh",
+          "blue": "Ramazan Temirov",
+          "division": "Flyweight",
+          "winner": "Lone'er Kavanagh",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "4:28"
         },
         {
-          "section": "prelims",
           "red": "Azamat Murzakanov",
           "blue": "Dominick Reyes",
-          "division": "Light Heavyweight",
-          "winner": null,
+          "section": "prelims",
+          "division": "Light Heavyweight Bout",
+          "winner": "Dominick Reyes",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "2:40"
         },
         {
-          "section": "prelims",
           "red": "Nikita Krylov",
           "blue": "Abdul Rakhman Yakhyaev",
-          "division": "Light Heavyweight",
-          "winner": null,
+          "section": "prelims",
+          "division": "Light Heavyweight Bout",
+          "winner": "Abdul Rakhman Yakhyaev",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "2:38"
         },
         {
-          "section": "prelims",
           "red": "Abus Magomedov",
           "blue": "Cam Rowston",
-          "division": "Middleweight",
-          "winner": null,
+          "section": "prelims",
+          "division": "Middleweight Bout",
+          "winner": "Abus Magomedov",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Submission",
+          "round": "1",
+          "time": "1:44"
         },
         {
-          "section": "prelims",
           "red": "Grant Dawson",
           "blue": "Nurullo Aliev",
-          "division": "Lightweight",
-          "winner": null,
+          "section": "prelims",
+          "division": "Lightweight Bout",
+          "winner": "Grant Dawson",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Abubakar Vagaev",
+          "blue": "Jacob Malkoun",
+          "section": "early-prelims",
+          "division": "Middleweight Bout",
+          "winner": "Abubakar Vagaev",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Bolaji Oki",
+          "blue": "Daniel Santos",
+          "section": "early-prelims",
+          "division": "Featherweight Bout",
+          "winner": "Daniel Santos",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Kody Steele",
+          "blue": "Noah Gugnon",
+          "section": "early-prelims",
+          "division": "Lightweight Bout",
+          "winner": "Kody Steele",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "3:54"
+        },
+        {
+          "red": "Iasmin Lucindo",
+          "blue": "Nicolle Caliari",
+          "section": "early-prelims",
+          "division": "Women's Strawweight Bout",
+          "winner": "Iasmin Lucindo",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
           "section": "early-prelims",
           "red": "Colby Thicknesse",
           "blue": "Asaf Chopurov",
           "division": "Bantamweight",
-          "winner": null,
+          "winner": "Colby Thicknesse",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "section": "early-prelims",
-          "red": "Abubakar Vagaev",
-          "blue": "Jacob Malkoun",
-          "division": "Middleweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "section": "early-prelims",
-          "red": "Bolaji Oki",
-          "blue": "Daniel Santos",
-          "division": "Featherweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "section": "early-prelims",
-          "red": "Kody Steele",
-          "blue": "Noah Gugnon",
-          "division": "Lightweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "section": "early-prelims",
-          "red": "Iasmin Lucindo",
-          "blue": "Nicolle Caliari",
-          "division": "Women's Strawweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Split",
+          "round": "3",
+          "time": "5:00"
         }
       ],
       "dataSource": "Cito",
@@ -880,7 +947,6 @@
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/102426-ufc-333-volkanovski-vs-evloev-EVENT-ART.jpg?h=d1cb525d&itok=ceS_oo8W",
       "posterAlt": "UFC featherweight champion Alexander Volkanovski and Movsar Evloev side by side over a black and gold background",
       "citoSlug": "ufc-333",
-      "pendingBoutRemovals": {},
       "sectionSchedule": {
         "eventDate": "2026-10-24T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-333",
@@ -890,7 +956,9 @@
           "prelims": "2026-10-24T16:00:00+00:00",
           "early-prelims": "2026-10-24T14:00:00+00:00"
         }
-      }
+      },
+      "resultsSource": "https://www.ufc.com/event/ufc-333",
+      "resultsCheckedAt": "2026-10-25T07:01:11.853563+00:00"
     },
     {
       "id": "ufc-fight-night-october-17-2026",
@@ -903,7 +971,7 @@
       "location": "Rogers Place",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "checkedAt": "2026-10-24",
+      "checkedAt": "2026-10-25",
       "bouts": [
         {
           "red": "Joaquin Buckley",
@@ -1054,7 +1122,7 @@
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-10/101726-ufc-fight-night-buckey-vs-malott-EVENT-ART.jpg?h=d1cb525d&itok=9nlcHO-H",
       "posterAlt": "Joaquin Buckley and Mike Malott side by side over a blue and red background",
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-17-2026",
-      "resultsCheckedAt": "2026-10-24T12:01:21.934051+00:00",
+      "resultsCheckedAt": "2026-10-25T07:01:11.853563+00:00",
       "citoSlug": "ufc-fight-night-october-17-2026"
     },
     {
@@ -6628,15 +6696,15 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-10-24T12:01:21.934051+00:00",
+    "checkedAt": "2026-10-25T07:01:11.853563+00:00",
     "verifiedIds": [
-      "ufc-fight-night-october-17-2026",
-      "ufc-fight-night-october-10-2026"
+      "ufc-333",
+      "ufc-fight-night-october-17-2026"
     ],
     "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-10-24T12:01:22.307772+00:00",
+    "checkedAt": "2026-10-25T07:01:12.168470+00:00",
     "failedIds": [
       "ufc-fight-night-october-31-2026"
     ]
