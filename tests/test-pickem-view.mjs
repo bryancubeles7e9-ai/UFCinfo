@@ -14,10 +14,13 @@ const state = {serverTime:Date.now(),authenticated:true,alias:'Tester',nextEvent
  {event:past,joined:true,closed:true,closesAt:1,picks:{[pickKey(bout)]:'A'},revision:1,result:{score:100,correct:1,total:1,final:true,void:false}}
 ]};
 const requests=[];
-let submitted=null; let board={rows:[],total:0};
+let submitted=null; let board={rows:[],total:0}; let saveFails=false;
 globalThis.fetch = async (url,options)=>{
  requests.push(url);
- if(url.endsWith('/me/pickem'))submitted=JSON.parse(options.body);
+ if(url.endsWith('/me/pickem')){
+  submitted=JSON.parse(options.body);
+  if(saveFails)return new Response(JSON.stringify({error:'Save failed'}),{status:500,headers:{'Content-Type':'application/json'}});
+ }
  return new Response(JSON.stringify(url.includes('ranking')?board:url.endsWith('/auth/session')?{user:{username:'Tester'},csrf:'fake'}:state),{headers:{'Content-Type':'application/json'}});
 };
 const {initializePickem} = await import('../assets/js/pickem.js');
@@ -52,7 +55,21 @@ assert.ok(!root.innerHTML.includes('data-pick-method="general" aria-pressed="tru
 assert.ok(root.innerHTML.includes('Cambios sin guardar'));
 console.log('PASS Pick’em method selection: four options per fighter, one selection per bout');
 
+saveFails=true;
 await listeners.click({target:{closest:selector=>selector==='#pickem-save'?{}:null}});
+assert.ok(!root.innerHTML.includes('class="action-confirmation"'),'A failed save must not show a success check');
+assert.ok(root.innerHTML.includes('data-pick-method="ko" aria-pressed="true"'),'Failed save preserves the draft');
+saveFails=false;
+await listeners.click({target:{closest:selector=>selector==='#pickem-save'?{}:null}});
+assert.ok(root.innerHTML.includes('class="action-confirmation"'),'A confirmed save shows its check');
+const feedbackNow=Date.now;
+try {
+ const later=feedbackNow()+1000;Date.now=()=>later;app.render();
+ assert.ok(root.innerHTML.includes('--check-delay:-360ms'),'A ranking rerender must not restart the check drawing');
+} finally {Date.now=feedbackNow;}
+listeners.click({target:{closest:selector=>selector==='[data-pick-bout]'?methodButton:null}});
+assert.ok(!root.innerHTML.includes('class="action-confirmation"'),'A new edit clears the saved confirmation');
+console.log('PASS save feedback: confirmed response only, no check on failure, draft preserved, no animation replay and reset on edit');
 assert.deepEqual(submitted.picks[pickKey(bout)],{winner:'A',method:'ko'});
 assert.equal(submitted.eventId,'next');
 assert.equal(submitted.revision,0);

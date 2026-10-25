@@ -235,3 +235,16 @@ main{max-width:var(--max);padding-bottom:64px}
 
 .bout-share-status{font-size:11px;color:var(--ink)}
 .bout-share-notice{margin:16px 0;padding:12px;border-left:2px solid var(--accent);background:var(--surface-2);font-size:13px}
+
+/* Confirmations remain readable without motion, including clipboard fallback. */
+.action-confirmation{flex:none;vertical-align:middle;color:currentColor}
+.action-check-stroke{stroke-dasharray:1;stroke-dashoffset:0}
+#pickem-save-status{display:flex;align-items:center;gap:7px}
+#pickem-save-status.is-confirmed{color:var(--ink)}
+.bout-share-button>.action-confirmation{display:none;width:16px;height:16px}
+.bout-share-button.is-confirmed>.share-link-icon{display:none}
+.bout-share-button.is-confirmed>.action-confirmation{display:block}
+@media(prefers-reduced-motion:no-preference){
+ .is-confirmed .action-check-stroke{animation:action-check-draw 360ms ease-out both;animation-delay:var(--check-delay,0ms)}
+}
+@keyframes action-check-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
