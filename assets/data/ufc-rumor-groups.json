@@ -1,8 +1,39 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T17:01:04.285Z",
-  "lastSearchedAt": "2026-10-26T17:01:04.285Z",
+  "updatedAt": "2026-10-26T18:00:58.885Z",
+  "lastSearchedAt": "2026-10-26T18:00:58.885Z",
   "groups": [
+    {
+      "id": "2114774345948012633",
+      "fighterNames": [
+        "Alexander Volkanovski",
+        "Justin Gaethje"
+      ],
+      "matchupKey": "alexandervolkanovski|justingaethje|undated:2026-10",
+      "eventDateHint": null,
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "Álvaro Colmenero comenta un posible cruce entre Alexander Volkanovski y Justin Gaethje, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Álvaro Colmenero discusses a possible matchup between Alexander Volkanovski and Justin Gaethje, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-26T18:00:58.885Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-26T17:41:09.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2114774345948012633",
+          "sourceId": "kolmenero",
+          "postUrl": "https://x.com/KOlmeneroMMA/status/2114774345948012633",
+          "publishedAt": "2026-10-26T17:41:09.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2112861333578522824",
       "fighterNames": [
@@ -643,8 +674,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-26T17:01:04.285Z",
-    "receivedPosts": 6,
-    "added": 0
+    "checkedAt": "2026-10-26T18:00:58.885Z",
+    "receivedPosts": 7,
+    "added": 1
   }
 }
