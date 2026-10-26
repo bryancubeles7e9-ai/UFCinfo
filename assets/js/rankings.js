@@ -1,3 +1,4 @@
+import { enterRankings } from "./showcase-motion.js";
 import { synchronizeChampionships } from "./fighter-championships.js";
 import { getLocale } from "./i18n.js";
 import { directoryFighterByName, fighterNameLink } from "./fighter-directory.js";
@@ -631,7 +632,8 @@ export function initializeRankings() {
     $("#ranking-table").hidden = !rows.length && !showChampion;
     $("#ranking-empty").hidden = rows.length > 0 || Boolean(showChampion);
   }
-  $("#ranking-category").addEventListener("change", render);
+  const animate = () => enterRankings($("#ranking-table"), $("#ranking-leader"));
+  $("#ranking-category").addEventListener("change", () => { render(); animate(); });
   $("#ranking-search").addEventListener("input", render);
   $("#ranking-local-only").addEventListener("change", render);
   $("#ranking-clear").addEventListener("click", () => {
@@ -649,4 +651,5 @@ export function initializeRankings() {
   document.addEventListener("visibilitychange", () => {
     if (!document.hidden) update();
   });
+  return { animate };
 }

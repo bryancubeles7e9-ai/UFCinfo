@@ -4,6 +4,7 @@ import {enterEventBouts, pulseSharedBout, transitionEventList} from './event-mot
 import {boutShareKey, boutShareUrl, parseBoutLink, resolveBoutLink} from './bout-links.js';
 import {renderHomeHero} from './home-hero.js';
 import {countProfileFigures} from './profile-figures.js';
+import {enterHomeHero, tickCountdown} from './showcase-motion.js';
 import { initializePickem } from './pickem.js';
 import { renderBoutTime, scheduleExplanation } from './bout-schedule.js';
 import { compactFighterRow, fighterProfile } from './fighter-presentation.js';
@@ -60,7 +61,7 @@ let account = null;
 let eventFeedReady = false, pendingBoutLink = null;
 let catalogView = 'compact';
 try { catalogView = localStorage.getItem('ufcinfo-catalog-view') === 'cards' ? 'cards' : 'compact'; } catch {}
-initializeRankings();
+const rankings = initializeRankings();
 let eventFilter = "upcoming",
   eventKindFilter = "all",
   onlyFollowingEvents = false,
@@ -267,12 +268,21 @@ function renderFighters() {
     ? page.items.map((f) => catalogView === 'compact' ? compactFighterRow(f, followButton(f, true)) : f.supplemental ? additionalFighterCard(f) : fighterCard(f)).join("")
     : empty("Ningún luchador coincide. Prueba otros filtros.");
 }
+let homeHeroHtml = '';
 function renderHomeBanner() {
   const upcoming = availableOfficialEvents().filter(e => isUpcomingEvent(e) && !isAwaitingResults(e))
     .sort((a, b) => (a.status === "live" ? -1 : 0) - (b.status === "live" ? -1 : 0) || Date.parse(a.date) - Date.parse(b.date));
   const event = upcoming[0];
   const banner = $("#home-event-banner");
-  banner.innerHTML = renderHomeHero(event, {note:feedNote()});
+  const html = renderHomeHero(event, {note:feedNote()});
+  if (html === homeHeroHtml) return; // Identical re-renders would cut the entrance short.
+  homeHeroHtml = html;
+  const entering = banner.getAnimations?.({subtree:true}).length > 0;
+  banner.innerHTML = html;
+  // Play the entrance for a new main event (or resume one cut by this render), not on periodic refreshes.
+  const heroKey = event ? `${event.id}|${event.poster || ''}` : '';
+  if (entering || banner.dataset.heroKey !== heroKey) enterHomeHero(banner);
+  banner.dataset.heroKey = heroKey;
 }
 function renderEvents({animate = false} = {}) {
   renderHomeBanner();
@@ -363,7 +373,8 @@ function showProfile(id, {animate = false} = {}) {
 function updateCountdowns() {
   document.querySelectorAll("[data-official-countdown]").forEach(element => {
     const time = countdown(element.dataset.officialCountdown);
-    element.innerHTML = time.ended ? "<span class='ended-label'>Evento en curso · Pendiente de actualización</span>" : `<span>${time.days}<small>DÍAS</small></span><b>:</b><span>${time.hours}<small>HORAS</small></span><b>:</b><span>${time.minutes}<small>MIN</small></span>`;
+    element.innerHTML = time.ended ? "<span class='ended-label'>Evento en curso · Pendiente de actualización</span>" : `<span><span class="countdown-digits">${time.days}</span><small>DÍAS</small></span><b>:</b><span><span class="countdown-digits">${time.hours}</span><small>HORAS</small></span><b>:</b><span><span class="countdown-digits">${time.minutes}</span><small>MIN</small></span>`;
+    if (!time.ended) tickCountdown(element, [time.days, time.hours, time.minutes]);
   });
 }
 function navigate() {
@@ -392,6 +403,8 @@ function navigate() {
   document.title = view === "inicio" ? "UFCinfo — Carteleras UFC, luchadores y rankings MMA" : `${{ eventos: "Carteleras", luchadores: "Luchadores", rankings: "Rankings", laboratorio: "Fight Lab", pickem: "Pick’em", guardados: "Mi esquina", rumores: "Rumores" }[view]} — UFCinfo`;
   window.scrollTo({ top: 0, behavior: "instant" });
   if (view === 'laboratorio') lab.animate();
+  if (view === 'inicio') enterHomeHero($("#home-event-banner"));
+  if (view === 'rankings') rankings.animate();
   pendingBoutLink = parseBoutLink(location.hash);
   openPendingBoutLink();
 }
