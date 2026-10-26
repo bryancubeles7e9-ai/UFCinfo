@@ -1,9 +1,13 @@
 {
   "schemaVersion": 1,
   "reservedCredits": 234900,
-  "estimatedCredits": 69480,
+  "estimatedCredits": 69570,
   "lastSuccessAt": "2026-10-26T10:01:00.886Z",
-  "pending": null,
+  "pending": {
+    "query": "(from:CCLegaspi OR from:KOlmeneroMMA OR from:ericaiexander OR from:MMASINLIMITES OR from:ClubDeLasMMA OR from:upfrontmma OR from:pelunaton OR from:ChampRDS OR from:alphasigmawolf6) (fight OR pelea OR combate OR vs OR rematch OR revancha OR rumor OR targeted OR targeting OR possible OR potential OR rumored OR booked OR scheduled OR matchup OR talks OR posible OR agreed OR bout OR versus) -filter:retweets -filter:replies since_time:1792926066 until_time:1793012466",
+    "cursor": "DAADDAABCgABHViHAPmWgRsKAAIdV5ggnxbhOwAIAAIAAAACCAADAAAAAAgABAAAAAAKAAUdWNSB6cAnEAoABh1Y1IHpv9jwCwAHAAAAXEVtUEM2d0FBQWZRL2dHSk4wdkdwL0FBQUFBWWRWLy9uRXRzaFJCMVg0NEJJMWhHOUhWZ1EvKzVhd01rZFY1Z2dueGJoT3gxWHRTdmwxMkNDSFZpSEFQbVdnUnM9AAA",
+    "until": "2026-10-26T11:01:06.024Z"
+  },
   "archive": [],
   "lastCollection": {
     "checkedAt": "2026-10-26T10:01:00.886Z",
