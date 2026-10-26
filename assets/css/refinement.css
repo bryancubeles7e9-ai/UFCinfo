@@ -116,3 +116,4 @@
  .profile-section:not([hidden]) { animation:profile-section-in 180ms ease-out; }
  @keyframes profile-section-in { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:none; } }
 }
+.extended-fighter-info dd { font-variant-numeric:tabular-nums; }

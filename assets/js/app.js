@@ -3,6 +3,7 @@ import {confirmationIcon, confirmCopy, resetCopyConfirmation, highlightSection} 
 import {enterEventBouts, pulseSharedBout, transitionEventList} from './event-motion.js';
 import {boutShareKey, boutShareUrl, parseBoutLink, resolveBoutLink} from './bout-links.js';
 import {renderHomeHero} from './home-hero.js';
+import {countProfileFigures} from './profile-figures.js';
 import { initializePickem } from './pickem.js';
 import { renderBoutTime, scheduleExplanation } from './bout-schedule.js';
 import { compactFighterRow, fighterProfile } from './fighter-presentation.js';
@@ -348,7 +349,7 @@ function renderAll() {
   const officialId = $("#event-detail").dataset.officialEventId;
   if ($("#event-dialog").open && officialId) showOfficialEvent(officialId);
 }
-function showProfile(id) {
+function showProfile(id, {animate = false} = {}) {
   const fighter = directoryFighterById(id);
   if (!fighter) return;
   const detail = $("#fighter-detail");
@@ -357,6 +358,7 @@ function showProfile(id) {
   detail.dataset.section = active;
   detail.innerHTML = fighterProfile(fighter, {follow: followButton(fighter), events: eventsFeed.events, active});
   if (!$("#fighter-dialog").open) $("#fighter-dialog").showModal();
+  if (animate) countProfileFigures(detail); // Data refreshes re-render silently.
 }
 function updateCountdowns() {
   document.querySelectorAll("[data-official-countdown]").forEach(element => {
@@ -463,7 +465,7 @@ document.addEventListener("click", (event) => {
   }
   const profile = event.target.closest("[data-profile]");
   if (profile) {
-    showProfile(profile.dataset.profile);
+    showProfile(profile.dataset.profile, {animate: true});
     return;
   }
   const comparison = event.target.closest("[data-compare]");
@@ -523,6 +525,7 @@ $("#fighter-detail").addEventListener('click', event => {
   $("#fighter-detail").dataset.section = section;
   document.querySelectorAll('[data-profile-section]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
   for (const name of ['summary', 'statistics', 'history']) $("#fighter-panel-" + name).hidden = name !== section;
+  if (section === 'statistics') countProfileFigures($("#fighter-panel-statistics"));
 });
 $("#fighter-load-more").addEventListener("click", () => {
   const previousCount = $("#fighter-list").children.length;

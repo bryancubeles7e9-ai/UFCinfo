@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {canCountFigure, figureFrame} from '../assets/js/profile-figures.js';
+for (const text of ['27-1-0', '180 cm', '61,5 %', '4.12', '77 kg', '3']) assert.ok(canCountFigure(text), text);
+for (const text of ['No indicado', '—', '34 años', '12 de mayo de 2019', 'Not listed', '']) assert.ok(!canCountFigure(text), text);
+assert.equal(figureFrame('27-1-0', 0), '0-0-0');
+assert.equal(figureFrame('180 cm', .5), '90 cm');
+assert.equal(figureFrame('61,5 %', .5), '30,8 %', 'keeps comma decimals');
+assert.equal(figureFrame('4.12', .25), '1.03', 'keeps point decimals');
+assert.equal(figureFrame('61,5 %', 1), '61,5 %', 'ends on the exact published text');
+console.log('PASS: count-up only touches numeric profile figures and keeps their format');
