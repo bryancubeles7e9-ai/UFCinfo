@@ -62,3 +62,61 @@ export function enterRankings(table, leader) {
     {opacity:1, transform:'none', textShadow:'0 0 0 rgba(222,178,76,0)'}
   ], {duration:900, easing:'ease-out', fill:'backwards'});
 }
+
+// Run once when the node scrolls into view, so off-screen reveals are not wasted.
+export function whenVisible(node, play) {
+  if (typeof IntersectionObserver === 'undefined') return play();
+  const observer = new IntersectionObserver(entries => {
+    if (!entries.some(entry => entry.isIntersecting)) return;
+    observer.disconnect();
+    if (node.isConnected) play();
+  }, {threshold:.25});
+  observer.observe(node);
+}
+
+// Pick’em results: each scored bout lights up as it appears and correct picks float their points.
+export function revealPickResults(cards, gains = []) {
+  let queued = 0, frame = 0;
+  [...cards].forEach((card, index) => {
+    if (card.closest('[hidden]')) return;
+    card.classList.add('is-awaiting-reveal');
+    whenVisible(card, () => {
+      // Cards entering together keep a short cascade.
+      const delay = Math.min(queued++ * 120, 600);
+      if (!frame) frame = requestAnimationFrame(() => { queued = 0; frame = 0; });
+      card.classList.remove('is-awaiting-reveal');
+      revealCard(card, gains[index], delay);
+    });
+  });
+}
+function revealCard(card, gain, delay) {
+  const reveal = animateInterface(card, [
+    {borderColor:'var(--border,#444)', transform:'scale(.985)'},
+    {borderColor:'var(--pickem-result-border)', transform:'scale(1.012)', offset:.6},
+    {borderColor:'var(--pickem-result-border)', transform:'none'}
+  ], {duration:520, delay, easing:'ease-out', fill:'backwards'});
+  if (!reveal || !(gain > 0)) return;
+  const badge = document.createElement('span');
+  badge.className = 'pickem-gain';
+  badge.setAttribute('aria-hidden', 'true');
+  badge.textContent = `+${gain}`;
+  card.append(badge);
+  const float = animateInterface(badge, [
+    {opacity:0, transform:'translateY(8px) scale(.9)'},
+    {opacity:1, transform:'translateY(-6px) scale(1.05)', offset:.3},
+    {opacity:0, transform:'translateY(-30px) scale(1)'}
+  ], {duration:1300, delay:delay + 260, easing:'ease-out', fill:'both'});
+  float?.finished.catch(() => {}).finally(() => badge.remove());
+}
+
+// Pick’em ranking: bring your row into view and give it a short glow.
+export function highlightRankRow(row) {
+  if (!row) return;
+  const reduce = !window.matchMedia?.('(prefers-reduced-motion: no-preference)').matches;
+  row.scrollIntoView({block:'center', behavior: reduce ? 'instant' : 'smooth'});
+  animateInterface(row, [
+    {backgroundColor:'rgba(244,81,42,0)', boxShadow:'inset 3px 0 0 rgba(244,81,42,0)'},
+    {backgroundColor:'rgba(244,81,42,.22)', boxShadow:'inset 3px 0 0 rgba(244,81,42,1)', offset:.3},
+    {backgroundColor:'rgba(244,81,42,0)', boxShadow:'inset 3px 0 0 rgba(244,81,42,0)'}
+  ], {duration:1600, delay:250, easing:'ease-out'});
+}

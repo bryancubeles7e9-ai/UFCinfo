@@ -1,4 +1,4 @@
-// Profile figures count up from zero when a fighter profile opens.
+// Figures count up from zero when a fighter profile or Pick’em results open.
 // Only values made of numbers and untranslated units are animated, so i18n keeps its originals.
 const animatable = /^[\d\s.,%·/-]*\d[\d\s.,%·/-]*(?:\s?(?:cm|kg))?$/;
 const numberPattern = /\d+(?:[.,]\d+)?/g;
@@ -20,9 +20,12 @@ export function figureFrame(text, progress) {
 }
 function easeOut(t) {return 1 - (1 - t) ** 3;}
 
-export function countProfileFigures(root, {duration = 720} = {}) {
+export function countProfileFigures(root, options) {
+  countFigures(root?.querySelectorAll?.('.profile-metrics dd, .extended-fighter-info dd'), options);
+}
+export function countFigures(list, {duration = 720} = {}) {
   if (typeof window === 'undefined' || !window.matchMedia?.('(prefers-reduced-motion: no-preference)').matches) return;
-  const nodes = [...(root?.querySelectorAll?.('.profile-metrics dd, .extended-fighter-info dd') || [])]
+  const nodes = [...(list || [])]
     .filter(node => !node.closest('[hidden]') && node.children.length === 0 && canCountFigure(node.textContent));
   nodes.forEach((node, index) => {
     cancelAnimationFrame(running.get(node));

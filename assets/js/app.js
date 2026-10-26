@@ -405,6 +405,7 @@ function navigate() {
   if (view === 'laboratorio') lab.animate();
   if (view === 'inicio') enterHomeHero($("#home-event-banner"));
   if (view === 'rankings') rankings.animate();
+  if (view === 'pickem') pickem.animate();
   pendingBoutLink = parseBoutLink(location.hash);
   openPendingBoutLink();
 }

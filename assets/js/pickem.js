@@ -1,4 +1,6 @@
 import {confirmationIcon, animatePickChoice} from './action-feedback.js';
+import {revealPickResults, highlightRankRow, whenVisible} from './showcase-motion.js';
+import {countFigures} from './profile-figures.js';
 import {nextPickEvent, closingTime, isClosed, pickKey, picksFor, readPicks, pickResult, pickSummary, selection, pickMethods, pickPoints, resultMethod, countdownText} from './pickem-model.js';
 import {directoryFighterByName} from './fighter-directory.js';
 import {escapeHTML as esc} from './utils.js';
@@ -15,6 +17,7 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
   let local = readPicks(storage), events = [], state = null, selected = '', draft = {}, dirty = false;
   let busy = false, generation = 0, message = '', scope = 'all', page = 1, ranking = null, rankingError = false;
   let serverOffset = 0, rankGeneration = 0, draftRevision = 0, confirmedAt = null;
+  let revealedResults = '', findingMe = false;
   const now = () => Date.now() + serverOffset;
   const date = value => new Date(value).toLocaleString(getLocale(), {dateStyle:'medium', timeStyle:'short'});
   function current() {
@@ -52,7 +55,10 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
   }
   function countdown(event, item) {
     const remaining = countdownText(item?.closesAt || closingTime(event), now());
-    return `<div class="pickem-countdown"><span id="pickem-countdown-label">${closed() || !remaining ? 'Pronósticos cerrados' : 'Tiempo para el cierre'}</span>${!closed() && remaining ? `<output id="pickem-countdown" role="timer" aria-live="off" aria-labelledby="pickem-countdown-label" translate="no">${remaining}</output>` : ''}</div>`;
+    return `<div class="pickem-countdown"><span id="pickem-countdown-label">${closed() || !remaining ? 'Pronósticos cerrados' : 'Tiempo para el cierre'}</span>${!closed() && remaining ? `<output id="pickem-countdown" class="${closingSoon(event,item) ? 'is-closing' : ''}" role="timer" aria-live="off" aria-labelledby="pickem-countdown-label" translate="no">${remaining}</output>` : ''}</div>`;
+  }
+  function closingSoon(event, item) {
+    return (item?.closesAt || closingTime(event)) - now() <= 60000;
   }
   function tickCountdown() {
     const timer = root.querySelector('#pickem-countdown');
@@ -60,6 +66,7 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
     const remaining = countdownText(current()?.closesAt || closingTime(eventData()), now());
     if (closed() || !remaining) { render(); return; }
     timer.textContent = remaining;
+    timer.classList.toggle('is-closing', closingSoon(eventData(), current()));
   }
   function board() {
     return `<section class="panel pickem-ranking"><h2>Ranking Pick’em</h2><p>Victoria general: 100 puntos. Ganador y método exactos: 350 puntos. El ranking suma los puntos de las veladas finalizadas.</p>
@@ -118,6 +125,19 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
           return `<button type="button" class="pickem-method ${active?'is-picked':''}" data-pick-bout="${i}" data-pick-side="${side}" data-pick-method="${method}" aria-pressed="${active}" ${locked||busy||bout._void?'disabled':''}><span>${labels[method]}</span><small>${method==='general'?100:350} <span>puntos</span></small></button>`;
         }).join('')}</div></div>`;
       }).join('')}</div>${boutResult(bout,item)}</fieldset>`).join('')}</div>${board()}`;
+    revealResults(event, item);
+  }
+  // Results play once per event and score while Pick’em is on screen; later re-renders stay still.
+  function revealResults(event = eventData(), item = current()) {
+    const section = root.querySelector('.pickem-results');
+    if (!section || root.closest('[hidden]')) return;
+    const key = `${event.id}|${item.result.score}`;
+    if (key === revealedResults) return;
+    revealedResults = key;
+    whenVisible(section.querySelector('.pickem-result-stats'), () => countFigures(section.querySelectorAll('.pickem-result-stats dd'), {duration:1100}));
+    const scored = event.bouts.map((bout, index) => ({bout, card: root.querySelectorAll('.pickem-bout')[index]}))
+      .filter(({card}) => card?.classList.contains('has-result'));
+    revealPickResults(scored.map(({card}) => card), scored.map(({bout}) => pickResult(bout, item.picks) === 'correct' ? pickPoints(bout, item.picks) : 0));
   }
   async function loadRanking() {
     const ticket=++rankGeneration;
@@ -127,6 +147,7 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
       ranking=data; rankingError=false;
     } catch { if(ticket!==rankGeneration)return; rankingError=true; }
     render();
+    if (findingMe) { findingMe=false; highlightRankRow(root.querySelector('.pickem-table tr.is-you')); }
   }
   async function refresh(discard = false) {
     if (busy) return;
@@ -151,7 +172,7 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
   root.addEventListener('click',async e=>{
     if(e.target.closest('#pickem-login')){document.querySelector('#account-open').click();return;}
     if(e.target.closest('#pickem-refresh')){await refresh(true);return;}
-    if(e.target.closest('#pickem-find-me') && ranking?.myPage){page=ranking.myPage;await loadRanking();return;}
+    if(e.target.closest('#pickem-find-me') && ranking?.myPage){page=ranking.myPage;findingMe=true;await loadRanking();return;}
     const pager=e.target.closest('[data-rank-page]');
     if(pager){page+=Number(pager.dataset.rankPage);await loadRanking();return;}
     const event=eventData(); if(!event||busy)return;
@@ -189,5 +210,5 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
   window.addEventListener('storage',e=>{if(e.key==='ufcinfo-pickem-v1'||e.key===null){local=readPicks(storage);render();}});
   setInterval(tickCountdown,1000);
   document.addEventListener('visibilitychange',tickCountdown);
-  return {render, update(next){events=next;render();refresh();}};
+  return {render, update(next){events=next;render();refresh();}, animate(){revealedResults='';revealResults();}};
 }

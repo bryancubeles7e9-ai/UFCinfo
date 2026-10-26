@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {pickKey} from '../assets/js/pickem-model.js';
 const listeners = {};
-let tick; const timerNode={textContent:""};
+let tick; const closing=[]; const timerNode={textContent:"",classList:{toggle:(name,on)=>closing.push([name,on])}};
 const root = {innerHTML:'',addEventListener(name,handler){listeners[name]=handler;},querySelector(selector){return selector==='#pickem-countdown' && this.innerHTML.includes('id="pickem-countdown"') ? timerNode : null;}};
 globalThis.document = {querySelector:()=>root,addEventListener(){}};
 globalThis.window = {localStorage:{getItem:()=>null},addEventListener(){}};
@@ -105,6 +105,8 @@ try {
   assert.ok(root.innerHTML.includes('00:00:03'));
   const before=root.innerHTML;fakeNow+=1000;tick();
   assert.equal(timerNode.textContent,'00:00:02');
+  assert.deepEqual(closing.at(-1),['is-closing',true],'last minute pulses in red');
+  assert.ok(root.innerHTML.includes('class="is-closing"'),'initial render already marks the last minute');
   assert.equal(root.innerHTML,before); // Tick must not discard picks or focus.
   fakeNow+=2001;tick();
   assert.ok(!root.innerHTML.includes('id="pickem-countdown"'));
