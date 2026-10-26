@@ -7,7 +7,7 @@ import { escapeHTML } from '../assets/js/utils.js';
 globalThis.rankingDirectory = { directoryFighterByName, fighterNameLink };
 let code = await readFile(new URL('../assets/js/rankings.js', import.meta.url), 'utf8');
 code = code.replace(/^import .*;\n/gm, '').replace("new URL('../data/ufc-rankings.json', import.meta.url)", "new URL('https://example.test/rankings.json')");
-code = "const synchronizeChampionships = globalThis.synchronizeChampionships; const {directoryFighterByName, fighterNameLink} = globalThis.rankingDirectory; const getLocale = () => 'es-ES'; const fighters = []; const esc = s => s; const $ = s => globalThis.rankingElements.get(s); const document = {addEventListener() {}}; const setInterval = () => {};\n" + code;
+code = "const synchronizeChampionships = globalThis.synchronizeChampionships; const {directoryFighterByName, fighterNameLink} = globalThis.rankingDirectory; const getLocale = () => 'es-ES'; const fighters = []; const esc = s => s; const $ = s => globalThis.rankingElements.get(s); const document = {addEventListener() {}}; const setInterval = () => {}; const enterRankings = () => {};\n" + code;
 const { refreshRankings, rankingCategories, rankingSnapshot, initializeRankings } = await import('data:text/javascript;base64,' + Buffer.from(code).toString('base64'));
 const feed = JSON.parse(await readFile(new URL('../assets/data/ufc-rankings.json', import.meta.url)));
 for (const category of feed.categories) {

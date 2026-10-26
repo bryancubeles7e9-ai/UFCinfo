@@ -255,3 +255,9 @@ main{max-width:var(--max);padding-bottom:64px}
 .has-filter-indicator > .filter-indicator{position:absolute;left:0;top:0;height:3px;border-radius:3px;background:var(--accent);pointer-events:none;z-index:1}
 .has-filter-indicator > .filter-indicator[hidden]{display:none}
 .countdown-digits{display:inline-block}
+.live-dot{display:inline-block;width:7px;height:7px;margin-right:6px;border-radius:50%;background:#ef4444;vertical-align:.08em}
+@media(prefers-reduced-motion:no-preference){.live-dot{animation:live-dot 1.6s ease-out infinite}}
+@keyframes live-dot{0%{box-shadow:0 0 0 0 rgba(239,68,68,.6)}70%{box-shadow:0 0 0 7px rgba(239,68,68,0)}100%{box-shadow:0 0 0 0 rgba(239,68,68,0)}}
+.official-bout-names[data-winner-side] .bout-fighter-name{transition:opacity .2s}
+.official-bout-names[data-winner-side="red"] .bout-fighter-name:last-child,.official-bout-names[data-winner-side="blue"] .bout-fighter-name:first-child{opacity:.45}
+.official-bout-names[data-winner-side="red"] .bout-fighter-name:first-child,.official-bout-names[data-winner-side="blue"] .bout-fighter-name:last-child{font-weight:700}

@@ -26,6 +26,36 @@ export function enterEventBouts(detail, skipShared = false) {
   bouts.forEach((bout, index) => play(bout,
     [{opacity:0, transform:`translateY(${motion.distance}px)`}, {opacity:1, transform:'none'}],
     {duration:motion.entry, delay:Math.min(index * motion.step, motion.stagger), easing:ease, fill:'backwards'}));
+  enterMainEvent(bouts[0]);
+}
+
+// The headline bout: each fighter steps out of their corner and the VS lands between them.
+function enterMainEvent(bout) {
+  const names = bout?.querySelector('.official-bout-names');
+  if (!names || bout.id !== 'event-bout-0') return;
+  const [red, versus, blue] = names.children;
+  const motion = profile(), travel = motion.travel * .6;
+  play(red, [{opacity:0, transform:`translateX(-${travel}px)`}, {opacity:1, transform:'none'}],
+    {duration:motion.pulse, delay:120, easing:ease, fill:'backwards'});
+  play(blue, [{opacity:0, transform:`translateX(${travel}px)`}, {opacity:1, transform:'none'}],
+    {duration:motion.pulse, delay:180, easing:ease, fill:'backwards'});
+  play(versus, [{opacity:0, transform:'scale(2)'}, {opacity:1, transform:'scale(.9)', offset:.7}, {opacity:1, transform:'none'}],
+    {duration:420, delay:motion.pulse - 120, easing:'ease-out', fill:'backwards'});
+}
+
+// Revealed result: the winner lights up while the other corner fades back.
+export function revealBoutWinner(bout) {
+  const names = bout?.querySelector('.official-bout-names[data-winner-side]');
+  if (!names || !allowed(names)) return;
+  const winnerFirst = names.dataset.winnerSide === 'red';
+  const fighters = names.querySelectorAll('.bout-fighter-name');
+  const winner = fighters[winnerFirst ? 0 : 1], loser = fighters[winnerFirst ? 1 : 0];
+  play(winner, [
+    {transform:'none', textShadow:'0 0 0 rgba(255,101,62,0)'},
+    {transform:'scale(1.06)', textShadow:'0 0 16px rgba(255,101,62,.65)', offset:.4},
+    {transform:'none', textShadow:'0 0 0 rgba(255,101,62,0)'}
+  ], {duration:900, delay:200, easing:'ease-out'});
+  play(loser, [{opacity:1}, {opacity:1, offset:.25}, {opacity:.45}], {duration:900, delay:200, easing:'ease-out', fill:'backwards'});
 }
 
 export function pulseSharedBout(bout, dialog) {
