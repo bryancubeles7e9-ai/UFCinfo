@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-27T19:01:11.007Z",
-  "lastSearchedAt": "2026-10-27T19:01:11.007Z",
+  "updatedAt": "2026-10-27T20:01:06.781696+00:00",
+  "lastSearchedAt": "2026-10-27T20:00:58.410Z",
   "groups": [
     {
       "id": "2115092943463674220",
@@ -646,36 +646,6 @@
       "official": null
     },
     {
-      "id": "2105781810076561567",
-      "fighterNames": [
-        "Marcos Degli",
-        "Mitch Raposo"
-      ],
-      "matchupKey": "marcosdegli|mitchraposo|2026-11-07",
-      "eventDateHint": "2026-11-07",
-      "dateYearInferred": true,
-      "summary": {
-        "es": "Pelunaton comenta un posible cruce entre Marcos Degli y Mitch Raposo; la publicación menciona el 7 de noviembre. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Pelunaton discusses a possible matchup between Marcos Degli and Mitch Raposo; the post mentions November 7. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-10-07T17:12:00.241Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-10-01T22:08:01.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2105781810076561567",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2105781810076561567",
-          "publishedAt": "2026-10-01T22:08:01.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
       "id": "2105714508966580502",
       "fighterNames": [
         "Jared Gordon",
@@ -707,8 +677,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-27T19:01:11.007Z",
-    "receivedPosts": 3,
+    "checkedAt": "2026-10-27T20:00:58.410Z",
+    "receivedPosts": 2,
     "added": 0
   }
 }
