@@ -6,13 +6,13 @@
   "pending": null,
   "archive": [],
   "lastCollection": {
-    "checkedAt": "2026-10-27T15:01:01.223Z",
-    "windowStart": "2026-10-26T15:01:01.000Z",
-    "windowEnd": "2026-10-27T15:01:01.000Z",
+    "checkedAt": "2026-10-27T16:01:04.799Z",
+    "windowStart": "2026-10-26T16:01:04.000Z",
+    "windowEnd": "2026-10-27T16:01:04.000Z",
     "requests": 2,
     "receivedPosts": 5,
     "acceptedPosts": 5,
-    "added": 1,
+    "added": 0,
     "skipped": 3,
     "collectionSkips": {},
     "skipReasons": {
