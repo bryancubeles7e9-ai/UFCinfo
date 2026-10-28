@@ -1,8 +1,47 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-27T23:00:58.263Z",
-  "lastSearchedAt": "2026-10-27T23:00:58.263Z",
+  "updatedAt": "2026-10-28T00:00:57.890Z",
+  "lastSearchedAt": "2026-10-28T00:00:57.890Z",
   "groups": [
+    {
+      "id": "2115217901439570293",
+      "fighterNames": [
+        "Benoît Saint Denis",
+        "Quillan Salkilld"
+      ],
+      "matchupKey": "benoitsaintdenis|quillansalkilld|2027-02-06",
+      "eventDateHint": "2027-02-06",
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "Pelunaton comenta un posible cruce entre Benoît Saint Denis y Quillan Salkilld; la publicación menciona el 6 de febrero. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Pelunaton discusses a possible matchup between Benoît Saint Denis and Quillan Salkilld; the post mentions February 6. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-28T00:00:57.890Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-27T23:03:41.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2115217572287107102",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2115217572287107102",
+          "publishedAt": "2026-10-27T23:02:22.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        },
+        {
+          "id": "2115217901439570293",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2115217901439570293",
+          "publishedAt": "2026-10-27T23:03:41.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2115092943463674220",
       "fighterNames": [
@@ -505,6 +544,17 @@
           "publishedAt": "2026-10-04T21:58:14.000Z",
           "language": "en",
           "attributedAccounts": []
+        },
+        {
+          "id": "2115219011117961656",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2115219011117961656",
+          "publishedAt": "2026-10-27T23:08:05.000Z",
+          "language": "en",
+          "attributedAccounts": [
+            "MikeBohn"
+          ],
+          "attribution": "@MikeBohn"
         }
       ],
       "official": null
@@ -677,8 +727,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-27T23:00:58.263Z",
-    "receivedPosts": 2,
-    "added": 0
+    "checkedAt": "2026-10-28T00:00:57.890Z",
+    "receivedPosts": 5,
+    "added": 1
   }
 }
