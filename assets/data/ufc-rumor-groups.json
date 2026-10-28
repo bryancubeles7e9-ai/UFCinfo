@@ -1,8 +1,43 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-28T21:00:58.514Z",
-  "lastSearchedAt": "2026-10-28T21:00:58.514Z",
+  "updatedAt": "2026-10-28T22:00:55.832Z",
+  "lastSearchedAt": "2026-10-28T22:00:55.832Z",
   "groups": [
+    {
+      "id": "2115480404169982320",
+      "fighterNames": [
+        "Petr Yan",
+        "Sean O'Malley"
+      ],
+      "matchupKey": "petryan|seanomalley|2027-02-14",
+      "eventDateHint": "2027-02-14",
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "UPFRONT MMA comenta un posible cruce entre Petr Yan y Sean O'Malley; la publicación menciona el 14 de febrero. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "UPFRONT MMA discusses a possible matchup between Petr Yan and Sean O'Malley; the post mentions February 14. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-10-28T22:00:55.832Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-10-28T16:26:46.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2115480404169982320",
+          "sourceId": "upfront-mma",
+          "postUrl": "https://x.com/upfrontmma/status/2115480404169982320",
+          "publishedAt": "2026-10-28T16:26:46.000Z",
+          "language": "en",
+          "attributedAccounts": [
+            "PetrYanUFC",
+            "SugaSeanMMA",
+            "ufc"
+          ]
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2115217901439570293",
       "fighterNames": [
@@ -727,8 +762,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-10-28T21:00:58.514Z",
-    "receivedPosts": 4,
-    "added": 0
+    "checkedAt": "2026-10-28T22:00:55.832Z",
+    "receivedPosts": 6,
+    "added": 1
   }
 }
