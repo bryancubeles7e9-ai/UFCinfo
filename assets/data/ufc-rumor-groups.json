@@ -1,64 +1,8 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-30T21:00:59.231Z",
+  "updatedAt": "2026-10-30T21:31:46.157817+00:00",
   "lastSearchedAt": "2026-10-30T21:00:59.231Z",
   "groups": [
-    {
-      "id": "2115897465022886209",
-      "fighterNames": [
-        "Johnny Walker",
-        "Waldo Cortes Acosta"
-      ],
-      "matchupKey": "johnnywalker|waldocortesacosta|2026-11-07",
-      "eventDateHint": "2026-11-07",
-      "rematch": false,
-      "dateYearInferred": true,
-      "summary": {
-        "es": "Championship Rounds comenta un posible cruce entre Johnny Walker y Waldo Cortes Acosta; la publicación menciona el 7 de noviembre. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Championship Rounds discusses a possible matchup between Johnny Walker and Waldo Cortes Acosta; the post mentions November 7. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-10-29T21:01:04.955Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-10-29T20:04:01.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2115897465022886209",
-          "sourceId": "championship-rounds",
-          "postUrl": "https://x.com/ChampRDS/status/2115897465022886209",
-          "publishedAt": "2026-10-29T20:04:01.000Z",
-          "language": "en",
-          "attributedAccounts": [
-            "laertevianamma"
-          ],
-          "attribution": "namma"
-        },
-        {
-          "id": "2115897559491444928",
-          "sourceId": "mma-latinoamerica",
-          "postUrl": "https://x.com/ClubDeLasMMA/status/2115897559491444928",
-          "publishedAt": "2026-10-29T20:04:24.000Z",
-          "language": "es",
-          "attributedAccounts": [
-            "laertevianamma"
-          ],
-          "attribution": "@laertevianamma"
-        },
-        {
-          "id": "2115900300619911590",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2115900300619911590",
-          "publishedAt": "2026-10-29T20:15:17.000Z",
-          "language": "es",
-          "attributedAccounts": [
-            "laertevianamma"
-          ],
-          "attribution": "@laertevianamma"
-        }
-      ],
-      "official": null
-    },
     {
       "id": "2115480404169982320",
       "fighterNames": [
