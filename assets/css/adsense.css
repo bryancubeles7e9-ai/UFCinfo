@@ -1,0 +1,18 @@
+.ad-placement[hidden], .ads-privacy[hidden] { display: none !important; }
+.ad-placement {
+  margin-block: 2rem;
+  padding-block: 1rem;
+  border-block: 1px solid var(--border, #555);
+  text-align: center;
+  overflow: hidden;
+  min-width: 0;
+}
+.ad-placement-label {
+  display: block;
+  margin-bottom: .75rem;
+  font-size: .65rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .65;
+}
+.ad-placement .adsbygoogle { display: block; min-height: 250px; }

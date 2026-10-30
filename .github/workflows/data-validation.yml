@@ -39,6 +39,7 @@ jobs:
           node tests/test-rumor-candidate-groups.mjs
       - name: Probar datos publicados y estado visible
         run: |
+          node tests/test-adsense.mjs
           node tests/test-events-feed.mjs
           node tests/test-event-visibility.mjs
           node tests/test-bout-schedule.mjs
@@ -50,3 +51,4 @@ jobs:
           node tests/test-home-hero.mjs
           node tests/test-pickem.mjs
           node tests/test-pickem-view.mjs
+

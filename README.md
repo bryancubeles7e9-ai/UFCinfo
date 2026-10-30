@@ -195,6 +195,9 @@ Las claves de los proveedores se configuran en el entorno de las automatizacione
 | `docs/` | Fuentes, decisiones y guías técnicas. |
 | `render.yaml` | Configuración de alojamiento en Render. |
 
+La integración de **Google AdSense** está preparada con dos ubicaciones discretas (Inicio y final de Carteleras), pero permanece **desactivada** hasta configurar la cuenta real, los bloques, una CMP certificada y la información de privacidad. No se conecta con Google ni muestra huecos mientras no esté lista. Véase [configuración y activación de publicidad](docs/ADSENSE.md). Los cambios de código por `push` no consultan Cito; las consultas manuales/programadas mantienen su configuración.
+
 Para profundizar: [datos y procedencia](docs/DATOS.md), [APIs y eventos](docs/API.md), [récords y estadísticas](docs/FIGHTER_RECORDS.md), [cuentas](docs/CUENTAS.md) y [publicación](docs/PUBLICACION.md).
 
 Si detectas un dato incorrecto o un fallo, puedes [abrir una incidencia](https://github.com/bryancubeles7e9-ai/UFCinfo/issues) indicando la sección, el luchador o evento afectado y, si es posible, una fuente o los pasos para reproducirlo.
+

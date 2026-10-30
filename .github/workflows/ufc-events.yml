@@ -99,7 +99,8 @@ jobs:
           fi
       - name: Consultar Cito
         continue-on-error: true
-        if: steps.key.outputs.configured == 'true'
+        # Code/design pushes validate the site without spending provider quota.
+        if: steps.key.outputs.configured == 'true' && github.event_name != 'push'
         env:
           CITO_API_KEY: ${{ secrets.CITO_API_KEY }}
         run: python3 scripts/run-data-sync.py events
@@ -292,3 +293,4 @@ jobs:
           path: _site
       - uses: actions/deploy-pages@v4
         id: deployment
+

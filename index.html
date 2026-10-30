@@ -20,7 +20,9 @@
     <link rel="stylesheet" href="assets/css/refinement.css" />
     <link rel="stylesheet" href="assets/css/pickem.css" />
     <link rel="stylesheet" href="assets/css/editorial.css" />
+    <link rel="stylesheet" href="assets/css/adsense.css" />
     <script type="module" src="assets/js/app.js"></script>
+    <script type="module" src="assets/js/adsense-init.js"></script>
   </head>
   <body>
     <a class="skip" href="#main">Saltar al contenido</a>
@@ -72,6 +74,7 @@
             <a class="button" href="#eventos">Ver todas las carteleras ›</a>
           </div>
         </section>
+        <aside class="ad-placement" data-ad-placement="home" data-no-translate aria-label="Publicidad" hidden><span class="ad-placement-label">Publicidad</span></aside>
         <section class="overview-stats">
           <article>
             <span>01 / EXPLORA</span><strong id="fighter-count">06</strong>
@@ -160,6 +163,7 @@
         <p class="data-note" id="event-feed-status" role="status" aria-live="polite">Cargando última actualización de las carteleras…</p>
         <a class="text-link" id="event-feed-source" href="https://www.ufc.com" target="_blank" rel="noopener noreferrer">Fuente: UFC ›</a>
         <div class="event-list" id="event-list"></div>
+        <aside class="ad-placement" data-ad-placement="events" data-no-translate aria-label="Publicidad" hidden><span class="ad-placement-label">Publicidad</span></aside>
       </section>
       <section class="view" data-view="luchadores" hidden>
         <div class="page-heading">
@@ -420,7 +424,7 @@
       <div>
         <a href="https://www.ufc.com" target="_blank" rel="noopener noreferrer"
           >UFC oficial ›</a
-        ><span id="storage-status">● Guardado local</span>
+        ><a class="ads-privacy" data-ads-privacy hidden>Privacidad y publicidad</a><span id="storage-status">● Guardado local</span>
       </div>
     </footer>
     <dialog id="auth-dialog" aria-labelledby="auth-title">
@@ -473,3 +477,4 @@
     >
   </body>
 </html>
+
