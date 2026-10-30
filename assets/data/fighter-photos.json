@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "synchronizedAt": "2026-10-30T07:01:21.143977+00:00",
+  "synchronizedAt": "2026-10-30T13:01:24.704887+00:00",
   "photos": {
     "silva": {
       "champion": {
@@ -8,9 +8,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/natalia-silva",
         "image": "assets/images/fighter-variants/399ddc94d79aa2c43713e66b9f6fea8a2ef8ae447c0d9ce650ef4be7ef2e7d88.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false,
       "regular": {
         "url": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/SILVA_NATALIA_L_10-03.png?itok=zBN6iZGs",
@@ -26,7 +26,7 @@
         "source": "ESPN",
         "sourceUrl": "https://www.espn.com/mma/fighter/_/id/2554705/valentina-shevchenko",
         "image": "assets/images/fighter-variants/ae0ee65d8b0317117ffd41fafeab115f67ae7985324a8015b74d2e40b2975f30.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
       "champion": {
         "url": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/SHEVCHENKO_VALENTINA_L_BELT_11-15.png?itok=4KuKr99O",
@@ -34,7 +34,7 @@
         "sourceUrl": "https://www.ufc.com/athlete/valentina-shevchenko",
         "consultedAt": "2026-10-12T09:50:38.943829+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "topuria": {
@@ -43,9 +43,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/ilia-topuria",
         "image": "assets/images/fighter-variants/9ef109c05aa71f498b1e00291045777b18ccfaf49be5e027e228fd06d9f85032.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "pereira": {
@@ -54,9 +54,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/alex-pereira",
         "image": "assets/images/fighter-variants/6b2566b74634b579b30dcc302ea730fc3326dd13e4dd161f4a770d09269e3cae.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "makhachev": {
@@ -65,9 +65,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/islam-makhachev",
         "image": "assets/images/fighter-variants/5629d279b1e699a23e5bad33cfaa6516b3aaa5cbd7a70fae313a56c4cdbf28cb.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "holloway": {
@@ -76,9 +76,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/max-holloway",
         "image": "assets/images/fighter-variants/8332513a732e0f3ff1037524f6f3aabc7ea3c44fb13e5fa635662bf29d419fe9.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "zhang": {
@@ -87,9 +87,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/zhang-weili",
         "image": "assets/images/fighter-variants/aca88de923ad25d5a1c18c91f15ba17d8404814402643d42a2aa66356cf80b5f.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "volkanovski": {
@@ -98,9 +98,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/alexander-volkanovski",
         "image": "assets/images/fighter-variants/5cbf4fc918bd2f1742db50c8c26f47697243af263dc62e1158ea571427e69568.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "gaethje": {
@@ -109,9 +109,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/justin-gaethje",
         "image": "assets/images/fighter-variants/255d75573e700609c284b2382f888d24d8285bb6b11d1a528a7c839f9d12f041.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "harrison": {
@@ -120,9 +120,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/kayla-harrison",
         "image": "assets/images/fighter-variants/e95c37031a966f40719617bafcdc84285563ac903d1a6286418eaaef0c497aa7.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "dern": {
@@ -131,9 +131,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/mackenzie-dern",
         "image": "assets/images/fighter-variants/f2f1e949a5515b28386833ba9bb426650b40a27b6d334dc47adf7106670e06db.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "grasso": {
@@ -142,9 +142,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/alexa-grasso",
         "image": "assets/images/fighter-variants/8a1d138fcf2b15e379e6ffa0f4622047bd82f19bda33a79b2bf1c3d455f915fb.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "pantoja": {
@@ -153,9 +153,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/alexandre-pantoja",
         "image": "assets/images/fighter-variants/c9440d46ee71d93d4623c20dd5c33ed845d3b765b346a5425bdca67f6c6d6fa7.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "strickland": {
@@ -164,9 +164,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/sean-strickland",
         "image": "assets/images/fighter-variants/bc1f64bcc4eb0887247c7aba7de025d09bab5b27cf64de429908060e928996bc.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "chimaev": {
@@ -175,9 +175,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/khamzat-chimaev",
         "image": "assets/images/fighter-variants/43331938ad2b0728c24be7c399698d5ee4425a31ecad5adfc42b81ec00365d8e.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "ufc-joshua-van": {
@@ -186,9 +186,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/joshua-van",
         "image": "assets/images/fighter-variants/25cbedcd3e50151de032d8ff865e7218a86dcee7886a9f30cb5d30e957675417.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "ufc-carlos-ulberg": {
@@ -197,9 +197,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/carlos-ulberg",
         "image": "assets/images/fighter-variants/1d0a69fc26f4658171868f7d5fa4ae7991d714fab62d614ca44aa8c203ad2ec7.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "ufc-ciryl-gane": {
@@ -208,9 +208,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/ciryl-gane",
         "image": "assets/images/fighter-variants/3d4c9d473a1cdaabd340ab6f1b7d44e167b96239fda234022ada416b0cc0ccac.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "yan": {
@@ -219,9 +219,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/petr-yan",
         "image": "assets/images/fighter-variants/769f57d744b7beffac3b79cd7208c5b875edc0550ac9f5423d0bf1cd21554068.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "aspinall": {
@@ -230,9 +230,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/tom-aspinall",
         "image": "assets/images/fighter-variants/cd9ae520b4e1a0af5a5af44290e5225c6f57564c25e944213fe17cb8c30bf3e2.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "dvalishvili": {
@@ -241,20 +241,20 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/merab-dvalishvili",
         "image": "assets/images/fighter-variants/71ba5f30e7fc396579fdd76c7c270a7468a641e1edd1818b99deeaffc3269f07.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "oliveira": {
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false,
       "bmf": {
         "url": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/OLIVEIRA_CHARLES_L_BMFMOCK.png?itok=Up-QPLgQ",
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/charles-oliveira",
         "image": "assets/images/fighter-variants/9165c9a5b3a7b116addcf3ff4d4e5a667d82f058f3a61ccc1830b91bdd2cb54b.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       }
     },
     "tsarukyan": {
@@ -1604,9 +1604,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/georges-st-pierre",
         "image": "assets/images/fighter-variants/f87bb796170f5f413d5105f473b844b450a555dd2e0a7cd74ee17521efc35b9c.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "ufc-khabib-nurmagomedov": {
@@ -1615,9 +1615,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/khabib-nurmagomedov",
         "image": "assets/images/fighter-variants/4963014311ebabb493ccbcad84d03432f20bf913a3683f15bb4d83de6dc16e40.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "ufc-daniel-cormier": {
@@ -1626,9 +1626,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/daniel-cormier",
         "image": "assets/images/fighter-variants/77b4c0b27e1fded27808e2352421784778d373b80c97570510639b77d6b9407c.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "ufc-joanna-jedrzejczyk": {
@@ -1637,9 +1637,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/joanna-jedrzejczyk",
         "image": "assets/images/fighter-variants/bac1ec44d6c0a0a9c6507cfc68f898dbefb194a0b99477ca25f32a83956c28b6.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "ufc-frankie-edgar": {
@@ -1648,9 +1648,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/frankie-edgar",
         "image": "assets/images/fighter-variants/091fef4b356cb753139159509a54781439c038bc0611b01a2a78e7c42b998507.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     },
     "ufc-mauricio-rua": {
@@ -1659,9 +1659,9 @@
         "source": "UFC",
         "sourceUrl": "https://www.ufc.com/athlete/mauricio-rua",
         "image": "assets/images/fighter-variants/f8828278f2b25e6ba36be87d872a3810f901cb7c2f0239bf801cbab341a12428.png",
-        "consultedAt": "2026-10-30T07:01:21.143977+00:00"
+        "consultedAt": "2026-10-30T13:01:24.704887+00:00"
       },
-      "checkedAt": "2026-10-30T07:01:21.143977+00:00",
+      "checkedAt": "2026-10-30T13:01:24.704887+00:00",
       "pendingNeutral": false
     }
   },
