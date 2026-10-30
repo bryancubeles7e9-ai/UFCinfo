@@ -6,20 +6,20 @@
   "pending": null,
   "archive": [],
   "lastCollection": {
-    "checkedAt": "2026-10-29T23:01:06.512Z",
-    "windowStart": "2026-10-28T23:01:06.000Z",
-    "windowEnd": "2026-10-29T23:01:06.000Z",
+    "checkedAt": "2026-10-30T00:00:57.576Z",
+    "windowStart": "2026-10-29T00:00:57.000Z",
+    "windowEnd": "2026-10-30T00:00:57.000Z",
     "requests": 2,
-    "receivedPosts": 13,
-    "acceptedPosts": 13,
+    "receivedPosts": 12,
+    "acceptedPosts": 12,
     "added": 0,
-    "skipped": 10,
+    "skipped": 9,
     "collectionSkips": {},
     "skipReasons": {
       "fighters-not-detected": 4,
       "unverified-fighters": 3,
       "official-announcement": 1,
-      "confirmed-in-calendar": 3
+      "confirmed-in-calendar": 2
     }
   }
 }
