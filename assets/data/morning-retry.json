@@ -1,6 +1,35 @@
 {
-  "date": "2026-10-31",
-  "checkedAt": "2026-10-31T09:01:21.876544+00:00",
-  "eventIds": [],
-  "profileIds": []
+  "date": "2026-11-01",
+  "checkedAt": "2026-11-01T09:01:21.534769+00:00",
+  "eventIds": [
+    "ufc-fight-night-october-31-2026"
+  ],
+  "profileIds": [
+    "ufc-andre-petroski",
+    "ufc-azamat-bekoev",
+    "ufc-cody-durden",
+    "ufc-dakota-hope",
+    "ufc-farman-hasanov",
+    "ufc-francis-marshall",
+    "ufc-jacobe-smith",
+    "ufc-jean-paul-lebosnoyani",
+    "ufc-jeongyeong-lee",
+    "ufc-joseph-kropschot",
+    "ufc-julian-erosa",
+    "ufc-luana-santos",
+    "ufc-lucia-szabova",
+    "ufc-mickey-gall",
+    "ufc-nick-klein",
+    "ufc-ode-osbourne",
+    "ufc-piera-rodriguez",
+    "ufc-randy-brown",
+    "ufc-renato-moicano",
+    "ufc-rodrigo-sezinando",
+    "ufc-tainara-lisboa",
+    "ufc-talita-alencar",
+    "ufc-theodor-berggren",
+    "ufc-tom-nolan",
+    "ufc-yana-santos",
+    "ufc-zachary-reese"
+  ]
 }
