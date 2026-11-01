@@ -6,17 +6,17 @@
   "pending": null,
   "archive": [],
   "lastCollection": {
-    "checkedAt": "2026-11-01T19:00:57.424Z",
-    "windowStart": "2026-10-31T19:00:57.000Z",
-    "windowEnd": "2026-11-01T19:00:57.000Z",
+    "checkedAt": "2026-11-01T20:00:54.919Z",
+    "windowStart": "2026-10-31T20:00:54.000Z",
+    "windowEnd": "2026-11-01T20:00:54.000Z",
     "requests": 2,
-    "receivedPosts": 20,
-    "acceptedPosts": 20,
+    "receivedPosts": 18,
+    "acceptedPosts": 18,
     "added": 0,
-    "skipped": 19,
+    "skipped": 17,
     "collectionSkips": {},
     "skipReasons": {
-      "fighters-not-detected": 19
+      "fighters-not-detected": 17
     }
   }
 }
