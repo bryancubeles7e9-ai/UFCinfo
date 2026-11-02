@@ -328,7 +328,7 @@
       "sectionSchedule": {
         "eventDate": "2026-11-15T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-334",
-        "checkedAt": "2026-11-01T13:01:15.918481+00:00",
+        "checkedAt": "2026-11-02T07:01:11.427822+00:00",
         "starts": {
           "main": "2026-11-15T02:00:00+00:00",
           "prelims": "2026-11-15T00:00:00+00:00",
@@ -503,7 +503,7 @@
       "sectionSchedule": {
         "eventDate": "2026-11-08T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-        "checkedAt": "2026-11-01T13:01:15.918481+00:00",
+        "checkedAt": "2026-11-02T07:01:11.427822+00:00",
         "starts": {
           "main": "2026-11-08T01:00:00+00:00",
           "prelims": "2026-11-07T22:00:00+00:00"
@@ -562,155 +562,144 @@
       "eventKind": "fight-night",
       "title": "UFC Fight Night",
       "subtitle": "Renato Moicano vs Tom Nolan",
-      "status": "scheduled",
+      "status": "completed",
       "date": "2026-11-01T00:00:00+00:00",
       "location": "Meta APEX",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
-      "checkedAt": "2026-10-25",
+      "checkedAt": "2026-11-02",
       "bouts": [
         {
-          "section": "main",
           "red": "Renato Moicano",
           "blue": "Tom Nolan",
-          "division": "Lightweight",
-          "winner": null,
+          "section": "main",
+          "division": "Lightweight Bout",
+          "winner": "Tom Nolan",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "3",
+          "time": "1:28"
         },
         {
-          "section": "main",
           "red": "Randy Brown",
           "blue": "Jacobe Smith",
-          "division": "Welterweight",
-          "winner": null,
+          "section": "main",
+          "division": "Welterweight Bout",
+          "winner": "Jacobe Smith",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "main",
-          "red": "Yana Santos",
-          "blue": "Luana Santos",
-          "division": "Women's Bantamweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "section": "main",
           "red": "Ode' Osbourne",
           "blue": "Cody Durden",
-          "division": "Flyweight",
-          "winner": null,
+          "section": "main",
+          "division": "Flyweight Bout",
+          "winner": "Cody Durden",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
+          "red": "Yana Santos",
+          "blue": "Luana Santos",
           "section": "main",
-          "red": "Zachary Reese",
-          "blue": "Mickey Gall",
-          "division": "Middleweight",
-          "winner": null,
+          "division": "Women's Bantamweight Bout",
+          "winner": "Luana Santos",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Jean-Paul Lebosnoyani",
           "blue": "Farman Hasanov",
-          "division": "Welterweight",
-          "winner": null,
+          "section": "main",
+          "division": "Welterweight Bout",
+          "winner": "Jean-Paul Lebosnoyani",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "TKO - Doctor's Stoppage",
+          "round": "3",
+          "time": "2:11"
         },
         {
-          "section": "main",
           "red": "Francis Marshall",
           "blue": "Dakota Hope",
-          "division": "Featherweight",
-          "winner": null,
+          "section": "prelims",
+          "division": "Featherweight Bout",
+          "winner": "Dakota Hope",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Split",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Rodrigo Sezinando",
           "blue": "Theodor Berggren",
-          "division": "Welterweight",
-          "winner": null,
+          "section": "prelims",
+          "division": "Welterweight Bout",
+          "winner": "Rodrigo Sezinando",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "TKO - Doctor's Stoppage",
+          "round": "2",
+          "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Julian Erosa",
           "blue": "JeongYeong Lee",
-          "division": "Featherweight",
-          "winner": null,
+          "section": "prelims",
+          "division": "Featherweight Bout",
+          "winner": "Julian Erosa",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "1:31"
         },
         {
-          "section": "main",
+          "red": "Zachary Reese",
+          "blue": "Mickey Gall",
+          "section": "prelims",
+          "division": "Middleweight Bout",
+          "winner": "Zachary Reese",
+          "outcome": null,
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
           "red": "Nick Klein",
-          "blue": "Joseph Kropschot",
-          "division": "Middleweight",
-          "winner": null,
+          "blue": "Joe Kropschot",
+          "section": "prelims",
+          "division": "Middleweight Bout",
+          "winner": "Joe Kropschot",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Submission",
+          "round": "2",
+          "time": "1:25"
         },
         {
-          "section": "main",
           "red": "Talita Alencar",
           "blue": "Piera Rodriguez",
-          "division": "Women's Strawweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "section": "main",
-          "red": "Lucia Szabova",
-          "blue": "Tainara Lisboa",
-          "division": "Women's Flyweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
           "section": "prelims",
-          "red": "Azamat Bekoev",
-          "blue": "Andre Petroski",
-          "division": "Middleweight",
-          "winner": null,
+          "division": "Women's Strawweight Bout",
+          "winner": "Piera Rodriguez",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
+        },
+        {
+          "red": "Lucia Szabová",
+          "blue": "Tainara Lisboa",
+          "section": "prelims",
+          "division": "Women's Flyweight Bout",
+          "winner": "Lucia Szabová",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "3",
+          "time": "3:20"
         }
       ],
       "dataSource": "Cito",
@@ -718,7 +707,6 @@
       "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/103126-ufc-fight-night-moicano-vs-nolan-TEMP-HERO.jpg?h=d1cb525d&itok=HAflfCIz",
       "posterAlt": "UFC lightweights Renato Moicano and Tom Nolan side by side over a red background",
       "citoSlug": "ufc-fight-night-october-31-2026",
-      "pendingBoutRemovals": {},
       "sectionSchedule": {
         "eventDate": "2026-11-01T00:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
@@ -846,8 +834,58 @@
             "round": "",
             "time": ""
           }
+        },
+        {
+          "kind": "removed-from-card",
+          "checkedAt": "2026-11-02T07:01:11.139549+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": "main",
+            "red": "Nick Klein",
+            "blue": "Joseph Kropschot",
+            "division": "Middleweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "removed-from-card",
+          "checkedAt": "2026-11-02T07:01:11.139549+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": "main",
+            "red": "Lucia Szabova",
+            "blue": "Tainara Lisboa",
+            "division": "Women's Flyweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "removed-from-card",
+          "checkedAt": "2026-11-02T07:01:11.139549+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": "prelims",
+            "red": "Azamat Bekoev",
+            "blue": "Andre Petroski",
+            "division": "Middleweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
         }
-      ]
+      ],
+      "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
+      "resultsCheckedAt": "2026-11-02T07:01:11.139549+00:00"
     },
     {
       "id": "ufc-333",
@@ -860,7 +898,7 @@
       "location": "Etihad Arena",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-333",
-      "checkedAt": "2026-11-01",
+      "checkedAt": "2026-11-02",
       "bouts": [
         {
           "red": "Alexander Volkanovski",
@@ -1033,7 +1071,7 @@
         }
       },
       "resultsSource": "https://www.ufc.com/event/ufc-333",
-      "resultsCheckedAt": "2026-11-01T13:01:15.676211+00:00"
+      "resultsCheckedAt": "2026-11-02T07:01:11.139549+00:00"
     },
     {
       "id": "ufc-fight-night-october-17-2026",
@@ -6771,16 +6809,15 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-01T13:01:15.676211+00:00",
+    "checkedAt": "2026-11-02T07:01:11.139549+00:00",
     "verifiedIds": [
+      "ufc-fight-night-october-31-2026",
       "ufc-333"
     ],
-    "failedIds": [
-      "ufc-fight-night-october-31-2026"
-    ]
+    "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-11-01T13:01:15.918481+00:00",
+    "checkedAt": "2026-11-02T07:01:11.427822+00:00",
     "failedIds": [
       "ufc-fight-night-november-21-2026"
     ]
