@@ -5735,7 +5735,7 @@
       "record": "13-0-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/lucia-szabova",
-      "updatedAt": "2026-11-02T07:01:16.362445+00:00"
+      "updatedAt": "2026-11-02T09:01:28.968542+00:00"
     },
     "ufc-tainara-lisboa": {
       "record": "7-5-0",
@@ -5782,18 +5782,15 @@
     }
   },
   "lastSync": {
-    "checkedAt": "2026-11-02T07:01:16.362445+00:00",
+    "checkedAt": "2026-11-02T09:01:28.968542+00:00",
     "mode": "events",
-    "attempted": 40,
-    "succeeded": 37,
+    "attempted": 1,
+    "succeeded": 0,
     "failedIds": [
-      "ufc-joseph-kropschot",
-      "ufc-lucia-szabova",
-      "ufc-jack-della-maddalena"
+      "ufc-lucia-szabova"
     ],
     "recordOnlyIds": [
-      "ufc-lucia-szabova",
-      "ufc-jack-della-maddalena"
+      "ufc-lucia-szabova"
     ]
   },
   "fullRefreshAttemptedAt": "2026-10-11T19:06:44.957692+00:00",
