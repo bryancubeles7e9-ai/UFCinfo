@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-02T07:00:59.661Z",
-  "lastSearchedAt": "2026-11-02T07:00:59.661Z",
+  "updatedAt": "2026-11-02T08:00:57.309Z",
+  "lastSearchedAt": "2026-11-02T08:00:57.309Z",
   "groups": [
     {
       "id": "2117030118065406151",
@@ -67,37 +67,6 @@
           "sourceId": "championship-rounds",
           "postUrl": "https://x.com/ChampRDS/status/2117034659041161221",
           "publishedAt": "2026-11-01T23:22:49.000Z",
-          "language": "en",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2116936290499473458",
-      "fighterNames": [
-        "Renato Moicano",
-        "Tom Nolan"
-      ],
-      "matchupKey": "renatomoicano|tomnolan|undated:2026-11",
-      "eventDateHint": null,
-      "rematch": false,
-      "dateYearInferred": false,
-      "summary": {
-        "es": "UPFRONT MMA comenta un posible cruce entre Renato Moicano y Tom Nolan, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "UPFRONT MMA discusses a possible matchup between Renato Moicano and Tom Nolan, with no exact date stated by the source. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-01T17:00:56.634Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-01T16:51:57.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2116936290499473458",
-          "sourceId": "upfront-mma",
-          "postUrl": "https://x.com/upfrontmma/status/2116936290499473458",
-          "publishedAt": "2026-11-01T16:51:57.000Z",
           "language": "en",
           "attributedAccounts": []
         }
@@ -863,7 +832,7 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-02T07:00:59.661Z",
+    "checkedAt": "2026-11-02T08:00:57.309Z",
     "receivedPosts": 10,
     "added": 0
   }
