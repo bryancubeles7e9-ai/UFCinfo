@@ -328,7 +328,7 @@
       "sectionSchedule": {
         "eventDate": "2026-11-15T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-334",
-        "checkedAt": "2026-11-02T07:01:11.427822+00:00",
+        "checkedAt": "2026-11-02T13:01:19.814779+00:00",
         "starts": {
           "main": "2026-11-15T02:00:00+00:00",
           "prelims": "2026-11-15T00:00:00+00:00",
@@ -503,7 +503,7 @@
       "sectionSchedule": {
         "eventDate": "2026-11-08T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-        "checkedAt": "2026-11-02T07:01:11.427822+00:00",
+        "checkedAt": "2026-11-02T13:01:19.814779+00:00",
         "starts": {
           "main": "2026-11-08T01:00:00+00:00",
           "prelims": "2026-11-07T22:00:00+00:00"
@@ -885,7 +885,7 @@
         }
       ],
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
-      "resultsCheckedAt": "2026-11-02T07:01:11.139549+00:00"
+      "resultsCheckedAt": "2026-11-02T13:01:19.577500+00:00"
     },
     {
       "id": "ufc-333",
@@ -1071,7 +1071,7 @@
         }
       },
       "resultsSource": "https://www.ufc.com/event/ufc-333",
-      "resultsCheckedAt": "2026-11-02T07:01:11.139549+00:00"
+      "resultsCheckedAt": "2026-11-02T13:01:19.577500+00:00"
     },
     {
       "id": "ufc-fight-night-october-17-2026",
@@ -6809,7 +6809,7 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-02T07:01:11.139549+00:00",
+    "checkedAt": "2026-11-02T13:01:19.577500+00:00",
     "verifiedIds": [
       "ufc-fight-night-october-31-2026",
       "ufc-333"
@@ -6817,7 +6817,7 @@
     "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-11-02T07:01:11.427822+00:00",
+    "checkedAt": "2026-11-02T13:01:19.814779+00:00",
     "failedIds": [
       "ufc-fight-night-november-21-2026"
     ]
