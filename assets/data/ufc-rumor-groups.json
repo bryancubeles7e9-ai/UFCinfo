@@ -1,78 +1,8 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-02T19:01:03.206Z",
-  "lastSearchedAt": "2026-11-02T19:01:03.206Z",
+  "updatedAt": "2026-11-02T20:01:07.714213+00:00",
+  "lastSearchedAt": "2026-11-02T20:00:59.163Z",
   "groups": [
-    {
-      "id": "2117030118065406151",
-      "fighterNames": [
-        "Bogdan Guskov",
-        "Robert Whittaker"
-      ],
-      "matchupKey": "bogdanguskov|robertwhittaker|2027-02-06",
-      "eventDateHint": "2027-02-06",
-      "rematch": false,
-      "dateYearInferred": true,
-      "summary": {
-        "es": "MMA Latinoamérica comenta un posible cruce entre Bogdan Guskov y Robert Whittaker; la publicación menciona el 6 de febrero. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "MMA Latinoamérica discusses a possible matchup between Bogdan Guskov and Robert Whittaker; the post mentions February 6. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-02T00:01:02.111Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-01T23:04:47.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2117030118065406151",
-          "sourceId": "mma-latinoamerica",
-          "postUrl": "https://x.com/ClubDeLasMMA/status/2117030118065406151",
-          "publishedAt": "2026-11-01T23:04:47.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2117029907897229317",
-      "fighterNames": [
-        "Bogdan Guskov",
-        "Robert Whittaker"
-      ],
-      "matchupKey": "bogdanguskov|robertwhittaker|2027-02-07",
-      "eventDateHint": "2027-02-07",
-      "rematch": false,
-      "dateYearInferred": true,
-      "summary": {
-        "es": "Pelunaton comenta un posible cruce entre Bogdan Guskov y Robert Whittaker; la publicación menciona el 7 de febrero. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Pelunaton discusses a possible matchup between Bogdan Guskov and Robert Whittaker; the post mentions February 7. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-02T00:01:02.111Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-01T23:03:57.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2117029907897229317",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2117029907897229317",
-          "publishedAt": "2026-11-01T23:03:57.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        },
-        {
-          "id": "2117034659041161221",
-          "sourceId": "championship-rounds",
-          "postUrl": "https://x.com/ChampRDS/status/2117034659041161221",
-          "publishedAt": "2026-11-01T23:22:49.000Z",
-          "language": "en",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
     {
       "id": "2115480404169982320",
       "fighterNames": [
@@ -793,7 +723,7 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-02T19:01:03.206Z",
+    "checkedAt": "2026-11-02T20:00:59.163Z",
     "receivedPosts": 9,
     "added": 0
   }
