@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-02T23:01:14.014412+00:00",
-  "lastSearchedAt": "2026-11-02T23:01:05.544Z",
+  "updatedAt": "2026-11-03T00:01:02.224Z",
+  "lastSearchedAt": "2026-11-03T00:01:02.224Z",
   "groups": [
     {
       "id": "2115480404169982320",
@@ -723,8 +723,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-02T23:01:05.544Z",
-    "receivedPosts": 10,
-    "added": 2
+    "checkedAt": "2026-11-03T00:01:02.224Z",
+    "receivedPosts": 7,
+    "added": 0
   }
 }
