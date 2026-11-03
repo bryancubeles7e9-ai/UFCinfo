@@ -6,9 +6,9 @@
   "pending": null,
   "archive": [],
   "lastCollection": {
-    "checkedAt": "2026-11-03T05:00:59.837Z",
-    "windowStart": "2026-11-02T05:00:59.000Z",
-    "windowEnd": "2026-11-03T05:00:59.000Z",
+    "checkedAt": "2026-11-03T06:01:01.676Z",
+    "windowStart": "2026-11-02T06:01:01.000Z",
+    "windowEnd": "2026-11-03T06:01:01.000Z",
     "requests": 2,
     "receivedPosts": 7,
     "acceptedPosts": 6,
