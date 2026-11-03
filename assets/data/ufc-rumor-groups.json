@@ -1,8 +1,40 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-03T15:01:04.928Z",
-  "lastSearchedAt": "2026-11-03T15:01:04.928Z",
+  "updatedAt": "2026-11-03T16:01:28.485Z",
+  "lastSearchedAt": "2026-11-03T16:01:28.485Z",
   "groups": [
+    {
+      "id": "2117645576397357499",
+      "fighterNames": [
+        "Pat Sabatini",
+        "Vinicius Oliveira"
+      ],
+      "matchupKey": "patsabatini|viniciusoliveira|2027-01-23",
+      "eventDateHint": "2027-01-23",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Pelunaton comenta un posible cruce entre Pat Sabatini y Vinicius Oliveira; la publicación menciona el 23 de enero. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Pelunaton discusses a possible matchup between Pat Sabatini and Vinicius Oliveira; the post mentions January 23. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-03T16:01:28.485Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-03T15:50:24.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2117645576397357499",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2117645576397357499",
+          "publishedAt": "2026-11-03T15:50:24.000Z",
+          "language": "es",
+          "attributedAccounts": [],
+          "attribution": "se desconoce (tal vez podría ser en el Apex"
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2115480404169982320",
       "fighterNames": [
@@ -723,8 +755,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-03T15:01:04.928Z",
+    "checkedAt": "2026-11-03T16:01:28.485Z",
     "receivedPosts": 7,
-    "added": 0
+    "added": 1
   }
 }
