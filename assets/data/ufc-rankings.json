@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "source": "https://www.ufc.com/rankings",
-  "synchronizedAt": "2026-11-03T13:01:19.971039+00:00",
-  "published": "Tuesday, Oct. 27",
+  "synchronizedAt": "2026-11-04T07:01:10.082134+00:00",
+  "published": "Tuesday, Nov. 03",
   "categories": [
     {
       "id": "p4p-men",
@@ -18,8 +18,8 @@
         "Tom Aspinall",
         "Merab Dvalishvili",
         "Alex Pereira",
-        "Ciryl Gane",
         "Khamzat Chimaev",
+        "Ciryl Gane",
         "Arman Tsarukyan",
         "Alexandre Pantoja",
         "Carlos Ulberg"
@@ -172,9 +172,9 @@
         "Mateusz Gamrot",
         "Rafael Fiziev",
         "Renato Moicano",
-        "Dan Hooker",
         "Tom Nolan",
-        "Grant Dawson"
+        "Dan Hooker",
+        "Beneil Dariush"
       ],
       "ranks": [
         1,
@@ -206,8 +206,8 @@
         "Sean Brady",
         "Belal Muhammad",
         "Leon Edwards",
-        "Mike Malott",
         "Kamaru Usman",
+        "Mike Malott",
         "Yaroslav Amosov",
         "Uroš Medić",
         "Joaquin Buckley",
@@ -323,8 +323,8 @@
         "Serghei Spivac",
         "Ante Delija",
         "Valter Walker",
-        "Derrick Lewis",
         "Tyrell Fortune",
+        "Derrick Lewis",
         "Aleksandar Rakić",
         "Mario Pinto"
       ],
@@ -397,8 +397,8 @@
         "Fatima Kline",
         "Loopy Godinez",
         "Alexia Thainara",
-        "Jéssica Andrade",
         "Tabatha Ricci",
+        "Jéssica Andrade",
         "Amanda Lemos",
         "Amanda Ribas",
         "Angela Hill",
@@ -439,8 +439,8 @@
         "Karine Silva",
         "Casey O'Neill",
         "Eduarda Moura",
-        "Gabriella Fernandes",
-        "Regina Tarin"
+        "Regina Tarin",
+        "Gabriella Fernandes"
       ],
       "ranks": [
         1,
@@ -468,9 +468,9 @@
         "Joselyne Edwards",
         "Ailin Perez",
         "Norma Dumont",
+        "Luana Santos",
         "Raquel Pennington",
         "Yana Santos",
-        "Luana Santos",
         "Jacqueline Cavalcanti",
         "Macy Chiasson",
         "Karol Rosa",
@@ -486,7 +486,7 @@
         3,
         4,
         5,
-        6,
+        5,
         7,
         8,
         9,
