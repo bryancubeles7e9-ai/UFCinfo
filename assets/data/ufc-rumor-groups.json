@@ -1,8 +1,42 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-04T12:01:00.135Z",
-  "lastSearchedAt": "2026-11-04T12:01:00.135Z",
+  "updatedAt": "2026-11-04T13:01:07.439Z",
+  "lastSearchedAt": "2026-11-04T13:01:07.439Z",
   "groups": [
+    {
+      "id": "2117964073237180727",
+      "fighterNames": [
+        "Baisangur Susurkaev",
+        "Damian Pinas"
+      ],
+      "matchupKey": "baisangursusurkaev|damianpinas|2026-12-12",
+      "eventDateHint": "2026-12-12",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Pelunaton comenta un posible cruce entre Baisangur Susurkaev y Damian Pinas; la publicación menciona el 12 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Pelunaton discusses a possible matchup between Baisangur Susurkaev and Damian Pinas; the post mentions December 12. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-04T13:01:07.439Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-04T12:55:59.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2117964073237180727",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2117964073237180727",
+          "publishedAt": "2026-11-04T12:55:59.000Z",
+          "language": "es",
+          "attributedAccounts": [
+            "VestnikMMA"
+          ],
+          "attribution": "@VestnikMMA"
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2117645576397357499",
       "fighterNames": [
@@ -755,8 +789,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-04T12:01:00.135Z",
+    "checkedAt": "2026-11-04T13:01:07.439Z",
     "receivedPosts": 4,
-    "added": 0
+    "added": 1
   }
 }
