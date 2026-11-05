@@ -29,12 +29,13 @@
       "exitCode": 0
     },
     "photos": {
-      "attemptedAt": "2026-11-04T13:01:26.459360+00:00",
-      "status": "success",
-      "pending": 0,
+      "attemptedAt": "2026-11-05T07:01:25.877913+00:00",
+      "status": "partial",
+      "pending": 1,
       "lastSuccessAt": "2026-11-04T13:01:28.636000+00:00",
       "consecutiveFailures": 0,
-      "finishedAt": "2026-11-04T13:01:28.636015+00:00",
+      "pendingSince": "2026-11-05T07:01:25.877913+00:00",
+      "finishedAt": "2026-11-05T07:01:52.535747+00:00",
       "exitCode": 0
     },
     "records": {
