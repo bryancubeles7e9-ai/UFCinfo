@@ -1,8 +1,40 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-05T21:01:02.421Z",
-  "lastSearchedAt": "2026-11-05T21:01:02.421Z",
+  "updatedAt": "2026-11-05T22:01:01.448Z",
+  "lastSearchedAt": "2026-11-05T22:01:01.448Z",
   "groups": [
+    {
+      "id": "2118454832730345797",
+      "fighterNames": [
+        "Steve Garcia",
+        "Yair Rodriguez"
+      ],
+      "matchupKey": "stevegarcia|yairrodriguez|2026-12-12",
+      "eventDateHint": "2026-12-12",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Pelunaton comenta un posible cruce entre Steve Garcia y Yair Rodriguez; la publicación menciona el 12 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Pelunaton discusses a possible matchup between Steve Garcia and Yair Rodriguez; the post mentions December 12. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-05T22:01:01.448Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-05T21:26:05.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2118454832730345797",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2118454832730345797",
+          "publishedAt": "2026-11-05T21:26:05.000Z",
+          "language": "es",
+          "attributedAccounts": [],
+          "attribution": "IG Steve Garcia"
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2117964073237180727",
       "fighterNames": [
@@ -759,8 +791,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-05T21:01:02.421Z",
-    "receivedPosts": 4,
-    "added": 0
+    "checkedAt": "2026-11-05T22:01:01.448Z",
+    "receivedPosts": 7,
+    "added": 1
   }
 }
