@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-05T18:01:02.935Z",
-  "lastSearchedAt": "2026-11-05T18:01:02.935Z",
+  "updatedAt": "2026-11-05T19:01:07.732804+00:00",
+  "lastSearchedAt": "2026-11-05T19:00:59.024Z",
   "groups": [
     {
       "id": "2117964073237180727",
@@ -756,40 +756,10 @@
         }
       ],
       "official": null
-    },
-    {
-      "id": "2105714508966580502",
-      "fighterNames": [
-        "Jared Gordon",
-        "Melquizael Costa"
-      ],
-      "matchupKey": "jaredgordon|melquizaelcosta|2026-11-14",
-      "eventDateHint": "2026-11-14",
-      "dateYearInferred": true,
-      "summary": {
-        "es": "Pelunaton comenta un posible cruce entre Jared Gordon y Melquizael Costa; la publicación menciona el 14 de noviembre. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Pelunaton discusses a possible matchup between Jared Gordon and Melquizael Costa; the post mentions November 14. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-10-07T17:12:00.241Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-10-01T17:40:35.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2105714508966580502",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2105714508966580502",
-          "publishedAt": "2026-10-01T17:40:35.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-05T18:01:02.935Z",
+    "checkedAt": "2026-11-05T19:00:59.024Z",
     "receivedPosts": 3,
     "added": 0
   }
