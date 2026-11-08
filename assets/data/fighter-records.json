@@ -6271,22 +6271,22 @@
     }
   },
   "lastSync": {
-    "checkedAt": "2026-11-08T07:01:27.289345+00:00",
+    "checkedAt": "2026-11-08T09:03:04.203575+00:00",
     "mode": "events",
-    "attempted": 40,
-    "succeeded": 38,
+    "attempted": 2,
+    "succeeded": 0,
     "failedIds": [
-      "ufc-joseph-kropschot",
-      "ufc-jack-della-maddalena"
+      "ufc-gabriel-bonfim",
+      "ufc-sean-brady"
     ],
-    "recordOnlyIds": [
-      "ufc-jack-della-maddalena"
-    ]
+    "recordOnlyIds": []
   },
   "fullRefreshAttemptedAt": "2026-10-11T19:06:44.957692+00:00",
   "pendingProfileIds": [
+    "ufc-gabriel-bonfim",
     "ufc-jack-della-maddalena",
-    "ufc-joseph-kropschot"
+    "ufc-joseph-kropschot",
+    "ufc-sean-brady"
   ],
   "unmatchedEventFighters": {
     "ufc-fight-night-october-31-2026": [

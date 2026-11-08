@@ -7243,10 +7243,8 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-08T07:01:18.678372+00:00",
-    "verifiedIds": [
-      "ufc-fight-night-october-31-2026"
-    ],
+    "checkedAt": "2026-11-08T09:03:04.203575+00:00",
+    "verifiedIds": [],
     "failedIds": [
       "ufc-fight-night-november-07-2026"
     ]
