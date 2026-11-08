@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-11-08T07:01:16.451912+00:00",
+  "synchronizedAt": "2026-11-08T13:01:06.817789+00:00",
   "events": [
     {
       "id": "ufc-fight-night-february-06-2027",
@@ -605,10 +605,10 @@
       "checkedAt": "2026-11-08",
       "bouts": [
         {
-          "section": "main",
           "red": "Waldo Cortes Acosta",
           "blue": "Johnny Walker",
-          "division": "Heavyweight",
+          "section": "main",
+          "division": "Heavyweight Bout",
           "winner": "Johnny Walker",
           "outcome": null,
           "method": "KO/TKO",
@@ -616,10 +616,10 @@
           "time": "2:27"
         },
         {
-          "section": "main",
           "red": "Tatiana Suarez",
           "blue": "Virna Jandiroba",
-          "division": "Women's Strawweight",
+          "section": "main",
+          "division": "Women's Strawweight Bout",
           "winner": "Tatiana Suarez",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -627,10 +627,10 @@
           "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Davey Grant",
           "blue": "Elijah Smith",
-          "division": "Bantamweight",
+          "section": "main",
+          "division": "Bantamweight Bout",
           "winner": "Elijah Smith",
           "outcome": null,
           "method": "KO/TKO",
@@ -638,10 +638,10 @@
           "time": "1:00"
         },
         {
-          "section": "main",
           "red": "Billy Elekana",
           "blue": "Lucas Fernando",
-          "division": "Light Heavyweight",
+          "section": "main",
+          "division": "Light Heavyweight Bout",
           "winner": "Lucas Fernando",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -649,10 +649,10 @@
           "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Priscila Cachoeira",
           "blue": "Nina Milošević",
-          "division": "Women's Bantamweight",
+          "section": "main",
+          "division": "Women's Bantamweight Bout",
           "winner": "Nina Milošević",
           "outcome": null,
           "method": "KO/TKO",
@@ -660,10 +660,10 @@
           "time": "3:40"
         },
         {
-          "section": "main",
           "red": "Mitch Raposo",
           "blue": "Marcos Degli",
-          "division": "Flyweight",
+          "section": "main",
+          "division": "Flyweight Bout",
           "winner": "Mitch Raposo",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -671,21 +671,10 @@
           "time": "5:00"
         },
         {
-          "section": "main",
-          "red": "Gabriel Bonfim",
-          "blue": "Sean Brady",
-          "division": "Welterweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "section": "prelims",
           "red": "Keiichiro Nakamura",
           "blue": "Ollie Schmid",
-          "division": "Featherweight",
+          "section": "prelims",
+          "division": "Featherweight Bout",
           "winner": "Ollie Schmid",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -693,10 +682,10 @@
           "time": "5:00"
         },
         {
-          "section": "prelims",
           "red": "Gabriel Lorenço",
           "blue": "Thomas Petersen",
-          "division": "Heavyweight",
+          "section": "prelims",
+          "division": "Heavyweight Bout",
           "winner": "Thomas Petersen",
           "outcome": null,
           "method": "KO/TKO",
@@ -704,10 +693,10 @@
           "time": "4:47"
         },
         {
-          "section": "prelims",
           "red": "Karine Silva",
           "blue": "Gabriella Fernandes",
-          "division": "Women's Flyweight",
+          "section": "prelims",
+          "division": "Women's Flyweight Bout",
           "winner": "Karine Silva",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -715,10 +704,10 @@
           "time": "5:00"
         },
         {
-          "section": "prelims",
           "red": "Jose Delano",
           "blue": "Murtazali Magomedov",
-          "division": "Featherweight",
+          "section": "prelims",
+          "division": "Featherweight Bout",
           "winner": "Murtazali Magomedov",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -726,10 +715,10 @@
           "time": "5:00"
         },
         {
-          "section": "prelims",
           "red": "Austin Bashi",
           "blue": "Carlos Calderon",
-          "division": "Featherweight",
+          "section": "prelims",
+          "division": "Featherweight Bout",
           "winner": "Austin Bashi",
           "outcome": null,
           "method": "Submission",
@@ -737,10 +726,10 @@
           "time": "1:07"
         },
         {
-          "section": "prelims",
           "red": "Mantas Kondratavičius",
           "blue": "Andre Petroski",
-          "division": "Middleweight",
+          "section": "prelims",
+          "division": "Middleweight Bout",
           "winner": "Andre Petroski",
           "outcome": null,
           "method": "KO/TKO",
@@ -748,10 +737,10 @@
           "time": "4:39"
         },
         {
-          "section": "prelims",
           "red": "Seokhyeon Ko",
           "blue": "Wellington Turman",
-          "division": "Welterweight",
+          "section": "prelims",
+          "division": "Welterweight Bout",
           "winner": "Seokhyeon Ko",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -759,10 +748,10 @@
           "time": "5:00"
         },
         {
-          "section": "prelims",
           "red": "Jonny Parsons",
           "blue": "José Souza",
-          "division": "Welterweight",
+          "section": "prelims",
+          "division": "Welterweight Bout",
           "winner": "José Souza",
           "outcome": null,
           "method": "KO/TKO",
@@ -954,28 +943,11 @@
             "round": "1",
             "time": "1:07"
           }
-        }
-      ],
-      "pendingBoutRemovals": {
-        "gabrielbonfim|seanbrady": {
-          "firstSeenAt": "2026-11-08T07:01:16.451912+00:00",
-          "comparable": true,
-          "snapshot": [
-            "andrepetroski|mantaskondratavicius",
-            "austinbashi|carloscalderon",
-            "billyelekana|lucasfernando",
-            "daveygrant|elijahsmith",
-            "gabriellafernandes|karinesilva",
-            "gabriellorenco|thomaspetersen",
-            "johnnywalker|waldocortesacosta",
-            "jonnyparsons|josesouza",
-            "josedelano|murtazalimagomedov",
-            "keiichironakamura|ollieschmid",
-            "marcosdegli|mitchraposo",
-            "ninamilosevic|priscilacachoeira",
-            "seokhyeonko|wellingtonturman",
-            "tatianasuarez|virnajandiroba"
-          ],
+        },
+        {
+          "kind": "removed-from-card",
+          "checkedAt": "2026-11-08T13:01:06.817789+00:00",
+          "source": "Cito",
           "bout": {
             "section": "main",
             "red": "Gabriel Bonfim",
@@ -988,7 +960,9 @@
             "time": ""
           }
         }
-      }
+      ],
+      "resultsSource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+      "resultsCheckedAt": "2026-11-08T13:01:09.591361+00:00"
     },
     {
       "id": "ufc-fight-night-october-31-2026",
@@ -1319,7 +1293,7 @@
         }
       ],
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
-      "resultsCheckedAt": "2026-11-08T07:01:18.678372+00:00"
+      "resultsCheckedAt": "2026-11-08T13:01:09.591361+00:00"
     },
     {
       "id": "ufc-333",
@@ -7243,14 +7217,15 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-08T09:03:04.203575+00:00",
-    "verifiedIds": [],
-    "failedIds": [
-      "ufc-fight-night-november-07-2026"
-    ]
+    "checkedAt": "2026-11-08T13:01:09.591361+00:00",
+    "verifiedIds": [
+      "ufc-fight-night-november-07-2026",
+      "ufc-fight-night-october-31-2026"
+    ],
+    "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-11-08T07:01:18.886136+00:00",
+    "checkedAt": "2026-11-08T13:01:09.879660+00:00",
     "failedIds": [
       "ufc-334",
       "ufc-fight-night-november-21-2026",
