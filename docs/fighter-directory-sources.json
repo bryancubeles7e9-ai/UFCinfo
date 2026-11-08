@@ -7551,5 +7551,65 @@
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
     "countryConsulted": "2026-10-24"
+  },
+  {
+    "id": "ufc-stephen-thompson",
+    "name": "Stephen Thompson",
+    "aliases": [
+      "Stephen Thompson"
+    ],
+    "source": "https://www.ufc.com/athlete/stephen-thompson",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-11-08"
+  },
+  {
+    "id": "ufc-evan-elder",
+    "name": "Evan Elder",
+    "aliases": [
+      "Evan Elder"
+    ],
+    "source": "https://www.ufc.com/athlete/evan-elder",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-11-08"
+  },
+  {
+    "id": "ufc-samuel-sanches",
+    "name": "Samuel Sanches",
+    "aliases": [
+      "Samuel Sanches"
+    ],
+    "source": "https://www.ufc.com/athlete/samuel-sanches",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-334",
+    "countryConsulted": "2026-11-08"
+  },
+  {
+    "id": "ufc-marcos-degli",
+    "name": "Marcos Degli",
+    "aliases": [
+      "Marcos Degli"
+    ],
+    "source": "https://www.ufc.com/athlete/marcos-degli",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-11-08"
+  },
+  {
+    "id": "ufc-carlos-calderon",
+    "name": "Carlos Calderon",
+    "aliases": [
+      "Carlos Calderon"
+    ],
+    "source": "https://www.ufc.com/athlete/carlos-calderon",
+    "code": "SV",
+    "country": "El Salvador",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
+    "countryConsulted": "2026-11-08"
   }
 ]
