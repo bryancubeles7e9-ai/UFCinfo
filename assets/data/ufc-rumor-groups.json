@@ -1,39 +1,8 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-08T07:00:58.972Z",
-  "lastSearchedAt": "2026-11-08T07:00:58.972Z",
+  "updatedAt": "2026-11-08T08:00:55.790Z",
+  "lastSearchedAt": "2026-11-08T08:00:55.790Z",
   "groups": [
-    {
-      "id": "2119288137499185400",
-      "fighterNames": [
-        "Johnny Walker",
-        "Waldo Cortes Acosta"
-      ],
-      "matchupKey": "johnnywalker|waldocortesacosta|undated:2026-11",
-      "eventDateHint": null,
-      "rematch": false,
-      "dateYearInferred": false,
-      "summary": {
-        "es": "MMA Latinoamérica comenta un posible cruce entre Johnny Walker y Waldo Cortes Acosta, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "MMA Latinoamérica discusses a possible matchup between Johnny Walker and Waldo Cortes Acosta, with no exact date stated by the source. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-08T05:00:55.023Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-08T04:37:21.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2119288137499185400",
-          "sourceId": "mma-latinoamerica",
-          "postUrl": "https://x.com/ClubDeLasMMA/status/2119288137499185400",
-          "publishedAt": "2026-11-08T04:37:21.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
     {
       "id": "2119274271008833826",
       "fighterNames": [
@@ -965,7 +934,7 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-08T07:00:58.972Z",
+    "checkedAt": "2026-11-08T08:00:55.790Z",
     "receivedPosts": 29,
     "added": 0
   }
