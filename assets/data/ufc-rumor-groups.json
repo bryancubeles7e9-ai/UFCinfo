@@ -1,8 +1,40 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-09T03:01:01.986Z",
-  "lastSearchedAt": "2026-11-09T03:01:01.986Z",
+  "updatedAt": "2026-11-09T04:01:00.704Z",
+  "lastSearchedAt": "2026-11-09T04:01:00.704Z",
   "groups": [
+    {
+      "id": "2119635484091502788",
+      "fighterNames": [
+        "Daniel Rodriguez",
+        "Roberto Soldić"
+      ],
+      "matchupKey": "danielrodriguez|robertosoldic|2027-01-16",
+      "eventDateHint": "2027-01-16",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "MMA Latinoamérica comenta un posible cruce entre Daniel Rodriguez y Roberto Soldić; la publicación menciona el 16 de enero. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "MMA Latinoamérica discusses a possible matchup between Daniel Rodriguez and Roberto Soldić; the post mentions January 16. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-09T04:01:00.704Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-09T03:37:34.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2119635484091502788",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2119635484091502788",
+          "publishedAt": "2026-11-09T03:37:34.000Z",
+          "language": "es",
+          "attributedAccounts": [],
+          "attribution": "RealKevink"
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2119274271008833826",
       "fighterNames": [
@@ -934,8 +966,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-09T03:01:01.986Z",
-    "receivedPosts": 17,
-    "added": 0
+    "checkedAt": "2026-11-09T04:01:00.704Z",
+    "receivedPosts": 10,
+    "added": 1
   }
 }
