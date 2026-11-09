@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "Cito + UFCalendar",
   "sourceUrl": "https://citoapi.com/ufc-api/",
-  "synchronizedAt": "2026-11-08T13:01:06.817789+00:00",
+  "synchronizedAt": "2026-11-09T07:01:14.983139+00:00",
   "events": [
     {
       "id": "ufc-fight-night-february-06-2027",
@@ -147,7 +147,7 @@
       "status": "scheduled",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
-      "checkedAt": "2026-11-08",
+      "checkedAt": "2026-11-09",
       "bouts": [
         {
           "section": "main",
@@ -284,7 +284,7 @@
       "location": "Madison Square Garden",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-334",
-      "checkedAt": "2026-11-08",
+      "checkedAt": "2026-11-09",
       "bouts": [
         {
           "section": "main",
@@ -602,7 +602,7 @@
       "status": "completed",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-      "checkedAt": "2026-11-08",
+      "checkedAt": "2026-11-09",
       "bouts": [
         {
           "red": "Waldo Cortes Acosta",
@@ -753,6 +753,28 @@
           "section": "prelims",
           "division": "Welterweight Bout",
           "winner": "José Souza",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "4:16"
+        },
+        {
+          "section": "prelims",
+          "red": "Mantas Kondratavicius",
+          "blue": "Andre Petroski",
+          "division": "Middleweight",
+          "winner": "Andre Petroski",
+          "outcome": null,
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "4:39"
+        },
+        {
+          "section": "prelims",
+          "red": "Jonny Parsons",
+          "blue": "Jose Souza",
+          "division": "Welterweight",
+          "winner": "Jose Souza",
           "outcome": null,
           "method": "KO/TKO",
           "round": "1",
@@ -962,7 +984,7 @@
         }
       ],
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-      "resultsCheckedAt": "2026-11-08T13:01:09.591361+00:00"
+      "resultsCheckedAt": "2026-11-09T07:01:17.503449+00:00"
     },
     {
       "id": "ufc-fight-night-october-31-2026",
@@ -975,7 +997,7 @@
       "location": "Meta APEX",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
-      "checkedAt": "2026-11-08",
+      "checkedAt": "2026-11-09",
       "bouts": [
         {
           "red": "Renato Moicano",
@@ -1293,7 +1315,7 @@
         }
       ],
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-october-31-2026",
-      "resultsCheckedAt": "2026-11-08T13:01:09.591361+00:00"
+      "resultsCheckedAt": "2026-11-09T07:01:17.503449+00:00"
     },
     {
       "id": "ufc-333",
@@ -7217,7 +7239,7 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-08T13:01:09.591361+00:00",
+    "checkedAt": "2026-11-09T07:01:17.503449+00:00",
     "verifiedIds": [
       "ufc-fight-night-november-07-2026",
       "ufc-fight-night-october-31-2026"
@@ -7225,7 +7247,7 @@
     "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-11-08T13:01:09.879660+00:00",
+    "checkedAt": "2026-11-09T07:01:17.852693+00:00",
     "failedIds": [
       "ufc-334",
       "ufc-fight-night-november-21-2026",
