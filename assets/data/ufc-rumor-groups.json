@@ -1,8 +1,42 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-10T07:40:42.403Z",
-  "lastSearchedAt": "2026-11-10T07:40:42.403Z",
+  "updatedAt": "2026-11-10T15:50:15.963Z",
+  "lastSearchedAt": "2026-11-10T15:50:15.963Z",
   "groups": [
+    {
+      "id": "2120177071519670512",
+      "fighterNames": [
+        "Steve Garvia",
+        "Yair Rodriguez"
+      ],
+      "matchupKey": "stevegarvia|yairrodriguez|2026-12-12",
+      "eventDateHint": "2026-12-12",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Championship Rounds comenta un posible cruce entre Steve Garvia y Yair Rodriguez; la publicación menciona el 12 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds discusses a possible matchup between Steve Garvia and Yair Rodriguez; the post mentions December 12. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-10T15:50:15.963Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-10T15:29:39.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2120177071519670512",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2120177071519670512",
+          "publishedAt": "2026-11-10T15:29:39.000Z",
+          "language": "en",
+          "attributedAccounts": [
+            "BigMarcel24"
+          ],
+          "attribution": "at UFC 335 on December 12"
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2119635484091502788",
       "fighterNames": [
@@ -966,8 +1000,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-10T07:40:42.403Z",
-    "receivedPosts": 3,
-    "added": 0
+    "checkedAt": "2026-11-10T15:50:15.963Z",
+    "receivedPosts": 4,
+    "added": 1
   }
 }
