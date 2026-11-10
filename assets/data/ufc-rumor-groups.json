@@ -1,8 +1,42 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-10T15:50:15.963Z",
-  "lastSearchedAt": "2026-11-10T15:50:15.963Z",
+  "updatedAt": "2026-11-10T21:28:27.995Z",
+  "lastSearchedAt": "2026-11-10T21:28:27.995Z",
   "groups": [
+    {
+      "id": "2120189800703467769",
+      "fighterNames": [
+        "Chidi Njokuani",
+        "Ignacio Bahamondes"
+      ],
+      "matchupKey": "chidinjokuani|ignaciobahamondes|2027-01-16",
+      "eventDateHint": "2027-01-16",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Pelunaton comenta un posible cruce entre Chidi Njokuani y Ignacio Bahamondes; la publicación menciona el 16 de enero. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Pelunaton discusses a possible matchup between Chidi Njokuani and Ignacio Bahamondes; the post mentions January 16. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-10T21:28:27.995Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-10T16:20:14.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2120189800703467769",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2120189800703467769",
+          "publishedAt": "2026-11-10T16:20:14.000Z",
+          "language": "es",
+          "attributedAccounts": [
+            "BigMarcel24"
+          ],
+          "attribution": "@BigMarcel24"
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2120177071519670512",
       "fighterNames": [
@@ -1000,8 +1034,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-10T15:50:15.963Z",
-    "receivedPosts": 4,
+    "checkedAt": "2026-11-10T21:28:27.995Z",
+    "receivedPosts": 6,
     "added": 1
   }
 }
