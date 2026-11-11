@@ -1,8 +1,39 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-11T16:15:58.759Z",
-  "lastSearchedAt": "2026-11-11T16:15:58.759Z",
+  "updatedAt": "2026-11-11T22:43:49.833Z",
+  "lastSearchedAt": "2026-11-11T22:43:49.833Z",
   "groups": [
+    {
+      "id": "2120568210974183440",
+      "fighterNames": [
+        "Ilia Topuria",
+        "Kamaru Usman"
+      ],
+      "matchupKey": "iliatopuria|kamaruusman|undated:2026-11",
+      "eventDateHint": null,
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "Championship Rounds comenta un posible cruce entre Ilia Topuria y Kamaru Usman, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds discusses a possible matchup between Ilia Topuria and Kamaru Usman, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-11T22:43:49.833Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-11T17:23:54.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2120568210974183440",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2120568210974183440",
+          "publishedAt": "2026-11-11T17:23:54.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2120189800703467769",
       "fighterNames": [
@@ -1034,8 +1065,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-11T16:15:58.759Z",
-    "receivedPosts": 7,
-    "added": 0
+    "checkedAt": "2026-11-11T22:43:49.833Z",
+    "receivedPosts": 11,
+    "added": 1
   }
 }
