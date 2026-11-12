@@ -1,8 +1,42 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-12T11:44:42.501Z",
-  "lastSearchedAt": "2026-11-12T11:44:42.501Z",
+  "updatedAt": "2026-11-12T19:12:53.521Z",
+  "lastSearchedAt": "2026-11-12T19:12:53.521Z",
   "groups": [
+    {
+      "id": "2120911913236505014",
+      "fighterNames": [
+        "Kamaru Usman",
+        "Merab Dvalishvili"
+      ],
+      "matchupKey": "kamaruusman|merabdvalishvili|undated:2026-11",
+      "eventDateHint": null,
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "Championship Rounds comenta un posible cruce entre Kamaru Usman y Merab Dvalishvili, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds discusses a possible matchup between Kamaru Usman and Merab Dvalishvili, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-12T19:12:53.521Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-12T16:09:39.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2120911913236505014",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2120911913236505014",
+          "publishedAt": "2026-11-12T16:09:39.000Z",
+          "language": "en",
+          "attributedAccounts": [
+            "RAFWrestlingUSA"
+          ],
+          "attribution": "@RAFWrestlingUSA"
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2120568210974183440",
       "fighterNames": [
@@ -1065,8 +1099,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-12T11:44:42.501Z",
-    "receivedPosts": 10,
-    "added": 0
+    "checkedAt": "2026-11-12T19:12:53.521Z",
+    "receivedPosts": 15,
+    "added": 1
   }
 }
