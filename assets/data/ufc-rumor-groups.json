@@ -1,8 +1,40 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-13T21:32:48.625Z",
-  "lastSearchedAt": "2026-11-13T21:32:48.625Z",
+  "updatedAt": "2026-11-14T01:41:33.127Z",
+  "lastSearchedAt": "2026-11-14T01:41:33.127Z",
   "groups": [
+    {
+      "id": "2121388164598116426",
+      "fighterNames": [
+        "Gable Steveson",
+        "Terrance Chatman"
+      ],
+      "matchupKey": "gablesteveson|terrancechatman|2027-01-30",
+      "eventDateHint": "2027-01-30",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Championship Rounds comenta un posible cruce entre Gable Steveson y Terrance Chatman; la publicación menciona el 30 de enero. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds discusses a possible matchup between Gable Steveson and Terrance Chatman; the post mentions January 30. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-14T01:41:33.127Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-13T23:42:06.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2121388164598116426",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2121388164598116426",
+          "publishedAt": "2026-11-13T23:42:06.000Z",
+          "language": "en",
+          "attributedAccounts": [],
+          "attribution": "connected_mma/IG"
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2120911913236505014",
       "fighterNames": [
@@ -1099,8 +1131,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-13T21:32:48.625Z",
-    "receivedPosts": 17,
-    "added": 0
+    "checkedAt": "2026-11-14T01:41:33.127Z",
+    "receivedPosts": 20,
+    "added": 1
   }
 }
