@@ -1,8 +1,78 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-14T23:33:39.726Z",
-  "lastSearchedAt": "2026-11-14T23:33:39.726Z",
+  "updatedAt": "2026-11-15T03:00:19.403Z",
+  "lastSearchedAt": "2026-11-15T03:00:19.403Z",
   "groups": [
+    {
+      "id": "2121800246770761860",
+      "fighterNames": [
+        "Gabriel Bonfim",
+        "Sean Brady"
+      ],
+      "matchupKey": "gabrielbonfim|seanbrady|2027-01-23",
+      "eventDateHint": "2027-01-23",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Championship Rounds comenta un posible cruce entre Gabriel Bonfim y Sean Brady; la publicación menciona el 23 de enero. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds discusses a possible matchup between Gabriel Bonfim and Sean Brady; the post mentions January 23. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-15T03:00:19.403Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-15T02:59:34.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2121800246770761860",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2121800246770761860",
+          "publishedAt": "2026-11-15T02:59:34.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2121799374657429721",
+      "fighterNames": [
+        "Steve Garcia",
+        "Yair Rodriguez"
+      ],
+      "matchupKey": "stevegarcia|yairrodriguez|2027-01-16",
+      "eventDateHint": "2027-01-16",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Carlos Contreras Legaspi comenta un posible cruce entre Steve Garcia y Yair Rodriguez; la publicación menciona el 16 de enero. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Carlos Contreras Legaspi discusses a possible matchup between Steve Garcia and Yair Rodriguez; the post mentions January 16. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-15T03:00:19.403Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-15T02:56:06.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2121799374657429721",
+          "sourceId": "cclegaspi",
+          "postUrl": "https://x.com/CCLegaspi/status/2121799374657429721",
+          "publishedAt": "2026-11-15T02:56:06.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        },
+        {
+          "id": "2121799656267260351",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2121799656267260351",
+          "publishedAt": "2026-11-15T02:57:13.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2121388164598116426",
       "fighterNames": [
@@ -1131,8 +1201,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-14T23:33:39.726Z",
-    "receivedPosts": 22,
-    "added": 0
+    "checkedAt": "2026-11-15T03:00:19.403Z",
+    "receivedPosts": 33,
+    "added": 2
   }
 }
