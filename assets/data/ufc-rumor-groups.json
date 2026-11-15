@@ -1,8 +1,184 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-15T03:00:19.403Z",
-  "lastSearchedAt": "2026-11-15T03:00:19.403Z",
+  "updatedAt": "2026-11-15T10:51:53.425267+00:00",
+  "lastSearchedAt": "2026-11-15T10:51:39.716Z",
   "groups": [
+    {
+      "id": "2121869909693206685",
+      "fighterNames": [
+        "Ciryl Gane",
+        "Josh Hokit"
+      ],
+      "matchupKey": "cirylgane|joshhokit|undated:2026-11",
+      "eventDateHint": null,
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "Championship Rounds comenta un posible cruce entre Ciryl Gane y Josh Hokit, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds discusses a possible matchup between Ciryl Gane and Josh Hokit, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-15T10:51:39.716Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-15T07:36:23.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2121845549825438140",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2121845549825438140",
+          "publishedAt": "2026-11-15T05:59:35.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        },
+        {
+          "id": "2121848970657800227",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2121848970657800227",
+          "publishedAt": "2026-11-15T06:13:11.000Z",
+          "language": "es",
+          "attributedAccounts": [],
+          "attribution": "mente Ciryl Gane 🇫🇷 vs Josh Hokit 🇺🇸"
+        },
+        {
+          "id": "2121869909693206685",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2121869909693206685",
+          "publishedAt": "2026-11-15T07:36:23.000Z",
+          "language": "en",
+          "attributedAccounts": [
+            "JohnnyWalker"
+          ],
+          "attribution": "@JohnnyWalker"
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2121821329955373254",
+      "fighterNames": [
+        "Amanda Nunes",
+        "Kayla Harrison"
+      ],
+      "matchupKey": "amandanunes|kaylaharrison|undated:2026-11",
+      "eventDateHint": null,
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "MMA Latinoamérica comenta un posible cruce entre Amanda Nunes y Kayla Harrison, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "MMA Latinoamérica discusses a possible matchup between Amanda Nunes and Kayla Harrison, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-15T10:51:39.716Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-15T04:23:21.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2121821329955373254",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2121821329955373254",
+          "publishedAt": "2026-11-15T04:23:21.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2121812063634772264",
+      "fighterNames": [
+        "Kevin Holland",
+        "Uroš Medić"
+      ],
+      "matchupKey": "kevinholland|urosmedic|undated:2026-11",
+      "eventDateHint": null,
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "Pelunaton comenta un posible cruce entre Kevin Holland y Uroš Medić, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Pelunaton discusses a possible matchup between Kevin Holland and Uroš Medić, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-15T10:51:39.716Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-15T03:46:31.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2121810706706366756",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2121810706706366756",
+          "publishedAt": "2026-11-15T03:41:08.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        },
+        {
+          "id": "2121811986761588748",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2121811986761588748",
+          "publishedAt": "2026-11-15T03:46:13.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        },
+        {
+          "id": "2121812063634772264",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2121812063634772264",
+          "publishedAt": "2026-11-15T03:46:31.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
+    {
+      "id": "2121811117857194415",
+      "fighterNames": [
+        "Ethyn Ewing",
+        "Kyler Phillips"
+      ],
+      "matchupKey": "ethynewing|kylerphillips|2026-12-12",
+      "eventDateHint": "2026-12-12",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "Pelunaton comenta un posible cruce entre Ethyn Ewing y Kyler Phillips; la publicación menciona el 12 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Pelunaton discusses a possible matchup between Ethyn Ewing and Kyler Phillips; the post mentions December 12. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-15T10:51:39.716Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-15T03:42:46.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2121811117857194415",
+          "sourceId": "pelunaton",
+          "postUrl": "https://x.com/pelunaton/status/2121811117857194415",
+          "publishedAt": "2026-11-15T03:42:46.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        },
+        {
+          "id": "2121811121145291223",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2121811121145291223",
+          "publishedAt": "2026-11-15T03:42:47.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        },
+        {
+          "id": "2121811501577027878",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2121811501577027878",
+          "publishedAt": "2026-11-15T03:44:17.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2121800246770761860",
       "fighterNames": [
@@ -28,45 +204,6 @@
           "sourceId": "championship-rounds",
           "postUrl": "https://x.com/ChampRDS/status/2121800246770761860",
           "publishedAt": "2026-11-15T02:59:34.000Z",
-          "language": "en",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2121799374657429721",
-      "fighterNames": [
-        "Steve Garcia",
-        "Yair Rodriguez"
-      ],
-      "matchupKey": "stevegarcia|yairrodriguez|2027-01-16",
-      "eventDateHint": "2027-01-16",
-      "rematch": false,
-      "dateYearInferred": true,
-      "summary": {
-        "es": "Carlos Contreras Legaspi comenta un posible cruce entre Steve Garcia y Yair Rodriguez; la publicación menciona el 16 de enero. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Carlos Contreras Legaspi discusses a possible matchup between Steve Garcia and Yair Rodriguez; the post mentions January 16. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-15T03:00:19.403Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-15T02:56:06.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2121799374657429721",
-          "sourceId": "cclegaspi",
-          "postUrl": "https://x.com/CCLegaspi/status/2121799374657429721",
-          "publishedAt": "2026-11-15T02:56:06.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        },
-        {
-          "id": "2121799656267260351",
-          "sourceId": "championship-rounds",
-          "postUrl": "https://x.com/ChampRDS/status/2121799656267260351",
-          "publishedAt": "2026-11-15T02:57:13.000Z",
           "language": "en",
           "attributedAccounts": []
         }
@@ -171,40 +308,6 @@
       "official": null
     },
     {
-      "id": "2120189800703467769",
-      "fighterNames": [
-        "Chidi Njokuani",
-        "Ignacio Bahamondes"
-      ],
-      "matchupKey": "chidinjokuani|ignaciobahamondes|2027-01-16",
-      "eventDateHint": "2027-01-16",
-      "rematch": false,
-      "dateYearInferred": true,
-      "summary": {
-        "es": "Pelunaton comenta un posible cruce entre Chidi Njokuani y Ignacio Bahamondes; la publicación menciona el 16 de enero. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Pelunaton discusses a possible matchup between Chidi Njokuani and Ignacio Bahamondes; the post mentions January 16. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-10T21:28:27.995Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-10T16:20:14.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2120189800703467769",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2120189800703467769",
-          "publishedAt": "2026-11-10T16:20:14.000Z",
-          "language": "es",
-          "attributedAccounts": [
-            "BigMarcel24"
-          ],
-          "attribution": "@BigMarcel24"
-        }
-      ],
-      "official": null
-    },
-    {
       "id": "2120177071519670512",
       "fighterNames": [
         "Steve Garvia",
@@ -234,38 +337,6 @@
             "BigMarcel24"
           ],
           "attribution": "at UFC 335 on December 12"
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2119635484091502788",
-      "fighterNames": [
-        "Daniel Rodriguez",
-        "Roberto Soldić"
-      ],
-      "matchupKey": "danielrodriguez|robertosoldic|2027-01-16",
-      "eventDateHint": "2027-01-16",
-      "rematch": false,
-      "dateYearInferred": true,
-      "summary": {
-        "es": "MMA Latinoamérica comenta un posible cruce entre Daniel Rodriguez y Roberto Soldić; la publicación menciona el 16 de enero. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "MMA Latinoamérica discusses a possible matchup between Daniel Rodriguez and Roberto Soldić; the post mentions January 16. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-09T04:01:00.704Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-09T03:37:34.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2119635484091502788",
-          "sourceId": "mma-latinoamerica",
-          "postUrl": "https://x.com/ClubDeLasMMA/status/2119635484091502788",
-          "publishedAt": "2026-11-09T03:37:34.000Z",
-          "language": "es",
-          "attributedAccounts": [],
-          "attribution": "RealKevink"
         }
       ],
       "official": null
@@ -1201,8 +1272,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-15T03:00:19.403Z",
-    "receivedPosts": 33,
-    "added": 2
+    "checkedAt": "2026-11-15T10:51:39.716Z",
+    "receivedPosts": 60,
+    "added": 4
   }
 }
