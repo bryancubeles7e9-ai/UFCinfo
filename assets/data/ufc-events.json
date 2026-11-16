@@ -279,159 +279,155 @@
       "number": 334,
       "title": "UFC 334",
       "subtitle": "Ciryl Gane vs Josh Hokit",
-      "status": "scheduled",
+      "status": "completed",
       "date": "2026-11-14T22:00:00+00:00",
       "location": "Madison Square Garden",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-334",
-      "checkedAt": "2026-11-09",
+      "checkedAt": "2026-11-16",
       "bouts": [
         {
-          "section": "main",
           "red": "Ciryl Gane",
           "blue": "Josh Hokit",
-          "division": "Heavyweight Title",
-          "winner": null,
+          "section": "main",
+          "division": "Heavyweight Title Bout",
+          "winner": "Ciryl Gane",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": "",
-          "scheduledRounds": 5,
-          "roundsSource": "https://www.ufc.com/event/ufc-334"
+          "method": "Decision - Unanimous",
+          "round": "5",
+          "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Kayla Harrison",
           "blue": "Amanda Nunes",
-          "division": "Women's Bantamweight Title",
-          "winner": null,
+          "section": "main",
+          "division": "Women's Bantamweight Title Bout",
+          "winner": "Kayla Harrison",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": "",
-          "scheduledRounds": 5,
-          "roundsSource": "https://www.ufc.com/event/ufc-334"
+          "method": "Submission",
+          "round": "4",
+          "time": "1:29"
         },
         {
-          "section": "main",
           "red": "Caio Borralho",
           "blue": "Yousri Belgaroui",
-          "division": "Middleweight",
-          "winner": null,
+          "section": "main",
+          "division": "Middleweight Bout",
+          "winner": "Caio Borralho",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Uroš Medić",
           "blue": "Kevin Holland",
-          "division": "Welterweight",
+          "section": "main",
+          "division": "Welterweight Bout",
           "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "outcome": "Empate",
+          "method": "Decision - Majority",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Bilal Hasan",
           "blue": "Luis Gurule",
-          "division": "Flyweight",
-          "winner": null,
+          "section": "main",
+          "division": "Flyweight Bout",
+          "winner": "Luis Gurule",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Split",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "prelims",
           "red": "Stephen Thompson",
           "blue": "Charles Radtke",
-          "division": "Welterweight",
-          "winner": null,
+          "section": "prelims",
+          "division": "Welterweight Bout",
+          "winner": "Stephen Thompson",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "3",
+          "time": "2:54"
         },
         {
-          "section": "prelims",
           "red": "Drew Dober",
           "blue": "Chris Duncan",
-          "division": "Lightweight",
-          "winner": null,
+          "section": "prelims",
+          "division": "Lightweight Bout",
+          "winner": "Chris Duncan",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "prelims",
           "red": "Jim Miller",
           "blue": "Terrance McKinney",
-          "division": "Lightweight",
-          "winner": null,
+          "section": "prelims",
+          "division": "Lightweight Bout",
+          "winner": "Terrance McKinney",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "1:53"
         },
         {
-          "section": "prelims",
           "red": "Donte Johnson",
           "blue": "Cesar Almeida",
-          "division": "Middleweight",
-          "winner": null,
+          "section": "prelims",
+          "division": "Catchweight Bout",
+          "winner": "Cesar Almeida",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "3:20"
         },
         {
-          "section": "early-prelims",
           "red": "Jared Gordon",
           "blue": "Melquizael Costa",
-          "division": "Lightweight",
-          "winner": null,
+          "section": "early-prelims",
+          "division": "Lightweight Bout",
+          "winner": "Melquizael Costa",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "early-prelims",
           "red": "Macy Chiasson",
           "blue": "Bia Mesquita",
-          "division": "Women's Bantamweight",
-          "winner": null,
+          "section": "early-prelims",
+          "division": "Women's Bantamweight Bout",
+          "winner": "Bia Mesquita",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Submission",
+          "round": "1",
+          "time": "3:23"
         },
         {
-          "section": "early-prelims",
-          "red": "Adrian Yanez",
+          "red": "Alatengheili",
           "blue": "Juan Diaz",
-          "division": "Bantamweight",
-          "winner": null,
+          "section": "early-prelims",
+          "division": "Bantamweight Bout",
+          "winner": "Juan Diaz",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "early-prelims",
           "red": "Evan Elder",
           "blue": "Samuel Sanches",
-          "division": "Lightweight",
-          "winner": null,
+          "section": "early-prelims",
+          "division": "Lightweight Bout",
+          "winner": "Evan Elder",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         }
       ],
       "poster": "assets/images/events/ufc-334.jpg",
@@ -586,10 +582,27 @@
             "round": "",
             "time": ""
           }
+        },
+        {
+          "kind": "removed-from-card",
+          "checkedAt": "2026-11-16T09:41:03.416310+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": "early-prelims",
+            "red": "Adrian Yanez",
+            "blue": "Juan Diaz",
+            "division": "Bantamweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
         }
       ],
-      "pendingBoutRemovals": {},
-      "eventKind": "numbered"
+      "eventKind": "numbered",
+      "resultsSource": "https://www.ufc.com/event/ufc-334",
+      "resultsCheckedAt": "2026-11-16T09:41:03.416310+00:00"
     },
     {
       "id": "ufc-fight-night-november-07-2026",
@@ -7239,10 +7252,9 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-09T07:01:17.503449+00:00",
+    "checkedAt": "2026-11-16T09:41:03.416310+00:00",
     "verifiedIds": [
-      "ufc-fight-night-november-07-2026",
-      "ufc-fight-night-october-31-2026"
+      "ufc-334"
     ],
     "failedIds": []
   },
