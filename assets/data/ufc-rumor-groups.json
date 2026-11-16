@@ -1,184 +1,8 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-16T09:40:35.117Z",
-  "lastSearchedAt": "2026-11-16T09:40:35.117Z",
+  "updatedAt": "2026-11-16T19:53:48.788112+00:00",
+  "lastSearchedAt": "2026-11-16T19:53:39.322Z",
   "groups": [
-    {
-      "id": "2121869909693206685",
-      "fighterNames": [
-        "Ciryl Gane",
-        "Josh Hokit"
-      ],
-      "matchupKey": "cirylgane|joshhokit|undated:2026-11",
-      "eventDateHint": null,
-      "rematch": false,
-      "dateYearInferred": false,
-      "summary": {
-        "es": "Championship Rounds comenta un posible cruce entre Ciryl Gane y Josh Hokit, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Championship Rounds discusses a possible matchup between Ciryl Gane and Josh Hokit, with no exact date stated by the source. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-15T10:51:39.716Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-15T07:36:23.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2121845549825438140",
-          "sourceId": "championship-rounds",
-          "postUrl": "https://x.com/ChampRDS/status/2121845549825438140",
-          "publishedAt": "2026-11-15T05:59:35.000Z",
-          "language": "en",
-          "attributedAccounts": []
-        },
-        {
-          "id": "2121848970657800227",
-          "sourceId": "mma-latinoamerica",
-          "postUrl": "https://x.com/ClubDeLasMMA/status/2121848970657800227",
-          "publishedAt": "2026-11-15T06:13:11.000Z",
-          "language": "es",
-          "attributedAccounts": [],
-          "attribution": "mente Ciryl Gane 🇫🇷 vs Josh Hokit 🇺🇸"
-        },
-        {
-          "id": "2121869909693206685",
-          "sourceId": "championship-rounds",
-          "postUrl": "https://x.com/ChampRDS/status/2121869909693206685",
-          "publishedAt": "2026-11-15T07:36:23.000Z",
-          "language": "en",
-          "attributedAccounts": [
-            "JohnnyWalker"
-          ],
-          "attribution": "@JohnnyWalker"
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2121821329955373254",
-      "fighterNames": [
-        "Amanda Nunes",
-        "Kayla Harrison"
-      ],
-      "matchupKey": "amandanunes|kaylaharrison|undated:2026-11",
-      "eventDateHint": null,
-      "rematch": false,
-      "dateYearInferred": false,
-      "summary": {
-        "es": "MMA Latinoamérica comenta un posible cruce entre Amanda Nunes y Kayla Harrison, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "MMA Latinoamérica discusses a possible matchup between Amanda Nunes and Kayla Harrison, with no exact date stated by the source. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-15T10:51:39.716Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-15T04:23:21.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2121821329955373254",
-          "sourceId": "mma-latinoamerica",
-          "postUrl": "https://x.com/ClubDeLasMMA/status/2121821329955373254",
-          "publishedAt": "2026-11-15T04:23:21.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2121812063634772264",
-      "fighterNames": [
-        "Kevin Holland",
-        "Uroš Medić"
-      ],
-      "matchupKey": "kevinholland|urosmedic|undated:2026-11",
-      "eventDateHint": null,
-      "rematch": false,
-      "dateYearInferred": false,
-      "summary": {
-        "es": "Pelunaton comenta un posible cruce entre Kevin Holland y Uroš Medić, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Pelunaton discusses a possible matchup between Kevin Holland and Uroš Medić, with no exact date stated by the source. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-15T10:51:39.716Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-15T03:46:31.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2121810706706366756",
-          "sourceId": "championship-rounds",
-          "postUrl": "https://x.com/ChampRDS/status/2121810706706366756",
-          "publishedAt": "2026-11-15T03:41:08.000Z",
-          "language": "en",
-          "attributedAccounts": []
-        },
-        {
-          "id": "2121811986761588748",
-          "sourceId": "championship-rounds",
-          "postUrl": "https://x.com/ChampRDS/status/2121811986761588748",
-          "publishedAt": "2026-11-15T03:46:13.000Z",
-          "language": "en",
-          "attributedAccounts": []
-        },
-        {
-          "id": "2121812063634772264",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2121812063634772264",
-          "publishedAt": "2026-11-15T03:46:31.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2121811117857194415",
-      "fighterNames": [
-        "Ethyn Ewing",
-        "Kyler Phillips"
-      ],
-      "matchupKey": "ethynewing|kylerphillips|2026-12-12",
-      "eventDateHint": "2026-12-12",
-      "rematch": false,
-      "dateYearInferred": true,
-      "summary": {
-        "es": "Pelunaton comenta un posible cruce entre Ethyn Ewing y Kyler Phillips; la publicación menciona el 12 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Pelunaton discusses a possible matchup between Ethyn Ewing and Kyler Phillips; the post mentions December 12. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-15T10:51:39.716Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-15T03:42:46.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2121811117857194415",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2121811117857194415",
-          "publishedAt": "2026-11-15T03:42:46.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        },
-        {
-          "id": "2121811121145291223",
-          "sourceId": "championship-rounds",
-          "postUrl": "https://x.com/ChampRDS/status/2121811121145291223",
-          "publishedAt": "2026-11-15T03:42:47.000Z",
-          "language": "en",
-          "attributedAccounts": []
-        },
-        {
-          "id": "2121811501577027878",
-          "sourceId": "mma-latinoamerica",
-          "postUrl": "https://x.com/ClubDeLasMMA/status/2121811501577027878",
-          "publishedAt": "2026-11-15T03:44:17.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
     {
       "id": "2121800246770761860",
       "fighterNames": [
@@ -512,40 +336,6 @@
           "language": "es",
           "attributedAccounts": [],
           "attribution": "IG Steve Garcia"
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2117964073237180727",
-      "fighterNames": [
-        "Baisangur Susurkaev",
-        "Damian Pinas"
-      ],
-      "matchupKey": "baisangursusurkaev|damianpinas|2026-12-12",
-      "eventDateHint": "2026-12-12",
-      "rematch": false,
-      "dateYearInferred": true,
-      "summary": {
-        "es": "Pelunaton comenta un posible cruce entre Baisangur Susurkaev y Damian Pinas; la publicación menciona el 12 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Pelunaton discusses a possible matchup between Baisangur Susurkaev and Damian Pinas; the post mentions December 12. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-04T13:01:07.439Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-04T12:55:59.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2117964073237180727",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2117964073237180727",
-          "publishedAt": "2026-11-04T12:55:59.000Z",
-          "language": "es",
-          "attributedAccounts": [
-            "VestnikMMA"
-          ],
-          "attribution": "@VestnikMMA"
         }
       ],
       "official": null
@@ -1272,8 +1062,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-16T09:40:35.117Z",
-    "receivedPosts": 9,
+    "checkedAt": "2026-11-16T19:53:39.322Z",
+    "receivedPosts": 13,
     "added": 0
   }
 }
