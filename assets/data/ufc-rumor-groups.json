@@ -1,8 +1,39 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-17T11:14:48.580Z",
-  "lastSearchedAt": "2026-11-17T11:14:48.580Z",
+  "updatedAt": "2026-11-17T19:59:44.569Z",
+  "lastSearchedAt": "2026-11-17T19:59:44.569Z",
   "groups": [
+    {
+      "id": "2122684764146606253",
+      "fighterNames": [
+        "Elves Brener",
+        "Mateusz Rębecki"
+      ],
+      "matchupKey": "elvesbrener|mateuszrebecki|2026-12-05",
+      "eventDateHint": "2026-12-05",
+      "rematch": false,
+      "dateYearInferred": true,
+      "summary": {
+        "es": "MMA Latinoamérica comenta un posible cruce entre Elves Brener y Mateusz Rębecki; la publicación menciona el 5 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "MMA Latinoamérica discusses a possible matchup between Elves Brener and Mateusz Rębecki; the post mentions December 5. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-17T19:59:44.569Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-17T13:34:20.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2122684764146606253",
+          "sourceId": "mma-latinoamerica",
+          "postUrl": "https://x.com/ClubDeLasMMA/status/2122684764146606253",
+          "publishedAt": "2026-11-17T13:34:20.000Z",
+          "language": "es",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2121800246770761860",
       "fighterNames": [
@@ -1062,8 +1093,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-17T11:14:48.580Z",
-    "receivedPosts": 12,
-    "added": 0
+    "checkedAt": "2026-11-17T19:59:44.569Z",
+    "receivedPosts": 9,
+    "added": 1
   }
 }
