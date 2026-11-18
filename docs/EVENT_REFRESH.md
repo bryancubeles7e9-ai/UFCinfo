@@ -6,8 +6,8 @@ A las 10:00 se añade un reintento condicional de las veladas de las últimas 48
 
 Se activa al terminar la ejecución horaria existente de rumores, independientemente de su resultado, con respaldo de GitHub a las 08:07/09:07 UTC. La comprobación `Europe/Madrid` selecciona la hora correcta en verano/invierno. Se ejecuta dentro de la franja de las 10:00, sujeto a la cola de GitHub; no garantiza el minuto exacto. No modifica la lógica ni las fuentes de rumores.
 
-1. Consulta rankings oficiales y las tres carteleras seleccionadas de Cito (hasta cinco solicitudes Cito contando las dos listas).
-2. Verifica hasta tres eventos de los últimos 14 días directamente en UFC.com. Este paso también se ejecuta si Cito falla. Valida fecha, identidad, participantes y resultados antes de sustituir datos; conserva combates anteriores omitidos y señala los resultados pendientes.
+1. Consulta rankings oficiales y el calendario público de UFC.com, que descubre las próximas veladas y actualiza sus cruces, horarios y carteles (sin Cito desde el 18 de noviembre de 2026).
+2. Verifica hasta tres eventos de los últimos 14 días directamente en UFC.com. Este paso también se ejecuta si falla la lectura del calendario. Valida fecha, identidad, participantes y resultados antes de sustituir datos; conserva combates anteriores omitidos y señala los resultados pendientes.
 3. Incorpora participantes nuevos de las carteleras recientes mediante enlaces a perfiles oficiales y comprobación de identidad. No deduce nacionalidades a partir del lugar de nacimiento.
 4. Actualiza fotografías y récords/estadísticas. Un fallo de consulta de fotografías no bloquea los perfiles. Los participantes desconocidos se señalan y no se considera completo el evento.
 5. Si UFC publica el récord antes de las estadísticas, guarda únicamente el récord verificado, conserva las estadísticas anteriores con su fecha real y mantiene el perfil pendiente para reintentar.

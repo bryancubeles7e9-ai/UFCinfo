@@ -1,5 +1,7 @@
 # Activar la API de carteleras de UFCinfo
 
+> **Histórico.** Desde el 18 de noviembre de 2026 las carteleras se actualizan desde el calendario y las fichas públicas de UFC.com (`scripts/sync-event-schedules.py`), sin Cito. Véase [Gestión de cambios de cartelera](CARD_CHANGES.md). Esta guía se conserva como referencia de la integración anterior; el secreto `CITO_API_KEY` ya no se utiliza.
+
 La sincronización incremental utiliza [Cito API](https://citoapi.com/ufc-api/), proveedor independiente de UFC. La copia histórica existente procede de UFCalendar y se conserva hasta que sus eventos se actualicen con Cito. El JSON distingue ambas procedencias. Cito ofrece 500 peticiones mensuales y 10 por minuto en su plan gratuito; comprueba sus condiciones para el uso que harás del proyecto.
 
 ## Activación en GitHub

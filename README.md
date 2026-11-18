@@ -64,8 +64,8 @@ La web combina un catálogo de perfiles con copias de datos que actualizan tarea
 
 | Información | Fuente y funcionamiento |
 | --- | --- |
-| **Eventos y resultados** | Cito actualiza las carteleras cercanas y conserva el historial disponible. Una comprobación adicional en UFC.com verifica los resultados recientes y puede recuperar información aunque Cito falle. Incluye cartelera principal, preliminares y preliminares previas cuando están publicadas. |
-| **Horarios de las veladas** | Las páginas públicas de UFC proporcionan los inicios oficiales de los bloques de las próximas tres veladas. Cada combate muestra una franja estimada, claramente identificada. Esta consulta no consume puntos de Cito. |
+| **Eventos y resultados** | El calendario y las fichas públicas de UFC.com descubren las próximas veladas y actualizan sus cruces y carteles; el historial disponible se conserva. Una comprobación adicional en UFC.com verifica los resultados recientes. Incluye cartelera principal, preliminares y preliminares previas cuando están publicadas. No utiliza APIs de pago. |
+| **Horarios de las veladas** | Las páginas públicas de UFC proporcionan los inicios oficiales de los bloques de todas las próximas veladas del calendario oficial. Cada combate muestra una franja estimada, claramente identificada. |
 | **Rankings** | Se consultan las clasificaciones publicadas en UFC.com. |
 | **Récords y estadísticas** | Se consultan los perfiles oficiales de UFC de los luchadores registrados que participan en los combates seleccionados. |
 | **Campeones y fotografías** | Los títulos absolutos actuales se sincronizan con los rankings válidos. Se revisan las fotografías y se conservan variantes para campeón y no campeón cuando están disponibles. El BMF tiene una gestión separada. |
@@ -128,8 +128,8 @@ Documentación revisada a **25 de octubre de 2026**. El estado distingue funcion
 | --- | --- | --- |
 | **Rumores** | Búsqueda y publicación comprobadas en uso; reintentos de guardado incorporados. | Seguir observando las ejecuciones y ajustar fuentes o filtros cuando sea necesario. |
 | **Actualización tras una velada** | Parcialmente validada; parche y reintento de las 10:00 implementados. | Comprobar en la próxima velada que resultados, récords y estadísticas se completan, y que la cartelera sigue visible si la fuente se retrasa. |
-| **Incorporación de nuevos eventos** | Pendiente de validación con un nuevo anuncio. | Confirmar que detecta el evento y lo incorpora automáticamente a la web. |
-| **Horarios por bloque** | Consulta oficial y cálculo de estimaciones implementados para las próximas tres veladas. | Seguir verificando cambios de horario y de orden antes de cada evento. |
+| **Incorporación de nuevos eventos** | Validada el 18 de noviembre de 2026: el calendario oficial de UFC incorporó automáticamente tres veladas nuevas (5 de diciembre, 23 de enero y 13 de febrero) y verificó las 8 próximas. | Confirmar que detecta el evento y lo incorpora automáticamente a la web. |
+| **Horarios por bloque** | Consulta oficial y cálculo de estimaciones implementados para todas las próximas veladas del calendario de UFC. | Seguir verificando cambios de horario y de orden antes de cada evento. |
 
 Que una tarea termine sin errores no garantiza que el proveedor ya haya publicado toda la información. La fase de automatización se dará por cerrada cuando estos tres procesos estén comprobados con casos reales.
 
