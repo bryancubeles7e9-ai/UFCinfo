@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "UFC",
   "sourceUrl": "https://www.ufc.com",
-  "synchronizedAt": "2026-11-18T11:34:27.591702+00:00",
+  "synchronizedAt": "2026-11-18T12:36:36.360981+00:00",
   "events": [
     {
       "id": "ufc-fight-night-february-13-2027",
@@ -22,7 +22,7 @@
       "sectionSchedule": {
         "eventDate": "2027-02-13T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-13-2027",
-        "checkedAt": "2026-11-18T11:34:27.591702+00:00",
+        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
         "starts": {
           "prelims": "2027-02-13T20:00:00+00:00",
           "main": "2027-02-13T22:00:00+00:00"
@@ -131,7 +131,7 @@
       "sectionSchedule": {
         "eventDate": "2027-02-06T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-06-2027",
-        "checkedAt": "2026-11-18T11:34:27.591702+00:00",
+        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
         "starts": {
           "prelims": "2027-02-06T20:00:00+00:00",
           "main": "2027-02-06T22:00:00+00:00"
@@ -287,7 +287,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-31T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-336",
-        "checkedAt": "2026-11-18T11:34:27.591702+00:00",
+        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
         "starts": {
           "early-prelims": "2027-01-30T22:00:00+00:00",
           "prelims": "2027-01-31T00:00:00+00:00",
@@ -363,7 +363,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-23T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
-        "checkedAt": "2026-11-18T11:34:27.591702+00:00",
+        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
         "starts": {
           "main": "2027-01-23T22:00:00+00:00",
           "prelims": "2027-01-23T20:00:00+00:00"
@@ -461,7 +461,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-17T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
-        "checkedAt": "2026-11-18T11:34:27.591702+00:00",
+        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
         "starts": {
           "prelims": "2027-01-16T22:00:00+00:00",
           "main": "2027-01-17T01:00:00+00:00"
@@ -598,16 +598,6 @@
           "method": "",
           "round": "",
           "time": ""
-        },
-        {
-          "red": "Joe Pyfer",
-          "blue": "Bo Nickal",
-          "division": "Middleweight",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
         }
       ],
       "poster": "assets/images/events/ufc-335.jpg",
@@ -620,38 +610,14 @@
       "sectionSchedule": {
         "eventDate": "2026-12-13T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-335",
-        "checkedAt": "2026-11-18T11:34:27.591702+00:00",
+        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
         "starts": {
           "early-prelims": "2026-12-12T22:00:00+00:00",
           "prelims": "2026-12-13T00:00:00+00:00",
           "main": "2026-12-13T02:00:00+00:00"
         }
       },
-      "pendingBoutRemovals": {
-        "bonickal|joepyfer": {
-          "firstSeenAt": "2026-11-18T10:35:43.909654+00:00",
-          "comparable": true,
-          "snapshot": [
-            "alexpereira|sergeipavlovich",
-            "baisangursusurkaev|damianpinas",
-            "brandonmoreno|charlesjohnson",
-            "charlesoliveira|diegolopes",
-            "ethynewing|kylerphillips",
-            "juniortafa|quentinpasley"
-          ],
-          "bout": {
-            "red": "Joe Pyfer",
-            "blue": "Bo Nickal",
-            "division": "Middleweight",
-            "winner": null,
-            "outcome": null,
-            "method": "",
-            "round": "",
-            "time": ""
-          },
-          "source": "UFC"
-        }
-      },
+      "pendingBoutRemovals": {},
       "cardChanges": [
         {
           "kind": "added",
@@ -716,6 +682,21 @@
             "round": "",
             "time": ""
           }
+        },
+        {
+          "kind": "removed-from-card",
+          "checkedAt": "2026-11-18T12:36:36.360981+00:00",
+          "source": "UFC",
+          "bout": {
+            "red": "Joe Pyfer",
+            "blue": "Bo Nickal",
+            "division": "Middleweight",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
         }
       ]
     },
@@ -736,7 +717,7 @@
       "sectionSchedule": {
         "eventDate": "2026-12-05T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
-        "checkedAt": "2026-11-18T11:34:27.591702+00:00",
+        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
         "starts": {
           "prelims": "2026-12-05T15:00:00+00:00",
           "main": "2026-12-05T18:00:00+00:00"
@@ -1218,7 +1199,7 @@
       "sectionSchedule": {
         "eventDate": "2026-11-21T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
-        "checkedAt": "2026-11-18T11:34:27.591702+00:00",
+        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
         "starts": {
           "main": "2026-11-21T18:00:00+00:00",
           "prelims": "2026-11-21T15:00:00+00:00"
@@ -1603,7 +1584,7 @@
       ],
       "eventKind": "numbered",
       "resultsSource": "https://www.ufc.com/event/ufc-334",
-      "resultsCheckedAt": "2026-11-18T11:34:28.766212+00:00"
+      "resultsCheckedAt": "2026-11-18T12:36:37.394304+00:00"
     },
     {
       "id": "ufc-fight-night-november-07-2026",
@@ -1998,7 +1979,7 @@
         }
       ],
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-      "resultsCheckedAt": "2026-11-18T11:34:28.766212+00:00"
+      "resultsCheckedAt": "2026-11-18T12:36:37.394304+00:00"
     },
     {
       "id": "ufc-fight-night-october-31-2026",
@@ -8253,7 +8234,7 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-18T11:34:28.766212+00:00",
+    "checkedAt": "2026-11-18T12:36:37.394304+00:00",
     "verifiedIds": [
       "ufc-334",
       "ufc-fight-night-november-07-2026"
@@ -8261,7 +8242,7 @@
     "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-11-18T11:34:27.591702+00:00",
+    "checkedAt": "2026-11-18T12:36:36.360981+00:00",
     "verifiedIds": [
       "ufc-fight-night-november-21-2026",
       "ufc-fight-night-december-05-2026",
