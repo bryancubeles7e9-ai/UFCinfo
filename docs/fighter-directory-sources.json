@@ -7611,5 +7611,157 @@
     "country": "El Salvador",
     "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
     "countryConsulted": "2026-11-08"
+  },
+  {
+    "id": "ufc-serhiy-sidey",
+    "name": "Serhiy Sidey",
+    "aliases": [
+      "Serhiy Sidey"
+    ],
+    "source": "https://www.ufc.com/athlete/serhiy-sidey",
+    "code": "UA",
+    "country": "Ukraine",
+    "countrySource": "https://www.ufc.com/event/ufc-336",
+    "countryConsulted": "2026-11-18"
+  },
+  {
+    "id": "ufc-louis-lee-scott",
+    "name": "Louis Lee Scott",
+    "aliases": [
+      "Louis Lee Scott"
+    ],
+    "source": "https://www.ufc.com/athlete/louis-lee-scott",
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-336",
+    "countryConsulted": "2026-11-18"
+  },
+  {
+    "id": "ufc-sean-clancy-jr",
+    "name": "Sean Clancy Jr.",
+    "aliases": [
+      "Sean Clancy Jr."
+    ],
+    "source": "https://www.ufc.com/athlete/sean-clancy-jr",
+    "code": "SF",
+    "country": "Scotland",
+    "countrySource": "https://www.ufc.com/event/ufc-336",
+    "countryConsulted": "2026-11-18"
+  },
+  {
+    "id": "ufc-quentin-pasley",
+    "name": "Quentin Pasley",
+    "aliases": [
+      "Quentin Pasley"
+    ],
+    "source": "https://www.ufc.com/athlete/quentin-pasley",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-11-18"
+  },
+  {
+    "id": "ufc-islam-dulatov",
+    "name": "Islam Dulatov",
+    "aliases": [
+      "Islam Dulatov"
+    ],
+    "source": "https://www.ufc.com/athlete/islam-dulatov",
+    "code": "TR",
+    "country": "Türkiye",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
+    "countryConsulted": "2026-11-18"
+  },
+  {
+    "id": "ufc-mairon-santos-alves",
+    "name": "Mairon Santos",
+    "aliases": [
+      "Mairon Santos"
+    ],
+    "source": "https://www.ufc.com/athlete/mairon-santos-alves",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
+    "countryConsulted": "2026-11-18"
+  },
+  {
+    "id": "ufc-akbar-abdullaev",
+    "name": "Akbar Abdullaev",
+    "aliases": [
+      "Akbar Abdullaev"
+    ],
+    "source": "https://www.ufc.com/athlete/akbar-abdullaev",
+    "code": "KG",
+    "country": "Kyrgyzstan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
+    "countryConsulted": "2026-11-18"
+  },
+  {
+    "id": "ufc-uran-satybaldiev",
+    "name": "Uran Satybaldiev",
+    "aliases": [
+      "Uran Satybaldiev"
+    ],
+    "source": "https://www.ufc.com/athlete/uran-satybaldiev",
+    "code": "KG",
+    "country": "Kyrgyzstan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
+    "countryConsulted": "2026-11-18"
+  },
+  {
+    "id": "ufc-ivan-gnizditskiy",
+    "name": "Ivan Gnizditskiy",
+    "aliases": [
+      "Ivan Gnizditskiy"
+    ],
+    "source": "https://www.ufc.com/athlete/ivan-gnizditskiy"
+  },
+  {
+    "id": "ufc-jun-yong-park",
+    "name": "JunYong Park",
+    "aliases": [
+      "JunYong Park"
+    ],
+    "source": "https://www.ufc.com/athlete/jun-yong-park",
+    "code": "KR",
+    "country": "South Korea",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
+    "countryConsulted": "2026-11-18"
+  },
+  {
+    "id": "ufc-modestino-rodrigues",
+    "name": "Modestino Rodrigues",
+    "aliases": [
+      "Modestino Rodrigues"
+    ],
+    "source": "https://www.ufc.com/athlete/modestino-rodrigues",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
+    "countryConsulted": "2026-11-18"
+  },
+  {
+    "id": "ufc-nikolas-motta",
+    "name": "Nikolas Motta",
+    "aliases": [
+      "Nikolas Motta"
+    ],
+    "source": "https://www.ufc.com/athlete/nikolas-motta",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-11-18"
+  },
+  {
+    "id": "ufc-alik-lorenz",
+    "name": "Alik Lorenz",
+    "aliases": [
+      "Alik Lorenz"
+    ],
+    "source": "https://www.ufc.com/athlete/alik-lorenz",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-11-18"
   }
 ]
