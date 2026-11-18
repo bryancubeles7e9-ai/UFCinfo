@@ -287,5 +287,7 @@ Object.assign(english, {
   "Última búsqueda: todavía no disponible.": "Last search: not yet available.",
   "Búsqueda programada cada hora en punto.": "Search scheduled at the start of every hour.",
   "NUEVO": "NEW",
-  "Datos de la fuente": "Source details"
+  "Datos de la fuente": "Source details",
+  "Accesos rápidos": "Quick links",
+  "Más": "More"
 });

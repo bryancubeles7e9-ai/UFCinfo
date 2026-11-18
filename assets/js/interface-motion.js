@@ -49,7 +49,7 @@ export function initializeFilterIndicators() {
       const selected=group.querySelector('button[aria-pressed="true"]');
       if (!selected || group.closest('[hidden]') || !group.getClientRects().length) {record.marker.hidden=true;continue;}
       const parent=group.getBoundingClientRect(), button=selected.getBoundingClientRect();
-      const transform=`translate(${button.left-parent.left-group.clientLeft+8}px,${button.bottom-parent.top-group.clientTop-3}px)`;
+      const transform=`translate(${button.left-parent.left-group.clientLeft+group.scrollLeft+8}px,${button.bottom-parent.top-group.clientTop-3}px)`;
       const width=`${Math.max(1,button.width-16)}px`;
       const marker=record.marker;
       if (!marker.hidden && marker.style.transform===transform && marker.style.width===width) continue;

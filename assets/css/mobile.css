@@ -410,3 +410,42 @@
   0% { opacity: .85; transform: scale(.9); }
   100% { opacity: 0; transform: scale(1.35); }
 }
+
+/* Mobile polish: bottom tab bar, one-line filters, tidy toolbars and unbroken figures. */
+.mobile-tabbar{display:none}
+.lab-record{white-space:nowrap}
+@media (max-width: 700px) {
+  .has-mobile-tabbar .mobile-tabbar:not([hidden]){position:fixed;z-index:60;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
+    padding:6px 6px max(6px,env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 88%,transparent);
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+  .mobile-tabbar a,.mobile-tabbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:52px;padding:4px 2px;
+    border:0;border-radius:12px;background:none;color:var(--muted);font:600 10px/1.1 var(--body);text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .mobile-tabbar a.active{color:var(--accent);background:color-mix(in srgb,var(--accent) 11%,transparent)}
+  .mobile-tabbar button[aria-expanded="true"]{color:var(--ink)}
+  .mobile-tabbar span{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  body.has-mobile-tabbar{padding-bottom:calc(68px + env(safe-area-inset-bottom))}
+  .has-mobile-tabbar #toast{bottom:calc(80px + env(safe-area-inset-bottom))}
+
+  /* Carteleras: each filter group on one swipeable line instead of wrapping. */
+  .event-filters .segmented{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
+  .event-filters .segmented::-webkit-scrollbar{display:none}
+  .event-filters .segmented button{flex:0 0 auto;white-space:nowrap;padding-inline:16px;scroll-snap-align:start}
+
+  /* Rumores: search on its own line, then the three filters in an even grid. */
+  .rumor-toolbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .rumor-toolbar>.search-box{grid-column:1/-1}
+  .rumor-toolbar>select{width:100%;min-width:0;font-size:16px}
+  .rumor-toolbar>#rumor-source{grid-column:1/-1;order:2}
+
+  /* Mi esquina: export and import side by side without wrapping. */
+  .backup-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%}
+  .backup-buttons>button{white-space:nowrap}
+
+  /* Pick’em: the event picker spans the width above the summary. */
+  #pickem-content>label{display:grid;gap:6px;margin-bottom:14px}
+  #pickem-event{width:100%;font-size:16px}
+  .pickem-summary{gap:14px}
+  .pickem-summary>div:first-child>*:last-child{margin-bottom:0}
+  .pickem-summary .pickem-progress{width:100%;min-width:0;gap:6px}
+  .pickem-summary .pickem-progress strong{font-size:1.6rem}
+}

@@ -21,7 +21,7 @@ La portada destaca la próxima estelar con imágenes, cuenta atrás y accesos a 
 | **Rumores** | Publicaciones de fuentes seleccionadas sobre posibles combates, agrupadas por pelea y con atribución a su origen. |
 | **Mi esquina** | Tus luchadores seguidos, sus próximos combates anunciados, posiciones en los rankings y resultados recientes disponibles. Puedes fijar un próximo combate y descargar su velada en formato calendario `.ics`. |
 
-La interfaz está disponible en **español, inglés y catalán**, tiene tema claro y oscuro y se adapta a móvil y ordenador.
+La interfaz está disponible en **español, inglés y catalán**, tiene tema claro y oscuro y se adapta a móvil y ordenador. En el móvil, una barra inferior da acceso directo a Inicio, Carteleras, Pick’em y Luchadores, con «Más» para el resto del menú; los filtros de Carteleras se deslizan en una sola línea.
 
 ## Cómo empezar
 

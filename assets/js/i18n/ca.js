@@ -728,6 +728,8 @@ export const catalan = {
   "RUMOR · SIN CONFIRMAR": "RUMOR · SENSE CONFIRMAR",
   "NUEVO": "NOU",
   "Datos de la fuente": "Dades de la font",
+  "Accesos rápidos": "Accessos ràpids",
+  "Más": "Més",
   "FUENTE EN ESPAÑOL": "FONT EN ESPANYOL",
   "FUENTE EN INGLÉS": "FONT EN ANGLÈS",
   "Contenido oculto por el modo sin spoilers.": "Contingut ocult pel mode sense espòilers.",
