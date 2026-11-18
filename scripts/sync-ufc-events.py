@@ -252,28 +252,39 @@ def public_bytes(url, max_bytes):
             raise SyncError('Public asset exceeded size limit')
         return body
 
+def save_event_poster(event, page, image_dir, read_public=public_bytes):
+    """Update the poster from an already fetched UFC page, if it has event art."""
+    parser = PosterParser()
+    parser.feed(page)
+    if not parser.poster:
+        return
+    url, alt = parser.poster
+    target = image_dir / f"{event['id']}.jpg"
+    if event.get('posterSource') != url or not target.is_file() or not target.stat().st_size:
+        body = read_public(url, 4000000)
+        if not (body.startswith(b'\xff\xd8\xff') or body.startswith(b'\x89PNG\r\n\x1a\n')
+                or (body.startswith(b'RIFF') and body[8:12] == b'WEBP')):
+            raise SyncError('Invalid poster image')
+        image_dir.mkdir(parents=True, exist_ok=True)
+        with tempfile.NamedTemporaryFile(dir=image_dir, delete=False) as file:
+            file.write(body)
+            temporary = Path(file.name)
+        try:
+            temporary.replace(target)
+        finally:
+            temporary.unlink(missing_ok=True)
+    event.update(poster=f"assets/images/events/{event['id']}.jpg", posterSource=url, posterAlt=alt)
+
+
 def enrich_posters(payload, previous, image_dir, read_public=public_bytes):
     old = {e['id']: e for e in previous.get('events', [])}
     for event in payload['events']:
         prior = old.get(event['id'], {})
         event.update(poster=prior.get('poster'), posterSource=prior.get('posterSource'), posterAlt=prior.get('posterAlt'))
         try:
-            parser = PosterParser()
-            parser.feed(read_public(event['source'], 1500000).decode('utf-8'))
-            if not parser.poster:
-                continue
-            url, alt = parser.poster
-            body = read_public(url, 4000000)
-            if not (body.startswith(b'\xff\xd8\xff') or body.startswith(b'\x89PNG') or (body.startswith(b'RIFF') and body[8:12] == b'WEBP')):
-                raise SyncError('Invalid poster image')
-            image_dir.mkdir(parents=True, exist_ok=True)
-            target = image_dir/f"{event['id']}.jpg"
-            with tempfile.NamedTemporaryFile(dir=image_dir, delete=False) as file:
-                file.write(body)
-                temporary = Path(file.name)
-            temporary.replace(target)
-            event.update(poster=f"assets/images/events/{event['id']}.jpg", posterSource=url, posterAlt=alt)
-        except (HTTPError, URLError, TimeoutError, OSError, SyncError, UnicodeDecodeError):
+            page = read_public(event['source'], 1500000).decode('utf-8')
+            save_event_poster(event, page, image_dir, read_public)
+        except (OSError, ValueError, SyncError):
             # Optional image failures must not block a valid card update.
             continue
 

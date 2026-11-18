@@ -84,6 +84,9 @@ merge_spec.loader.exec_module(merge)
 save_spec = importlib.util.spec_from_file_location('sync_monitor', ROOT / 'scripts/run-data-sync.py')
 monitor = importlib.util.module_from_spec(save_spec)
 save_spec.loader.exec_module(monitor)
+poster_spec = importlib.util.spec_from_file_location('event_poster', ROOT / 'scripts/sync-ufc-events.py')
+posters = importlib.util.module_from_spec(poster_spec)
+poster_spec.loader.exec_module(posters)
 
 
 def parse(page):
@@ -185,7 +188,7 @@ def update_card(page, slug, saved, now):
     return event
 
 
-def synchronize(feed, fetch=public_page, now=None):
+def synchronize(feed, fetch=public_page, now=None, *, image_dir=None, fetch_image=posters.public_bytes):
     now = now or datetime.now(timezone.utc)
     saved = {event['id']: event for event in feed['events']}
     slugs = calendar_ids(fetch(UFC + '/events'))
@@ -201,7 +204,14 @@ def synchronize(feed, fetch=public_page, now=None):
             ):
                 continue
         try:
-            saved[slug] = update_card(fetch(f'{UFC}/event/{slug}'), slug, event, now)
+            page = fetch(f'{UFC}/event/{slug}')
+            card = update_card(page, slug, event, now)
+            if image_dir is not None:
+                try:
+                    posters.save_event_poster(card, page, image_dir, fetch_image)
+                except (OSError, ValueError, posters.SyncError) as error:
+                    print(f'::warning::Official poster preserved for {slug}: {error}')
+            saved[slug] = card
             updated.append(slug)
             print(f'Official card verified: {slug} ({len(saved[slug]["bouts"])} bouts)')
         except (OSError, ValueError, KeyError, OverflowError, merge.SyncError) as error:
@@ -229,10 +239,14 @@ def main():
     cli = argparse.ArgumentParser(description=__doc__)
     cli.add_argument('--output', type=Path, default=ROOT / 'assets/data/ufc-events.json')
     cli.add_argument('--input', type=Path, default=ROOT / 'assets/data/ufc-events.json')
+    cli.add_argument('--poster-dir', type=Path)
     args = cli.parse_args()
     try:
         feed = json.loads(args.input.read_text())
-        verified = synchronize(feed)
+        image_dir = args.poster_dir
+        if image_dir is None and args.output.resolve() == ROOT / 'assets/data/ufc-events.json':
+            image_dir = ROOT / 'assets/images/events'
+        verified = synchronize(feed, image_dir=image_dir)
         monitor.write(args.output, feed)
     except (OSError, ValueError, KeyError, OverflowError) as error:
         print(f'::warning::Official UFC calendar not verified: {error}')

@@ -1,6 +1,7 @@
 import importlib.util
 from pathlib import Path
 from datetime import datetime, timezone
+import tempfile
 import unittest
 spec=importlib.util.spec_from_file_location('schedule',Path(__file__).resolve().parents[1]/'scripts/sync-event-schedules.py')
 m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
@@ -86,6 +87,43 @@ class OfficialUpcomingTests(unittest.TestCase):
         event = m.update_card(page, self.slug, None, self.now)
         self.assertIsNone(event['bouts'][0]['section'])
         self.assertEqual(event['sectionSchedule']['starts']['prelims'], '2026-10-31T21:00:00+00:00')
+
+    def test_upcoming_sync_publishes_and_retries_official_posters(self):
+        url = 'https://ufc.com/images/new-EVENT-ART.jpg'
+        image = b'\xff\xd8\xfftest jpeg bytes'
+        pages = {m.UFC + '/events': self.calendar, self.url: self.page +
+                 f'<div class="c-hero__image"><img src="{url}" alt="UFC fight poster"></div>'}
+        fetched_pages, downloads = [], []
+
+        def get_page(url):
+            fetched_pages.append(url)
+            return pages[url]
+
+        def get_image(url, limit):
+            downloads.append(url)
+            return image
+
+        feed = {'events': []}
+        with tempfile.TemporaryDirectory() as directory:
+            images = Path(directory)
+            m.synchronize(feed, get_page, self.now, image_dir=images, fetch_image=get_image)
+            self.assertEqual(fetched_pages, [m.UFC + '/events', self.url])
+            self.assertEqual(downloads, [url])
+            event = feed['events'][0]
+            self.assertEqual(event['poster'], f'assets/images/events/{self.slug}.jpg')
+            self.assertEqual(event['posterAlt'], 'UFC fight poster')
+            m.synchronize(feed, get_page, self.now, image_dir=images, fetch_image=get_image)
+            self.assertEqual(downloads, [url])
+            new_url = url.replace('new-', 'final-')
+            pages[self.url] = pages[self.url].replace(url, new_url)
+            self.assertTrue(m.synchronize(feed, get_page, self.now, image_dir=images,
+                                          fetch_image=lambda *_: b'<html>Unavailable</html>'))
+            self.assertEqual(feed['events'][0]['posterSource'], url)
+            self.assertEqual((images / f'{self.slug}.jpg').read_bytes(), image)
+            m.synchronize(feed, get_page, self.now, image_dir=images,
+                          fetch_image=lambda *_: image + b' replacement')
+            self.assertEqual(feed['events'][0]['posterSource'], new_url)
+            self.assertEqual((images / f'{self.slug}.jpg').read_bytes(), image + b' replacement')
 
     def test_bad_official_page_keeps_saved_data_and_reports_failure(self):
         old = m.update_card(self.page, self.slug, None, self.now)
