@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "UFC",
   "sourceUrl": "https://www.ufc.com",
-  "synchronizedAt": "2026-11-18T10:35:43.909654+00:00",
+  "synchronizedAt": "2026-11-18T10:41:20.633713+00:00",
   "events": [
     {
       "id": "ufc-fight-night-february-13-2027",
@@ -22,7 +22,7 @@
       "sectionSchedule": {
         "eventDate": "2027-02-13T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-13-2027",
-        "checkedAt": "2026-11-18T10:35:43.909654+00:00",
+        "checkedAt": "2026-11-18T10:41:20.633713+00:00",
         "starts": {
           "prelims": "2027-02-13T20:00:00+00:00",
           "main": "2027-02-13T22:00:00+00:00"
@@ -59,7 +59,10 @@
           "round": "",
           "time": ""
         }
-      ]
+      ],
+      "poster": "assets/images/events/ufc-fight-night-february-13-2027.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-11/021327-ufc-fight-night-pyfer-vs-nickal-TEMP-HERO.jpg?h=d1cb525d&itok=8HMZIZPY",
+      "posterAlt": "Joe Pyfer and Bo Nickal over a red and black background"
     },
     {
       "id": "ufc-fight-night-february-06-2027",
@@ -121,14 +124,14 @@
         }
       ],
       "dataSource": "UFC",
-      "poster": null,
-      "posterSource": null,
-      "posterAlt": null,
+      "poster": "assets/images/events/ufc-fight-night-february-06-2027.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-11/020627-ufc-fight-night-salkilld-vs-saint-denis-TEMP-HERO.jpg?h=d1cb525d&itok=tsdmClYK",
+      "posterAlt": "UFC lightweights Quillan Salkilld and Benoit Saint Denis over a red and black background",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-february-06-2027",
       "sectionSchedule": {
         "eventDate": "2027-02-06T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-06-2027",
-        "checkedAt": "2026-11-18T10:35:43.909654+00:00",
+        "checkedAt": "2026-11-18T10:41:20.633713+00:00",
         "starts": {
           "prelims": "2027-02-06T20:00:00+00:00",
           "main": "2027-02-06T22:00:00+00:00"
@@ -284,7 +287,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-31T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-336",
-        "checkedAt": "2026-11-18T10:35:43.909654+00:00",
+        "checkedAt": "2026-11-18T10:41:20.633713+00:00",
         "starts": {
           "early-prelims": "2027-01-30T22:00:00+00:00",
           "prelims": "2027-01-31T00:00:00+00:00",
@@ -360,7 +363,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-23T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
-        "checkedAt": "2026-11-18T10:35:43.909654+00:00",
+        "checkedAt": "2026-11-18T10:41:20.633713+00:00",
         "starts": {
           "main": "2027-01-23T22:00:00+00:00",
           "prelims": "2027-01-23T20:00:00+00:00"
@@ -397,7 +400,10 @@
           "round": "",
           "time": ""
         }
-      ]
+      ],
+      "poster": "assets/images/events/ufc-fight-night-january-23-2027.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-08/110726-ufc-fight-night-bonfim-vs-brady-TEMP-HERO.jpg?h=d1cb525d&itok=vmUARwy5",
+      "posterAlt": "UFC welterweights Gabriel Bonfim and Sean Brady side by side over a red and black background"
     },
     {
       "id": "ufc-fight-night-january-16-2027",
@@ -448,14 +454,14 @@
         }
       ],
       "dataSource": "UFC",
-      "poster": null,
-      "posterSource": null,
-      "posterAlt": null,
+      "poster": "assets/images/events/ufc-fight-night-january-16-2027.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-11/101627-ufc-fight-night-rodriguez-vs-garcia-TEMP-HERO.jpg?h=d1cb525d&itok=BX8HaYqB",
+      "posterAlt": "Yair Rodriguez and Steve Garcia over a red and black background",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
       "sectionSchedule": {
         "eventDate": "2027-01-17T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
-        "checkedAt": "2026-11-18T10:35:43.909654+00:00",
+        "checkedAt": "2026-11-18T10:41:20.633713+00:00",
         "starts": {
           "prelims": "2027-01-16T22:00:00+00:00",
           "main": "2027-01-17T01:00:00+00:00"
@@ -605,8 +611,8 @@
         }
       ],
       "poster": "assets/images/events/ufc-335.jpg",
-      "posterSource": "https://www.ufc.com/s3/files/styles/background_image_sm/s3/2026-10/0000000000_335_BoutAnn_CO-DL_Endpage.jpg?h=d1cb525d&itok=lvjtmVB1",
-      "posterAlt": "Charles Oliveira and Diego Lopes over a gold and black background",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-11/121226-ufc-335-oliveira-vs-lopes-EVENT-ART.jpg?h=d1cb525d&itok=LbXfZbZO",
+      "posterAlt": "Charles Oliveira and Diego Lopes over a white, black and green background",
       "dataSource": "UFC",
       "citoSlug": "ufc-335",
       "eventKind": "numbered",
@@ -614,7 +620,7 @@
       "sectionSchedule": {
         "eventDate": "2026-12-13T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-335",
-        "checkedAt": "2026-11-18T10:35:43.909654+00:00",
+        "checkedAt": "2026-11-18T10:41:20.633713+00:00",
         "starts": {
           "early-prelims": "2026-12-12T22:00:00+00:00",
           "prelims": "2026-12-13T00:00:00+00:00",
@@ -730,7 +736,7 @@
       "sectionSchedule": {
         "eventDate": "2026-12-05T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
-        "checkedAt": "2026-11-18T10:35:43.909654+00:00",
+        "checkedAt": "2026-11-18T10:41:20.633713+00:00",
         "starts": {
           "prelims": "2026-12-05T15:00:00+00:00",
           "main": "2026-12-05T18:00:00+00:00"
@@ -1064,7 +1070,10 @@
           "round": "",
           "time": ""
         }
-      ]
+      ],
+      "poster": "assets/images/events/ufc-fight-night-december-05-2026.jpg",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-11/120526-ufc-fight-night-adesanya-vs-magomedov-TEMP-HERO.jpg?h=d1cb525d&itok=3s4Fvz1Q",
+      "posterAlt": "UFC middleweights Israel Adesanya and Shara Magomedov over a red and black background"
     },
     {
       "id": "ufc-fight-night-november-21-2026",
@@ -1202,14 +1211,14 @@
         }
       ],
       "poster": "assets/images/events/ufc-fight-night-november-21-2026.jpg",
-      "posterAlt": "UFC light heavyweights Jiri Prochazka and Navajo Stirling stand side by side over a red background",
-      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-09/_Endpage.jpg?h=d1cb525d&itok=EL8X6ZKz",
+      "posterAlt": "UFC light heavyweights Jiri Prochazka and Navajo Stirling stand side by side over an orange background",
+      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2026-10/112126-ufc-fight-night-prochazka-vs-stirling-EVENT-ART.jpg?h=d1cb525d&itok=NWzqO5aV",
       "dataSource": "UFC",
       "citoSlug": "ufc-fight-night-november-21-2026",
       "sectionSchedule": {
         "eventDate": "2026-11-21T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
-        "checkedAt": "2026-11-18T10:35:43.909654+00:00",
+        "checkedAt": "2026-11-18T10:41:20.633713+00:00",
         "starts": {
           "main": "2026-11-21T18:00:00+00:00",
           "prelims": "2026-11-21T15:00:00+00:00"
@@ -1594,7 +1603,7 @@
       ],
       "eventKind": "numbered",
       "resultsSource": "https://www.ufc.com/event/ufc-334",
-      "resultsCheckedAt": "2026-11-18T10:35:44.986573+00:00"
+      "resultsCheckedAt": "2026-11-18T10:41:22.623978+00:00"
     },
     {
       "id": "ufc-fight-night-november-07-2026",
@@ -1989,7 +1998,7 @@
         }
       ],
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-      "resultsCheckedAt": "2026-11-18T10:35:44.986573+00:00"
+      "resultsCheckedAt": "2026-11-18T10:41:22.623978+00:00"
     },
     {
       "id": "ufc-fight-night-october-31-2026",
@@ -8244,7 +8253,7 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-18T10:35:44.986573+00:00",
+    "checkedAt": "2026-11-18T10:41:22.623978+00:00",
     "verifiedIds": [
       "ufc-334",
       "ufc-fight-night-november-07-2026"
@@ -8252,7 +8261,7 @@
     "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-11-18T10:35:43.909654+00:00",
+    "checkedAt": "2026-11-18T10:41:20.633713+00:00",
     "verifiedIds": [
       "ufc-fight-night-november-21-2026",
       "ufc-fight-night-december-05-2026",
