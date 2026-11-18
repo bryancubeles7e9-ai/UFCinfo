@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "UFC",
   "sourceUrl": "https://www.ufc.com",
-  "synchronizedAt": "2026-11-18T12:36:36.360981+00:00",
+  "synchronizedAt": "2026-11-18T21:00:54.853057+00:00",
   "events": [
     {
       "id": "ufc-fight-night-february-13-2027",
@@ -22,7 +22,7 @@
       "sectionSchedule": {
         "eventDate": "2027-02-13T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-13-2027",
-        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
+        "checkedAt": "2026-11-18T21:00:54.853057+00:00",
         "starts": {
           "prelims": "2027-02-13T20:00:00+00:00",
           "main": "2027-02-13T22:00:00+00:00"
@@ -131,7 +131,7 @@
       "sectionSchedule": {
         "eventDate": "2027-02-06T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-06-2027",
-        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
+        "checkedAt": "2026-11-18T21:00:54.853057+00:00",
         "starts": {
           "prelims": "2027-02-06T20:00:00+00:00",
           "main": "2027-02-06T22:00:00+00:00"
@@ -287,7 +287,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-31T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-336",
-        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
+        "checkedAt": "2026-11-18T21:00:54.853057+00:00",
         "starts": {
           "early-prelims": "2027-01-30T22:00:00+00:00",
           "prelims": "2027-01-31T00:00:00+00:00",
@@ -355,18 +355,18 @@
       "title": "UFC Fight Night",
       "subtitle": "Gabriel Bonfim vs Sean Brady",
       "location": "Meta APEX, Las Vegas United States",
-      "date": "2027-01-23T22:00:00+00:00",
+      "date": "2027-01-24T01:00:00+00:00",
       "status": "scheduled",
       "dataSource": "UFC",
       "checkedAt": "2026-11-18",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
       "sectionSchedule": {
-        "eventDate": "2027-01-23T22:00:00+00:00",
+        "eventDate": "2027-01-24T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
-        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
+        "checkedAt": "2026-11-18T21:00:54.853057+00:00",
         "starts": {
-          "main": "2027-01-23T22:00:00+00:00",
-          "prelims": "2027-01-23T20:00:00+00:00"
+          "main": "2027-01-24T01:00:00+00:00",
+          "prelims": "2027-01-23T22:00:00+00:00"
         }
       },
       "pendingBoutRemovals": {},
@@ -386,6 +386,13 @@
             "round": "",
             "time": ""
           }
+        },
+        {
+          "kind": "schedule-corrected",
+          "checkedAt": "2026-11-18T21:00:54.853057+00:00",
+          "source": "UFC",
+          "previousDate": "2027-01-23T22:00:00+00:00",
+          "date": "2027-01-24T01:00:00+00:00"
         }
       ],
       "bouts": [
@@ -461,7 +468,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-17T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
-        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
+        "checkedAt": "2026-11-18T21:00:54.853057+00:00",
         "starts": {
           "prelims": "2027-01-16T22:00:00+00:00",
           "main": "2027-01-17T01:00:00+00:00"
@@ -523,7 +530,7 @@
       "id": "ufc-335",
       "number": 335,
       "title": "UFC 335",
-      "subtitle": "Oliveira vs Lopes",
+      "subtitle": "Charles Oliveira vs Diego Lopes",
       "status": "scheduled",
       "date": "2026-12-13T02:00:00+00:00",
       "location": "T-Mobile Arena, Las Vegas United States",
@@ -532,7 +539,7 @@
       "checkedAt": "2026-11-18",
       "bouts": [
         {
-          "section": null,
+          "section": "main",
           "red": "Charles Oliveira",
           "blue": "Diego Lopes",
           "division": "Lightweight Bout",
@@ -543,7 +550,7 @@
           "time": ""
         },
         {
-          "section": null,
+          "section": "main",
           "red": "Alex Pereira",
           "blue": "Sergei Pavlovich",
           "division": "Heavyweight Bout",
@@ -551,12 +558,10 @@
           "outcome": null,
           "method": "",
           "round": "",
-          "time": "",
-          "scheduledRounds": 5,
-          "roundsSource": "https://www.t-mobilearena.com/events/detail/ufc-335"
+          "time": ""
         },
         {
-          "section": null,
+          "section": "main",
           "red": "Brandon Moreno",
           "blue": "Charles Johnson",
           "division": "Flyweight Bout",
@@ -567,10 +572,21 @@
           "time": ""
         },
         {
-          "section": null,
+          "section": "main",
           "red": "Kyler Phillips",
           "blue": "Ethyn Ewing",
           "division": "Bantamweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "main",
+          "red": "Damian Pinas",
+          "blue": "Baisangur Susurkaev",
+          "division": "Middleweight Bout",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -582,17 +598,6 @@
           "red": "Quentin Pasley",
           "blue": "Junior Tafa",
           "division": "Light Heavyweight Bout",
-          "winner": null,
-          "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
-        },
-        {
-          "section": null,
-          "red": "Damian Pinas",
-          "blue": "Baisangur Susurkaev",
-          "division": "Middleweight Bout",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -610,14 +615,38 @@
       "sectionSchedule": {
         "eventDate": "2026-12-13T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-335",
-        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
+        "checkedAt": "2026-11-18T21:00:54.853057+00:00",
         "starts": {
+          "main": "2026-12-13T02:00:00+00:00",
           "early-prelims": "2026-12-12T22:00:00+00:00",
-          "prelims": "2026-12-13T00:00:00+00:00",
-          "main": "2026-12-13T02:00:00+00:00"
+          "prelims": "2026-12-13T00:00:00+00:00"
         }
       },
-      "pendingBoutRemovals": {},
+      "pendingBoutRemovals": {
+        "juniortafa|quentinpasley": {
+          "firstSeenAt": "2026-11-18T21:00:54.853057+00:00",
+          "comparable": true,
+          "snapshot": [
+            "alexpereira|sergeipavlovich",
+            "baisangursusurkaev|damianpinas",
+            "brandonmoreno|charlesjohnson",
+            "charlesoliveira|diegolopes",
+            "ethynewing|kylerphillips"
+          ],
+          "bout": {
+            "section": null,
+            "red": "Quentin Pasley",
+            "blue": "Junior Tafa",
+            "division": "Light Heavyweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          },
+          "source": "UFC"
+        }
+      },
       "cardChanges": [
         {
           "kind": "added",
@@ -707,7 +736,7 @@
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
       "title": "UFC Fight Night",
-      "subtitle": "Adesanya vs Magomedov",
+      "subtitle": "Israel Adesanya vs Shara Magomedov",
       "location": "The Venue, Riyadh Saudi Arabia",
       "date": "2026-12-05T18:00:00+00:00",
       "status": "scheduled",
@@ -717,10 +746,10 @@
       "sectionSchedule": {
         "eventDate": "2026-12-05T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
-        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
+        "checkedAt": "2026-11-18T21:00:54.853057+00:00",
         "starts": {
-          "prelims": "2026-12-05T15:00:00+00:00",
-          "main": "2026-12-05T18:00:00+00:00"
+          "main": "2026-12-05T18:00:00+00:00",
+          "prelims": "2026-12-05T15:00:00+00:00"
         }
       },
       "pendingBoutRemovals": {},
@@ -920,7 +949,7 @@
       ],
       "bouts": [
         {
-          "section": null,
+          "section": "main",
           "red": "Israel Adesanya",
           "blue": "Shara Magomedov",
           "division": "Middleweight Bout",
@@ -931,7 +960,7 @@
           "time": ""
         },
         {
-          "section": null,
+          "section": "main",
           "red": "Ian Machado Garry",
           "blue": "Yaroslav Amosov",
           "division": "Welterweight Bout",
@@ -942,7 +971,7 @@
           "time": ""
         },
         {
-          "section": null,
+          "section": "main",
           "red": "Serghei Spivac",
           "blue": "Mario Pinto",
           "division": "Heavyweight Bout",
@@ -953,7 +982,7 @@
           "time": ""
         },
         {
-          "section": null,
+          "section": "main",
           "red": "Levan Chokheli",
           "blue": "Islam Dulatov",
           "division": "Welterweight Bout",
@@ -964,7 +993,7 @@
           "time": ""
         },
         {
-          "section": null,
+          "section": "main",
           "red": "Mairon Santos",
           "blue": "Akbar Abdullaev",
           "division": "Lightweight Bout",
@@ -975,7 +1004,7 @@
           "time": ""
         },
         {
-          "section": null,
+          "section": "main",
           "red": "Magomed Tuchalov",
           "blue": "Ion Cutelaba",
           "division": "Light Heavyweight Bout",
@@ -986,7 +1015,7 @@
           "time": ""
         },
         {
-          "section": null,
+          "section": "prelims",
           "red": "Bruno Silva",
           "blue": "Jafel Filho",
           "division": "Flyweight Bout",
@@ -997,7 +1026,7 @@
           "time": ""
         },
         {
-          "section": null,
+          "section": "prelims",
           "red": "Uran Satybaldiev",
           "blue": "Ivan Gnizditskiy",
           "division": "Light Heavyweight Bout",
@@ -1008,7 +1037,7 @@
           "time": ""
         },
         {
-          "section": null,
+          "section": "prelims",
           "red": "Marco Tulio",
           "blue": "JunYong Park",
           "division": "Middleweight Bout",
@@ -1019,7 +1048,7 @@
           "time": ""
         },
         {
-          "section": null,
+          "section": "prelims",
           "red": "Pavel Andrusca",
           "blue": "Mahammadali Osmanli",
           "division": "Bantamweight Bout",
@@ -1030,7 +1059,7 @@
           "time": ""
         },
         {
-          "section": null,
+          "section": "prelims",
           "red": "Modestino Rodrigues",
           "blue": "Matthieu Duclos",
           "division": "Middleweight Bout",
@@ -1041,7 +1070,7 @@
           "time": ""
         },
         {
-          "section": null,
+          "section": "prelims",
           "red": "Abdul Hussein",
           "blue": "Hecher Sosa",
           "division": "Bantamweight Bout",
@@ -1199,7 +1228,7 @@
       "sectionSchedule": {
         "eventDate": "2026-11-21T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
-        "checkedAt": "2026-11-18T12:36:36.360981+00:00",
+        "checkedAt": "2026-11-18T21:00:54.853057+00:00",
         "starts": {
           "main": "2026-11-21T18:00:00+00:00",
           "prelims": "2026-11-21T15:00:00+00:00"
@@ -1584,7 +1613,7 @@
       ],
       "eventKind": "numbered",
       "resultsSource": "https://www.ufc.com/event/ufc-334",
-      "resultsCheckedAt": "2026-11-18T12:36:37.394304+00:00"
+      "resultsCheckedAt": "2026-11-18T21:00:56.416212+00:00"
     },
     {
       "id": "ufc-fight-night-november-07-2026",
@@ -1979,7 +2008,7 @@
         }
       ],
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-      "resultsCheckedAt": "2026-11-18T12:36:37.394304+00:00"
+      "resultsCheckedAt": "2026-11-18T21:00:56.416212+00:00"
     },
     {
       "id": "ufc-fight-night-october-31-2026",
@@ -8234,7 +8263,7 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-18T12:36:37.394304+00:00",
+    "checkedAt": "2026-11-18T21:00:56.416212+00:00",
     "verifiedIds": [
       "ufc-334",
       "ufc-fight-night-november-07-2026"
@@ -8242,7 +8271,7 @@
     "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-11-18T12:36:36.360981+00:00",
+    "checkedAt": "2026-11-18T21:00:54.853057+00:00",
     "verifiedIds": [
       "ufc-fight-night-november-21-2026",
       "ufc-fight-night-december-05-2026",
