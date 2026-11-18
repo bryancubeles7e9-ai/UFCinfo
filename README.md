@@ -6,7 +6,7 @@ UFCinfo nace de la perspectiva de un aficionado: consultar una cartelera, conoce
 
 **[Entrar en UFCinfo](https://ufcinfo.onrender.com)**
 
-La portada destaca la próxima estelar con imágenes, cuenta atrás y accesos a Carteleras y Pick’em. El diseño comparte tipografía, espacios y tarjetas entre secciones, con modos claro y oscuro y navegación adaptada a móvil y ordenador. Los carteles mantienen su proporción y utilizan un fondo integrado cuando sobra espacio.
+La portada destaca la próxima estelar con imágenes, cuenta atrás y accesos a Carteleras y Pick’em, y resume la web en cuatro cifras destacadas. Los carteles se funden con su fondo sin franjas, las tarjetas de veladas y luchadores se elevan al pasar el ratón (los campeones actuales con un borde dorado) y los datos de la fuente de Carteleras quedan en un desplegable. El diseño comparte tipografía, espacios y tarjetas entre secciones, con modos claro y oscuro y navegación adaptada a móvil y ordenador. Los carteles mantienen su proporción y utilizan un fondo integrado cuando sobra espacio.
 
 ## Qué puedes hacer
 

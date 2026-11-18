@@ -160,8 +160,11 @@
               aria-label="Buscar evento"
           /></label>
         </div>
-        <p class="data-note" id="event-feed-status" role="status" aria-live="polite">Cargando última actualización de las carteleras…</p>
-        <a class="text-link" id="event-feed-source" href="https://www.ufc.com" target="_blank" rel="noopener noreferrer">Fuente: UFC ›</a>
+        <details class="event-feed-details">
+          <summary>Datos de la fuente</summary>
+          <p class="data-note" id="event-feed-status" role="status" aria-live="polite">Cargando última actualización de las carteleras…</p>
+          <a class="text-link" id="event-feed-source" href="https://www.ufc.com" target="_blank" rel="noopener noreferrer">Fuente: UFC ›</a>
+        </details>
         <div class="event-list" id="event-list"></div>
         <aside class="ad-placement" data-ad-placement="events" data-no-translate aria-label="Publicidad" hidden><span class="ad-placement-label">Publicidad</span></aside>
       </section>
