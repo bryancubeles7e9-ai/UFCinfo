@@ -726,6 +726,7 @@ export const catalan = {
   "La etiqueta de confirmación se actualiza cuando se verifica la pareja en una cartelera de UFC.com.": "L’etiqueta de confirmació s’actualitza quan es verifica la parella en una cartellera d’UFC.com.",
   "CONFIRMADO POR UFC": "CONFIRMAT PER UFC",
   "RUMOR · SIN CONFIRMAR": "RUMOR · SENSE CONFIRMAR",
+  "NUEVO": "NOU",
   "FUENTE EN ESPAÑOL": "FONT EN ESPANYOL",
   "FUENTE EN INGLÉS": "FONT EN ANGLÈS",
   "Contenido oculto por el modo sin spoilers.": "Contingut ocult pel mode sense espòilers.",

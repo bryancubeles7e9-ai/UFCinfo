@@ -120,3 +120,17 @@ export function highlightRankRow(row) {
     {backgroundColor:'rgba(244,81,42,0)', boxShadow:'inset 3px 0 0 rgba(244,81,42,0)'}
   ], {duration:1600, delay:250, easing:'ease-out'});
 }
+
+// Rumores: posts this browser had not seen slide in, and their label glows once.
+export function enterNewRumors(cards) {
+  cards.forEach((card, index) => whenVisible(card, () => {
+    animateInterface(card, [{opacity:0, transform:'translateX(-28px)'}, {opacity:1, transform:'none'}],
+      {duration:480, delay:Math.min(index * 90, 360), easing:settle, fill:'backwards'});
+    const badge = card.querySelector('.rumor-new-badge');
+    if (badge) animateInterface(badge, [
+      {transform:'scale(.6)', boxShadow:'0 0 0 0 rgba(244,81,42,.7)'},
+      {transform:'scale(1.12)', boxShadow:'0 0 0 8px rgba(244,81,42,0)', offset:.5},
+      {transform:'none', boxShadow:'0 0 0 0 rgba(244,81,42,0)'}
+    ], {duration:900, delay:Math.min(index * 90, 360) + 300, easing:'ease-out', fill:'backwards'});
+  }));
+}

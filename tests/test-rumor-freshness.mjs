@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {createRumorFreshness} from '../assets/js/rumor-freshness.js';
+const memory = () => { const data = {}; return {getItem:k => data[k] ?? null, setItem:(k,v) => { data[k] = v; }}; };
+const storage = memory();
+const first = createRumorFreshness(storage);
+first.observe(['rumor:a', 'group:b']);
+assert.ok(!first.isNew('rumor:a') && !first.isNew('group:b'), 'first visit sets a baseline without labels');
+const second = createRumorFreshness(storage);
+second.observe(['rumor:a', 'group:b', 'group:c']);
+assert.ok(second.isNew('group:c') && !second.isNew('rumor:a'), 'later visits flag only unseen rumors');
+second.markSeen(['group:c']);
+assert.ok(second.isNew('group:c'), 'the label stays for the rest of the visit');
+const third = createRumorFreshness(storage);
+third.observe(['rumor:a', 'group:b', 'group:c']);
+assert.ok(!third.isNew('group:c'), 'a rumor seen on a previous visit is no longer new');
+const broken = createRumorFreshness({getItem(){ throw Error('blocked'); }, setItem(){ throw Error('blocked'); }});
+broken.observe(['rumor:a']); assert.ok(!broken.isNew('rumor:a'), 'blocked storage never flags or throws');
+console.log('PASS: rumor freshness baseline, new labels per visit and blocked storage');

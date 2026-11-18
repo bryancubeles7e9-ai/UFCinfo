@@ -261,3 +261,5 @@ main{max-width:var(--max);padding-bottom:64px}
 .official-bout-names[data-winner-side] .bout-fighter-name{transition:opacity .2s}
 .official-bout-names[data-winner-side="red"] .bout-fighter-name:last-child,.official-bout-names[data-winner-side="blue"] .bout-fighter-name:first-child{opacity:.45}
 .official-bout-names[data-winner-side="red"] .bout-fighter-name:first-child,.official-bout-names[data-winner-side="blue"] .bout-fighter-name:last-child{font-weight:700}
+.rumor-new-badge{display:inline-block;padding:3px 8px;border-radius:999px;background:var(--accent);color:#fff;font-size:10px;font-weight:800;letter-spacing:.08em}
+.rumor-card.is-new{border-left:3px solid var(--accent)}
