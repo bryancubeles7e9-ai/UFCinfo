@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-18T09:26:46.062Z",
-  "lastSearchedAt": "2026-11-18T09:26:46.062Z",
+  "updatedAt": "2026-11-18T18:20:26.019Z",
+  "lastSearchedAt": "2026-11-18T18:20:26.019Z",
   "groups": [
     {
       "id": "2122684764146606253",
@@ -29,37 +29,6 @@
           "postUrl": "https://x.com/ClubDeLasMMA/status/2122684764146606253",
           "publishedAt": "2026-11-17T13:34:20.000Z",
           "language": "es",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2121800246770761860",
-      "fighterNames": [
-        "Gabriel Bonfim",
-        "Sean Brady"
-      ],
-      "matchupKey": "gabrielbonfim|seanbrady|2027-01-23",
-      "eventDateHint": "2027-01-23",
-      "rematch": false,
-      "dateYearInferred": true,
-      "summary": {
-        "es": "Championship Rounds comenta un posible cruce entre Gabriel Bonfim y Sean Brady; la publicación menciona el 23 de enero. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Championship Rounds discusses a possible matchup between Gabriel Bonfim and Sean Brady; the post mentions January 23. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-15T03:00:19.403Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-15T02:59:34.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2121800246770761860",
-          "sourceId": "championship-rounds",
-          "postUrl": "https://x.com/ChampRDS/status/2121800246770761860",
-          "publishedAt": "2026-11-15T02:59:34.000Z",
-          "language": "en",
           "attributedAccounts": []
         }
       ],
@@ -192,115 +161,6 @@
             "BigMarcel24"
           ],
           "attribution": "at UFC 335 on December 12"
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2119274271008833826",
-      "fighterNames": [
-        "Abdul Hussein",
-        "Hecher Sosa"
-      ],
-      "matchupKey": "abdulhussein|hechersosa|undated:2026-11",
-      "eventDateHint": null,
-      "rematch": false,
-      "dateYearInferred": false,
-      "summary": {
-        "es": "Pelunaton comenta un posible cruce entre Abdul Hussein y Hecher Sosa, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Pelunaton discusses a possible matchup between Abdul Hussein and Hecher Sosa, with no exact date stated by the source. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-08T04:00:54.173Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-08T03:42:15.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2119274271008833826",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2119274271008833826",
-          "publishedAt": "2026-11-08T03:42:15.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2119273052995260876",
-      "fighterNames": [
-        "Ian Machado Garry",
-        "Yaroslav Amosov"
-      ],
-      "matchupKey": "ianmachadogarry|yaroslavamosov|undated:2026-11",
-      "eventDateHint": null,
-      "rematch": false,
-      "dateYearInferred": false,
-      "summary": {
-        "es": "Championship Rounds comenta un posible cruce entre Ian Machado Garry y Yaroslav Amosov, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Championship Rounds discusses a possible matchup between Ian Machado Garry and Yaroslav Amosov, with no exact date stated by the source. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-08T04:00:54.173Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-08T03:37:24.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2119272032919486872",
-          "sourceId": "championship-rounds",
-          "postUrl": "https://x.com/ChampRDS/status/2119272032919486872",
-          "publishedAt": "2026-11-08T03:33:21.000Z",
-          "language": "en",
-          "attributedAccounts": []
-        },
-        {
-          "id": "2119273052995260876",
-          "sourceId": "championship-rounds",
-          "postUrl": "https://x.com/ChampRDS/status/2119273052995260876",
-          "publishedAt": "2026-11-08T03:37:24.000Z",
-          "language": "en",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2119272376860840238",
-      "fighterNames": [
-        "Ian Machado Garry",
-        "Yaroslav Amosov"
-      ],
-      "matchupKey": "ianmachadogarry|yaroslavamosov|2026-12-05",
-      "eventDateHint": "2026-12-05",
-      "rematch": false,
-      "dateYearInferred": true,
-      "summary": {
-        "es": "MMA Latinoamérica comenta un posible cruce entre Ian Machado Garry y Yaroslav Amosov; la publicación menciona el 5 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "MMA Latinoamérica discusses a possible matchup between Ian Machado Garry and Yaroslav Amosov; the post mentions December 5. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-08T04:00:54.173Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-08T03:34:43.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2119272376860840238",
-          "sourceId": "mma-latinoamerica",
-          "postUrl": "https://x.com/ClubDeLasMMA/status/2119272376860840238",
-          "publishedAt": "2026-11-08T03:34:43.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        },
-        {
-          "id": "2119272949790195799",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2119272949790195799",
-          "publishedAt": "2026-11-08T03:37:00.000Z",
-          "language": "es",
-          "attributedAccounts": []
         }
       ],
       "official": null
@@ -503,37 +363,6 @@
       "official": null
     },
     {
-      "id": "2112861333578522824",
-      "fighterNames": [
-        "Islam Dulatov",
-        "Levan Chokheli"
-      ],
-      "matchupKey": "islamdulatov|levanchokheli|2026-12-05",
-      "eventDateHint": "2026-12-05",
-      "rematch": false,
-      "dateYearInferred": true,
-      "summary": {
-        "es": "Pelunaton comenta un posible cruce entre Islam Dulatov y Levan Chokheli; la publicación menciona el 5 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Pelunaton discusses a possible matchup between Islam Dulatov and Levan Chokheli; the post mentions December 5. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-10-21T22:00:59.628Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-10-21T10:59:31.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2112861333578522824",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2112861333578522824",
-          "publishedAt": "2026-10-21T10:59:31.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
       "id": "2111672184066527481",
       "fighterNames": [
         "Mauricio Ruffy",
@@ -668,38 +497,6 @@
           "attributedAccounts": [
             "TheMMAApe"
           ]
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2110744258483478953",
-      "fighterNames": [
-        "Abdul Hussein",
-        "Hecher Sosa"
-      ],
-      "matchupKey": "abdulhussein|hechersosa|2026-12-05",
-      "eventDateHint": "2026-12-05",
-      "rematch": false,
-      "dateYearInferred": true,
-      "summary": {
-        "es": "Pelunaton comenta un posible cruce entre Abdul Hussein y Hecher Sosa; la publicación menciona el 5 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Pelunaton discusses a possible matchup between Abdul Hussein and Hecher Sosa; the post mentions December 5. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-10-15T15:01:06.223Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-10-15T14:47:01.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2110744258483478953",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2110744258483478953",
-          "publishedAt": "2026-10-15T14:47:01.000Z",
-          "language": "es",
-          "attributedAccounts": [],
-          "attribution": "faltan algunas semanas pero vista como esta la situación por Arabia Saudita parece complicado que ese evento siga adelante"
         }
       ],
       "official": null
@@ -1032,36 +829,6 @@
       "official": null
     },
     {
-      "id": "2106348613001756776",
-      "fighterNames": [
-        "Ian Garry",
-        "Yaroslav Amosov"
-      ],
-      "matchupKey": "iangarry|yaroslavamosov|undated:2026-10",
-      "eventDateHint": null,
-      "dateYearInferred": false,
-      "summary": {
-        "es": "Pelunaton comenta un posible cruce entre Ian Garry y Yaroslav Amosov, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Pelunaton discusses a possible matchup between Ian Garry and Yaroslav Amosov, with no exact date stated by the source. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-10-07T17:12:00.241Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-10-03T11:40:18.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2106348613001756776",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2106348613001756776",
-          "publishedAt": "2026-10-03T11:40:18.000Z",
-          "language": "es",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
       "id": "2106341639572594830",
       "fighterNames": [
         "Eric Garcia",
@@ -1093,8 +860,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-18T09:26:46.062Z",
-    "receivedPosts": 8,
+    "checkedAt": "2026-11-18T18:20:26.019Z",
+    "receivedPosts": 4,
     "added": 0
   }
 }
