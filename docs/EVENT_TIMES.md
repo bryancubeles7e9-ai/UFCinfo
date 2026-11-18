@@ -1,14 +1,14 @@
 # Horarios de las carteleras
 
-La sincronización de eventos consulta las páginas públicas de UFC de las próximas
-tres veladas y guarda `sectionSchedule` con los inicios oficiales de principal,
-preliminares y previas que estén publicados. Se ejecuta junto a las actualizaciones
-habituales de las 08:00 y 14:00, sin llamadas adicionales a Cito.
+A las 08:00 y 14:00 (Europe/Madrid), GitHub Actions consulta el calendario
+público de UFC y las fichas de las veladas próximas que aparecen en él. El inicio
+oficial de la principal se guarda en `date`; las horas de cada bloque se guardan
+en `sectionSchedule`. No hacen falta claves ni llamadas a Cito.
 
-La fecha de la principal debe coincidir con la cartelera guardada. Se rechazan
-horas contradictorias o bloques fuera de orden; se conserva la última información
-válida y se registra la incidencia en `scheduleVerification.failedIds`.
-Si cambia la fecha del evento, el navegador ignora el horario antiguo.
+Se rechazan fichas con identidad incorrecta, horas contradictorias o bloques
+fuera de orden. Se conserva la última información válida y se registra la
+incidencia en `scheduleVerification.failedIds`. Si cambia la fecha del evento,
+el navegador ignora el horario antiguo.
 
 Cada combate muestra «Franja estimada», con ambos extremos del intervalo. El
 inicio oficial del bloque sirve de referencia, pero no garantiza la hora individual.

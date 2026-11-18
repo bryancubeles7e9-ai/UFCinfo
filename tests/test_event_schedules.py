@@ -28,4 +28,73 @@ class ScheduleTests(unittest.TestCase):
         m.confirm_title_rounds(page.replace('1793491200','1793577600'),event)
         self.assertNotIn('scheduledRounds',event['bouts'][1])
 
+class OfficialUpcomingTests(unittest.TestCase):
+    def setUp(self):
+        self.now = datetime(2026, 10, 30, tzinfo=timezone.utc)
+        self.slug = 'ufc-fight-night-october-31-2026'
+        self.url = m.UFC + '/event/' + self.slug
+        self.page = (
+            f'<link rel="canonical" href="{self.url}">'
+            '<div class="c-hero__headline-suffix" data-timestamp="1793491200"></div>'
+            '<div id="main-card">'
+            '<div class="c-event-fight-card-broadcaster__time" data-timestamp="1793491200"></div>'
+            '<div class="c-listing-fight">'
+            '<span class="c-listing-fight__corner-name--red">Alpha</span>'
+            '<span class="c-listing-fight__corner-name--blue">New Bravo</span>'
+            '<span class="c-listing-fight__class-text">Lightweight Bout</span></div></div>'
+            '<div id="prelims-card">'
+            '<div class="c-event-fight-card-broadcaster__time" data-timestamp="1793480400"></div></div>'
+        )
+        self.calendar = (
+            '<details id="events-list-upcoming"><div class="c-card-event--result__date">'
+            f'<a href="/event/{self.slug}">UFC Fight Night</a></div></details>'
+            '<details id="events-list-past"><div class="c-card-event--result__date">'
+            '<a href="/event/ufc-300">Old UFC</a></div></details>'
+        )
+
+    def test_discovers_new_event_and_preserves_results(self):
+        archived = {'id':'ufc-300', 'date':'2026-04-30T00:00:00+00:00', 'status':'completed',
+                    'bouts':[{'red':'A', 'blue':'B', 'winner':'A'}]}
+        feed = {'events':[archived]}
+        pages = {m.UFC + '/events':self.calendar, self.url:self.page}
+        self.assertTrue(m.synchronize(feed, pages.__getitem__, self.now))
+        self.assertEqual(feed['events'][1], archived)
+        new = feed['events'][0]
+        self.assertEqual(new['id'], self.slug)
+        self.assertEqual(new['bouts'][0]['blue'], 'New Bravo')
+        self.assertEqual(new['date'], '2026-11-01T00:00:00+00:00')
+        self.assertEqual(new['sectionSchedule']['starts']['prelims'], '2026-10-31T21:00:00+00:00')
+
+    def test_repairs_first_block_date_and_applies_replacement(self):
+        current = m.update_card(self.page, self.slug, None, self.now)
+        current['date'] = current['sectionSchedule']['starts']['prelims']
+        current['bouts'][0]['blue'] = 'Old Bravo'
+        new = m.update_card(self.page, self.slug, current, self.now)
+        self.assertEqual(new['date'], new['sectionSchedule']['starts']['main'])
+        self.assertEqual([b['blue'] for b in new['bouts']], ['New Bravo'])
+        self.assertIn(('replaced','UFC'), [(c['kind'],c['source']) for c in new['cardChanges']])
+        self.assertEqual(new['cardChanges'][-1]['kind'], 'schedule-corrected')
+
+    def test_unassigned_card_gets_official_block_times_without_guessing_bout_order(self):
+        start = self.page.index('<div class="c-listing-fight">')
+        end = self.page.index('<div id="prelims-card">')
+        fight = self.page[start:end].removesuffix('</div>')
+        page = self.page.split('<div id="main-card">')[0] + f'<div class="view-event-fights">{fight}</div>'
+        page += ('<div class="c-listing-viewing-option">'
+                 '<div class="c-listing-viewing-option__fight-card">Prelims</div>'
+                 '<div class="c-listing-viewing-option__time" data-timestamp="1793480400"></div></div>')
+        event = m.update_card(page, self.slug, None, self.now)
+        self.assertIsNone(event['bouts'][0]['section'])
+        self.assertEqual(event['sectionSchedule']['starts']['prelims'], '2026-10-31T21:00:00+00:00')
+
+    def test_bad_official_page_keeps_saved_data_and_reports_failure(self):
+        old = m.update_card(self.page, self.slug, None, self.now)
+        feed = {'events':[old], 'synchronizedAt':'2026-10-29T12:00:00+00:00'}
+        pages = {m.UFC + '/events':self.calendar, self.url:self.page.replace(self.url, m.UFC + '/event/ufc-333')}
+        self.assertFalse(m.synchronize(feed, pages.__getitem__, self.now))
+        self.assertEqual(feed['events'], [old])
+        self.assertEqual(feed['synchronizedAt'], '2026-10-29T12:00:00+00:00')
+        self.assertEqual(feed['scheduleVerification']['failedIds'], [self.slug])
+
+
 if __name__=='__main__':unittest.main()

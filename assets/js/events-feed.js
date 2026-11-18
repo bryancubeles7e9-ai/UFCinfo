@@ -48,7 +48,7 @@ export async function refreshEvents() {
     eventsFeed.source = feed.source;
     eventsFeed.sourceUrl = feed.sourceUrl;
     eventsFeed.synchronizedAt = feed.synchronizedAt || eventsFeed.synchronizedAt;
-    eventsFeed.automatic = feed.source !== 'UFC';
+    eventsFeed.automatic = feed.source !== 'UFC' || Boolean(feed.scheduleVerification?.verifiedIds?.length);
     eventsFeed.unavailable = false;
     return true;
   } catch {

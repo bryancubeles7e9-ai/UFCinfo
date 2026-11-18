@@ -1,6 +1,8 @@
 name: Actualizar eventos UFC
 on:
-  # cron-job.org dispatches at 08:00 and 14:00 Europe/Madrid.
+  schedule:
+    - cron: '0 8,14 * * *'
+      timezone: Europe/Madrid
   workflow_dispatch:
   push:
     branches: [main]
@@ -9,6 +11,7 @@ on:
       - 'assets/**'
       - 'scripts/sync-ufc-events.py'
       - 'scripts/sync-cito-events.py'
+      - 'scripts/sync-event-schedules.py'
       - 'scripts/run-data-sync.py'
       - 'scripts/reconcile-official-results.py'
       - 'scripts/import-season-fighters.py'
@@ -20,6 +23,7 @@ on:
       - 'tests/test-events-feed.mjs'
       - 'tests/test_ufc_sync.py'
       - 'tests/test_cito_sync.py'
+      - 'tests/test_event_schedules.py'
       - 'tests/test_rankings_sync.py'
       - '.github/workflows/ufc-events.yml'
 permissions:
@@ -56,16 +60,20 @@ jobs:
         run: node tests/test-rankings-feed.mjs
       - name: Test récords y estadísticas dinámicos
         run: node tests/test-fighter-records-feed.mjs
-      - name: Actualizar rankings oficiales
+      - name: Actualizar eventos, combates y horarios desde UFC
+        id: official_cards
         continue-on-error: true
-        run: python3 scripts/run-data-sync.py rankings
-      - name: Guardar rankings actualizados
+        run: python3 scripts/run-data-sync.py events
+      - name: Verificar resultados recientes con UFC
+        run: python3 scripts/run-data-sync.py results
+      - name: Guardar datos actualizados
         run: |
-          git add assets/data/ufc-rankings.json assets/data/sync-health.json
+          git add assets/data/ufc-events.json assets/data/sync-health.json
+          if [ -d assets/images/events ]; then git add assets/images/events; fi
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git commit -m 'Actualizar rankings oficiales UFC'
+            git commit -m 'Actualizar carteleras y resultados UFC'
             # Retry publication if another workflow advances main.
             # The source/API steps are not repeated.
             published=false
@@ -86,37 +94,16 @@ jobs:
               exit 1
             fi
           fi
-      - name: Comprobar clave
-        id: key
-        env:
-          CITO_API_KEY: ${{ secrets.CITO_API_KEY }}
-        run: |
-          if [ -n "$CITO_API_KEY" ]; then
-            echo 'configured=true' >> "$GITHUB_OUTPUT"
-          else
-            echo 'configured=false' >> "$GITHUB_OUTPUT"
-            echo '::notice::Configura CITO_API_KEY en los secretos del repositorio para activar Cito. Se conserva la copia actual.'
-          fi
-      - name: Consultar Cito
+      - name: Actualizar rankings oficiales
         continue-on-error: true
-        # Code/design pushes validate the site without spending provider quota.
-        if: steps.key.outputs.configured == 'true' && github.event_name != 'push'
-        env:
-          CITO_API_KEY: ${{ secrets.CITO_API_KEY }}
-        run: python3 scripts/run-data-sync.py events
-      - name: Verificar resultados recientes con UFC
-        run: python3 scripts/run-data-sync.py results
-      - name: Consultar horarios oficiales de los próximos bloques
-        continue-on-error: true
-        run: python3 scripts/sync-event-schedules.py
-      - name: Guardar datos actualizados
+        run: python3 scripts/run-data-sync.py rankings
+      - name: Guardar rankings actualizados
         run: |
-          git add assets/data/ufc-events.json assets/data/sync-health.json
-          if [ -d assets/images/events ]; then git add assets/images/events; fi
+          git add assets/data/ufc-rankings.json assets/data/sync-health.json
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git commit -m 'Actualizar carteleras y resultados UFC'
+            git commit -m 'Actualizar rankings oficiales UFC'
             # Retry publication if another workflow advances main.
             # The source/API steps are not repeated.
             published=false
@@ -265,6 +252,11 @@ jobs:
       - name: Identificar versión
         id: revision
         run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Avisar si no se pudo actualizar ninguna próxima cartelera
+        if: steps.official_cards.outcome == 'failure'
+        run: |
+          echo "::error::No se pudo verificar el calendario oficial de UFC. Se conservan las carteleras anteriores."
+          exit 1
   publish:
     # Opt in only after GitHub Pages is configured. API synchronization works without Pages.
     if: vars.OCTAGON_PAGES_ENABLED == 'true'

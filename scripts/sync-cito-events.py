@@ -29,12 +29,12 @@ def pair(bout):
     return tuple(sorted(name(bout[k]) for k in ('red', 'blue')))
 
 
-def change(event, kind, now, **details):
-    entry = {'kind': kind, 'checkedAt': now.isoformat(), 'source': 'Cito', **details}
+def change(event, kind, now, *, source='Cito', **details):
+    entry = {'kind': kind, 'checkedAt': now.isoformat(), 'source': source, **details}
     event['cardChanges'] = (event.get('cardChanges', []) + [entry])[-100:]
 
 
-def merge_bouts(prior, incoming, cancelled, now):
+def merge_bouts(prior, incoming, cancelled, now, *, source='Cito'):
     """Absence is not cancellation: require a second comparable snapshot."""
     current = {pair(b): b for b in incoming}
     if len(current) != len(incoming) or any(len(set(key)) != 2 for key in current):
@@ -63,27 +63,28 @@ def merge_bouts(prior, incoming, cancelled, now):
             result.append(bout)
             continue
         if key in cancelled:
-            change(prior, 'cancelled', now, bout=bout)
+            change(prior, 'cancelled', now, source=source, bout=bout)
             continue
         replacements = [b for b in incoming if set(pair(b)) & set(key) and pair(b) not in {pair(s) for s in saved}]
         if len(replacements) == 1:
-            change(prior, 'replaced', now, bout=bout, replacement=replacements[0])
+            change(prior, 'replaced', now, source=source, bout=bout, replacement=replacements[0])
             continue
         token = '|'.join(key)
         old_pending = prior.get('pendingBoutRemovals', {}).get(token, {})
         first = old_pending.get('firstSeenAt')
         enough_time = first and now - datetime.fromisoformat(first) >= timedelta(hours=1)
-        consistent = old_pending.get('snapshot') == snapshot
+        consistent = (old_pending.get('source', 'Cito') == source
+                      and old_pending.get('snapshot') == snapshot)
         if comparable and enough_time and old_pending.get('comparable') and consistent:
-            change(prior, 'removed-from-card', now, bout=bout)
+            change(prior, 'removed-from-card', now, source=source, bout=bout)
             continue
         pending[token] = {'firstSeenAt': first if comparable and old_pending.get('comparable') and consistent else now.isoformat(),
-                          'comparable': comparable, 'snapshot': snapshot, 'bout': bout}
+                          'comparable': comparable, 'snapshot': snapshot, 'bout': bout, 'source': source}
         result.append(bout)
     prior['pendingBoutRemovals'] = pending
     for bout in incoming:
         if pair(bout) not in {pair(s) for s in saved}:
-            change(prior, 'added', now, bout=bout)
+            change(prior, 'added', now, source=source, bout=bout)
     return result
 
 

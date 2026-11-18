@@ -9,7 +9,7 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 JOBS = {
-    'events': ('sync-cito-events.py', 'ufc-events.json'),
+    'events': ('sync-event-schedules.py', 'ufc-events.json'),
     'results': ('reconcile-official-results.py', 'ufc-events.json'),
     'rankings': ('sync-ufc-rankings.py', 'ufc-rankings.json'),
     'records': ('sync-ufc-fighter-records.py', 'fighter-records.json'),
@@ -23,7 +23,9 @@ def pending_count(kind, feed):
         names = set(n for names in feed.get('unmatchedEventFighters', {}).values() for n in names)
         return len(ids) + len(names)
     if kind == 'events':
-        return sum(bool(e.get('pendingBoutRemovals')) for e in feed.get('events', []))
+        pending = set(feed.get('scheduleVerification', {}).get('failedIds', []))
+        pending.update(e['id'] for e in feed.get('events', []) if e.get('pendingBoutRemovals'))
+        return len(pending)
     if kind == 'results':
         return len(set(feed.get('resultsVerification', {}).get('failedIds', [])))
     return len(set(feed.get('failedIds', [])))

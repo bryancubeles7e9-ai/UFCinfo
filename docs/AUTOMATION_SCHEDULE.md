@@ -1,26 +1,21 @@
 # Data automation schedules
 
-The scheduling source for events/rankings and fighter updates is cron-job.org.
-GitHub Actions still executes the scripts via workflow_dispatch on main.
-All times below use Europe/Madrid (including daylight saving changes).
+All local times use Europe/Madrid (including daylight saving changes).
 
-| Job | Schedule | cron-job.org ID | Workflow |
-| --- | --- | --- | --- |
-| Rumors and official confirmations | Every hour, minute 0 | 8616997 | rumor-sync.yml |
-| Events, results, rankings, fighter records and statistics | 08:00 and 14:00 | 8620496 (08:00), 8625854 (14:00) | ufc-events.yml |
-| Legacy fighter dispatch (job skipped without full_refresh) | 11:47 daily | 8620521 | fighter-records.yml |
+| Job | Schedule | Trigger |
+| --- | --- | --- |
+| Events, results, rankings, fighter records and statistics | 08:00 and 14:00 | GitHub Actions, `ufc-events.yml` |
+| Rumors and official confirmations | Every hour, minute 0 | cron-job.org (8616997) and GitHub backup, `rumor-sync.yml` |
+| Legacy fighter dispatch (job skipped without full_refresh) | 11:47 daily | cron-job.org (8620521), `fighter-records.yml` |
 
-Requests use POST to the repository workflow dispatch endpoint with body
-`{"ref":"main"}`. Authentication is stored only in cron-job.org, never here.
-The existing GitHub token must be renewed before its expiry (9 November 2026).
+The events schedule runs on the default branch. It reads the public UFC calendar
+and the official event pages, uses no paid API and does not need a dispatch token.
+Legacy cron-job.org events schedules (8620496 and 8625854) can be switched off
+if still enabled. Manual and configured push triggers remain. GitHub may delay
+scheduled runs; check the actual run and the saved verification timestamps.
 
-Events and fighters no longer have a second GitHub cron schedule, preventing
-duplicate scheduled API calls. Manual and configured push triggers remain.
-Rumors retain their GitHub backup checks; their hourly guard avoids repeat searches.
-Official rumor confirmations are also checked inside the hourly rumor workflow.
-
-GitHub must still accept and execute each dispatch: an HTTP 204 confirms acceptance,
-not successful completion. Check Actions logs as well as cron-job.org history.
+Rumors retain their hourly guard against repeat paid searches. If retaining the
+external rumors trigger, its GitHub credential must be kept valid.
 
 Fighter updates run after the cards in the same workflow. They require a completed
 card and a result for each selected bout, without a 24-hour wait. Cards from the
