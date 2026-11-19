@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://www.ufc.com/rankings",
-  "synchronizedAt": "2026-11-19T10:33:00.610038+00:00",
+  "synchronizedAt": "2026-11-19T16:12:24.990905+00:00",
   "published": "Tuesday, Nov. 17",
   "categories": [
     {
@@ -57,8 +57,8 @@
         "Amir Albazi",
         "Ramazan Temirov",
         "Tim Elliott",
-        "Sumudaerji",
         "Steve Erceg",
+        "Sumudaerji",
         "Charles Johnson",
         "Tagir Ulanbekov"
       ],
@@ -465,8 +465,8 @@
       "champion": "Kayla Harrison",
       "names": [
         "Amanda Nunes",
-        "Joselyne Edwards",
         "Julianna Peña",
+        "Joselyne Edwards",
         "Ailin Perez",
         "Luana Santos",
         "Yana Santos",
