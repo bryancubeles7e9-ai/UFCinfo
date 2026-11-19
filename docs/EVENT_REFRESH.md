@@ -2,9 +2,9 @@
 
 Las actualizaciones completas siguen siendo a las 08:00 y 14:00 de Europe/Madrid.
 
-A las 10:00 se añade un reintento condicional de las veladas de las últimas 48 horas: resultados incompletos o cuya verificación falló, participantes ausentes y perfiles pendientes/no consultados desde el evento. No consulta Cito, rankings ni fotografías. Si todo está al día, no consulta fuentes. Conserva el límite de 40 perfiles y un registro diario para evitar duplicados.
+Entre las 10:00 y las 14:00 (sin incluir las 14:00) se admite un reintento condicional de las veladas de las últimas 48 horas: resultados incompletos o cuya verificación falló, participantes ausentes y perfiles pendientes/no consultados desde el evento. No consulta Cito, rankings ni fotografías. Si todo está al día, no consulta fuentes. Conserva el límite de 40 perfiles y un registro diario para evitar duplicados.
 
-Se activa al terminar la ejecución horaria existente de rumores, independientemente de su resultado, con respaldo de GitHub a las 08:07/09:07 UTC. La comprobación `Europe/Madrid` selecciona la hora correcta en verano/invierno. Se ejecuta dentro de la franja de las 10:00, sujeto a la cola de GitHub; no garantiza el minuto exacto. No modifica la lógica ni las fuentes de rumores.
+GitHub Actions ofrece cuatro oportunidades: 10:07, 11:07, 12:07 y 13:07 de Madrid. Al terminar cada ejecución de rumores hay otra oportunidad, independientemente de su resultado. Si GitHub empieza tarde pero todavía está dentro de la franja, la comprobación puede ejecutarse. Después de guardar el control diario, los siguientes disparos no hacen consultas. No se modifica la lógica ni las fuentes de rumores.
 
 1. Consulta rankings oficiales y el calendario público de UFC.com, que descubre las próximas veladas y actualiza sus cruces, horarios y carteles (sin Cito desde el 18 de noviembre de 2026).
 2. Verifica hasta tres eventos de los últimos 14 días directamente en UFC.com. Este paso también se ejecuta si falla la lectura del calendario. Valida fecha, identidad, participantes y resultados antes de sustituir datos; conserva combates anteriores omitidos y señala los resultados pendientes.

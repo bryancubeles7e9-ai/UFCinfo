@@ -5,6 +5,7 @@ All local times use Europe/Madrid (including daylight saving changes).
 | Job | Schedule | Trigger |
 | --- | --- | --- |
 | Events, results, rankings, fighter records and statistics | 08:00 and 14:00 | GitHub Actions, `ufc-events.yml` |
+| Conditional post-event retry | 10:07, 11:07, 12:07 and 13:07 (allowed window 10:00–14:00) | GitHub Actions, `morning-retry.yml`, plus completed rumor runs |
 | Rumors and official confirmations | Every hour, minute 0 | cron-job.org (8616997) and GitHub backup, `rumor-sync.yml` |
 | Legacy fighter dispatch (job skipped without full_refresh) | 11:47 daily | cron-job.org (8620521), `fighter-records.yml` |
 

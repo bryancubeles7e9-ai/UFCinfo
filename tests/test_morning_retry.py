@@ -1,15 +1,22 @@
 import importlib.util
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 from pathlib import Path
 import unittest
 s=importlib.util.spec_from_file_location('retry',Path(__file__).resolve().parents[1]/'scripts/retry-morning-data.py');m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
 class MorningRetryTests(unittest.TestCase):
     def test_summer_winter_and_duplicate(self):
-        for month,hour in [(7,8),(12,9)]:
-            now=datetime(2026,month,18,hour,tzinfo=timezone.utc)
-            self.assertTrue(m.due(now,{}))
-            self.assertFalse(m.due(now,{'date':now.date().isoformat()}))
-            self.assertFalse(m.due(now.replace(hour=hour+1),{}))
+        for month, hour in [(7, 8), (12, 9)]:
+            start = datetime(2026, month, 18, hour, tzinfo=timezone.utc)  # 10:00 Madrid
+            end = start + timedelta(hours=4)
+            with self.subTest(month=month):
+                self.assertFalse(m.due(start - timedelta(seconds=1), {}))
+                self.assertTrue(m.due(start, {}))
+                self.assertTrue(m.due(start + timedelta(hours=2, minutes=47), {}))
+                self.assertTrue(m.due(end - timedelta(seconds=1), {}))
+                self.assertFalse(m.due(end, {}))
+                earlier_check = {'date': start.date().isoformat()}
+                self.assertFalse(m.due(end - timedelta(seconds=1), earlier_check))
+                self.assertTrue(m.due(start + timedelta(days=1), earlier_check))
     def test_only_recent_missing_data(self):
         now=datetime(2026,10,18,8,tzinfo=timezone.utc)
         e={'id':'card','date':'2026-10-18T00:00:00Z','status':'completed','bouts':[{'red':'A','blue':'B','winner':'A'}]}

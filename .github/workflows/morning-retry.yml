@@ -1,14 +1,14 @@
 name: Reintentar datos pendientes a las 10
 on:
-  # The existing external hourly dispatch supplies the primary clock signal.
-  # Its result does not matter: this job does not depend on rumor API success.
+  # Completed rumor runs are extra opportunities, regardless of their result.
   workflow_run:
     workflows: [Publicar rumores automaticamente]
     types: [completed]
     branches: [main]
   schedule:
-    # Summer/winter candidates; Python enforces Europe/Madrid and one run/day.
-    - cron: '7 8,9 * * *'
+    # Multiple opportunities if GitHub delays a run; the script deduplicates by Madrid date.
+    - cron: '7 10-13 * * *'
+      timezone: Europe/Madrid
   workflow_dispatch:
 permissions:
   contents: read
@@ -30,7 +30,10 @@ jobs:
           from datetime import datetime
           from zoneinfo import ZoneInfo
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:
-              f.write('due='+str(datetime.now(ZoneInfo('Europe/Madrid')).hour==10).lower()+'\n')
+              hour = datetime.now(ZoneInfo('Europe/Madrid')).hour
+              due = 10 <= hour < 14
+              print('Reintento disponible.' if due else 'Fuera de 10:00–14:00 (Madrid); no se consultan fuentes.')
+              f.write(f'due={str(due).lower()}\n')
           PY
       - uses: actions/checkout@v6
         if: steps.clock.outputs.due == 'true'
@@ -52,6 +55,14 @@ jobs:
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git commit -m 'Reintentar datos pendientes de la velada a las 10'
-            git pull --rebase origin main
-            git push origin HEAD:main
+            # A concurrent data push must not repeat any UFC consultations.
+            for attempt in 1 2 3; do
+              if ! git pull --rebase origin main; then
+                git rebase --abort || true
+                exit 1
+              fi
+              if git push origin HEAD:main; then exit 0; fi
+              if [ "$attempt" -lt 3 ]; then sleep "$attempt"; fi
+            done
+            exit 1
           fi

@@ -18,7 +18,7 @@ def module(name, file):
 
 def due(now, previous):
     local = now.astimezone(ZoneInfo('Europe/Madrid'))
-    return local.hour == 10 and previous.get('date') != local.date().isoformat()
+    return 10 <= local.hour < 14 and previous.get('date') != local.date().isoformat()
 
 def plan(events, state, fighters, now, failed_event_ids=()):
     records = module('retry_records_plan', 'sync-ufc-fighter-records.py')
@@ -48,7 +48,7 @@ def main():
     now = datetime.now(timezone.utc)
     previous = json.loads(STATE.read_text()) if STATE.exists() else {}
     if not due(now, previous):
-        print('Outside 10:00 Madrid window or already checked today; no source requests.')
+        print('Outside 10:00–14:00 Madrid window or already checked today; no source requests.')
         return
     events_path = ROOT/'assets/data/ufc-events.json'
     feed = json.loads(events_path.read_text())

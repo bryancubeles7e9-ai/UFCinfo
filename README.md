@@ -93,7 +93,7 @@ Los horarios de las tareas diarias se interpretan en **Europe/Madrid**, con el c
 | Proceso | Programación habitual |
 | --- | --- |
 | Carteleras, horarios oficiales por bloque, resultados, rankings, fotografías, récords y estadísticas | Cada día a las **08:00 y 14:00**. |
-| Reintento condicional tras una velada | En la franja de las **10:00**, para eventos de las últimas 48 horas con resultados o perfiles pendientes. No consulta Cito, rankings ni fotografías. |
+| Reintento condicional tras una velada | Entre las **10:00 y las 14:00** (sin incluir las 14:00), para eventos de las últimas 48 horas con resultados o perfiles pendientes. No consulta Cito, rankings ni fotografías. |
 | Búsqueda de rumores y comprobación de confirmaciones oficiales | **Cada hora en punto**. |
 | Vigilancia de automatizaciones | Cada **tres horas**, al minuto 43 del calendario UTC de GitHub Actions; puede haber retrasos de ejecución. |
 | Lectura de las copias publicadas desde la web | Al abrir la página y periódicamente, aproximadamente cada **cinco minutos** para los principales feeds. |
@@ -108,7 +108,7 @@ Las carteleras también gestionan cancelaciones explícitas, sustituciones y cam
 
 La sincronización conserva el perfil anterior si una fuente reduce victorias, derrotas, empates o totales de finalizaciones, o reinicia todas las estadísticas principales a cero. Contrasta el récord tanto con la última copia guardada como con el catálogo. Las incidencias quedan registradas en `profileReview` dentro de `assets/data/fighter-records.json` y se reintentan en las siguientes ejecuciones. Las correcciones oficiales que reduzcan un total requieren revisión manual. Las medias y porcentajes sí pueden bajar después de una pelea; si faltan estadísticas, se conservan las anteriores y su fecha de consulta.
 
-El reintento de las 10:00 aprovecha la finalización de la ejecución horaria de rumores y dispone de respaldo en GitHub Actions. Comprueba si quedan resultados, participantes o perfiles pendientes, con un registro diario para evitar duplicados. Si todo está al día, no consulta fuentes. Véase [Actualización de eventos y perfiles](docs/EVENT_REFRESH.md).
+El reintento puede arrancar desde las 10:00 hasta antes de las 14:00. GitHub Actions ofrece cuatro oportunidades (10:07, 11:07, 12:07 y 13:07), además de la finalización de las ejecuciones de rumores. Comprueba si quedan resultados, participantes o perfiles pendientes, con un registro diario para evitar duplicados. Si todo está al día, no consulta fuentes. Véase [Actualización de eventos y perfiles](docs/EVENT_REFRESH.md).
 
 Los horarios son de inicio previsto: la ejecución, la publicación y la disponibilidad de los datos en la fuente pueden introducir retrasos. Puedes consultar el detalle técnico en [Horarios de automatización](docs/AUTOMATION_SCHEDULE.md).
 
