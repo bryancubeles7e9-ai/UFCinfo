@@ -62,6 +62,42 @@ class AlertTests(unittest.TestCase):
         feed['lastSync']['checkedAt'] = (self.now + timedelta(hours=1)).isoformat()
         self.assertTrue(self.check())
 
+    def test_distinguishes_no_attempt_failed_and_partial(self):
+        job = self.state['jobs']['events']
+        job['lastSuccessAt'] = (self.now - timedelta(hours=40)).isoformat()
+        self.assertIn('no consta un intento reciente', self.check()[0])
+        job.update(status='failed', attemptedAt=self.stamp, consecutiveFailures=1)
+        self.assertIn('último intento falló', self.check()[0])
+        job['lastSuccessAt'] = self.stamp
+        warnings = []
+        self.assertEqual(m.assess(self.state, self.feeds, self.rumors, self.now, warnings), [])
+        self.assertIn('último intento falló', warnings.pop())
+        job.update(status='partial', consecutiveFailures=0)
+        self.feeds['events']['scheduleVerification'] = {'failedIds':['some-card']}
+        self.assertEqual(m.assess(self.state, self.feeds, self.rumors, self.now, warnings), [])
+        self.assertIn('actualización parcial', warnings.pop())
+
+    def test_schedule_distinguishes_push_queue_failure_and_success(self):
+        now = datetime(2026, 11, 19, 9, tzinfo=timezone.utc)  # 10:00 Madrid
+        run = {'head_branch':'main', 'created_at':'2026-11-19T07:15:00Z',
+               'event':'push', 'status':'completed', 'conclusion':'success'}
+        self.assertIn('no consta', m.schedule_warning([run], now))
+        run.update(event='schedule', status='queued', conclusion=None)
+        self.assertIn('en cola', m.schedule_warning([run], now))
+        run.update(status='completed', conclusion='failure')
+        self.assertIn('no terminó correctamente', m.schedule_warning([run], now))
+        run.update(conclusion='success')
+        self.assertIsNone(m.schedule_warning([run], now))
+
+    def test_schedule_grace_and_madrid_summer_time(self):
+        run = {'head_branch':'main', 'created_at':'2026-07-01T12:01:00Z',
+               'event':'schedule', 'status':'completed', 'conclusion':'success'}
+        next_day = datetime(2026, 7, 2, 7, 20, tzinfo=timezone.utc)
+        self.assertIsNone(m.schedule_warning([run], next_day))  # 09:20, still in grace.
+        self.assertIn('02/07 a las 08:00', m.schedule_warning([run], next_day + timedelta(minutes=15)))
+        run['created_at'] = '2026-07-02T06:04:00Z'
+        self.assertIsNone(m.schedule_warning([run], next_day + timedelta(minutes=15)))
+
     def test_run_history(self):
         run = lambda c: {'head_branch': 'main', 'status': 'completed', 'conclusion': c}
         self.assertFalse(m.repeated_failures([run('success'), run('failure')]))

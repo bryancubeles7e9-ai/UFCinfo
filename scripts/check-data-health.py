@@ -2,7 +2,8 @@
 import importlib.util
 import json
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from urllib.request import Request, urlopen
 
@@ -49,21 +50,38 @@ def assess(state, feeds, rumors, now, warnings=None):
                  feed.get('synchronizedAt'))
         # A successful morning retry can be newer than the wrapper's last attempt.
         ages = [v for v in (hours(stamp, now), hours(job.get('lastSuccessAt'), now)) if v is not None]
-        if not ages or min(ages) > 30 or min(ages) < -1:
-            alerts.append(f'{kind}: sin sincronización reciente verificable (margen: 30 horas).')
         source_age = hours(stamp, now)
         attempt_age = hours(job.get('attemptedAt'), now)
-        superseded = source_age is not None and attempt_age is not None and source_age < attempt_age
-        if job.get('consecutiveFailures', 0) >= 2 and not superseded:
-            alerts.append(f'{kind}: dos o más consultas consecutivas fallidas.')
-        pending_age = hours(job.get('pendingSince'), now)
-        if monitor.pending_count(kind, feed) and pending_age is not None and pending_age > 48:
-            if kind == 'records' and source_statistics_pending(feed, now):
-                ids = ', '.join(sorted(feed['pendingProfileIds']))
-                warnings.append(f'records: UFC sigue sin publicar estadísticas completas para {ids}. '
-                                'Récord consultado recientemente; estadísticas previas conservadas y reintento pendiente.')
+        superseded = (source_age is not None and attempt_age is not None
+                      and -1 <= source_age < attempt_age)
+        failures = job.get('consecutiveFailures', 0)
+        fresh = any(-1 <= value <= 30 for value in ages)
+        status = job.get('status')
+        if not fresh:
+            if attempt_age is None or not -1 <= attempt_age <= 30:
+                alerts.append(f'{kind}: no consta un intento reciente ni datos vigentes (margen: 30 horas).')
+            elif status == 'failed' or failures:
+                alerts.append(f'{kind}: el último intento falló y no hay datos vigentes.')
             else:
-                alerts.append(f'{kind}: hay datos pendientes de forma continua desde hace más de 48 horas.')
+                alerts.append(f'{kind}: hay un intento reciente, pero no consta una actualización verificable.')
+        elif not superseded:
+            if failures >= 2:
+                alerts.append(f'{kind}: dos o más consultas consecutivas fallidas; se conserva la última copia.')
+            elif status == 'failed' or failures == 1:
+                warnings.append(f'{kind}: el último intento falló; se conserva la última copia vigente.')
+        pending_age = hours(job.get('pendingSince'), now)
+        count = monitor.pending_count(kind, feed)
+        if not count or not fresh or ((status == 'failed' or failures) and not superseded):
+            continue
+        if kind == 'records' and source_statistics_pending(feed, now):
+            ids = ', '.join(sorted(feed['pendingProfileIds']))
+            warnings.append(f'records: UFC sigue sin publicar estadísticas completas para {ids}. '
+                            'Récord consultado recientemente; estadísticas previas conservadas y reintento pendiente.')
+        elif pending_age is not None and pending_age > 48:
+            alerts.append(f'{kind}: hay datos pendientes de forma continua desde hace más de 48 horas.')
+        else:
+            pending = 'queda 1 comprobación pendiente' if count == 1 else f'quedan {count} comprobaciones pendientes'
+            warnings.append(f'{kind}: actualización parcial; {pending}.')
     return alerts
 
 
@@ -75,14 +93,40 @@ def repeated_failures(runs):
     return len(completed) >= 2 and all(r['conclusion'] != 'success' for r in completed[:2])
 
 
+def schedule_warning(runs, now):
+    """Check whether Actions registered the latest due Madrid slot.
+
+    A manual/push run can update the site without proving the scheduler worked.
+    Run history tells us when GitHub registered a run, not which slot triggered it.
+    """
+    local = now.astimezone(ZoneInfo('Europe/Madrid'))
+    slots = [day.replace(hour=hour, minute=0, second=0, microsecond=0)
+             for day in (local - timedelta(days=1), local) for hour in (8, 14)]
+    due = max(slot for slot in slots if slot + timedelta(minutes=90) <= local)
+    due_age = (now - due.astimezone(timezone.utc)).total_seconds() / 3600
+    active = [r for r in runs if r.get('head_branch') == 'main' and r.get('event') == 'schedule'
+              and (age := hours(r.get('created_at'), now)) is not None
+              and 0 <= age <= due_age]
+    label = due.strftime('%d/%m a las %H:%M') + ' (Madrid)'
+    if not active:
+        return f'Carteleras: no consta una ejecución programada desde el {label} tras el margen de 90 min.'
+    latest = min(active, key=lambda r: hours(r['created_at'], now))
+    if latest.get('status') != 'completed':
+        return f'Carteleras: la ejecución programada desde el {label} está en cola o en curso.'
+    if latest.get('conclusion') != 'success':
+        return f"Carteleras: la última ejecución programada desde el {label} no terminó correctamente ({latest.get('conclusion') or 'sin resultado'})."
+    return None
+
+
 def main():
     alerts = []
     warnings = []
+    now = datetime.now(timezone.utc)
     try:
         read = lambda name: json.loads((ROOT / 'assets/data' / name).read_text())
         alerts = assess(read('sync-health.json'),
                         {kind: read(filename) for kind, (_, filename) in monitor.JOBS.items()},
-                        read('ufc-rumor-groups.json'), datetime.now(timezone.utc), warnings)
+                        read('ufc-rumor-groups.json'), now, warnings)
     except (OSError, ValueError, TypeError, KeyError):
         alerts.append('No se puede verificar el estado: faltan datos o el formato es inválido.')
     if os.environ.get('GITHUB_TOKEN'):
@@ -92,13 +136,15 @@ def main():
                 request = Request(url, headers={'Authorization': 'Bearer ' + os.environ['GITHUB_TOKEN'], 'Accept': 'application/vnd.github+json'})
                 with urlopen(request, timeout=20) as response:
                     runs = json.load(response)['workflow_runs']
+                if workflow == 'ufc-events.yml' and (warning := schedule_warning(runs, now)):
+                    warnings.append(warning)
                 if repeated_failures(runs):
                     alerts.append(f'{workflow}: las dos últimas ejecuciones terminadas han fallado.')
             except (OSError, ValueError, KeyError):
                 alerts.append(f'{workflow}: no se ha podido consultar el historial de Actions.')
     report = '## Estado de las automatizaciones\n\n' + ('\n'.join('- ' + a for a in alerts) if alerts else 'Sin incidencias que superen los umbrales de alerta.')
     if warnings:
-        report += '\n\n### Datos pendientes en la fuente\n\n' + '\n'.join('- ' + w for w in warnings)
+        report += '\n\n### Avisos de horario y datos pendientes\n\n' + '\n'.join('- ' + w for w in warnings)
     print(report)
     if os.environ.get('GITHUB_STEP_SUMMARY'):
         with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:

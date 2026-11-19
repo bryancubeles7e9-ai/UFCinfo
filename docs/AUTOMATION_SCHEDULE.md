@@ -12,7 +12,10 @@ The events schedule runs on the default branch. It reads the public UFC calendar
 and the official event pages, uses no paid API and does not need a dispatch token.
 Legacy cron-job.org events schedules (8620496 and 8625854) can be switched off
 if still enabled. Manual and configured push triggers remain. GitHub may delay
-scheduled runs; check the actual run and the saved verification timestamps.
+scheduled runs; check the actual run and the saved verification timestamps. The health
+check warns if Actions has no scheduled run recorded since the latest Madrid
+slot after a 90-minute grace period. It reports queued runs, failed attempts
+and partial data separately; a push or manual run does not prove the schedule.
 
 Rumors retain their hourly guard against repeat paid searches. If retaining the
 external rumors trigger, its GitHub credential must be kept valid.
