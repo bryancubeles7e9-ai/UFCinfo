@@ -17,6 +17,9 @@ scheduled runs; check the actual run and the saved verification timestamps. The 
 check warns if Actions has no scheduled run recorded since the latest Madrid
 slot after a 90-minute grace period. It reports queued runs, failed attempts
 and partial data separately; a push or manual run does not prove the schedule.
+The main sync publishes every source together in one commit, including the
+recorded status of any failed source. A source failure does not block the other
+sync stages; it is reported as a workflow failure after publishing the valid data.
 
 Rumors retain their hourly guard against repeat paid searches. If retaining the
 external rumors trigger, its GitHub credential must be kept valid.

@@ -59,168 +59,44 @@ jobs:
       - name: Test rankings dinámicos
         run: node tests/test-rankings-feed.mjs
       - name: Test récords y estadísticas dinámicos
+        id: preflight
         run: node tests/test-fighter-records-feed.mjs
       - name: Actualizar eventos, combates y horarios desde UFC
         id: official_cards
         continue-on-error: true
         run: python3 scripts/run-data-sync.py events
       - name: Verificar resultados recientes con UFC
+        id: results
+        continue-on-error: true
         run: python3 scripts/run-data-sync.py results
-      - name: Guardar datos actualizados
-        run: |
-          git add assets/data/ufc-events.json assets/data/sync-health.json
-          if [ -d assets/images/events ]; then git add assets/images/events; fi
-          if ! git diff --cached --quiet; then
-            git config user.name 'github-actions[bot]'
-            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git commit -m 'Actualizar carteleras y resultados UFC'
-            # Retry publication if another workflow advances main.
-            # The source/API steps are not repeated.
-            published=false
-            for attempt in 1 2 3 4 5; do
-              if ! git pull --rebase origin main; then
-                git rebase --abort || true
-                echo "::error::No se pudo integrar main; requiere revisión."
-                exit 1
-              fi
-              if git push origin HEAD:main; then
-                published=true
-                break
-              fi
-              if [ "$attempt" -lt 5 ]; then sleep $((attempt * 2)); fi
-            done
-            if [ "$published" != true ]; then
-              echo "::error::No se pudieron publicar los datos tras cinco intentos."
-              exit 1
-            fi
-          fi
       - name: Actualizar rankings oficiales
+        id: rankings
         continue-on-error: true
         run: python3 scripts/run-data-sync.py rankings
-      - name: Guardar rankings actualizados
-        run: |
-          git add assets/data/ufc-rankings.json assets/data/sync-health.json
-          if ! git diff --cached --quiet; then
-            git config user.name 'github-actions[bot]'
-            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git commit -m 'Actualizar rankings oficiales UFC'
-            # Retry publication if another workflow advances main.
-            # The source/API steps are not repeated.
-            published=false
-            for attempt in 1 2 3 4 5; do
-              if ! git pull --rebase origin main; then
-                git rebase --abort || true
-                echo "::error::No se pudo integrar main; requiere revisión."
-                exit 1
-              fi
-              if git push origin HEAD:main; then
-                published=true
-                break
-              fi
-              if [ "$attempt" -lt 5 ]; then sleep $((attempt * 2)); fi
-            done
-            if [ "$published" != true ]; then
-              echo "::error::No se pudieron publicar los datos tras cinco intentos."
-              exit 1
-            fi
-          fi
       - name: Incorporar perfiles de próximas carteleras
+        id: upcoming_profiles
         continue-on-error: true
         run: python3 scripts/import-season-fighters.py --upcoming
       - name: Incorporar participantes nuevos verificados
+        id: recent_profiles
         continue-on-error: true
         run: python3 scripts/import-season-fighters.py --recent
-      - name: Guardar participantes verificados
-        run: |
-          git add assets/js/fighter-directory-data.js docs/fighter-directory-sources.json
-          if ! git diff --cached --quiet; then
-            git config user.name 'github-actions[bot]'
-            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git commit -m 'Incorporar participantes recientes y próximos de UFC'
-            # Retry publication if another workflow advances main.
-            # The source/API steps are not repeated.
-            published=false
-            for attempt in 1 2 3 4 5; do
-              if ! git pull --rebase origin main; then
-                git rebase --abort || true
-                echo "::error::No se pudo integrar main; requiere revisión."
-                exit 1
-              fi
-              if git push origin HEAD:main; then
-                published=true
-                break
-              fi
-              if [ "$attempt" -lt 5 ]; then sleep $((attempt * 2)); fi
-            done
-            if [ "$published" != true ]; then
-              echo "::error::No se pudieron publicar los datos tras cinco intentos."
-              exit 1
-            fi
-          fi
       - name: Test selección de fotografías
+        id: photo_check
+        continue-on-error: true
         run: node tests/test-fighter-photos.mjs
       - name: Actualizar fotografías de campeones y excampeones
+        id: photos
+        if: steps.photo_check.outcome == 'success'
         continue-on-error: true
         run: python3 scripts/run-data-sync.py photos
-      - name: Guardar fotografías consultadas
-        run: |
-          git add assets/data/fighter-photos.json assets/data/sync-health.json
-          if [ -d assets/images/fighter-variants ]; then git add assets/images/fighter-variants; fi
-          if ! git diff --cached --quiet; then
-            git config user.name 'github-actions[bot]'
-            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git commit -m 'Actualizar fotografías de campeones y excampeones'
-            # Retry publication if another workflow advances main.
-            # The source/API steps are not repeated.
-            published=false
-            for attempt in 1 2 3 4 5; do
-              if ! git pull --rebase origin main; then
-                git rebase --abort || true
-                echo "::error::No se pudo integrar main; requiere revisión."
-                exit 1
-              fi
-              if git push origin HEAD:main; then
-                published=true
-                break
-              fi
-              if [ "$attempt" -lt 5 ]; then sleep $((attempt * 2)); fi
-            done
-            if [ "$published" != true ]; then
-              echo "::error::No se pudieron publicar los datos tras cinco intentos."
-              exit 1
-            fi
-          fi
       - name: Actualizar récords y estadísticas tras las carteleras
+        id: records
+        continue-on-error: true
         run: python3 scripts/run-data-sync.py records --ensure-full
-      - name: Guardar perfiles consultados
-        run: |
-          git add assets/data/fighter-records.json assets/data/sync-health.json
-          if ! git diff --cached --quiet; then
-            git config user.name 'github-actions[bot]'
-            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git commit -m 'Actualizar récords y estadísticas tras las carteleras UFC'
-            # Retry publication if another workflow advances main.
-            # The source/API steps are not repeated.
-            published=false
-            for attempt in 1 2 3 4 5; do
-              if ! git pull --rebase origin main; then
-                git rebase --abort || true
-                echo "::error::No se pudo integrar main; requiere revisión."
-                exit 1
-              fi
-              if git push origin HEAD:main; then
-                published=true
-                break
-              fi
-              if [ "$attempt" -lt 5 ]; then sleep $((attempt * 2)); fi
-            done
-            if [ "$published" != true ]; then
-              echo "::error::No se pudieron publicar los datos tras cinco intentos."
-              exit 1
-            fi
-          fi
-      - name: Guardar estado incluso tras un fallo
-        if: always()
+      - name: Publicar todos los datos en un commit
+        id: revision
+        if: ${{ !cancelled() && steps.preflight.outcome == 'success' }}
         run: |
           git add assets/data/sync-health.json assets/data/ufc-events.json assets/data/ufc-rankings.json assets/data/fighter-records.json assets/data/fighter-photos.json assets/js/fighter-directory-data.js docs/fighter-directory-sources.json
           if [ -d assets/images/events ]; then git add assets/images/events; fi
@@ -228,9 +104,8 @@ jobs:
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git commit -m 'Registrar estado de las sincronizaciones'
-            # Retry publication if another workflow advances main.
-            # The source/API steps are not repeated.
+            git commit -m 'Publicar datos actualizados de UFCinfo'
+            # Retry only publication; never rerun the source requests.
             published=false
             for attempt in 1 2 3 4 5; do
               if ! git pull --rebase origin main; then
@@ -249,14 +124,27 @@ jobs:
               exit 1
             fi
           fi
-      - name: Identificar versión
-        id: revision
-        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-      - name: Avisar si no se pudo actualizar ninguna próxima cartelera
-        if: steps.official_cards.outcome == 'failure'
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Señalar fallos de sincronización tras publicar los datos disponibles
+        if: steps.revision.outcome == 'success'
+        env:
+          CARTELERAS: ${{ steps.official_cards.outcome }}
+          RESULTADOS: ${{ steps.results.outcome }}
+          RANKINGS: ${{ steps.rankings.outcome }}
+          PERFILES_PROXIMOS: ${{ steps.upcoming_profiles.outcome }}
+          PERFILES_RECIENTES: ${{ steps.recent_profiles.outcome }}
+          VALIDACION_FOTOGRAFIAS: ${{ steps.photo_check.outcome }}
+          FOTOGRAFIAS: ${{ steps.photos.outcome }}
+          RECORDS: ${{ steps.records.outcome }}
         run: |
-          echo "::error::No se pudo verificar el calendario oficial de UFC. Se conservan las carteleras anteriores."
-          exit 1
+          failed=0
+          for stage in CARTELERAS RESULTADOS RANKINGS PERFILES_PROXIMOS PERFILES_RECIENTES VALIDACION_FOTOGRAFIAS FOTOGRAFIAS RECORDS; do
+            if [ "${!stage}" = failure ]; then
+              echo "::error::Falló ${stage}; consulta su paso para más detalles."
+              failed=1
+            fi
+          done
+          exit "$failed"
   publish:
     # Opt in only after GitHub Pages is configured. API synchronization works without Pages.
     if: vars.OCTAGON_PAGES_ENABLED == 'true'
