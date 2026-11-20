@@ -7764,5 +7764,65 @@
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
     "countryConsulted": "2026-11-18"
+  },
+  {
+    "id": "ufc-piero-guaylupo",
+    "name": "Piero Guaylupo",
+    "aliases": [
+      "Piero Guaylupo"
+    ],
+    "source": "https://www.ufc.com/athlete/piero-guaylupo",
+    "code": "PE",
+    "country": "Peru",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
+    "countryConsulted": "2026-11-20"
+  },
+  {
+    "id": "ufc-toshiomi-kazama",
+    "name": "Toshiomi Kazama",
+    "aliases": [
+      "Toshiomi Kazama"
+    ],
+    "source": "https://www.ufc.com/athlete/toshiomi-kazama",
+    "code": "JP",
+    "country": "Japan",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
+    "countryConsulted": "2026-11-20"
+  },
+  {
+    "id": "ufc-karolina-kowalkiewicz",
+    "name": "Karolina Kowalkiewicz",
+    "aliases": [
+      "Karolina Kowalkiewicz"
+    ],
+    "source": "https://www.ufc.com/athlete/karolina-kowalkiewicz",
+    "code": "PL",
+    "country": "Poland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
+    "countryConsulted": "2026-11-20"
+  },
+  {
+    "id": "ufc-shoaib-yousaf",
+    "name": "Shoaib Yousaf",
+    "aliases": [
+      "Shoaib Yousaf"
+    ],
+    "source": "https://www.ufc.com/athlete/shoaib-yousaf",
+    "code": "EN",
+    "country": "England",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-11-20"
+  },
+  {
+    "id": "ufc-john-mitchell",
+    "name": "John Mitchell",
+    "aliases": [
+      "John Mitchell"
+    ],
+    "source": "https://www.ufc.com/athlete/john-mitchell",
+    "code": "IE",
+    "country": "Ireland",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+    "countryConsulted": "2026-11-20"
   }
 ]

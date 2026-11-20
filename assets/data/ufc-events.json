@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "UFC",
   "sourceUrl": "https://www.ufc.com",
-  "synchronizedAt": "2026-11-19T16:12:23.141838+00:00",
+  "synchronizedAt": "2026-11-20T15:51:45.777067+00:00",
   "events": [
     {
       "id": "ufc-fight-night-february-13-2027",
@@ -17,12 +17,12 @@
       "date": "2027-02-13T22:00:00+00:00",
       "status": "scheduled",
       "dataSource": "UFC",
-      "checkedAt": "2026-11-19",
+      "checkedAt": "2026-11-20",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-february-13-2027",
       "sectionSchedule": {
         "eventDate": "2027-02-13T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-13-2027",
-        "checkedAt": "2026-11-19T16:12:23.141838+00:00",
+        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
         "starts": {
           "prelims": "2027-02-13T20:00:00+00:00",
           "main": "2027-02-13T22:00:00+00:00"
@@ -76,7 +76,7 @@
       "location": "Afterpay Arena, Sydney Olympic Park Australia",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-february-06-2027",
-      "checkedAt": "2026-11-19",
+      "checkedAt": "2026-11-20",
       "bouts": [
         {
           "section": null,
@@ -94,6 +94,17 @@
           "red": "Bogdan Guskov",
           "blue": "Robert Whittaker",
           "division": "Light Heavyweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": null,
+          "red": "Jonathan Micallef",
+          "blue": "Sam Patterson",
+          "division": "Welterweight Bout",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -131,7 +142,7 @@
       "sectionSchedule": {
         "eventDate": "2027-02-06T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-06-2027",
-        "checkedAt": "2026-11-19T16:12:23.141838+00:00",
+        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
         "starts": {
           "prelims": "2027-02-06T20:00:00+00:00",
           "main": "2027-02-06T22:00:00+00:00"
@@ -202,6 +213,22 @@
             "round": "",
             "time": ""
           }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "Jonathan Micallef",
+            "blue": "Sam Patterson",
+            "division": "Welterweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
         }
       ]
     },
@@ -216,7 +243,7 @@
       "location": "Scotiabank Arena, Toronto Canada",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-336",
-      "checkedAt": "2026-11-19",
+      "checkedAt": "2026-11-20",
       "dataSource": "UFC",
       "bouts": [
         {
@@ -287,7 +314,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-31T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-336",
-        "checkedAt": "2026-11-19T16:12:23.141838+00:00",
+        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
         "starts": {
           "early-prelims": "2027-01-30T22:00:00+00:00",
           "prelims": "2027-01-31T00:00:00+00:00",
@@ -358,12 +385,12 @@
       "date": "2027-01-24T01:00:00+00:00",
       "status": "scheduled",
       "dataSource": "UFC",
-      "checkedAt": "2026-11-19",
+      "checkedAt": "2026-11-20",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
       "sectionSchedule": {
         "eventDate": "2027-01-24T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
-        "checkedAt": "2026-11-19T16:12:23.141838+00:00",
+        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
         "starts": {
           "main": "2027-01-24T01:00:00+00:00",
           "prelims": "2027-01-23T22:00:00+00:00"
@@ -424,7 +451,7 @@
       "location": "American Airlines Center, Dallas United States",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
-      "checkedAt": "2026-11-19",
+      "checkedAt": "2026-11-20",
       "bouts": [
         {
           "section": null,
@@ -450,9 +477,119 @@
         },
         {
           "section": null,
+          "red": "Geoff Neal",
+          "blue": "Chris Curtis",
+          "division": "Welterweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": null,
           "red": "Chidi Njokuani",
           "blue": "Ignacio Bahamondes",
           "division": "Welterweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": null,
+          "red": "Ryan Spann",
+          "blue": "Louie Sutherland",
+          "division": "Heavyweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": null,
+          "red": "Kennedy Nzechukwu",
+          "blue": "Elisha Ellison",
+          "division": "Heavyweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": null,
+          "red": "Gilbert Urbina",
+          "blue": "Robert Valentin",
+          "division": "Middleweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": null,
+          "red": "Alden Coria",
+          "blue": "Michael Aljarouj",
+          "division": "Flyweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": null,
+          "red": "Diego Ferreira",
+          "blue": "MarQuel Mederos",
+          "division": "Lightweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": null,
+          "red": "Magomed Zaynukov",
+          "blue": "Piero Guaylupo",
+          "division": "Lightweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": null,
+          "red": "John Garza",
+          "blue": "Toshiomi Kazama",
+          "division": "Bantamweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": null,
+          "red": "Steven Asplund",
+          "blue": "Gokhan Saricam",
+          "division": "Heavyweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": null,
+          "red": "Sam Hughes",
+          "blue": "Karolina Kowalkiewicz",
+          "division": "Women's Strawweight Bout",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -468,7 +605,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-17T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
-        "checkedAt": "2026-11-19T16:12:23.141838+00:00",
+        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
         "starts": {
           "prelims": "2027-01-16T22:00:00+00:00",
           "main": "2027-01-17T01:00:00+00:00"
@@ -523,6 +660,166 @@
             "round": "",
             "time": ""
           }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "Geoff Neal",
+            "blue": "Chris Curtis",
+            "division": "Welterweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "Ryan Spann",
+            "blue": "Louie Sutherland",
+            "division": "Heavyweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "Kennedy Nzechukwu",
+            "blue": "Elisha Ellison",
+            "division": "Heavyweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "Gilbert Urbina",
+            "blue": "Robert Valentin",
+            "division": "Middleweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "Alden Coria",
+            "blue": "Michael Aljarouj",
+            "division": "Flyweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "Diego Ferreira",
+            "blue": "MarQuel Mederos",
+            "division": "Lightweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "Magomed Zaynukov",
+            "blue": "Piero Guaylupo",
+            "division": "Lightweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "John Garza",
+            "blue": "Toshiomi Kazama",
+            "division": "Bantamweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "Steven Asplund",
+            "blue": "Gokhan Saricam",
+            "division": "Heavyweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "Sam Hughes",
+            "blue": "Karolina Kowalkiewicz",
+            "division": "Women's Strawweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
         }
       ]
     },
@@ -536,7 +833,7 @@
       "location": "T-Mobile Arena, Las Vegas United States",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-335",
-      "checkedAt": "2026-11-19",
+      "checkedAt": "2026-11-20",
       "bouts": [
         {
           "section": "main",
@@ -615,7 +912,7 @@
       "sectionSchedule": {
         "eventDate": "2026-12-13T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-335",
-        "checkedAt": "2026-11-19T16:12:23.141838+00:00",
+        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
         "starts": {
           "main": "2026-12-13T02:00:00+00:00",
           "early-prelims": "2026-12-12T22:00:00+00:00",
@@ -717,12 +1014,12 @@
       "date": "2026-12-05T18:00:00+00:00",
       "status": "scheduled",
       "dataSource": "UFC",
-      "checkedAt": "2026-11-19",
+      "checkedAt": "2026-11-20",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
       "sectionSchedule": {
         "eventDate": "2026-12-05T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
-        "checkedAt": "2026-11-19T16:12:23.141838+00:00",
+        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
         "starts": {
           "main": "2026-12-05T18:00:00+00:00",
           "prelims": "2026-12-05T15:00:00+00:00"
@@ -1072,7 +1369,7 @@
       "status": "scheduled",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
-      "checkedAt": "2026-11-19",
+      "checkedAt": "2026-11-20",
       "bouts": [
         {
           "section": "main",
@@ -1194,6 +1491,17 @@
           "method": "",
           "round": "",
           "time": ""
+        },
+        {
+          "section": "prelims",
+          "red": "Shoaib Yousaf",
+          "blue": "John Mitchell",
+          "division": "Lightweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
         }
       ],
       "poster": "assets/images/events/ufc-fight-night-november-21-2026.jpg",
@@ -1204,7 +1512,7 @@
       "sectionSchedule": {
         "eventDate": "2026-11-21T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
-        "checkedAt": "2026-11-19T16:12:23.141838+00:00",
+        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
         "starts": {
           "main": "2026-11-21T18:00:00+00:00",
           "prelims": "2026-11-21T15:00:00+00:00"
@@ -1256,6 +1564,22 @@
           "source": "UFC",
           "previousDate": "2026-11-21T15:00:00+00:00",
           "date": "2026-11-21T18:00:00+00:00"
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": "prelims",
+            "red": "Shoaib Yousaf",
+            "blue": "John Mitchell",
+            "division": "Lightweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
         }
       ],
       "pendingBoutRemovals": {},
@@ -1271,7 +1595,7 @@
       "location": "Madison Square Garden",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-334",
-      "checkedAt": "2026-11-19",
+      "checkedAt": "2026-11-20",
       "bouts": [
         {
           "red": "Ciryl Gane",
@@ -1589,7 +1913,7 @@
       ],
       "eventKind": "numbered",
       "resultsSource": "https://www.ufc.com/event/ufc-334",
-      "resultsCheckedAt": "2026-11-19T16:12:24.598659+00:00"
+      "resultsCheckedAt": "2026-11-20T15:51:47.616903+00:00"
     },
     {
       "id": "ufc-fight-night-november-07-2026",
@@ -1602,7 +1926,7 @@
       "status": "completed",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-      "checkedAt": "2026-11-19",
+      "checkedAt": "2026-11-20",
       "bouts": [
         {
           "red": "Waldo Cortes Acosta",
@@ -1984,7 +2308,7 @@
         }
       ],
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-      "resultsCheckedAt": "2026-11-19T16:12:24.598659+00:00"
+      "resultsCheckedAt": "2026-11-20T15:51:47.616903+00:00"
     },
     {
       "id": "ufc-fight-night-october-31-2026",
@@ -8239,7 +8563,7 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-19T16:12:24.598659+00:00",
+    "checkedAt": "2026-11-20T15:51:47.616903+00:00",
     "verifiedIds": [
       "ufc-334",
       "ufc-fight-night-november-07-2026"
@@ -8247,7 +8571,7 @@
     "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-11-19T16:12:23.141838+00:00",
+    "checkedAt": "2026-11-20T15:51:45.777067+00:00",
     "verifiedIds": [
       "ufc-fight-night-november-21-2026",
       "ufc-fight-night-december-05-2026",
