@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "UFC",
   "sourceUrl": "https://www.ufc.com",
-  "synchronizedAt": "2026-11-20T15:51:45.777067+00:00",
+  "synchronizedAt": "2026-11-21T15:00:43.701705+00:00",
   "events": [
     {
       "id": "ufc-fight-night-february-13-2027",
@@ -17,12 +17,12 @@
       "date": "2027-02-13T22:00:00+00:00",
       "status": "scheduled",
       "dataSource": "UFC",
-      "checkedAt": "2026-11-20",
+      "checkedAt": "2026-11-21",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-february-13-2027",
       "sectionSchedule": {
         "eventDate": "2027-02-13T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-13-2027",
-        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+        "checkedAt": "2026-11-21T15:00:43.701705+00:00",
         "starts": {
           "prelims": "2027-02-13T20:00:00+00:00",
           "main": "2027-02-13T22:00:00+00:00"
@@ -76,7 +76,7 @@
       "location": "Afterpay Arena, Sydney Olympic Park Australia",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-february-06-2027",
-      "checkedAt": "2026-11-20",
+      "checkedAt": "2026-11-21",
       "bouts": [
         {
           "section": null,
@@ -142,7 +142,7 @@
       "sectionSchedule": {
         "eventDate": "2027-02-06T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-06-2027",
-        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+        "checkedAt": "2026-11-21T15:00:43.701705+00:00",
         "starts": {
           "prelims": "2027-02-06T20:00:00+00:00",
           "main": "2027-02-06T22:00:00+00:00"
@@ -243,7 +243,7 @@
       "location": "Scotiabank Arena, Toronto Canada",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-336",
-      "checkedAt": "2026-11-20",
+      "checkedAt": "2026-11-21",
       "dataSource": "UFC",
       "bouts": [
         {
@@ -314,7 +314,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-31T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-336",
-        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+        "checkedAt": "2026-11-21T15:00:43.701705+00:00",
         "starts": {
           "early-prelims": "2027-01-30T22:00:00+00:00",
           "prelims": "2027-01-31T00:00:00+00:00",
@@ -385,12 +385,12 @@
       "date": "2027-01-24T01:00:00+00:00",
       "status": "scheduled",
       "dataSource": "UFC",
-      "checkedAt": "2026-11-20",
+      "checkedAt": "2026-11-21",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
       "sectionSchedule": {
         "eventDate": "2027-01-24T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
-        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+        "checkedAt": "2026-11-21T15:00:43.701705+00:00",
         "starts": {
           "main": "2027-01-24T01:00:00+00:00",
           "prelims": "2027-01-23T22:00:00+00:00"
@@ -451,7 +451,7 @@
       "location": "American Airlines Center, Dallas United States",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
-      "checkedAt": "2026-11-20",
+      "checkedAt": "2026-11-21",
       "bouts": [
         {
           "section": null,
@@ -605,7 +605,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-17T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
-        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+        "checkedAt": "2026-11-21T15:00:43.701705+00:00",
         "starts": {
           "prelims": "2027-01-16T22:00:00+00:00",
           "main": "2027-01-17T01:00:00+00:00"
@@ -833,7 +833,7 @@
       "location": "T-Mobile Arena, Las Vegas United States",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-335",
-      "checkedAt": "2026-11-20",
+      "checkedAt": "2026-11-21",
       "bouts": [
         {
           "section": "main",
@@ -912,7 +912,7 @@
       "sectionSchedule": {
         "eventDate": "2026-12-13T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-335",
-        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+        "checkedAt": "2026-11-21T15:00:43.701705+00:00",
         "starts": {
           "main": "2026-12-13T02:00:00+00:00",
           "early-prelims": "2026-12-12T22:00:00+00:00",
@@ -1014,12 +1014,12 @@
       "date": "2026-12-05T18:00:00+00:00",
       "status": "scheduled",
       "dataSource": "UFC",
-      "checkedAt": "2026-11-20",
+      "checkedAt": "2026-11-21",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
       "sectionSchedule": {
         "eventDate": "2026-12-05T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
-        "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+        "checkedAt": "2026-11-21T15:00:43.701705+00:00",
         "starts": {
           "main": "2026-12-05T18:00:00+00:00",
           "prelims": "2026-12-05T15:00:00+00:00"
@@ -1595,7 +1595,7 @@
       "location": "Madison Square Garden",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-334",
-      "checkedAt": "2026-11-20",
+      "checkedAt": "2026-11-21",
       "bouts": [
         {
           "red": "Ciryl Gane",
@@ -1913,7 +1913,7 @@
       ],
       "eventKind": "numbered",
       "resultsSource": "https://www.ufc.com/event/ufc-334",
-      "resultsCheckedAt": "2026-11-20T15:51:47.616903+00:00"
+      "resultsCheckedAt": "2026-11-21T15:00:45.231313+00:00"
     },
     {
       "id": "ufc-fight-night-november-07-2026",
@@ -1926,7 +1926,7 @@
       "status": "completed",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-      "checkedAt": "2026-11-20",
+      "checkedAt": "2026-11-21",
       "bouts": [
         {
           "red": "Waldo Cortes Acosta",
@@ -2308,7 +2308,7 @@
         }
       ],
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-november-07-2026",
-      "resultsCheckedAt": "2026-11-20T15:51:47.616903+00:00"
+      "resultsCheckedAt": "2026-11-21T15:00:45.231313+00:00"
     },
     {
       "id": "ufc-fight-night-october-31-2026",
@@ -8563,7 +8563,7 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-20T15:51:47.616903+00:00",
+    "checkedAt": "2026-11-21T15:00:45.231313+00:00",
     "verifiedIds": [
       "ufc-334",
       "ufc-fight-night-november-07-2026"
@@ -8571,9 +8571,8 @@
     "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-11-20T15:51:45.777067+00:00",
+    "checkedAt": "2026-11-21T15:00:43.701705+00:00",
     "verifiedIds": [
-      "ufc-fight-night-november-21-2026",
       "ufc-fight-night-december-05-2026",
       "ufc-335",
       "ufc-fight-night-january-16-2027",
@@ -8582,7 +8581,9 @@
       "ufc-fight-night-february-06-2027",
       "ufc-fight-night-february-13-2027"
     ],
-    "failedIds": []
+    "failedIds": [
+      "ufc-fight-night-november-21-2026"
+    ]
   },
   "excludedEvents": [
     {
