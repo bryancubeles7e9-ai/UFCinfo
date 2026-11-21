@@ -1,8 +1,39 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-21T17:44:40.631Z",
-  "lastSearchedAt": "2026-11-21T17:44:40.631Z",
+  "updatedAt": "2026-11-21T22:28:02.298Z",
+  "lastSearchedAt": "2026-11-21T22:28:02.298Z",
   "groups": [
+    {
+      "id": "2124246278079164729",
+      "fighterNames": [
+        "Carlos Ulberg",
+        "Navajo Stirling"
+      ],
+      "matchupKey": "carlosulberg|navajostirling|undated:2026-11",
+      "eventDateHint": null,
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "UPFRONT MMA comenta un posible cruce entre Carlos Ulberg y Navajo Stirling, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "UPFRONT MMA discusses a possible matchup between Carlos Ulberg and Navajo Stirling, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-21T22:28:02.298Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-21T20:59:13.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2124246278079164729",
+          "sourceId": "upfront-mma",
+          "postUrl": "https://x.com/upfrontmma/status/2124246278079164729",
+          "publishedAt": "2026-11-21T20:59:13.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2122684764146606253",
       "fighterNames": [
@@ -860,8 +891,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-21T17:44:40.631Z",
-    "receivedPosts": 14,
-    "added": 0
+    "checkedAt": "2026-11-21T22:28:02.298Z",
+    "receivedPosts": 30,
+    "added": 1
   }
 }
