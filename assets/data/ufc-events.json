@@ -8563,12 +8563,11 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-21T15:00:45.231313+00:00",
-    "verifiedIds": [
-      "ufc-334",
-      "ufc-fight-night-november-07-2026"
-    ],
-    "failedIds": []
+    "checkedAt": "2026-11-22T10:13:34.424609+00:00",
+    "verifiedIds": [],
+    "failedIds": [
+      "ufc-fight-night-november-21-2026"
+    ]
   },
   "scheduleVerification": {
     "checkedAt": "2026-11-21T15:00:43.701705+00:00",
