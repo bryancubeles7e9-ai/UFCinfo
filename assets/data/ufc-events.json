@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "UFC",
   "sourceUrl": "https://www.ufc.com",
-  "synchronizedAt": "2026-11-21T15:00:43.701705+00:00",
+  "synchronizedAt": "2026-11-22T14:58:42.769821+00:00",
   "events": [
     {
       "id": "ufc-fight-night-february-13-2027",
@@ -17,12 +17,12 @@
       "date": "2027-02-13T22:00:00+00:00",
       "status": "scheduled",
       "dataSource": "UFC",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-february-13-2027",
       "sectionSchedule": {
         "eventDate": "2027-02-13T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-13-2027",
-        "checkedAt": "2026-11-21T15:00:43.701705+00:00",
+        "checkedAt": "2026-11-22T14:58:42.769821+00:00",
         "starts": {
           "prelims": "2027-02-13T20:00:00+00:00",
           "main": "2027-02-13T22:00:00+00:00"
@@ -52,7 +52,7 @@
           "section": null,
           "red": "Joe Pyfer",
           "blue": "Bo Nickal",
-          "division": "Middleweight Bout",
+          "division": "",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -76,13 +76,13 @@
       "location": "Afterpay Arena, Sydney Olympic Park Australia",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-february-06-2027",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "bouts": [
         {
           "section": null,
           "red": "Quillan Salkilld",
           "blue": "Benoît Saint Denis",
-          "division": "Lightweight Bout",
+          "division": "",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -93,7 +93,7 @@
           "section": null,
           "red": "Bogdan Guskov",
           "blue": "Robert Whittaker",
-          "division": "Light Heavyweight Bout",
+          "division": "",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -104,7 +104,7 @@
           "section": null,
           "red": "Jonathan Micallef",
           "blue": "Sam Patterson",
-          "division": "Welterweight Bout",
+          "division": "",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -115,7 +115,7 @@
           "section": null,
           "red": "Marwan Rahiki",
           "blue": "JooSang Yoo",
-          "division": "Featherweight Bout",
+          "division": "",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -126,7 +126,7 @@
           "section": null,
           "red": "Kaan Ofli",
           "blue": "Joanderson Brito",
-          "division": "Featherweight Bout",
+          "division": "",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -142,7 +142,7 @@
       "sectionSchedule": {
         "eventDate": "2027-02-06T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-06-2027",
-        "checkedAt": "2026-11-21T15:00:43.701705+00:00",
+        "checkedAt": "2026-11-22T14:58:42.769821+00:00",
         "starts": {
           "prelims": "2027-02-06T20:00:00+00:00",
           "main": "2027-02-06T22:00:00+00:00"
@@ -243,14 +243,14 @@
       "location": "Scotiabank Arena, Toronto Canada",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-336",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "dataSource": "UFC",
       "bouts": [
         {
           "section": null,
           "red": "Joshua Van",
           "blue": "Manel Kape",
-          "division": "Flyweight Title Bout",
+          "division": "",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -263,7 +263,7 @@
           "section": null,
           "red": "Carlos Prates",
           "blue": "Michael Morales",
-          "division": "Welterweight Interim Title Bout",
+          "division": "",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -276,7 +276,7 @@
           "section": null,
           "red": "Lance Gibson Jr.",
           "blue": "Michael Johnson",
-          "division": "Lightweight Bout",
+          "division": "",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -287,7 +287,7 @@
           "section": null,
           "red": "Serhiy Sidey",
           "blue": "Louis Lee Scott",
-          "division": "Bantamweight Bout",
+          "division": "",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -298,7 +298,7 @@
           "section": null,
           "red": "Cam Nelson",
           "blue": "Sean Clancy Jr.",
-          "division": "Welterweight Bout",
+          "division": "",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -314,7 +314,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-31T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-336",
-        "checkedAt": "2026-11-21T15:00:43.701705+00:00",
+        "checkedAt": "2026-11-22T14:58:42.769821+00:00",
         "starts": {
           "early-prelims": "2027-01-30T22:00:00+00:00",
           "prelims": "2027-01-31T00:00:00+00:00",
@@ -385,12 +385,12 @@
       "date": "2027-01-24T01:00:00+00:00",
       "status": "scheduled",
       "dataSource": "UFC",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
       "sectionSchedule": {
         "eventDate": "2027-01-24T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
-        "checkedAt": "2026-11-21T15:00:43.701705+00:00",
+        "checkedAt": "2026-11-22T14:58:42.769821+00:00",
         "starts": {
           "main": "2027-01-24T01:00:00+00:00",
           "prelims": "2027-01-23T22:00:00+00:00"
@@ -427,7 +427,7 @@
           "section": "main",
           "red": "Gabriel Bonfim",
           "blue": "Sean Brady",
-          "division": "Welterweight Bout",
+          "division": "",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -451,7 +451,7 @@
       "location": "American Airlines Center, Dallas United States",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "bouts": [
         {
           "section": null,
@@ -605,7 +605,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-17T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
-        "checkedAt": "2026-11-21T15:00:43.701705+00:00",
+        "checkedAt": "2026-11-22T14:58:42.769821+00:00",
         "starts": {
           "prelims": "2027-01-16T22:00:00+00:00",
           "main": "2027-01-17T01:00:00+00:00"
@@ -833,7 +833,7 @@
       "location": "T-Mobile Arena, Las Vegas United States",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-335",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "bouts": [
         {
           "section": "main",
@@ -861,7 +861,7 @@
           "section": "main",
           "red": "Brandon Moreno",
           "blue": "Charles Johnson",
-          "division": "Flyweight Bout",
+          "division": "",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -912,7 +912,7 @@
       "sectionSchedule": {
         "eventDate": "2026-12-13T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-335",
-        "checkedAt": "2026-11-21T15:00:43.701705+00:00",
+        "checkedAt": "2026-11-22T14:58:42.769821+00:00",
         "starts": {
           "main": "2026-12-13T02:00:00+00:00",
           "early-prelims": "2026-12-12T22:00:00+00:00",
@@ -1014,12 +1014,12 @@
       "date": "2026-12-05T18:00:00+00:00",
       "status": "scheduled",
       "dataSource": "UFC",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
       "sectionSchedule": {
         "eventDate": "2026-12-05T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
-        "checkedAt": "2026-11-21T15:00:43.701705+00:00",
+        "checkedAt": "2026-11-22T14:58:42.769821+00:00",
         "starts": {
           "main": "2026-12-05T18:00:00+00:00",
           "prelims": "2026-12-05T15:00:00+00:00"
@@ -1595,13 +1595,13 @@
       "location": "Madison Square Garden",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-334",
-      "checkedAt": "2026-11-21",
+      "checkedAt": "2026-11-22",
       "bouts": [
         {
           "red": "Ciryl Gane",
           "blue": "Josh Hokit",
           "section": "main",
-          "division": "Heavyweight Title Bout",
+          "division": "",
           "winner": "Ciryl Gane",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -1612,7 +1612,7 @@
           "red": "Kayla Harrison",
           "blue": "Amanda Nunes",
           "section": "main",
-          "division": "Women's Bantamweight Title Bout",
+          "division": "",
           "winner": "Kayla Harrison",
           "outcome": null,
           "method": "Submission",
@@ -1623,7 +1623,7 @@
           "red": "Caio Borralho",
           "blue": "Yousri Belgaroui",
           "section": "main",
-          "division": "Middleweight Bout",
+          "division": "",
           "winner": "Caio Borralho",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -1634,7 +1634,7 @@
           "red": "Uroš Medić",
           "blue": "Kevin Holland",
           "section": "main",
-          "division": "Welterweight Bout",
+          "division": "",
           "winner": null,
           "outcome": "Empate",
           "method": "Decision - Majority",
@@ -1645,7 +1645,7 @@
           "red": "Bilal Hasan",
           "blue": "Luis Gurule",
           "section": "main",
-          "division": "Flyweight Bout",
+          "division": "",
           "winner": "Luis Gurule",
           "outcome": null,
           "method": "Decision - Split",
@@ -1656,7 +1656,7 @@
           "red": "Stephen Thompson",
           "blue": "Charles Radtke",
           "section": "prelims",
-          "division": "Welterweight Bout",
+          "division": "",
           "winner": "Stephen Thompson",
           "outcome": null,
           "method": "KO/TKO",
@@ -1667,7 +1667,7 @@
           "red": "Drew Dober",
           "blue": "Chris Duncan",
           "section": "prelims",
-          "division": "Lightweight Bout",
+          "division": "",
           "winner": "Chris Duncan",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -1678,7 +1678,7 @@
           "red": "Jim Miller",
           "blue": "Terrance McKinney",
           "section": "prelims",
-          "division": "Lightweight Bout",
+          "division": "",
           "winner": "Terrance McKinney",
           "outcome": null,
           "method": "KO/TKO",
@@ -1689,7 +1689,7 @@
           "red": "Donte Johnson",
           "blue": "Cesar Almeida",
           "section": "prelims",
-          "division": "Catchweight Bout",
+          "division": "",
           "winner": "Cesar Almeida",
           "outcome": null,
           "method": "KO/TKO",
@@ -1700,7 +1700,7 @@
           "red": "Jared Gordon",
           "blue": "Melquizael Costa",
           "section": "early-prelims",
-          "division": "Lightweight Bout",
+          "division": "",
           "winner": "Melquizael Costa",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -1711,7 +1711,7 @@
           "red": "Macy Chiasson",
           "blue": "Bia Mesquita",
           "section": "early-prelims",
-          "division": "Women's Bantamweight Bout",
+          "division": "",
           "winner": "Bia Mesquita",
           "outcome": null,
           "method": "Submission",
@@ -1733,7 +1733,7 @@
           "red": "Evan Elder",
           "blue": "Samuel Sanches",
           "section": "early-prelims",
-          "division": "Lightweight Bout",
+          "division": "",
           "winner": "Evan Elder",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -1913,7 +1913,7 @@
       ],
       "eventKind": "numbered",
       "resultsSource": "https://www.ufc.com/event/ufc-334",
-      "resultsCheckedAt": "2026-11-21T15:00:45.231313+00:00"
+      "resultsCheckedAt": "2026-11-22T14:58:45.350837+00:00"
     },
     {
       "id": "ufc-fight-night-november-07-2026",
@@ -8563,14 +8563,16 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-22T10:13:34.424609+00:00",
-    "verifiedIds": [],
+    "checkedAt": "2026-11-22T14:58:45.350837+00:00",
+    "verifiedIds": [
+      "ufc-334"
+    ],
     "failedIds": [
       "ufc-fight-night-november-21-2026"
     ]
   },
   "scheduleVerification": {
-    "checkedAt": "2026-11-21T15:00:43.701705+00:00",
+    "checkedAt": "2026-11-22T14:58:42.769821+00:00",
     "verifiedIds": [
       "ufc-fight-night-december-05-2026",
       "ufc-335",
@@ -8580,9 +8582,7 @@
       "ufc-fight-night-february-06-2027",
       "ufc-fight-night-february-13-2027"
     ],
-    "failedIds": [
-      "ufc-fight-night-november-21-2026"
-    ]
+    "failedIds": []
   },
   "excludedEvents": [
     {
