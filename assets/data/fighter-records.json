@@ -6815,28 +6815,26 @@
       "record": "14-4-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/shoaib-yousaf",
-      "updatedAt": "2026-11-22T14:58:50.257809+00:00"
+      "updatedAt": "2026-11-23T12:59:15.769544+00:00"
     },
     "ufc-john-mitchell": {
       "record": "12-3-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/john-mitchell",
-      "updatedAt": "2026-11-22T14:58:50.257809+00:00"
+      "updatedAt": "2026-11-23T12:59:15.769544+00:00"
     }
   },
   "lastSync": {
-    "checkedAt": "2026-11-22T14:58:50.257809+00:00",
+    "checkedAt": "2026-11-23T12:59:15.769544+00:00",
     "mode": "events",
-    "attempted": 30,
-    "succeeded": 26,
+    "attempted": 3,
+    "succeeded": 0,
     "failedIds": [
       "ufc-jake-matthews",
-      "ufc-jack-della-maddalena",
       "ufc-shoaib-yousaf",
       "ufc-john-mitchell"
     ],
     "recordOnlyIds": [
-      "ufc-jack-della-maddalena",
       "ufc-shoaib-yousaf",
       "ufc-john-mitchell"
     ]
@@ -6851,7 +6849,7 @@
   "unmatchedEventFighters": {},
   "profileReview": {
     "ufc-jake-matthews": {
-      "checkedAt": "2026-11-22T14:58:50.257809+00:00",
+      "checkedAt": "2026-11-23T12:59:15.769544+00:00",
       "reason": "Career statistic regression: koWins",
       "sourceUrl": "https://www.ufc.com/athlete/jake-matthews",
       "receivedRecord": "23-9-0",

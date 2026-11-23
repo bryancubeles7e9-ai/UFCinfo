@@ -1,33 +1,12 @@
 {
-  "date": "2026-11-22",
-  "checkedAt": "2026-11-22T10:13:34.424609+00:00",
+  "date": "2026-11-23",
+  "checkedAt": "2026-11-23T12:59:15.769544+00:00",
   "eventIds": [
     "ufc-fight-night-november-21-2026"
   ],
   "profileIds": [
-    "ufc-aleksandre-topuria",
-    "ufc-alessandro-costa",
-    "ufc-alik-lorenz",
-    "ufc-aljamain-sterling",
-    "ufc-amir-albazi",
-    "ufc-asu-almabayev",
-    "ufc-brian-ortega",
-    "ufc-dan-hooker",
-    "ufc-diyar-nurgozhay",
-    "ufc-dom-mar-fan",
-    "ufc-ikram-aliskerov",
     "ufc-jake-matthews",
-    "ufc-jared-cannonier",
-    "ufc-jiri-prochazka",
     "ufc-john-mitchell",
-    "ufc-kevin-vallejos",
-    "ufc-kyoji-horiguchi",
-    "ufc-navajo-stirling",
-    "ufc-nikolas-motta",
-    "ufc-santiago-luna",
-    "ufc-shamil-gaziev",
-    "ufc-shoaib-yousaf",
-    "ufc-tahir-abdullayev",
-    "ufc-tallison-teixeira"
+    "ufc-shoaib-yousaf"
   ]
 }
