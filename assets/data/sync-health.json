@@ -2,49 +2,49 @@
   "schemaVersion": 1,
   "jobs": {
     "rankings": {
-      "attemptedAt": "2026-11-22T14:58:45.697438+00:00",
+      "attemptedAt": "2026-11-23T18:52:57.927848+00:00",
       "status": "success",
       "pending": 0,
-      "lastSuccessAt": "2026-11-22T14:58:45.888532+00:00",
+      "lastSuccessAt": "2026-11-23T18:52:58.086037+00:00",
       "consecutiveFailures": 0,
-      "finishedAt": "2026-11-22T14:58:45.888550+00:00",
+      "finishedAt": "2026-11-23T18:52:58.086050+00:00",
       "exitCode": 0
     },
     "events": {
-      "attemptedAt": "2026-11-22T14:58:42.716269+00:00",
+      "attemptedAt": "2026-11-23T18:52:56.573169+00:00",
       "status": "success",
       "pending": 0,
-      "lastSuccessAt": "2026-11-22T14:58:45.263456+00:00",
+      "lastSuccessAt": "2026-11-23T18:52:57.530934+00:00",
       "consecutiveFailures": 0,
-      "finishedAt": "2026-11-22T14:58:45.263474+00:00",
+      "finishedAt": "2026-11-23T18:52:57.530948+00:00",
       "exitCode": 0
     },
     "results": {
-      "attemptedAt": "2026-11-22T14:58:45.307358+00:00",
+      "attemptedAt": "2026-11-23T18:52:57.582986+00:00",
       "status": "partial",
       "pending": 1,
       "lastSuccessAt": "2026-11-21T15:00:45.443450+00:00",
       "consecutiveFailures": 0,
       "pendingSince": "2026-11-22T14:58:45.307358+00:00",
-      "finishedAt": "2026-11-22T14:58:45.654478+00:00",
+      "finishedAt": "2026-11-23T18:52:57.875987+00:00",
       "exitCode": 0
     },
     "photos": {
-      "attemptedAt": "2026-11-22T14:58:46.280466+00:00",
+      "attemptedAt": "2026-11-23T18:52:58.545913+00:00",
       "status": "success",
       "pending": 0,
-      "lastSuccessAt": "2026-11-22T14:58:50.110001+00:00",
+      "lastSuccessAt": "2026-11-23T18:53:00.728750+00:00",
       "consecutiveFailures": 0,
-      "finishedAt": "2026-11-22T14:58:50.110021+00:00",
+      "finishedAt": "2026-11-23T18:53:00.728768+00:00",
       "exitCode": 0
     },
     "records": {
-      "attemptedAt": "2026-11-22T14:58:50.153099+00:00",
+      "attemptedAt": "2026-11-23T18:53:00.779259+00:00",
       "status": "partial",
       "pending": 4,
       "consecutiveFailures": 0,
       "pendingSince": "2026-10-21T22:22:11.527571+00:00",
-      "finishedAt": "2026-11-22T14:58:51.412842+00:00",
+      "finishedAt": "2026-11-23T18:53:01.688163+00:00",
       "exitCode": 0
     }
   }
