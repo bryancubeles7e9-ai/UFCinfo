@@ -1,8 +1,39 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-23T03:16:22.440Z",
-  "lastSearchedAt": "2026-11-23T03:16:22.440Z",
+  "updatedAt": "2026-11-24T10:29:40.147003+00:00",
+  "lastSearchedAt": "2026-11-24T10:29:28.337Z",
   "groups": [
+    {
+      "id": "2124921930666881359",
+      "fighterNames": [
+        "Arman Tsarukyan",
+        "Justin Gaethje"
+      ],
+      "matchupKey": "armantsarukyan|justingaethje|undated:2026-11",
+      "eventDateHint": null,
+      "rematch": false,
+      "dateYearInferred": false,
+      "summary": {
+        "es": "Championship Rounds comenta un posible cruce entre Arman Tsarukyan y Justin Gaethje, sin fecha exacta indicada en la fuente. Runrún de la comunidad; no constituye confirmación oficial.",
+        "en": "Championship Rounds discusses a possible matchup between Arman Tsarukyan and Justin Gaethje, with no exact date stated by the source. Community discussion; this is not official confirmation."
+      },
+      "processing": "automatic",
+      "generatedAt": "2026-11-24T10:29:28.337Z",
+      "reviewedAt": null,
+      "publishedAt": "2026-11-23T17:44:02.000Z",
+      "containsSpoilers": true,
+      "reports": [
+        {
+          "id": "2124921930666881359",
+          "sourceId": "championship-rounds",
+          "postUrl": "https://x.com/ChampRDS/status/2124921930666881359",
+          "publishedAt": "2026-11-23T17:44:02.000Z",
+          "language": "en",
+          "attributedAccounts": []
+        }
+      ],
+      "official": null
+    },
     {
       "id": "2124246278079164729",
       "fighterNames": [
@@ -29,37 +60,6 @@
           "postUrl": "https://x.com/upfrontmma/status/2124246278079164729",
           "publishedAt": "2026-11-21T20:59:13.000Z",
           "language": "en",
-          "attributedAccounts": []
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2122684764146606253",
-      "fighterNames": [
-        "Elves Brener",
-        "Mateusz Rębecki"
-      ],
-      "matchupKey": "elvesbrener|mateuszrebecki|2026-12-05",
-      "eventDateHint": "2026-12-05",
-      "rematch": false,
-      "dateYearInferred": true,
-      "summary": {
-        "es": "MMA Latinoamérica comenta un posible cruce entre Elves Brener y Mateusz Rębecki; la publicación menciona el 5 de diciembre. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "MMA Latinoamérica discusses a possible matchup between Elves Brener and Mateusz Rębecki; the post mentions December 5. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-17T19:59:44.569Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-17T13:34:20.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2122684764146606253",
-          "sourceId": "mma-latinoamerica",
-          "postUrl": "https://x.com/ClubDeLasMMA/status/2122684764146606253",
-          "publishedAt": "2026-11-17T13:34:20.000Z",
-          "language": "es",
           "attributedAccounts": []
         }
       ],
@@ -891,8 +891,8 @@
     }
   ],
   "lastCollection": {
-    "checkedAt": "2026-11-23T03:16:22.440Z",
-    "receivedPosts": 0,
-    "added": 0
+    "checkedAt": "2026-11-24T10:29:28.337Z",
+    "receivedPosts": 7,
+    "added": 1
   }
 }
