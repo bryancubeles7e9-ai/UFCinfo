@@ -7824,5 +7824,29 @@
     "country": "Ireland",
     "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
     "countryConsulted": "2026-11-20"
+  },
+  {
+    "id": "ufc-roque-conceicao",
+    "name": "Roque Conceicao",
+    "aliases": [
+      "Roque Conceicao"
+    ],
+    "source": "https://www.ufc.com/athlete/roque-conceicao",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-335",
+    "countryConsulted": "2026-11-24"
+  },
+  {
+    "id": "ufc-gabriel-santos",
+    "name": "Gabriel Santos",
+    "aliases": [
+      "Gabriel Santos"
+    ],
+    "source": "https://www.ufc.com/athlete/gabriel-santos",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
+    "countryConsulted": "2026-11-24"
   }
 ]

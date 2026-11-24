@@ -3,8 +3,34 @@
   "year": 2026,
   "source": "UFC",
   "sourceUrl": "https://www.ufc.com",
-  "synchronizedAt": "2026-11-23T18:52:56.639755+00:00",
+  "synchronizedAt": "2026-11-24T18:29:53.469084+00:00",
   "events": [
+    {
+      "id": "ufc-337",
+      "number": 337,
+      "eventKind": "numbered",
+      "type": "official",
+      "source": "https://www.ufc.com/event/ufc-337",
+      "title": "UFC 337",
+      "subtitle": "TBD vs TBD",
+      "location": "Kia Center, Orlando United States",
+      "date": "2027-02-20T22:00:00+00:00",
+      "status": "announced",
+      "dataSource": "UFC",
+      "checkedAt": "2026-11-24",
+      "scheduleSource": "https://www.ufc.com/event/ufc-337",
+      "sectionSchedule": {
+        "eventDate": "2027-02-20T22:00:00+00:00",
+        "source": "https://www.ufc.com/event/ufc-337",
+        "checkedAt": "2026-11-24T18:29:53.469084+00:00",
+        "starts": {
+          "prelims": "2027-02-20T20:00:00+00:00",
+          "main": "2027-02-20T22:00:00+00:00"
+        }
+      },
+      "pendingBoutRemovals": {},
+      "bouts": []
+    },
     {
       "id": "ufc-fight-night-february-13-2027",
       "number": null,
@@ -17,12 +43,12 @@
       "date": "2027-02-13T22:00:00+00:00",
       "status": "scheduled",
       "dataSource": "UFC",
-      "checkedAt": "2026-11-23",
+      "checkedAt": "2026-11-24",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-february-13-2027",
       "sectionSchedule": {
         "eventDate": "2027-02-13T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-13-2027",
-        "checkedAt": "2026-11-23T18:52:56.639755+00:00",
+        "checkedAt": "2026-11-24T18:29:53.469084+00:00",
         "starts": {
           "prelims": "2027-02-13T20:00:00+00:00",
           "main": "2027-02-13T22:00:00+00:00"
@@ -52,7 +78,7 @@
           "section": null,
           "red": "Joe Pyfer",
           "blue": "Bo Nickal",
-          "division": "",
+          "division": "Middleweight Bout",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -76,7 +102,7 @@
       "location": "Afterpay Arena, Sydney Olympic Park Australia",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-february-06-2027",
-      "checkedAt": "2026-11-23",
+      "checkedAt": "2026-11-24",
       "bouts": [
         {
           "section": null,
@@ -142,7 +168,7 @@
       "sectionSchedule": {
         "eventDate": "2027-02-06T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-06-2027",
-        "checkedAt": "2026-11-23T18:52:56.639755+00:00",
+        "checkedAt": "2026-11-24T18:29:53.469084+00:00",
         "starts": {
           "prelims": "2027-02-06T20:00:00+00:00",
           "main": "2027-02-06T22:00:00+00:00"
@@ -243,7 +269,7 @@
       "location": "Scotiabank Arena, Toronto Canada",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-336",
-      "checkedAt": "2026-11-23",
+      "checkedAt": "2026-11-24",
       "dataSource": "UFC",
       "bouts": [
         {
@@ -285,6 +311,39 @@
         },
         {
           "section": null,
+          "red": "Tanner Boser",
+          "blue": "José Montanha",
+          "division": "Heavyweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": null,
+          "red": "Marc-Andre Barriault",
+          "blue": "Tresean Gore",
+          "division": "Middleweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": null,
+          "red": "Gable Steveson",
+          "blue": "Terrance Chatman",
+          "division": "Heavyweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": null,
           "red": "Serhiy Sidey",
           "blue": "Louis Lee Scott",
           "division": "Bantamweight Bout",
@@ -304,6 +363,17 @@
           "method": "",
           "round": "",
           "time": ""
+        },
+        {
+          "section": null,
+          "red": "Julien Leblanc",
+          "blue": "Vlasto Čepo",
+          "division": "Middleweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
         }
       ],
       "poster": null,
@@ -314,7 +384,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-31T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-336",
-        "checkedAt": "2026-11-23T18:52:56.639755+00:00",
+        "checkedAt": "2026-11-24T18:29:53.469084+00:00",
         "starts": {
           "early-prelims": "2027-01-30T22:00:00+00:00",
           "prelims": "2027-01-31T00:00:00+00:00",
@@ -370,6 +440,70 @@
             "round": "",
             "time": ""
           }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-24T18:29:53.469084+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "Tanner Boser",
+            "blue": "José Montanha",
+            "division": "Heavyweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-24T18:29:53.469084+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "Marc-Andre Barriault",
+            "blue": "Tresean Gore",
+            "division": "Middleweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-24T18:29:53.469084+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "Gable Steveson",
+            "blue": "Terrance Chatman",
+            "division": "Heavyweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-24T18:29:53.469084+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": null,
+            "red": "Julien Leblanc",
+            "blue": "Vlasto Čepo",
+            "division": "Middleweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
         }
       ]
     },
@@ -380,17 +514,17 @@
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
       "title": "UFC Fight Night",
-      "subtitle": "Gabriel Bonfim vs Sean Brady",
+      "subtitle": "Sean Brady vs Gabriel Bonfim",
       "location": "Meta APEX, Las Vegas United States",
       "date": "2027-01-24T01:00:00+00:00",
       "status": "scheduled",
       "dataSource": "UFC",
-      "checkedAt": "2026-11-23",
+      "checkedAt": "2026-11-24",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
       "sectionSchedule": {
         "eventDate": "2027-01-24T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
-        "checkedAt": "2026-11-23T18:52:56.639755+00:00",
+        "checkedAt": "2026-11-24T18:29:53.469084+00:00",
         "starts": {
           "main": "2027-01-24T01:00:00+00:00",
           "prelims": "2027-01-23T22:00:00+00:00"
@@ -425,8 +559,8 @@
       "bouts": [
         {
           "section": "main",
-          "red": "Gabriel Bonfim",
-          "blue": "Sean Brady",
+          "red": "Sean Brady",
+          "blue": "Gabriel Bonfim",
           "division": "Welterweight Bout",
           "winner": null,
           "outcome": null,
@@ -451,7 +585,7 @@
       "location": "American Airlines Center, Dallas United States",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
-      "checkedAt": "2026-11-23",
+      "checkedAt": "2026-11-24",
       "bouts": [
         {
           "section": null,
@@ -605,7 +739,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-17T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
-        "checkedAt": "2026-11-23T18:52:56.639755+00:00",
+        "checkedAt": "2026-11-24T18:29:53.469084+00:00",
         "starts": {
           "prelims": "2027-01-16T22:00:00+00:00",
           "main": "2027-01-17T01:00:00+00:00"
@@ -833,7 +967,7 @@
       "location": "T-Mobile Arena, Las Vegas United States",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-335",
-      "checkedAt": "2026-11-23",
+      "checkedAt": "2026-11-24",
       "bouts": [
         {
           "section": "main",
@@ -870,6 +1004,17 @@
         },
         {
           "section": "main",
+          "red": "Damian Pinas",
+          "blue": "Baisangur Susurkaev",
+          "division": "Middleweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "main",
           "red": "Kyler Phillips",
           "blue": "Ethyn Ewing",
           "division": "Bantamweight Bout",
@@ -880,10 +1025,10 @@
           "time": ""
         },
         {
-          "section": "main",
-          "red": "Damian Pinas",
-          "blue": "Baisangur Susurkaev",
-          "division": "Middleweight Bout",
+          "section": "early-prelims",
+          "red": "Jacqueline Cavalcanti",
+          "blue": "Michelle Montague",
+          "division": "Women's Bantamweight Bout",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -895,6 +1040,17 @@
           "red": "Quentin Pasley",
           "blue": "Junior Tafa",
           "division": "Light Heavyweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "early-prelims",
+          "red": "Roque Conceicao",
+          "blue": "Nilson Rojas",
+          "division": "Flyweight Bout",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -912,7 +1068,7 @@
       "sectionSchedule": {
         "eventDate": "2026-12-13T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-335",
-        "checkedAt": "2026-11-23T18:52:56.639755+00:00",
+        "checkedAt": "2026-11-24T18:29:53.469084+00:00",
         "starts": {
           "main": "2026-12-13T02:00:00+00:00",
           "early-prelims": "2026-12-12T22:00:00+00:00",
@@ -999,6 +1155,38 @@
             "round": "",
             "time": ""
           }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-24T18:29:53.469084+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": "early-prelims",
+            "red": "Jacqueline Cavalcanti",
+            "blue": "Michelle Montague",
+            "division": "Women's Bantamweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-24T18:29:53.469084+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": "early-prelims",
+            "red": "Roque Conceicao",
+            "blue": "Nilson Rojas",
+            "division": "Flyweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
         }
       ]
     },
@@ -1014,12 +1202,12 @@
       "date": "2026-12-05T18:00:00+00:00",
       "status": "scheduled",
       "dataSource": "UFC",
-      "checkedAt": "2026-11-23",
+      "checkedAt": "2026-11-24",
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
       "sectionSchedule": {
         "eventDate": "2026-12-05T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
-        "checkedAt": "2026-11-23T18:52:56.639755+00:00",
+        "checkedAt": "2026-11-24T18:29:53.469084+00:00",
         "starts": {
           "main": "2026-12-05T18:00:00+00:00",
           "prelims": "2026-12-05T15:00:00+00:00"
@@ -1218,6 +1406,38 @@
             "round": "",
             "time": ""
           }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-24T18:29:53.469084+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": "prelims",
+            "red": "Luke Riley",
+            "blue": "Gabriel Santos",
+            "division": "Featherweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
+        },
+        {
+          "kind": "added",
+          "checkedAt": "2026-11-24T18:29:53.469084+00:00",
+          "source": "UFC",
+          "bout": {
+            "section": "prelims",
+            "red": "Mateusz Rębecki",
+            "blue": "Elves Brener",
+            "division": "Lightweight Bout",
+            "winner": null,
+            "outcome": null,
+            "method": "",
+            "round": "",
+            "time": ""
+          }
         }
       ],
       "bouts": [
@@ -1245,9 +1465,9 @@
         },
         {
           "section": "main",
-          "red": "Serghei Spivac",
-          "blue": "Mario Pinto",
-          "division": "Heavyweight Bout",
+          "red": "Levan Chokheli",
+          "blue": "Islam Dulatov",
+          "division": "Welterweight Bout",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -1256,9 +1476,9 @@
         },
         {
           "section": "main",
-          "red": "Levan Chokheli",
-          "blue": "Islam Dulatov",
-          "division": "Welterweight Bout",
+          "red": "Serghei Spivac",
+          "blue": "Mario Pinto",
+          "division": "Heavyweight Bout",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -1281,6 +1501,17 @@
           "red": "Magomed Tuchalov",
           "blue": "Ion Cutelaba",
           "division": "Light Heavyweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
+        },
+        {
+          "section": "prelims",
+          "red": "Luke Riley",
+          "blue": "Gabriel Santos",
+          "division": "Featherweight Bout",
           "winner": null,
           "outcome": null,
           "method": "",
@@ -1352,6 +1583,17 @@
           "method": "",
           "round": "",
           "time": ""
+        },
+        {
+          "section": "prelims",
+          "red": "Mateusz Rębecki",
+          "blue": "Elves Brener",
+          "division": "Lightweight Bout",
+          "winner": null,
+          "outcome": null,
+          "method": "",
+          "round": "",
+          "time": ""
         }
       ],
       "poster": "assets/images/events/ufc-fight-night-december-05-2026.jpg",
@@ -1366,142 +1608,142 @@
       "subtitle": "Jiří Procházka vs Navajo Stirling",
       "date": "2026-11-21T18:00:00+00:00",
       "location": "ABHA Arena, Doha Qatar",
-      "status": "scheduled",
+      "status": "completed",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
-      "checkedAt": "2026-11-20",
+      "checkedAt": "2026-11-24",
       "bouts": [
         {
-          "section": "main",
           "red": "Jiří Procházka",
           "blue": "Navajo Stirling",
+          "section": "main",
           "division": "Light Heavyweight Bout",
-          "winner": null,
+          "winner": "Navajo Stirling",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "4:58"
         },
         {
-          "section": "main",
           "red": "Aljamain Sterling",
           "blue": "Kevin Vallejos",
+          "section": "main",
           "division": "Featherweight Bout",
-          "winner": null,
+          "winner": "Kevin Vallejos",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Dan Hooker",
           "blue": "Brian Ortega",
+          "section": "main",
           "division": "Lightweight Bout",
-          "winner": null,
+          "winner": "Dan Hooker",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Kyoji Horiguchi",
           "blue": "Asu Almabayev",
+          "section": "main",
           "division": "Flyweight Bout",
-          "winner": null,
+          "winner": "Kyoji Horiguchi",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "main",
           "red": "Jared Cannonier",
           "blue": "Ikram Aliskerov",
+          "section": "main",
           "division": "Middleweight Bout",
-          "winner": null,
+          "winner": "Ikram Aliskerov",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "prelims",
           "red": "Aleksandre Topuria",
           "blue": "Santiago Luna",
+          "section": "prelims",
           "division": "Bantamweight Bout",
-          "winner": null,
+          "winner": "Santiago Luna",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Split",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "prelims",
           "red": "Shamil Gaziev",
           "blue": "Tallison Teixeira",
+          "section": "prelims",
           "division": "Heavyweight Bout",
-          "winner": null,
+          "winner": "Tallison Teixeira",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "prelims",
           "red": "Amir Albazi",
           "blue": "Alessandro Costa",
+          "section": "prelims",
           "division": "Flyweight Bout",
-          "winner": null,
+          "winner": "Amir Albazi",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Submission",
+          "round": "3",
+          "time": "4:34"
         },
         {
-          "section": "prelims",
           "red": "Jake Matthews",
           "blue": "Tahir Abdullayev",
+          "section": "prelims",
           "division": "Welterweight Bout",
-          "winner": null,
+          "winner": "Tahir Abdullayev",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "prelims",
           "red": "Nikolas Motta",
           "blue": "Dom Mar Fan",
+          "section": "prelims",
           "division": "Lightweight Bout",
-          "winner": null,
+          "winner": "Dom Mar Fan",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "Decision - Unanimous",
+          "round": "3",
+          "time": "5:00"
         },
         {
-          "section": "prelims",
           "red": "Diyar Nurgozhay",
           "blue": "Alik Lorenz",
+          "section": "prelims",
           "division": "Light Heavyweight Bout",
-          "winner": null,
+          "winner": "Diyar Nurgozhay",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "2",
+          "time": "0:24"
         },
         {
-          "section": "prelims",
           "red": "Shoaib Yousaf",
           "blue": "John Mitchell",
+          "section": "prelims",
           "division": "Lightweight Bout",
-          "winner": null,
+          "winner": "John Mitchell",
           "outcome": null,
-          "method": "",
-          "round": "",
-          "time": ""
+          "method": "KO/TKO",
+          "round": "1",
+          "time": "3:50"
         }
       ],
       "poster": "assets/images/events/ufc-fight-night-november-21-2026.jpg",
@@ -1582,8 +1824,9 @@
           }
         }
       ],
-      "pendingBoutRemovals": {},
-      "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026"
+      "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+      "resultsSource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
+      "resultsCheckedAt": "2026-11-24T18:29:56.043659+00:00"
     },
     {
       "id": "ufc-334",
@@ -1595,13 +1838,13 @@
       "location": "Madison Square Garden",
       "type": "official",
       "source": "https://www.ufc.com/event/ufc-334",
-      "checkedAt": "2026-11-23",
+      "checkedAt": "2026-11-24",
       "bouts": [
         {
           "red": "Ciryl Gane",
           "blue": "Josh Hokit",
           "section": "main",
-          "division": "",
+          "division": "Heavyweight Title Bout",
           "winner": "Ciryl Gane",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -1612,7 +1855,7 @@
           "red": "Kayla Harrison",
           "blue": "Amanda Nunes",
           "section": "main",
-          "division": "",
+          "division": "Women's Bantamweight Title Bout",
           "winner": "Kayla Harrison",
           "outcome": null,
           "method": "Submission",
@@ -1623,7 +1866,7 @@
           "red": "Caio Borralho",
           "blue": "Yousri Belgaroui",
           "section": "main",
-          "division": "",
+          "division": "Middleweight Bout",
           "winner": "Caio Borralho",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -1634,7 +1877,7 @@
           "red": "Uroš Medić",
           "blue": "Kevin Holland",
           "section": "main",
-          "division": "",
+          "division": "Welterweight Bout",
           "winner": null,
           "outcome": "Empate",
           "method": "Decision - Majority",
@@ -1645,7 +1888,7 @@
           "red": "Bilal Hasan",
           "blue": "Luis Gurule",
           "section": "main",
-          "division": "",
+          "division": "Flyweight Bout",
           "winner": "Luis Gurule",
           "outcome": null,
           "method": "Decision - Split",
@@ -1656,7 +1899,7 @@
           "red": "Stephen Thompson",
           "blue": "Charles Radtke",
           "section": "prelims",
-          "division": "",
+          "division": "Welterweight Bout",
           "winner": "Stephen Thompson",
           "outcome": null,
           "method": "KO/TKO",
@@ -1667,7 +1910,7 @@
           "red": "Drew Dober",
           "blue": "Chris Duncan",
           "section": "prelims",
-          "division": "",
+          "division": "Lightweight Bout",
           "winner": "Chris Duncan",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -1678,7 +1921,7 @@
           "red": "Jim Miller",
           "blue": "Terrance McKinney",
           "section": "prelims",
-          "division": "",
+          "division": "Lightweight Bout",
           "winner": "Terrance McKinney",
           "outcome": null,
           "method": "KO/TKO",
@@ -1689,7 +1932,7 @@
           "red": "Donte Johnson",
           "blue": "Cesar Almeida",
           "section": "prelims",
-          "division": "",
+          "division": "Catchweight Bout",
           "winner": "Cesar Almeida",
           "outcome": null,
           "method": "KO/TKO",
@@ -1700,7 +1943,7 @@
           "red": "Jared Gordon",
           "blue": "Melquizael Costa",
           "section": "early-prelims",
-          "division": "",
+          "division": "Lightweight Bout",
           "winner": "Melquizael Costa",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -1711,7 +1954,7 @@
           "red": "Macy Chiasson",
           "blue": "Bia Mesquita",
           "section": "early-prelims",
-          "division": "",
+          "division": "Women's Bantamweight Bout",
           "winner": "Bia Mesquita",
           "outcome": null,
           "method": "Submission",
@@ -1733,7 +1976,7 @@
           "red": "Evan Elder",
           "blue": "Samuel Sanches",
           "section": "early-prelims",
-          "division": "",
+          "division": "Lightweight Bout",
           "winner": "Evan Elder",
           "outcome": null,
           "method": "Decision - Unanimous",
@@ -1913,7 +2156,7 @@
       ],
       "eventKind": "numbered",
       "resultsSource": "https://www.ufc.com/event/ufc-334",
-      "resultsCheckedAt": "2026-11-23T18:52:57.636858+00:00"
+      "resultsCheckedAt": "2026-11-24T18:29:56.043659+00:00"
     },
     {
       "id": "ufc-fight-night-november-07-2026",
@@ -8563,16 +8806,15 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-23T18:52:57.636858+00:00",
+    "checkedAt": "2026-11-24T18:29:56.043659+00:00",
     "verifiedIds": [
+      "ufc-fight-night-november-21-2026",
       "ufc-334"
     ],
-    "failedIds": [
-      "ufc-fight-night-november-21-2026"
-    ]
+    "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-11-23T18:52:56.639755+00:00",
+    "checkedAt": "2026-11-24T18:29:53.469084+00:00",
     "verifiedIds": [
       "ufc-fight-night-december-05-2026",
       "ufc-335",
@@ -8580,7 +8822,8 @@
       "ufc-fight-night-january-23-2027",
       "ufc-336",
       "ufc-fight-night-february-06-2027",
-      "ufc-fight-night-february-13-2027"
+      "ufc-fight-night-february-13-2027",
+      "ufc-337"
     ],
     "failedIds": []
   },
