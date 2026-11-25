@@ -81,6 +81,10 @@ jobs:
         id: recent_profiles
         continue-on-error: true
         run: python3 scripts/import-season-fighters.py --recent
+      - name: Incorporar luchadores clasificados sin perfil
+        id: ranked_profiles
+        continue-on-error: true
+        run: python3 scripts/import-season-fighters.py --rankings
       - name: Test selección de fotografías
         id: photo_check
         continue-on-error: true
@@ -133,12 +137,13 @@ jobs:
           RANKINGS: ${{ steps.rankings.outcome }}
           PERFILES_PROXIMOS: ${{ steps.upcoming_profiles.outcome }}
           PERFILES_RECIENTES: ${{ steps.recent_profiles.outcome }}
+          PERFILES_CLASIFICADOS: ${{ steps.ranked_profiles.outcome }}
           VALIDACION_FOTOGRAFIAS: ${{ steps.photo_check.outcome }}
           FOTOGRAFIAS: ${{ steps.photos.outcome }}
           RECORDS: ${{ steps.records.outcome }}
         run: |
           failed=0
-          for stage in CARTELERAS RESULTADOS RANKINGS PERFILES_PROXIMOS PERFILES_RECIENTES VALIDACION_FOTOGRAFIAS FOTOGRAFIAS RECORDS; do
+          for stage in CARTELERAS RESULTADOS RANKINGS PERFILES_PROXIMOS PERFILES_RECIENTES PERFILES_CLASIFICADOS VALIDACION_FOTOGRAFIAS FOTOGRAFIAS RECORDS; do
             if [ "${!stage}" = failure ]; then
               echo "::error::Falló ${stage}; consulta su paso para más detalles."
               failed=1

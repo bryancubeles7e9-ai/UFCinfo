@@ -5,6 +5,7 @@ are reported. Photos use the official URL, with the interface's existing fallbac
 Use --next to import missing participants of the next announced/scheduled card.
 Use --next-fight-night to select the next Fight Night instead.
 Use --upcoming to cover every upcoming card in the feed.
+Use --rankings to cover ranked fighters, resolved through the official rankings page.
 """
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone, timedelta
@@ -67,12 +68,23 @@ def main():
     if '--next' in sys.argv or '--next-fight-night' in sys.argv:
         now = datetime.now(timezone.utc)
         events = sorted([e for e in feed['events'] if e.get('status') in ('scheduled', 'announced') and datetime.fromisoformat(e['date'].replace('Z', '+00:00')) > now and ('--next-fight-night' not in sys.argv or 'fight-night' in e['id'])], key=lambda e:e['date'])[:1]
+    if '--rankings' in sys.argv:
+        # The rankings page links every ranked athlete; treat it as one "card" of names.
+        snapshot = json.loads((ROOT / 'assets/data/ufc-rankings.json').read_text())
+        names = [n for c in snapshot['categories'] for n in [c.get('champion'), *c['names']] if n]
+        events = [{'id': 'ufc-rankings', 'source': snapshot['source'], 'bouts': [{'red': n, 'blue': n} for n in names]}]
     if '--recent' in sys.argv:
         cutoff = datetime.now(timezone.utc) - timedelta(days=14)
         events = [e for e in events if datetime.fromisoformat(e['date'].replace('Z', '+00:00')) >= cutoff]
-    existing_names = json.loads(subprocess.check_output(['node', '--input-type=module', '-e', "import {directoryFighters} from './assets/js/fighter-directory.js'; console.log(JSON.stringify(directoryFighters.flatMap(f=>[`${f.first} ${f.last}`,...(f.aliases||[])])));"], cwd=ROOT, text=True))
-    known = {records.normalize(n) for n in existing_names}
-    missing = {records.normalize(n):n for e in events for b in e['bouts'] for n in (b['red'],b['blue']) if records.normalize(n) not in known}
+    # Ask the website's own resolver, so special cases and aliases never disagree with it.
+    candidates = sorted({n for e in events for b in e['bouts'] for n in (b['red'], b['blue'])})
+    resolved = json.loads(subprocess.check_output(['node', '--input-type=module', '-e',
+        "import {directoryFighters, directoryFighterByName} from './assets/js/fighter-directory.js';"
+        "const names = JSON.parse(process.argv[1]);"
+        "console.log(JSON.stringify({known: directoryFighters.flatMap(f=>[`${f.first} ${f.last}`,...(f.aliases||[])]),"
+        " linked: names.filter(n=>directoryFighterByName(n))}));", json.dumps(candidates)], cwd=ROOT, text=True))
+    known = {records.normalize(n) for n in resolved['known'] + resolved['linked']}
+    missing = {records.normalize(n):n for n in candidates if records.normalize(n) not in known}
     events = [e for e in events if any(records.normalize(b[k]) in missing for b in e['bouts'] for k in ('red', 'blue'))]
     if not missing:
         print('No missing participants')
