@@ -98,12 +98,17 @@ def main():
                 if missing[key] not in f['aliases']:f['aliases'].append(missing[key])
                 if slug in flags and not f.get('code'):f.update(flags[slug],countrySource=e['source'],countryConsulted=date)
     print('Missing names:',len(missing),'official profiles:',len(found),flush=True)
+    # Debutants may not have an athlete page linked on the card yet; they are retried every run.
+    linked={records.normalize(a) for f in found.values() for a in [f['name'],*f['aliases']]}
+    for key,name in missing.items():
+        if key not in linked:print(f'::warning::Sin perfil oficial enlazado en la cartelera todavía: {name}',flush=True)
     data_path=ROOT/'assets/js/fighter-directory-data.js'
     prefix, raw=data_path.read_text().split('export const additionalFighters = ',1)
     data=json.loads(raw.strip().removesuffix(';'))
     manifest_path=ROOT/'docs/fighter-directory-sources.json'
     manifest=json.loads(manifest_path.read_text())
     ids={f['id'] for f in data}
+    manifest_ids={f['id'] for f in manifest}
     def profile(f):
         try:
             page=fetch(f['source'])
@@ -118,10 +123,12 @@ def main():
         for i,(f,result) in enumerate(pool.map(profile,found.values())):
             if isinstance(result,Exception):failures.append({'name':f['name'],'source':f['source'],'error':str(result)})
             elif records.normalize(result['name']) not in known and f['id'] not in ids:
-                data.append(result);manifest.append(f);ids.add(f['id']);known.add(records.normalize(result['name']));added+=1
+                data.append(result);ids.add(f['id']);known.add(records.normalize(result['name']));added+=1
+                if f['id'] not in manifest_ids:manifest.append(f);manifest_ids.add(f['id'])
             if (i+1)%25==0:print('Reviewed',i+1,'added',added,flush=True)
     data_path.write_text(prefix+'export const additionalFighters = '+json.dumps(data,ensure_ascii=False,indent=2)+';\n')
     manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+    for failure in failures:print(f"::warning::Perfil no verificado, se reintentará: {failure['name']} ({failure['error']})",flush=True)
     print(json.dumps({'added':added,'failures':failures},ensure_ascii=False,indent=2),flush=True)
 
 if __name__=='__main__':main()
