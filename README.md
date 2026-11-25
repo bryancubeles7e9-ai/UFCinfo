@@ -52,7 +52,7 @@ Solo se admiten pronósticos para el **próximo evento**; el servidor rechaza lo
 - **Puntuación:** victoria general acertada, **100 puntos**; ganador y método exactos (**KO/TKO, sumisión o decisión**), **350 puntos en total**. Una única opción por combate. Si falla el ganador o el método elegido, suma 0. Empates, no contest y cancelaciones son neutrales y no cuentan como acierto ni error. Los picks antiguos se conservan como victorias generales. Si falta un método oficial necesario para resolver un pick, queda pendiente.
 - **Ranking histórico, de la velada seleccionada y de la pasada:** suma de los puntos de las veladas finalizadas. También hay clasificación por evento. Se muestran veladas jugadas, aciertos y eventos pendientes; no hay mínimo de participación. Los usuarios con los mismos puntos comparten posición. Los participantes sin resultados aparecen pendientes, sin posición. Tu posición, puntos, aciertos y veladas aparecen en un resumen personal, aunque tu fila esté en otra página. Puedes localizarla con «Ver mi posición en la tabla»; la identificación procede de la sesión, no del nombre público.
 - **Cierre:** validado por el reloj del servidor al inicio del primer bloque oficial; sin horarios completos, cuatro horas antes de la principal. Una vez cerrada, la velada no se reabre automáticamente. Los cambios de rival previos al cierre requieren revisar y guardar los picks; reemplazos posteriores quedan fuera de la puntuación.
-- **Resultados:** resumen de puntos, aciertos, fallos y pendientes en las veladas en las que participaste. Los picks acertados se marcan en verde, los fallados en rojo y los empates, anulados o descalificaciones en gris. La puntuación propia es provisional mientras falten resultados. Solo se incorpora al ranking cuando el evento está finalizado y todos sus combates válidos están resueltos. Cada lectura recalcula desde los resultados publicados, sin llamadas a Cito u otros proveedores ni sumar puntos dos veces. Las correcciones de resultados se reflejan mientras el evento siga presente en el feed.
+- **Resultados:** resumen de puntos, aciertos, fallos y pendientes en las veladas en las que participaste. Los picks acertados se marcan en verde, los fallados en rojo y los empates, anulados o descalificaciones en gris. La puntuación propia es provisional mientras falten resultados. Solo se incorpora al ranking cuando el evento está finalizado y todos sus combates válidos están resueltos. Cada lectura recalcula desde los resultados publicados, sin llamadas a proveedores externos ni sumar puntos dos veces. Las correcciones de resultados se reflejan mientras el evento siga presente en el feed.
 - **Persistencia:** tablas `pickem_profiles`, `pickem_events` y `pickem_entries` en la misma SQLite persistente de las cuentas. Conservan el historial cuando el feed cambia de año; las copias de seguridad deben incluir esa base. El ranking muestra el nombre de usuario de la cuenta, sin alias adicional. Las cuentas antiguas que acceden con correo conservan un nombre público seguro para no exponer su dirección. Los picks de otros usuarios no se publican.
 - **Concurrencia:** control de versión por usuario/velada, sesión y CSRF obligatorios al guardar. Si otro dispositivo guardó antes, se rechaza la versión antigua. «Recargar pronósticos guardados» descarta el borrador y recupera lo guardado en la cuenta.
 
@@ -88,17 +88,20 @@ Los horarios antiguos se ignoran si cambia la fecha del evento. Más detalles en
 
 ## Cuándo se actualiza
 
-Los horarios de las tareas diarias se interpretan en **Europe/Madrid**, con el cambio de hora de verano e invierno. El vigilante tiene una programación independiente en UTC.
+Los horarios se interpretan en **Europe/Madrid**, con el cambio de hora de verano e invierno.
 
-| Proceso | Programación habitual |
-| --- | --- |
-| Carteleras, horarios oficiales por bloque, resultados, rankings, fotografías, récords y estadísticas | Cada día a las **08:00 y 14:00**. |
-| Reintento condicional tras una velada | Entre las **10:00 y las 14:00** (sin incluir las 14:00), para eventos de las últimas 48 horas con resultados o perfiles pendientes. No consulta Cito, rankings ni fotografías. |
-| Búsqueda de rumores y comprobación de confirmaciones oficiales | **Cada hora en punto**. |
-| Vigilancia de automatizaciones | Cada **tres horas**, al minuto 43 del calendario UTC de GitHub Actions; puede haber retrasos de ejecución. |
-| Lectura de las copias publicadas desde la web | Al abrir la página y periódicamente, aproximadamente cada **cinco minutos** para los principales feeds. |
+| Proceso | Programación habitual | Disparador |
+| --- | --- | --- |
+| Carteleras, horarios oficiales por bloque, resultados, rankings, fotografías, perfiles nuevos, récords y estadísticas | Cada día a las **08:00 y 14:00**. | cron-job.org, con la programación de GitHub como respaldo |
+| Reintento condicional tras una velada | **10:10 y 12:10**, para eventos de las últimas 48 horas con resultados o perfiles pendientes. Si todo está al día, no consulta fuentes. | cron-job.org, con respaldo de GitHub entre las 10:00 y las 14:00 |
+| Vigilancia de automatizaciones | **09:45 y 15:45**, además de cada tres horas en GitHub. | cron-job.org y GitHub |
+| Comprobación de la web y de la base de datos | Cada **15 minutos**, con aviso por email si falla. | cron-job.org |
+| Búsqueda de rumores | **En pausa** (véase [Cómo se tratan los rumores](#cómo-se-tratan-los-rumores)). La retirada de rumores confirmados por UFC.com sigue activa. | — |
+| Lectura de las copias publicadas desde la web | Al abrir la página y aproximadamente cada **cinco minutos** para los principales feeds. | Navegador |
 
-GitHub Actions programa por sí mismo la actualización de carteleras y del resto de datos de ese flujo. Lee el calendario y las fichas públicas de UFC para descubrir nuevas veladas, actualizar cruces, guardar los horarios oficiales por bloque y descargar los carteles oficiales de las próximas veladas, sin llamadas a Cito. Si el cartel todavía no está disponible, conserva el anterior o indica que está pendiente. El disparador externo queda para los flujos que aún lo usen, como el de rumores. Al terminar el ciclo principal, se guardan en un solo commit las carteleras, los resultados, las fotos, los rankings, los perfiles y el estado de cada consulta. Si una fuente falla, se conserva su última copia válida y se publican las demás. Render despliega la versión conjunta. También existen ejecuciones manuales y disparadores por determinados cambios de código; los rumores cuentan con comprobaciones de respaldo que evitan repetir la búsqueda de pago dentro de la misma hora.
+**cron-job.org es el disparador principal** porque la programación propia de GitHub llega a retrasarse horas o a saltarse ejecuciones en este repositorio. Sus tareas lanzan los workflows con un token de GitHub limitado al permiso de Actions de este repositorio y envían un email si una ejecución falla; cuando el token caduca, las tareas fallan con «401» y hay que renovarlo en todas ellas (véase [Horarios de automatización](docs/AUTOMATION_SCHEDULE.md)). La programación de GitHub sigue activa como respaldo y nunca se solapa con una ejecución en curso.
+
+La actualización principal lee el calendario y las fichas públicas de UFC.com para descubrir nuevas veladas, actualizar cruces, guardar los horarios oficiales por bloque y descargar los carteles oficiales, sin APIs de pago. Si el cartel todavía no está disponible, conserva el anterior o indica que está pendiente. Al terminar el ciclo principal, se guardan en un solo commit las carteleras, los resultados, las fotos, los rankings, los perfiles y el estado de cada consulta. Si una fuente falla, se conserva su última copia válida y se publican las demás. Render despliega la versión conjunta. También existen ejecuciones manuales y disparadores por determinados cambios de código; los rumores cuentan con comprobaciones de respaldo que evitan repetir la búsqueda de pago dentro de la misma hora.
 
 Después de actualizar las carteleras y los rankings, se incorporan automáticamente los perfiles que faltan de los participantes de próximas veladas, de los eventos recientes y de los luchadores clasificados, usando su ficha oficial de UFC.com enlazada desde la cartelera o desde los rankings. Si un debutante aún no tiene ficha o no se puede verificar, aparece un aviso en GitHub Actions y se reintenta en cada actualización.
 
@@ -106,15 +109,24 @@ El proceso revisa récords y estadísticas de los luchadores seleccionados con r
 
 Las carteleras también gestionan cancelaciones explícitas, sustituciones y cambios de fecha. Una pelea que desaparece sin explicación se conserva hasta confirmar su ausencia en dos respuestas comparables separadas por al menos una hora. Las respuestas vacías o con una pérdida masiva de combates no borran la cartelera. Los eventos cancelados o aplazados se conservan en el archivo de datos, pero salen de las vistas activas. Véase [Gestión de cambios de cartelera](docs/CARD_CHANGES.md) para los límites y el registro de cambios.
 
-La sincronización conserva el perfil anterior si una fuente reduce victorias, derrotas, empates o totales de finalizaciones, o reinicia todas las estadísticas principales a cero. Contrasta el récord tanto con la última copia guardada como con el catálogo. Las incidencias quedan registradas en `profileReview` dentro de `assets/data/fighter-records.json` y se reintentan en las siguientes ejecuciones. Las correcciones oficiales que reduzcan un total requieren revisión manual. Las medias y porcentajes sí pueden bajar después de una pelea; si faltan estadísticas, se conservan las anteriores y su fecha de consulta.
+La sincronización conserva el perfil anterior si una fuente reduce victorias, derrotas, empates o totales de finalizaciones, o reinicia todas las estadísticas principales a cero. Contrasta el récord tanto con la última copia guardada como con el catálogo. Las incidencias quedan registradas en `profileReview` dentro de `assets/data/fighter-records.json` y se reintentan en las siguientes ejecuciones. Las correcciones oficiales que reduzcan un total requieren revisión manual, con ayuda de `scripts/probe-ufc-profiles.py` (véase [récords y estadísticas](docs/FIGHTER_RECORDS.md)). Si UFC.com publica el récord pero no las estadísticas de combate, la sincronización intenta completarlas con UFC Stats cuando nombre y récord coinciden; hoy UFC Stats bloquea las consultas automáticas, así que esas estadísticas quedan como «No indicado» hasta que UFC.com las publique. Las medias y porcentajes sí pueden bajar después de una pelea; si faltan estadísticas, se conservan las anteriores y su fecha de consulta.
 
-El reintento puede arrancar desde las 10:00 hasta antes de las 14:00. GitHub Actions ofrece cuatro oportunidades (10:07, 11:07, 12:07 y 13:07), además de la finalización de las ejecuciones de rumores. Comprueba si quedan resultados, participantes o perfiles pendientes, con un registro diario para evitar duplicados. Si todo está al día, no consulta fuentes. Véase [Actualización de eventos y perfiles](docs/EVENT_REFRESH.md).
+El reintento puede arrancar desde las 10:00 hasta antes de las 14:00: cron-job.org lo lanza a las 10:10 y a las 12:10, y GitHub Actions ofrece oportunidades de respaldo cada hora. Comprueba si quedan resultados, participantes o perfiles pendientes, con un registro diario para evitar duplicados. Si todo está al día, no consulta fuentes. Véase [Actualización de eventos y perfiles](docs/EVENT_REFRESH.md).
 
 Los horarios son de inicio previsto: la ejecución, la publicación y la disponibilidad de los datos en la fuente pueden introducir retrasos. Puedes consultar el detalle técnico en [Horarios de automatización](docs/AUTOMATION_SCHEDULE.md).
 
 ## Alertas y comprobaciones
 
-El workflow **Vigilar automatizaciones UFCinfo** revisa los archivos publicados y el historial de GitHub Actions. Señala dos fallos consecutivos, rumores sin una búsqueda verificable durante más de tres horas, datos sin una sincronización verificable durante más de 30 horas o pendientes continuos durante más de 48 horas.
+El workflow **Vigilar automatizaciones UFCinfo** revisa los archivos publicados y el historial de GitHub Actions. Señala dos fallos consecutivos, datos sin una sincronización verificable durante más de 30 horas, pendientes continuos durante más de 48 horas y, si la búsqueda de rumores está activa, más de tres horas sin buscar (en pausa solo es un aviso). Cuenta como ejecutada cada franja de las 08:00 y 14:00 tanto si la lanzó cron-job.org como la programación de GitHub.
+
+Además:
+
+- **Email de cron-job.org** cuando una tarea falla, por ejemplo por un token de GitHub caducado.
+- **Comprobación de la web cada 15 minutos** en `/api/health/full`: base de datos legible y escribible y al menos 50 MB libres en el disco de datos.
+- **Errores de los visitantes:** los fallos de los scripts de la web en el navegador de un visitante llegan a los registros de Render como líneas `client_error` (sin cookies ni direcciones IP).
+- **Publicación tras las pruebas:** Render solo despliega un commit de código cuando pasan las comprobaciones de GitHub. Durante los segundos que dura un despliegue, las peticiones de cuentas y Pick’em se reintentan solas.
+
+Véase [publicación](docs/PUBLICACION.md) para los detalles de fiabilidad.
 
 El resumen aparece en [GitHub Actions](https://github.com/bryancubeles7e9-ai/UFCinfo/actions). La recepción de notificaciones depende de las preferencias de cada usuario en GitHub. Una búsqueda sin rumores nuevos es válida y no genera una alerta por sí sola. El vigilante no consulta APIs deportivas ni corrige datos automáticamente. Véase [Alertas de automatización](docs/DATA_ALERTS.md) para los umbrales y sus límites.
 
@@ -122,13 +134,14 @@ Las pruebas automáticas simulan fallos del proveedor, resultados incompletos y 
 
 ## Estado de validación
 
-Documentación revisada a **25 de octubre de 2026**. El estado distingue funciones implementadas de verificaciones reales todavía pendientes:
+Documentación revisada a **25 de noviembre de 2026**. El estado distingue funciones implementadas de verificaciones reales todavía pendientes:
 
 | Automatización | Estado | Qué falta comprobar |
 | --- | --- | --- |
-| **Rumores** | Búsqueda y publicación comprobadas en uso; reintentos de guardado incorporados. | Seguir observando las ejecuciones y ajustar fuentes o filtros cuando sea necesario. |
+| **Rumores** | Búsqueda y publicación comprobadas en uso; **en pausa** desde el 25 de noviembre de 2026. | Al reanudarla, comprobar la primera búsqueda y el saldo de TwitterAPI.io. |
 | **Actualización tras una velada** | Parcialmente validada; parche y reintento de las 10:00 implementados. | Comprobar en la próxima velada que resultados, récords y estadísticas se completan, y que la cartelera sigue visible si la fuente se retrasa. |
-| **Incorporación de nuevos eventos** | Validada el 18 de noviembre de 2026: el calendario oficial de UFC incorporó automáticamente tres veladas nuevas (5 de diciembre, 23 de enero y 13 de febrero) y verificó las 8 próximas. | Confirmar que detecta el evento y lo incorpora automáticamente a la web. |
+| **Incorporación de nuevos eventos** | Validada el 18 de noviembre de 2026: el calendario oficial de UFC incorporó automáticamente tres veladas nuevas (5 de diciembre, 23 de enero y 13 de febrero) y verificó las 8 próximas. | — |
+| **Perfiles de luchadores nuevos** | Validada el 25 de noviembre de 2026 con pruebas reales: los participantes de próximas veladas y los clasificados sin ficha se añaden solos desde UFC.com, sin duplicados. | Ver el primer debutante real que llegue sin ficha. |
 | **Horarios por bloque** | Consulta oficial y cálculo de estimaciones implementados para todas las próximas veladas del calendario de UFC. | Seguir verificando cambios de horario y de orden antes de cada evento. |
 
 Que una tarea termine sin errores no garantiza que el proveedor ya haya publicado toda la información. La fase de automatización se dará por cerrada cuando estos tres procesos estén comprobados con casos reales.
@@ -148,7 +161,7 @@ Más información: [Funcionamiento de rumores](docs/RUMORES.md) y [criterios del
 ## Alcance actual
 
 - Los resultados y las estadísticas son copias actualizadas periódicamente; no hay seguimiento en directo golpe a golpe.
-- Las carteleras incluyen **preliminares y preliminares previas disponibles**. Las veladas futuras pueden estar incompletas y algunos participantes todavía no tienen ficha en el catálogo.
+- Las carteleras incluyen **preliminares y preliminares previas disponibles**. Las veladas futuras pueden estar incompletas; un debutante sin ficha oficial en UFC.com se añade cuando UFC la publica.
 - Algunos perfiles tienen campos pendientes porque no hay información suficientemente documentada. Los datos ausentes no se inventan.
 - Una fuente puede tardar en actualizar un récord, una estadística o una fotografía después del combate.
 - Fight Lab compara datos publicados; no calcula probabilidades de victoria ni predicciones.
@@ -157,8 +170,8 @@ Más información: [Funcionamiento de rumores](docs/RUMORES.md) y [criterios del
 
 El proyecto busca ser útil para otros seguidores, autosostenible y una muestra de desarrollo personal. La web ya está online; el siguiente objetivo es prepararla para un lanzamiento público más amplio.
 
-1. **Cerrar la validación de las automatizaciones** con una nueva velada y un nuevo anuncio de evento.
-2. **Pulir la experiencia:** móvil, velocidad, navegación y datos incompletos.
+1. **Cerrar la validación de las automatizaciones** con la próxima velada (resultados, récords y estadísticas tras el combate).
+2. **Pulir la experiencia:** velocidad y datos incompletos. El móvil ya cuenta con barra inferior de navegación y controles adaptados.
 3. **Probarla con seguidores de UFC** y corregir los problemas que encuentren al usarla sin explicaciones.
 4. **Preparar el lanzamiento público:** dominio propio, presentación y difusión del proyecto.
 5. **Explorar la aplicación móvil**, valorando primero una web instalable (PWA).
@@ -191,13 +204,13 @@ Las claves de los proveedores se configuran en el entorno de las automatizacione
 | `assets/images/` | Recursos gráficos y fotografías. |
 | `server.py` | Servidor web y API de cuentas, seguimiento y Pick’em. |
 | `pickem.py` | Pronósticos, cierre, cálculo de puntos e historial del ranking. |
-| `scripts/` | Importadores y tareas de sincronización. |
+| `scripts/` | Importadores y tareas de sincronización; `probe-ufc-profiles.py` consulta fichas oficiales para revisiones manuales. |
 | `.github/workflows/` | Ejecución de las automatizaciones y sus comprobaciones. |
 | `tests/` | Pruebas de datos, interfaz y servidor. |
 | `docs/` | Fuentes, decisiones y guías técnicas. |
 | `render.yaml` | Configuración de alojamiento en Render. |
 
-La integración de **Google AdSense** está preparada con dos ubicaciones discretas (Inicio y final de Carteleras), pero permanece **desactivada** hasta configurar la cuenta real, los bloques, una CMP certificada y la información de privacidad. No se conecta con Google ni muestra huecos mientras no esté lista. Véase [configuración y activación de publicidad](docs/ADSENSE.md). Los cambios de código por `push` no consultan Cito; las consultas manuales/programadas mantienen su configuración.
+La integración de **Google AdSense** está preparada con dos ubicaciones discretas (Inicio y final de Carteleras), pero permanece **desactivada** hasta configurar la cuenta real, los bloques, una CMP certificada y la información de privacidad. No se conecta con Google ni muestra huecos mientras no esté lista. Véase [configuración y activación de publicidad](docs/ADSENSE.md).
 
 Para profundizar: [datos y procedencia](docs/DATOS.md), [APIs y eventos](docs/API.md), [récords y estadísticas](docs/FIGHTER_RECORDS.md), [cuentas](docs/CUENTAS.md) y [publicación](docs/PUBLICACION.md).
 
