@@ -3,6 +3,8 @@ import {confirmationIcon, confirmCopy, resetCopyConfirmation, highlightSection} 
 import {enterEventBouts, pulseSharedBout, transitionEventList, revealBoutWinner} from './event-motion.js';
 import {boutShareKey, boutShareUrl, parseBoutLink, resolveBoutLink} from './bout-links.js';
 import {renderHomeHero} from './home-hero.js';
+import {initializeClientErrors} from './client-errors.js';
+initializeClientErrors();
 import {countProfileFigures} from './profile-figures.js';
 import {enterHomeHero, tickCountdown} from './showcase-motion.js';
 import { initializePickem } from './pickem.js';

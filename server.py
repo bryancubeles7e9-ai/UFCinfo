@@ -6,6 +6,7 @@ import json
 import os
 import re
 import secrets
+import shutil
 import sqlite3
 import threading
 import time
@@ -23,6 +24,8 @@ ROOT = Path(__file__).resolve().parent
 SESSION_SECONDS = 30 * 24 * 60 * 60
 COOKIE = "octagon_session"
 MAX_BODY = 16_384
+MIN_FREE_DISK = 50 * 1024 * 1024
+CLIENT_ERROR_LIMIT = (20, 500)  # Per address and in total, per hour.
 
 
 def password_hash(password, salt):
@@ -60,6 +63,22 @@ class Database:
             db.execute("CREATE UNIQUE INDEX IF NOT EXISTS unique_username ON users(username COLLATE NOCASE)")
         os.chmod(self.path, 0o600)
 
+    def health(self):
+        checks = {}
+        try:
+            with self.connect() as db:
+                db.execute("SELECT COUNT(*) FROM users").fetchone()
+                checks["database"] = True
+                db.execute("BEGIN IMMEDIATE")  # Proves the write lock is available; rolled back below.
+                db.rollback()
+                checks["writable"] = True
+        except sqlite3.Error:
+            checks.setdefault("database", False)
+            checks.setdefault("writable", False)
+        free = shutil.disk_usage(Path(self.path).parent).free
+        checks["disk"] = free >= MIN_FREE_DISK
+        return all(checks.values()), {**checks, "freeMB": free // (1024 * 1024)}
+
     @contextmanager
     def connect(self):
         db = sqlite3.connect(self.path, timeout=10)
@@ -93,6 +112,21 @@ def make_handler(database, public_origin, fighter_ids):
     allowed_hosts = {urlsplit(origin).netloc for origin in allowed_origins}
     password_slots = threading.BoundedSemaphore(2)
     competition = Competition(database, ROOT / "assets/data/ufc-events.json")
+    client_errors = {"window": 0, "total": 0, "by_address": {}}
+    client_errors_lock = threading.Lock()
+
+    def accept_client_error(address):
+        """Hourly caps keep a broken page or a script from flooding the logs."""
+        hour = int(time.time() // 3600)
+        with client_errors_lock:
+            if client_errors["window"] != hour:
+                client_errors.update(window=hour, total=0, by_address={})
+            per_address = client_errors["by_address"].get(address, 0)
+            if per_address >= CLIENT_ERROR_LIMIT[0] or client_errors["total"] >= CLIENT_ERROR_LIMIT[1]:
+                return False
+            client_errors["by_address"][address] = per_address + 1
+            client_errors["total"] += 1
+            return True
 
     class Handler(SimpleHTTPRequestHandler):
         def __init__(self, *args, **kwargs):
@@ -181,7 +215,21 @@ def make_handler(database, public_origin, fighter_ids):
                 path = urlsplit(self.path).path
                 if self.command == "GET" and path == "/api/health":
                     return self.json_response(200, {"ok": True})
+                if self.command == "GET" and path == "/api/health/full":
+                    # Liveness stays minimal for Render; this one is for the external uptime monitor.
+                    ok, checks = database.health()
+                    return self.json_response(200 if ok else 503, {"ok": ok, **checks})
                 self.verify_origin()
+                if self.command == "POST" and path == "/api/client-errors":
+                    data = self.body()
+                    if accept_client_error(self.client_address[0]):
+                        fields = {key: str(data.get(key, ""))[:limit] for key, limit in
+                                  (("message", 300), ("source", 200), ("view", 40), ("browser", 160))}
+                        for key in ("line", "column"):
+                            fields[key] = data.get(key) if isinstance(data.get(key), int) and 0 <= data[key] < 10_000_000 else None
+                        # One JSON line per error, without cookies, IP addresses or request bodies.
+                        print("client_error " + json.dumps(fields, ensure_ascii=False), flush=True)
+                    return self.json_response(202, {"ok": True})
                 if self.command == "GET" and path == "/api/pickem/state":
                     row = self.session(False)
                     return self.json_response(200, competition.state(row["id"] if row else None))

@@ -11,7 +11,25 @@ export class AccountError extends Error {
   constructor(message, status = 0, body = {}) { super(message); this.status = status; this.body = body; }
 }
 
-export async function accountRequest(path, {method = "GET", body, csrf} = {}) {
+// A deploy restarts the server for a few seconds; Render answers 502-504 meanwhile.
+const retryDelays = [1000, 2000, 4000, 8000, 15000];
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+export async function accountRequest(path, options = {}, delays = retryDelays) {
+  for (let attempt = 0; ; attempt++) {
+    try {
+      return await requestOnce(path, options);
+    } catch (error) {
+      // Gateway errors never reached the app, so any method may retry; a lost
+      // connection is retried only for reads, which cannot apply a change twice.
+      const restarting = [502, 503, 504].includes(error.status) || (error.status === 0 && (options.method || "GET") === "GET");
+      if (!restarting || attempt >= delays.length) throw error;
+      await wait(delays[attempt]);
+    }
+  }
+}
+
+async function requestOnce(path, {method = "GET", body, csrf} = {}) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8000);
   try {

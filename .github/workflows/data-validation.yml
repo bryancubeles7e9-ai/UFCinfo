@@ -48,6 +48,7 @@ jobs:
           node tests/test-showcase-motion.mjs
           node tests/test-rumor-freshness.mjs
           node tests/test-mobile-navigation.mjs
+          node tests/test-client-reliability.mjs
           node tests/test-data-health.mjs
           node tests/test-following.mjs
           node tests/test-home-hero.mjs

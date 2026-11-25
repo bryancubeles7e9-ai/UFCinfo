@@ -26,3 +26,10 @@ Render proporciona `RENDER_EXTERNAL_URL`. El servidor usa ese origen para las co
 El servidor incluye la verificación en el HTML, sin depender de JavaScript. El mapa contiene únicamente la página de inicio: las secciones actuales con `#` no son páginas independientes. Crear páginas públicas para cada luchador y evento sigue pendiente para ampliar su presencia en búsquedas. Rumores permanece incompleta y su automatización no se activa al publicar.
 
 La indexación y la posición en búsquedas dependen de Google. Un sitemap no garantiza indexación. Documentación: https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap y https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl.
+
+## Fiabilidad en producción
+
+- **Despliegue tras las pruebas:** Render publica un commit solo cuando pasan las comprobaciones de GitHub (*Auto-Deploy: After CI Checks Pass*). Los commits de datos del bot no lanzan pruebas y se publican directamente.
+- **Reinicios por despliegue:** el servicio usa un disco, así que cada despliegue reinicia el servidor unos segundos. Las peticiones de cuentas y Pick'em se reintentan solas durante unos 30 segundos ante respuestas 502–504; una lectura también se reintenta si se pierde la conexión, pero un guardado no, para no aplicarlo dos veces.
+- **Salud:** `/api/health` solo indica que el proceso responde (lo usa Render). `/api/health/full` comprueba además que la base de datos se puede leer y escribir y que quedan al menos 50 MB libres; responde 503 si algo falla y lo vigila cron-job.org cada 15 minutos.
+- **Errores de visitantes:** los errores de los scripts propios de la web se envían a `/api/client-errors` y aparecen en los registros de Render como líneas `client_error` (mensaje, archivo, línea, sección y navegador, sin cookies ni IP). Hay un máximo de 5 por visita, 20 por dirección y 500 en total por hora.

@@ -1,4 +1,8 @@
+import contextlib
 import http.client
+import io
+import unittest.mock
+from types import SimpleNamespace
 import json
 import tempfile
 import sqlite3
@@ -122,6 +126,31 @@ class AccountAPITests(unittest.TestCase):
         for name in ["ab", "a" * 25, "with space", "new@example.test"]:
             self.assertEqual(self.request("POST", "/api/auth/register", {"username": name, "password": "testing-password-12345"})[0], 400)
         self.assertEqual(self.request("POST", "/api/auth/login", {"username": "UNIQUE_USER", "password": "testing-password-12345"})[0], 200)
+
+    def test_full_health_checks_database_writes_and_disk(self):
+        status, data, _ = self.request("GET", "/api/health/full")
+        self.assertEqual(status, 200, data)
+        self.assertTrue(data["ok"] and data["database"] and data["writable"] and data["disk"])
+        self.assertGreater(data["freeMB"], 0)
+        with unittest.mock.patch("server.shutil.disk_usage", return_value=SimpleNamespace(free=1024)):
+            status, data, _ = self.request("GET", "/api/health/full")
+        self.assertEqual(status, 503)
+        self.assertFalse(data["ok"] or data["disk"])
+
+    def test_client_errors_are_logged_briefly_and_capped(self):
+        report = {"message": "x" * 900, "source": "/assets/js/app.js", "line": 12, "column": "bad", "view": "#pickem"}
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            status, _, _ = self.request("POST", "/api/client-errors", report)
+            for _ in range(25):
+                self.request("POST", "/api/client-errors", {"message": "repeat"})
+        self.assertEqual(status, 202)
+        lines = [json.loads(line.split(" ", 1)[1]) for line in output.getvalue().splitlines() if line.startswith("client_error ")]
+        self.assertEqual(len(lines), 20, "per-address hourly cap")
+        self.assertEqual(len(lines[0]["message"]), 300)
+        self.assertIsNone(lines[0]["column"])
+        status, _, _ = self.request("POST", "/api/client-errors", report, origin="https://evil.example")
+        self.assertEqual(status, 403)
 
     def test_rate_limit(self):
         for _ in range(10):
