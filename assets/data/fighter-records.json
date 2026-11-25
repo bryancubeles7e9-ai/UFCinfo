@@ -41,8 +41,7 @@
     "ufc-333",
     "ufc-fight-night-october-31-2026",
     "ufc-fight-night-november-07-2026",
-    "ufc-fight-night-november-21-2026",
-    "ufc-334"
+    "ufc-fight-night-november-21-2026"
   ],
   "completedFighters": {
     "ufc-332": [
@@ -63,6 +62,23 @@
       "ufc-payton-talbott",
       "ufc-rafael-dos-anjos",
       "ufc-wang-cong"
+    ],
+    "ufc-334": [
+      "harrison",
+      "ufc-amanda-nunes",
+      "ufc-bilal-hasan",
+      "ufc-caio-borralho",
+      "ufc-charles-radtke",
+      "ufc-chris-duncan",
+      "ufc-ciryl-gane",
+      "ufc-drew-dober",
+      "ufc-jim-miller",
+      "ufc-josh-hokit",
+      "ufc-kevin-holland",
+      "ufc-luis-gurule",
+      "ufc-stephen-thompson",
+      "ufc-uros-medic",
+      "ufc-yousri-belgaroui"
     ]
   },
   "records": {
@@ -328,7 +344,7 @@
       "record": "20-1-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/kayla-harrison",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 3.34,
         "strikesAbsorbed": 1.37,
@@ -655,7 +671,7 @@
       "record": "37-6-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/kyoji-horiguchi",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 3.41,
         "strikesAbsorbed": 1.94,
@@ -699,7 +715,7 @@
       "record": "24-4-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/asu-almabayev",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 2.06,
         "strikesAbsorbed": 1.83,
@@ -743,7 +759,7 @@
       "record": "18-3-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/amir-albazi",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 2.41,
         "strikesAbsorbed": 3.51,
@@ -1048,7 +1064,7 @@
       "record": "26-6-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/aljamain-sterling",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 4.16,
         "strikesAbsorbed": 2.16,
@@ -1158,7 +1174,7 @@
       "record": "19-1-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/kevin-vallejos",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 5.22,
         "strikesAbsorbed": 3.85,
@@ -1568,7 +1584,7 @@
       "record": "19-2-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/caio-borralho",
-      "updatedAt": "2026-11-25T11:15:48.714305+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 3.28,
         "strikesAbsorbed": 2.54,
@@ -1742,7 +1758,7 @@
       "record": "32-7-1",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/jiri-prochazka",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 5.29,
         "strikesAbsorbed": 5.58,
@@ -1784,7 +1800,7 @@
       "record": "12-0-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/navajo-stirling",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 6.27,
         "strikesAbsorbed": 2.53,
@@ -1913,7 +1929,7 @@
       "record": "15-2-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/ciryl-gane",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 5.9,
         "strikesAbsorbed": 2.74,
@@ -1978,7 +1994,7 @@
       "record": "10-1-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/josh-hokit",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 7.88,
         "strikesAbsorbed": 7.0,
@@ -2697,7 +2713,7 @@
       "record": "23-5-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/amanda-nunes",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 4.36,
         "strikesAbsorbed": 2.55,
@@ -2719,7 +2735,7 @@
       "record": "11-4-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/yousri-belgaroui",
-      "updatedAt": "2026-11-25T11:15:48.714305+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 5.48,
         "strikesAbsorbed": 2.08,
@@ -2740,7 +2756,7 @@
       "record": "14-3-1",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/uros-medic",
-      "updatedAt": "2026-11-25T11:15:48.714305+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 4.9,
         "strikesAbsorbed": 3.44,
@@ -2762,7 +2778,7 @@
       "record": "29-15-1",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/kevin-holland",
-      "updatedAt": "2026-11-25T11:15:48.714305+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 4.21,
         "strikesAbsorbed": 3.17,
@@ -2784,7 +2800,7 @@
       "record": "10-1-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/bilal-hasan",
-      "updatedAt": "2026-11-25T11:15:48.714305+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 5.43,
         "strikesAbsorbed": 3.23,
@@ -2806,7 +2822,7 @@
       "record": "12-4-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/luis-gurule",
-      "updatedAt": "2026-11-25T11:15:48.714305+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 4.94,
         "strikesAbsorbed": 5.02,
@@ -3432,7 +3448,7 @@
       "record": "29-16-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/drew-dober",
-      "updatedAt": "2026-11-25T11:15:48.714305+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 4.4,
         "strikesAbsorbed": 4.31,
@@ -3498,7 +3514,7 @@
       "record": "25-15-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/dan-hooker",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 5.11,
         "strikesAbsorbed": 4.92,
@@ -3563,7 +3579,7 @@
       "record": "9-2-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/tallison-teixeira",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 4.09,
         "strikesAbsorbed": 2.72,
@@ -4809,7 +4825,7 @@
       "record": "18-4-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/jack-della-maddalena",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00"
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00"
     },
     "ufc-javad-mahjoub": {
       "record": "5-1-0",
@@ -6383,7 +6399,7 @@
       "record": "39-20-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/jim-miller",
-      "updatedAt": "2026-11-25T11:15:48.714305+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 2.94,
         "strikesAbsorbed": 3.46,
@@ -6427,7 +6443,7 @@
       "record": "16-3-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/chris-duncan",
-      "updatedAt": "2026-11-25T11:15:48.714305+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 4.71,
         "strikesAbsorbed": 4.36,
@@ -6449,7 +6465,7 @@
       "record": "18-9-1",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/stephen-thompson",
-      "updatedAt": "2026-11-25T11:15:48.714305+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 4.09,
         "strikesAbsorbed": 2.92,
@@ -6513,7 +6529,7 @@
       "record": "12-6-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/charles-radtke",
-      "updatedAt": "2026-11-25T11:15:48.714305+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 2.21,
         "strikesAbsorbed": 8.0,
@@ -6556,7 +6572,7 @@
       "record": "15-4-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/shamil-gaziev",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 2.51,
         "strikesAbsorbed": 4.51,
@@ -6578,7 +6594,7 @@
       "record": "13-2-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/diyar-nurgozhay",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 5.4,
         "strikesAbsorbed": 2.87,
@@ -6600,7 +6616,7 @@
       "record": "18-11-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/jared-cannonier",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 4.11,
         "strikesAbsorbed": 4.27,
@@ -6622,7 +6638,7 @@
       "record": "17-6-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/alessandro-costa",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 3.35,
         "strikesAbsorbed": 3.46,
@@ -6644,7 +6660,7 @@
       "record": "19-2-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/ikram-aliskerov",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 4.8,
         "strikesAbsorbed": 3.32,
@@ -6666,7 +6682,7 @@
       "record": "21-3-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/tahir-abdullayev",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 2.34,
         "strikesAbsorbed": 1.8,
@@ -6688,7 +6704,7 @@
       "record": "9-1-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/santiago-luna",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 6.23,
         "strikesAbsorbed": 3.25,
@@ -6710,7 +6726,7 @@
       "record": "9-3-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/dom-mar-fan",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 3.55,
         "strikesAbsorbed": 1.99,
@@ -6731,7 +6747,7 @@
       "record": "16-6-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/brian-ortega",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 3.9,
         "strikesAbsorbed": 6.62,
@@ -6753,7 +6769,7 @@
       "record": "7-2-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/aleksandre-topuria",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 3.4,
         "strikesAbsorbed": 4.87,
@@ -6775,7 +6791,7 @@
       "record": "15-7-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/nikolas-motta",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 3.54,
         "strikesAbsorbed": 5.03,
@@ -6795,7 +6811,7 @@
       "record": "8-3-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/alik-lorenz",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 5.55,
         "strikesAbsorbed": 8.09,
@@ -6817,7 +6833,7 @@
       "record": "14-4-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/shoaib-yousaf",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 4.17,
         "strikesAbsorbed": 6.78,
@@ -6839,7 +6855,7 @@
       "record": "12-3-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/john-mitchell",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 6.78,
         "strikesAbsorbed": 4.17,
@@ -6861,7 +6877,7 @@
       "record": "23-9-0",
       "source": "UFC",
       "sourceUrl": "https://www.ufc.com/athlete/jake-matthews",
-      "updatedAt": "2026-11-25T11:22:30.147212+00:00",
+      "updatedAt": "2026-11-25T11:25:04.847957+00:00",
       "info": {
         "strikesLanded": 3.24,
         "strikesAbsorbed": 2.55,
@@ -6881,7 +6897,7 @@
     }
   },
   "lastSync": {
-    "checkedAt": "2026-11-25T11:22:30.147212+00:00",
+    "checkedAt": "2026-11-25T11:25:04.847957+00:00",
     "mode": "events",
     "attempted": 40,
     "succeeded": 39,
