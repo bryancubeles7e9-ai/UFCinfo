@@ -55,7 +55,8 @@ class PostEventPipelineTests(unittest.TestCase):
             (root / 'package.json').write_text('{"type":"module"}')
             a = dict(id='a', name='A Fighter', first='A', last='Fighter', record='8-1-0', source='https://www.ufc.com/athlete/a-fighter')
             (js / 'fighter-directory-data.js').write_text('export const additionalFighters = [];\n')
-            (js / 'fighter-directory.js').write_text("import {additionalFighters} from './fighter-directory-data.js'; export const directoryFighters = [" + json.dumps(a) + ', ...additionalFighters];')
+            (js / 'fighter-directory.js').write_text("import {additionalFighters} from './fighter-directory-data.js'; export const directoryFighters = [" + json.dumps(a) + ', ...additionalFighters];'
+                                                     ' export const directoryFighterByName = name => directoryFighters.find(f => [f.name, ...(f.aliases || [])].includes(name));')
             (root / 'docs/fighter-directory-sources.json').write_text('[]')
             event_row = dict(slug='ufc-333', name='UFC 333', startsAt=START.isoformat())
             bout = dict(cardSection='Main Card', fighters=[dict(corner='red', fighterName='A Fighter'), dict(corner='blue', fighterName='New Fighter')])
