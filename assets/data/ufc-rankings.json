@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "source": "https://www.ufc.com/rankings",
-  "synchronizedAt": "2026-11-24T18:29:56.303805+00:00",
-  "published": "Tuesday, Nov. 17",
+  "synchronizedAt": "2026-11-25T10:46:57.655451+00:00",
+  "published": "Tuesday, Nov. 24",
   "categories": [
     {
       "id": "p4p-men",
@@ -64,7 +64,7 @@
       ],
       "ranks": [
         1,
-        2,
+        1,
         3,
         4,
         5,
@@ -113,7 +113,7 @@
         10,
         11,
         12,
-        13,
+        12,
         14,
         15
       ]
@@ -122,25 +122,25 @@
       "id": "featherweight",
       "champion": "Alexander Volkanovski",
       "names": [
-        "Movsar Evloev",
         "Diego Lopes",
+        "Movsar Evloev",
         "Lerone Murphy",
-        "Aljamain Sterling",
         "Jean Silva",
+        "Kevin Vallejos",
+        "Aljamain Sterling",
         "Arnold Allen",
         "Yair Rodriguez",
         "Youssef Zalal",
-        "Kevin Vallejos",
         "Steve Garcia",
         "Aaron Pico",
         "Patricio Pitbull",
-        "Brian Ortega",
+        "Pat Sabatini",
         "David Onama",
-        "Pat Sabatini"
+        "Josh Emmett"
       ],
       "ranks": [
         1,
-        2,
+        1,
         3,
         4,
         5,
@@ -208,8 +208,8 @@
         "Leon Edwards",
         "Mike Malott",
         "Kamaru Usman",
-        "Yaroslav Amosov",
         "Uroš Medić",
+        "Yaroslav Amosov",
         "Joaquin Buckley",
         "Kevin Holland",
         "Daniel Rodriguez"
@@ -246,11 +246,11 @@
         "Anthony Hernandez",
         "Israel Adesanya",
         "Christian Leroy Duncan",
-        "Abus Magomedov",
-        "Jared Cannonier",
         "Ikram Aliskerov",
+        "Abus Magomedov",
         "Bo Nickal",
-        "Shara Magomedov"
+        "Shara Magomedov",
+        "Jared Cannonier"
       ],
       "ranks": [
         1,
@@ -275,12 +275,12 @@
       "champion": "Carlos Ulberg",
       "names": [
         "Magomed Ankalaev",
+        "Navajo Stirling",
         "Jiří Procházka",
         "Alex Pereira",
         "Khalil Rountree Jr.",
-        "Navajo Stirling",
-        "Paulo Costa",
         "Dominick Reyes",
+        "Paulo Costa",
         "Bogdan Guskov",
         "Azamat Murzakanov",
         "Robert Whittaker",
@@ -356,15 +356,15 @@
         "Natalia Silva",
         "Mackenzie Dern",
         "Alexa Grasso",
+        "Amanda Nunes",
         "Manon Fiorot",
         "Tatiana Suarez",
         "Jasmine Jasudavicius",
-        "Amanda Nunes",
         "Erin Blanchfield",
         "Julianna Peña",
-        "Virna Jandiroba",
         "Rose Namajunas",
-        "Denise Gomes"
+        "Denise Gomes",
+        "Joselyne Edwards"
       ],
       "ranks": [
         1,
@@ -390,7 +390,6 @@
       "names": [
         "Zhang Weili",
         "Tatiana Suarez",
-        "Virna Jandiroba",
         "Denise Gomes",
         "Gillian Robertson",
         "Fatima Kline",
@@ -402,7 +401,8 @@
         "Jéssica Andrade",
         "Amanda Ribas",
         "Piera Rodriguez",
-        "Angela Hill"
+        "Angela Hill",
+        "Mizuki"
       ],
       "ranks": [
         1,
@@ -470,8 +470,8 @@
         "Ailin Perez",
         "Luana Santos",
         "Yana Santos",
-        "Raquel Pennington",
         "Bia Mesquita",
+        "Raquel Pennington",
         "Jacqueline Cavalcanti",
         "Karol Rosa",
         "Michelle Montague",
