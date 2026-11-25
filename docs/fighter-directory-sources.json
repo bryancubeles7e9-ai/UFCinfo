@@ -7848,5 +7848,42 @@
     "country": "Brazil",
     "countrySource": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
     "countryConsulted": "2026-11-24"
+  },
+  {
+    "id": "ufc-tagir-ulanbekov",
+    "name": "Tagir Ulanbekov",
+    "aliases": [
+      "Tagir Ulanbekov"
+    ],
+    "source": "https://www.ufc.com/athlete/tagir-ulanbekov",
+    "code": "RU",
+    "country": "Russia",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-june-21-2025",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
+  },
+  {
+    "id": "ufc-david-onama",
+    "name": "David Onama",
+    "aliases": [
+      "David Onama"
+    ],
+    "source": "https://www.ufc.com/athlete/david-onama"
+  },
+  {
+    "id": "ufc-amanda-ribas",
+    "name": "Amanda Ribas",
+    "aliases": [
+      "Amanda Ribas"
+    ],
+    "source": "https://www.ufc.com/athlete/amanda-ribas"
+  },
+  {
+    "id": "ufc-mizuki-inoue",
+    "name": "Mizuki",
+    "aliases": [
+      "Mizuki",
+      "Mizuki Inoue"
+    ],
+    "source": "https://www.ufc.com/athlete/mizuki-inoue"
   }
 ]
