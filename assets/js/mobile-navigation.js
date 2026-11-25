@@ -44,7 +44,7 @@ export function initializeMobileNavigation() {
     }
   });
   document.addEventListener("click", (event) => {
-    if (mobile.matches && !header.contains(event.target) && !event.target.closest("#mobile-tabbar-more")) setOpen(false);
+    if (mobile.matches && !header.contains(event.target) && !event.target.closest?.("#mobile-tabbar-more")) setOpen(false);
   });
   window.addEventListener("hashchange", () => setOpen(false));
   mobile.addEventListener("change", () => {
