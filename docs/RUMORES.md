@@ -127,3 +127,7 @@ Ambas pruebas usan Node.js y `scripts/group-rumor-candidates.mjs` para añadir `
 La prueba de PowerShell decodifica los bytes de respuesta como UTF-8 antes de leer el JSON. Para reprocesar el archivo ya guardado sin consultar la API: `powershell -NoProfile -ExecutionPolicy Bypass -File ".ufcinfo-data/test-twitterapi.ps1" -ReprocessExisting`. El procesador repara secuencias reversibles de acentos dañados y conserva `originalText` si cambia el texto; marca los posibles daños restantes con `encodingWarning`. Los emojis que hayan perdido bytes no se reconstruyen por conjetura. El comando reemplaza el informe privado; no publica rumores.
 
 Documentación del proveedor: https://docs.twitterapi.io/api-reference/endpoint/tweet_advanced_search
+
+## Pausa
+
+`scripts/rumor-sync.config.json` (`"enabled"`) es el interruptor. Con `false`, el workflow `rumor-sync.yml` termina sin consultar TwitterAPI.io ni fallar, sigue retirando rumores confirmados por UFC.com y el vigilante trata la falta de búsquedas como aviso. El campo `"paused": true` de `assets/data/ufc-rumor-groups.json` muestra en la web «Búsqueda de rumores en pausa»; la primera búsqueda real tras reactivar el interruptor lo elimina.

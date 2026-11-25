@@ -727,6 +727,7 @@ export const catalan = {
   "CONFIRMADO POR UFC": "CONFIRMAT PER UFC",
   "RUMOR · SIN CONFIRMAR": "RUMOR · SENSE CONFIRMAR",
   "NUEVO": "NOU",
+  "Búsqueda de rumores en pausa.": "Cerca de rumors en pausa.",
   "Datos de la fuente": "Dades de la font",
   "Accesos rápidos": "Accessos ràpids",
   "Más": "Més",

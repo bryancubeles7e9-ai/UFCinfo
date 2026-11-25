@@ -40,7 +40,9 @@ def assess(state, feeds, rumors, now, warnings=None):
     alerts = []
     warnings = warnings if warnings is not None else []
     age = hours(rumors.get('lastSearchedAt'), now)
-    if age is None or age > 3 or age < -1:
+    if rumors.get('paused') is True:
+        warnings.append('Rumores: búsqueda en pausa; se muestran las publicaciones ya recopiladas.')
+    elif age is None or age > 3 or age < -1:
         alerts.append('Rumores: última búsqueda ausente, inválida o de hace más de 3 horas.')
     for kind in monitor.JOBS:
         job = state.get('jobs', {}).get(kind, {})

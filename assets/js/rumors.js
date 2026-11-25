@@ -63,6 +63,7 @@ export function rumorCard(r, sources) {
 export function rumorSearchStatus(groupFeed) {
   const last=groupFeed.lastSearchedAt;
   const status=validDate(last) ? `Última búsqueda: ${formatDate(last)} · ${formatTime(last)}.` : 'Última búsqueda: todavía no disponible.';
+  if (groupFeed.paused === true) return `${status} Búsqueda de rumores en pausa.`;
   return `${status} Búsqueda programada cada hora en punto.`;
 }
 

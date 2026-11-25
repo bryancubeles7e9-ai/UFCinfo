@@ -25,6 +25,13 @@ class AlertTests(unittest.TestCase):
         self.rumors['lastSearchedAt'] = (self.now - timedelta(hours=4)).isoformat()
         self.assertEqual(len(self.check()), 1)
 
+    def test_paused_rumors_warn_without_alert(self):
+        self.rumors['lastSearchedAt'] = (self.now - timedelta(days=3)).isoformat()
+        self.rumors['paused'] = True
+        warnings = []
+        self.assertEqual(m.assess(self.state, self.feeds, self.rumors, self.now, warnings), [])
+        self.assertIn('en pausa', warnings[0])
+
     def test_pending_and_recovery(self):
         self.state['jobs']['records']['pendingSince'] = (self.now - timedelta(hours=49)).isoformat()
         self.feeds['records']['pendingProfileIds'] = ['a']

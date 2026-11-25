@@ -135,6 +135,8 @@ Que una tarea termine sin errores no garantiza que el proveedor ya haya publicad
 
 ## Cómo se tratan los rumores
 
+> **En pausa desde el 25 de noviembre de 2026.** La búsqueda en TwitterAPI.io está detenida y la web muestra las publicaciones ya recopiladas con el aviso «Búsqueda de rumores en pausa». La comprobación gratuita de confirmaciones en UFC.com sigue activa. Para reanudarla basta con poner `"enabled": true` en `scripts/rumor-sync.config.json` (y la clave de GitHub vigente en la tarea de cron-job.org si se vuelve a activar); la primera búsqueda correcta retira el aviso.
+
 La búsqueda revisa una ventana solapada de las últimas 24 horas para recuperar publicaciones que aparezcan tarde en el buscador. El sistema evita duplicados, agrupa referencias a un mismo posible combate y filtra contenido ajeno a UFC o que no identifica una pelea válida. También contrasta las propuestas con las carteleras oficiales disponibles para evitar presentar peleas ya anunciadas como nuevas especulaciones.
 
 Cuando otra automatización actualiza el repositorio al mismo tiempo, la publicación de rumores reintenta el guardado hasta cinco veces sin repetir la búsqueda de pago. Un conflicto que no se pueda integrar queda marcado como fallo para revisión.

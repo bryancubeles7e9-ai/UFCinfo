@@ -42,7 +42,15 @@ jobs:
           node tests/test-rumor-search-time.mjs
           node tests/test-rumor-candidate-groups.mjs
           python3 tests/test_rumor_confirmations.py
+      - name: Comprobar si la búsqueda está en pausa
+        id: state
+        # Pause by setting "enabled": false in scripts/rumor-sync.config.json; true resumes it.
+        run: |
+          enabled=$(node -p "require('./scripts/rumor-sync.config.json').enabled === true")
+          echo "enabled=$enabled" >> "$GITHUB_OUTPUT"
+          if [ "$enabled" != true ]; then echo '::notice::Búsqueda de rumores en pausa; no se consulta TwitterAPI.io.'; fi
       - name: Comprobar credenciales de búsqueda
+        if: steps.state.outputs.enabled == 'true'
         env:
           TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
         run: |
@@ -51,6 +59,7 @@ jobs:
             exit 1
           fi
       - name: Recopilar, filtrar y publicar rumores
+        if: steps.state.outputs.enabled == 'true'
         env:
           TWITTERAPI_IO_KEY: ${{ secrets.TWITTERAPI_IO_KEY }}
           GITHUB_TOKEN: ${{ github.token }}

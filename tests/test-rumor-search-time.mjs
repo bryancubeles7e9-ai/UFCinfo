@@ -37,6 +37,7 @@ try {
  assert.equal(validateGroupFeed({...nextHour.feed,lastSearchedAt:'invalid'},sources),false);
  assert.ok(rumorSearchStatus(nextHour.feed).startsWith('Última búsqueda:'));
  assert.ok(rumorSearchStatus({updatedAt:'2026-10-08T15:00:00Z'}).includes('todavía no disponible'));
+assert.ok(rumorSearchStatus({...nextHour.feed, paused:true}).endsWith('Búsqueda de rumores en pausa.'), 'paused search is shown');
  setLanguage('ca');assert.ok(translate(rumorSearchStatus({})).includes('Última cerca: encara no disponible.'));
  setLanguage('en');assert.ok(translate(rumorSearchStatus({})).includes('Last search: not yet available.'));
  setLanguage('es');

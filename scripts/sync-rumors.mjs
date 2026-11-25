@@ -112,7 +112,7 @@ export async function syncRumors({projectRoot=root,fromFile,fetchImpl=fetch,now=
     }
     const result=automaticFeed({checkedAt:now.toISOString(),candidates:state.archive},sources,previous,now,eventFeed);
     // Only successful real API requests advance the public search timestamp.
-    if (requests > 0) result.feed.lastSearchedAt=now.toISOString();
+    if (requests > 0) {result.feed.lastSearchedAt=now.toISOString();delete result.feed.paused;}
     state.lastCollection={checkedAt:now.toISOString(),windowStart:new Date(windowStart*1000).toISOString(),windowEnd:new Date(windowEnd*1000).toISOString(),requests,receivedPosts,acceptedPosts,added:result.added,skipped:result.skipped,collectionSkips,skipReasons:result.skipReasons};
     await saveState();
     if (requests > 0) result.feed.lastCollection={checkedAt:now.toISOString(),receivedPosts,added:result.added};
