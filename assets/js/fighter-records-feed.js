@@ -5,11 +5,13 @@ const statKeys = new Set(['strikesLanded', 'strikesAbsorbed', 'takedownAverage',
   'strikingDefense', 'takedownDefense', 'knockdownAverage', 'strikingAccuracy', 'takedownAccuracy',
   'koWins', 'submissionWins', 'firstRoundFinishes']);
 const percentages = new Set(['strikingDefense', 'takedownDefense', 'strikingAccuracy', 'takedownAccuracy']);
+// UFC Stats fills core statistics only when the official UFC profile omits them.
+const ufcStatsProfile = /^http:\/\/ufcstats\.com\/fighter-details\/[a-f0-9]{16}$/;
 function validStats(entry, fighter) {
   if (entry.info === undefined) return true;
   const info = entry.info;
   return info && typeof info === 'object' && !Array.isArray(info) &&
-    info.statisticsSource === fighter.source && /^\d{4}-\d{2}-\d{2}$/.test(info.statisticsConsulted) &&
+    (info.statisticsSource === fighter.source || ufcStatsProfile.test(info.statisticsSource)) && /^\d{4}-\d{2}-\d{2}$/.test(info.statisticsConsulted) &&
     ['strikesLanded', 'strikesAbsorbed', 'takedownAverage', 'submissionAverage'].every(key => Number.isFinite(info[key])) &&
     Object.entries(info).every(([key, value]) => ['statisticsSource', 'statisticsConsulted'].includes(key) ||
       (statKeys.has(key) && typeof value === 'number' && Number.isFinite(value) && value >= 0 && (!percentages.has(key) || value <= 100)));

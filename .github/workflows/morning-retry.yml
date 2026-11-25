@@ -39,7 +39,7 @@ jobs:
         if: steps.clock.outputs.due == 'true'
         with:
           ref: main
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         if: steps.clock.outputs.due == 'true'
         with:
           node-version: '22'

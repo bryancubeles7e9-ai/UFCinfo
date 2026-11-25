@@ -11,7 +11,8 @@ import subprocess
 import tempfile
 import sys
 import unicodedata
-from urllib.parse import urlparse
+from html import unescape
+from urllib.parse import quote, urlparse
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -92,24 +93,88 @@ def parse_profile(html, fighter):
     return {"record": record, "info": stats}
 
 
+UFC_STATS = "http://ufcstats.com"
+# UFC Stats labels for the same per-minute, per-15-minute and percentage figures.
+UFC_STATS_LABELS = {"strikesLanded": r"SLpM", "strikesAbsorbed": r"SApM", "strikingAccuracy": r"Str\. Acc\.",
+                    "strikingDefense": r"Str\. Def\.?", "takedownAverage": r"TD Avg\.", "takedownAccuracy": r"TD Acc\.",
+                    "takedownDefense": r"TD Def\.", "submissionAverage": r"Sub\. Avg\."}
+
+
+def read_page(url, limit=2_000_000):
+    request = Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; UFCinfo/1.0)", "Accept": "text/html"})
+    with urlopen(request, timeout=25) as response:
+        html = response.read(limit + 1)
+    if len(html) > limit:
+        raise ValueError("Source response too large")
+    return html.decode("utf-8", "replace")
+
+
+def text_of(html):
+    return " ".join(unescape(re.sub(r"<[^>]+>", " ", html)).split())
+
+
+def parse_ufc_stats(html, fighter, record):
+    """Core statistics from a UFC Stats page, accepted only for the same name and record."""
+    name = re.search(r'class="b-content__title-highlight">(.*?)</span>', html, re.S)
+    allowed = {normalize(n) for n in [fighter["name"], *fighter.get("aliases", [])]}
+    if not name or normalize(text_of(name[1])) not in allowed:
+        raise ValueError("UFC Stats identity mismatch")
+    text = text_of(html)
+    found = re.search(r"Record:\s*(\d{1,3}-\d{1,3}-\d{1,3})", text)
+    if not found or found[1] != record:
+        raise ValueError("UFC Stats record differs from UFC.com")
+    stats = {}
+    for key, label in UFC_STATS_LABELS.items():
+        value = re.search(label + r":\s*(\d+(?:\.\d+)?)\s*(%?)", text)
+        if not value or bool(value[2]) != (key in PERCENT_STATS):
+            raise ValueError("UFC Stats statistic missing: " + key)
+        stats[key] = float(value[1]) if key not in PERCENT_STATS else int(float(value[1]))
+    return stats
+
+
+def ufc_stats_url(fighter, read=read_page):
+    """Find the UFC Stats profile whose listed first and last name match the fighter."""
+    allowed = {normalize(n) for n in [fighter["name"], *fighter.get("aliases", [])]}
+    last = fighter["name"].split()[-1]
+    page = read(f"{UFC_STATS}/statistics/fighters/search?query={quote(last)}")
+    matches = set()
+    for row in re.findall(r'<tr class="b-statistics__table-row">(.*?)</tr>', page, re.S):
+        cells = [text_of(cell) for cell in re.findall(r"<td[^>]*>(.*?)</td>", row, re.S)]
+        link = re.search(r'href="(http://ufcstats\.com/fighter-details/[a-f0-9]{16})"', row)
+        if len(cells) >= 2 and link and normalize(f"{cells[0]} {cells[1]}") in allowed:
+            matches.add(link[1])
+    if len(matches) != 1:
+        raise ValueError("UFC Stats profile missing or ambiguous")
+    return matches.pop()
+
+
+def complete_from_ufc_stats(fighter, record, page, read=read_page):
+    """Fill core statistics UFC.com omits; its own figures and finishes stay first."""
+    url = ufc_stats_url(fighter, read)
+    official = {k: v for k, v in info_parser.parse_profile(page).items()
+                if k in STAT_KEYS and isinstance(v, (int, float)) and not isinstance(v, bool)}
+    return {"record": record, "info": {**parse_ufc_stats(read(url), fighter, record), **official},
+            "statisticsSource": url}
+
+
 def fetch_profile(fighter):
     url = fighter["source"]
     parsed = urlparse(url)
     if parsed.scheme != "https" or parsed.netloc != "www.ufc.com" or not parsed.path.startswith("/athlete/"):
         raise ValueError("Unexpected profile source")
-    request = Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; UFCinfo/1.0)", "Accept": "text/html"})
-    with urlopen(request, timeout=25) as response:
-        html = response.read(2_000_001)
-    if len(html) > 2_000_000:
-        raise ValueError("Official profile response too large")
-    page = html.decode("utf-8")
+    page = read_page(url)
     try:
         return parse_profile(page, fighter)
     except ValueError as error:
         if str(error) != "Official combat statistics incomplete":
             raise
         # UFC can publish the record before all statistics, especially on debuts.
-        return {"record": parse_record(page, fighter), "info": None}
+        record = parse_record(page, fighter)
+        try:
+            return complete_from_ufc_stats(fighter, record, page)
+        except (OSError, ValueError) as fallback:
+            print(f"::notice::UFC Stats fallback unavailable for {fighter['id']}: {fallback}", file=sys.stderr)
+            return {"record": record, "info": None}
 
 
 def directory():
@@ -175,7 +240,8 @@ def store_profile(state, fighter, profile, now):
         "record": profile["record"], "source": "UFC", "sourceUrl": fighter["source"],
         "updatedAt": now.isoformat(),
         **({"info": {**previous.get("info", {}), **profile["info"],
-                 "statisticsSource": fighter["source"], "statisticsConsulted": now.date().isoformat()}}
+                 "statisticsSource": profile.get("statisticsSource", fighter["source"]),
+                 "statisticsConsulted": now.date().isoformat()}}
            if profile["info"] is not None else ({"info": previous["info"]} if "info" in previous else {})),
     }
     save(state)

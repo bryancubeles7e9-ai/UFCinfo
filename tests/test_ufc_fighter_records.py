@@ -63,6 +63,42 @@ class OfficialRecordsTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             module.parse_profile(page + '<title>Striking accuracy 101%</title>', {"name": "A Fighter"})
 
+    def test_ufc_stats_completes_missing_core_statistics(self):
+        fighter = {"id": "ufc-a-fighter", "name": "A Fighter", "aliases": []}
+        url = "http://ufcstats.com/fighter-details/0123456789abcdef"
+        search = ('<tr class="b-statistics__table-row"><td><a href="' + url + '">A</a></td><td><a href="' + url +
+                  '">Fighter</a></td></tr><tr class="b-statistics__table-row"><td><a href="http://ufcstats.com/fighter-details/'
+                  'fedcba9876543210">B</a></td><td>Fighter</td></tr>')
+        details = ('<span class="b-content__title-highlight"> A Fighter </span><span class="b-content__title-record">Record: 11-2-0</span>'
+                   '<li><i>SLpM:</i> 6.22</li><li><i>Str. Acc.:</i> 50%</li><li><i>SApM:</i> 4.27</li><li><i>Str. Def:</i> 61%</li>'
+                   '<li><i>TD Avg.:</i> 0.47</li><li><i>TD Acc.:</i> 40%</li><li><i>TD Def.:</i> 69%</li><li><i>Sub. Avg.:</i> 0.2</li>')
+        pages = {module.UFC_STATS + "/statistics/fighters/search?query=Fighter": search, url: details}
+        official = '<div class="c-record__promoted-figure">12</div><div class="c-record__promoted-text">Wins by Knockout</div>'
+        profile = module.complete_from_ufc_stats(fighter, "11-2-0", official, read=pages.__getitem__)
+        self.assertEqual(profile["statisticsSource"], url)
+        self.assertEqual(profile["info"]["strikesLanded"], 6.22)
+        self.assertEqual(profile["info"]["strikingDefense"], 61)
+        self.assertEqual(profile["info"]["submissionAverage"], 0.2)
+        for key in module.CORE_STATS:
+            self.assertIn(key, profile["info"])
+        # A different record or another fighter's page is never used.
+        with self.assertRaises(ValueError):
+            module.complete_from_ufc_stats(fighter, "12-2-0", official, read=pages.__getitem__)
+        with self.assertRaises(ValueError):
+            module.parse_ufc_stats(details.replace("A Fighter", "Other Person"), fighter, "11-2-0")
+        with self.assertRaises(ValueError):
+            module.parse_ufc_stats(details.replace("<li><i>SApM:</i> 4.27</li>", ""), fighter, "11-2-0")
+
+    def test_ufc_stats_source_is_saved_with_statistics(self):
+        state = {"records": {}}
+        fighter = {"id": "a", "source": "https://www.ufc.com/athlete/a", "record": "11-2-0"}
+        info = {"strikesLanded": 6.22, "strikesAbsorbed": 4.27, "takedownAverage": 0.47, "submissionAverage": 0.2}
+        with patch.object(module, "save"):
+            module.store_profile(state, fighter, {"record": "11-2-0", "info": info,
+                                                  "statisticsSource": "http://ufcstats.com/fighter-details/0123456789abcdef"},
+                                 datetime(2026, 11, 25, tzinfo=timezone.utc))
+        self.assertEqual(state["records"]["a"]["info"]["statisticsSource"], "http://ufcstats.com/fighter-details/0123456789abcdef")
+
     def test_identity_and_record_validation(self):
         page = '<h1 class="hero-profile__name">A Fighter</h1><p class="hero-profile__division-body">11-2-0 (W-L-D)</p>'
         self.assertEqual(module.parse_record(page, {"name": "A Fighter"}), "11-2-0")
