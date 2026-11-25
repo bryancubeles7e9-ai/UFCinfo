@@ -147,7 +147,9 @@ def ufc_stats_url(fighter, read=read_page):
     matches = {profile for profile, labels in names.items()
                if normalize(" ".join(labels[:2])) in allowed or any(normalize(label) in allowed for label in labels)}
     if len(matches) != 1:
-        raise ValueError(f"UFC Stats profile missing or ambiguous ({len(names)} profiles in search, {len(matches)} matching)")
+        title = re.search(r"<title[^>]*>(.*?)</title>", page, re.S | re.I)
+        raise ValueError(f"UFC Stats profile missing or ambiguous ({len(names)} profiles in search, {len(matches)} matching; "
+                         f"page {len(page)} chars, title {text_of(title[1])[:60] if title else 'none'!r})")
     return f"{UFC_STATS}/fighter-details/{matches.pop()}"
 
 
