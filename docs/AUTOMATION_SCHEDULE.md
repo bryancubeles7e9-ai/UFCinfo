@@ -5,7 +5,9 @@ All local times use Europe/Madrid (including daylight saving changes).
 | Job | Schedule | Trigger |
 | --- | --- | --- |
 | Events, results, rankings, fighter records and statistics | 08:00 and 14:00 | cron-job.org (8620496, 8625854) and GitHub schedule backup, `ufc-events.yml` |
-| Conditional post-event retry | 10:07, 11:07, 12:07 and 13:07 (allowed window 10:00–14:00) | GitHub Actions, `morning-retry.yml`, plus completed rumor runs |
+| Conditional post-event retry | 10:10 and 12:10 (allowed window 10:00–14:00) | cron-job.org (8942435), GitHub schedule backup at 10:07–13:07 and completed rumor runs, `morning-retry.yml` |
+| Data health check | 09:45 and 15:45, plus every 3 hours at minute 43 | cron-job.org (8942437) and GitHub schedule backup, `data-health.yml` |
+| Site uptime check | Every 15 minutes | cron-job.org (8942439) requests `/api/health` and emails on failure |
 | Rumors and official confirmations | Every hour, minute 0 (paused while TwitterAPI.io is inactive) | cron-job.org (8616997, disabled) and GitHub backup, `rumor-sync.yml` |
 
 cron-job.org is the primary trigger for the events workflow: GitHub's native
@@ -14,8 +16,12 @@ schedule often fires hours late or not at all on this repository (in November
 `workflow_dispatch` endpoint with a fine-grained GitHub token limited to this
 repository and the Actions read/write permission. When that token expires, the
 jobs fail with HTTP 401: create a new one with the same scope and replace the
-`Authorization: Bearer …` header in both jobs. The native schedule stays as a
+`Authorization: Bearer …` header in every dispatch job. The native schedule stays as a
 backup; the workflow's concurrency group prevents overlapping runs.
+
+Every cron-job.org job emails its owner on failure, so an expired token (HTTP
+401) or a site outage is noticed the same day. The dispatch jobs share the same
+token; renew it in jobs 8620496, 8625854, 8942435 and 8942437.
 
 The legacy fighter dispatch (8620521) was disabled on 25 November 2026: the
 workflow skipped it without `full_refresh`, and records are already refreshed in
