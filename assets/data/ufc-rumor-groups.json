@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-25T11:22:18.754Z",
+  "updatedAt": "2026-11-25T22:50:02.579124+00:00",
   "lastSearchedAt": "2026-11-25T11:22:18.754Z",
   "paused": true,
   "groups": [
@@ -227,38 +227,6 @@
           "language": "es",
           "attributedAccounts": [],
           "attribution": "IG Steve Garcia"
-        }
-      ],
-      "official": null
-    },
-    {
-      "id": "2117645576397357499",
-      "fighterNames": [
-        "Pat Sabatini",
-        "Vinicius Oliveira"
-      ],
-      "matchupKey": "patsabatini|viniciusoliveira|2027-01-23",
-      "eventDateHint": "2027-01-23",
-      "rematch": false,
-      "dateYearInferred": true,
-      "summary": {
-        "es": "Pelunaton comenta un posible cruce entre Pat Sabatini y Vinicius Oliveira; la publicación menciona el 23 de enero. Runrún de la comunidad; no constituye confirmación oficial.",
-        "en": "Pelunaton discusses a possible matchup between Pat Sabatini and Vinicius Oliveira; the post mentions January 23. Community discussion; this is not official confirmation."
-      },
-      "processing": "automatic",
-      "generatedAt": "2026-11-03T16:01:28.485Z",
-      "reviewedAt": null,
-      "publishedAt": "2026-11-03T15:50:24.000Z",
-      "containsSpoilers": true,
-      "reports": [
-        {
-          "id": "2117645576397357499",
-          "sourceId": "pelunaton",
-          "postUrl": "https://x.com/pelunaton/status/2117645576397357499",
-          "publishedAt": "2026-11-03T15:50:24.000Z",
-          "language": "es",
-          "attributedAccounts": [],
-          "attribution": "se desconoce (tal vez podría ser en el Apex"
         }
       ],
       "official": null
