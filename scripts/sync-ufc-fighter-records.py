@@ -133,19 +133,22 @@ def parse_ufc_stats(html, fighter, record):
 
 
 def ufc_stats_url(fighter, read=read_page):
-    """Find the UFC Stats profile whose listed first and last name match the fighter."""
+    """Find the UFC Stats profile whose first and last name links match the fighter.
+
+    Each search row links the first name, last name and nickname to the same
+    profile, so links are grouped by profile instead of relying on table markup.
+    """
     allowed = {normalize(n) for n in [fighter["name"], *fighter.get("aliases", [])]}
     last = fighter["name"].split()[-1]
     page = read(f"{UFC_STATS}/statistics/fighters/search?query={quote(last)}")
-    matches = set()
-    for row in re.findall(r'<tr class="b-statistics__table-row">(.*?)</tr>', page, re.S):
-        cells = [text_of(cell) for cell in re.findall(r"<td[^>]*>(.*?)</td>", row, re.S)]
-        link = re.search(r'href="(http://ufcstats\.com/fighter-details/[a-f0-9]{16})"', row)
-        if len(cells) >= 2 and link and normalize(f"{cells[0]} {cells[1]}") in allowed:
-            matches.add(link[1])
+    names = {}
+    for profile, label in re.findall(r'<a[^>]+href="https?://(?:www\.)?ufcstats\.com/fighter-details/([a-f0-9]{16})"[^>]*>(.*?)</a>', page, re.S):
+        names.setdefault(profile, []).append(text_of(label))
+    matches = {profile for profile, labels in names.items()
+               if normalize(" ".join(labels[:2])) in allowed or any(normalize(label) in allowed for label in labels)}
     if len(matches) != 1:
-        raise ValueError("UFC Stats profile missing or ambiguous")
-    return matches.pop()
+        raise ValueError(f"UFC Stats profile missing or ambiguous ({len(names)} profiles in search, {len(matches)} matching)")
+    return f"{UFC_STATS}/fighter-details/{matches.pop()}"
 
 
 def complete_from_ufc_stats(fighter, record, page, read=read_page):
