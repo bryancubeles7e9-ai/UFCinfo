@@ -4,19 +4,25 @@ All local times use Europe/Madrid (including daylight saving changes).
 
 | Job | Schedule | Trigger |
 | --- | --- | --- |
-| Events, results, rankings, fighter records and statistics | 08:00 and 14:00 | GitHub Actions, `ufc-events.yml` |
+| Events, results, rankings, fighter records and statistics | 08:00 and 14:00 | cron-job.org (8620496, 8625854) and GitHub schedule backup, `ufc-events.yml` |
 | Conditional post-event retry | 10:07, 11:07, 12:07 and 13:07 (allowed window 10:00–14:00) | GitHub Actions, `morning-retry.yml`, plus completed rumor runs |
-| Rumors and official confirmations | Every hour, minute 0 | cron-job.org (8616997) and GitHub backup, `rumor-sync.yml` |
-| Legacy fighter dispatch (job skipped without full_refresh) | 11:47 daily | cron-job.org (8620521), `fighter-records.yml` |
+| Rumors and official confirmations | Every hour, minute 0 (paused while TwitterAPI.io is inactive) | cron-job.org (8616997, disabled) and GitHub backup, `rumor-sync.yml` |
 
-The events schedule runs on the default branch. It reads the public UFC calendar
-and the official event pages, uses no paid API and does not need a dispatch token.
-Legacy cron-job.org events schedules (8620496 and 8625854) can be switched off
-if still enabled. Manual and configured push triggers remain. GitHub may delay
-scheduled runs; check the actual run and the saved verification timestamps. The health
-check warns if Actions has no scheduled run recorded since the latest Madrid
-slot after a 90-minute grace period. It reports queued runs, failed attempts
-and partial data separately; a push or manual run does not prove the schedule.
+cron-job.org is the primary trigger for the events workflow: GitHub's native
+schedule often fires hours late or not at all on this repository (in November
+2026 the 08:00 slot never ran). Its jobs 8620496 and 8625854 call the
+`workflow_dispatch` endpoint with a fine-grained GitHub token limited to this
+repository and the Actions read/write permission. When that token expires, the
+jobs fail with HTTP 401: create a new one with the same scope and replace the
+`Authorization: Bearer …` header in both jobs. The native schedule stays as a
+backup; the workflow's concurrency group prevents overlapping runs.
+
+The legacy fighter dispatch (8620521) was disabled on 25 November 2026: the
+workflow skipped it without `full_refresh`, and records are already refreshed in
+the events workflow. Manual and configured push triggers remain. The health
+check warns if Actions has no scheduled or dispatched run recorded since the
+latest Madrid slot after a 90-minute grace period. It reports queued runs,
+failed attempts and partial data separately; a push run does not prove the schedule.
 The main sync publishes every source together in one commit, including the
 recorded status of any failed source. A source failure does not block the other
 sync stages; it is reported as a workflow failure after publishing the valid data.

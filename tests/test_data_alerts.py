@@ -88,6 +88,8 @@ class AlertTests(unittest.TestCase):
         self.assertIn('no terminó correctamente', m.schedule_warning([run], now))
         run.update(conclusion='success')
         self.assertIsNone(m.schedule_warning([run], now))
+        run.update(event='workflow_dispatch')  # cron-job.org dispatch fills the slot too.
+        self.assertIsNone(m.schedule_warning([run], now))
 
     def test_schedule_grace_and_madrid_summer_time(self):
         run = {'head_branch':'main', 'created_at':'2026-07-01T12:01:00Z',

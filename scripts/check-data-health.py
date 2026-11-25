@@ -96,15 +96,17 @@ def repeated_failures(runs):
 def schedule_warning(runs, now):
     """Check whether Actions registered the latest due Madrid slot.
 
-    A manual/push run can update the site without proving the scheduler worked.
-    Run history tells us when GitHub registered a run, not which slot triggered it.
+    cron-job.org dispatches the slots (workflow_dispatch) and GitHub's own schedule
+    is a backup, so either event counts. A push run updates the site without proving
+    that a scheduler worked. Run history tells us when GitHub registered a run, not
+    which slot triggered it.
     """
     local = now.astimezone(ZoneInfo('Europe/Madrid'))
     slots = [day.replace(hour=hour, minute=0, second=0, microsecond=0)
              for day in (local - timedelta(days=1), local) for hour in (8, 14)]
     due = max(slot for slot in slots if slot + timedelta(minutes=90) <= local)
     due_age = (now - due.astimezone(timezone.utc)).total_seconds() / 3600
-    active = [r for r in runs if r.get('head_branch') == 'main' and r.get('event') == 'schedule'
+    active = [r for r in runs if r.get('head_branch') == 'main' and r.get('event') in ('schedule', 'workflow_dispatch')
               and (age := hours(r.get('created_at'), now)) is not None
               and 0 <= age <= due_age]
     label = due.strftime('%d/%m a las %H:%M') + ' (Madrid)'
