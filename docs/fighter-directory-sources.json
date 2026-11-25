@@ -7885,5 +7885,77 @@
       "Mizuki Inoue"
     ],
     "source": "https://www.ufc.com/athlete/mizuki-inoue"
+  },
+  {
+    "id": "ufc-trent-miller",
+    "name": "Trent Miller",
+    "aliases": [
+      "Trent Miller"
+    ],
+    "source": "https://www.ufc.com/athlete/trent-miller",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
+    "countryConsulted": "2026-11-25"
+  },
+  {
+    "id": "ufc-ramon-taveras",
+    "name": "Ramon Taveras",
+    "aliases": [
+      "Ramon Taveras"
+    ],
+    "source": "https://www.ufc.com/athlete/ramon-taveras",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
+    "countryConsulted": "2026-11-25"
+  },
+  {
+    "id": "ufc-roman-puga",
+    "name": "Roman Puga",
+    "aliases": [
+      "Roman Puga"
+    ],
+    "source": "https://www.ufc.com/athlete/roman-puga",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
+    "countryConsulted": "2026-11-25"
+  },
+  {
+    "id": "ufc-ramiro-jimenez",
+    "name": "Ramiro Jimenez",
+    "aliases": [
+      "Ramiro Jimenez"
+    ],
+    "source": "https://www.ufc.com/athlete/ramiro-jimenez",
+    "code": "MX",
+    "country": "Mexico",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
+    "countryConsulted": "2026-11-25"
+  },
+  {
+    "id": "ufc-christopher-alvidrez",
+    "name": "Christopher Alvidrez",
+    "aliases": [
+      "Christopher Alvidrez"
+    ],
+    "source": "https://www.ufc.com/athlete/christopher-alvidrez",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
+    "countryConsulted": "2026-11-25"
+  },
+  {
+    "id": "ufc-smilla-sundell",
+    "name": "Smilla Sundell",
+    "aliases": [
+      "Smilla Sundell"
+    ],
+    "source": "https://www.ufc.com/athlete/smilla-sundell",
+    "code": "SE",
+    "country": "Sweden",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
+    "countryConsulted": "2026-11-25"
   }
 ]
