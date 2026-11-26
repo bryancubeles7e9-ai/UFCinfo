@@ -1,0 +1,62 @@
+name: Copia de seguridad de cuentas y Pick'em
+on:
+  # cron-job.org dispatches it weekly; GitHub's schedule is a backup.
+  schedule:
+    - cron: '23 3 * * 0'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ufcinfo-backup
+  cancel-in-progress: false
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Comprobar las claves
+        env:
+          TOKEN: ${{ secrets.UFCINFO_BACKUP_TOKEN }}
+          PASSPHRASE: ${{ secrets.UFCINFO_BACKUP_PASSPHRASE }}
+        run: |
+          if [ ${#TOKEN} -lt 32 ] || [ ${#PASSPHRASE} -lt 20 ]; then
+            echo '::error::Faltan UFCINFO_BACKUP_TOKEN (32+ caracteres) o UFCINFO_BACKUP_PASSPHRASE (20+) en los secretos de GitHub.'
+            exit 1
+          fi
+      - name: Descargar la copia desde la web
+        env:
+          TOKEN: ${{ secrets.UFCINFO_BACKUP_TOKEN }}
+        # Retries cover a deploy restarting the server at that moment.
+        run: |
+          curl -fsS --retry 5 --retry-delay 15 --retry-all-errors --max-time 60 \
+            -H "Authorization: Bearer $TOKEN" -o accounts.sqlite3 \
+            https://ufcinfo.onrender.com/api/admin/backup
+      - name: Verificar la copia
+        run: |
+          python3 - <<'EOF'
+          import sqlite3
+          db = sqlite3.connect('accounts.sqlite3')
+          assert db.execute('PRAGMA integrity_check').fetchone()[0] == 'ok', 'Copia dañada'
+          tables = {row[0] for row in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+          assert {'users', 'sessions', 'pickem_entries'} <= tables, f'Faltan tablas: {tables}'
+          users = db.execute('SELECT COUNT(*) FROM users').fetchone()[0]
+          picks = db.execute('SELECT COUNT(*) FROM pickem_entries').fetchone()[0]
+          print(f'Copia verificada: {users} cuentas, {picks} pronósticos guardados.')
+          EOF
+      - name: Cifrar y comprobar que se puede restaurar
+        env:
+          PASSPHRASE: ${{ secrets.UFCINFO_BACKUP_PASSPHRASE }}
+        run: |
+          name="ufcinfo-$(date -u +%Y-%m-%d).sqlite3.enc"
+          openssl enc -aes-256-cbc -pbkdf2 -iter 600000 -salt -pass env:PASSPHRASE -in accounts.sqlite3 -out "$name"
+          openssl enc -d -aes-256-cbc -pbkdf2 -iter 600000 -pass env:PASSPHRASE -in "$name" -out restored.sqlite3
+          cmp accounts.sqlite3 restored.sqlite3
+          rm accounts.sqlite3 restored.sqlite3
+          echo "BACKUP_FILE=$name" >> "$GITHUB_ENV"
+      - name: Guardar la copia cifrada durante 90 días
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ env.BACKUP_FILE }}
+          path: ${{ env.BACKUP_FILE }}
+          retention-days: 90
+          if-no-files-found: error

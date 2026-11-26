@@ -7,6 +7,7 @@ import os
 import re
 import secrets
 import shutil
+import tempfile
 import sqlite3
 import threading
 import time
@@ -78,6 +79,17 @@ class Database:
         free = shutil.disk_usage(Path(self.path).parent).free
         checks["disk"] = free >= MIN_FREE_DISK
         return all(checks.values()), {**checks, "freeMB": free // (1024 * 1024)}
+
+    def backup_bytes(self):
+        """A consistent copy of the live database, taken without stopping the site."""
+        with tempfile.TemporaryDirectory() as directory:
+            target = Path(directory) / "backup.sqlite3"
+            source, copy = sqlite3.connect(self.path, timeout=10), sqlite3.connect(target)
+            try:
+                source.backup(copy)
+            finally:
+                copy.close(); source.close()
+            return target.read_bytes()
 
     @contextmanager
     def connect(self):
@@ -219,6 +231,19 @@ def make_handler(database, public_origin, fighter_ids):
                     # Liveness stays minimal for Render; this one is for the external uptime monitor.
                     ok, checks = database.health()
                     return self.json_response(200 if ok else 503, {"ok": ok, **checks})
+                if self.command == "GET" and path == "/api/admin/backup":
+                    # Only for the backup workflow; disabled unless the server has a token.
+                    expected = os.environ.get("OCTAGON_BACKUP_TOKEN", "")
+                    supplied = self.headers.get("Authorization", "").removeprefix("Bearer ")
+                    if len(expected) < 32 or not hmac.compare_digest(supplied.encode(), expected.encode()):
+                        raise APIError(404, "Ruta no disponible.")
+                    payload = database.backup_bytes()
+                    self.send_response(200)
+                    self.send_header("Content-Type", "application/vnd.sqlite3")
+                    self.send_header("Cache-Control", "no-store")
+                    self.send_header("Content-Length", str(len(payload)))
+                    self.end_headers()
+                    return self.wfile.write(payload)
                 self.verify_origin()
                 if self.command == "POST" and path == "/api/client-errors":
                     data = self.body()

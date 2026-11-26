@@ -152,6 +152,28 @@ class AccountAPITests(unittest.TestCase):
         status, _, _ = self.request("POST", "/api/client-errors", report, origin="https://evil.example")
         self.assertEqual(status, 403)
 
+    def test_backup_requires_server_token_and_returns_a_working_copy(self):
+        self.register("backupuser")
+        status, _, _ = self.request("GET", "/api/admin/backup")
+        self.assertEqual(status, 404, "disabled without a configured token")
+        token = "t" * 40
+        with unittest.mock.patch.dict("os.environ", {"OCTAGON_BACKUP_TOKEN": token}):
+            conn = http.client.HTTPConnection("127.0.0.1", self.port, timeout=10)
+            conn.request("GET", "/api/admin/backup", headers={"Authorization": "Bearer wrong"})
+            self.assertEqual(conn.getresponse().status, 404)
+            conn.close()
+            conn = http.client.HTTPConnection("127.0.0.1", self.port, timeout=10)
+            conn.request("GET", "/api/admin/backup", headers={"Authorization": "Bearer " + token})
+            response = conn.getresponse()
+            body = response.read()
+            conn.close()
+        self.assertEqual(response.status, 200)
+        copy = Path(self.directory.name) / "restored.sqlite3"
+        copy.write_bytes(body)
+        with sqlite3.connect(copy) as db:
+            self.assertEqual(db.execute("PRAGMA integrity_check").fetchone()[0], "ok")
+            self.assertEqual(db.execute("SELECT COUNT(*) FROM users WHERE username='backupuser'").fetchone()[0], 1)
+
     def test_rate_limit(self):
         for _ in range(10):
             self.database.rate_limit("isolated-test-address", "limited")

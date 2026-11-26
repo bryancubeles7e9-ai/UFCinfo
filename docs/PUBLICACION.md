@@ -33,3 +33,22 @@ La indexación y la posición en búsquedas dependen de Google. Un sitemap no ga
 - **Reinicios por despliegue:** el servicio usa un disco, así que cada despliegue reinicia el servidor unos segundos. Las peticiones de cuentas y Pick'em se reintentan solas durante unos 30 segundos ante respuestas 502–504; una lectura también se reintenta si se pierde la conexión, pero un guardado no, para no aplicarlo dos veces.
 - **Salud:** `/api/health` solo indica que el proceso responde (lo usa Render). `/api/health/full` comprueba además que la base de datos se puede leer y escribir y que quedan al menos 50 MB libres; responde 503 si algo falla y lo vigila cron-job.org cada 15 minutos.
 - **Errores de visitantes:** los errores de los scripts propios de la web se envían a `/api/client-errors` y aparecen en los registros de Render como líneas `client_error` (mensaje, archivo, línea, sección y navegador, sin cookies ni IP). Hay un máximo de 5 por visita, 20 por dirección y 500 en total por hora.
+
+## Copias de seguridad de cuentas y Pick’em
+
+El workflow **Copia de seguridad de cuentas y Pick'em** (`backup.yml`) se ejecuta cada semana. Descarga una copia coherente de la base de datos desde `/api/admin/backup` sin detener la web, comprueba su integridad y las tablas principales, la cifra con AES-256, verifica que se puede descifrar y la guarda como artefacto privado de GitHub Actions durante 90 días.
+
+Necesita tres valores que solo conoce el propietario (nunca se escriben en el código ni en el chat):
+
+| Dónde | Nombre | Valor |
+| --- | --- | --- |
+| Render → servicio `ufcinfo` → *Environment* | `OCTAGON_BACKUP_TOKEN` | Clave aleatoria de 32 caracteres o más. Sin ella, la ruta de copia responde 404. |
+| GitHub → *Settings* → *Secrets and variables* → *Actions* | `UFCINFO_BACKUP_TOKEN` | La misma clave que en Render. |
+| GitHub → *Settings* → *Secrets and variables* → *Actions* | `UFCINFO_BACKUP_PASSPHRASE` | Contraseña de cifrado de 20 caracteres o más. **Guárdala también en un gestor de contraseñas: sin ella las copias no se pueden abrir.** |
+
+### Restaurar una copia
+
+1. En GitHub → *Actions* → *Copia de seguridad de cuentas y Pick'em*, abre la ejecución deseada y descarga el artefacto `ufcinfo-AAAA-MM-DD.sqlite3.enc`.
+2. Descífralo en tu ordenador: `openssl enc -d -aes-256-cbc -pbkdf2 -iter 600000 -in ufcinfo-AAAA-MM-DD.sqlite3.enc -out accounts.sqlite3` (pide la contraseña de cifrado).
+3. Comprueba la copia: `sqlite3 accounts.sqlite3 "PRAGMA integrity_check;"` debe responder `ok`.
+4. Activa el modo de mantenimiento en Render, sustituye `/var/data/accounts.sqlite3` por la copia (desde la *Shell* del servicio) y vuelve a desactivarlo.
