@@ -395,3 +395,7 @@ body.light .outline-button.danger-button{color:#b02a12}
 .nav-paused-tag{display:inline-block;margin-left:4px;padding:1px 6px;border-radius:999px;background:#e0a43a26;color:#e7b453;font-size:10px;font-weight:700;letter-spacing:.04em;vertical-align:middle}
 body.light .rumor-paused-notice{border-color:#b7791f88;border-left-color:#b7791f;background:#b7791f12}
 body.light .rumor-paused-notice svg,body.light .nav-paused-tag{color:#8a5a12}
+/* Offline: the app opened from the copy saved on the device. */
+.offline-notice{position:fixed;z-index:79;left:50%;top:12px;transform:translateX(-50%);display:flex;align-items:center;gap:10px;width:max-content;max-width:calc(100vw - 32px);padding:11px 16px;border-radius:12px;background:var(--surface);border:1px solid #e0a43a;color:var(--ink);box-shadow:0 12px 30px -12px rgba(0,0,0,.6);font-size:14px;line-height:1.4}
+.offline-notice svg{flex:0 0 auto;color:#e0a43a}
+@media(max-width:700px){.offline-notice{top:auto;bottom:calc(80px + env(safe-area-inset-bottom))}}

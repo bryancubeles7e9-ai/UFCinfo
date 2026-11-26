@@ -71,6 +71,16 @@ Al compartir la portada (o cualquier página sin foto propia), la vista previa m
 
 Los iconos y la tarjeta se generan con las tipografías de la web: `node scripts/build-brand-images.mjs` (requiere Playwright). Estas imágenes no se convierten a WebP, porque el manifiesto y las vistas previas declaran su formato.
 
+## Uso sin conexión
+
+El service worker (`assets/sw.js`) guarda en el dispositivo una copia de la web y de los últimos datos: en la primera visita, la interfaz, los estilos, las tipografías, el paquete de código, los archivos de datos y los JSON de veladas, rankings, récords y rumores (lista `PRECACHE`), y después cada archivo y foto de la web que se va consultando (hasta 250 fotos).
+
+- **Con conexión** todo se pide a la red como siempre, así que los datos están al día; la copia solo se actualiza.
+- **Sin conexión** la web (o la aplicación instalada) se abre desde esa copia: portada, carteleras, fichas, rankings y Fight Lab, incluidos los enlaces `/luchadores/...` y `/carteleras/...`. Un aviso indica que se están viendo los últimos datos guardados. Cuentas, Pick’em y rumores nuevos necesitan conexión.
+- **Durante un despliegue** (Render responde 502/503/504) se sigue mostrando la pantalla «Estamos actualizando la web», que se recarga sola al volver el servidor.
+
+`tests/test-offline.mjs` comprueba que existen todos los archivos de `PRECACHE` y que se guardan todos los estilos, tipografías y módulos que pide la portada: si se añade o renombra uno, hay que añadirlo a la lista.
+
 ## Paquete de la interfaz
 
 El navegador carga `assets/js/app.bundle.js`: todo el código de la interfaz en un solo archivo minificado, en lugar de una cadena de unos 45 módulos. Los archivos de datos (`fighter-directory-data.js`, `official-events.js` y los demás `*-data.js`) quedan fuera del paquete y se descargan en paralelo, así que las actualizaciones automáticas de datos no necesitan regenerarlo.

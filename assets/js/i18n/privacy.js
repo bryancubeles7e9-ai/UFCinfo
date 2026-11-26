@@ -30,7 +30,8 @@ export const privacyCopy = {
   "Lo que ves son publicaciones recogidas hasta el": "What you see are posts collected up to",
   "no aparecerán rumores nuevos hasta que se reactive.": "no new rumours will appear until it is resumed.",
   "No aparecerán rumores nuevos hasta que se reactive.": "No new rumours will appear until it is resumed.",
-  "Para lo que ya es oficial, consulta": "For what is already official, see"
+  "Para lo que ya es oficial, consulta": "For what is already official, see",
+  "Sin conexión. Estás viendo los últimos datos guardados en este dispositivo; pueden no estar al día.": "Offline. You are seeing the latest data saved on this device; it may be out of date."
  },
  "ca": {
   "TUS DATOS": "LES TEVES DADES",
@@ -62,6 +63,7 @@ export const privacyCopy = {
   "Lo que ves son publicaciones recogidas hasta el": "El que veus són publicacions recollides fins al",
   "no aparecerán rumores nuevos hasta que se reactive.": "no apareixeran rumors nous fins que es reactivi.",
   "No aparecerán rumores nuevos hasta que se reactive.": "No apareixeran rumors nous fins que es reactivi.",
-  "Para lo que ya es oficial, consulta": "Per al que ja és oficial, consulta"
+  "Para lo que ya es oficial, consulta": "Per al que ja és oficial, consulta",
+  "Sin conexión. Estás viendo los últimos datos guardados en este dispositivo; pueden no estar al día.": "Sense connexió. Estàs veient les últimes dades desades en aquest dispositiu; poden no estar al dia."
  }
 };

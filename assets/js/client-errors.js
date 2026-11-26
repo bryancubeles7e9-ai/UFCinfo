@@ -47,7 +47,8 @@ export function initializeClientErrors() {
 export function initializeRestartNotice() {
   let notice = null;
   document.addEventListener('ufcinfo:server-restarting', () => {
-    if (notice) return;
+    // Without a connection the server is not restarting: the offline notice explains it instead.
+    if (notice || navigator.onLine === false) return;
     notice = document.createElement('div');
     notice.className = 'server-restart-notice';
     notice.setAttribute('role', 'status');
@@ -55,4 +56,29 @@ export function initializeRestartNotice() {
     document.body.append(notice);
   });
   document.addEventListener('ufcinfo:server-back', () => { notice?.remove(); notice = null; });
+  window.addEventListener('offline', () => { notice?.remove(); notice = null; });
+}
+
+// Without a connection the installed app opens from the copy saved by the service worker:
+// tell the visitor that what they see is the last data downloaded on this device.
+export function offlineNoticeText() {
+  return 'Sin conexión. Estás viendo los últimos datos guardados en este dispositivo; pueden no estar al día.';
+}
+export function initializeOfflineNotice(win = window) {
+  let notice = null;
+  const update = () => {
+    if (win.navigator.onLine === false && !notice) {
+      notice = win.document.createElement('div');
+      notice.className = 'offline-notice';
+      notice.setAttribute('role', 'status');
+      notice.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M2 2l20 20M8.5 16.5a5 5 0 0 1 7 0M5 12.9a10 10 0 0 1 5.2-2.8M19 12.9a10 10 0 0 0-2.3-1.6M1.4 9a15 15 0 0 1 4.2-2.6M22.6 9A15 15 0 0 0 10.7 5M12 20h.01"/></svg><span></span>';
+      notice.querySelector('span').textContent = offlineNoticeText();
+      win.document.body.append(notice);
+    } else if (win.navigator.onLine !== false && notice) {
+      notice.remove(); notice = null;
+    }
+  };
+  win.addEventListener('online', update);
+  win.addEventListener('offline', update);
+  update();
 }
