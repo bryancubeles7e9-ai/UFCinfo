@@ -55,4 +55,6 @@ jobs:
           node tests/test-pickem.mjs
           node tests/test-pickem-view.mjs
           node tests/test-legends.mjs
+          node tests/test-share-paths.mjs
+          node scripts/build-share-index.mjs --check
 

@@ -376,3 +376,7 @@ body.light .legend-card-tagline,body.light .legends-hall-intro .eyebrow{color:#6
 .button.danger-button{background:#c8341b}
 body.light .outline-button.danger-button{color:#b02a12}
 #auth-privacy-note a,.account-privacy .data-note a{color:inherit;text-decoration:underline}
+/* Share buttons in profiles and fight cards. */
+.share-page-button{display:inline-flex;align-items:center;gap:7px}
+.share-page-button.is-confirmed{border-color:var(--accent);color:var(--accent)}
+.share-page-row{margin:4px 0 12px}

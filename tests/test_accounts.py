@@ -254,6 +254,24 @@ class AccountAPITests(unittest.TestCase):
         self.assertEqual(self.request("GET", "/privacy.html")[0], 404)
         self.assertIn(b"/privacidad", self.request("GET", "/sitemap.xml")[1])
 
+    def test_shared_addresses_carry_their_own_title_and_photo(self):
+        status, body, headers = self.request("GET", "/luchadores/ilia-topuria")
+        page = body.decode()
+        self.assertEqual(status, 200)
+        self.assertIn("<title>Ilia Topuria", page)
+        self.assertIn('<base href="/" />', page)
+        self.assertIn(f'<link rel="canonical" href="{self.origin}/luchadores/ilia-topuria"', page)
+        self.assertIn(f'<meta property="og:image" content="{self.origin}/assets/images/fighters/ilia-topuria.png"', page)
+        self.assertIn("récord", page)
+        page = self.request("GET", "/carteleras/ufc-335")[1].decode()
+        self.assertIn("<title>UFC 335:", page)
+        self.assertIn('og:image', page)
+        for path in ["/luchadores/no-existe", "/carteleras/no-existe", "/luchadores/../server.py", "/luchadores/a/b"]:
+            self.assertEqual(self.request("GET", path)[0], 404, path)
+        home = self.request("GET", "/")[1].decode()
+        self.assertIn(f'<link rel="canonical" href="{self.origin}/"', home)
+        self.assertIn(b"/luchadores/ilia-topuria", self.request("GET", "/sitemap.xml")[1])
+
     def test_rate_limit(self):
         for _ in range(10):
             self.database.rate_limit("isolated-test-address", "limited")
