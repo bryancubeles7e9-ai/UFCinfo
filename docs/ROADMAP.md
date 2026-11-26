@@ -38,7 +38,7 @@ Preparar la web para que la encuentren y la usen personas que no conocen el proy
 
 ## Fase 3 · Aplicación instalable y notificaciones — marzo a mayo de 2027
 
-Convertir la web en una **aplicación instalable (PWA)** desde el navegador, sin pasar todavía por las tiendas. ✅ Instalación con icono y pantalla completa disponible desde el 26 de noviembre de 2026; faltan la consulta sin conexión y las notificaciones.
+Convertir la web en una **aplicación instalable (PWA)** desde el navegador, sin pasar todavía por las tiendas. ✅ Instalación con icono y pantalla completa disponible desde el 26 de noviembre de 2026; consulta sin conexión de los datos ya descargados desde el mismo día; faltan las notificaciones.
 
 - Icono en la pantalla de inicio, apertura a pantalla completa y consulta sin conexión de los datos ya descargados.
 - **Notificaciones** que el usuario elige: próximo combate de un luchador seguido, cierre inminente de Pick’em y resultados disponibles (respetando el modo sin spoilers).

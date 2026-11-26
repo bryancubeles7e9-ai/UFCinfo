@@ -4,9 +4,10 @@ import {enterEventBouts, pulseSharedBout, transitionEventList, revealBoutWinner}
 import {boutShareKey, boutShareUrl, parseBoutLink, resolveBoutLink} from './bout-links.js';
 import {parseSharePath, fighterIdFromSlug, fighterPath, eventPath, pathSlug, shareUrl, shareLink} from './share-paths.js';
 import {renderHomeHero} from './home-hero.js';
-import {initializeClientErrors, initializeRestartNotice, registerUpdatingPage} from './client-errors.js';
+import {initializeClientErrors, initializeRestartNotice, registerUpdatingPage, initializeOfflineNotice } from './client-errors.js';
 initializeClientErrors();
 initializeRestartNotice();
+initializeOfflineNotice();
 registerUpdatingPage();
 import {countProfileFigures} from './profile-figures.js';
 import {enterHomeHero, tickCountdown} from './showcase-motion.js';
