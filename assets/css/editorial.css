@@ -407,3 +407,8 @@ dialog .dialog-close:hover,dialog .dialog-close:focus-visible{border-color:var(-
   /* A band that fades the content out under the close button while the profile scrolls. */
   #fighter-dialog::before,#event-dialog::before{content:"";position:sticky;top:-40px;display:block;height:108px;margin:-40px -24px -68px;z-index:4;pointer-events:none;background:linear-gradient(var(--surface) 55%,transparent)}
 }
+/* Phones: secondary text (dates, units, notes, footer) at 12 px or more so it reads comfortably. */
+@media(max-width:700px){
+  small,footer>p,footer>div:last-child,.info-hero .data-note,.event-date small,.overview-stats p,.data-note{font-size:12px}
+  .legend-card-tagline,.home-card-preview .eyebrow{font-size:11.5px}
+}

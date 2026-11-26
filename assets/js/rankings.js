@@ -3,6 +3,7 @@ import { synchronizeChampionships } from "./fighter-championships.js";
 import { getLocale } from "./i18n.js";
 import { directoryFighterByName, fighterNameLink } from "./fighter-directory.js";
 import { $, escapeHTML as esc } from "./utils.js";
+import { rankingPath } from "./share-paths.js";
 
 // Respaldo del top 15 de «All Rankings», no de «All Meta Rankings».
 export const rankingSnapshot = {
@@ -622,6 +623,9 @@ export function initializeRankings() {
     const showChampion = category.champion && matches(category.champion);
     const leader = category.champion || category.names[0];
     $("#ranking-category-title").textContent = category.label;
+    const share = $("#ranking-share");
+    share.dataset.sharePath = rankingPath(category);
+    share.dataset.shareTitle = `Ranking UFC · ${category.label}`;
     $("#ranking-category-description").textContent = category.description;
     $("#ranking-leader").innerHTML =
       `<span class="eyebrow">${category.champion ? "CAMPEÓN DE LA DIVISIÓN" : "NÚMERO UNO · LIBRA POR LIBRA"}</span><div class="ranking-leader-symbol" aria-hidden="true">${category.champion ? "C" : "01"}</div><h3>${esc(leader)}</h3><p>${esc(category.short)} · Copia fechada</p><a class="text-link" href="${rankingSnapshot.source}" target="_blank" rel="noopener noreferrer">Consultar la lista completa ›</a>`;
@@ -642,6 +646,13 @@ export function initializeRankings() {
     render();
   });
   document.addEventListener("ufcinfo:language-changed", render);
+  // Arriving through /rankings/<categoría>: show that category.
+  document.addEventListener("ufcinfo:show-ranking", event => {
+    const category = rankingCategories.find(c => rankingPath(c) === `/rankings/${event.detail}`);
+    if (!category) return;
+    $("#ranking-category").value = category.id;
+    render();
+  });
   render();
   const update = async () => {
     if (await refreshRankings()) render();

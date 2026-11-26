@@ -28,7 +28,7 @@ Web pulida en móvil y ordenador, datos de UFC.com actualizados dos veces al dí
 Preparar la web para que la encuentren y la usen personas que no conocen el proyecto.
 
 - **Dominio propio** y presentación clara del proyecto.
-- **Direcciones indexables:** ✅ hecho el 26 de noviembre de 2026 para luchadores y veladas (`/luchadores/ilia-topuria`, `/carteleras/ufc-335`), con título, descripción e imagen para buscadores y redes sociales, y en el mapa del sitio. Pendiente: rankings y secciones.
+- **Direcciones indexables:** ✅ hecho el 26 de noviembre de 2026 para luchadores y veladas (`/luchadores/ilia-topuria`, `/carteleras/ufc-335`), con título, descripción e imagen para buscadores y redes sociales, y en el mapa del sitio. Los rankings por categoría (`/rankings/peso-ligero`) se añadieron el mismo día.
 - **Inglés al mismo nivel que el español** en textos, fichas y resúmenes; catalán como idioma adicional.
 - **Privacidad y cookies:** ✅ política de privacidad, aviso legal, descarga de datos y borrado de cuenta (26 de noviembre de 2026). Pendiente: analítica respetuosa con la privacidad y gestión de consentimiento si se activa la publicidad.
 - **Copias de seguridad** cifradas y probadas de la base de datos.

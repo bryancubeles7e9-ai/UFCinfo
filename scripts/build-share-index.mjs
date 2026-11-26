@@ -5,7 +5,9 @@ import { readFileSync, writeFileSync } from 'node:fs';
 globalThis.localStorage ??= { getItem() {}, setItem() {} };
 const { directoryFighters } = await import('../assets/js/fighter-directory.js');
 const { fullName } = await import('../assets/js/data.js');
-const { fighterPath, eventPath } = await import('../assets/js/share-paths.js');
+const { fighterPath, eventPath, rankingPath } = await import('../assets/js/share-paths.js');
+const { rankingCategories } = await import('../assets/js/rankings.js');
+const { directoryFighterByName } = await import('../assets/js/fighter-directory.js');
 const { boutDivisionLabel } = await import('../assets/js/utils.js');
 
 const target = new URL('../assets/data/share-index.json', import.meta.url);
@@ -33,13 +35,25 @@ for (const e of feed.events.filter(e => e.type === 'official' && !['cancelled', 
     image: e.poster || null,
   };
 }
-const output = JSON.stringify({ fighters, events }, null, 1) + '\n';
+const rankingFeed = JSON.parse(readFileSync(new URL('../assets/data/ufc-rankings.json', import.meta.url)));
+const rankings = {};
+for (const category of rankingCategories) {
+  const current = rankingFeed.categories.find(c => c.id === category.id) || category;
+  const top = current.names.slice(0, 3).map((name, i) => `${current.ranks?.[i] ?? i + 1}. ${name}`).join(', ');
+  const face = directoryFighterByName(current.champion || current.names[0]);
+  rankings[rankingPath(category).split('/').pop()] = {
+    id: category.id, title: `Ranking UFC · ${category.label} — UFCinfo`,
+    description: `Top 15 oficial de UFC: ${category.label.replace(' · ', ', ').toLowerCase()}.${current.champion ? ` Campeón: ${current.champion}.` : ''} ${top}. Consulta el ranking completo en UFCinfo.`,
+    image: face?.image && !/placeholder/.test(face.image) ? face.image : null,
+  };
+}
+const output = JSON.stringify({ fighters, events, rankings }, null, 1) + '\n';
 if (process.argv.includes('--check')) {
   let current = '';
   try { current = readFileSync(target, 'utf8'); } catch {}
   if (current !== output) { console.error('assets/data/share-index.json está desactualizado: ejecuta node scripts/build-share-index.mjs'); process.exit(1); }
-  console.log(`PASS: índice para compartir al día (${Object.keys(fighters).length} luchadores, ${Object.keys(events).length} veladas)`);
+  console.log(`PASS: índice para compartir al día (${Object.keys(fighters).length} luchadores, ${Object.keys(events).length} veladas, ${Object.keys(rankings).length} rankings)`);
 } else {
   writeFileSync(target, output);
-  console.log(`Índice para compartir: ${Object.keys(fighters).length} luchadores, ${Object.keys(events).length} veladas`);
+  console.log(`Índice para compartir: ${Object.keys(fighters).length} luchadores, ${Object.keys(events).length} veladas, ${Object.keys(rankings).length} rankings`);
 }

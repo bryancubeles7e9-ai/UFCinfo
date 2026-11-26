@@ -31,7 +31,8 @@ export const privacyCopy = {
   "no aparecerán rumores nuevos hasta que se reactive.": "no new rumours will appear until it is resumed.",
   "No aparecerán rumores nuevos hasta que se reactive.": "No new rumours will appear until it is resumed.",
   "Para lo que ya es oficial, consulta": "For what is already official, see",
-  "Sin conexión. Estás viendo los últimos datos guardados en este dispositivo; pueden no estar al día.": "Offline. You are seeing the latest data saved on this device; it may be out of date."
+  "Sin conexión. Estás viendo los últimos datos guardados en este dispositivo; pueden no estar al día.": "Offline. You are seeing the latest data saved on this device; it may be out of date.",
+  "Compartir ranking": "Share ranking"
  },
  "ca": {
   "TUS DATOS": "LES TEVES DADES",
@@ -64,6 +65,7 @@ export const privacyCopy = {
   "no aparecerán rumores nuevos hasta que se reactive.": "no apareixeran rumors nous fins que es reactivi.",
   "No aparecerán rumores nuevos hasta que se reactive.": "No apareixeran rumors nous fins que es reactivi.",
   "Para lo que ya es oficial, consulta": "Per al que ja és oficial, consulta",
-  "Sin conexión. Estás viendo los últimos datos guardados en este dispositivo; pueden no estar al día.": "Sense connexió. Estàs veient les últimes dades desades en aquest dispositiu; poden no estar al dia."
+  "Sin conexión. Estás viendo los últimos datos guardados en este dispositivo; pueden no estar al día.": "Sense connexió. Estàs veient les últimes dades desades en aquest dispositiu; poden no estar al dia.",
+  "Compartir ranking": "Comparteix el rànquing"
  }
 };

@@ -4586,5 +4586,85 @@
    "description": "UFC 324 · 25 ene 2026 · T-Mobile Arena, Las Vegas, United States. Combate estelar: Justin Gaethje vs Paddy Pimblett (título interino del peso ligero). Cartelera, resultados y horarios en UFCinfo.",
    "image": "assets/images/events/ufc-324.jpg"
   }
+ },
+ "rankings": {
+  "libra-por-libra-masculino": {
+   "id": "p4p-men",
+   "title": "Ranking UFC · Libra por libra · Masculino — UFCinfo",
+   "description": "Top 15 oficial de UFC: libra por libra, masculino. 1. Islam Makhachev, 2. Alexander Volkanovski, 3. Petr Yan. Consulta el ranking completo en UFCinfo.",
+   "image": "assets/images/fighters/islam-makhachev.png"
+  },
+  "libra-por-libra-femenino": {
+   "id": "p4p-women",
+   "title": "Ranking UFC · Libra por libra · Femenino — UFCinfo",
+   "description": "Top 15 oficial de UFC: libra por libra, femenino. 1. Kayla Harrison, 2. Valentina Shevchenko, 3. Zhang Weili. Consulta el ranking completo en UFCinfo.",
+   "image": "assets/images/fighters/kayla-harrison.png"
+  },
+  "peso-mosca": {
+   "id": "flyweight",
+   "title": "Ranking UFC · Peso mosca · Masculino — UFCinfo",
+   "description": "Top 15 oficial de UFC: peso mosca, masculino. Campeón: Joshua Van. 1. Alexandre Pantoja, 1. Manel Kape, 3. Brandon Royval. Consulta el ranking completo en UFCinfo.",
+   "image": "assets/images/fighters/ufc-joshua-van.png"
+  },
+  "peso-gallo": {
+   "id": "bantamweight",
+   "title": "Ranking UFC · Peso gallo · Masculino — UFCinfo",
+   "description": "Top 15 oficial de UFC: peso gallo, masculino. Campeón: Petr Yan. 1. Merab Dvalishvili, 2. Sean O'Malley, 3. Song Yadong. Consulta el ranking completo en UFCinfo.",
+   "image": "assets/images/fighters/petr-yan.png"
+  },
+  "peso-pluma": {
+   "id": "featherweight",
+   "title": "Ranking UFC · Peso pluma · Masculino — UFCinfo",
+   "description": "Top 15 oficial de UFC: peso pluma, masculino. Campeón: Alexander Volkanovski. 1. Diego Lopes, 1. Movsar Evloev, 3. Lerone Murphy. Consulta el ranking completo en UFCinfo.",
+   "image": "assets/images/fighters/alexander-volkanovski.png"
+  },
+  "peso-ligero": {
+   "id": "lightweight",
+   "title": "Ranking UFC · Peso ligero · Masculino — UFCinfo",
+   "description": "Top 15 oficial de UFC: peso ligero, masculino. Campeón: Justin Gaethje. 1. Ilia Topuria, 2. Arman Tsarukyan, 3. Charles Oliveira. Consulta el ranking completo en UFCinfo.",
+   "image": "assets/images/fighters/justin-gaethje.png"
+  },
+  "peso-welter": {
+   "id": "welterweight",
+   "title": "Ranking UFC · Peso wélter · Masculino — UFCinfo",
+   "description": "Top 15 oficial de UFC: peso wélter, masculino. Campeón: Islam Makhachev. 1. Ian Machado Garry, 2. Carlos Prates, 3. Michael Morales. Consulta el ranking completo en UFCinfo.",
+   "image": "assets/images/fighters/islam-makhachev.png"
+  },
+  "peso-medio": {
+   "id": "middleweight",
+   "title": "Ranking UFC · Peso medio · Masculino — UFCinfo",
+   "description": "Top 15 oficial de UFC: peso medio, masculino. Campeón: Sean Strickland. 1. Khamzat Chimaev, 2. Dricus Du Plessis, 3. Nassourdine Imavov. Consulta el ranking completo en UFCinfo.",
+   "image": "assets/images/fighters/sean-strickland.png"
+  },
+  "peso-semipesado": {
+   "id": "light-heavyweight",
+   "title": "Ranking UFC · Peso semipesado · Masculino — UFCinfo",
+   "description": "Top 15 oficial de UFC: peso semipesado, masculino. Campeón: Carlos Ulberg. 1. Magomed Ankalaev, 2. Navajo Stirling, 3. Jiří Procházka. Consulta el ranking completo en UFCinfo.",
+   "image": "assets/images/fighters/ufc-carlos-ulberg.png"
+  },
+  "peso-pesado": {
+   "id": "heavyweight",
+   "title": "Ranking UFC · Peso pesado · Masculino — UFCinfo",
+   "description": "Top 15 oficial de UFC: peso pesado, masculino. Campeón: Ciryl Gane. 1. Tom Aspinall, 2. Alexander Volkov, 3. Sergei Pavlovich. Consulta el ranking completo en UFCinfo.",
+   "image": "assets/images/fighters/ufc-ciryl-gane.png"
+  },
+  "peso-paja-femenino": {
+   "id": "strawweight-women",
+   "title": "Ranking UFC · Peso paja · Femenino — UFCinfo",
+   "description": "Top 15 oficial de UFC: peso paja, femenino. Campeón: Mackenzie Dern. 1. Zhang Weili, 2. Tatiana Suarez, 3. Denise Gomes. Consulta el ranking completo en UFCinfo.",
+   "image": "assets/images/fighters/mackenzie-dern.png"
+  },
+  "peso-mosca-femenino": {
+   "id": "flyweight-women",
+   "title": "Ranking UFC · Peso mosca · Femenino — UFCinfo",
+   "description": "Top 15 oficial de UFC: peso mosca, femenino. Campeón: Natalia Silva. 1. Valentina Shevchenko, 2. Alexa Grasso, 3. Manon Fiorot. Consulta el ranking completo en UFCinfo.",
+   "image": "assets/images/fighters/natalia-silva.png"
+  },
+  "peso-gallo-femenino": {
+   "id": "bantamweight-women",
+   "title": "Ranking UFC · Peso gallo · Femenino — UFCinfo",
+   "description": "Top 15 oficial de UFC: peso gallo, femenino. Campeón: Kayla Harrison. 1. Amanda Nunes, 2. Joselyne Edwards, 2. Julianna Peña. Consulta el ranking completo en UFCinfo.",
+   "image": "assets/images/fighters/kayla-harrison.png"
+  }
  }
 }

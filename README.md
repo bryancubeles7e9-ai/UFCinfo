@@ -179,7 +179,7 @@ A lo largo de todas las fases se busca la sostenibilidad económica (publicidad 
 
 ## Enlaces para compartir
 
-Cada luchador y cada velada tienen su propia dirección (por ejemplo, `/luchadores/ilia-topuria` o `/carteleras/ufc-335`), con su título y su foto en la vista previa de WhatsApp o de las redes, y aparecen en el mapa del sitio para los buscadores. Las fichas y las carteleras incluyen un botón para compartirlas. Detalles en `docs/PUBLICACION.md`.
+Cada luchador, velada y ranking tiene su propia dirección (por ejemplo, `/luchadores/ilia-topuria`, `/carteleras/ufc-335` o `/rankings/peso-ligero`), con su título y su foto en la vista previa de WhatsApp o de las redes, y aparecen en el mapa del sitio para los buscadores. Las fichas y las carteleras incluyen un botón para compartirlas. Detalles en `docs/PUBLICACION.md`.
 
 ## Privacidad
 
