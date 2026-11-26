@@ -18,6 +18,8 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 STATE = ROOT / "assets/data/fighter-records.json"
 MAX_PROFILES = 40
+# An official correction that UFC keeps publishing unchanged for this long is accepted.
+CONFIRM_HOURS = 72
 STAT_KEYS = ("strikesLanded", "strikesAbsorbed", "takedownAverage", "submissionAverage",
              "strikingDefense", "takedownDefense", "knockdownAverage", "strikingAccuracy",
              "takedownAccuracy", "koWins", "submissionWins", "firstRoundFinishes")
@@ -213,7 +215,9 @@ def validate_progress(fighter, previous, profile):
     incoming = record_parts(profile.get('record'))
     if incoming is None or any(value > 200 for value in incoming):
         raise ValueError('Invalid incoming career record')
-    for baseline in (fighter, previous):
+    # After an accepted official correction, the saved profile supersedes the directory.
+    baselines = (previous,) if previous.get('acceptedCorrection') else (fighter, previous)
+    for baseline in baselines:
         old = record_parts(baseline.get('record'))
         if old and any(new < saved for new, saved in zip(incoming, old)):
             raise ValueError(f"Career record regression: {baseline['record']} -> {profile['record']}")
@@ -227,7 +231,7 @@ def validate_progress(fighter, previous, profile):
             raise ValueError('Invalid incoming statistic: ' + key)
         if key in PERCENT_STATS and value > 100:
             raise ValueError('Incoming percentage outside range: ' + key)
-    for baseline in (fighter, previous):
+    for baseline in baselines:
         old_stats = baseline.get('info') or {}
         for key in ('koWins', 'submissionWins', 'firstRoundFinishes'):
             old = old_stats.get(key)
@@ -238,10 +242,13 @@ def validate_progress(fighter, previous, profile):
             raise ValueError('Combat statistics unexpectedly reset to zero')
 
 
-def store_profile(state, fighter, profile, now):
+def store_profile(state, fighter, profile, now, accepted=None):
     previous = state["records"].get(fighter["id"], {})
-    validate_progress(fighter, previous, profile)
+    if accepted is None:
+        validate_progress(fighter, previous, profile)
+    correction = accepted or previous.get("acceptedCorrection")
     state["records"][fighter["id"]] = {
+        **({"acceptedCorrection": correction} if correction else {}),
         "record": profile["record"], "source": "UFC", "sourceUrl": fighter["source"],
         "updatedAt": now.isoformat(),
         **({"info": {**previous.get("info", {}), **profile["info"],
@@ -250,6 +257,22 @@ def store_profile(state, fighter, profile, now):
            if profile["info"] is not None else ({"info": previous["info"]} if "info" in previous else {})),
     }
     save(state)
+
+
+def correction_signature(profile):
+    stats = {k: v for k, v in (profile.get("info") or {}).items() if k in STAT_KEYS}
+    return json.dumps({"record": profile.get("record"), "stats": stats}, sort_keys=True)
+
+
+def acceptable_correction(reason, fighter, previous, profile):
+    """Official corrections, not broken pages: finishes or a small record change."""
+    if reason.startswith("Career statistic regression"):
+        return True
+    if not reason.startswith("Career record regression"):
+        return False  # Invalid data or statistics reset to zero always need a person.
+    totals = [sum(map(int, r.split("-"))) for r in (previous.get("record") or fighter.get("record") or "", profile["record"])
+              if re.fullmatch(r"\d{1,3}-\d{1,3}-\d{1,3}", r or "")]
+    return len(totals) == 2 and abs(totals[0] - totals[1]) <= 2
 
 
 def sync(events, state, fighters, fetch=fetch_profile, now=None, full=False):
@@ -315,15 +338,26 @@ def sync(events, state, fighters, fetch=fetch_profile, now=None, full=False):
             try:
                 store_profile(state, fighter, profile, now)
             except ValueError as error:
-                failures.append(fighter['id'])
-                state.setdefault('profileReview', {})[fighter['id']] = {
-                    'checkedAt': now.isoformat(), 'reason': str(error),
-                    'sourceUrl': fighter['source'], 'receivedRecord': profile.get('record'),
-                    'savedRecord': state['records'].get(fighter['id'], {}).get('record'),
-                    'directoryRecord': fighter.get('record'),
-                }
-                print(f"::warning::Profile preserved for {fighter['id']}: {error}", file=sys.stderr)
-                continue
+                previous = state['records'].get(fighter['id'], {})
+                review = state.get('profileReview', {}).get(fighter['id'], {})
+                signature = correction_signature(profile)
+                first_seen = review.get('firstSeenAt') if review.get('signature') == signature else None
+                confirmed = first_seen and now - datetime.fromisoformat(first_seen) >= timedelta(hours=CONFIRM_HOURS)
+                if confirmed and acceptable_correction(str(error), fighter, previous, profile):
+                    store_profile(state, fighter, profile, now, accepted={
+                        'acceptedAt': now.isoformat(), 'reason': str(error), 'firstSeenAt': first_seen,
+                        'previousRecord': previous.get('record') or fighter.get('record')})
+                    print(f"::notice::Official correction accepted for {fighter['id']} after {CONFIRM_HOURS} h unchanged: {error}", file=sys.stderr)
+                else:
+                    failures.append(fighter['id'])
+                    state.setdefault('profileReview', {})[fighter['id']] = {
+                        'checkedAt': now.isoformat(), 'reason': str(error),
+                        'sourceUrl': fighter['source'], 'receivedRecord': profile.get('record'),
+                        'savedRecord': previous.get('record'), 'directoryRecord': fighter.get('record'),
+                        'signature': signature, 'firstSeenAt': first_seen or now.isoformat(),
+                    }
+                    print(f"::warning::Profile preserved for {fighter['id']}: {error}", file=sys.stderr)
+                    continue
             state.get('profileReview', {}).pop(fighter['id'], None)
             if profile["info"] is None:
                 failures.append(fighter["id"])

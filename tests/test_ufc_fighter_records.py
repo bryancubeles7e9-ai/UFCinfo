@@ -1,6 +1,6 @@
 import importlib.util
 import copy
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import tempfile
 import unittest
@@ -39,6 +39,43 @@ class OfficialRecordsTest(unittest.TestCase):
         self.assertEqual(state['pendingProfileIds'], [])
         self.assertEqual(state['profileReview'], {})
         self.assertIn('card', state['processedEventIds'])
+
+    def test_official_correction_is_accepted_after_72_unchanged_hours(self):
+        fighter = {'id': 'm', 'name': 'M', 'record': '23-8-0', 'source': 'https://www.ufc.com/athlete/m',
+                   'info': {'koWins': 6, 'submissionWins': 8}}
+        corrected = {'record': '23-9-0', 'info': {'strikesLanded': 3.2, 'strikesAbsorbed': 2.5, 'takedownAverage': 1.3,
+                                                  'submissionAverage': 0.7, 'koWins': 5, 'submissionWins': 9}}
+        state = {'records': {}, 'processedEventIds': [], 'completedFighters': {}}
+        start = datetime(2026, 11, 20, tzinfo=timezone.utc)
+        with tempfile.TemporaryDirectory() as tmp, patch.object(module, 'STATE', Path(tmp) / 'feed.json'):
+            for hours in (0, 24, 71):
+                module.sync([], state, [fighter], fetch=lambda f: corrected, now=start + timedelta(hours=hours), full=True)
+                self.assertNotIn('m', state['records'], 'held for review before 72 hours')
+                self.assertEqual(state['profileReview']['m']['firstSeenAt'], start.isoformat())
+            module.sync([], state, [fighter], fetch=lambda f: corrected, now=start + timedelta(hours=72), full=True)
+            self.assertEqual(state['records']['m']['record'], '23-9-0')
+            self.assertEqual(state['records']['m']['info']['koWins'], 5)
+            self.assertEqual(state['records']['m']['acceptedCorrection']['previousRecord'], '23-8-0')
+            self.assertNotIn('m', state['profileReview'])
+            # Later checks compare with the accepted profile, not the old directory values.
+            module.sync([], state, [fighter], fetch=lambda f: corrected, now=start + timedelta(hours=96), full=True)
+            self.assertNotIn('m', state['profileReview'])
+            self.assertIn('acceptedCorrection', state['records']['m'])
+
+    def test_changed_or_drastic_regressions_are_never_accepted_automatically(self):
+        fighter = {'id': 'd', 'name': 'D', 'record': '20-2-0', 'source': 'https://www.ufc.com/athlete/d'}
+        state = {'records': {}, 'processedEventIds': [], 'completedFighters': {}}
+        start = datetime(2026, 11, 20, tzinfo=timezone.utc)
+        with tempfile.TemporaryDirectory() as tmp, patch.object(module, 'STATE', Path(tmp) / 'feed.json'):
+            for hours in (0, 100, 200):  # A broken page showing a much lower record.
+                module.sync([], state, [fighter], fetch=lambda f: {'record': '2-0-0', 'info': None}, now=start + timedelta(hours=hours), full=True)
+            self.assertNotIn('d', state['records'])
+            # A correction that keeps changing restarts its 72-hour window.
+            other = {'id': 'e', 'name': 'E', 'record': '10-1-0', 'source': 'https://www.ufc.com/athlete/e', 'info': {'koWins': 4}}
+            for hours, ko in ((0, 3), (48, 2), (100, 2)):
+                module.sync([], state, [other], fetch=lambda f, ko=ko: {'record': '10-1-0', 'info': {'koWins': ko}}, now=start + timedelta(hours=hours), full=True)
+            self.assertNotIn('e', state['records'])
+            self.assertEqual(state['profileReview']['e']['firstSeenAt'], (start + timedelta(hours=48)).isoformat())
 
     def test_directory_record_protects_first_sync_and_corrupt_existing_state(self):
         fighter = {'record': '8-1-0'}

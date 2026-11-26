@@ -37,3 +37,7 @@ El 25 de noviembre de 2026 se resolvió así la revisión de Jake Matthews (23-9
 ## Respaldo de UFC Stats
 
 Si la ficha de UFC.com publica el récord pero le faltan estadísticas principales (golpes por minuto, derribos o sumisiones por 15 minutos), la sincronización busca al luchador en UFC Stats y usa sus cifras solo si el nombre y el récord coinciden exactamente con UFC.com. Las cifras que UFC.com sí publica, como las finalizaciones, tienen prioridad. La ficha indica entonces «Fuente: UFC Stats» con el enlace al perfil consultado. Si UFC Stats no responde o no coincide, se conserva el comportamiento anterior: récord actualizado y estadísticas pendientes de reintento. UFC Stats solo responde por HTTP, así que el respaldo funciona desde GitHub Actions.
+
+## Correcciones oficiales confirmadas
+
+Si UFC.com rebaja un total (por ejemplo, las finalizaciones) o ajusta ligeramente el récord, el perfil queda en `profileReview` con la fecha en que se vio por primera vez. Si la ficha oficial sigue mostrando **exactamente los mismos datos durante 72 horas**, la sincronización acepta la corrección sola, la guarda en `fighter-records.json` con `acceptedCorrection` (fecha, motivo y récord anterior) y desde entonces compara con ese perfil en lugar del catálogo. Un cambio en esas 72 horas reinicia el plazo. Nunca se aceptan solos los datos no válidos, las estadísticas puestas a cero ni una caída del récord de más de dos combates: esos casos siguen esperando una revisión con `scripts/probe-ufc-profiles.py`.
