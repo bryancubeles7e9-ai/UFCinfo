@@ -41,3 +41,7 @@ Al abrir una leyenda no se muestra la ficha general (guardia, base marcial, esta
 - seguir, compartir y el enlace al Salón de la Fama.
 
 Al añadir una leyenda nueva hay que escribir también su historia y sus traducciones; `tests/test-legends.mjs` falla si falta alguna.
+
+## Más leyendas de la selección UFCinfo (26 de noviembre de 2026)
+
+Se suman a la selección propia, con foto de UFC.com, historia y momentos clave en tres idiomas: **Stipe Miocic** (retirado en 2024), **Glover Teixeira** (2023), **Carlos Condit** (2021), **Dan Henderson** (2016) y **Brock Lesnar** (2016). UFC.com marca a los cinco como «Retired». Al no estar en el Salón de la Fama, su foto apaisada procede de reportajes de UFC.com. El récord de Lesnar es el que publica UFC.com (6-3-0). El Salón de leyendas reúne ahora 47 luchadores.

@@ -9269,5 +9269,175 @@
     "countrySource": "https://www.ufc.com/event/ufc-309",
     "countryConsulted": "2026-11-26",
     "legacyStory": "Jon «Bones» Jones fue el campeón más joven de la historia de UFC al ganar el peso semipesado en 2011, con 23 años, y encadenó ocho defensas en su primer reinado. Más tarde conquistó el peso pesado en UFC 285 y lo defendió ante Stipe Miocic en UFC 309. Con un récord de 28-1, cuya única derrota fue una descalificación, muchos lo consideran el mejor de todos los tiempos."
+  },
+  {
+    "id": "ufc-stipe-miocic",
+    "name": "Stipe Miocic",
+    "aliases": [
+      "Stipe Miocic"
+    ],
+    "source": "https://www.ufc.com/athlete/stipe-miocic",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/athlete/stipe-miocic",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/stipe-miocic",
+    "hallOfFame": {
+      "wing": "ufcinfo",
+      "inducted": null,
+      "image": "assets/images/legends/ufc-stipe-miocic.jpg",
+      "retired": 2024
+    },
+    "legacyNote": "Dos veces campeón del peso pesado, con tres defensas seguidas: el récord de la división.",
+    "legacyHighlights": [
+      "Dos veces campeón del peso pesado",
+      "3 defensas seguidas, récord de la división",
+      "Trilogía con Daniel Cormier"
+    ],
+    "legacyStory": "Stipe Miocic, bombero en su Cleveland natal, ganó el título del peso pesado en 2016 al noquear a Fabrício Werdum en Brasil. Lo defendió ante Alistair Overeem, Junior dos Santos y Francis Ngannou, tres defensas seguidas, récord de la división. Perdió el cinturón ante Daniel Cormier en 2018, lo recuperó en la revancha de 2019 y se retiró en 2024 tras pelear con Jon Jones.",
+    "championships": [
+      {
+        "name": "Peso pesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/athlete/stipe-miocic"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-309",
+    "countryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-glover-teixeira",
+    "name": "Glover Teixeira",
+    "aliases": [
+      "Glover Teixeira"
+    ],
+    "source": "https://www.ufc.com/athlete/glover-teixeira",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/athlete/glover-teixeira",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/glover-teixeira",
+    "hallOfFame": {
+      "wing": "ufcinfo",
+      "inducted": null,
+      "image": "assets/images/legends/ufc-glover-teixeira.jpg",
+      "retired": 2023
+    },
+    "legacyNote": "Campeón del peso semipesado en 2021, con 42 años, tras casi una década de carrera en UFC.",
+    "legacyHighlights": [
+      "Campeón del peso semipesado (2021-2022)",
+      "Campeón con 42 años",
+      "Su guerra con Jiří Procházka (2022)"
+    ],
+    "legacyStory": "Glover Teixeira llegó a UFC en 2012 y peleó por el título del peso semipesado ante Jon Jones en 2014. Siete años después, con 42, sometió a Jan Błachowicz para ser campeón por fin. Perdió el cinturón ante Jiří Procházka en una de las grandes guerras de 2022 y se despidió en Río de Janeiro en 2023; hoy entrena a otros luchadores.",
+    "championships": [
+      {
+        "name": "Peso semipesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/athlete/glover-teixeira"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-283",
+    "countryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-dan-henderson",
+    "name": "Dan Henderson",
+    "aliases": [
+      "Dan Henderson"
+    ],
+    "source": "https://www.ufc.com/athlete/dan-henderson",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/athlete/dan-henderson",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/dan-henderson",
+    "hallOfFame": {
+      "wing": "ufcinfo",
+      "inducted": null,
+      "image": "assets/images/legends/ufc-dan-henderson.jpg",
+      "retired": 2016
+    },
+    "legacyNote": "Doble campeón de PRIDE a la vez y ganador del torneo de UFC 17; su combate con Shogun está en el Salón de la Fama.",
+    "legacyHighlights": [
+      "Ganador del torneo de UFC 17",
+      "Doble campeón de PRIDE a la vez",
+      "Su combate con Shogun, en el Salón de la Fama",
+      "Luchador olímpico"
+    ],
+    "legacyStory": "Dan Henderson, luchador olímpico, ganó el torneo de peso medio de UFC 17 en 1998 y en PRIDE fue el primero en tener dos cinturones a la vez. Con su temida «H-Bomb» noqueó a Michael Bisping en UFC 100, y su guerra con Shogun Rua en 2011 entró en el Salón de la Fama. Se despidió en 2016, con 46 años, peleando por el título del peso medio."
+  },
+  {
+    "id": "ufc-brock-lesnar",
+    "name": "Brock Lesnar",
+    "aliases": [
+      "Brock Lesnar"
+    ],
+    "source": "https://www.ufc.com/athlete/brock-lesnar",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/athlete/brock-lesnar",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/brock-lesnar",
+    "hallOfFame": {
+      "wing": "ufcinfo",
+      "inducted": null,
+      "image": "assets/images/legends/ufc-brock-lesnar.jpg",
+      "retired": 2016
+    },
+    "legacyNote": "Campeón del peso pesado en su cuarto combate profesional y una de las mayores atracciones de la historia de UFC.",
+    "legacyHighlights": [
+      "Campeón del peso pesado (2008-2010)",
+      "Campeón en su cuarto combate profesional",
+      "Remontada ante Shane Carwin en UFC 116"
+    ],
+    "legacyStory": "Brock Lesnar, campeón universitario de lucha y estrella de la lucha libre, llegó a UFC en 2008 y en su cuarto combate profesional venció a Randy Couture para ser campeón del peso pesado. Lo defendió ante Frank Mir y Shane Carwin, al que sometió tras sobrevivir a un primer asalto durísimo. Perdió el título ante Cain Velasquez en 2010 y sus combates batieron récords de audiencia.",
+    "championships": [
+      {
+        "name": "Peso pesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/athlete/brock-lesnar"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-carlos-condit",
+    "name": "Carlos Condit",
+    "aliases": [
+      "Carlos Condit"
+    ],
+    "source": "https://www.ufc.com/athlete/carlos-condit",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/athlete/carlos-condit",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/carlos-condit",
+    "hallOfFame": {
+      "wing": "ufcinfo",
+      "inducted": null,
+      "image": "assets/images/legends/ufc-carlos-condit.jpg",
+      "retired": 2021
+    },
+    "legacyNote": "Campeón interino del peso wélter de UFC y campeón de WEC, protagonista de algunas de las peleas más intensas de su época.",
+    "legacyHighlights": [
+      "Campeón interino del peso wélter (2012)",
+      "Campeón del peso wélter de WEC",
+      "Guerra con Robbie Lawler en UFC 195"
+    ],
+    "legacyStory": "Carlos «The Natural Born Killer» Condit fue campeón del peso wélter de WEC y en 2012 ganó el título interino de UFC ante Nick Diaz. Peleó por el título indiscutible ante Georges St-Pierre, al que llegó a derribar con una patada, y en 2016 perdió por decisión dividida ante Robbie Lawler en uno de los mejores combates del año. Se retiró en 2021.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-264",
+    "countryConsulted": "2026-11-26"
   }
 ]

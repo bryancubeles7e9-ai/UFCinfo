@@ -4348,5 +4348,23 @@
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-309",
     "countryConsulted": "2026-11-26"
+  },
+  "stipe-miocic": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-309",
+    "countryConsulted": "2026-11-26"
+  },
+  "glover-teixeira": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-283",
+    "countryConsulted": "2026-11-26"
+  },
+  "carlos-condit": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-264",
+    "countryConsulted": "2026-11-26"
   }
 }
