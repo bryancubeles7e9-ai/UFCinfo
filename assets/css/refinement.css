@@ -124,3 +124,5 @@ details.bout-schedule-note > p { margin:10px 0 0; }
 @media (max-width:480px) {
  #fighter-dialog { width:100%; max-width:none; max-height:100vh; max-height:100dvh; }
 }
+/* Head-and-shoulders photos (ESPN) fill the profile box centred on the face, instead of shrinking like full-body UFC photos. */
+.fighter-profile-photo.is-headshot img { object-fit:cover; object-position:50% 20%; }
