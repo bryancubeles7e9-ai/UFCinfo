@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>UFCinfo · Página no encontrada</title>
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/fonts.css">
+<style>
+  /* Self-contained: shown by the server for any address that does not exist. */
+  :root { --bg:#101010; --surface:#191919; --ink:#f3f1ec; --muted:#a9a6a0; --line:#2b2b2b; --accent:#f4512b; }
+  @media (prefers-color-scheme: light) { :root { --bg:#f4f2ed; --surface:#fff; --ink:#151515; --muted:#5f5c57; --line:#dedad2; --accent:#c8391a; } }
+  * { box-sizing:border-box; }
+  body { margin:0; min-height:100vh; display:grid; place-items:center; padding:24px 16px; background:var(--bg); color:var(--ink);
+         font:16px/1.55 "DM Sans", Arial, sans-serif; }
+  main { width:min(460px,100%); text-align:center; padding:36px 28px; background:var(--surface); border:1px solid var(--line); border-radius:16px; }
+  .brand { font:800 26px/1 "Barlow Condensed", "Arial Narrow", Impact, sans-serif; letter-spacing:.02em; }
+  .brand span { color:var(--accent); }
+  .code { font:900 88px/1 "Barlow Condensed", "Arial Narrow", Impact, sans-serif; color:var(--accent); margin:26px 0 8px; }
+  h1 { font:800 30px/1.1 "Barlow Condensed", "Arial Narrow", Impact, sans-serif; margin:0 0 10px; text-transform:uppercase; }
+  p { margin:0 0 10px; color:var(--muted); }
+  a.button { display:inline-block; margin-top:14px; padding:12px 22px; border-radius:10px; background:var(--accent); color:#fff; font:700 15px "DM Sans", Arial, sans-serif; text-decoration:none; }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">UFC<span>info</span></div>
+  <div class="code" aria-hidden="true">404</div>
+  <h1 id="title">Esta página no existe</h1>
+  <p id="body">Puede que el enlace esté incompleto o que la página se haya movido.</p>
+  <a class="button" id="home" href="/">Ir a la portada</a>
+</main>
+<script>
+  const texts = {
+    en: {title:'This page does not exist', body:'The link may be incomplete or the page may have moved.', home:'Go to the home page', doc:'UFCinfo · Page not found'},
+    ca: {title:'Aquesta pàgina no existeix', body:'Pot ser que l’enllaç estigui incomplet o que la pàgina s’hagi mogut.', home:'Ves a la portada', doc:'UFCinfo · Pàgina no trobada'},
+  };
+  let saved = null;
+  try { saved = localStorage.getItem('ufcinfo-language'); } catch {}
+  const code = [saved, ...(navigator.languages || [navigator.language])].map(l => String(l || '').slice(0, 2)).find(l => l === 'es' || texts[l]);
+  const t = texts[code];
+  if (t) {
+    document.documentElement.lang = code;
+    document.title = t.doc;
+    for (const id of ['title', 'body', 'home']) document.getElementById(id).textContent = t[id];
+  }
+</script>
+</body>
+</html>
