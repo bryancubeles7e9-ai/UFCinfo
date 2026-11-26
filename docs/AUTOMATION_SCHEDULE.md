@@ -7,6 +7,8 @@ All local times use Europe/Madrid (including daylight saving changes).
 | Events, results, rankings, fighter records and statistics | 08:00 and 14:00 | cron-job.org (8620496, 8625854) and GitHub schedule backup, `ufc-events.yml` |
 | Conditional post-event retry | 10:10 and 12:10 (allowed window 10:00–14:00) | cron-job.org (8942435), GitHub schedule backup at 10:07–13:07 and completed rumor runs, `morning-retry.yml` |
 | Data health check | 09:45 and 15:45, plus every 3 hours at minute 43 | cron-job.org (8942437) and GitHub schedule backup, `data-health.yml` |
+| Encrypted backup of accounts and Pick'em | Sundays 04:23 | cron-job.org (8949663) and GitHub schedule backup, `backup.yml` |
+| Weekly review of errors, data and backups | Mondays 08:32 | Claude Code scheduled task, reports to the owner |
 | Site uptime check | Every 15 minutes | cron-job.org (8942439) requests `/api/health/full` (database readable and writable, at least 50 MB free on the data disk) and emails on failure |
 | Rumors and official confirmations | Every hour, minute 0 (paused while TwitterAPI.io is inactive) | cron-job.org (8616997, disabled) and GitHub backup, `rumor-sync.yml` |
 
@@ -21,7 +23,7 @@ backup; the workflow's concurrency group prevents overlapping runs.
 
 Every cron-job.org job emails its owner on failure, so an expired token (HTTP
 401) or a site outage is noticed the same day. The dispatch jobs share the same
-token; renew it in jobs 8620496, 8625854, 8942435 and 8942437.
+token; renew it in jobs 8620496, 8625854, 8942435, 8942437 and 8949663.
 
 The legacy fighter dispatch (8620521) was disabled on 25 November 2026: the
 workflow skipped it without `full_refresh`, and records are already refreshed in
