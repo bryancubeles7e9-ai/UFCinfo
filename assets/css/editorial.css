@@ -383,7 +383,7 @@ body.light .outline-button.danger-button{color:#b02a12}
 /* Home: three legends of the day. */
 .home-legends{margin-bottom:56px}
 .home-legends .legend-card-note{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.home-legends .legacy-highlights{display:none}
+
 @media(min-width:701px){.home-legends{grid-template-columns:repeat(3,minmax(0,1fr))}}
 /* Rumours: visible notice while the automatic search is paused. */
 .rumor-paused-notice{display:flex;gap:16px;align-items:flex-start;margin:8px 0 22px;padding:18px 20px;border:1px solid #e0a43a88;border-left:4px solid #e0a43a;border-radius:12px;background:#e0a43a14;color:var(--ink)}

@@ -64,4 +64,11 @@ for (const legend of reviewed) {
   for (const empty of ['Guardia', 'Base no especificada', 'Estadísticas', 'Historial', 'No indicado']) assert.ok(!html.includes(empty), `${legend.name}: ${empty}`);
 }
 assert.match(fighterProfile(byId.get('ufc-jon-jones'), { events: [] }), /Peso semipesado[\s\S]*Peso pesado/);
-console.log('PASS: fichas de leyenda con foto, datos esenciales e historia en tres idiomas');
+// Every legend card shows three or four key moments, translated.
+for (const legend of reviewed) {
+  const fighter = byId.get(legend.id);
+  assert.ok(fighter.legacyHighlights.length >= 3 && fighter.legacyHighlights.length <= 4, legend.name);
+  for (const item of fighter.legacyHighlights) assert.ok(notes.en[item] && notes.ca[item], `Falta traducir «${item}»`);
+  assert.match(legendCard(fighter), /class="legacy-highlights"/);
+}
+console.log('PASS: fichas de leyenda con foto, datos esenciales, historia y momentos clave en tres idiomas');
