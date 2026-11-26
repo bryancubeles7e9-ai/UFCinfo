@@ -380,3 +380,18 @@ body.light .outline-button.danger-button{color:#b02a12}
 .share-page-button{display:inline-flex;align-items:center;gap:7px}
 .share-page-button.is-confirmed{border-color:var(--accent);color:var(--accent)}
 .share-page-row{margin:4px 0 12px}
+/* Home: three legends of the day. */
+.home-legends{margin-bottom:56px}
+.home-legends .legend-card-note{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.home-legends .legacy-highlights{display:none}
+@media(min-width:701px){.home-legends{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* Rumours: visible notice while the automatic search is paused. */
+.rumor-paused-notice{display:flex;gap:16px;align-items:flex-start;margin:8px 0 22px;padding:18px 20px;border:1px solid #e0a43a88;border-left:4px solid #e0a43a;border-radius:12px;background:#e0a43a14;color:var(--ink)}
+.rumor-paused-notice svg{flex:0 0 auto;color:#e0a43a;margin-top:2px}
+.rumor-paused-notice h2{margin:0 0 6px;font:800 24px/1.1 var(--display);text-transform:uppercase}
+.rumor-paused-notice p{margin:0 0 6px;font-size:15px;line-height:1.55}
+.rumor-paused-notice p:last-child{margin:0}
+.rumor-paused-notice a{color:inherit;text-decoration:underline}
+.nav-paused-tag{display:inline-block;margin-left:4px;padding:1px 6px;border-radius:999px;background:#e0a43a26;color:#e7b453;font-size:10px;font-weight:700;letter-spacing:.04em;vertical-align:middle}
+body.light .rumor-paused-notice{border-color:#b7791f88;border-left-color:#b7791f;background:#b7791f12}
+body.light .rumor-paused-notice svg,body.light .nav-paused-tag{color:#8a5a12}

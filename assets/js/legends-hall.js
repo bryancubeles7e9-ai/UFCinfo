@@ -70,3 +70,12 @@ export function legendCard(fighter, follow = '') {
     </div>
   </article>`;
 }
+
+// Home page: three legends that change every day, the same for every visitor that day.
+export function dailyLegends(legends, date = new Date(), count = 3) {
+  const list = sortLegends(legends);
+  if (list.length <= count) return list;
+  const day = Math.floor(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / 86400000);
+  const start = (day * count) % list.length;
+  return Array.from({ length: count }, (_, i) => list[(start + i) % list.length]);
+}

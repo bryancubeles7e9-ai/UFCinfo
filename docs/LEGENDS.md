@@ -26,3 +26,7 @@ La colección pasa de 7 a 41 leyendas: todos los luchadores retirados del **Sal�
 Dustin Poirier y Jon Jones forman la selección propia de UFCinfo y aparecen primero en el Salón de leyendas, con el año de retiro (2025), una nota y sus momentos clave en tres idiomas. Jones tiene sus cinturones del peso semipesado y del peso pesado; el título de Poirier era interino, así que figura en la nota y no como cinturón absoluto.
 
 UFC.com todavía los lista como «Active», aunque ninguno ha vuelto a pelear: Poirier se despidió en UFC 318 (julio de 2025) y Jones dejó vacante el título del peso pesado en junio de 2025. El campo `retirementReviewed` de `docs/legends.json` deja constancia de esa revisión manual con fecha, y solo con él el script acepta a un luchador que UFC.com marca como activo. Si alguno vuelve a competir, hay que quitarlo de la lista.
+
+## Leyendas en la portada
+
+Inicio muestra el bloque «Del Salón de leyendas» con tres leyendas que cambian cada día (las mismas para todos los visitantes ese día) y un enlace que abre Luchadores con la colección Leyendas seleccionada.

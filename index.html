@@ -126,6 +126,14 @@
           <a class="text-link" href="#luchadores">Explorar luchadores ›</a>
         </div>
         <div class="fighter-grid" id="featured-fighters"></div>
+        <div class="section-heading home-legends-heading">
+          <div>
+            <p class="eyebrow">DEL SALÓN DE LEYENDAS</p>
+            <h2>Los que hicieron historia.</h2>
+          </div>
+          <a class="text-link" href="#luchadores" data-open-legends>Ver el Salón de leyendas ›</a>
+        </div>
+        <div class="legends-grid home-legends" id="home-legends"></div>
         <section class="lab-banner">
           <div>
             <p class="eyebrow">COMPARA SUS ESTADÍSTICAS.</p>
@@ -396,6 +404,10 @@
       </section>
       <section class="view" data-view="rumores" hidden>
         <div class="page-heading"><div><p class="eyebrow">LO QUE SE HABLA FUERA DE LA JAULA</p><h1>RUMORES<span>.</span></h1><p>Posibles peleas reportadas por periodistas en español e inglés. Los reportes de una misma pelea se agrupan conservando sus fuentes.</p></div><span class="badge orange">REPORTES DE FUENTES</span></div>
+        <aside id="rumor-paused-notice" class="rumor-paused-notice" role="status" hidden>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M10 9v6M14 9v6"/></svg>
+          <div><h2>Rumores en pausa</h2><p id="rumor-paused-text">La búsqueda automática de rumores está detenida. No aparecerán rumores nuevos hasta que se reactive.</p><p>Para lo que ya es oficial, consulta <a href="#eventos">Carteleras</a>.</p></div>
+        </aside>
         <p class="data-note">Un rumor no es un anuncio oficial. Consulta las publicaciones originales y las confirmaciones disponibles.</p>
         <details id="rumor-review" class="panel rumor-review-panel" hidden><summary>Revisión local de candidatos</summary><p class="data-note">Selecciona twitterapi-candidates.json de la carpeta .ufcinfo-data para revisar las publicaciones agrupadas. El archivo se queda en este navegador; aprobar un grupo no lo publica.</p><label class="outline-button small rumor-review-upload">Importar candidatos<input id="rumor-candidate-file" type="file" accept="application/json,.json,.txt,text/plain"></label><button id="rumor-review-export" class="button small" disabled>Exportar grupos aprobados</button><p id="rumor-review-status" class="data-note" role="status" aria-live="polite"></p><div id="rumor-review-list"></div></details>
         <div class="toolbar rumor-toolbar">

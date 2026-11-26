@@ -1,4 +1,4 @@
-// Interface copy of the account privacy tools, legal links and share buttons.
+// Interface copy of the account privacy tools, legal links, share buttons, home legends and paused rumours.
 export const privacyCopy = {
  "en": {
   "TUS DATOS": "YOUR DATA",
@@ -20,7 +20,17 @@ export const privacyCopy = {
   "Compartir cartelera": "Share fight card",
   "Enlace copiado. Ya puedes pegarlo donde quieras.": "Link copied. You can paste it anywhere.",
   "No se ha podido copiar. Enlace:": "Could not copy. Link:",
-  "La velada compartida no está disponible en los datos actuales.": "The shared event is not available in the current data."
+  "La velada compartida no está disponible en los datos actuales.": "The shared event is not available in the current data.",
+  "DEL SALÓN DE LEYENDAS": "FROM THE HALL OF LEGENDS",
+  "Los que hicieron historia.": "The ones who made history.",
+  "Ver el Salón de leyendas ›": "See the Hall of legends ›",
+  "Rumores en pausa": "Rumours paused",
+  "En pausa": "Paused",
+  "La búsqueda automática de rumores está detenida.": "The automatic rumour search is stopped.",
+  "Lo que ves son publicaciones recogidas hasta el": "What you see are posts collected up to",
+  "no aparecerán rumores nuevos hasta que se reactive.": "no new rumours will appear until it is resumed.",
+  "No aparecerán rumores nuevos hasta que se reactive.": "No new rumours will appear until it is resumed.",
+  "Para lo que ya es oficial, consulta": "For what is already official, see"
  },
  "ca": {
   "TUS DATOS": "LES TEVES DADES",
@@ -42,6 +52,16 @@ export const privacyCopy = {
   "Compartir cartelera": "Comparteix la cartellera",
   "Enlace copiado. Ya puedes pegarlo donde quieras.": "Enllaç copiat. Ja el pots enganxar on vulguis.",
   "No se ha podido copiar. Enlace:": "No s’ha pogut copiar. Enllaç:",
-  "La velada compartida no está disponible en los datos actuales.": "La vetllada compartida no està disponible a les dades actuals."
+  "La velada compartida no está disponible en los datos actuales.": "La vetllada compartida no està disponible a les dades actuals.",
+  "DEL SALÓN DE LEYENDAS": "DEL SALÓ DE LLEGENDES",
+  "Los que hicieron historia.": "Els que van fer història.",
+  "Ver el Salón de leyendas ›": "Mostra el Saló de llegendes ›",
+  "Rumores en pausa": "Rumors en pausa",
+  "En pausa": "En pausa",
+  "La búsqueda automática de rumores está detenida.": "La cerca automàtica de rumors està aturada.",
+  "Lo que ves son publicaciones recogidas hasta el": "El que veus són publicacions recollides fins al",
+  "no aparecerán rumores nuevos hasta que se reactive.": "no apareixeran rumors nous fins que es reactivi.",
+  "No aparecerán rumores nuevos hasta que se reactive.": "No apareixeran rumors nous fins que es reactivi.",
+  "Para lo que ya es oficial, consulta": "Per al que ja és oficial, consulta"
  }
 };

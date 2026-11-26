@@ -47,7 +47,7 @@ import {
   toast,
   boutDivisionLabel,
 } from "./utils.js";
-import { legendsHallHeader, legendCard, sortLegends, filterLegends } from "./legends-hall.js";
+import { legendsHallHeader, legendCard, sortLegends, filterLegends, dailyLegends } from "./legends-hall.js";
 import { initializeLab } from "./lab.js";
 import { initializeRankings, rankingCategories } from "./rankings.js";
 import {
@@ -233,6 +233,7 @@ async function copyBoutLink(button) {
 }
 function renderOverview() {
   $("#fighter-count").textContent = String(directoryFighters.length).padStart(2, "0");
+  $("#home-legends").innerHTML = dailyLegends(directoryFighters.filter(isLegend)).map(f => legendCard(f, followButton(f, true))).join("");
   $("#event-count").textContent = String(availableOfficialEvents().length).padStart(
     2,
     "0",
@@ -552,6 +553,14 @@ document.addEventListener("click", (event) => {
   const calendar = event.target.closest("[data-save-event]");
   if (calendar) {
     exportCalendar(calendar.dataset.saveEvent);
+    return;
+  }
+  const legendsLink = event.target.closest("[data-open-legends]");
+  if (legendsLink) {
+    // Opens Luchadores with the Legends collection selected.
+    event.preventDefault();
+    location.hash = "luchadores";
+    document.querySelector('[data-fighter-scope="legend"]').click();
     return;
   }
   const share = event.target.closest("[data-share-path]");

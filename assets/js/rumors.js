@@ -83,6 +83,17 @@ export function initializeRumors() {
     const list = filterRumors(feed, {query:$('#rumor-search').value, language:$('#rumor-language').value, source:$('#rumor-source').value, status:$('#rumor-status').value});
     const groups=filterGroups(groupFeed,feed.sources,{query:$('#rumor-search').value,language:$('#rumor-language').value,source:$('#rumor-source').value,status:$('#rumor-status').value});
     $('#rumor-search-status').textContent = rumorSearchStatus(groupFeed);
+    // Paused search: a visible notice in the section and a tag next to its menu link.
+    const paused = groupFeed.paused === true;
+    $('#rumor-paused-notice').hidden = !paused;
+    if (paused) $('#rumor-paused-text').textContent = validDate(groupFeed.lastSearchedAt)
+      ? `La búsqueda automática de rumores está detenida. Lo que ves son publicaciones recogidas hasta el ${formatDate(groupFeed.lastSearchedAt)}; no aparecerán rumores nuevos hasta que se reactive.`
+      : 'La búsqueda automática de rumores está detenida. No aparecerán rumores nuevos hasta que se reactive.';
+    document.querySelectorAll('[data-nav="rumores"]').forEach(link => {
+      let tag = link.querySelector('.nav-paused-tag');
+      if (paused && !tag) link.insertAdjacentHTML('beforeend', ' <span class="nav-paused-tag">En pausa</span>');
+      if (!paused) tag?.remove();
+    });
     $('#rumor-count').textContent = `${list.length+groups.length} reportes`;
     $('#rumor-feed-status').textContent = unavailable ? 'No se pudo comprobar una actualización. Se conservan las últimas publicaciones cargadas.' : feed.lastOfficialCheckAt ? `Última comprobación de confirmaciones oficiales: ${formatDate(feed.lastOfficialCheckAt)} · ${formatTime(feed.lastOfficialCheckAt)}.` : 'Todavía no hay una comprobación de confirmaciones oficiales disponible.';
     const cards=[...list.map(r=>({key:`rumor:${r.id}`,date:r.publishedAt,html:rumorCard(r,feed.sources)})),...groups.map(group=>({key:`group:${group.id}`,date:group.publishedAt,html:groupCard(group,feed.sources)}))].sort((a,b)=>Date.parse(b.date)-Date.parse(a.date));

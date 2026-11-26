@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 globalThis.localStorage = { getItem() {}, setItem() {} };
-const { sortLegends, filterLegends, legendTagline, legendCard, legendsHallHeader, legendWing } = await import('../assets/js/legends-hall.js');
+const { sortLegends, filterLegends, legendTagline, legendCard, legendsHallHeader, legendWing, dailyLegends } = await import('../assets/js/legends-hall.js');
 const { directoryFighters } = await import('../assets/js/fighter-directory.js');
 const { isLegend } = await import('../assets/js/fighter-legacy.js');
 const { legendNotes } = await import('../assets/js/i18n/legend-notes.js');
@@ -44,4 +44,9 @@ assert.match(card, /assets\/images\/legends\/ufc-anderson-silva\.jpg/);
 const header = legendsHallHeader(legends, 'modern');
 assert.match(header, /data-legend-wing="modern" aria-pressed="true"/);
 assert.match(header, new RegExp(`<dd>${legends.length}</dd>`));
+// Home page: three different legends per day, the same all day, and a different set the next day.
+const today = dailyLegends(legends, new Date(2026, 10, 26, 9)), later = dailyLegends(legends, new Date(2026, 10, 26, 23));
+assert.equal(new Set(today.map(f => f.id)).size, 3);
+assert.deepEqual(today.map(f => f.id), later.map(f => f.id));
+assert.notDeepEqual(dailyLegends(legends, new Date(2026, 10, 27, 9)).map(f => f.id), today.map(f => f.id));
 console.log(`PASS: ${legends.length} leyendas con foto, nota traducida, orden por año de ingreso y filtros por ala`);

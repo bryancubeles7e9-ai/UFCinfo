@@ -131,3 +131,7 @@ Documentación del proveedor: https://docs.twitterapi.io/api-reference/endpoint/
 ## Pausa
 
 `scripts/rumor-sync.config.json` (`"enabled"`) es el interruptor. Con `false`, el workflow `rumor-sync.yml` termina sin consultar TwitterAPI.io ni fallar, sigue retirando rumores confirmados por UFC.com y el vigilante trata la falta de búsquedas como aviso. El campo `"paused": true` de `assets/data/ufc-rumor-groups.json` muestra en la web «Búsqueda de rumores en pausa»; la primera búsqueda real tras reactivar el interruptor lo elimina.
+
+## Aviso de pausa en la web (26 de noviembre de 2026)
+
+Mientras `ufc-rumor-groups.json` tenga `"paused": true`, la sección Rumores muestra arriba un aviso destacado («Rumores en pausa») con la fecha de la última búsqueda y un enlace a Carteleras, y el menú añade la etiqueta «En pausa» junto a Rumores. Al reactivar la búsqueda, `sync-rumors.mjs` elimina `paused` y el aviso y la etiqueta desaparecen solos.
