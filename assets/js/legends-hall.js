@@ -6,9 +6,9 @@ import { fullName } from './data.js';
 export const legendWings = { modern: 'Ala moderna', pioneer: 'Ala de pioneros', ufcinfo: 'Selección UFCinfo' };
 export const legendWing = fighter => fighter.hallOfFame?.wing || 'ufcinfo';
 
-// Most recent inductees first; UFCinfo's own selection after the Hall of Fame members.
+// UFCinfo's selection of recent retirements first, then Hall of Fame members by induction year.
 export function sortLegends(list) {
-  const year = f => f.hallOfFame?.inducted || (legendWing(f) === 'ufcinfo' ? -1 : 0);
+  const year = f => legendWing(f) === 'ufcinfo' ? 10000 + (f.hallOfFame?.retired || 0) : f.hallOfFame?.inducted || 0;
   return [...list].sort((a, b) => year(b) - year(a) || fullName(a).localeCompare(fullName(b), 'es'));
 }
 
@@ -18,7 +18,7 @@ export function filterLegends(list, wing) {
 
 export function legendTagline(fighter) {
   const wing = legendWing(fighter);
-  if (wing === 'ufcinfo') return 'Selección UFCinfo';
+  if (wing === 'ufcinfo') return ['Selección UFCinfo', fighter.hallOfFame?.retired && `Retiro en ${fighter.hallOfFame.retired}`].filter(Boolean).join(' · ');
   return ['Salón de la Fama de UFC', legendWings[wing], fighter.hallOfFame?.inducted].filter(Boolean).join(' · ');
 }
 
@@ -44,6 +44,11 @@ export function legendsHallHeader(legends, wing = 'all') {
     <div class="legends-hall-filters" role="group" aria-label="Filtrar leyendas por ala del Salón de la Fama">${chips}</div>`;
 }
 
+export function legacyHighlights(fighter) {
+  const items = fighter.legacyHighlights || [];
+  return items.length ? `<ul class="legacy-highlights" aria-label="Momentos clave">${items.map(item => `<li>${esc(item)}</li>`).join('')}</ul>` : '';
+}
+
 export function legendCard(fighter, follow = '') {
   const image = fighter.hallOfFame?.image || fighter.image || 'assets/images/fighter-placeholder.svg';
   const name = fullName(fighter);
@@ -61,6 +66,7 @@ export function legendCard(fighter, follow = '') {
       <p class="legend-card-meta">${esc(fighter.division || '')}${fighter.record && fighter.record !== 'No indicado' ? ` · <span translate="no">${esc(fighter.record)}</span>` : ''}</p>
       ${belts ? `<ul class="legend-card-belts" aria-label="Cinturones de UFC">${belts}</ul>` : ''}
       ${fighter.legacyNote ? `<p class="legend-card-note">${esc(fighter.legacyNote)}</p>` : ''}
+      ${legacyHighlights(fighter)}
     </div>
   </article>`;
 }

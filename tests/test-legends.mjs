@@ -21,17 +21,21 @@ for (const legend of reviewed) {
 const legends = directoryFighters.filter(isLegend);
 assert.ok(legends.length >= 40);
 
-// Most recent inductees first; UFCinfo's own selection after the Hall of Fame.
+// UFCinfo's recent retirements first, then the Hall of Fame by induction year.
 const sorted = sortLegends(legends);
 const years = sorted.map(f => f.hallOfFame?.inducted || 0).filter(Boolean);
 assert.deepEqual(years, [...years].sort((a, b) => b - a));
-assert.equal(legendWing(sorted.at(-1)), 'ufcinfo');
+assert.equal(legendWing(sorted[0]), 'ufcinfo');
+assert.ok(sorted.slice(0, 2).every(f => legendWing(f) === 'ufcinfo'));
 assert.equal(filterLegends(legends, 'pioneer').every(f => f.hallOfFame.wing === 'pioneer'), true);
 assert.equal(filterLegends(legends, 'all').length, legends.length);
 
 const gracie = byId.get('ufc-royce-gracie');
 assert.equal(legendTagline(gracie), 'Salón de la Fama de UFC · Ala de pioneros · 2003');
-assert.equal(legendTagline(byId.get('ufc-dustin-poirier')), 'Selección UFCinfo');
+assert.equal(legendTagline(byId.get('ufc-dustin-poirier')), 'Selección UFCinfo · Retiro en 2025');
+const jones = byId.get('ufc-jon-jones');
+assert.ok(isLegend(jones) && jones.championships.length === 2);
+assert.match(legendCard(jones), /Campeón más joven de la historia de UFC/);
 assert.equal(legendTagline(byId.get('ufc-robbie-lawler')), 'Salón de la Fama de UFC · Ala moderna');
 const card = legendCard(byId.get('ufc-anderson-silva'));
 assert.match(card, /data-profile="ufc-anderson-silva"/);

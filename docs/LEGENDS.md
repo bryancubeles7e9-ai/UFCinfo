@@ -20,3 +20,9 @@ La colección pasa de 7 a 41 leyendas: todos los luchadores retirados del **Sal�
 - **Aplicar cambios:** `python3 scripts/import-legends.py` importa los perfiles que falten desde UFC.com, marca a cada uno como leyenda retirada, guarda la foto del Salón de la Fama en `assets/images/legends/` (se usa también como retrato si UFC no publica uno) y genera las traducciones en `assets/js/i18n/legend-notes.js`. Con `--check` solo comprueba en UFC.com que nadie haya vuelto a competir. Después conviene ejecutar `python3 scripts/optimize-images.py`.
 - **Interfaz:** en Luchadores › Leyendas aparece el Salón de leyendas, con cifras, filtros por ala y una galería ordenada por año de ingreso. La ficha muestra la foto, el ala y el año, la nota y el enlace al Salón de la Fama.
 - **Nuevos miembros:** cuando UFC anuncie una nueva promoción, se añade su entrada a `docs/legends.json` (con la nota y sus traducciones) y se vuelve a ejecutar el script. `tests/test-legends.mjs` falla si a alguna leyenda le falta la foto, la nota o una traducción.
+
+## Selección UFCinfo: retiradas recientes (26 de noviembre de 2026)
+
+Dustin Poirier y Jon Jones forman la selección propia de UFCinfo y aparecen primero en el Salón de leyendas, con el año de retiro (2025), una nota y sus momentos clave en tres idiomas. Jones tiene sus cinturones del peso semipesado y del peso pesado; el título de Poirier era interino, así que figura en la nota y no como cinturón absoluto.
+
+UFC.com todavía los lista como «Active», aunque ninguno ha vuelto a pelear: Poirier se despidió en UFC 318 (julio de 2025) y Jones dejó vacante el título del peso pesado en junio de 2025. El campo `retirementReviewed` de `docs/legends.json` deja constancia de esa revisión manual con fecha, y solo con él el script acepta a un luchador que UFC.com marca como activo. Si alguno vuelve a competir, hay que quitarlo de la lista.

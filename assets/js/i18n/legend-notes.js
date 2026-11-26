@@ -40,7 +40,17 @@ export const legendNotes = {
   "Tres veces campeón del peso pesado y dos del semipesado: el primer campeón de UFC en dos categorías.": "Three-time heavyweight and two-time light heavyweight champion: the first UFC champion in two divisions.",
   "Campeón de la Superfight de UFC en 1996 y ganador del torneo Ultimate Ultimate 95; el primero en recibir un cinturón de UFC.": "UFC Superfight champion in 1996 and Ultimate Ultimate 95 tournament winner; the first fighter to receive a UFC belt.",
   "Primer campeón de la Superfight de UFC y rey de Pancrase; su rivalidad con Royce Gracie marcó los inicios de UFC.": "First UFC Superfight champion and King of Pancrase; his rivalry with Royce Gracie defined UFC’s beginnings.",
-  "Ganó el primer torneo de UFC en noviembre de 1993 con jiu-jitsu brasileño y tres de los cuatro primeros torneos.": "Won the first UFC tournament in November 1993 with Brazilian jiu-jitsu, and three of the first four tournaments."
+  "Ganó el primer torneo de UFC en noviembre de 1993 con jiu-jitsu brasileño y tres de los cuatro primeros torneos.": "Won the first UFC tournament in November 1993 with Brazilian jiu-jitsu, and three of the first four tournaments.",
+  "«The Diamond» ganó el título interino del peso ligero ante Max Holloway en UFC 236 (2019), venció dos veces a Conor McGregor en 2021 y disputó el título indiscutible ante Khabib Nurmagomedov, Charles Oliveira e Islam Makhachev. Se despidió en UFC 318 (julio de 2025), en su Luisiana natal, con el cinturón BMF en juego.": "“The Diamond” won the interim lightweight title against Max Holloway at UFC 236 (2019), beat Conor McGregor twice in 2021 and fought for the undisputed title against Khabib Nurmagomedov, Charles Oliveira and Islam Makhachev. He said goodbye at UFC 318 (July 2025), in his native Louisiana, with the BMF belt on the line.",
+  "«Bones», el campeón más joven de la historia de UFC y, para muchos aficionados, el mejor de todos los tiempos. Encadenó ocho defensas del peso semipesado en su primer reinado, conquistó el peso pesado en UFC 285 y lo defendió ante Stipe Miocic en UFC 309. Dejó vacante el título en junio de 2025.": "“Bones”, the youngest champion in UFC history and, for many fans, the greatest of all time. He put together eight light heavyweight title defenses in his first reign, won the heavyweight title at UFC 285 and defended it against Stipe Miocic at UFC 309. He vacated the title in June 2025.",
+  "Campeón interino del peso ligero en UFC 236 (2019)": "Interim lightweight champion at UFC 236 (2019)",
+  "Dos victorias sobre Conor McGregor (2021)": "Two wins over Conor McGregor (2021)",
+  "Tres combates por el título indiscutible": "Three undisputed title fights",
+  "Último combate: UFC 318, en Luisiana": "Final fight: UFC 318, in Louisiana",
+  "Campeón más joven de la historia de UFC": "Youngest champion in UFC history",
+  "8 defensas en su primer reinado del peso semipesado": "8 defenses in his first light heavyweight reign",
+  "Campeón del peso pesado (UFC 285, 2023)": "Heavyweight champion (UFC 285, 2023)",
+  "Su primer combate con Gustafsson está en el Salón de la Fama": "His first fight with Gustafsson is in the Hall of Fame"
  },
  "ca": {
   "Dos veces campeón del peso wélter y campeón del peso medio de UFC; uno de los luchadores más completos y dominantes de la historia.": "Dues vegades campió del pes wèlter i campió del pes mitjà d’UFC; un dels lluitadors més complets i dominants de la història.",
@@ -82,6 +92,16 @@ export const legendNotes = {
   "Tres veces campeón del peso pesado y dos del semipesado: el primer campeón de UFC en dos categorías.": "Tres vegades campió del pes pesant i dues del semipesant: el primer campió d’UFC en dues categories.",
   "Campeón de la Superfight de UFC en 1996 y ganador del torneo Ultimate Ultimate 95; el primero en recibir un cinturón de UFC.": "Campió de la Superfight d’UFC el 1996 i guanyador del torneig Ultimate Ultimate 95; el primer a rebre un cinturó d’UFC.",
   "Primer campeón de la Superfight de UFC y rey de Pancrase; su rivalidad con Royce Gracie marcó los inicios de UFC.": "Primer campió de la Superfight d’UFC i rei de Pancrase; la seva rivalitat amb Royce Gracie va marcar els inicis d’UFC.",
-  "Ganó el primer torneo de UFC en noviembre de 1993 con jiu-jitsu brasileño y tres de los cuatro primeros torneos.": "Va guanyar el primer torneig d’UFC el novembre del 1993 amb jiu-jitsu brasiler i tres dels quatre primers tornejos."
+  "Ganó el primer torneo de UFC en noviembre de 1993 con jiu-jitsu brasileño y tres de los cuatro primeros torneos.": "Va guanyar el primer torneig d’UFC el novembre del 1993 amb jiu-jitsu brasiler i tres dels quatre primers tornejos.",
+  "«The Diamond» ganó el título interino del peso ligero ante Max Holloway en UFC 236 (2019), venció dos veces a Conor McGregor en 2021 y disputó el título indiscutible ante Khabib Nurmagomedov, Charles Oliveira e Islam Makhachev. Se despidió en UFC 318 (julio de 2025), en su Luisiana natal, con el cinturón BMF en juego.": "«The Diamond» va guanyar el títol interí del pes lleuger contra Max Holloway a UFC 236 (2019), va vèncer dues vegades Conor McGregor el 2021 i va disputar el títol indiscutible contra Khabib Nurmagomedov, Charles Oliveira i Islam Makhachev. Es va acomiadar a UFC 318 (juliol del 2025), a la seva Louisiana natal, amb el cinturó BMF en joc.",
+  "«Bones», el campeón más joven de la historia de UFC y, para muchos aficionados, el mejor de todos los tiempos. Encadenó ocho defensas del peso semipesado en su primer reinado, conquistó el peso pesado en UFC 285 y lo defendió ante Stipe Miocic en UFC 309. Dejó vacante el título en junio de 2025.": "«Bones», el campió més jove de la història d’UFC i, per a molts aficionats, el millor de tots els temps. Va encadenar vuit defenses del pes semipesant en el primer regnat, va conquerir el pes pesant a UFC 285 i el va defensar contra Stipe Miocic a UFC 309. Va deixar vacant el títol el juny del 2025.",
+  "Campeón interino del peso ligero en UFC 236 (2019)": "Campió interí del pes lleuger a UFC 236 (2019)",
+  "Dos victorias sobre Conor McGregor (2021)": "Dues victòries sobre Conor McGregor (2021)",
+  "Tres combates por el título indiscutible": "Tres combats pel títol indiscutible",
+  "Último combate: UFC 318, en Luisiana": "Últim combat: UFC 318, a Louisiana",
+  "Campeón más joven de la historia de UFC": "Campió més jove de la història d’UFC",
+  "8 defensas en su primer reinado del peso semipesado": "8 defenses en el primer regnat del pes semipesant",
+  "Campeón del peso pesado (UFC 285, 2023)": "Campió del pes pesant (UFC 285, 2023)",
+  "Su primer combate con Gustafsson está en el Salón de la Fama": "El seu primer combat amb Gustafsson és al Saló de la Fama"
  }
 };
