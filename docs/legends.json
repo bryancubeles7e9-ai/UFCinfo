@@ -1354,5 +1354,177 @@
   "story": "Jon «Bones» Jones fue el campeón más joven de la historia de UFC al ganar el peso semipesado en 2011, con 23 años, y encadenó ocho defensas en su primer reinado. Más tarde conquistó el peso pesado en UFC 285 y lo defendió ante Stipe Miocic en UFC 309. Con un récord de 28-1, cuya única derrota fue una descalificación, muchos lo consideran el mejor de todos los tiempos.",
   "storyEn": "Jon “Bones” Jones became the youngest champion in UFC history when he won the light heavyweight title in 2011, aged 23, and put together eight defenses in his first reign. He later won the heavyweight title at UFC 285 and defended it against Stipe Miocic at UFC 309. With a 28-1 record, whose only loss was a disqualification, many consider him the greatest of all time.",
   "storyCa": "Jon «Bones» Jones va ser el campió més jove de la història d’UFC en guanyar el pes semipesant el 2011, amb 23 anys, i va encadenar vuit defenses en el primer regnat. Més tard va conquerir el pes pesant a UFC 285 i el va defensar contra Stipe Miocic a UFC 309. Amb un rècord de 28-1, amb una única derrota per desqualificació, molts el consideren el millor de tots els temps."
+ },
+ {
+  "id": "ufc-stipe-miocic",
+  "name": "Stipe Miocic",
+  "source": "https://www.ufc.com/athlete/stipe-miocic",
+  "wing": "ufcinfo",
+  "inducted": null,
+  "retirementReviewed": "2026-11-26: UFC.com lo marca como «Retired»; elegido por el responsable para la selección UFCinfo.",
+  "legendSource": "https://www.ufc.com/athlete/stipe-miocic",
+  "hallOfFameImage": "https://www.ufc.com/images/2024-12/111424-Stipe-Miocic-UFC-309-Press-Conference-HERO-GettyImages-2184832908.jpg",
+  "retired": 2024,
+  "note": "Dos veces campeón del peso pesado, con tres defensas seguidas: el récord de la división.",
+  "noteEn": "Two-time heavyweight champion, with three straight defenses: the division record.",
+  "noteCa": "Dues vegades campió del pes pesant, amb tres defenses seguides: el rècord de la divisió.",
+  "story": "Stipe Miocic, bombero en su Cleveland natal, ganó el título del peso pesado en 2016 al noquear a Fabrício Werdum en Brasil. Lo defendió ante Alistair Overeem, Junior dos Santos y Francis Ngannou, tres defensas seguidas, récord de la división. Perdió el cinturón ante Daniel Cormier en 2018, lo recuperó en la revancha de 2019 y se retiró en 2024 tras pelear con Jon Jones.",
+  "storyEn": "Stipe Miocic, a firefighter in his native Cleveland, won the heavyweight title in 2016 by knocking out Fabrício Werdum in Brazil. He defended it against Alistair Overeem, Junior dos Santos and Francis Ngannou, three straight defenses, a division record. He lost the belt to Daniel Cormier in 2018, won it back in their 2019 rematch and retired in 2024 after fighting Jon Jones.",
+  "storyCa": "Stipe Miocic, bomber a la seva Cleveland natal, va guanyar el títol del pes pesant el 2016 en noquejar Fabrício Werdum al Brasil. El va defensar contra Alistair Overeem, Junior dos Santos i Francis Ngannou, tres defenses seguides, rècord de la divisió. Va perdre el cinturó contra Daniel Cormier el 2018, el va recuperar a la revenja del 2019 i es va retirar el 2024 després de lluitar amb Jon Jones.",
+  "highlights": [
+   "Dos veces campeón del peso pesado",
+   "3 defensas seguidas, récord de la división",
+   "Trilogía con Daniel Cormier"
+  ],
+  "highlightsEn": [
+   "Two-time heavyweight champion",
+   "3 straight defenses, a division record",
+   "Trilogy with Daniel Cormier"
+  ],
+  "highlightsCa": [
+   "Dues vegades campió del pes pesant",
+   "3 defenses seguides, rècord de la divisió",
+   "Trilogia amb Daniel Cormier"
+  ],
+  "championships": [
+   "Peso pesado"
+  ]
+ },
+ {
+  "id": "ufc-glover-teixeira",
+  "name": "Glover Teixeira",
+  "source": "https://www.ufc.com/athlete/glover-teixeira",
+  "wing": "ufcinfo",
+  "inducted": null,
+  "retirementReviewed": "2026-11-26: UFC.com lo marca como «Retired»; elegido por el responsable para la selección UFCinfo.",
+  "legendSource": "https://www.ufc.com/athlete/glover-teixeira",
+  "hallOfFameImage": "https://www.ufc.com/images/2023-01/012123-Glover-Teixeira-Octagon-Interview.jpg",
+  "retired": 2023,
+  "note": "Campeón del peso semipesado en 2021, con 42 años, tras casi una década de carrera en UFC.",
+  "noteEn": "Light heavyweight champion in 2021, aged 42, after almost a decade in UFC.",
+  "noteCa": "Campió del pes semipesant el 2021, amb 42 anys, després de gairebé una dècada a UFC.",
+  "story": "Glover Teixeira llegó a UFC en 2012 y peleó por el título del peso semipesado ante Jon Jones en 2014. Siete años después, con 42, sometió a Jan Błachowicz para ser campeón por fin. Perdió el cinturón ante Jiří Procházka en una de las grandes guerras de 2022 y se despidió en Río de Janeiro en 2023; hoy entrena a otros luchadores.",
+  "storyEn": "Glover Teixeira arrived in UFC in 2012 and fought Jon Jones for the light heavyweight title in 2014. Seven years later, at 42, he submitted Jan Błachowicz to finally become champion. He lost the belt to Jiří Procházka in one of the great wars of 2022 and said goodbye in Rio de Janeiro in 2023; today he coaches other fighters.",
+  "storyCa": "Glover Teixeira va arribar a UFC el 2012 i va lluitar pel títol del pes semipesant contra Jon Jones el 2014. Set anys després, amb 42, va sotmetre Jan Błachowicz per ser campió per fi. Va perdre el cinturó contra Jiří Procházka en una de les grans guerres del 2022 i es va acomiadar a Rio de Janeiro el 2023; avui entrena altres lluitadors.",
+  "highlights": [
+   "Campeón del peso semipesado (2021-2022)",
+   "Campeón con 42 años",
+   "Su guerra con Jiří Procházka (2022)"
+  ],
+  "highlightsEn": [
+   "Light heavyweight champion (2021-2022)",
+   "Champion at 42",
+   "His war with Jiří Procházka (2022)"
+  ],
+  "highlightsCa": [
+   "Campió del pes semipesant (2021-2022)",
+   "Campió amb 42 anys",
+   "La seva guerra amb Jiří Procházka (2022)"
+  ],
+  "championships": [
+   "Peso semipesado"
+  ]
+ },
+ {
+  "id": "ufc-dan-henderson",
+  "name": "Dan Henderson",
+  "source": "https://www.ufc.com/athlete/dan-henderson",
+  "wing": "ufcinfo",
+  "inducted": null,
+  "retirementReviewed": "2026-11-26: UFC.com lo marca como «Retired»; elegido por el responsable para la selección UFCinfo.",
+  "legendSource": "https://www.ufc.com/athlete/dan-henderson",
+  "hallOfFameImage": "https://www.ufc.com/images/image/photo_galleries/139_12a/12_RuaHenderson_03.jpg",
+  "retired": 2016,
+  "note": "Doble campeón de PRIDE a la vez y ganador del torneo de UFC 17; su combate con Shogun está en el Salón de la Fama.",
+  "noteEn": "Simultaneous two-division PRIDE champion and UFC 17 tournament winner; his fight with Shogun is in the Hall of Fame.",
+  "noteCa": "Doble campió de PRIDE alhora i guanyador del torneig d’UFC 17; el seu combat amb Shogun és al Saló de la Fama.",
+  "story": "Dan Henderson, luchador olímpico, ganó el torneo de peso medio de UFC 17 en 1998 y en PRIDE fue el primero en tener dos cinturones a la vez. Con su temida «H-Bomb» noqueó a Michael Bisping en UFC 100, y su guerra con Shogun Rua en 2011 entró en el Salón de la Fama. Se despidió en 2016, con 46 años, peleando por el título del peso medio.",
+  "storyEn": "Olympic wrestler Dan Henderson won the UFC 17 middleweight tournament in 1998 and in PRIDE became the first to hold two belts at once. With his feared “H-Bomb” he knocked out Michael Bisping at UFC 100, and his 2011 war with Shogun Rua entered the Hall of Fame. He said goodbye in 2016, aged 46, fighting for the middleweight title.",
+  "storyCa": "Dan Henderson, lluitador olímpic, va guanyar el torneig de pes mitjà d’UFC 17 el 1998 i a PRIDE va ser el primer a tenir dos cinturons alhora. Amb la seva temuda «H-Bomb» va noquejar Michael Bisping a UFC 100, i la seva guerra amb Shogun Rua el 2011 va entrar al Saló de la Fama. Es va acomiadar el 2016, amb 46 anys, lluitant pel títol del pes mitjà.",
+  "highlights": [
+   "Ganador del torneo de UFC 17",
+   "Doble campeón de PRIDE a la vez",
+   "Su combate con Shogun, en el Salón de la Fama",
+   "Luchador olímpico"
+  ],
+  "highlightsEn": [
+   "UFC 17 tournament winner",
+   "Simultaneous two-division PRIDE champion",
+   "His fight with Shogun, in the Hall of Fame",
+   "Olympic wrestler"
+  ],
+  "highlightsCa": [
+   "Guanyador del torneig d’UFC 17",
+   "Doble campió de PRIDE alhora",
+   "El seu combat amb Shogun, al Saló de la Fama",
+   "Lluitador olímpic"
+  ]
+ },
+ {
+  "id": "ufc-brock-lesnar",
+  "name": "Brock Lesnar",
+  "source": "https://www.ufc.com/athlete/brock-lesnar",
+  "wing": "ufcinfo",
+  "inducted": null,
+  "retirementReviewed": "2026-11-26: UFC.com lo marca como «Retired»; elegido por el responsable para la selección UFCinfo.",
+  "legendSource": "https://www.ufc.com/athlete/brock-lesnar",
+  "hallOfFameImage": "https://www.ufc.com/images/2022-04/07032010-Brock-Lesnar-Wins-Title-Hero-GettyImages-102613251.jpg",
+  "retired": 2016,
+  "note": "Campeón del peso pesado en su cuarto combate profesional y una de las mayores atracciones de la historia de UFC.",
+  "noteEn": "Heavyweight champion in his fourth professional fight and one of the biggest draws in UFC history.",
+  "noteCa": "Campió del pes pesant en el seu quart combat professional i una de les grans atraccions de la història d’UFC.",
+  "story": "Brock Lesnar, campeón universitario de lucha y estrella de la lucha libre, llegó a UFC en 2008 y en su cuarto combate profesional venció a Randy Couture para ser campeón del peso pesado. Lo defendió ante Frank Mir y Shane Carwin, al que sometió tras sobrevivir a un primer asalto durísimo. Perdió el título ante Cain Velasquez en 2010 y sus combates batieron récords de audiencia.",
+  "storyEn": "College wrestling champion and pro wrestling star Brock Lesnar arrived in UFC in 2008 and in his fourth professional fight beat Randy Couture to become heavyweight champion. He defended the title against Frank Mir and Shane Carwin, whom he submitted after surviving a brutal first round. He lost the title to Cain Velasquez in 2010, and his fights broke audience records.",
+  "storyCa": "Brock Lesnar, campió universitari de lluita i estrella de la lluita lliure professional, va arribar a UFC el 2008 i en el seu quart combat professional va vèncer Randy Couture per ser campió del pes pesant. El va defensar contra Frank Mir i Shane Carwin, a qui va sotmetre després de sobreviure a un primer assalt duríssim. Va perdre el títol contra Cain Velasquez el 2010, i els seus combats van batre rècords d’audiència.",
+  "highlights": [
+   "Campeón del peso pesado (2008-2010)",
+   "Campeón en su cuarto combate profesional",
+   "Remontada ante Shane Carwin en UFC 116"
+  ],
+  "highlightsEn": [
+   "Heavyweight champion (2008-2010)",
+   "Champion in his fourth professional fight",
+   "Comeback against Shane Carwin at UFC 116"
+  ],
+  "highlightsCa": [
+   "Campió del pes pesant (2008-2010)",
+   "Campió en el seu quart combat professional",
+   "Remuntada contra Shane Carwin a UFC 116"
+  ],
+  "championships": [
+   "Peso pesado"
+  ]
+ },
+ {
+  "id": "ufc-carlos-condit",
+  "name": "Carlos Condit",
+  "source": "https://www.ufc.com/athlete/carlos-condit",
+  "wing": "ufcinfo",
+  "inducted": null,
+  "retirementReviewed": "2026-11-26: UFC.com lo marca como «Retired»; elegido por el responsable para la selección UFCinfo.",
+  "legendSource": "https://www.ufc.com/athlete/carlos-condit",
+  "hallOfFameImage": "https://www.ufc.com/images/2021-09/091721-carlos-condit-retirement-thumbnail_GettyImages-1296748153.jpg",
+  "retired": 2021,
+  "note": "Campeón interino del peso wélter de UFC y campeón de WEC, protagonista de algunas de las peleas más intensas de su época.",
+  "noteEn": "Interim UFC welterweight champion and WEC champion, behind some of the most intense fights of his era.",
+  "noteCa": "Campió interí del pes wèlter d’UFC i campió de WEC, protagonista d’alguns dels combats més intensos de la seva època.",
+  "story": "Carlos «The Natural Born Killer» Condit fue campeón del peso wélter de WEC y en 2012 ganó el título interino de UFC ante Nick Diaz. Peleó por el título indiscutible ante Georges St-Pierre, al que llegó a derribar con una patada, y en 2016 perdió por decisión dividida ante Robbie Lawler en uno de los mejores combates del año. Se retiró en 2021.",
+  "storyEn": "Carlos “The Natural Born Killer” Condit was WEC welterweight champion and in 2012 won the interim UFC title against Nick Diaz. He fought Georges St-Pierre for the undisputed title, dropping him with a kick, and in 2016 lost a split decision to Robbie Lawler in one of the fights of the year. He retired in 2021.",
+  "storyCa": "Carlos «The Natural Born Killer» Condit va ser campió del pes wèlter de WEC i el 2012 va guanyar el títol interí d’UFC contra Nick Diaz. Va lluitar pel títol indiscutible contra Georges St-Pierre, a qui va arribar a tombar amb una puntada, i el 2016 va perdre per decisió dividida contra Robbie Lawler en un dels millors combats de l’any. Es va retirar el 2021.",
+  "highlights": [
+   "Campeón interino del peso wélter (2012)",
+   "Campeón del peso wélter de WEC",
+   "Guerra con Robbie Lawler en UFC 195"
+  ],
+  "highlightsEn": [
+   "Interim welterweight champion (2012)",
+   "WEC welterweight champion",
+   "War with Robbie Lawler at UFC 195"
+  ],
+  "highlightsCa": [
+   "Campió interí del pes wèlter (2012)",
+   "Campió del pes wèlter de WEC",
+   "Guerra amb Robbie Lawler a UFC 195"
+  ]
  }
 ]

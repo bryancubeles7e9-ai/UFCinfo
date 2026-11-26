@@ -4289,6 +4289,36 @@
    "title": "Jon Jones «Bones» — UFCinfo",
    "description": "Jon Jones: Peso pesado · récord 28-1-0. Leyenda retirada. Ficha, estadísticas, historial y próximos combates en UFCinfo.",
    "image": "assets/images/fighters/ufc-jon-jones.webp"
+  },
+  "stipe-miocic": {
+   "id": "ufc-stipe-miocic",
+   "title": "Stipe Miocic — UFCinfo",
+   "description": "Stipe Miocic: Peso pesado · récord 20-5-0. Leyenda retirada. Ficha, estadísticas, historial y próximos combates en UFCinfo.",
+   "image": "assets/images/fighters/ufc-stipe-miocic.webp"
+  },
+  "glover-teixeira": {
+   "id": "ufc-glover-teixeira",
+   "title": "Glover Teixeira — UFCinfo",
+   "description": "Glover Teixeira: Peso semipesado · récord 33-9-0. Leyenda retirada. Ficha, estadísticas, historial y próximos combates en UFCinfo.",
+   "image": "assets/images/fighters/ufc-glover-teixeira.webp"
+  },
+  "dan-henderson": {
+   "id": "ufc-dan-henderson",
+   "title": "Dan Henderson «Hendo» — UFCinfo",
+   "description": "Dan Henderson: Peso medio · récord 32-15-0. Leyenda retirada. Ficha, estadísticas, historial y próximos combates en UFCinfo.",
+   "image": "assets/images/fighters/ufc-dan-henderson.webp"
+  },
+  "brock-lesnar": {
+   "id": "ufc-brock-lesnar",
+   "title": "Brock Lesnar — UFCinfo",
+   "description": "Brock Lesnar: Peso pesado · récord 6-3-0. Leyenda retirada. Ficha, estadísticas, historial y próximos combates en UFCinfo.",
+   "image": "assets/images/fighters/ufc-brock-lesnar.webp"
+  },
+  "carlos-condit": {
+   "id": "ufc-carlos-condit",
+   "title": "Carlos Condit «The Natural Born Killer» — UFCinfo",
+   "description": "Carlos Condit: Peso wélter · récord 32-14-0. Leyenda retirada. Ficha, estadísticas, historial y próximos combates en UFCinfo.",
+   "image": "assets/images/fighters/ufc-carlos-condit.webp"
   }
  },
  "events": {
