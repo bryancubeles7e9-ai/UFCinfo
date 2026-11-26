@@ -1,0 +1,558 @@
+[
+ {
+  "id": "ufc-georges-st-pierre",
+  "name": "Georges St-Pierre",
+  "source": "https://www.ufc.com/athlete/georges-st-pierre",
+  "wing": "modern",
+  "inducted": 2021,
+  "note": "Dos veces campeón del peso wélter y campeón del peso medio de UFC; uno de los luchadores más completos y dominantes de la historia.",
+  "noteEn": "Two-time UFC welterweight champion and UFC middleweight champion; one of the most complete and dominant fighters in history.",
+  "noteCa": "Dues vegades campió del pes wèlter i campió del pes mitjà d’UFC; un dels lluitadors més complets i dominants de la història.",
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_GSt-Pierre_16x9.jpg"
+ },
+ {
+  "id": "ufc-khabib-nurmagomedov",
+  "name": "Khabib Nurmagomedov",
+  "source": "https://www.ufc.com/athlete/khabib-nurmagomedov",
+  "wing": "modern",
+  "inducted": 2022,
+  "note": "Campeón del peso ligero desde 2018; se retiró invicto con un récord de 29-0.",
+  "noteEn": "Lightweight champion from 2018; retired undefeated with a 29-0 record.",
+  "noteCa": "Campió del pes lleuger des del 2018; es va retirar invicte amb un rècord de 29-0.",
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_KNurmagomedov_16x9.jpg"
+ },
+ {
+  "id": "ufc-daniel-cormier",
+  "name": "Daniel Cormier",
+  "source": "https://www.ufc.com/athlete/daniel-cormier",
+  "wing": "modern",
+  "inducted": 2022,
+  "note": "Campeón del peso semipesado y del peso pesado de UFC, con ambos cinturones a la vez.",
+  "noteEn": "UFC light heavyweight and heavyweight champion, holding both belts at the same time.",
+  "noteCa": "Campió del pes semipesant i del pes pesant d’UFC, amb tots dos cinturons alhora.",
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_DCormier_16x9.jpg"
+ },
+ {
+  "id": "ufc-joanna-jedrzejczyk",
+  "name": "Joanna Jędrzejczyk",
+  "source": "https://www.ufc.com/athlete/joanna-jedrzejczyk",
+  "wing": "modern",
+  "inducted": 2024,
+  "note": "Campeona del peso paja de UFC y protagonista, frente a Zhang Weili, de un combate incluido en el Salón de la Fama.",
+  "noteEn": "UFC strawweight champion whose fight against Zhang Weili is in the Hall of Fame.",
+  "noteCa": "Campiona del pes palla d’UFC i protagonista, contra Zhang Weili, d’un combat inclòs al Saló de la Fama.",
+  "hallOfFameImage": "https://www.ufc.com/images/2024-06/5843261930_HOF_Jedrzejczyk_1920x1080-NoText-2.jpg"
+ },
+ {
+  "id": "ufc-frankie-edgar",
+  "name": "Frankie Edgar",
+  "source": "https://www.ufc.com/athlete/frankie-edgar",
+  "wing": "modern",
+  "inducted": 2024,
+  "note": "Campeón del peso ligero (2010-2012), con 8 bonificaciones a la pelea de la noche, la segunda mayor cifra de la historia de UFC.",
+  "noteEn": "Lightweight champion (2010-2012), with 8 Fight of the Night bonuses, the second most in UFC history.",
+  "noteCa": "Campió del pes lleuger (2010-2012), amb 8 bonificacions al combat de la nit, la segona xifra més alta de la història d’UFC.",
+  "hallOfFameImage": "https://www.ufc.com/images/image/2024-01/012024-Frankie-Edgar-HOF-THUMB.jpeg"
+ },
+ {
+  "id": "ufc-mauricio-rua",
+  "name": "Mauricio Rua",
+  "source": "https://www.ufc.com/athlete/mauricio-rua",
+  "wing": "modern",
+  "inducted": 2024,
+  "note": "Campeón del peso semipesado de UFC (2010-2011) y ganador del Grand Prix de peso medio de PRIDE en 2005.",
+  "noteEn": "UFC light heavyweight champion (2010-2011) and winner of the 2005 PRIDE middleweight Grand Prix.",
+  "noteCa": "Campió del pes semipesant d’UFC (2010-2011) i guanyador del Grand Prix de pes mitjà de PRIDE el 2005.",
+  "hallOfFameImage": "https://www.ufc.com/images/2024-06/5843276174_HOF_Rua_1920x1080-NoText.jpg"
+ },
+ {
+  "id": "ufc-dominick-cruz",
+  "name": "Dominick Cruz",
+  "source": "https://www.ufc.com/athlete/dominick-cruz",
+  "wing": "modern",
+  "inducted": 2026,
+  "note": "Primer campeón del peso gallo de UFC, coronado en WEC 53. Firmó el reinado más largo de la división: 1117 días.",
+  "noteEn": "First UFC bantamweight champion, crowned at WEC 53. Holds the longest reign in the division: 1,117 days.",
+  "noteCa": "Primer campió del pes gall d’UFC, coronat a WEC 53. Té el regnat més llarg de la divisió: 1.117 dies.",
+  "hallOfFameSource": "https://www.ufc.com/dominick-cruz-hall-of-fame",
+  "championships": [
+   "Peso gallo"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2026-01/10996086134_HOF_1920x1080-NoText_resized.jpg"
+ },
+ {
+  "id": "ufc-chris-weidman",
+  "name": "Chris Weidman",
+  "source": "https://www.ufc.com/athlete/chris-weidman",
+  "wing": "modern",
+  "inducted": 2026,
+  "note": "Conquistó el título del peso medio ante Anderson Silva en UFC 162 y venció también a Vitor Belfort y Lyoto Machida.",
+  "noteEn": "Won the middleweight title against Anderson Silva at UFC 162 and also beat Vitor Belfort and Lyoto Machida.",
+  "noteCa": "Va conquerir el títol del pes mitjà contra Anderson Silva a UFC 162 i també va vèncer Vitor Belfort i Lyoto Machida.",
+  "hallOfFameSource": "https://www.ufc.com/chris-weidman-hall-of-fame",
+  "championships": [
+   "Peso medio"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2026-05/DO-NOT-USE-050926-chris-weidman-hall-of-fame-announcement-HERO.jpg"
+ },
+ {
+  "id": "ufc-demetrious-johnson",
+  "name": "Demetrious Johnson",
+  "source": "https://www.ufc.com/athlete/demetrious-johnson",
+  "wing": "modern",
+  "inducted": 2026,
+  "note": "Primer campeón del peso mosca de UFC: 11 victorias seguidas con el título y el reinado más largo de la división, 2142 días.",
+  "noteEn": "First UFC flyweight champion: 11 straight title wins and the longest reign in the division, 2,142 days.",
+  "noteCa": "Primer campió del pes mosca d’UFC: 11 victòries seguides amb el títol i el regnat més llarg de la divisió, 2.142 dies.",
+  "hallOfFameSource": "https://www.ufc.com/demetrious-johnson-hall-of-fame",
+  "championships": [
+   "Peso mosca"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2026-03/11470730526_HOF_DemetriousJohnson_1920x1080-NoText.jpg"
+ },
+ {
+  "id": "ufc-robbie-lawler",
+  "name": "Robbie Lawler",
+  "source": "https://www.ufc.com/athlete/robbie-lawler",
+  "wing": "modern",
+  "inducted": null,
+  "note": "Campeón del peso wélter desde UFC 181 (2014); sus defensas ante Rory MacDonald y Carlos Condit fueron dos guerras a cinco asaltos.",
+  "noteEn": "Welterweight champion from UFC 181 (2014); his defenses against Rory MacDonald and Carlos Condit were two five-round wars.",
+  "noteCa": "Campió del pes wèlter des d’UFC 181 (2014); les seves defenses contra Rory MacDonald i Carlos Condit van ser dues guerres a cinc assalts.",
+  "hallOfFameSource": "https://www.ufc.com/hof/robbie-lawler-hall-of-fame",
+  "championships": [
+   "Peso wélter"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2025-06/8294478767_HOF_RobbieLawler_1920x1080-NoText.jpg"
+ },
+ {
+  "id": "ufc-jose-aldo",
+  "name": "José Aldo",
+  "source": "https://www.ufc.com/athlete/jose-aldo",
+  "wing": "modern",
+  "inducted": 2023,
+  "note": "Dos veces campeón del peso pluma de UFC y campeón de WEC; sus 7 defensas del título son récord de la división.",
+  "noteEn": "Two-time UFC featherweight champion and WEC champion; his 7 title defenses are a division record.",
+  "noteCa": "Dues vegades campió del pes ploma d’UFC i campió de WEC; les seves 7 defenses del títol són rècord de la divisió.",
+  "hallOfFameSource": "https://www.ufc.com/30/jose-aldo-hall-fame",
+  "championships": [
+   "Peso pluma"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_JAldo_16x9.jpg"
+ },
+ {
+  "id": "ufc-donald-cerrone",
+  "name": "Donald Cerrone",
+  "source": "https://www.ufc.com/athlete/donald-cerrone",
+  "wing": "modern",
+  "inducted": 2023,
+  "note": "«Cowboy» disputó 38 combates en UFC y comparte el récord de bonificaciones (18); es segundo en victorias (23) y finalizaciones (16).",
+  "noteEn": "“Cowboy” fought 38 times in UFC and shares the bonus record (18); he is second in wins (23) and finishes (16).",
+  "noteCa": "«Cowboy» va disputar 38 combats a UFC i comparteix el rècord de bonificacions (18); és segon en victòries (23) i finalitzacions (16).",
+  "hallOfFameSource": "https://www.ufc.com/30/donald-cowboy-cerrone-hall-fame",
+  "championships": [],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_DCerrone_16x9.jpg"
+ },
+ {
+  "id": "ufc-rashad-evans",
+  "name": "Rashad Evans",
+  "source": "https://www.ufc.com/athlete/rashad-evans",
+  "wing": "modern",
+  "inducted": 2019,
+  "note": "Ganador de la segunda temporada de The Ultimate Fighter y campeón del peso semipesado tras vencer a Forrest Griffin en UFC 92.",
+  "noteEn": "Winner of the second season of The Ultimate Fighter and light heavyweight champion after beating Forrest Griffin at UFC 92.",
+  "noteCa": "Guanyador de la segona temporada de The Ultimate Fighter i campió del pes semipesant després de vèncer Forrest Griffin a UFC 92.",
+  "hallOfFameSource": "https://www.ufc.com/30/rashad-evans-hall-fame",
+  "championships": [
+   "Peso semipesado"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_REvans_16x9.jpg"
+ },
+ {
+  "id": "ufc-michael-bisping",
+  "name": "Michael Bisping",
+  "source": "https://www.ufc.com/athlete/michael-bisping",
+  "wing": "modern",
+  "inducted": 2019,
+  "note": "Ganador de la tercera temporada de The Ultimate Fighter y primer británico campeón de UFC, en el peso medio (2016-2017).",
+  "noteEn": "Winner of the third season of The Ultimate Fighter and the first British UFC champion, at middleweight (2016-2017).",
+  "noteCa": "Guanyador de la tercera temporada de The Ultimate Fighter i primer britànic campió d’UFC, al pes mitjà (2016-2017).",
+  "hallOfFameSource": "https://www.ufc.com/30/michael-bisping-hall-fame",
+  "championships": [
+   "Peso medio"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_MBisping_16x9.jpg"
+ },
+ {
+  "id": "ufc-ronda-rousey",
+  "name": "Ronda Rousey",
+  "source": "https://www.ufc.com/athlete/ronda-rousey",
+  "wing": "modern",
+  "inducted": 2018,
+  "note": "Primera campeona femenina de UFC (peso gallo, 2012-2015) y primera mujer en el Salón de la Fama.",
+  "noteEn": "First women’s UFC champion (bantamweight, 2012-2015) and the first woman in the Hall of Fame.",
+  "noteCa": "Primera campiona femenina d’UFC (pes gall, 2012-2015) i primera dona al Saló de la Fama.",
+  "hallOfFameSource": "https://www.ufc.com/30/ronda-rousey-hall-fame",
+  "championships": [
+   "Peso gallo femenino"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_RRousey_16x9.jpg"
+ },
+ {
+  "id": "ufc-urijah-faber",
+  "name": "Urijah Faber",
+  "source": "https://www.ufc.com/athlete/urijah-faber",
+  "wing": "modern",
+  "inducted": 2017,
+  "note": "Campeón del peso pluma de WEC (2006-2008) y primera gran estrella de las divisiones ligeras.",
+  "noteEn": "WEC featherweight champion (2006-2008) and the first superstar of the lighter divisions.",
+  "noteCa": "Campió del pes ploma de WEC (2006-2008) i primera gran estrella de les divisions lleugeres.",
+  "hallOfFameSource": "https://www.ufc.com/30/urijah-faber-hall-fame",
+  "championships": [],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_UFaber_16x9.jpg"
+ },
+ {
+  "id": "ufc-bj-penn",
+  "name": "BJ Penn",
+  "source": "https://www.ufc.com/athlete/bj-penn",
+  "wing": "modern",
+  "inducted": 2015,
+  "note": "Campeón del peso wélter (2004) y del peso ligero (2008-2010) de UFC.",
+  "noteEn": "UFC welterweight (2004) and lightweight (2008-2010) champion.",
+  "noteCa": "Campió del pes wèlter (2004) i del pes lleuger (2008-2010) d’UFC.",
+  "hallOfFameSource": "https://www.ufc.com/30/bj-penn-hall-fame",
+  "championships": [
+   "Peso wélter",
+   "Peso ligero"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_BJPenn_16x9.jpg"
+ },
+ {
+  "id": "ufc-forrest-griffin",
+  "name": "Forrest Griffin",
+  "source": "https://www.ufc.com/athlete/forrest-griffin",
+  "wing": "modern",
+  "inducted": 2013,
+  "note": "Ganador de la primera temporada de The Ultimate Fighter; su combate con Stephan Bonnar en 2005 impulsó las MMA. Campeón del peso semipesado en 2008.",
+  "noteEn": "Winner of the first season of The Ultimate Fighter; his 2005 fight with Stephan Bonnar put MMA on the map. Light heavyweight champion in 2008.",
+  "noteCa": "Guanyador de la primera temporada de The Ultimate Fighter; el seu combat amb Stephan Bonnar el 2005 va impulsar les MMA. Campió del pes semipesant el 2008.",
+  "hallOfFameSource": "https://www.ufc.com/30/forrest-griffin-hall-fame",
+  "championships": [
+   "Peso semipesado"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_FGriffin_16x9.jpg"
+ },
+ {
+  "id": "ufc-mark-kerr",
+  "name": "Mark Kerr",
+  "source": "https://www.ufc.com/athlete/mark-kerr",
+  "wing": "pioneer",
+  "inducted": 2025,
+  "note": "Ganó los torneos de peso pesado de UFC 14 y UFC 15; es uno de los cinco luchadores con varios torneos de UFC.",
+  "noteEn": "Won the UFC 14 and UFC 15 heavyweight tournaments; one of five fighters with multiple UFC tournament wins.",
+  "noteCa": "Va guanyar els tornejos de pes pesant d’UFC 14 i UFC 15; és un dels cinc lluitadors amb diversos tornejos d’UFC.",
+  "hallOfFameSource": "https://www.ufc.com/hof/mark-kerr-hall-of-fame",
+  "championships": [],
+  "hallOfFameImage": "https://www.ufc.com/images/2025-06/9276509109_HOF_MarkKerr_1920x1080-NoText_0.jpg"
+ },
+ {
+  "id": "ufc-vitor-belfort",
+  "name": "Vitor Belfort",
+  "source": "https://www.ufc.com/athlete/vitor-belfort",
+  "wing": "pioneer",
+  "inducted": null,
+  "note": "Tiene el récord de finalizaciones en el primer asalto de UFC (13) y logró 10 nocauts en 90 segundos o menos.",
+  "noteEn": "Holds the UFC record for first-round finishes (13) and scored 10 knockouts in 90 seconds or less.",
+  "noteCa": "Té el rècord de finalitzacions al primer assalt d’UFC (13) i va aconseguir 10 KO en 90 segons o menys.",
+  "hallOfFameSource": "https://www.ufc.com/hof/vitor-belfort-hall-of-fame",
+  "championships": [],
+  "hallOfFameImage": "https://www.ufc.com/images/2025-06/8132928003_HOF_VitorBelfort_1920x1080-NoText.jpg"
+ },
+ {
+  "id": "ufc-wanderlei-silva",
+  "name": "Wanderlei Silva",
+  "source": "https://www.ufc.com/athlete/wanderlei-silva",
+  "wing": "pioneer",
+  "inducted": null,
+  "note": "Campeón del peso medio de PRIDE y ganador de su Grand Prix de 2003; suma 19 nocauts, el máximo entre UFC, WEC, PRIDE y Strikeforce.",
+  "noteEn": "PRIDE middleweight champion and winner of its 2003 Grand Prix; his 19 knockouts are the most across UFC, WEC, PRIDE and Strikeforce.",
+  "noteCa": "Campió del pes mitjà de PRIDE i guanyador del seu Grand Prix del 2003; suma 19 KO, el màxim entre UFC, WEC, PRIDE i Strikeforce.",
+  "hallOfFameSource": "https://www.ufc.com/30/wanderlei-silva-hall-fame",
+  "championships": [],
+  "hallOfFameImage": "https://www.ufc.com/images/2024-03/HOF2024_wanderlei-silva.jpg"
+ },
+ {
+  "id": "ufc-anderson-silva",
+  "name": "Anderson Silva",
+  "source": "https://www.ufc.com/athlete/anderson-silva",
+  "wing": "pioneer",
+  "inducted": 2023,
+  "note": "Campeón del peso medio (2006-2013) con 16 victorias seguidas, la racha más larga de la historia de UFC.",
+  "noteEn": "Middleweight champion (2006-2013) with 16 straight wins, the longest streak in UFC history.",
+  "noteCa": "Campió del pes mitjà (2006-2013) amb 16 victòries seguides, la ratxa més llarga de la història d’UFC.",
+  "hallOfFameSource": "https://www.ufc.com/30/anderson-silva-hall-fame",
+  "championships": [
+   "Peso medio"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_ASilva_16x9.jpg"
+ },
+ {
+  "id": "ufc-jens-pulver",
+  "name": "Jens Pulver",
+  "source": "https://www.ufc.com/athlete/jens-pulver",
+  "wing": "pioneer",
+  "inducted": 2023,
+  "note": "Primer campeón del peso ligero de UFC, en UFC 30; compitió en cuatro categorías durante 14 años.",
+  "noteEn": "First UFC lightweight champion, at UFC 30; competed in four weight classes over 14 years.",
+  "noteCa": "Primer campió del pes lleuger d’UFC, a UFC 30; va competir en quatre categories durant 14 anys.",
+  "hallOfFameSource": "https://www.ufc.com/30/jens-pulver-hall-fame",
+  "championships": [
+   "Peso ligero"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_JPulver_16x9.jpg"
+ },
+ {
+  "id": "ufc-kevin-randleman",
+  "name": "Kevin Randleman",
+  "source": "https://www.ufc.com/athlete/kevin-randleman",
+  "wing": "pioneer",
+  "inducted": 2021,
+  "note": "Campeón del peso pesado de UFC (1999-2000) y campeón universitario de lucha de la NCAA.",
+  "noteEn": "UFC heavyweight champion (1999-2000) and NCAA Division I wrestling champion.",
+  "noteCa": "Campió del pes pesant d’UFC (1999-2000) i campió universitari de lluita de l’NCAA.",
+  "hallOfFameSource": "https://www.ufc.com/30/kevin-randleman-hall-fame",
+  "championships": [
+   "Peso pesado"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_KRandleman_16x9.jpg"
+ },
+ {
+  "id": "ufc-rich-franklin",
+  "name": "Rich Franklin",
+  "source": "https://www.ufc.com/athlete/rich-franklin",
+  "wing": "pioneer",
+  "inducted": 2019,
+  "note": "Antiguo profesor de matemáticas, campeón del peso medio de UFC (2005-2006) y entrenador en The Ultimate Fighter.",
+  "noteEn": "Former math teacher, UFC middleweight champion (2005-2006) and coach on The Ultimate Fighter.",
+  "noteCa": "Antic professor de matemàtiques, campió del pes mitjà d’UFC (2005-2006) i entrenador a The Ultimate Fighter.",
+  "hallOfFameSource": "https://www.ufc.com/30/rich-franklin-hall-fame",
+  "championships": [
+   "Peso medio"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_RFranklin_16x9.jpg"
+ },
+ {
+  "id": "ufc-matt-serra",
+  "name": "Matt Serra",
+  "source": "https://www.ufc.com/athlete/matt-serra",
+  "wing": "pioneer",
+  "inducted": 2018,
+  "note": "Primer ganador de The Ultimate Fighter que llegó a campeón de UFC: conquistó el peso wélter ante Georges St-Pierre.",
+  "noteEn": "The first Ultimate Fighter winner to become a UFC champion: he took the welterweight title from Georges St-Pierre.",
+  "noteCa": "Primer guanyador de The Ultimate Fighter que va arribar a campió d’UFC: va conquerir el pes wèlter contra Georges St-Pierre.",
+  "hallOfFameSource": "https://www.ufc.com/30/matt-serra-hall-fame",
+  "championships": [
+   "Peso wélter"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_MSerra_16x9_0.jpg"
+ },
+ {
+  "id": "ufc-kazushi-sakuraba",
+  "name": "Kazushi Sakuraba",
+  "source": "https://www.ufc.com/athlete/kazushi-sakuraba",
+  "wing": "pioneer",
+  "inducted": 2017,
+  "note": "«The Gracie Hunter», campeón del torneo de peso pesado de UFC Ultimate Japan; venció a rivales de categorías muy superiores.",
+  "noteEn": "“The Gracie Hunter”, UFC Ultimate Japan heavyweight tournament champion; he beat opponents from far heavier divisions.",
+  "noteCa": "«The Gracie Hunter», campió del torneig de pes pesant d’UFC Ultimate Japan; va vèncer rivals de categories molt superiors.",
+  "hallOfFameSource": "https://www.ufc.com/30/kazushi-sakuraba-hall-fame",
+  "championships": [],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_KSakuraba_16x9_0.jpg"
+ },
+ {
+  "id": "ufc-maurice-smith",
+  "name": "Maurice Smith",
+  "source": "https://www.ufc.com/athlete/maurice-smith",
+  "wing": "pioneer",
+  "inducted": 2017,
+  "note": "Campeón del peso pesado de UFC en 1997 tras vencer a Mark Coleman; demostró que un especialista en golpeo podía triunfar en las MMA.",
+  "noteEn": "UFC heavyweight champion in 1997 after beating Mark Coleman; he proved a striker could succeed in MMA.",
+  "noteCa": "Campió del pes pesant d’UFC el 1997 després de vèncer Mark Coleman; va demostrar que un especialista en cops podia triomfar a les MMA.",
+  "hallOfFameSource": "https://www.ufc.com/30/maurice-smith-hall-fame",
+  "championships": [
+   "Peso pesado"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_MSmith_16x9.jpg"
+ },
+ {
+  "id": "ufc-don-frye",
+  "name": "Don Frye",
+  "source": "https://www.ufc.com/athlete/don-frye",
+  "wing": "pioneer",
+  "inducted": 2016,
+  "note": "Campeón del torneo de UFC 8 y de Ultimate Ultimate 96.",
+  "noteEn": "UFC 8 tournament champion and Ultimate Ultimate 96 champion.",
+  "noteCa": "Campió del torneig d’UFC 8 i d’Ultimate Ultimate 96.",
+  "hallOfFameSource": "https://www.ufc.com/30/don-frye-hall-fame",
+  "championships": [],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_DFrye_16x9.jpg"
+ },
+ {
+  "id": "ufc-minotauro-nogueira",
+  "name": "Minotauro Nogueira",
+  "source": "https://www.ufc.com/athlete/minotauro-nogueira",
+  "wing": "pioneer",
+  "inducted": 2016,
+  "note": "Único luchador que ha ganado los títulos de peso pesado de PRIDE y de UFC (interino, 2008).",
+  "noteEn": "The only fighter to win both the PRIDE and UFC heavyweight titles (interim, 2008).",
+  "noteCa": "Únic lluitador que ha guanyat els títols de pes pesant de PRIDE i d’UFC (interí, 2008).",
+  "hallOfFameSource": "https://www.ufc.com/30/minotauro-nogueira-hall-fame",
+  "championships": [],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_MNogueira_16x9.jpg"
+ },
+ {
+  "id": "ufc-bas-rutten",
+  "name": "Bas Rutten",
+  "source": "https://www.ufc.com/athlete/bas-rutten",
+  "wing": "pioneer",
+  "inducted": 2015,
+  "note": "Campeón del peso pesado de UFC en 1999, ganó sus dos combates en el octágono y fue rey de Pancrase.",
+  "noteEn": "UFC heavyweight champion in 1999, won both of his Octagon fights and was King of Pancrase.",
+  "noteCa": "Campió del pes pesant d’UFC el 1999, va guanyar els seus dos combats a l’octàgon i va ser rei de Pancrase.",
+  "hallOfFameSource": "https://www.ufc.com/30/bas-rutten-hall-fame",
+  "championships": [
+   "Peso pesado"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_BRutten_16x9.jpg"
+ },
+ {
+  "id": "ufc-pat-miletich",
+  "name": "Pat Miletich",
+  "source": "https://www.ufc.com/athlete/pat-miletich",
+  "wing": "pioneer",
+  "inducted": 2014,
+  "note": "Primer campeón del peso wélter de UFC; como entrenador llevó a Matt Hughes, Jens Pulver y Tim Sylvia a títulos mundiales.",
+  "noteEn": "First UFC welterweight champion; as a coach he led Matt Hughes, Jens Pulver and Tim Sylvia to world titles.",
+  "noteCa": "Primer campió del pes wèlter d’UFC; com a entrenador va portar Matt Hughes, Jens Pulver i Tim Sylvia a títols mundials.",
+  "hallOfFameSource": "https://www.ufc.com/30/pat-miletich-hall-fame",
+  "championships": [
+   "Peso wélter"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_PMiletich_16x9.jpg"
+ },
+ {
+  "id": "ufc-tito-ortiz",
+  "name": "Tito Ortiz",
+  "source": "https://www.ufc.com/athlete/tito-ortiz",
+  "wing": "pioneer",
+  "inducted": 2012,
+  "note": "Campeón del peso semipesado (2000-2003) con cinco defensas del título; su rivalidad con Chuck Liddell marcó los primeros años de UFC.",
+  "noteEn": "Light heavyweight champion (2000-2003) with five title defenses; his rivalry with Chuck Liddell defined UFC’s early years.",
+  "noteCa": "Campió del pes semipesant (2000-2003) amb cinc defenses del títol; la seva rivalitat amb Chuck Liddell va marcar els primers anys d’UFC.",
+  "hallOfFameSource": "https://www.ufc.com/30/tito-ortiz-hall-fame",
+  "championships": [
+   "Peso semipesado"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_TOrtiz_16x9.jpg"
+ },
+ {
+  "id": "ufc-matt-hughes",
+  "name": "Matt Hughes",
+  "source": "https://www.ufc.com/athlete/matt-hughes",
+  "wing": "pioneer",
+  "inducted": 2010,
+  "note": "Dos veces campeón del peso wélter (2001-2006) con siete defensas del título.",
+  "noteEn": "Two-time welterweight champion (2001-2006) with seven title defenses.",
+  "noteCa": "Dues vegades campió del pes wèlter (2001-2006) amb set defenses del títol.",
+  "hallOfFameSource": "https://www.ufc.com/30/matt-hughes-hall-fame",
+  "championships": [
+   "Peso wélter"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_MHughes_16x9_0.jpg"
+ },
+ {
+  "id": "ufc-chuck-liddell",
+  "name": "Chuck Liddell",
+  "source": "https://www.ufc.com/athlete/chuck-liddell",
+  "wing": "pioneer",
+  "inducted": 2009,
+  "note": "Campeón del peso semipesado (2005-2007) y luchador con más victorias en la historia de la división.",
+  "noteEn": "Light heavyweight champion (2005-2007) and the fighter with the most wins in the division’s history.",
+  "noteCa": "Campió del pes semipesant (2005-2007) i lluitador amb més victòries de la història de la divisió.",
+  "hallOfFameSource": "https://www.ufc.com/30/chuck-liddell-hall-fame",
+  "championships": [
+   "Peso semipesado"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_CLiddell_16x9.jpg"
+ },
+ {
+  "id": "ufc-mark-coleman",
+  "name": "Mark Coleman",
+  "source": "https://www.ufc.com/athlete/mark-coleman",
+  "wing": "pioneer",
+  "inducted": 2008,
+  "note": "Primer campeón del peso pesado de UFC, dos veces ganador de torneos y campeón del Grand Prix absoluto de PRIDE en 2000.",
+  "noteEn": "First UFC heavyweight champion, two-time tournament winner and 2000 PRIDE openweight Grand Prix champion.",
+  "noteCa": "Primer campió del pes pesant d’UFC, dues vegades guanyador de tornejos i campió del Grand Prix absolut de PRIDE el 2000.",
+  "hallOfFameSource": "https://www.ufc.com/30/mark-coleman-hall-fame",
+  "championships": [
+   "Peso pesado"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_MColeman_16x9.jpg"
+ },
+ {
+  "id": "ufc-randy-couture",
+  "name": "Randy Couture",
+  "source": "https://www.ufc.com/athlete/randy-couture",
+  "wing": "pioneer",
+  "inducted": 2006,
+  "note": "Tres veces campeón del peso pesado y dos del semipesado: el primer campeón de UFC en dos categorías.",
+  "noteEn": "Three-time heavyweight and two-time light heavyweight champion: the first UFC champion in two divisions.",
+  "noteCa": "Tres vegades campió del pes pesant i dues del semipesant: el primer campió d’UFC en dues categories.",
+  "hallOfFameSource": "https://www.ufc.com/30/randy-couture-hall-fame",
+  "championships": [
+   "Peso pesado",
+   "Peso semipesado"
+  ],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_RCouture_16x9.jpg"
+ },
+ {
+  "id": "ufc-dan-severn",
+  "name": "Dan Severn",
+  "source": "https://www.ufc.com/athlete/dan-severn",
+  "wing": "pioneer",
+  "inducted": 2005,
+  "note": "Campeón de la Superfight de UFC en 1996 y ganador del torneo Ultimate Ultimate 95; el primero en recibir un cinturón de UFC.",
+  "noteEn": "UFC Superfight champion in 1996 and Ultimate Ultimate 95 tournament winner; the first fighter to receive a UFC belt.",
+  "noteCa": "Campió de la Superfight d’UFC el 1996 i guanyador del torneig Ultimate Ultimate 95; el primer a rebre un cinturó d’UFC.",
+  "hallOfFameSource": "https://www.ufc.com/30/dan-severn-hall-fame",
+  "championships": [],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_DSevern_16x9.jpg"
+ },
+ {
+  "id": "ufc-ken-shamrock",
+  "name": "Ken Shamrock",
+  "source": "https://www.ufc.com/athlete/ken-shamrock",
+  "wing": "pioneer",
+  "inducted": 2003,
+  "note": "Primer campeón de la Superfight de UFC y rey de Pancrase; su rivalidad con Royce Gracie marcó los inicios de UFC.",
+  "noteEn": "First UFC Superfight champion and King of Pancrase; his rivalry with Royce Gracie defined UFC’s beginnings.",
+  "noteCa": "Primer campió de la Superfight d’UFC i rei de Pancrase; la seva rivalitat amb Royce Gracie va marcar els inicis d’UFC.",
+  "hallOfFameSource": "https://www.ufc.com/30/ken-shamrock-hall-fame",
+  "championships": [],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_KShamrock_16x9.jpg"
+ },
+ {
+  "id": "ufc-royce-gracie",
+  "name": "Royce Gracie",
+  "source": "https://www.ufc.com/athlete/royce-gracie",
+  "wing": "pioneer",
+  "inducted": 2003,
+  "note": "Ganó el primer torneo de UFC en noviembre de 1993 con jiu-jitsu brasileño y tres de los cuatro primeros torneos.",
+  "noteEn": "Won the first UFC tournament in November 1993 with Brazilian jiu-jitsu, and three of the first four tournaments.",
+  "noteCa": "Va guanyar el primer torneig d’UFC el novembre del 1993 amb jiu-jitsu brasiler i tres dels quatre primers tornejos.",
+  "hallOfFameSource": "https://www.ufc.com/30/royce-gracie-hall-fame",
+  "championships": [],
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_RGracie_16x9.jpg"
+ }
+]

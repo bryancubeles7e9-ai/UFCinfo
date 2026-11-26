@@ -1,4 +1,5 @@
 import { escapeHTML as esc } from './utils.js';
+import { legendTagline } from './legends-hall.js';
 
 // Editorial recognition is independent of championship ownership.
 export const isLegend = fighter => fighter.legend === true && fighter.careerStatus === 'retired';
@@ -10,7 +11,13 @@ export function legendBadge(fighter) {
 }
 export function renderLegacyDetails(fighter) {
   if (!isLegend(fighter)) return '';
-  const source = /^https:\/\/www\.ufc\.com\/(news|hof|athlete)\//.test(fighter.legendSource || '')
-    ? `<a class="text-link" href="${esc(fighter.legendSource)}" target="_blank" rel="noopener noreferrer">Trayectoria en UFC ›</a>` : '';
-  return `<section class="legacy-details">${legendBadge(fighter)}<p>Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado.</p>${fighter.legacyNote ? `<p>${esc(fighter.legacyNote)}</p>` : ""}${source}<p class="data-note">Consulta: ${esc(fighter.legendConsulted || '—')}</p></section>`;
+  const hallOfFame = fighter.hallOfFame?.wing && fighter.hallOfFame.wing !== 'ufcinfo';
+  const source = /^https:\/\/www\.ufc\.com\//.test(fighter.legendSource || '')
+    ? `<a class="text-link" href="${esc(fighter.legendSource)}" target="_blank" rel="noopener noreferrer">${hallOfFame ? 'Salón de la Fama de UFC ›' : 'Trayectoria en UFC ›'}</a>` : '';
+  const banner = fighter.hallOfFame?.image
+    ? `<figure class="legacy-banner"><img src="${esc(fighter.hallOfFame.image)}" alt="" loading="lazy" decoding="async" width="1280" height="720"><figcaption>FOTOGRAFÍA: UFC</figcaption></figure>` : '';
+  const intro = hallOfFame
+    ? `Miembro del Salón de la Fama de UFC (${esc(legendTagline(fighter).replace('Salón de la Fama de UFC · ', ''))}). Retiro documentado por UFC.`
+    : 'Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado.';
+  return `<section class="legacy-details">${banner}${legendBadge(fighter)}<p>${intro}</p>${fighter.legacyNote ? `<p class="legacy-note">${esc(fighter.legacyNote)}</p>` : ""}${source}<p class="data-note">Consulta: ${esc(fighter.legendConsulted || '—')}</p></section>`;
 }
