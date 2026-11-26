@@ -431,6 +431,7 @@ export const catalan = {
   "Última consulta:": "Última consulta:",
   "Últimos datos disponibles; no se pudo comprobar una actualización.": "Últimes dades disponibles; no s’ha pogut comprovar una actualització.",
   "Actualización programada cada 12 horas.": "Actualització programada cada 12 hores.",
+  "Actualización programada a las 08:00 y 14:00 (hora peninsular).": "Actualització programada a les 08:00 i les 14:00 (hora peninsular).",
   "Copia inicial; pendiente de activar la sincronización.": "Còpia inicial; pendent d’activar la sincronització.",
   "Fechas y horas en tu zona local.": "Dates i hores a la teva zona local.",
   "Eventos UFC: próximos anunciados y finalizados de este año.": "Esdeveniments UFC: pròxims anunciats i finalitzats d’aquest any.",

@@ -1,6 +1,7 @@
 import { english } from './i18n/en.js';
 import { catalan } from './i18n/ca.js';
-const dictionaries = { en: english, ca: catalan };
+import { martialNotes } from './i18n/martial-notes.js';
+const dictionaries = { en: {...english, ...martialNotes.en}, ca: {...catalan, ...martialNotes.ca} };
 const locales = { es: 'es-ES', en: 'en-US', ca: 'ca-ES' };
 const storageKey = 'ufcinfo-language';
 let language = 'es';
@@ -9,7 +10,7 @@ export const getLanguage = () => language;
 export const getLocale = () => locales[language];
 const normalize = text => text.replace(/\s+/g, ' ').trim();
 const escapePattern = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-const phrases = [...new Set([...Object.keys(english), ...Object.keys(catalan)])].sort((a, b) => b.length - a.length);
+const phrases = [...new Set([...Object.keys(dictionaries.en), ...Object.keys(dictionaries.ca)])].sort((a, b) => b.length - a.length);
 const pattern = new RegExp(`(?<![\\p{L}])(?:${phrases.map(escapePattern).join('|')})(?![\\p{L}])`, 'gu');
 export function translate(text) {
   if (language === 'es') return text;

@@ -308,3 +308,10 @@ main{padding-bottom:28px}
 /* Reserve the main-event hero's space until the scripts fill it in, so the page below does not jump. */
 #home-event-banner:not([data-hero-key]){min-height:800px;box-sizing:border-box}
 @media(max-width:700px){#home-event-banner:not([data-hero-key]){min-height:calc(760px + 79vw)}}
+/* Desktop search fields: readable text and room for the whole hint. */
+@media(min-width:701px){.search-box input{font-size:14px;width:min(320px,100%)}.view[data-view="luchadores"] .search-box input,.ranking-toolbar .search-box input,.rumor-toolbar .search-box input{flex:1;min-width:0;width:auto}}
+/* Light theme: a deeper orange keeps accent text readable on light backgrounds (4.5:1 or more). */
+body.light{--accent:#c8391a}
+/* Light theme: the follow button over list rows uses the light surface instead of a dark disc. */
+body.light .favorite-button:not(.selected){background:var(--surface-2);color:var(--muted);border-color:var(--line)}
+body.light .championship-badge.former{color:#5f625f;border-color:#a8aaa4}

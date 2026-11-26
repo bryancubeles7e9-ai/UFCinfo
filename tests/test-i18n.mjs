@@ -39,3 +39,14 @@ globalThis.localStorage = {getItem(){throw Error();},setItem(){throw Error();}};
 assert.equal(setLanguage('en'),true);
 assert.equal((await import('../assets/js/i18n.js?unavailable')).getLanguage(),'es');
 console.log('PASS: languages, complete phrases, dynamic labels, persistence, invalid selection and unavailable storage');
+
+// Every reviewed martial-arts note shown in a profile has an English and a Catalan version.
+const { fighters } = await import('../assets/js/data.js');
+const { fighterMartialBases } = await import('../assets/js/fighter-martial-data.js');
+const { martialNotes } = await import('../assets/js/i18n/martial-notes.js');
+const notes = new Set([...fighters.map(f => f.martialBaseNote), ...Object.values(fighterMartialBases).map(f => f.martialBaseNote)].filter(Boolean));
+for (const note of notes) for (const code of ['en', 'ca']) assert.ok(martialNotes[code][note], `Falta traducir (${code}): ${note}`);
+assert.equal(setLanguage('en'),true);
+assert.equal(translate('Actualización programada a las 08:00 y 14:00 (hora peninsular).'),'Updates scheduled at 08:00 and 14:00 (Spain time).');
+assert.equal(translate('EVENTO UFC'),'UFC EVENT');
+assert.match(translate([...notes][0]), /^Ilia names wrestling/);
