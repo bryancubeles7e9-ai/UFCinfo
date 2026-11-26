@@ -124,7 +124,6 @@ export const english = {
   "Guardado automático en este navegador": "Automatically saved in this browser",
   "No se ha podido guardar. Tus elecciones se perderán al cerrar esta página.": "Unable to save. Your picks will be lost when you close this page.",
   "Tu elección": "Your pick",
-  "Elegir ganador": "Pick winner",
   "Combates pendientes de anuncio.": "Bouts awaiting announcement.",
 
   "hora local · inicio de la principal": "local time · main card start",
@@ -171,13 +170,13 @@ export const english = {
 "Cartelera principal y preliminares disponibles.":"Main card and available preliminaries.",
 "Combates anunciados; pueden cambiar antes del evento.":"Announced bouts; subject to change before the event.",
 
-'Filtros y orden':'Filters and sorting', 'Limpiar filtros':'Clear filters',
+'Filtros y orden':'Filters and sorting', 
 'Menú':'Menu',
 'Numerados':'Numbered', 'Especiales':'Special events', 'No hay eventos UFC disponibles.':'No UFC events available.', 'No hay carteleras con estos filtros. Prueba otra selección.':'No fight cards match these filters. Try another selection.',
 
 'UFC EVENTO ESPECIAL':'UFC SPECIAL EVENT', 'Eventos especiales':'Special events', 'Eventos numerados, Fight Night y especiales: próximos anunciados y resultados de este año, con cartelera principal y preliminares disponibles.':'Numbered, Fight Night and special events: upcoming announced events and this year’s results, with main cards and available preliminaries.',
 
-'Tipo de evento':'Event type', 'Numerados y Fight Night':'Numbered and Fight Night', 'Solo numerados':'Numbered only', 'Solo Fight Night':'Fight Night only', 'Eventos UFC':'UFC events', 'PRÓXIMO EVENTO UFC':'NEXT UFC EVENT', 'ÚLTIMO EVENTO UFC':'LATEST UFC EVENT', 'No hay próximos eventos UFC en los datos disponibles.':'There are no upcoming UFC events in the available data.', 'Eventos numerados y Fight Night: próximos anunciados y resultados de este año, con cartelera principal y preliminares disponibles.':'Numbered events and Fight Night: upcoming announced events and this year’s results, with main cards and available preliminaries.',
+'Tipo de evento':'Event type', 'Numerados y Fight Night':'Numbered and Fight Night', 'Solo numerados':'Numbered only', 'Solo Fight Night':'Fight Night only', 'No hay próximos eventos UFC en los datos disponibles.':'There are no upcoming UFC events in the available data.', 'Eventos numerados y Fight Night: próximos anunciados y resultados de este año, con cartelera principal y preliminares disponibles.':'Numbered events and Fight Night: upcoming announced events and this year’s results, with main cards and available preliminaries.',
 
 'TU AGENDA UFC':'YOUR UFC SCHEDULE', 'Resumen del próximo evento':'Next event overview', 'FECHA Y HORA LOCAL':'LOCAL DATE AND TIME', 'SEDE':'VENUE', 'combates anunciados':'announced bouts', 'COMBATE ANUNCIADO':'ANNOUNCED BOUT', 'La próxima noche está por anunciar.':'The next fight night is yet to be announced.', 'No hay próximos eventos numerados en los datos disponibles.':'There are no upcoming numbered events in the available data.', 'EXPLORA UFCINFO':'EXPLORE UFCINFO', 'Pendiente de anuncio':'To be announced', 'Consulta fechas, horarios y combates anunciados.':'Check dates, times and announced bouts.',
 

@@ -399,3 +399,11 @@ body.light .rumor-paused-notice svg,body.light .nav-paused-tag{color:#8a5a12}
 .offline-notice{position:fixed;z-index:79;left:50%;top:12px;transform:translateX(-50%);display:flex;align-items:center;gap:10px;width:max-content;max-width:calc(100vw - 32px);padding:11px 16px;border-radius:12px;background:var(--surface);border:1px solid #e0a43a;color:var(--ink);box-shadow:0 12px 30px -12px rgba(0,0,0,.6);font-size:14px;line-height:1.4}
 .offline-notice svg{flex:0 0 auto;color:#e0a43a}
 @media(max-width:700px){.offline-notice{top:auto;bottom:calc(80px + env(safe-area-inset-bottom))}}
+/* Dialog close button: a solid, raised control while it floats over the profile on phones. */
+dialog .dialog-close{background:var(--surface);border:1px solid var(--line);box-shadow:0 6px 18px -6px #000c}
+dialog .dialog-close:hover,dialog .dialog-close:focus-visible{border-color:var(--accent);color:var(--accent)}
+@media(max-width:700px){dialog .dialog-close{width:44px;height:44px;margin-bottom:-36px;backdrop-filter:blur(6px);background:color-mix(in srgb,var(--surface) 88%,transparent)}}
+@media(max-width:700px){
+  /* A band that fades the content out under the close button while the profile scrolls. */
+  #fighter-dialog::before,#event-dialog::before{content:"";position:sticky;top:-40px;display:block;height:108px;margin:-40px -24px -68px;z-index:4;pointer-events:none;background:linear-gradient(var(--surface) 55%,transparent)}
+}

@@ -38,7 +38,11 @@ export function initializeDataHealth() {
       }catch{cache.set(file,{...cache.get(file),unavailable:true});}
     }));running=false;render();
   }
-  render();refresh();setInterval(refresh,300000);
-  document.addEventListener('visibilitychange',()=>{if(!document.hidden)refresh();});
+  // Only while the panel is open: the app already loads these files, so checking them on every
+  // page load would download each one twice.
+  render();
+  host.addEventListener('toggle',()=>{if(host.open)refresh();});
+  setInterval(()=>{if(host.open)refresh();},300000);
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden&&host.open)refresh();});
   document.addEventListener('ufcinfo:language-changed',render);
 }
