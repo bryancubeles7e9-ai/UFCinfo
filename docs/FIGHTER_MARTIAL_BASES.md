@@ -25,3 +25,7 @@ El registro se aplica después de cargar el directorio, conservando sus objetos 
 - [Tai Tuivasa](https://www.ufc.com/athlete/tai-tuivasa)
 - [Derrick Lewis](https://www.ufc.com/athlete/derrick-lewis)
 - [Andre Fili](https://www.ufc.com/athlete/andre-fili)
+
+## Traducciones
+
+Cada nota de formación marcial tiene su versión en inglés y en catalán en `assets/js/i18n/martial-notes.js`. Al añadir o cambiar una nota hay que añadir también sus dos traducciones: `tests/test-i18n.mjs` falla si falta alguna.
