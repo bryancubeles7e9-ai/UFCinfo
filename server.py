@@ -1,5 +1,6 @@
 """Octagon website and same-origin account API. Python standard library only."""
 import argparse
+from datetime import datetime
 import gzip
 import hashlib
 import hmac
@@ -63,6 +64,33 @@ def share_index():
     except (OSError, ValueError):
         return {}
     return _share["data"]
+
+
+_poster = {"key": None, "value": None}
+
+
+def home_poster():
+    """Poster of the next main event, preloaded on the home page because it is the largest image."""
+    target = ROOT / "assets/data/ufc-events.json"
+    try:
+        stat = target.stat()
+        key = (stat.st_mtime_ns, stat.st_size, int(time.time() // 600))
+        if _poster["key"] != key:
+            now = time.time()
+            events = [e for e in json.loads(target.read_text()).get("events", [])
+                      if e.get("type") == "official" and e.get("status") in ("live", "scheduled", "announced")]
+            def starts(event):
+                try:
+                    return datetime.fromisoformat(event["date"].replace("Z", "+00:00")).timestamp()
+                except (KeyError, ValueError):
+                    return float("inf")
+            events = sorted((e for e in events if e.get("status") == "live" or starts(e) > now - 6 * 3600),
+                            key=lambda e: (e.get("status") != "live", starts(e)))
+            poster = events[0].get("poster") if events else None
+            _poster.update(key=key, value=poster if isinstance(poster, str) and re.fullmatch(r"assets/images/events/[\w.-]+", poster) else None)
+    except (OSError, ValueError):
+        return None
+    return _poster["value"]
 
 
 def share_pages():
@@ -198,6 +226,12 @@ def make_handler(database, public_origin, fighter_ids):
             if urlsplit(self.path).path.startswith('/assets/fonts/'):
                 # Font files carry a content hash in their name, so they never change.
                 self.send_header('Cache-Control', 'public, max-age=31536000, immutable')
+            elif urlsplit(self.path).path.startswith('/assets/images/fighter-variants/'):
+                # Named after a hash of their content.
+                self.send_header('Cache-Control', 'public, max-age=31536000, immutable')
+            elif urlsplit(self.path).path.startswith('/assets/images/'):
+                # Photos rarely change: reuse them for an hour, then refresh them in the background.
+                self.send_header('Cache-Control', 'public, max-age=3600, stale-while-revalidate=604800')
             elif urlsplit(self.path).path.startswith('/assets/'):
                 self.send_header('Cache-Control', 'no-cache')
             if urlsplit(self.path).path == '/assets/sw.js':
@@ -589,6 +623,9 @@ def make_handler(database, public_origin, fighter_ids):
             # Shared addresses live below /, so relative asset paths must resolve from the root.
             body = body.replace('<meta charset="utf-8" />', '<meta charset="utf-8" />\n    <base href="/" />', 1)
             metadata = f'<link rel="canonical" href="{escape(url, quote=True)}" />\n<meta property="og:url" content="{escape(url, quote=True)}" />'
+            poster = home_poster()
+            if poster and not entry:
+                metadata += f'\n<link rel="preload" as="image" href="/{escape(poster, quote=True)}" fetchpriority="high" />'
             if entry:
                 title, description = escape(entry["title"]), escape(entry["description"], quote=True)
                 body = re.sub(r"<title>.*?</title>", f"<title>{title}</title>", body, count=1, flags=re.S)

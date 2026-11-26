@@ -26,7 +26,13 @@
     <link rel="stylesheet" href="assets/css/pickem.css" />
     <link rel="stylesheet" href="assets/css/editorial.css" />
     <link rel="stylesheet" href="assets/css/adsense.css" />
-    <script type="module" src="assets/js/app.js"></script>
+    <!-- One bundle for the interface (scripts/build-bundle.mjs); the data files download in parallel. -->
+    <script type="module" src="assets/js/app.bundle.js"></script>
+    <link rel="modulepreload" href="assets/js/fighter-directory-data.js" />
+    <link rel="modulepreload" href="assets/js/official-events.js" />
+    <link rel="modulepreload" href="assets/js/fighter-stance-data.js" />
+    <link rel="modulepreload" href="assets/js/fighter-martial-data.js" />
+    <link rel="modulepreload" href="assets/js/fighter-info-data.js" />
     <script type="module" src="assets/js/adsense-init.js"></script>
   </head>
   <body>

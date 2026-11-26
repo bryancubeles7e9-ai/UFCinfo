@@ -86,9 +86,12 @@ export function initializeLanguage() {
     for (const child of root.childNodes) walk(child);
   }
   const config = {subtree:true, childList:true, characterData:true, attributes:true, attributeFilter:attributes};
+  // Spanish is the source language: until another language has been shown there is nothing to walk.
+  let translated = language !== 'es';
   function update(roots = [document.documentElement]) {
     observer.disconnect();
-    for (const root of roots) if (root.isConnected) walk(root);
+    if (language !== 'es') translated = true;
+    if (translated) for (const root of roots) if (root.isConnected) walk(root);
     document.documentElement.lang = language;
     document.querySelector('#language-select').value = language;
     observer.observe(document.documentElement, config);
