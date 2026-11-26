@@ -50,3 +50,18 @@ assert.equal(new Set(today.map(f => f.id)).size, 3);
 assert.deepEqual(today.map(f => f.id), later.map(f => f.id));
 assert.notDeepEqual(dailyLegends(legends, new Date(2026, 10, 27, 9)).map(f => f.id), today.map(f => f.id));
 console.log(`PASS: ${legends.length} leyendas con foto, nota traducida, orden por año de ingreso y filtros por ala`);
+
+// Legend profiles: Hall of Fame photo, the essentials and the story; none of the empty regular sections.
+const { fighterProfile } = await import('../assets/js/fighter-presentation.js');
+const { legendNotes: notes } = await import('../assets/js/i18n/legend-notes.js');
+for (const legend of reviewed) {
+  const fighter = byId.get(legend.id);
+  assert.ok(legend.story && notes.en[legend.story] && notes.ca[legend.story], `Falta la historia o su traducción: ${legend.name}`);
+  const html = fighterProfile(fighter, { follow: '<button>Seguir</button>', events: [] });
+  assert.match(html, /class="legend-profile"/);
+  assert.ok(html.includes(fighter.hallOfFame.image || fighter.image), legend.name);
+  assert.ok(html.includes(legend.story.slice(0, 40)), legend.name);
+  for (const empty of ['Guardia', 'Base no especificada', 'Estadísticas', 'Historial', 'No indicado']) assert.ok(!html.includes(empty), `${legend.name}: ${empty}`);
+}
+assert.match(fighterProfile(byId.get('ufc-jon-jones'), { events: [] }), /Peso semipesado[\s\S]*Peso pesado/);
+console.log('PASS: fichas de leyenda con foto, datos esenciales e historia en tres idiomas');

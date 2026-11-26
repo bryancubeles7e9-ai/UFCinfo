@@ -69,7 +69,7 @@ def main():
             'legendSource': legend.get('hallOfFameSource') or legend.get('legendSource') or athlete.get('legendSource') or legend['source'],
             'legendConsulted': today, 'retirementSource': athlete.get('retirementSource') or legend['source'],
             'hallOfFame': {'wing': legend['wing'], 'inducted': legend.get('inducted'), 'image': save_banner(legend), 'retired': legend.get('retired')},
-            'legacyNote': legend['note'], 'legacyHighlights': legend.get('highlights', []),
+            'legacyNote': legend['note'], 'legacyHighlights': legend.get('highlights', []), 'legacyStory': legend.get('story', ''),
         }
         if 'championships' in legend:
             source = legend.get('hallOfFameSource') or legend['source']
@@ -97,6 +97,8 @@ def main():
         DATA.write_text(PREFIX + 'export const additionalFighters = ' + json.dumps(data, ensure_ascii=False, indent=2) + ';\n')
         MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
         notes = {'en': {l['note']: l['noteEn'] for l in legends}, 'ca': {l['note']: l['noteCa'] for l in legends}}
+        for code, field in (('en', 'storyEn'), ('ca', 'storyCa')):
+            notes[code].update({l['story']: l[field] for l in legends if l.get('story')})
         for code in ('en', 'ca'):
             notes[code].update({h: t for l in legends for h, t in zip(l.get('highlights', []), l.get('highlights' + code.capitalize(), []))})
         (ROOT / 'assets/js/i18n/legend-notes.js').write_text(

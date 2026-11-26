@@ -30,3 +30,14 @@ UFC.com todavía los lista como «Active», aunque ninguno ha vuelto a pelear: P
 ## Leyendas en la portada
 
 Inicio muestra el bloque «Del Salón de leyendas» con tres leyendas que cambian cada día (las mismas para todos los visitantes ese día) y un enlace que abre Luchadores con la colección Leyendas seleccionada.
+
+## Ficha propia de las leyendas
+
+Al abrir una leyenda no se muestra la ficha general (guardia, base marcial, estadísticas, historial…), que para los luchadores retirados quedaba casi vacía, sino una ficha propia (`assets/js/legend-profile.js`):
+
+- la foto del Salón de la Fama a gran tamaño, con el nombre, el apodo, el ala y el año encima;
+- solo lo esencial: récord, categoría, ala y año del Salón de la Fama (o año de retiro en la selección UFCinfo) y sus cinturones de UFC;
+- **«Su historia»**: un resumen de tres o cuatro frases de su trayectoria, en español, inglés y catalán (`story`, `storyEn` y `storyCa` en `docs/legends.json`, basados en los textos del Salón de la Fama y los perfiles de UFC.com);
+- seguir, compartir y el enlace al Salón de la Fama.
+
+Al añadir una leyenda nueva hay que escribir también su historia y sus traducciones; `tests/test-legends.mjs` falla si falta alguna.

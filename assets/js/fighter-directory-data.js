@@ -28492,7 +28492,8 @@ export const additionalFighters = [
       "retired": null
     },
     "legacyNote": "Dos veces campeón del peso wélter y campeón del peso medio de UFC; uno de los luchadores más completos y dominantes de la historia.",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Georges St-Pierre dominó el peso wélter durante casi una década: fue campeón dos veces y encadenó nueve defensas en su segundo reinado. Tras cuatro años fuera, volvió en 2017 y ganó también el título del peso medio ante Michael Bisping. Su combinación de lucha, golpeo y disciplina lo convirtió en un referente del deporte."
   },
   {
     "id": "ufc-khabib-nurmagomedov",
@@ -28563,7 +28564,8 @@ export const additionalFighters = [
       "retired": null
     },
     "legacyNote": "Campeón del peso ligero desde 2018; se retiró invicto con un récord de 29-0.",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Khabib Nurmagomedov llegó a UFC en 2012 y nunca perdió. Ganó el título del peso ligero en 2018 y lo defendió ante Conor McGregor, Dustin Poirier y Justin Gaethje. Se retiró en 2020 con 29 victorias y ninguna derrota, una marca única entre los grandes campeones."
   },
   {
     "id": "ufc-daniel-cormier",
@@ -28640,7 +28642,8 @@ export const additionalFighters = [
       "retired": null
     },
     "legacyNote": "Campeón del peso semipesado y del peso pesado de UFC, con ambos cinturones a la vez.",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Daniel Cormier, luchador olímpico, fue campeón del peso semipesado y en 2018 noqueó a Stipe Miocic para conquistar también el peso pesado, con los dos cinturones a la vez. Sus únicas derrotas llegaron ante Jon Jones y Miocic. Tras retirarse en 2020 se convirtió en una de las voces de UFC como comentarista."
   },
   {
     "id": "ufc-joanna-jedrzejczyk",
@@ -28711,7 +28714,8 @@ export const additionalFighters = [
       "retired": null
     },
     "legacyNote": "Campeona del peso paja de UFC y protagonista, frente a Zhang Weili, de un combate incluido en el Salón de la Fama.",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Joanna Jędrzejczyk ganó el título del peso paja en 2015 y lo defendió cinco veces con un golpeo de precisión forjado en el Muay Thai. Perdió el cinturón ante Rose Namajunas en 2017. En 2020 protagonizó con Zhang Weili uno de los mejores combates de la historia de UFC, hoy en el Salón de la Fama."
   },
   {
     "id": "ufc-frankie-edgar",
@@ -28782,7 +28786,8 @@ export const additionalFighters = [
       "retired": null
     },
     "legacyNote": "Campeón del peso ligero (2010-2012), con 8 bonificaciones a la pelea de la noche, la segunda mayor cifra de la historia de UFC.",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Frankie Edgar sorprendió a BJ Penn en 2010 para ganar el título del peso ligero y lo defendió en una rivalidad inolvidable con Gray Maynard. Después peleó por el título del peso pluma y terminó su carrera en el peso gallo, siempre ante los mejores. Sus 8 bonificaciones a la pelea de la noche son la segunda cifra más alta de la historia de UFC."
   },
   {
     "id": "ufc-mauricio-rua",
@@ -28853,7 +28858,8 @@ export const additionalFighters = [
       "retired": null
     },
     "legacyNote": "Campeón del peso semipesado de UFC (2010-2011) y ganador del Grand Prix de peso medio de PRIDE en 2005.",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Mauricio «Shogun» Rua ganó el Grand Prix de peso medio de PRIDE en 2005 y se hizo famoso por su agresividad. En UFC conquistó el título del peso semipesado al noquear a Lyoto Machida en 2010. Su primer combate con Dan Henderson figura en el Salón de la Fama."
   },
   {
     "id": "ufc-dustin-poirier",
@@ -28921,7 +28927,8 @@ export const additionalFighters = [
       "Dos victorias sobre Conor McGregor (2021)",
       "Tres combates por el título indiscutible",
       "Último combate: UFC 318, en Luisiana"
-    ]
+    ],
+    "legacyStory": "Dustin «The Diamond» Poirier ganó el título interino del peso ligero ante Max Holloway en UFC 236 (2019) y venció dos veces a Conor McGregor en 2021. Disputó el título indiscutible ante Khabib Nurmagomedov, Charles Oliveira e Islam Makhachev, y se despidió en UFC 318, en su Luisiana natal, con el cinturón BMF en juego."
   },
   {
     "id": "ufc-cristian-perez-gonzalez",
@@ -31932,7 +31939,8 @@ export const additionalFighters = [
     "code": "US",
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-13-2022",
-    "countryConsulted": "2026-11-26"
+    "countryConsulted": "2026-11-26",
+    "legacyStory": "Dominick Cruz se convirtió en el primer campeón del peso gallo de UFC en WEC 53, en 2010, y mantuvo el título 1117 días, el reinado más largo de la división. Las lesiones lo apartaron casi tres años, pero volvió para recuperar el cinturón ante T.J. Dillashaw en 2016. Su movilidad y sus cambios de ángulo marcaron una época."
   },
   {
     "id": "ufc-chris-weidman",
@@ -32003,7 +32011,8 @@ export const additionalFighters = [
     "code": "US",
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-310",
-    "countryConsulted": "2026-11-26"
+    "countryConsulted": "2026-11-26",
+    "legacyStory": "Chris Weidman llegó a UFC en 2011 y, todavía invicto, noqueó a Anderson Silva en UFC 162 para ganar el título del peso medio. Lo defendió tres veces: en la revancha con Silva y ante Lyoto Machida y Vitor Belfort."
   },
   {
     "id": "ufc-demetrious-johnson",
@@ -32070,7 +32079,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Demetrious «Mighty Mouse» Johnson fue el primer campeón del peso mosca de UFC, en 2012, y lo defendió once veces seguidas, entonces un récord de la empresa. Su técnica y su ritmo lo situaron entre los mejores libra por libra de la historia. Perdió el título ante Henry Cejudo en 2018."
   },
   {
     "id": "ufc-robbie-lawler",
@@ -32141,7 +32151,8 @@ export const additionalFighters = [
     "code": "US",
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-290",
-    "countryConsulted": "2026-11-26"
+    "countryConsulted": "2026-11-26",
+    "legacyStory": "Robbie Lawler debutó en UFC en 2002, con 20 años, y tras pasar por otras organizaciones volvió en 2013 para vivir su mejor etapa. Ganó el título del peso wélter ante Johny Hendricks en UFC 181 y lo defendió en dos guerras ante Rory MacDonald y Carlos Condit; la segunda pelea con MacDonald está en el Salón de la Fama. Se despidió en 2023 con un nocaut."
   },
   {
     "id": "ufc-jose-aldo",
@@ -32212,7 +32223,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "José Aldo fue el gran rey del peso pluma: campeón de WEC y primer campeón de la división en UFC, con siete defensas, récord de la categoría. Perdió el cinturón ante Conor McGregor en 2015 y volvió a ser campeón en 2016. Después bajó al peso gallo, donde compitió hasta su retiro."
   },
   {
     "id": "ufc-donald-cerrone",
@@ -32276,7 +32288,8 @@ export const additionalFighters = [
     "code": "US",
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-276",
-    "countryConsulted": "2026-11-26"
+    "countryConsulted": "2026-11-26",
+    "legacyStory": "Donald «Cowboy» Cerrone peleaba contra quien fuera y cuando fuera. Disputó 38 combates en UFC, con 23 victorias y 16 finalizaciones, y comparte el récord de bonificaciones de la empresa (18). Durante años fue fijo en las carteleras principales y en el top 15."
   },
   {
     "id": "ufc-rashad-evans",
@@ -32347,7 +32360,8 @@ export const additionalFighters = [
     "code": "US",
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-225",
-    "countryConsulted": "2026-11-26"
+    "countryConsulted": "2026-11-26",
+    "legacyStory": "Rashad Evans ganó la segunda temporada de The Ultimate Fighter en 2005 y en 2008 venció a Forrest Griffin en UFC 92 para ser campeón del peso semipesado. Fue uno de los primeros grandes campeones negros de UFC y protagonizó rivalidades con Quinton Jackson y Jon Jones."
   },
   {
     "id": "ufc-michael-bisping",
@@ -32418,7 +32432,8 @@ export const additionalFighters = [
     "code": "GB",
     "country": "United Kingdom",
     "countrySource": "https://www.ufc.com/event/ufc-fight-night-shanghai-nov-25-2017",
-    "countryConsulted": "2026-11-26"
+    "countryConsulted": "2026-11-26",
+    "legacyStory": "Michael Bisping ganó la tercera temporada de The Ultimate Fighter en 2006 y fue durante años el gran referente de las MMA británicas. En 2016 aceptó pelear contra Luke Rockhold con poco más de dos semanas de aviso y lo noqueó para ser el primer británico campeón de UFC. Perdió el título ante Georges St-Pierre en 2017."
   },
   {
     "id": "ufc-ronda-rousey",
@@ -32485,7 +32500,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Ronda Rousey, medallista olímpica de judo, fue la primera campeona femenina de UFC y protagonizó en 2013 el primer combate de mujeres de la empresa, ante Liz Carmouche. Con sus llaves de brazo llevó las MMA femeninas a la primera línea. En 2018 fue la primera mujer en entrar en el Salón de la Fama."
   },
   {
     "id": "ufc-urijah-faber",
@@ -32545,7 +32561,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Urijah «The California Kid» Faber fue campeón del peso pluma de WEC entre 2006 y 2008 y la primera gran estrella de las categorías ligeras en Estados Unidos. En UFC disputó varias veces el título del peso gallo y fundó Team Alpha Male, uno de los equipos más influyentes del deporte."
   },
   {
     "id": "ufc-bj-penn",
@@ -32618,7 +32635,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "BJ Penn fue campeón de UFC en dos categorías: wélter en 2004 y ligero entre 2008 y 2010. Su talento natural en el jiu-jitsu y el boxeo, y su disposición a enfrentarse a rivales más grandes, lo convirtieron en un mito de la primera gran era de UFC."
   },
   {
     "id": "ufc-forrest-griffin",
@@ -32685,7 +32703,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Forrest Griffin ganó la primera temporada de The Ultimate Fighter tras una guerra con Stephan Bonnar en 2005, el combate que, según UFC, puso las MMA en el mapa. En 2008 venció a Quinton Jackson para ser campeón del peso semipesado."
   },
   {
     "id": "ufc-mark-kerr",
@@ -32745,7 +32764,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Mark Kerr, campeón universitario de lucha, ganó los torneos de peso pesado de UFC 14 y UFC 15 en 1997 y se ganó el apodo de «The Smashing Machine». Después compitió en PRIDE, en Japón, donde fue una de las grandes figuras del peso pesado."
   },
   {
     "id": "ufc-vitor-belfort",
@@ -32809,7 +32829,8 @@ export const additionalFighters = [
     "code": "BR",
     "country": "Brazil",
     "countrySource": "https://www.ufc.com/event/ufc-224",
-    "countryConsulted": "2026-11-26"
+    "countryConsulted": "2026-11-26",
+    "legacyStory": "Vitor Belfort ganó el torneo de peso pesado de UFC 12 con solo 19 años y fue campeón del peso semipesado en 2004. Su velocidad de manos le dio el récord de UFC de finalizaciones en el primer asalto (13), con diez nocauts en 90 segundos o menos."
   },
   {
     "id": "ufc-wanderlei-silva",
@@ -32869,7 +32890,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Wanderlei «The Axe Murderer» Silva fue campeón del peso medio de PRIDE y ganó su Grand Prix de 2003, cuando era uno de los luchadores más temidos del mundo. En UFC firmó combates memorables, como el de Chuck Liddell en UFC 79. Suma 19 nocauts, el máximo entre UFC, WEC, PRIDE y Strikeforce."
   },
   {
     "id": "ufc-anderson-silva",
@@ -32940,7 +32962,8 @@ export const additionalFighters = [
     "code": "BR",
     "country": "Brazil",
     "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2020",
-    "countryConsulted": "2026-11-26"
+    "countryConsulted": "2026-11-26",
+    "legacyStory": "Anderson «The Spider» Silva fue campeón del peso medio entre 2006 y 2013 y encadenó 16 victorias seguidas, la racha más larga de la historia de UFC. Su golpeo, sus esquivas y su espectáculo dejaron algunos de los momentos más famosos del octágono. Perdió el título ante Chris Weidman en 2013."
   },
   {
     "id": "ufc-jens-pulver",
@@ -33007,7 +33030,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Jens Pulver fue el primer campeón del peso ligero de UFC, al vencer a Caol Uno en UFC 30 (2001). Más pequeño que casi todos sus rivales, compitió en cuatro categorías durante 14 años, también en PRIDE."
   },
   {
     "id": "ufc-kevin-randleman",
@@ -33074,7 +33098,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Kevin «The Monster» Randleman, dos veces campeón universitario de lucha, ganó el título del peso pesado de UFC en 1999 gracias a su potencia explosiva. Lo perdió ante Randy Couture en 2000 y siguió brillando en PRIDE. Falleció en 2016."
   },
   {
     "id": "ufc-rich-franklin",
@@ -33141,7 +33166,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Rich «Ace» Franklin dejó su trabajo de profesor de matemáticas para dedicarse a las MMA y fue campeón del peso medio entre 2005 y 2006. Entrenó en la segunda temporada de The Ultimate Fighter y fue una de las caras más reconocibles de UFC en su etapa de crecimiento."
   },
   {
     "id": "ufc-matt-serra",
@@ -33208,7 +33234,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Matt Serra, primer estadounidense con cinturón negro de jiu-jitsu otorgado por Renzo Gracie, ganó la cuarta temporada de The Ultimate Fighter. En 2007 noqueó a Georges St-Pierre en una de las mayores sorpresas de la historia para ser campeón del peso wélter: el primer ganador de TUF que llegó a campeón."
   },
   {
     "id": "ufc-kazushi-sakuraba",
@@ -33268,7 +33295,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Kazushi Sakuraba ganó el torneo de UFC Ultimate Japan en 1997 y en PRIDE se convirtió en «The Gracie Hunter» al vencer a varios miembros de la familia Gracie, Royce incluido. Siendo un peso ligero natural, plantó cara y ganó a rivales mucho más pesados."
   },
   {
     "id": "ufc-maurice-smith",
@@ -33335,7 +33363,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Maurice Smith, campeón de kickboxing, ganó el título del peso pesado de UFC en 1997 al vencer a Mark Coleman. Demostró que un especialista en golpeo podía triunfar en una época dominada por luchadores y especialistas en jiu-jitsu."
   },
   {
     "id": "ufc-don-frye",
@@ -33395,7 +33424,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Don Frye ganó el torneo de UFC 8 y el Ultimate Ultimate 96, siempre buscando terminar los combates. Fue el primero en UFC en finalizar a tres rivales en menos de un minuto y después siguió su carrera en PRIDE, en Japón."
   },
   {
     "id": "ufc-minotauro-nogueira",
@@ -33455,7 +33485,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Antônio Rodrigo «Minotauro» Nogueira es el único luchador que ha ganado los títulos de peso pesado de PRIDE y de UFC. Famoso por su espíritu de lucha y su jiu-jitsu, venció a rivales como Mirko Cro Cop y Tim Sylvia, y después trabajó como embajador de UFC en Brasil."
   },
   {
     "id": "ufc-bas-rutten",
@@ -33522,7 +33553,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Bas Rutten fue el rey de Pancrase en Japón y uno de los mejores libra por libra de su época. Solo peleó dos veces en el octágono, ambas con victoria, y la segunda le dio el título del peso pesado en 1999. Después se convirtió en un comentarista y embajador muy querido."
   },
   {
     "id": "ufc-pat-miletich",
@@ -33589,7 +33621,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Pat Miletich fue el primer campeón del peso wélter de UFC, tras ganar el torneo de UFC 16 en 1998. Como entrenador llevó a Matt Hughes, Jens Pulver y Tim Sylvia a títulos mundiales."
   },
   {
     "id": "ufc-tito-ortiz",
@@ -33656,7 +33689,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Tito Ortiz ganó el título del peso semipesado ante Wanderlei Silva en UFC 25 (2000) y lo defendió cinco veces. Su rivalidad con Chuck Liddell y sus combates con Ken Shamrock lo convirtieron en una de las mayores atracciones de los primeros años de UFC."
   },
   {
     "id": "ufc-matt-hughes",
@@ -33723,7 +33757,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Matt Hughes fue dos veces campeón del peso wélter entre 2001 y 2006, con siete defensas del título. Venció a Georges St-Pierre, BJ Penn y Royce Gracie, y su segundo combate con Frank Trigg está en el Salón de la Fama."
   },
   {
     "id": "ufc-chuck-liddell",
@@ -33790,7 +33825,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Chuck «The Iceman» Liddell, con su cresta y su estilo de defender el derribo y golpear, fue la gran figura de UFC a principios de los 2000. Campeón del peso semipesado entre 2005 y 2007, es el luchador con más victorias de la historia de la división, y su rivalidad con Tito Ortiz fue de las más famosas del deporte."
   },
   {
     "id": "ufc-mark-coleman",
@@ -33857,7 +33893,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Mark Coleman ganó los torneos de UFC 10 y UFC 11 y en 1997 se convirtió en el primer campeón del peso pesado de UFC. Su estilo de lucha y castigo en el suelo marcó a una generación, y en 2000 ganó el Grand Prix absoluto de PRIDE."
   },
   {
     "id": "ufc-randy-couture",
@@ -33930,7 +33967,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Randy Couture fue tres veces campeón del peso pesado y dos del semipesado, el primer luchador en ganar títulos de UFC en dos categorías. Siguió ganando cinturones pasados los 40 años y es uno de los campeones más admirados de la historia."
   },
   {
     "id": "ufc-dan-severn",
@@ -33990,7 +34028,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Dan Severn, luchador de élite, ganó el Ultimate Ultimate 95 y la Superfight de UFC en 1996, y fue el primero en recibir un cinturón de UFC. Disputó más de 100 combates profesionales de MMA."
   },
   {
     "id": "ufc-ken-shamrock",
@@ -34050,7 +34089,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Ken Shamrock fue el primer campeón de la Superfight de UFC y rey de Pancrase en Japón. Su rivalidad con Royce Gracie en los primeros torneos y sus combates con Tito Ortiz lo convirtieron en una de las primeras estrellas de UFC."
   },
   {
     "id": "ufc-royce-gracie",
@@ -34110,7 +34150,8 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "legacyStory": "Royce Gracie ganó el primer torneo de UFC en noviembre de 1993 venciendo a rivales más grandes y fuertes con jiu-jitsu brasileño. Ganó tres de los cuatro primeros torneos y mostró al mundo la eficacia de la técnica que había desarrollado su familia."
   },
   {
     "id": "ufc-jon-jones",
@@ -34192,6 +34233,7 @@ export const additionalFighters = [
     "code": "US",
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-309",
-    "countryConsulted": "2026-11-26"
+    "countryConsulted": "2026-11-26",
+    "legacyStory": "Jon «Bones» Jones fue el campeón más joven de la historia de UFC al ganar el peso semipesado en 2011, con 23 años, y encadenó ocho defensas en su primer reinado. Más tarde conquistó el peso pesado en UFC 285 y lo defendió ante Stipe Miocic en UFC 309. Con un récord de 28-1, cuya única derrota fue una descalificación, muchos lo consideran el mejor de todos los tiempos."
   }
 ];
