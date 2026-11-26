@@ -16,7 +16,8 @@ cron-job.org is the primary trigger for the events workflow: GitHub's native
 schedule often fires hours late or not at all on this repository (in November
 2026 the 08:00 slot never ran). Its jobs 8620496 and 8625854 call the
 `workflow_dispatch` endpoint with a fine-grained GitHub token limited to this
-repository and the Actions read/write permission. When that token expires, the
+repository and the Actions read/write permission. The current token (since 25 November 2026) has no
+expiry date; if it is ever revoked or replaced, the
 jobs fail with HTTP 401: create a new one with the same scope and replace the
 `Authorization: Bearer …` header in every dispatch job. The native schedule stays as a
 backup; the workflow's concurrency group prevents overlapping runs.
