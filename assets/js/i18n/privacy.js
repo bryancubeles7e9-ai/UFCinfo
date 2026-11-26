@@ -38,7 +38,8 @@ export const privacyCopy = {
   "Volver a cargar lo guardado en tu cuenta": "Reload what is saved in your account",
   "Horas por pelea orientativas · ¿Cómo las calculamos?": "Estimated times per fight · How do we calculate them?",
   "Sin ficha en UFCinfo": "No UFCinfo profile",
-  "Destacados primero": "Featured first"
+  "Destacados primero": "Featured first",
+  "Unidades de medida": "Units of measurement"
  },
  "ca": {
   "TUS DATOS": "LES TEVES DADES",
@@ -78,6 +79,7 @@ export const privacyCopy = {
   "Volver a cargar lo guardado en tu cuenta": "Torna a carregar el que tens desat al compte",
   "Horas por pelea orientativas · ¿Cómo las calculamos?": "Hores per combat orientatives · Com les calculem?",
   "Sin ficha en UFCinfo": "Sense fitxa a UFCinfo",
-  "Destacados primero": "Destacats primer"
+  "Destacados primero": "Destacats primer",
+  "Unidades de medida": "Unitats de mesura"
  }
 };

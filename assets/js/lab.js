@@ -6,6 +6,7 @@ import { fullName } from "./data.js";
 import { fighterInfo } from "./fighter-info-data.js";
 import { stanceNames } from "./fighter-details.js";
 import { $, escapeHTML as esc, formatDate, formatLocation } from "./utils.js";
+import { formatHeight, formatLength, formatWeight, unitsToggle } from "./units.js";
 
 const numbers = { format: value => new Intl.NumberFormat(getLocale(), { maximumFractionDigits: 2 }).format(value) };
 const missing = "No indicado";
@@ -30,9 +31,10 @@ export function comparisonGroups(red, blue) {
     { title: "Perfil y datos físicos", rows: [
       fact("División", "division"), fact("Récord · victorias–derrotas–empates", "record"), fact("Apodo", "nickname"),
       number("Edad en la consulta", "age", " años"),
-      { label: "Altura", red: numeric(red.heightCm, " cm"), blue: numeric(blue.heightCm, " cm") },
-      { label: "Alcance de brazos", red: numeric(red.reachCm, " cm"), blue: numeric(blue.reachCm, " cm") },
-      number("Alcance de pierna", "legReachCm", " cm"), number("Peso del perfil", "weightKg", " kg"),
+      { label: "Altura", red: formatHeight(red.heightCm, missing), blue: formatHeight(blue.heightCm, missing) },
+      { label: "Alcance de brazos", red: formatLength(red.reachCm, missing), blue: formatLength(blue.reachCm, missing) },
+      { label: "Alcance de pierna", red: formatLength(r.legReachCm, missing), blue: formatLength(b.legReachCm, missing) },
+      { label: "Peso del perfil", red: formatWeight(r.weightKg, missing), blue: formatWeight(b.weightKg, missing) },
       { label: "Lugar de nacimiento", red: red.birthplace ? formatLocation(red.birthplace) : missing, blue: blue.birthplace ? formatLocation(blue.birthplace) : missing },
     ] },
     { title: "Formación y trayectoria", rows: [
@@ -70,7 +72,7 @@ function summary(fighter, corner) {
 
 export function renderComparison(red, blue) {
   const cell = (text, percent, corner) => `<td class="lab-value ${corner}">${esc(text)}${percent === null || percent === undefined ? "" : `<div class="lab-percent" aria-hidden="true"><span style="width:${Math.max(0, Math.min(100, percent))}%"></span></div>`}</td>`;
-  return comparisonGroups(red, blue).map(group => `<table class="lab-table"><caption>${esc(group.title)}</caption><thead><tr><th scope="col">Dato / estadística</th><th scope="col">${esc(fullName(red))}</th><th scope="col">${esc(fullName(blue))}</th></tr></thead><tbody>${group.rows.map(row => `<tr><th scope="row">${esc(row.label)}</th>${cell(row.red, row.redPercent, "red")}${cell(row.blue, row.bluePercent, "blue")}</tr>`).join("")}</tbody></table>`).join("");
+  return unitsToggle() + comparisonGroups(red, blue).map(group => `<table class="lab-table"><caption>${esc(group.title)}</caption><thead><tr><th scope="col">Dato / estadística</th><th scope="col">${esc(fullName(red))}</th><th scope="col">${esc(fullName(blue))}</th></tr></thead><tbody>${group.rows.map(row => `<tr><th scope="row">${esc(row.label)}</th>${cell(row.red, row.redPercent, "red")}${cell(row.blue, row.bluePercent, "blue")}</tr>`).join("")}</tbody></table>`).join("");
 }
 
 export function nextMainEventPair(events, now = Date.now()) {
