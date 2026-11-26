@@ -319,7 +319,7 @@ body.light .championship-badge.former{color:#5f625f;border-color:#a8aaa4}
 .martial-base > p:not(.eyebrow){font-size:14px;line-height:1.6}
 /* Salón de leyendas: header, wing filters and gallery of Hall of Fame cards. */
 .legends-hall{--legend:#a78acb;margin:6px 0 22px;padding:26px 28px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(135deg,#a78bfa14,transparent 60%),var(--surface)}
-.legends-hall-intro h3{font:800 clamp(28px,3.4vw,40px)/1.05 var(--display);text-transform:uppercase;margin:6px 0 10px}
+.legends-hall-intro h2{font:800 clamp(28px,3.4vw,40px)/1.05 var(--display);text-transform:uppercase;margin:6px 0 10px}
 .legends-hall-intro .eyebrow{color:var(--legend)}
 .legends-hall-intro p:not(.eyebrow){max-width:720px;color:var(--muted);font-size:14px;line-height:1.6;margin:0}
 .legends-hall-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:22px 0 18px}
@@ -446,3 +446,4 @@ body.light .legend-profile-story{background:#7854ad0a}
   .legend-profile-story{padding:16px 18px}
   .legend-profile-story p{font-size:16px}
 }
+.legend-profile-record-note{margin:-10px 0 0;font-size:13px;color:var(--muted);line-height:1.5}

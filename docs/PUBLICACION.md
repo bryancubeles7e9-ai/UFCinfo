@@ -98,6 +98,8 @@ npm install --no-save --no-package-lock esbuild@0.25.5
 node scripts/build-bundle.mjs
 ```
 
+Las traducciones al inglés y al catalán (`assets/js/i18n/dictionaries.js` y sus módulos) tampoco van en el paquete: solo se descargan si el visitante elige esos idiomas, y mientras llegan la página espera oculta (2 s como máximo) para no mostrar un destello en español. El paquete pasó así de 458 KB a 190 KB.
+
 La validación de GitHub (`--check`) falla si el paquete no coincide con el código, y Render solo publica cuando la validación pasa. Además, la portada precarga el póster del próximo evento, las secciones ocultas se dibujan cuando el navegador queda libre y las fotos se reutilizan durante una hora sin volver a descargarse.
 
 **Resultado (26 de noviembre de 2026, móvil con la CPU ralentizada ×4):** portada completa en 4G de 2,6 s a 1,7 s y en 4G lenta de 7,7 s a 7,0 s; peticiones de 85 a 55; tiempo de bloqueo de 760 ms a unos 420 ms. En 4G lenta el límite es ya el peso de las fotos y los datos.
@@ -122,6 +124,10 @@ Como solo existe una cookie estrictamente necesaria y no hay analítica ni publi
 ## Rendimiento
 
 Medido con Lighthouse el 26 de noviembre de 2026 en la portada: en ordenador, 97 de rendimiento y 100 en accesibilidad, buenas prácticas y SEO; en móvil con 4G lenta simulada, alrededor de 65 de rendimiento (antes 34), 100 de accesibilidad y desplazamiento visual casi nulo (0,005, antes 0,88). El peso de la portada bajó de 3,7 MB a unos 1,3 MB gracias a la compresión gzip, las copias WebP de las fotos y las tipografías propias. El siguiente paso, si hace falta, es agrupar los módulos JavaScript para reducir la cadena de descargas en móvil.
+
+## Accesibilidad
+
+`tests/accessibility.mjs` revisa con axe-core (el motor de accesibilidad de Lighthouse; reglas WCAG 2.1 A/AA y buenas prácticas) doce pantallas: portada, Salón de leyendas en móvil y ordenador, ficha de leyenda (también en tema claro), ficha de luchador, cartelera, ranking, rumores, privacidad, 404 y el modo sin conexión. Se ejecuta en la prueba de navegador de GitHub junto a la de recorrido, así que Render no publica una versión con problemas de accesibilidad. Resultado del 26 de noviembre de 2026: ningún problema.
 
 ## Prueba de navegador antes de publicar
 

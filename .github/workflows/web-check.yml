@@ -13,6 +13,7 @@ on:
       - 'privacy.html'
       - 'assets/sw.js'
       - 'tests/browser-smoke.mjs'
+      - 'tests/accessibility.mjs'
       - 'assets/data/share-index.json'
       - '.github/workflows/web-check.yml'
   workflow_dispatch:
@@ -35,7 +36,7 @@ jobs:
           node-version: '22'
       - name: Instalar Chromium
         run: |
-          npm install --no-save --no-package-lock playwright@1.63.0
+          npm install --no-save --no-package-lock playwright@1.63.0 axe-core@4.10.3
           npx playwright install --with-deps chromium
       - name: Arrancar la web
         run: |
@@ -48,3 +49,5 @@ jobs:
           exit 1
       - name: Recorrer la web en ordenador y móvil
         run: node tests/browser-smoke.mjs http://127.0.0.1:8780
+      - name: Revisar la accesibilidad de las pantallas principales
+        run: node tests/accessibility.mjs http://127.0.0.1:8780

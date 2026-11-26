@@ -2,7 +2,7 @@
 // - Online, every request goes to the network as usual, and a copy of the site's own files is kept.
 // - Offline, the site opens from that copy: the interface plus the last data downloaded.
 // - While Render restarts after a deploy (502/503/504), pages show the friendly "updating" screen.
-const CACHE = 'ufcinfo-offline-v1';
+const CACHE = 'ufcinfo-offline-v2';
 const IMAGES = 'ufcinfo-images-v1';
 const PAGE = '/assets/updating.html';
 const RESTARTING = new Set([502, 503, 504]);
@@ -18,6 +18,8 @@ const PRECACHE = [
   '/assets/js/app.bundle.js', '/assets/js/adsense-init.js', '/assets/js/adsense.js',
   '/assets/js/fighter-directory-data.js', '/assets/js/official-events.js', '/assets/js/fighter-stance-data.js',
   '/assets/js/fighter-martial-data.js', '/assets/js/fighter-info-data.js',
+  '/assets/js/i18n/dictionaries.js', '/assets/js/i18n/en.js', '/assets/js/i18n/ca.js', '/assets/js/i18n/martial-notes.js',
+  '/assets/js/i18n/legend-notes.js', '/assets/js/i18n/legends.js', '/assets/js/i18n/privacy.js',
   '/assets/data/ufc-events.json', '/assets/data/ufc-rankings.json', '/assets/data/fighter-records.json',
   '/assets/data/fighter-photos.json', '/assets/data/sync-health.json', '/assets/data/ufc-rumors.json',
   '/assets/data/ufc-rumor-groups.json', '/assets/data/adsense.json',
