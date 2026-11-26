@@ -14,6 +14,7 @@ export const legendsCopy = {
     'Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado.': 'Historic career. UFCinfo legends selection with documented retirement.',
     'Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado': 'Historic career. UFCinfo legends selection with documented retirement',
     'Retiro en': 'Retired in', 'Momentos clave': 'Key moments',
+    'Su historia': 'Their story', 'Cinturones de UFC': 'UFC belts', 'Récord': 'Record', 'Categoría': 'Division', 'Retiro': 'Retirement', 'Salón de la Fama': 'Hall of Fame', 'Documentado por UFC': 'Documented by UFC', 'Datos y fotografía: UFC.com. Consulta:': 'Data and photo: UFC.com. Checked:',
   },
   ca: {
     'SALÓN DE LEYENDAS': 'SALÓ DE LLEGENDES', 'Salón de leyendas': 'Saló de llegendes',
@@ -29,5 +30,6 @@ export const legendsCopy = {
     'Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado.': 'Trajectòria històrica. Selecció de llegendes d’UFCinfo amb retirada documentada.',
     'Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado': 'Trajectòria històrica. Selecció de llegendes d’UFCinfo amb retirada documentada',
     'Retiro en': 'Retirada el', 'Momentos clave': 'Moments clau',
+    'Su historia': 'La seva història', 'Cinturones de UFC': 'Cinturons d’UFC', 'Récord': 'Rècord', 'Categoría': 'Categoria', 'Retiro': 'Retirada', 'Salón de la Fama': 'Saló de la Fama', 'Documentado por UFC': 'Documentada per UFC', 'Datos y fotografía: UFC.com. Consulta:': 'Dades i fotografia: UFC.com. Consulta:',
   },
 };

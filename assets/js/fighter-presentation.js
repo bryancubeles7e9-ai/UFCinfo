@@ -9,6 +9,7 @@ import { renderMartialDetails } from './fighter-martial.js';
 import { renderExtendedFighterInfo, renderFighterConsultation } from './fighter-info.js';
 import { resultHidden, hiddenResult } from './spoilers.js';
 import { boutPinKey } from './following.js';
+import { legendProfile } from './legend-profile.js';
 
 export function fighterHistory(fighter, events) {
   const seen = new Set();
@@ -39,6 +40,7 @@ export function renderFighterHistory(fighter, events) {
   }).join('')}</ol>` : '<p class="profile-empty">Todavía no hay combates de este luchador en las carteleras disponibles.</p>'}`;
 }
 export function fighterProfile(fighter, { follow, events, active = 'summary' }) {
+  if (isLegend(fighter)) return legendProfile(fighter, { follow });
   const facts = [['País representado', countryLabel(fighter, getLocale()) || 'No indicado'], ['División', fighter.division], ['Apodo', fighter.nickname || 'No indicado'], ['Estilo indicado por UFC', fighter.officialStyle || 'No indicado'], ['Lugar de nacimiento', fighter.birthplace || 'No indicado']];
   const metrics = [['Récord · V-D-E', fighter.record || '—'], ['Altura', fighter.heightCm == null ? '—' : `${fighter.heightCm} cm`], ['Alcance', fighter.reachCm == null ? '—' : `${fighter.reachCm} cm`]];
   const tabs = [['summary','Resumen'], ['statistics','Estadísticas'], ['history','Historial']];

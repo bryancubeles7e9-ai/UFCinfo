@@ -412,3 +412,37 @@ dialog .dialog-close:hover,dialog .dialog-close:focus-visible{border-color:var(-
   small,footer>p,footer>div:last-child,.info-hero .data-note,.event-date small,.overview-stats p,.data-note{font-size:12px}
   .legend-card-tagline,.home-card-preview .eyebrow{font-size:11.5px}
 }
+/* Legend profile: Hall of Fame photo with the name over it, the essentials and a short story. */
+.legend-profile{--legend:#a78acb;display:flex;flex-direction:column;gap:22px}
+.legend-profile-hero{position:relative;margin:0;border-radius:14px;overflow:hidden;aspect-ratio:16/9;background:#111;border-top:3px solid var(--legend)}
+.legend-profile-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.legend-profile-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,#0d0d10e6 100%)}
+.legend-profile-title{position:absolute;z-index:1;left:28px;right:28px;bottom:24px;color:#f3f1ec}
+.legend-profile-tagline{margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#cdb8ef}
+.legend-profile-title h2{margin:0;font:800 clamp(34px,5vw,58px)/.95 var(--display);text-transform:uppercase;color:#fff}
+.legend-profile-nickname{margin:6px 0 0;font-size:16px;color:#e4e1db}
+.legend-profile-title .legend-badge{margin-top:12px;background:#10101099;color:#e6dcf7;border-color:#c9b5ef80}
+.legend-profile-credit{position:absolute;z-index:1;right:14px;bottom:10px;font-size:10px;letter-spacing:.1em;color:#e3e3e6;text-shadow:0 1px 3px #000}
+.legend-profile-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.legend-profile-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:0}
+.legend-profile-facts div{padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.legend-profile-facts dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.legend-profile-facts dd{margin:6px 0 0;font:800 24px/1.1 var(--display);color:var(--ink)}
+.legend-profile h3{margin:0 0 10px;font:800 24px/1.1 var(--display);text-transform:uppercase}
+.legend-profile-belts ul{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.legend-profile-belts li{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid #c5a46988;border-radius:8px;color:#d8bb7f;font-weight:600;font-size:14px}
+.legend-profile-belts svg{width:24px;height:12px}
+.legend-profile-story{padding:20px 22px;border-left:3px solid var(--legend);border-radius:0 12px 12px 0;background:#a78bfa0d}
+.legend-profile-story p{margin:0;font-size:17px;line-height:1.7;color:var(--ink)}
+body.light .legend-profile-belts li{color:#7a5b1e;border-color:#b8954f}
+body.light .legend-profile-story{background:#7854ad0a}
+@media(max-width:700px){
+  .legend-profile{gap:18px}
+  .legend-profile-hero{aspect-ratio:4/5;margin:0 -6px}
+  .legend-profile-hero img{object-position:center 20%}
+  .legend-profile-title{left:18px;right:18px;bottom:18px}
+  .legend-profile-facts{grid-template-columns:1fr 1fr}
+  .legend-profile-facts div:last-child:nth-child(odd){grid-column:1/-1}
+  .legend-profile-story{padding:16px 18px}
+  .legend-profile-story p{font-size:16px}
+}
