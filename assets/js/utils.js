@@ -40,3 +40,18 @@ export function toast(message) {
   clearTimeout(timeout);
   timeout = setTimeout(() => $("#toast").classList.remove("visible"), 3600);
 }
+
+// UFC publishes bout classes in English ("Women's Flyweight Title Bout"); show them in Spanish like the rest of the site.
+const boutWeights = { 'light heavyweight': 'semipesado', heavyweight: 'pesado', middleweight: 'medio', welterweight: 'wélter',
+  lightweight: 'ligero', featherweight: 'pluma', bantamweight: 'gallo', flyweight: 'mosca', strawweight: 'paja',
+  catchweight: 'pactado', 'catch weight': 'pactado' };
+export function boutDivisionLabel(value) {
+  const text = String(value || '').trim();
+  const lower = text.toLowerCase();
+  const weight = Object.keys(boutWeights).find(name => lower.includes(name));
+  if (!weight) return text;
+  const women = /women/.test(lower) ? ' femenino' : '';
+  const name = `peso ${boutWeights[weight]}${women}`;
+  if (/title|interim/.test(lower)) return `${/interim/.test(lower) ? 'Título interino' : 'Título'} del ${name}`;
+  return name[0].toUpperCase() + name.slice(1);
+}

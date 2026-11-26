@@ -3,7 +3,7 @@ import {revealPickResults, highlightRankRow, whenVisible} from './showcase-motio
 import {countFigures} from './profile-figures.js';
 import {nextPickEvent, closingTime, isClosed, pickKey, picksFor, readPicks, pickResult, pickSummary, selection, pickMethods, pickPoints, resultMethod, countdownText} from './pickem-model.js';
 import {directoryFighterByName} from './fighter-directory.js';
-import {escapeHTML as esc} from './utils.js';
+import {escapeHTML as esc, boutDivisionLabel} from './utils.js';
 import {getLocale} from './i18n.js';
 import {countryLabel} from './fighter-country.js';
 import {renderBoutTime} from './bout-schedule.js';
@@ -117,7 +117,7 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
       ${!locked && Object.keys(picksFor(event,local[event.id])).length ? '<button class="outline-button small" id="pickem-import">Recuperar picks de este navegador</button>' : ''}` : '<p>Modo invitado: tus picks son locales y no puntúan. Inicia sesión para participar en el ranking.</p><button class="button small" id="pickem-login">Iniciar sesión</button>'}
       <p id="pickem-save-status" role="status" class="${confirmedAt !== null && !dirty ? 'is-confirmed' : ''}">${confirmedAt !== null && !dirty ? confirmationIcon(Date.now() - confirmedAt) : ''}<span>${esc(message || (dirty ? 'Cambios sin guardar' : authenticated ? (item?.joined ? 'Pronósticos guardados en tu cuenta' : 'Elige tus ganadores y guarda para participar') : 'Guardado local en este navegador'))}</span></p>
       <button class="outline-button small" id="pickem-refresh" ${busy?'disabled':''}>Recargar pronósticos guardados</button></div>
-      <div class="pickem-grid">${event.bouts.map((bout,i)=>`<fieldset class="pickem-bout ${resultBorder(bout,item)}${followedBoutFighters(bout,favoriteIds).length ? ' is-followed' : ''}"><legend>${esc({'main':'Principal','prelims':'Preliminares','early-prelims':'Preliminares previas'}[bout.section]||'Combate')} · ${esc(bout.division)}</legend>${followedBoutBadge(bout,favoriteIds)}${bout._void?'<p>Combate anulado</p>':renderBoutTime(event,bout)}<div class="pickem-options">${[bout.red,bout.blue].map((name,side)=>{
+      <div class="pickem-grid">${event.bouts.map((bout,i)=>`<fieldset class="pickem-bout ${resultBorder(bout,item)}${followedBoutFighters(bout,favoriteIds).length ? ' is-followed' : ''}"><legend>${esc({'main':'Principal','prelims':'Preliminares','early-prelims':'Preliminares previas'}[bout.section]||'Combate')} · ${esc(boutDivisionLabel(bout.division))}</legend>${followedBoutBadge(bout,favoriteIds)}${bout._void?'<p>Combate anulado</p>':renderBoutTime(event,bout)}<div class="pickem-options">${[bout.red,bout.blue].map((name,side)=>{
         const fighter=directoryFighterByName(name), chosen=selection(picks[pickKey(bout)],bout);
         const labels={general:'Victoria sin especificar',ko:'KO/TKO',submission:'Sumisión',decision:'Decisión'};
         return `<div class="pickem-choice pickem-fighter ${chosen?.winner===name?'is-picked':''}"><img src="${esc(fighter?.image||'assets/images/fighter-placeholder.svg')}" alt="" loading="lazy" width="140" height="150"><span translate="no">${esc(name)}</span><small class="pickem-fighter-info"><span>Récord</span>: <span translate="no">${esc(fighter?.record || "—")}</span>${fighter && countryLabel(fighter,getLocale()) ? ` · <span translate="no">${esc(countryLabel(fighter,getLocale()))}</span>` : ""}</small><div class="pickem-methods" role="group" aria-label="${esc(name)}">${pickMethods.map(method=>{

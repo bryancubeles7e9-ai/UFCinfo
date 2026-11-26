@@ -50,3 +50,16 @@ assert.equal(setLanguage('en'),true);
 assert.equal(translate('Actualización programada a las 08:00 y 14:00 (hora peninsular).'),'Updates scheduled at 08:00 and 14:00 (Spain time).');
 assert.equal(translate('EVENTO UFC'),'UFC EVENT');
 assert.match(translate([...notes][0]), /^Ilia names wrestling/);
+
+// Bout classes from UFC appear in Spanish and translate back for each language.
+const { boutDivisionLabel } = await import('../assets/js/utils.js');
+assert.equal(boutDivisionLabel('Middleweight Bout'), 'Peso medio');
+assert.equal(boutDivisionLabel("Women's Strawweight Bout"), 'Peso paja femenino');
+assert.equal(boutDivisionLabel('Heavyweight Interim Title Bout'), 'Título interino del peso pesado');
+assert.equal(boutDivisionLabel("Women's Flyweight Title"), 'Título del peso mosca femenino');
+assert.equal(boutDivisionLabel('Light Heavyweight Bout'), 'Peso semipesado');
+assert.equal(boutDivisionLabel('Open Weight Bout'), 'Open Weight Bout');
+assert.equal(translate('Título del peso gallo femenino'), "Women's Bantamweight title");
+assert.equal(setLanguage('ca'), true);
+assert.equal(translate('Peso paja femenino'), 'Pes palla femení');
+assert.equal(translate('Título interino del peso pesado'), 'Títol interí del pes pesant');
