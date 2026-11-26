@@ -6834,7 +6834,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/WALKER_JULIUS_L_10-10.png?itok=-2dG49Zg",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/WALKER_JULIUS_L_10-10.png?itok=-2dG49Zg",
+    "image": "assets/images/fighters/ufc-julius-walker.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -6883,7 +6883,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 197,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/MEERSCHAERT_GERALD_L_08-16.png?itok=ZSkiqY23",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/MEERSCHAERT_GERALD_L_08-16.png?itok=ZSkiqY23",
+    "image": "assets/images/fighters/ufc-gerald-meerschaert.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 38.0,
@@ -6932,7 +6932,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/PRADO_FRANCISCO_L_10-10.png?itok=XRpQv26p",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/PRADO_FRANCISCO_L_10-10.png?itok=XRpQv26p",
+    "image": "assets/images/fighters/ufc-francisco-prado.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 24.0,
@@ -6981,7 +6981,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 182,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/BONFIM_ISMAEL_L_07-25.png?itok=HPyzWmnE",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/BONFIM_ISMAEL_L_07-25.png?itok=HPyzWmnE",
+    "image": "assets/images/fighters/ufc-ismael-bonfim.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -7030,7 +7030,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/PRICE_NIKO_L_10-10.png?itok=0jkFyVxn",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/PRICE_NIKO_L_10-10.png?itok=0jkFyVxn",
+    "image": "assets/images/fighters/ufc-niko-price.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 37.0,
@@ -7079,7 +7079,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/SHAHBAZYAN_LEON_L_06-20.png?itok=ToSA3_7-",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/SHAHBAZYAN_LEON_L_06-20.png?itok=ToSA3_7-",
+    "image": "assets/images/fighters/ufc-leon-shahbazyan.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -7128,7 +7128,7 @@ export const additionalFighters = [
     "heightCm": 187,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/FRANCO_FELIPE_L_10-10.png?itok=Z5hC4AtK",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/FRANCO_FELIPE_L_10-10.png?itok=Z5hC4AtK",
+    "image": "assets/images/fighters/ufc-felipe-franco.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 25.0,
@@ -7177,7 +7177,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 206,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-02/RIBEIRO_BRENDSON_L_02-17.png?itok=T2HXVKsB",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-02/RIBEIRO_BRENDSON_L_02-17.png?itok=T2HXVKsB",
+    "image": "assets/images/fighters/ufc-brendson-ribeiro.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -7226,7 +7226,7 @@ export const additionalFighters = [
     "heightCm": 196,
     "reachCm": 204,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/FRYE_JR_ALLEN_L_10-10.png?itok=WyCgq4LJ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/FRYE_JR_ALLEN_L_10-10.png?itok=WyCgq4LJ",
+    "image": "assets/images/fighters/ufc-allen-frye-jr.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -7275,7 +7275,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/HARRIS_RJ_L_07-18.png?itok=688ZICwh",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/HARRIS_RJ_L_07-18.png?itok=688ZICwh",
+    "image": "assets/images/fighters/ufc-rj-harris.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -7324,7 +7324,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/PEREIRA_ALICE_L_10-10.png?itok=2ubTDmDL",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/PEREIRA_ALICE_L_10-10.png?itok=2ubTDmDL",
+    "image": "assets/images/fighters/ufc-alice-pereira.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 20.0,
@@ -7373,7 +7373,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-06/ZHELEZNIAKOVA_DARIA_L_06-21.png?itok=2_fWceIz",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-06/ZHELEZNIAKOVA_DARIA_L_06-21.png?itok=2_fWceIz",
+    "image": "assets/images/fighters/ufc-dariya-zheleznyakova.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -7422,7 +7422,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/KARECKAITE_ERNESTA_L_10-10.png?itok=72PChKi0",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/KARECKAITE_ERNESTA_L_10-10.png?itok=72PChKi0",
+    "image": "assets/images/fighters/ufc-ernesta-kareckaite.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -7471,7 +7471,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-03/GATTO_MELISSA_L_07-01.png?itok=xSfep8cI",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-03/GATTO_MELISSA_L_07-01.png?itok=xSfep8cI",
+    "image": "assets/images/fighters/ufc-melissa-gatto.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -7520,7 +7520,7 @@ export const additionalFighters = [
     "heightCm": 163,
     "reachCm": 164,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/RODRIGUEZ_IMANOL_L_10-03.png?itok=KkOiqXj-",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/RODRIGUEZ_IMANOL_L_10-03.png?itok=KkOiqXj-",
+    "image": "assets/images/fighters/ufc-imanol-rodriguez.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -7569,7 +7569,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/CORIA_ALDEN_L_07-18.png?itok=lobuZB80",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/CORIA_ALDEN_L_07-18.png?itok=lobuZB80",
+    "image": "assets/images/fighters/ufc-alden-coria.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -7618,7 +7618,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 202,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/PINAS_DAMIAN_L_10-03.png?itok=vUo_GaPI",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/PINAS_DAMIAN_L_10-03.png?itok=vUo_GaPI",
+    "image": "assets/images/fighters/ufc-damian-pinas.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 24.0,
@@ -7667,7 +7667,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 199,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/PULYAEV_ANDREY_R_03-22.png?itok=jWF656q7",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/PULYAEV_ANDREY_R_03-22.png?itok=jWF656q7",
+    "image": "assets/images/fighters/ufc-andrey-pulyaev.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -7716,7 +7716,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/MCGHEE_MARCUS_L_10-03.png?itok=cosM5Jgp",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/MCGHEE_MARCUS_L_10-03.png?itok=cosM5Jgp",
+    "image": "assets/images/fighters/ufc-marcus-mcghee.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -7765,7 +7765,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/ROMERO_ANTHONY_R_10-03.png?itok=Fq1ZEsdN",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/ROMERO_ANTHONY_R_10-03.png?itok=Fq1ZEsdN",
+    "image": "assets/images/fighters/ufc-anthony-romero-0.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -7814,7 +7814,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/WINT_ANTHONY_L_10-03.png?itok=EW6PEbc8",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/WINT_ANTHONY_L_10-03.png?itok=EW6PEbc8",
+    "image": "assets/images/fighters/ufc-anthony-wint.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -7863,7 +7863,7 @@ export const additionalFighters = [
     "heightCm": 189,
     "reachCm": 199,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/ARMAND_LUCAS_R_10-03.png?itok=72IdEhUP",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/ARMAND_LUCAS_R_10-03.png?itok=72IdEhUP",
+    "image": "assets/images/fighters/ufc-lucas-armand.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -7912,7 +7912,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 201,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/5/PARKIN_MICK_L_07-27.png?itok=OX9b6Fw2",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/5/PARKIN_MICK_L_07-27.png?itok=OX9b6Fw2",
+    "image": "assets/images/fighters/ufc-mick-parkin.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -7961,7 +7961,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/SMITH_JACOBE_L_10-03.png?itok=A3cpd2rA",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/SMITH_JACOBE_L_10-03.png?itok=A3cpd2rA",
+    "image": "assets/images/fighters/ufc-jacobe-smith.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -8010,7 +8010,7 @@ export const additionalFighters = [
     "heightCm": 179,
     "reachCm": 187,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/WHITEHEAD_BRUCE_R_10-03.png?itok=CutVYLnN",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/WHITEHEAD_BRUCE_R_10-03.png?itok=CutVYLnN",
+    "image": "assets/images/fighters/ufc-bruce-whitehead.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -8059,7 +8059,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/DOS_ANJOS_RAFAEL_L_10-03.png?itok=7LT0ljgc",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/DOS_ANJOS_RAFAEL_L_10-03.png?itok=7LT0ljgc",
+    "image": "assets/images/fighters/ufc-rafael-dos-anjos.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 41.0,
@@ -8108,7 +8108,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/HERNANDEZ_ALEXANDER_L_09-13.png?itok=B5l45CwH",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/HERNANDEZ_ALEXANDER_L_09-13.png?itok=B5l45CwH",
+    "image": "assets/images/fighters/ufc-alexander-hernandez.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -8157,7 +8157,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/VETTORI_MARVIN_L_10-03.png?itok=xBi6Ehwu",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/VETTORI_MARVIN_L_10-03.png?itok=xBi6Ehwu",
+    "image": "assets/images/fighters/ufc-marvin-vettori.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -8206,7 +8206,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/NAURDIEV_ISMAIL_L_11-22.png?itok=PK0HzWkv",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/NAURDIEV_ISMAIL_L_11-22.png?itok=PK0HzWkv",
+    "image": "assets/images/fighters/ufc-ismail-naurdiev.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -8255,7 +8255,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/MCGEE_COURT_L_10-03.png?itok=J0eLYXrp",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/MCGEE_COURT_L_10-03.png?itok=J0eLYXrp",
+    "image": "assets/images/fighters/ufc-court-mcgee.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 41.0,
@@ -8304,7 +8304,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/NOLAN_ERIC_R_08-16.png?itok=Lf5rUsnh",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/NOLAN_ERIC_R_08-16.png?itok=Lf5rUsnh",
+    "image": "assets/images/fighters/ufc-eric-nolan.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -8353,7 +8353,7 @@ export const additionalFighters = [
     "heightCm": 171,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/BARCELOS_RAONI_L_01-18.png?itok=wbdKRVUn",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/BARCELOS_RAONI_L_01-18.png?itok=wbdKRVUn",
+    "image": "assets/images/fighters/ufc-raoni-barcelos.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 39.0,
@@ -8402,7 +8402,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 187,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/HERNANDEZ_LUIS_L_09-26.png?itok=0LVO2fuS",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/HERNANDEZ_LUIS_L_09-26.png?itok=0LVO2fuS",
+    "image": "assets/images/fighters/ufc-luis-hernandez.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -8451,7 +8451,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 201,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/DUMAS_SEDRIQUES_L_04-12.png?itok=x6aJnKrz",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/DUMAS_SEDRIQUES_L_04-12.png?itok=x6aJnKrz",
+    "image": "assets/images/fighters/ufc-sedriques-dumas.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -8500,7 +8500,7 @@ export const additionalFighters = [
     "heightCm": 177,
     "reachCm": 182,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/OSMANLI_MAHAMMADALI_L_09-26.png?itok=mnIypG99",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/OSMANLI_MAHAMMADALI_L_09-26.png?itok=mnIypG99",
+    "image": "assets/images/fighters/ufc-mahammadali-osmanli.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 22.0,
@@ -8549,7 +8549,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 165,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/AKYLBEK_ILIMBEK_R_09-26.png?itok=BN8GrDS2",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/AKYLBEK_ILIMBEK_R_09-26.png?itok=BN8GrDS2",
+    "image": "assets/images/fighters/ufc-ilimbek-akylbek.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 23.0,
@@ -8598,7 +8598,7 @@ export const additionalFighters = [
     "heightCm": 164,
     "reachCm": 164,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/AMAYA_MELISSA_L_09-26.png?itok=DTruqACs",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/AMAYA_MELISSA_L_09-26.png?itok=DTruqACs",
+    "image": "assets/images/fighters/ufc-melissa-amaya.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -8647,7 +8647,7 @@ export const additionalFighters = [
     "heightCm": 163,
     "reachCm": 161,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/BLACK_TINA_R_09-26.png?itok=2j8vJKR6",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/BLACK_TINA_R_09-26.png?itok=2j8vJKR6",
+    "image": "assets/images/fighters/ufc-valesca-machado.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -8696,7 +8696,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/HIESTAND_BRADY_L_09-26.png?itok=GjHAAtcq",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/HIESTAND_BRADY_L_09-26.png?itok=GjHAAtcq",
+    "image": "assets/images/fighters/ufc-brady-hiestand.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -8745,7 +8745,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 174,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/NAKAMURA_RINYA_L_08-02.png?itok=ZQi1Nt7h",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/NAKAMURA_RINYA_L_08-02.png?itok=ZQi1Nt7h",
+    "image": "assets/images/fighters/ufc-rinya-nakamura.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -8794,7 +8794,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/VIEIRA_RODOLFO_L_09-26.png?itok=caUWg5ak",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/VIEIRA_RODOLFO_L_09-26.png?itok=caUWg5ak",
+    "image": "assets/images/fighters/ufc-rodolfo-vieira.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 37.0,
@@ -8843,7 +8843,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-02/BRYZCEK_ROBERT_L_02-10.png?itok=xbrgBOJC",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-02/BRYZCEK_ROBERT_L_02-10.png?itok=xbrgBOJC",
+    "image": "assets/images/fighters/ufc-robert-bryczek.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -8892,7 +8892,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 197,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/BELLATO_RODOLFO_L_09-26.png?itok=DtDdOqD4",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/BELLATO_RODOLFO_L_09-26.png?itok=DtDdOqD4",
+    "image": "assets/images/fighters/ufc-rodolfo-bellato.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -8941,7 +8941,7 @@ export const additionalFighters = [
     "heightCm": 196,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/EDWARDS_CHRISTIAN_R_05-16.png?itok=9hKWjz5V",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/EDWARDS_CHRISTIAN_R_05-16.png?itok=9hKWjz5V",
+    "image": "assets/images/fighters/ufc-christian-edwards.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -8990,7 +8990,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 184,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/BRENER_ELVES_L_09-26.png?itok=qa_DQFFG",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/BRENER_ELVES_L_09-26.png?itok=qa_DQFFG",
+    "image": "assets/images/fighters/ufc-elves-brener.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -9039,7 +9039,7 @@ export const additionalFighters = [
     "heightCm": 171,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2023-07/HARRELL_JOSIAH_L_07-08.png?itok=lmzL1uHT",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2023-07/HARRELL_JOSIAH_L_07-08.png?itok=lmzL1uHT",
+    "image": "assets/images/fighters/ufc-josiah-harrell.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -9088,7 +9088,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/JACKSON_MONTEL_L_09-26.png?itok=BYzPoGkC",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/JACKSON_MONTEL_L_09-26.png?itok=BYzPoGkC",
+    "image": "assets/images/fighters/ufc-montel-jackson.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -9137,7 +9137,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/SIMON_RICKY_L_03-28.png?itok=sJteSJT_",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/SIMON_RICKY_L_03-28.png?itok=sJteSJT_",
+    "image": "assets/images/fighters/ufc-ricky-simon.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -9186,7 +9186,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/CASTANEDA_JOHN_L_09-26.png?itok=YVaU5QLc",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/CASTANEDA_JOHN_L_09-26.png?itok=YVaU5QLc",
+    "image": "assets/images/fighters/ufc-john-castaneda.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -9235,7 +9235,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": 169,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-04/ALATENGHEILI_L_05-18.png?itok=tO6xLHed",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-04/ALATENGHEILI_L_05-18.png?itok=tO6xLHed",
+    "image": "assets/images/fighters/ufc-heili-alateng.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -9284,7 +9284,7 @@ export const additionalFighters = [
     "heightCm": 157,
     "reachCm": 151,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/DEMOPOULOS_VANESSA_L_09-26.png?itok=jcLkueyj",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/DEMOPOULOS_VANESSA_L_09-26.png?itok=jcLkueyj",
+    "image": "assets/images/fighters/ufc-vanessa-demopulos.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 38.0,
@@ -9333,7 +9333,7 @@ export const additionalFighters = [
     "heightCm": 160,
     "reachCm": 163,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-09/JAUREGUI_YAZMIN_L_09-14.png?itok=nqoagzOS",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-09/JAUREGUI_YAZMIN_L_09-14.png?itok=nqoagzOS",
+    "image": "assets/images/fighters/ufc-yazmin-jauregui.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -9382,7 +9382,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/JOURDAIN_CHARLES_L_10-18.png?itok=lbnIm7ba",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/JOURDAIN_CHARLES_L_10-18.png?itok=lbnIm7ba",
+    "image": "assets/images/fighters/ufc-charles-jourdain.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -9431,7 +9431,7 @@ export const additionalFighters = [
     "heightCm": 201,
     "reachCm": 213,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-10/5/DESPAIGNE_ROBELIS_L_03-09.png?itok=21z9xlCe",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-10/5/DESPAIGNE_ROBELIS_L_03-09.png?itok=21z9xlCe",
+    "image": "assets/images/fighters/ufc-robelis-despaigne.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 38.0,
@@ -9480,7 +9480,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ASWELL_JR_MICHAEL_L_09-19.png?itok=NNowQoo1",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ASWELL_JR_MICHAEL_L_09-19.png?itok=NNowQoo1",
+    "image": "assets/images/fighters/ufc-michael-aswell-jr.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 25.0,
@@ -9529,7 +9529,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 182,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-06/YOO_JOOSANG_R_06-07.png?itok=sFYPXELB",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-06/YOO_JOOSANG_R_06-07.png?itok=sFYPXELB",
+    "image": "assets/images/fighters/ufc-joosang-yoo.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -9578,7 +9578,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 189,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/GANDRA_RYAN_L_09-19.png?itok=AzQM7BE4",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/GANDRA_RYAN_L_09-19.png?itok=AzQM7BE4",
+    "image": "assets/images/fighters/ufc-ryan-gandra.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -9627,7 +9627,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 201,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/DIAZ_OZZY_R_03-08.png?itok=09cI1qBO",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/DIAZ_OZZY_R_03-08.png?itok=09cI1qBO",
+    "image": "assets/images/fighters/ufc-ozzy-diaz.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -9676,7 +9676,7 @@ export const additionalFighters = [
     "heightCm": 189,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/SHAHBAZYAN_EDMEN_L_09-19.png?itok=R5qwzicB",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/SHAHBAZYAN_EDMEN_L_09-19.png?itok=R5qwzicB",
+    "image": "assets/images/fighters/ufc-etomen-shiyahashian.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -9725,7 +9725,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ONEILL_CASEY_L_09-19.png?itok=Z7PuO0GL",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ONEILL_CASEY_L_09-19.png?itok=Z7PuO0GL",
+    "image": "assets/images/fighters/ufc-casey-oneill.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -9774,7 +9774,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-11/MOURA_EDUARDA_L_06-08.png?itok=jiGCZaUM",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-11/MOURA_EDUARDA_L_06-08.png?itok=jiGCZaUM",
+    "image": "assets/images/fighters/ufc-eduarda-moura.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -9823,7 +9823,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/CHIKADZE_GIGA_L_09-19.png?itok=iO8gpP36",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/CHIKADZE_GIGA_L_09-19.png?itok=iO8gpP36",
+    "image": "assets/images/fighters/ufc-giga-chikadze.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 38.0,
@@ -9872,7 +9872,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/BRITO_JOANDERSON_L_12-13.png?itok=MAvkv4Zx",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/BRITO_JOANDERSON_L_12-13.png?itok=MAvkv4Zx",
+    "image": "assets/images/fighters/ufc-joanderson-brito.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -9921,7 +9921,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/DELGADO_JOSE_MIGUEL_R_09-12.png?itok=N3i5jy1v",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/DELGADO_JOSE_MIGUEL_R_09-12.png?itok=N3i5jy1v",
+    "image": "assets/images/fighters/ufc-jose-miguel-delgado.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -9970,7 +9970,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/MORALES_JOSEPH_R_09-12.png?itok=vry9nId9",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/MORALES_JOSEPH_R_09-12.png?itok=vry9nId9",
+    "image": "assets/images/fighters/ufc-joseph-morales.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -10019,7 +10019,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/MCMILLEN_TOMMY_L_09-12.png?itok=lFqmApXw",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/MCMILLEN_TOMMY_L_09-12.png?itok=lFqmApXw",
+    "image": "assets/images/fighters/ufc-tommy-mcmillen.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -10068,7 +10068,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/RAHIKI_MARWAN_L_05-02.png?itok=4HkXr7I1",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/RAHIKI_MARWAN_L_05-02.png?itok=4HkXr7I1",
+    "image": "assets/images/fighters/ufc-marwan-rahiki.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 24.0,
@@ -10117,7 +10117,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/IGE_DAN_L_07-19.png?itok=eje2mypv",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/IGE_DAN_L_07-19.png?itok=eje2mypv",
+    "image": "assets/images/fighters/ufc-dan-ige.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -10166,7 +10166,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 168,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ELLIOTT_TIM_L_09-12.png?itok=ig5zg9at",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ELLIOTT_TIM_L_09-12.png?itok=ig5zg9at",
+    "image": "assets/images/fighters/ufc-tim-elliott.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 39.0,
@@ -10215,7 +10215,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/CHAIREZ_EDGAR_L_02-28.png?itok=WL7kQO7z",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/CHAIREZ_EDGAR_L_02-28.png?itok=WL7kQO7z",
+    "image": "assets/images/fighters/ufc-edgar-chairez.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -10264,7 +10264,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/BAHAMONDES_IGNACIO_L_09-12.png?itok=tEVrIOI6",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/BAHAMONDES_IGNACIO_L_09-12.png?itok=tEVrIOI6",
+    "image": "assets/images/fighters/ufc-ignacio-bahamondes.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -10313,7 +10313,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/SALIKHOV_MUSLIM_L_11-08.png?itok=r0fWreVE",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/SALIKHOV_MUSLIM_L_11-08.png?itok=r0fWreVE",
+    "image": "assets/images/fighters/ufc-muslim-salikhov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 42.0,
@@ -10362,7 +10362,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/SANTOS_DJORDEN_L_03-08.png?itok=DpF2CDFt",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/SANTOS_DJORDEN_L_03-08.png?itok=DpF2CDFt",
+    "image": "assets/images/fighters/ufc-djorden-santos.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -10411,7 +10411,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/KLOSE_DRAKKAR_L_09-12.png?itok=YolGlk7o",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/KLOSE_DRAKKAR_L_09-12.png?itok=YolGlk7o",
+    "image": "assets/images/fighters/ufc-drakkar-klose.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 38.0,
@@ -10460,7 +10460,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 194,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/GANTT_THOMAS_L_05-16.png?itok=mXejZpYg",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/GANTT_THOMAS_L_05-16.png?itok=mXejZpYg",
+    "image": "assets/images/fighters/ufc-thomas-gantt.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -10509,7 +10509,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/GARCIA_RAFA_L_09-12.png?itok=8ov3f0WM",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/GARCIA_RAFA_L_09-12.png?itok=8ov3f0WM",
+    "image": "assets/images/fighters/ufc-rafa-garcia.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -10558,7 +10558,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/RONGZHU_L_05-28.png?itok=cqDnLlXs",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/RONGZHU_L_05-28.png?itok=cqDnLlXs",
+    "image": "assets/images/fighters/ufc-rong-zhu.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -10607,7 +10607,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/KING_III_SEAN_L_09-12.png?itok=C_M3qlt7",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/KING_III_SEAN_L_09-12.png?itok=C_M3qlt7",
+    "image": "assets/images/fighters/ufc-sean-king-iii.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 22.0,
@@ -10656,7 +10656,7 @@ export const additionalFighters = [
     "heightCm": 171,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/ROSAS_JESSIE_R_08-08.png?itok=9lFjJtOe",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/ROSAS_JESSIE_R_08-08.png?itok=9lFjJtOe",
+    "image": "assets/images/fighters/ufc-jessie-rosas.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 23.0,
@@ -10705,7 +10705,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": 171,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ALDRICH_JJ_L_09-12.png?itok=zI3oNEu9",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ALDRICH_JJ_L_09-12.png?itok=zI3oNEu9",
+    "image": "assets/images/fighters/ufc-jj-aldrich.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -10754,7 +10754,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 168,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/TARIN_REGINA_L_02-28.png?itok=LpWAerkt",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/TARIN_REGINA_L_02-28.png?itok=LpWAerkt",
+    "image": "assets/images/fighters/ufc-regina-malpica-rivera.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 21.0,
@@ -10803,7 +10803,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ZIAM_FARES_L_09-05.png?itok=8ypjC9fW",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ZIAM_FARES_L_09-05.png?itok=8ypjC9fW",
+    "image": "assets/images/fighters/ufc-fares-ziam.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -10852,7 +10852,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 187,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/SOLA_AXEL_L_09-06.png?itok=QVekEELf",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/SOLA_AXEL_L_09-06.png?itok=QVekEELf",
+    "image": "assets/images/fighters/ufc-axel-sola.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -10897,7 +10897,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 201,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/PAGE_MICHAEL_L_03-21.png?itok=UOjuF--7",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/PAGE_MICHAEL_L_03-21.png?itok=UOjuF--7",
+    "image": "assets/images/fighters/ufc-michael-page.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 39.0,
@@ -10950,7 +10950,7 @@ export const additionalFighters = [
     "heightCm": 196,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/RUZIBOEV_NURSULTON_L_06-27.png?itok=qjqgBV1p",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/RUZIBOEV_NURSULTON_L_06-27.png?itok=qjqgBV1p",
+    "image": "assets/images/fighters/ufc-nursulton-ruziboev.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -10999,7 +10999,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/DONCHENKO_DANIIL_L_09-05.png?itok=o1TIk6on",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/DONCHENKO_DANIIL_L_09-05.png?itok=o1TIk6on",
+    "image": "assets/images/fighters/ufc-daniil-donchenko.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 25.0,
@@ -11048,7 +11048,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 184,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/SORIANO_PUNAHELE_L_10-04.png?itok=aPEGRoQ-",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/SORIANO_PUNAHELE_L_10-04.png?itok=aPEGRoQ-",
+    "image": "assets/images/fighters/ufc-punahele-soriano.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -11097,7 +11097,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/CAMPBELL_KURTIS_L_09-05.png?itok=PuvRoHUB",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/CAMPBELL_KURTIS_L_09-05.png?itok=PuvRoHUB",
+    "image": "assets/images/fighters/ufc-kurtis-campbell.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 24.0,
@@ -11146,7 +11146,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-09/PEEK_TREVOR_L_09-07.png?itok=3tAz2fur",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-09/PEEK_TREVOR_L_09-07.png?itok=3tAz2fur",
+    "image": "assets/images/fighters/ufc-trevor-peek.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -11195,7 +11195,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 182,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/KEITA_LOSENE_L_09-05.png?itok=Z3OSFQv8",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/KEITA_LOSENE_L_09-05.png?itok=Z3OSFQv8",
+    "image": "assets/images/fighters/ufc-losene-keita.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -11244,7 +11244,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/NAIMOV_MUHAMMAD_L_12-06.png?itok=t9HdOnmj",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/NAIMOV_MUHAMMAD_L_12-06.png?itok=t9HdOnmj",
+    "image": "assets/images/fighters/ufc-muhammad-naimov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -11293,7 +11293,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/CHARRIERE_MORGAN_L_09-05.png?itok=_DjeHfSv",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/CHARRIERE_MORGAN_L_09-05.png?itok=_DjeHfSv",
+    "image": "assets/images/fighters/ufc-morgan-charriere.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -11342,7 +11342,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-12/LIMA_FELIPE_L_06-22.png?itok=X6oZYeqp",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-12/LIMA_FELIPE_L_06-22.png?itok=X6oZYeqp",
+    "image": "assets/images/fighters/ufc-felipe-lima.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -11391,7 +11391,7 @@ export const additionalFighters = [
     "heightCm": 196,
     "reachCm": 201,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/PINTO_MARIO_L_09-05.png?itok=yfqOVPAV",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/PINTO_MARIO_L_09-05.png?itok=yfqOVPAV",
+    "image": "assets/images/fighters/ufc-mario-pinto.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -11440,7 +11440,7 @@ export const additionalFighters = [
     "heightCm": 196,
     "reachCm": 201,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/SPANN_RYAN_L_07-19.png?itok=uktQXcGD",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/SPANN_RYAN_L_07-19.png?itok=uktQXcGD",
+    "image": "assets/images/fighters/ufc-ryan-spann.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -11489,7 +11489,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 211,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/SY_OUMAR_L_09-05.png?itok=MMvCufGT",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/SY_OUMAR_L_09-05.png?itok=MMvCufGT",
+    "image": "assets/images/fighters/ufc-oumar-sy.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -11538,7 +11538,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/BUKAUSKAS_MODESTAS_L_05-16.png?itok=J4AuKXWf",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/BUKAUSKAS_MODESTAS_L_05-16.png?itok=J4AuKXWf",
+    "image": "assets/images/fighters/ufc-modestas-bukauskas.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -11587,7 +11587,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/WOOD_NATHANIEL_L_10-25.png?itok=xpw74M8X",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/WOOD_NATHANIEL_L_10-25.png?itok=xpw74M8X",
+    "image": "assets/images/fighters/ufc-nathaniel-wood.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -11636,7 +11636,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 169,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ANDRUSCA_PAVEL_R_09-05.png?itok=RimQdJ8P",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ANDRUSCA_PAVEL_R_09-05.png?itok=RimQdJ8P",
+    "image": "assets/images/fighters/ufc-pavel-andrusca.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 24.0,
@@ -11685,7 +11685,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": 168,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ALJAROUJ_MICHAEL_L_09-05.png?itok=0sV5EHmS",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ALJAROUJ_MICHAEL_L_09-05.png?itok=0sV5EHmS",
+    "image": "assets/images/fighters/ufc-michael-aljarouj.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -11734,7 +11734,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 165,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/SINTES_FABIA_R_09-05.png?itok=YwK59G97",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/SINTES_FABIA_R_09-05.png?itok=YwK59G97",
+    "image": "assets/images/fighters/ufc-fabia-sintes.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -11783,7 +11783,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/CORNOLLE_NORA_L_09-05.png?itok=C8MxF9So",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/CORNOLLE_NORA_L_09-05.png?itok=C8MxF9So",
+    "image": "assets/images/fighters/ufc-nora-cornolle.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -11832,7 +11832,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/SYGULA_KLAUDIA_L_02-07.png?itok=p-5n93s-",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/SYGULA_KLAUDIA_L_02-07.png?itok=p-5n93s-",
+    "image": "assets/images/fighters/ufc-klaudia-sygula.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -11881,7 +11881,7 @@ export const additionalFighters = [
     "heightCm": 192,
     "reachCm": 194,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/DUCLOS_MATTHIEU_L_09-05.png?itok=0IUm7Yqy",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/DUCLOS_MATTHIEU_L_09-05.png?itok=0IUm7Yqy",
+    "image": "assets/images/fighters/ufc-matthieu-letho-duclos.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -11930,7 +11930,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/DIAS_LUIS_FELIPE_R_09-05.png?itok=ZvARTQos",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/DIAS_LUIS_FELIPE_R_09-05.png?itok=ZvARTQos",
+    "image": "assets/images/fighters/ufc-luis-felipe-dias.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -11979,7 +11979,7 @@ export const additionalFighters = [
     "heightCm": 160,
     "reachCm": 161,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/BENOUAICH_DELPHINE_L_09-05.png?itok=C6D9b7T4",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/BENOUAICH_DELPHINE_L_09-05.png?itok=C6D9b7T4",
+    "image": "assets/images/fighters/ufc-delphine-benouaich.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -12028,7 +12028,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 171,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/MONTENEGRO_SOFIA_R_09-05.png?itok=aNPJSMxc",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/MONTENEGRO_SOFIA_R_09-05.png?itok=aNPJSMxc",
+    "image": "assets/images/fighters/ufc-sofia-montenegro.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -12077,7 +12077,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/AORIQILENG_L_08-29.png?itok=579Lml2L",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/AORIQILENG_L_08-29.png?itok=579Lml2L",
+    "image": "assets/images/fighters/ufc-aoriqileng.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -12126,7 +12126,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/ASAKURA_KAI_L_05-30.png?itok=RXn11ARV",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/ASAKURA_KAI_L_05-30.png?itok=RXn11ARV",
+    "image": "assets/images/fighters/ufc-kai-asakura.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -12175,7 +12175,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 166,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/PEREZ_ALEX_L_08-29.png?itok=hDi458D_",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/PEREZ_ALEX_L_08-29.png?itok=hDi458D_",
+    "image": "assets/images/fighters/ufc-alex-perez.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -12224,7 +12224,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/SUMUDAERJI_L_03-07.png?itok=NyopQV5l",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/SUMUDAERJI_L_03-07.png?itok=NyopQV5l",
+    "image": "assets/images/fighters/ufc-sumudaerji.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -12273,7 +12273,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/CE_LIU_L_08-29.png?itok=ZExXiUWr",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/CE_LIU_L_08-29.png?itok=ZExXiUWr",
+    "image": "assets/images/fighters/ufc-liu-ce.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -12322,7 +12322,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 194,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/RODRIGUES_LEVI_L_07-18.png?itok=V-X_RT7x",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/RODRIGUES_LEVI_L_07-18.png?itok=V-X_RT7x",
+    "image": "assets/images/fighters/ufc-levi-rodrigues-jr.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -12371,7 +12371,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/ROJAS_NILSON_R_08-29.png?itok=MeHt3N0f",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/ROJAS_NILSON_R_08-29.png?itok=MeHt3N0f",
+    "image": "assets/images/fighters/ufc-nilson-rojas.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -12420,7 +12420,7 @@ export const additionalFighters = [
     "heightCm": 163,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/BATBAYAR_NAMSRAI_L_08-29.png?itok=DvtQr1oR",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/BATBAYAR_NAMSRAI_L_08-29.png?itok=DvtQr1oR",
+    "image": "assets/images/fighters/ufc-namsrai-batbayar.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 25.0,
@@ -12469,7 +12469,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 171,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/LIMA_ANDRE_L_06-20.png?itok=C4QdWb5Q",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/LIMA_ANDRE_L_06-20.png?itok=C4QdWb5Q",
+    "image": "assets/images/fighters/ufc-andre-lima.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -12518,7 +12518,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/TSURUYA_REI_L_08-29.png?itok=9BBdq5UI",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/TSURUYA_REI_L_08-29.png?itok=9BBdq5UI",
+    "image": "assets/images/fighters/ufc-rei-tsuruya.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 24.0,
@@ -12567,7 +12567,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-04/BORJAS_KEVIN_L_11-11.png?itok=lzFPPN1l",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-04/BORJAS_KEVIN_L_11-11.png?itok=lzFPPN1l",
+    "image": "assets/images/fighters/ufc-kevin-borjas.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -12616,7 +12616,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/JENKINS_JACK_L_08-29.png?itok=ktvu4snK",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/JENKINS_JACK_L_08-29.png?itok=ktvu4snK",
+    "image": "assets/images/fighters/ufc-jack-jenkins.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -12665,7 +12665,7 @@ export const additionalFighters = [
     "heightCm": 189,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-12/WOODSON_SEAN_L_12-14.png?itok=HkMQi1cR",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-12/WOODSON_SEAN_L_12-14.png?itok=HkMQi1cR",
+    "image": "assets/images/fighters/ufc-sean-woodson.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -12714,7 +12714,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/LONG_XIAO_L_08-29.png?itok=8L4AAhby",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/LONG_XIAO_L_08-29.png?itok=8L4AAhby",
+    "image": "assets/images/fighters/ufc-shiyao-ron.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -12763,7 +12763,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/NUZZI_FRANCESCO_R_08-29.png?itok=wbrIfSJJ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/NUZZI_FRANCESCO_R_08-29.png?itok=wbrIfSJJ",
+    "image": "assets/images/fighters/ufc-francesco-nuzzi.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -12812,7 +12812,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 184,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/LUI_LAWRENCE_L_08-29.png?itok=Pum7xNyW",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/LUI_LAWRENCE_L_08-29.png?itok=Pum7xNyW",
+    "image": "assets/images/fighters/ufc-lawrence-lui.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -12861,7 +12861,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/SANTIAGO_HECTOR_R_08-29.png?itok=AHB5eS6j",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/SANTIAGO_HECTOR_R_08-29.png?itok=AHB5eS6j",
+    "image": "assets/images/fighters/ufc-hector-de-sousa-santiago.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -12910,7 +12910,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": 160,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/JINGNAN_XIONG_L_08-29.png?itok=Z567CSO7",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/JINGNAN_XIONG_L_08-29.png?itok=Z567CSO7",
+    "image": "assets/images/fighters/ufc-xiong-jingnan.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 38.0,
@@ -12959,7 +12959,7 @@ export const additionalFighters = [
     "heightCm": 157,
     "reachCm": 161,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/POLASTRI_JULIA_L_10-11.png?itok=_M66nIku",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/POLASTRI_JULIA_L_10-11.png?itok=_M66nIku",
+    "image": "assets/images/fighters/ufc-kori-makkenna-7.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -13008,7 +13008,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/MENG_DING_L_08-29.png?itok=xVbHhebz",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/MENG_DING_L_08-29.png?itok=xVbHhebz",
+    "image": "assets/images/fighters/ufc-ding-meng.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -13057,7 +13057,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/NELSON_CAM_R_08-29.png?itok=Ab4vpdkS",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/NELSON_CAM_R_08-29.png?itok=Ab4vpdkS",
+    "image": "assets/images/fighters/ufc-cam-nelson.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -13106,7 +13106,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/DOLIDZE_ROMAN_L_03-21.png?itok=LBWQed7d",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/DOLIDZE_ROMAN_L_03-21.png?itok=LBWQed7d",
+    "image": "assets/images/fighters/ufc-roman-dolidze.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 38.0,
@@ -13155,7 +13155,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 177,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/MEDEROS_MARQUEL_L_08-22.png?itok=r6wd4Zf8",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/MEDEROS_MARQUEL_L_08-22.png?itok=r6wd4Zf8",
+    "image": "assets/images/fighters/ufc-marquel-mederos.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -13204,7 +13204,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/JONES_MASON_L_03-21.png?itok=_sn2EwLA",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/JONES_MASON_L_03-21.png?itok=_sn2EwLA",
+    "image": "assets/images/fighters/ufc-mason-jones.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -13253,7 +13253,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/JUDICE_CARLI_L_08-22.png?itok=SGeZ9rwl",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/JUDICE_CARLI_L_08-22.png?itok=SGeZ9rwl",
+    "image": "assets/images/fighters/ufc-carli-judice.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -13302,7 +13302,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/CHAVES_JEISLA_L_06-06.png?itok=mXsCur2H",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/CHAVES_JEISLA_L_06-06.png?itok=mXsCur2H",
+    "image": "assets/images/fighters/ufc-jeisla-chaves.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -13351,7 +13351,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/CHATMAN_TERRANCE_R_08-22.png?itok=j31v5o4v",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/CHATMAN_TERRANCE_R_08-22.png?itok=j31v5o4v",
+    "image": "assets/images/fighters/ufc-terrance-chatman.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -13400,7 +13400,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/EMMERS_JAMALL_L_08-22.png?itok=mxNw8VpE",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/EMMERS_JAMALL_L_08-22.png?itok=mxNw8VpE",
+    "image": "assets/images/fighters/ufc-jamall-emmers.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 37.0,
@@ -13449,7 +13449,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/DOUGLAS_LERRYAN_R_03-28.png?itok=59ApcdLf",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/DOUGLAS_LERRYAN_R_03-28.png?itok=59ApcdLf",
+    "image": "assets/images/fighters/ufc-lerryan-douglas.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -13498,7 +13498,7 @@ export const additionalFighters = [
     "heightCm": 196,
     "reachCm": 211,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/NZECHUKWU_KENNEDY_L_08-22.png?itok=YliCidte",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/NZECHUKWU_KENNEDY_L_08-22.png?itok=YliCidte",
+    "image": "assets/images/fighters/ufc-kennedy-nzechukwu.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -13547,7 +13547,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 199,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/GAZIEV_SHAMIL_L_05-02.png?itok=VAF3kcSW",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/GAZIEV_SHAMIL_L_05-02.png?itok=VAF3kcSW",
+    "image": "assets/images/fighters/ufc-shamil-gaziev.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -13596,7 +13596,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/PADILLA_CHRIS_L_08-22.png?itok=05VyJrky",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/PADILLA_CHRIS_L_08-22.png?itok=05VyJrky",
+    "image": "assets/images/fighters/ufc-chris-padilla.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -13645,7 +13645,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/HAQPARAST_NASRAT_L_10-25.png?itok=mn2ANLv7",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/HAQPARAST_NASRAT_L_10-25.png?itok=mn2ANLv7",
+    "image": "assets/images/fighters/ufc-nasrat-haqparast.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -13694,7 +13694,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 179,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/BARBOSA_MARCIO_L_08-22.png?itok=NUGH0-bz",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/BARBOSA_MARCIO_L_08-22.png?itok=NUGH0-bz",
+    "image": "assets/images/fighters/ufc-marcio-barbosa.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -13743,7 +13743,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/KUSE_RYAN_R_08-22.png?itok=gwQ48j_V",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/KUSE_RYAN_R_08-22.png?itok=gwQ48j_V",
+    "image": "assets/images/fighters/ufc-ryan-kuse.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -13792,7 +13792,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/YOUNG_GAUGE_L_08-22.png?itok=ULz4189N",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/YOUNG_GAUGE_L_08-22.png?itok=ULz4189N",
+    "image": "assets/images/fighters/ufc-gauge-young.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -13841,7 +13841,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/DORSAINVIL_STAN_R_08-22.png?itok=qitNMyTp",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/DORSAINVIL_STAN_R_08-22.png?itok=qitNMyTp",
+    "image": "assets/images/fighters/ufc-stan-dorsainvil.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -13890,7 +13890,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/SCHULTZ_WESLEY_L_08-22.png?itok=1WjwlRQ3",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/SCHULTZ_WESLEY_L_08-22.png?itok=1WjwlRQ3",
+    "image": "assets/images/fighters/ufc-wes-schultz.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -13939,7 +13939,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/MCVEY_JACKSON_L_04-25.png?itok=KjOOInLO",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/MCVEY_JACKSON_L_04-25.png?itok=KjOOInLO",
+    "image": "assets/images/fighters/ufc-jackson-mcvey.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -13988,7 +13988,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 165,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/DYER_SHANELLE_L_08-22.png?itok=LZsyfDBX",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/DYER_SHANELLE_L_08-22.png?itok=LZsyfDBX",
+    "image": "assets/images/fighters/ufc-shanelle-dyer.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 25.0,
@@ -14037,7 +14037,7 @@ export const additionalFighters = [
     "heightCm": 160,
     "reachCm": 160,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/REED_ELISE_L_05-17.png?itok=5ZUQC1H3",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/REED_ELISE_L_05-17.png?itok=5ZUQC1H3",
+    "image": "assets/images/fighters/ufc-karlos-olberg-3.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -14086,7 +14086,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 203,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/NJOKUANI_CHIDI_L_08-15.png?itok=dtOSlVMy",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/NJOKUANI_CHIDI_L_08-15.png?itok=dtOSlVMy",
+    "image": "assets/images/fighters/ufc-bruno-korea-0.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 37.0,
@@ -14135,7 +14135,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/ALVAREZ_JOEL_L_05-09.png?itok=MGw1DSGs",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/ALVAREZ_JOEL_L_05-09.png?itok=MGw1DSGs",
+    "image": "assets/images/fighters/ufc-joel-alvarez.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -14184,7 +14184,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/JOHNSON_CHARLES_L_08-15.png?itok=0d3E5uii",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/JOHNSON_CHARLES_L_08-15.png?itok=0d3E5uii",
+    "image": "assets/images/fighters/ufc-charles-johnson.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -14233,7 +14233,7 @@ export const additionalFighters = [
     "heightCm": 171,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/CHAPOLIN_EDUARDO_R_08-15.png?itok=-LuiriXm",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/CHAPOLIN_EDUARDO_R_08-15.png?itok=-LuiriXm",
+    "image": "assets/images/fighters/ufc-eduardo-chapolin.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -14282,7 +14282,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/JOHNSON_DONTE_L_08-15.png?itok=kCrdzqZd",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/JOHNSON_DONTE_L_08-15.png?itok=kCrdzqZd",
+    "image": "assets/images/fighters/ufc-donte-johnson.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -14331,7 +14331,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-02/MCCONICO_ERIC_R_02-22.png?itok=GdZ7i8i0",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-02/MCCONICO_ERIC_R_02-22.png?itok=GdZ7i8i0",
+    "image": "assets/images/fighters/ufc-eric-mcconico.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -14380,7 +14380,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/LUQUE_VICENTE_L_08-15.png?itok=UplLKsVD",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/LUQUE_VICENTE_L_08-15.png?itok=UplLKsVD",
+    "image": "assets/images/fighters/ufc-vicente-luque.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -14429,7 +14429,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-04/GORE_TRESEAN_L_04-12.png?itok=JeztGuNv",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-04/GORE_TRESEAN_L_04-12.png?itok=JeztGuNv",
+    "image": "assets/images/fighters/ufc-tresean-gore.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -14478,7 +14478,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 189,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/TOBIAS_RAFAEL_L_08-15.png?itok=a22HlJvP",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/TOBIAS_RAFAEL_L_08-15.png?itok=a22HlJvP",
+    "image": "assets/images/fighters/ufc-rafael-tobias.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 23.0,
@@ -14527,7 +14527,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 203,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/FERNANDO_LUCAS_R_08-15.png?itok=T9Ij6iMO",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/FERNANDO_LUCAS_R_08-15.png?itok=T9Ij6iMO",
+    "image": "assets/images/fighters/ufc-lucas-fernando.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -14576,7 +14576,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 203,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/MAGNY_NEIL_L_08-15.png?itok=HZBmL-4-",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/MAGNY_NEIL_L_08-15.png?itok=HZBmL-4-",
+    "image": "assets/images/fighters/ufc-neil-magny.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 39.0,
@@ -14625,7 +14625,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/BRAHIMAJ_RAMIZ_L_02-21.png?itok=mngHJ0yn",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/BRAHIMAJ_RAMIZ_L_02-21.png?itok=mngHJ0yn",
+    "image": "assets/images/fighters/ufc-ramiz-brahimaj.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -14674,7 +14674,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/WELLS_JEREMIAH_L_08-15.png?itok=bvuZnoEG",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/WELLS_JEREMIAH_L_08-15.png?itok=bvuZnoEG",
+    "image": "assets/images/fighters/ufc-jeremiah-wells.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 39.0,
@@ -14723,7 +14723,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-10/5/OROLBAI_MYKTYBEK_L_11-18.png?itok=QfzUPReY",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-10/5/OROLBAI_MYKTYBEK_L_11-18.png?itok=QfzUPReY",
+    "image": "assets/images/fighters/ufc-myktybek-orolbai.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -14772,7 +14772,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/FERREIRA_DIEGO_L_08-08.png?itok=SfdTY6nN",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/FERREIRA_DIEGO_L_08-08.png?itok=SfdTY6nN",
+    "image": "assets/images/fighters/ufc-diego-ferreira.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 41.0,
@@ -14821,7 +14821,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-12/QUARANTILLO_BILLY_L_03-23.png?itok=H9dNSRIx",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-12/QUARANTILLO_BILLY_L_03-23.png?itok=H9dNSRIx",
+    "image": "assets/images/fighters/ufc-billy-quarantillo.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 37.0,
@@ -14870,7 +14870,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/ELKINS_DARREN_L_08-08.png?itok=4W6b5BAT",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/ELKINS_DARREN_L_08-08.png?itok=4W6b5BAT",
+    "image": "assets/images/fighters/ufc-darren-elkins.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 42.0,
@@ -14919,7 +14919,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/DEL_VALLE_YADIER_L_05-17.png?itok=uInyKMVn",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/DEL_VALLE_YADIER_L_05-17.png?itok=uInyKMVn",
+    "image": "assets/images/fighters/ufc-yadier-del-valle.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -14968,7 +14968,7 @@ export const additionalFighters = [
     "heightCm": 163,
     "reachCm": 165,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/LEMOS_AMANDA_L_08-08.png?itok=tJiVRMjJ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/LEMOS_AMANDA_L_08-08.png?itok=tJiVRMjJ",
+    "image": "assets/images/fighters/ufc-amanda-lemos.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 39.0,
@@ -15017,7 +15017,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 184,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/GOFF_BILLY_L_08-08.png?itok=NRg-s6sL",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/GOFF_BILLY_L_08-08.png?itok=NRg-s6sL",
+    "image": "assets/images/fighters/ufc-billy-goff.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -15066,7 +15066,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 197,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-01/MILLER_TY_R_01-24.png?itok=VS1_Z4Yn",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-01/MILLER_TY_R_01-24.png?itok=VS1_Z4Yn",
+    "image": "assets/images/fighters/ufc-ty-miller.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -15115,7 +15115,7 @@ export const additionalFighters = [
     "heightCm": 196,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/ASPLUND_STEVE_L_08-08.png?itok=MrOEYuer",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/ASPLUND_STEVE_L_08-08.png?itok=MrOEYuer",
+    "image": "assets/images/fighters/ufc-steven-asplund.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -15164,7 +15164,7 @@ export const additionalFighters = [
     "heightCm": 198,
     "reachCm": 206,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/PAT_GUILHERME_L_04-04.png?itok=XG_cC52L",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/PAT_GUILHERME_L_04-04.png?itok=XG_cC52L",
+    "image": "assets/images/fighters/ufc-guilherme-pat.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -15213,7 +15213,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/NURGOZHAY_DIYAR_L_08-08.png?itok=2XaiCsxp",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/NURGOZHAY_DIYAR_L_08-08.png?itok=2XaiCsxp",
+    "image": "assets/images/fighters/ufc-diyar-nurgozhay.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -15262,7 +15262,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 189,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/2/LOPES_BRUNO_L_01-11.png?itok=gOWa96DN",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/2/LOPES_BRUNO_L_01-11.png?itok=gOWa96DN",
+    "image": "assets/images/fighters/ufc-bruno-lopes.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -15311,7 +15311,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/SUTHERLAND_LOUIE_L_08-08.png?itok=R72s_Sj2",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/SUTHERLAND_LOUIE_L_08-08.png?itok=R72s_Sj2",
+    "image": "assets/images/fighters/ufc-louie-sutherland.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -15360,7 +15360,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/MONTANHA_JOSE_R_08-08.png?itok=0ZSiaJnB",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/MONTANHA_JOSE_R_08-08.png?itok=0ZSiaJnB",
+    "image": "assets/images/fighters/ufc-jose-montanha-da-silva.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -15409,7 +15409,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/SOUSA_MANOEL_L_08-08.png?itok=RoZ_IBho",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/SOUSA_MANOEL_L_08-08.png?itok=RoZ_IBho",
+    "image": "assets/images/fighters/ufc-manoel-sousa.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -15458,7 +15458,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/MIRANDA_RICHIE_R_08-08.png?itok=pQretnvg",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/MIRANDA_RICHIE_R_08-08.png?itok=pQretnvg",
+    "image": "assets/images/fighters/ufc-richie-miranda.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -15507,7 +15507,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/JOHNS_MILES_L_08-08.png?itok=IVHMWSad",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/JOHNS_MILES_L_08-08.png?itok=IVHMWSad",
+    "image": "assets/images/fighters/ufc-miles-johns.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -15556,7 +15556,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/VAZQUEZ_GIANNI_R_02-07.png?itok=gF8MOrZZ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/VAZQUEZ_GIANNI_R_02-07.png?itok=gF8MOrZZ",
+    "image": "assets/images/fighters/ufc-gianni-vazquez.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -15605,7 +15605,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 168,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/MILLER_JULIANA_L_08-08.png?itok=5g9gB2ML",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/MILLER_JULIANA_L_08-08.png?itok=5g9gB2ML",
+    "image": "assets/images/fighters/ufc-juliana-miller.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -15654,7 +15654,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": 165,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/OLIVEIRA_RAVENA_R_08-08.png?itok=Eu-EwMcE",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/OLIVEIRA_RAVENA_R_08-08.png?itok=Eu-EwMcE",
+    "image": "assets/images/fighters/ufc-ravena-oliveira-morais.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -15703,7 +15703,7 @@ export const additionalFighters = [
     "heightCm": 159,
     "reachCm": 163,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/CANUTO_GIGI_L_08-08.png?itok=MG4NAPui",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/CANUTO_GIGI_L_08-08.png?itok=MG4NAPui",
+    "image": "assets/images/fighters/ufc-gigi-canuto.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 23.0,
@@ -15752,7 +15752,7 @@ export const additionalFighters = [
     "heightCm": 157,
     "reachCm": 156,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/FORO_CAROL_R_08-08.png?itok=h3wMY2VF",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/FORO_CAROL_R_08-08.png?itok=h3wMY2VF",
+    "image": "assets/images/fighters/ufc-carol-foro.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -15801,7 +15801,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-10/RODRIGUEZ_DANIEL_L_10-12.png?itok=zE9JhfZS",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-10/RODRIGUEZ_DANIEL_L_10-12.png?itok=zE9JhfZS",
+    "image": "assets/images/fighters/ufc-daniel-rodriguez.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 39.0,
@@ -15850,7 +15850,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/RAKIC_ALEKSANDAR_L_08-01.png?itok=BC0F8HQV",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/RAKIC_ALEKSANDAR_L_08-01.png?itok=BC0F8HQV",
+    "image": "assets/images/fighters/ufc-aleksandar-rakic.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -15899,7 +15899,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/TYBURA_MARCIN_L_03-28.png?itok=TNTDlOaO",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/TYBURA_MARCIN_L_03-28.png?itok=TNTDlOaO",
+    "image": "assets/images/fighters/ufc-marcin-tybura.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 40.0,
@@ -15948,7 +15948,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/TODOROVIC_DUSKO_L_08-01.png?itok=Wzq9JEm9",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/TODOROVIC_DUSKO_L_08-01.png?itok=Wzq9JEm9",
+    "image": "assets/images/fighters/ufc-dusko-todorovic.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -15997,7 +15997,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-08/VALENTIN_ROBERT_L_08-24.png?itok=pA6Xe881",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-08/VALENTIN_ROBERT_L_08-24.png?itok=pA6Xe881",
+    "image": "assets/images/fighters/ufc-robert-valentin-frey.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -16046,7 +16046,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/CEPO_VLASTO_L_08-01.png?itok=p6CalzUd",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/CEPO_VLASTO_L_08-01.png?itok=p6CalzUd",
+    "image": "assets/images/fighters/ufc-vlasto-cepo.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -16095,7 +16095,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-02/URBINA_GILBERT_L_02-03.png?itok=rua26OyB",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-02/URBINA_GILBERT_L_02-03.png?itok=rua26OyB",
+    "image": "assets/images/fighters/ufc-kiruhato-uruhina.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -16144,7 +16144,7 @@ export const additionalFighters = [
     "heightCm": 394,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/JANICIC_MILOS_L_08-01.png?itok=k_mHSDi4",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/JANICIC_MILOS_L_08-01.png?itok=k_mHSDi4",
+    "image": "assets/images/fighters/ufc-milos-janicic.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -16193,7 +16193,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/GUGNON_NOAH_R_08-01.png?itok=llkgIODo",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/GUGNON_NOAH_R_08-01.png?itok=llkgIODo",
+    "image": "assets/images/fighters/ufc-noah-gugnon.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 25.0,
@@ -16242,7 +16242,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 184,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/KLEIN_LUDOVIT_L_08-01.png?itok=UDMwlAIa",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/KLEIN_LUDOVIT_L_08-01.png?itok=UDMwlAIa",
+    "image": "assets/images/fighters/ufc-rutohito-kurain.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -16291,7 +16291,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-06/MUSAYEV_TOFIQ_L_06-21.png?itok=wQeHfkul",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-06/MUSAYEV_TOFIQ_L_06-21.png?itok=wQeHfkul",
+    "image": "assets/images/fighters/ufc-tofiq-musayev.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -16340,7 +16340,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/ELLIOTT_OBAN_L_08-01.png?itok=yEqnZtUv",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/ELLIOTT_OBAN_L_08-01.png?itok=yEqnZtUv",
+    "image": "assets/images/fighters/ufc-oban-elliott.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -16389,7 +16389,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 199,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/OLIVEIRA_MICHAEL_L.png?itok=5h0mJJUd",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/OLIVEIRA_MICHAEL_L.png?itok=5h0mJJUd",
+    "image": "assets/images/fighters/ufc-michael-oliveira.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -16438,7 +16438,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/NIKOLIC_BORISLAV_L_08-01.png?itok=zun-blSQ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/NIKOLIC_BORISLAV_L_08-01.png?itok=zun-blSQ",
+    "image": "assets/images/fighters/ufc-borislav-nikolic.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -16487,7 +16487,7 @@ export const additionalFighters = [
     "heightCm": 160,
     "reachCm": 165,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/VOLOGDIN_MARK_R_04-18.png?itok=Nd85RW3E",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/VOLOGDIN_MARK_R_04-18.png?itok=Nd85RW3E",
+    "image": "assets/images/fighters/ufc-mark-vologdin.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -16536,7 +16536,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 179,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/BUZUKJA_DENNIS_L_08-01.png?itok=XvdZNizB",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/BUZUKJA_DENNIS_L_08-01.png?itok=XvdZNizB",
+    "image": "assets/images/fighters/ufc-dennis-buzukja.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -16585,7 +16585,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/GRAD_BOGDAN_L_11-22.png?itok=-akhAGX6",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/GRAD_BOGDAN_L_11-22.png?itok=-akhAGX6",
+    "image": "assets/images/fighters/ufc-bogdan-grad.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -16634,7 +16634,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 168,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/REBECKI_MATEUSZ_L_08-01.png?itok=OcAV8a48",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/REBECKI_MATEUSZ_L_08-01.png?itok=OcAV8a48",
+    "image": "assets/images/fighters/ufc-mateusz-rebecki.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -16683,7 +16683,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/PREPOLEC_KYLE_L_10-18.png?itok=iTfcQHT_",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/PREPOLEC_KYLE_L_10-18.png?itok=iTfcQHT_",
+    "image": "assets/images/fighters/ufc-kyle-prepolec.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -16732,7 +16732,7 @@ export const additionalFighters = [
     "heightCm": null,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/MILOSEVIC_NINA_L_08-01.png?itok=6zq_3wtV",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/MILOSEVIC_NINA_L_08-01.png?itok=6zq_3wtV",
+    "image": "assets/images/fighters/ufc-nina-milosevic.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -16781,7 +16781,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/COWAN_HAILEY_L_02_25.png?itok=FHOVXSgq",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/COWAN_HAILEY_L_02_25.png?itok=FHOVXSgq",
+    "image": "assets/images/fighters/ufc-hailey-cowan.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -16830,7 +16830,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/LEKA_JOVAN_L_08-01.png?itok=fUl3avyI",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/LEKA_JOVAN_L_08-01.png?itok=fUl3avyI",
+    "image": "assets/images/fighters/ufc-jovan-leka.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 24.0,
@@ -16879,7 +16879,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/POPPECK_ALEXANDER_R_08-01.png?itok=iZyFUwKT",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/POPPECK_ALEXANDER_R_08-01.png?itok=iZyFUwKT",
+    "image": "assets/images/fighters/ufc-alexander-poppeck.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -16928,7 +16928,7 @@ export const additionalFighters = [
     "heightCm": 163,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/SPASIC_MARINA_L_08-01.png?itok=OpUqsboj",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/SPASIC_MARINA_L_08-01.png?itok=OpUqsboj",
+    "image": "assets/images/fighters/ufc-marina-spasic.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -16977,7 +16977,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 166,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/LUCIANO_STEPHANIE_L_10-18.png?itok=E6UWmft3",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/LUCIANO_STEPHANIE_L_10-18.png?itok=E6UWmft3",
+    "image": "assets/images/fighters/ufc-stephanie-bruna-luciano.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -17026,7 +17026,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/7/GUSKOV_BOGDAN_L_01-18.png?itok=IAOAajQf",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/7/GUSKOV_BOGDAN_L_01-18.png?itok=IAOAajQf",
+    "image": "assets/images/fighters/ufc-bogdan-guskov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -17075,7 +17075,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/ERCEG_STEVE_L_07-25.png?itok=L0455cpA",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/ERCEG_STEVE_L_07-25.png?itok=L0455cpA",
+    "image": "assets/images/fighters/ufc-steve-erceg.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -17124,7 +17124,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 174,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/ZAYNUKOV_MAGOMED_L_07-25.png?itok=KmVELNju",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/ZAYNUKOV_MAGOMED_L_07-25.png?itok=KmVELNju",
+    "image": "assets/images/fighters/ufc-magomed-zaynukov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -17173,7 +17173,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/RZEPECKI_DAMIAN_R_07-25.png?itok=59CiDAGO",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/RZEPECKI_DAMIAN_R_07-25.png?itok=59CiDAGO",
+    "image": "assets/images/fighters/ufc-damian-rzepecki.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 24.0,
@@ -17222,7 +17222,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/FORTUNE_TYRELL_R_07-25.png?itok=h-o_jKcL",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/FORTUNE_TYRELL_R_07-25.png?itok=h-o_jKcL",
+    "image": "assets/images/fighters/ufc-tyrell-fortune.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -17271,7 +17271,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/VAGAEV_ABUBAKAR_L_07-25.png?itok=RfC7eTGH",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/VAGAEV_ABUBAKAR_L_07-25.png?itok=RfC7eTGH",
+    "image": "assets/images/fighters/ufc-abubakar-vagaev.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -17320,7 +17320,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 189,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/IZAGAKHMAEV_SAYGID_R_11-22.png?itok=z92QPUJE",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/IZAGAKHMAEV_SAYGID_R_11-22.png?itok=z92QPUJE",
+    "image": "assets/images/fighters/ufc-saygid-izagakhmaev.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -17369,7 +17369,7 @@ export const additionalFighters = [
     "heightCm": 198,
     "reachCm": 199,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/WALKER_VALTER_L_07-25.png?itok=giF99HlH",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/WALKER_VALTER_L_07-25.png?itok=giF99HlH",
+    "image": "assets/images/fighters/ufc-valter-walker.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -17418,7 +17418,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/PETERSEN_THOMAS_L_05-03.png?itok=sYHO_Yst",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/PETERSEN_THOMAS_L_05-03.png?itok=sYHO_Yst",
+    "image": "assets/images/fighters/ufc-thomas-petersen.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -17467,7 +17467,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/JACOBY_DUSTIN_L_07-25.png?itok=Cqjm5n4D",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/JACOBY_DUSTIN_L_07-25.png?itok=Cqjm5n4D",
+    "image": "assets/images/fighters/ufc-dustin-jacoby.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 38.0,
@@ -17516,7 +17516,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/SAIDOV_MUHAMMAD_R_07-25.png?itok=xjIjNi3y",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/SAIDOV_MUHAMMAD_R_07-25.png?itok=xjIjNi3y",
+    "image": "assets/images/fighters/ufc-muhammad-said.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -17565,7 +17565,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/PONZINIBBIO_SANTIAGO_L_07-25.png?itok=qqXgQOmg",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/PONZINIBBIO_SANTIAGO_L_07-25.png?itok=qqXgQOmg",
+    "image": "assets/images/fighters/ufc-santiago-ponzinibbio.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 39.0,
@@ -17614,7 +17614,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/PATTERSON_SAM_L_09-06.png?itok=DwRzQATP",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/PATTERSON_SAM_L_09-06.png?itok=DwRzQATP",
+    "image": "assets/images/fighters/ufc-sam-patterson.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -17663,7 +17663,7 @@ export const additionalFighters = [
     "heightCm": 196,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/TUCHALOV_MAGOMED_L_07-25.png?itok=e_tKChrO",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/TUCHALOV_MAGOMED_L_07-25.png?itok=e_tKChrO",
+    "image": "assets/images/fighters/ufc-magomed-tuchalov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -17712,7 +17712,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/ALIEV_NURULLO_L_07-25.png?itok=2JPUXADG",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/ALIEV_NURULLO_L_07-25.png?itok=2JPUXADG",
+    "image": "assets/images/fighters/ufc-nurullo-aliev.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 25.0,
@@ -17761,7 +17761,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 184,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-05/DAVIS_MIKE_L_03-16.png?itok=7e1Vgn5K",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-05/DAVIS_MIKE_L_03-16.png?itok=7e1Vgn5K",
+    "image": "assets/images/fighters/ufc-maiku-teihisu.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -17810,7 +17810,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/GIBSON_CODY_L_07-25.png?itok=c7pBG8_T",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/GIBSON_CODY_L_07-25.png?itok=c7pBG8_T",
+    "image": "assets/images/fighters/ufc-cody-gibson.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 38.0,
@@ -17859,7 +17859,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/HUSSEIN_ABDUL_R_07-25.png?itok=Qn6LzYa9",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/HUSSEIN_ABDUL_R_07-25.png?itok=Qn6LzYa9",
+    "image": "assets/images/fighters/ufc-abdul-hussein.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -17908,7 +17908,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 197,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/CANNONIER_JARED_L_07-18.png?itok=_lep6e-l",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/CANNONIER_JARED_L_07-18.png?itok=_lep6e-l",
+    "image": "assets/images/fighters/ufc-jared-cannonier.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 42.0,
@@ -17957,7 +17957,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/HOOPER_CHASE_L_07-18.png?itok=ZcYh3rCA",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/HOOPER_CHASE_L_07-18.png?itok=ZcYh3rCA",
+    "image": "assets/images/fighters/ufc-chase-hooper.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -18006,7 +18006,7 @@ export const additionalFighters = [
     "heightCm": 177,
     "reachCm": 179,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/RAMIREZ_MITCH_L_07-12.png?itok=yQWmeGob",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/RAMIREZ_MITCH_L_07-12.png?itok=yQWmeGob",
+    "image": "assets/images/fighters/ufc-mitch-ramirez.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -18055,7 +18055,7 @@ export const additionalFighters = [
     "heightCm": 155,
     "reachCm": 155,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/RICCI_TABATHA_L_07-18.png?itok=aQRpl-cY",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/RICCI_TABATHA_L_07-18.png?itok=aQRpl-cY",
+    "image": "assets/images/fighters/ufc-tabatha-ricci.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -18104,7 +18104,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/MONTES_ALBERTO_L.png?itok=t18v4P4C",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/MONTES_ALBERTO_L.png?itok=t18v4P4C",
+    "image": "assets/images/fighters/ufc-alberto-montes.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -18153,7 +18153,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/BASHI_AUSTIN_L_07-18.png?itok=ICEox51M",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/BASHI_AUSTIN_L_07-18.png?itok=ICEox51M",
+    "image": "assets/images/fighters/ufc-austin-bashi.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 24.0,
@@ -18202,7 +18202,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/LEBOSNOYANI_JEAN-PAUL_R_02-21.png?itok=FM_JbPj8",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/LEBOSNOYANI_JEAN-PAUL_R_02-21.png?itok=FM_JbPj8",
+    "image": "assets/images/fighters/ufc-jean-paul-lebosnoyani.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -18251,7 +18251,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-06/KO_SEOKHYEON_L_06-21.png?itok=QRZ7e0tm",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-06/KO_SEOKHYEON_L_06-21.png?itok=QRZ7e0tm",
+    "image": "assets/images/fighters/ufc-seokhyeon-ko.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -18300,7 +18300,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/ELLIOT_EZRA_L_07-18.png?itok=N71ncX-V",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/ELLIOT_EZRA_L_07-18.png?itok=N71ncX-V",
+    "image": "assets/images/fighters/ufc-ezra-elliot.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -18349,7 +18349,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/ANDERSON_DAMIEN_R_07-18.png?itok=OITi4x7H",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/ANDERSON_DAMIEN_R_07-18.png?itok=OITi4x7H",
+    "image": "assets/images/fighters/ufc-damien-anderson.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -18398,7 +18398,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": 166,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-08/NICOLL_STEWART_L_08-17.png?itok=2fIVytXS",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-08/NICOLL_STEWART_L_08-17.png?itok=2fIVytXS",
+    "image": "assets/images/fighters/ufc-stewart-nicoll.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -18447,7 +18447,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 187,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-06/HINES_ALVIN_R_06-28.png?itok=4Yj9bfkr",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-06/HINES_ALVIN_R_06-28.png?itok=4Yj9bfkr",
+    "image": "assets/images/fighters/ufc-alvin-hines.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -18496,7 +18496,7 @@ export const additionalFighters = [
     "heightCm": 164,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/MELISANO_ANNA_L_07-18.png?itok=sw3Ky_bY",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/MELISANO_ANNA_L_07-18.png?itok=sw3Ky_bY",
+    "image": "assets/images/fighters/ufc-anna-melisano.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -18545,7 +18545,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 166,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/BARBOSA_DIONE_L_04-04.png?itok=U7l8E953",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/BARBOSA_DIONE_L_04-04.png?itok=U7l8E953",
+    "image": "assets/images/fighters/ufc-dione-barbosa.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -18594,7 +18594,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 197,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/KRYLOV_NIKITA_L_07-11.png?itok=G-SKEXs5",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/KRYLOV_NIKITA_L_07-11.png?itok=G-SKEXs5",
+    "image": "assets/images/fighters/ufc-nikita-krylov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -18643,7 +18643,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 187,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/WHITTAKER_ROBERT_L_07-26.png?itok=9PCu_K6-",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/WHITTAKER_ROBERT_L_07-26.png?itok=9PCu_K6-",
+    "image": "assets/images/fighters/ufc-robert-whittaker.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -18692,7 +18692,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/ELLISON_ELISHA_R_09-27.png?itok=jG-nlBq_",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/ELLISON_ELISHA_R_09-27.png?itok=jG-nlBq_",
+    "image": "assets/images/fighters/ufc-elisha-ellison.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -18741,7 +18741,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 166,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/GARBRANDT_CODY_L_07-11.png?itok=vNyLFAQe",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/GARBRANDT_CODY_L_07-11.png?itok=vNyLFAQe",
+    "image": "assets/images/fighters/ufc-cody-garbrandt.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -18790,7 +18790,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-12/YANEZ_ADRIAN_L_12-14.png?itok=SPA6dLRg",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-12/YANEZ_ADRIAN_L_12-14.png?itok=SPA6dLRg",
+    "image": "assets/images/fighters/ufc-adrian-yanez.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -18839,7 +18839,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/RILEY_LUKE_L_07-11.png?itok=9z-sLv0w",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/RILEY_LUKE_L_07-11.png?itok=9z-sLv0w",
+    "image": "assets/images/fighters/ufc-luke-riley.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -18888,7 +18888,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/ALMEIDA_CESAR_L_12-13.png?itok=-zsz4wrx",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/ALMEIDA_CESAR_L_12-13.png?itok=-zsz4wrx",
+    "image": "assets/images/fighters/ufc-cesar-almeida.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 38.0,
@@ -18933,7 +18933,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/BASHARAT_FARID_L_07-11.png?itok=KVMMn6Y2",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/BASHARAT_FARID_L_07-11.png?itok=KVMMn6Y2",
+    "image": "assets/images/fighters/ufc-farid-basharat.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -18986,7 +18986,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/GARZA_JOHN_R_07-11.png?itok=-Mpw0xQi",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/GARZA_JOHN_R_07-11.png?itok=-Mpw0xQi",
+    "image": "assets/images/fighters/ufc-john-garza.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 23.0,
@@ -19035,7 +19035,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/REESE_ZACH_L_02-21.png?itok=beiKFsJ0",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/REESE_ZACH_L_02-21.png?itok=beiKFsJ0",
+    "image": "assets/images/fighters/ufc-zachary-reese.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -19084,7 +19084,7 @@ export const additionalFighters = [
     "heightCm": 163,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/COSTA_ALESSANDRO_L_07-11.png?itok=okElYxK7",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/COSTA_ALESSANDRO_L_07-11.png?itok=okElYxK7",
+    "image": "assets/images/fighters/ufc-alessandro-costa.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -19133,7 +19133,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/DURDEN_CODY_L_03-07.png?itok=vvCN2I2y",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/DURDEN_CODY_L_03-07.png?itok=vvCN2I2y",
+    "image": "assets/images/fighters/ufc-cody-durden.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -19182,7 +19182,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 187,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/TORRES_MANUEL_L_03-29.png?itok=yThf85tQ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/TORRES_MANUEL_L_03-29.png?itok=yThf85tQ",
+    "image": "assets/images/fighters/ufc-manuel-torres.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -19231,7 +19231,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/MAGOMEDOV_SHARA_L_06-27.png?itok=_iIAbX5t",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/MAGOMEDOV_SHARA_L_06-27.png?itok=_iIAbX5t",
+    "image": "assets/images/fighters/ufc-shara-magomedov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -19280,7 +19280,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/PEREIRA_MICHEL_L_08-23.png?itok=NBF0z1BU",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/PEREIRA_MICHEL_L_08-23.png?itok=NBF0z1BU",
+    "image": "assets/images/fighters/ufc-michel-pereira.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -19329,7 +19329,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/SADYKHOV_NAZIM_L_12-06.png?itok=ccjzeBfj",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/SADYKHOV_NAZIM_L_12-06.png?itok=ccjzeBfj",
+    "image": "assets/images/fighters/ufc-nazim-sadykhov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -19378,7 +19378,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/ALISKEROV_IKRAM_L_06-27.png?itok=3ij01m2a",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/ALISKEROV_IKRAM_L_06-27.png?itok=3ij01m2a",
+    "image": "assets/images/fighters/ufc-ikram-aliskerov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -19427,7 +19427,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/MAGOMEDOV_ABUS_L_06-27.png?itok=SLmzXjWp",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/MAGOMEDOV_ABUS_L_06-27.png?itok=SLmzXjWp",
+    "image": "assets/images/fighters/ufc-abus-magomedov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -19476,7 +19476,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/OLEKSIEJCZUK_MICHAL_L_02-07.png?itok=hDOVJtgb",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/OLEKSIEJCZUK_MICHAL_L_02-07.png?itok=hDOVJtgb",
+    "image": "assets/images/fighters/ufc-michal-oleksiejczuk.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -19525,7 +19525,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/HASANOV_FARMAN_L_06-27.png?itok=_Ex8iG6f",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/HASANOV_FARMAN_L_06-27.png?itok=_Ex8iG6f",
+    "image": "assets/images/fighters/ufc-farman-hasanov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -19574,7 +19574,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/YAKHYAEV_ABDUL_RAKHMAN_L_06-27.png?itok=r25ouJ0s",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/YAKHYAEV_ABDUL_RAKHMAN_L_06-27.png?itok=r25ouJ0s",
+    "image": "assets/images/fighters/ufc-abdulrakhman-yakhyaev.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 25.0,
@@ -19623,7 +19623,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 168,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/OFLI_KAAN_L_06-27.png?itok=6swnPJvi",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/OFLI_KAAN_L_06-27.png?itok=6swnPJvi",
+    "image": "assets/images/fighters/ufc-kaan-ofli.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -19672,7 +19672,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/REYES_JAVIER_R_06-27.png?itok=OJn5M8K3",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/REYES_JAVIER_R_06-27.png?itok=OJn5M8K3",
+    "image": "assets/images/fighters/ufc-javier-reyes.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -19721,7 +19721,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/BERGGREN_THEODOR_R_06-27.png?itok=OcKsL0Tw",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/BERGGREN_THEODOR_R_06-27.png?itok=OcKsL0Tw",
+    "image": "assets/images/fighters/ufc-theodor-berggren.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -19770,7 +19770,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/ALMAKHAN_BEKZAT_L_06-27.png?itok=6I60CdPv",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/ALMAKHAN_BEKZAT_L_06-27.png?itok=6I60CdPv",
+    "image": "assets/images/fighters/ufc-bekzat-almakhan.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -19819,7 +19819,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 174,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/MATSUMOTO_JEAN_L_02-07.png?itok=khw9HcPe",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/MATSUMOTO_JEAN_L_02-07.png?itok=khw9HcPe",
+    "image": "assets/images/fighters/ufc-jean-matsumoto.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -19868,7 +19868,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/ABDULLAYEV_TAHIR_L_06-27.png?itok=OjpS2GZ7",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/ABDULLAYEV_TAHIR_L_06-27.png?itok=OjpS2GZ7",
+    "image": "assets/images/fighters/ufc-tahir-abdullayev.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -19917,7 +19917,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/SHADOW_Fighter_fullLength_RED.png?VersionId=niQpXmYT1tbiETIDAxTsCI5FDbiNt9kI&itok=DfVddCfn",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/SHADOW_Fighter_fullLength_RED.png?VersionId=niQpXmYT1tbiETIDAxTsCI5FDbiNt9kI&itok=DfVddCfn",
+    "image": "assets/images/fighters/ufc-jefferson-nascimento.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -19966,7 +19966,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/CUTELABA_ION_L_06-20.png?itok=UdDEIagu",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/CUTELABA_ION_L_06-20.png?itok=UdDEIagu",
+    "image": "assets/images/fighters/ufc-ion-cutelaba.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -20015,7 +20015,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/AMIL_HYDER_L_06-20.png?itok=Y4pBvEwK",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/AMIL_HYDER_L_06-20.png?itok=Y4pBvEwK",
+    "image": "assets/images/fighters/ufc-hyder-amil.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -20064,7 +20064,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 182,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/RODRIGUEZ_CHRISTIAN_L_03-29.png?itok=VQtmpVuP",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/RODRIGUEZ_CHRISTIAN_L_03-29.png?itok=VQtmpVuP",
+    "image": "assets/images/fighters/ufc-ches-skelli-0.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -20113,7 +20113,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/BAGHDASARYAN_MELSIK_L_06-20.png?itok=ffJEA1RN",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/BAGHDASARYAN_MELSIK_L_06-20.png?itok=ffJEA1RN",
+    "image": "assets/images/fighters/ufc-melsik-baghdasaryan.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -20162,7 +20162,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 179,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/MAGOMEDOV_MURTAZLI_R_06-20.png?itok=wXAJELZD",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/MAGOMEDOV_MURTAZLI_R_06-20.png?itok=wXAJELZD",
+    "image": "assets/images/fighters/ufc-murtazali-magomedov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -20211,7 +20211,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 179,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/OLIVEIRA_VINICIUS_L_06-20.png?itok=1W04x7_K",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/OLIVEIRA_VINICIUS_L_06-20.png?itok=1W04x7_K",
+    "image": "assets/images/fighters/ufc-vinicius-oliveira.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -20260,7 +20260,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 171,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/MESQUITA_BIA_L_10-11.png?itok=W3FwWXNQ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/MESQUITA_BIA_L_10-11.png?itok=W3FwWXNQ",
+    "image": "assets/images/fighters/ufc-bia-mesquita.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -20309,7 +20309,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/MULLINS_MELISSA_L_03-21.png?itok=BryqglDE",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/MULLINS_MELISSA_L_03-21.png?itok=BryqglDE",
+    "image": "assets/images/fighters/ufc-melissa-mullins.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -20358,7 +20358,7 @@ export const additionalFighters = [
     "heightCm": 174,
     "reachCm": 177,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/NASCIMENTO_ALLAN_L_06-20.png?itok=JhxcvpK7",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/NASCIMENTO_ALLAN_L_06-20.png?itok=JhxcvpK7",
+    "image": "assets/images/fighters/ufc-allan-nascimento.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -20407,7 +20407,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": 164,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-05/RAPOSO_MITCH_L_06-01.png?itok=fgzxnjZ5",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-05/RAPOSO_MITCH_L_06-01.png?itok=fgzxnjZ5",
+    "image": "assets/images/fighters/ufc-mitch-raposo.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -20456,7 +20456,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/BOLANOS_GASTON_L_06-20.png?itok=WvUQBhDT",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/BOLANOS_GASTON_L_06-20.png?itok=WvUQBhDT",
+    "image": "assets/images/fighters/ufc-gaston-bolanos.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -20505,7 +20505,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/CHOKHELI_LEVAN_R_06-20.png?itok=36IHyuqN",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/CHOKHELI_LEVAN_R_06-20.png?itok=36IHyuqN",
+    "image": "assets/images/fighters/ufc-levan-chokheli.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -20554,7 +20554,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/COLLINS_SHANE_L_06-20.png?itok=i03rd4l-",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/COLLINS_SHANE_L_06-20.png?itok=i03rd4l-",
+    "image": "assets/images/fighters/ufc-shane-collins.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -20603,7 +20603,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 182,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/CHANDLER_MICHAEL_R_06-14.png?itok=Tg_XY15B",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/CHANDLER_MICHAEL_R_06-14.png?itok=Tg_XY15B",
+    "image": "assets/images/fighters/ufc-michael-chandler.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 40.0,
@@ -20652,7 +20652,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/DAUKAUS_KYLE_R_06-14.png?itok=u2hBMZhV",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/DAUKAUS_KYLE_R_06-14.png?itok=u2hBMZhV",
+    "image": "assets/images/fighters/ufc-kyle-daukaus.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -20701,7 +20701,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/NOLAN_TOM_L_09-27.png?itok=MyU46nSD",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/NOLAN_TOM_L_09-27.png?itok=MyU46nSD",
+    "image": "assets/images/fighters/ufc-tom-nolan.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -20750,7 +20750,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/MITCHELL_BRYCE_L_06-06.png?itok=a7goLmAY",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/MITCHELL_BRYCE_L_06-06.png?itok=a7goLmAY",
+    "image": "assets/images/fighters/ufc-bryce-mitchell.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -20799,7 +20799,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/LUNA_SANTIAGO_L_02-28.png?itok=zdTFJx55",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/LUNA_SANTIAGO_L_02-28.png?itok=zdTFJx55",
+    "image": "assets/images/fighters/ufc-santiago-luna.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 22.0,
@@ -20848,7 +20848,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/TAFA_JUNIOR_L_05-02.png?itok=dLi9Oyuv",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/TAFA_JUNIOR_L_05-02.png?itok=dLi9Oyuv",
+    "image": "assets/images/fighters/ufc-shiyunia-tafua.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -20897,7 +20897,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/SCHNELL_MATT_L_06-06.png?itok=yKzRTgaC",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/SCHNELL_MATT_L_06-06.png?itok=yKzRTgaC",
+    "image": "assets/images/fighters/ufc-matt-schnell.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -20946,7 +20946,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 179,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/YANNIS_JOHN_R_08-02.png?itok=6f71jGGi",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/YANNIS_JOHN_R_08-02.png?itok=6f71jGGi",
+    "image": "assets/images/fighters/ufc-john-yannis.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -20995,7 +20995,7 @@ export const additionalFighters = [
     "heightCm": 163,
     "reachCm": 165,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/SILVA_BRUNO_L_06-06.png?itok=l_D2GW69",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/SILVA_BRUNO_L_06-06.png?itok=l_D2GW69",
+    "image": "assets/images/fighters/ufc-bruno-silva.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -21044,7 +21044,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 165,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/CACHOEIRA_PRISCILA_L_06-06.png?itok=FFiYkCQu",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/CACHOEIRA_PRISCILA_L_06-06.png?itok=FFiYkCQu",
+    "image": "assets/images/fighters/ufc-priscila-cachoeira.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 38.0,
@@ -21093,7 +21093,7 @@ export const additionalFighters = [
     "heightCm": 174,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-04/CHANDLER_CHELSEA_L_04-26.png?itok=DL0RRFId",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-04/CHANDLER_CHELSEA_L_04-26.png?itok=DL0RRFId",
+    "image": "assets/images/fighters/ufc-chelsea-chandler.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -21142,7 +21142,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/LEAVITT_JORDAN_L_06-06.png?itok=6oX30sib",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/LEAVITT_JORDAN_L_06-06.png?itok=6oX30sib",
+    "image": "assets/images/fighters/ufc-jordan-leavitt.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -21191,7 +21191,7 @@ export const additionalFighters = [
     "heightCm": 163,
     "reachCm": 166,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/DUBEN_YUNEISY_L_03-15.png?itok=0wFdwn-N",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/DUBEN_YUNEISY_L_03-15.png?itok=0wFdwn-N",
+    "image": "assets/images/fighters/ufc-yuneisy-duben.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -21240,7 +21240,7 @@ export const additionalFighters = [
     "heightCm": 157,
     "reachCm": 156,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/CARNELOSSI_ARIANE_L_05-18.png?itok=62BKJVV3",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/CARNELOSSI_ARIANE_L_05-18.png?itok=62BKJVV3",
+    "image": "assets/images/fighters/ufc-ariane-carnelossi.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -21289,7 +21289,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/MINGYANG_ZHANG_L_05-30.png?itok=2J_lSlBx",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/MINGYANG_ZHANG_L_05-30.png?itok=2J_lSlBx",
+    "image": "assets/images/fighters/ufc-guram-kutateladze-1.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -21338,7 +21338,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/SMOTHERMAN_CAMERON_L_05-03.png?itok=gcqi0JfH",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/SMOTHERMAN_CAMERON_L_05-03.png?itok=gcqi0JfH",
+    "image": "assets/images/fighters/ufc-cameron-smotherman.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -21387,7 +21387,7 @@ export const additionalFighters = [
     "heightCm": 182,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/MATTHEWS_JAKE_L_05-30.png?itok=kYM4Kq87",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/MATTHEWS_JAKE_L_05-30.png?itok=kYM4Kq87",
+    "image": "assets/images/fighters/ufc-jake-matthews.webp",
     "consulted": "2026-11-25",
     "info": {
       "age": 32.0,
@@ -21436,7 +21436,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/14/HARRIS_CARLSTON_L_05-18.png?itok=N9hd4716",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/14/HARRIS_CARLSTON_L_05-18.png?itok=N9hd4716",
+    "image": "assets/images/fighters/ufc-carlston-harris.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 39.0,
@@ -21485,7 +21485,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/LEE_YISAK_L_05-30.png?itok=lwpEKxvo",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/LEE_YISAK_L_05-30.png?itok=lwpEKxvo",
+    "image": "assets/images/fighters/ufc-yi-sak-lee.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -21534,7 +21534,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/SOUZA_JOSE_R_05-30.png?itok=-YP5UjdJ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/SOUZA_JOSE_R_05-30.png?itok=-YP5UjdJ",
+    "image": "assets/images/fighters/ufc-jose-henrique.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 24.0,
@@ -21583,7 +21583,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-11/HADDON_CODY_L_10-12.png?itok=C0RuaCHl",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-11/HADDON_CODY_L_10-12.png?itok=C0RuaCHl",
+    "image": "assets/images/fighters/ufc-cody-haddon.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -21632,7 +21632,7 @@ export const additionalFighters = [
     "heightCm": 160,
     "reachCm": 164,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/HILL_ANGELA_L_05-30.png?itok=CwRO3dvX",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/HILL_ANGELA_L_05-30.png?itok=CwRO3dvX",
+    "image": "assets/images/fighters/ufc-angela-hill.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 41.0,
@@ -21681,7 +21681,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/KANGJIE_ZHU_L_05-30.png?itok=tEmk2_YM",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/KANGJIE_ZHU_L_05-30.png?itok=tEmk2_YM",
+    "image": "assets/images/fighters/ufc-zhu-kangjie.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -21730,7 +21730,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/VERA_RODRIGO_R_05-30.png?itok=ZvELiIEn",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/VERA_RODRIGO_R_05-30.png?itok=ZvELiIEn",
+    "image": "assets/images/fighters/ufc-rodrigo-vera.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -21779,7 +21779,7 @@ export const additionalFighters = [
     "heightCm": 155,
     "reachCm": 156,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/LOOKBOONMEE_LOMA_L_05-30.png?itok=0i4vxYP3",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/LOOKBOONMEE_LOMA_L_05-30.png?itok=0i4vxYP3",
+    "image": "assets/images/fighters/ufc-loma-lookboonmee.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -21828,7 +21828,7 @@ export const additionalFighters = [
     "heightCm": 160,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/AMORIM_JAQUELINE_L_10-25.png?itok=kKvKcJBq",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/AMORIM_JAQUELINE_L_10-25.png?itok=kKvKcJBq",
+    "image": "assets/images/fighters/ufc-jaqueline-amorim.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -21877,7 +21877,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/COSTA_MELQUIZAEL_L_12-13.png?itok=4B7irp2h",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/COSTA_MELQUIZAEL_L_12-13.png?itok=4B7irp2h",
+    "image": "assets/images/fighters/ufc-melquizael-costa.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -21926,7 +21926,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/SANTOS_DANIEL_L_10-04.png?itok=v0mSMNti",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/SANTOS_DANIEL_L_10-04.png?itok=v0mSMNti",
+    "image": "assets/images/fighters/ufc-daniel-santos.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -21975,7 +21975,7 @@ export const additionalFighters = [
     "heightCm": 174,
     "reachCm": 177,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/DIAS_JUAN_R_05-16.png?itok=ii8fyksW",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/DIAS_JUAN_R_05-16.png?itok=ii8fyksW",
+    "image": "assets/images/fighters/ufc-juan-diaz.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -22024,7 +22024,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/CUAMBA_TIMOTHY_L_05-16.png?itok=QVPT-XKP",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/CUAMBA_TIMOTHY_L_05-16.png?itok=QVPT-XKP",
+    "image": "assets/images/fighters/ufc-timothy-cuamba.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -22073,7 +22073,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 168,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/6/SOPAJ_BENARDO_L_03-02.png?itok=fxyt7hIc",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/6/SOPAJ_BENARDO_L_03-02.png?itok=fxyt7hIc",
+    "image": "assets/images/fighters/ufc-benardo-sopaj.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -22122,7 +22122,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-02/VERETENNIKOV_NIKOLAY_L_02-22.png?itok=MeEjmQAd",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-02/VERETENNIKOV_NIKOLAY_L_02-22.png?itok=MeEjmQAd",
+    "image": "assets/images/fighters/ufc-nikolay-veretennikov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -22171,7 +22171,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/TOKKOS_TUCO_L_05-16.png?itok=0OQDiFEx",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/TOKKOS_TUCO_L_05-16.png?itok=0OQDiFEx",
+    "image": "assets/images/fighters/ufc-tuco-tokkos.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -22220,7 +22220,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 184,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-09/ERSLAN_IVAN_R_09-28.png?itok=tilez7aY",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-09/ERSLAN_IVAN_R_09-28.png?itok=tilez7aY",
+    "image": "assets/images/fighters/ufc-ivan-erslan.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -22269,7 +22269,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/MINEV_ARTUR_R_05-16.png?itok=6AQl2L9a",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/MINEV_ARTUR_R_05-16.png?itok=6AQl2L9a",
+    "image": "assets/images/fighters/ufc-artur-minev.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 22.0,
@@ -22318,7 +22318,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/VIEIRA_KETLEN_L_05-16.png?itok=ieFIJTkH",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/VIEIRA_KETLEN_L_05-16.png?itok=ieFIJTkH",
+    "image": "assets/images/fighters/ufc-ketlen-vieira.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -22367,7 +22367,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/BRUNDAGE_CODY_L_05-16.png?itok=6XckDt9Q",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/BRUNDAGE_CODY_L_05-16.png?itok=6XckDt9Q",
+    "image": "assets/images/fighters/ufc-dzhonatan-pirs-1.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -22416,7 +22416,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-12/3/PETROSKI_ANDRE_L_09-07.png?itok=XRHPUO-h",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-12/3/PETROSKI_ANDRE_L_09-07.png?itok=XRHPUO-h",
+    "image": "assets/images/fighters/ufc-andre-petroski.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -22465,7 +22465,7 @@ export const additionalFighters = [
     "heightCm": 160,
     "reachCm": 157,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/ARDELEAN_ALICE_L_05-16.png?itok=8kSUhwkV",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/ARDELEAN_ALICE_L_05-16.png?itok=8kSUhwkV",
+    "image": "assets/images/fighters/ufc-alice-ardelean.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -22514,7 +22514,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2023-08/VIANA_POLYANA_L_08-12.png?itok=BH04lqi0",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2023-08/VIANA_POLYANA_L_08-12.png?itok=BH04lqi0",
+    "image": "assets/images/fighters/ufc-polyana-viana.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -22563,7 +22563,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 168,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/BAREZ_DANIEL_L_05-16.png?itok=DAbacu0a",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/BAREZ_DANIEL_L_05-16.png?itok=DAbacu0a",
+    "image": "assets/images/fighters/ufc-lyudovit-klayn-1.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 37.0,
@@ -22612,7 +22612,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": 165,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/BANNON_SHAUNA_L_05-16.png?itok=MoHNOg5o",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/BANNON_SHAUNA_L_05-16.png?itok=MoHNOg5o",
+    "image": "assets/images/fighters/ufc-shauna-bannon.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -22661,7 +22661,7 @@ export const additionalFighters = [
     "heightCm": 160,
     "reachCm": 157,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/2/CALIARI_NICOLLE_L_01-11.png?itok=F6kDO8bo",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/2/CALIARI_NICOLLE_L_01-11.png?itok=F6kDO8bo",
+    "image": "assets/images/fighters/ufc-nicolle-caliari.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -22710,7 +22710,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/AMOSOV_YAROSLAV_R_12-13.png?itok=ykKn1cKu",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/AMOSOV_YAROSLAV_R_12-13.png?itok=ykKn1cKu",
+    "image": "assets/images/fighters/ufc-yaroslav-amosov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -22759,7 +22759,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/DAWSON_GRANT_L_05-09.png?itok=JuVEhRo_",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/DAWSON_GRANT_L_05-09.png?itok=JuVEhRo_",
+    "image": "assets/images/fighters/ufc-grant-dawson.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -22808,7 +22808,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/MILLER_JIM_L_05-09.png?itok=v9YKyo9m",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/MILLER_JIM_L_05-09.png?itok=v9YKyo9m",
+    "image": "assets/images/fighters/ufc-jim-miller.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 42.0,
@@ -22857,7 +22857,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/GORDON_JARED_L_05-17.png?itok=JksSLA9u",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/GORDON_JARED_L_05-17.png?itok=JksSLA9u",
+    "image": "assets/images/fighters/ufc-jared-gordon.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 37.0,
@@ -22906,7 +22906,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 189,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/12/TULIO_MARCO_L_01-11.png?itok=wTbKK65g",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/12/TULIO_MARCO_L_01-11.png?itok=wTbKK65g",
+    "image": "assets/images/fighters/ufc-marco-tulio.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -22955,7 +22955,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/SABATINI_PAT_L_05-09.png?itok=YDUceiMi",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/SABATINI_PAT_L_05-09.png?itok=YDUceiMi",
+    "image": "assets/images/fighters/ufc-pat-sabatini.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -23004,7 +23004,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/GOMIS_WILLIAM_L_09-06.png?itok=BGKwXp-S",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/GOMIS_WILLIAM_L_09-06.png?itok=BGKwXp-S",
+    "image": "assets/images/fighters/ufc-william-gomis.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -23053,7 +23053,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 201,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/SUSURKAEV_BAISANGUR_L_05-09.png?itok=tUbfeTCb",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/SUSURKAEV_BAISANGUR_L_05-09.png?itok=tUbfeTCb",
+    "image": "assets/images/fighters/ufc-baisangur-susurkaev.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 25.0,
@@ -23102,7 +23102,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 168,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/CARPENTER_CLAYTON_L_05-09.png?itok=Rt1pWT48",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-05/CARPENTER_CLAYTON_L_05-09.png?itok=Rt1pWT48",
+    "image": "assets/images/fighters/ufc-clayton-carpenter.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -23151,7 +23151,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-11/OCHOA_JOSE_R_11-23.png?itok=-cU98Zht",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-11/OCHOA_JOSE_R_11-23.png?itok=-cU98Zht",
+    "image": "assets/images/fighters/ufc-jose-ochoa.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 25.0,
@@ -23200,7 +23200,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/DARIUSH_BENEIL_L_05-02.png?itok=EGBjHKgU",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/DARIUSH_BENEIL_L_05-02.png?itok=EGBjHKgU",
+    "image": "assets/images/fighters/ufc-beneil-dariush.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 37.0,
@@ -23249,7 +23249,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/SCHMID_OLLIE_R_05-02.png?itok=yb6L6zTk",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/SCHMID_OLLIE_R_05-02.png?itok=yb6L6zTk",
+    "image": "assets/images/fighters/ufc-ollie-schmid.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 25.0,
@@ -23298,7 +23298,7 @@ export const additionalFighters = [
     "heightCm": 196,
     "reachCm": 202,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/PERICIC_BRANDO_L_09-27.png?itok=UWps5XKu",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/PERICIC_BRANDO_L_09-27.png?itok=UWps5XKu",
+    "image": "assets/images/fighters/ufc-brando-pericic.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -23347,7 +23347,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/ROWSTON_CAM_L_05-02.png?itok=uqDWq0O0",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/ROWSTON_CAM_L_05-02.png?itok=uqDWq0O0",
+    "image": "assets/images/fighters/ufc-cam-rowston.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -23396,7 +23396,7 @@ export const additionalFighters = [
     "heightCm": 201,
     "reachCm": 203,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/CHRISTIAN_KEVIN_R_11-01.png?itok=mjkSZ7v2",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/CHRISTIAN_KEVIN_R_11-01.png?itok=mjkSZ7v2",
+    "image": "assets/images/fighters/ufc-kevin-christian.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -23445,7 +23445,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/MALKOUN_JACOB_L_05-02.png?itok=8P_D4zmL",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/MALKOUN_JACOB_L_05-02.png?itok=8P_D4zmL",
+    "image": "assets/images/fighters/ufc-jacob-malkoun.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -23494,7 +23494,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/THICKNESSE_COLBY_L_05-02.png?itok=N5HTzqNl",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/THICKNESSE_COLBY_L_05-02.png?itok=N5HTzqNl",
+    "image": "assets/images/fighters/ufc-colby-thicknesse.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -23543,7 +23543,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-02/MORALES_VINCE_L_02-15.png?itok=CQyIe6Jm",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-02/MORALES_VINCE_L_02-15.png?itok=CQyIe6Jm",
+    "image": "assets/images/fighters/ufc-vince-morales.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -23592,7 +23592,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/JOHNSTON_BEN_L_05-02.png?itok=dSuEYe94",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/JOHNSTON_BEN_L_05-02.png?itok=dSuEYe94",
+    "image": "assets/images/fighters/ufc-benjamin-johnston.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -23641,7 +23641,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/MICALLEF_JONATHAN_L_05-02.png?itok=pdvc4yE3",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/MICALLEF_JONATHAN_L_05-02.png?itok=pdvc4yE3",
+    "image": "assets/images/fighters/ufc-jonathan-micallef.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -23686,7 +23686,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-10/GORIMBO_THEMBA_L_10-12.png?itok=5AoSoKfD",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-10/GORIMBO_THEMBA_L_10-12.png?itok=5AoSoKfD",
+    "image": "assets/images/fighters/ufc-themba-gorimbo.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -23739,7 +23739,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-01/MAR_FAN_DOM_R_01-31.png?itok=X_iT6-pY",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-01/MAR_FAN_DOM_R_01-31.png?itok=X_iT6-pY",
+    "image": "assets/images/fighters/ufc-dom-mar-fan.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -23788,7 +23788,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-02/STEELE_KODY_R_02-08.png?itok=1eXV9YAp",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-02/STEELE_KODY_R_02-08.png?itok=1eXV9YAp",
+    "image": "assets/images/fighters/ufc-kody-steele.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -23837,7 +23837,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/GRANT_DAVEY_L_04-25.png?itok=eXuCU5Cp",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/GRANT_DAVEY_L_04-25.png?itok=eXuCU5Cp",
+    "image": "assets/images/fighters/ufc-davey-grant.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 40.0,
@@ -23886,7 +23886,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/MARTINETTI_ADRIAN_R_04-25.png?itok=6OjvYA6L",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/MARTINETTI_ADRIAN_R_04-25.png?itok=6OjvYA6L",
+    "image": "assets/images/fighters/ufc-juan-martinetti.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -23935,7 +23935,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 197,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/BUCHECHA_MARCUS_L_04-25.png?itok=YjhLQE74",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/BUCHECHA_MARCUS_L_04-25.png?itok=YjhLQE74",
+    "image": "assets/images/fighters/ufc-marcus-buchecha.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -23984,7 +23984,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 169,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/BUENO_SILVA_MAYRA_L_04-25.png?itok=3d6BSANI",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/BUENO_SILVA_MAYRA_L_04-25.png?itok=3d6BSANI",
+    "image": "assets/images/fighters/ufc-mayra-bueno-silva.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -24033,7 +24033,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 174,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/MONTAGUE_MICHELLE_L_09-27.png?itok=hREMtg7j",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/MONTAGUE_MICHELLE_L_09-27.png?itok=hREMtg7j",
+    "image": "assets/images/fighters/ufc-michelle-montague.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -24082,7 +24082,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 174,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/FILHO_JAFEL_L_04-25.png?itok=4f5tktve",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/FILHO_JAFEL_L_04-25.png?itok=4f5tktve",
+    "image": "assets/images/fighters/ufc-jafel-filho.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -24131,7 +24131,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/MARSHALL_FRANCIS_L_04-25.png?itok=Dz7HMd3L",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/MARSHALL_FRANCIS_L_04-25.png?itok=Dz7HMd3L",
+    "image": "assets/images/fighters/ufc-francis-marshall.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -24180,7 +24180,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/BRENNAN_LUCAS_R_04-25.png?itok=ajTVXdf5",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/BRENNAN_LUCAS_R_04-25.png?itok=ajTVXdf5",
+    "image": "assets/images/fighters/ufc-lucas-brennan.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 26.0,
@@ -24229,7 +24229,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/GRIFFIN_MAX_L_04-25.png?itok=nrxbmm1d",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/GRIFFIN_MAX_L_04-25.png?itok=nrxbmm1d",
+    "image": "assets/images/fighters/ufc-max-griffin.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 40.0,
@@ -24278,7 +24278,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 182,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/VALENZUELA_VICTOR_R_04-25.png?itok=xZ28rXbG",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/VALENZUELA_VICTOR_R_04-25.png?itok=xZ28rXbG",
+    "image": "assets/images/fighters/ufc-victor-valenzuela-0.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -24327,7 +24327,7 @@ export const additionalFighters = [
     "heightCm": 155,
     "reachCm": 149,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/ALENCAR_TALITA_L_04-25.png?itok=onBqiGWH",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/ALENCAR_TALITA_L_04-25.png?itok=onBqiGWH",
+    "image": "assets/images/fighters/ufc-talita-alencar.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -24376,7 +24376,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/BURNS_GILBERT_L_04-18.png?itok=H7GqTf0f",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/BURNS_GILBERT_L_04-18.png?itok=H7GqTf0f",
+    "image": "assets/images/fighters/ufc-gilbert-burns.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 40.0,
@@ -24425,7 +24425,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/MALOTT_MIKE_L_05-10.png?itok=d0J2-On7",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/MALOTT_MIKE_L_05-10.png?itok=d0J2-On7",
+    "image": "assets/images/fighters/ufc-mike-malott.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -24474,7 +24474,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/PHILLIPS_KYLER_L_04-18.png?itok=HIpTQwmE",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/PHILLIPS_KYLER_L_04-18.png?itok=HIpTQwmE",
+    "image": "assets/images/fighters/ufc-kyler-phillips.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -24523,7 +24523,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/NALLO_MANDEL_L_04-18.png?itok=7Z3AEAXw",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/NALLO_MANDEL_L_04-18.png?itok=7Z3AEAXw",
+    "image": "assets/images/fighters/ufc-mandel-nallo.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 37.0,
@@ -24572,7 +24572,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/SILVA_KARINE_L_08-16.png?itok=6JdZdcEV",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/SILVA_KARINE_L_08-16.png?itok=6JdZdcEV",
+    "image": "assets/images/fighters/ufc-karine-silva.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -24621,7 +24621,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 179,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/MOISES_THIAGO_L_04-18.png?itok=Psb_LkNa",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/MOISES_THIAGO_L_04-18.png?itok=Psb_LkNa",
+    "image": "assets/images/fighters/ufc-thiago-moises.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -24670,7 +24670,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 189,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/LEBLANC_JULIEN_L_04-18.png?itok=zBIsz0dB",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/LEBLANC_JULIEN_L_04-18.png?itok=zBIsz0dB",
+    "image": "assets/images/fighters/ufc-julien-leblanc.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -24719,7 +24719,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/BOSER_TANNER_L_04-18.png?itok=_lraVPHf",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/BOSER_TANNER_L_04-18.png?itok=_lraVPHf",
+    "image": "assets/images/fighters/ufc-tanner-boser.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -24768,7 +24768,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/SARICAM_GOKHAN_R_04-18.png?itok=3bhwid51",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/SARICAM_GOKHAN_R_04-18.png?itok=3bhwid51",
+    "image": "assets/images/fighters/ufc-gokhan-saricam.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -24817,7 +24817,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 174,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/CRODEN_MELISSA_L_10-18.png?itok=0xkEkNiU",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/CRODEN_MELISSA_L_10-18.png?itok=0xkEkNiU",
+    "image": "assets/images/fighters/ufc-melissa-croden.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -24866,7 +24866,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 168,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/HORTH_JAMEY-LYN_L_12-13.png?itok=6cuyU03W",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/HORTH_JAMEY-LYN_L_12-13.png?itok=6cuyU03W",
+    "image": "assets/images/fighters/ufc-jamey-lyn-horth.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -24915,7 +24915,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 169,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/SIRAJ_JAMIE_L_04-18.png?itok=TpAUX4o0",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/SIRAJ_JAMIE_L_04-18.png?itok=TpAUX4o0",
+    "image": "assets/images/fighters/ufc-jamie-siraj.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -24964,7 +24964,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-04/BROWN_RANDY_L_04-26.png?itok=alaUuEEQ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-04/BROWN_RANDY_L_04-26.png?itok=alaUuEEQ",
+    "image": "assets/images/fighters/ufc-randy-brown.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -25013,7 +25013,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 182,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/GASTELUM_KELVIN_L_04-11.png?itok=yRQgInm7",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/GASTELUM_KELVIN_L_04-11.png?itok=yRQgInm7",
+    "image": "assets/images/fighters/ufc-kelvin-gastelum.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -25062,7 +25062,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/RADTKE_CHARLES_L_04-11.png?itok=rRI5kMVe",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/RADTKE_CHARLES_L_04-11.png?itok=rRI5kMVe",
+    "image": "assets/images/fighters/ufc-charles-radtke.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -25111,7 +25111,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/MOICANO_RENATO_L_04-04.png?itok=2zj_9GSb",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/MOICANO_RENATO_L_04-04.png?itok=2zj_9GSb",
+    "image": "assets/images/fighters/ufc-renato-moicano.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 37.0,
@@ -25160,7 +25160,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 182,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2023-07/DUNCAN_CHRIS_L_07-22.png?itok=35KjIAR4",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2023-07/DUNCAN_CHRIS_L_07-22.png?itok=35KjIAR4",
+    "image": "assets/images/fighters/ufc-chris-duncan.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -25209,7 +25209,7 @@ export const additionalFighters = [
     "heightCm": 169,
     "reachCm": 177,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/EWING_ETHYN_L_04-04.png?itok=AdTd6fQ0",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/EWING_ETHYN_L_04-04.png?itok=AdTd6fQ0",
+    "image": "assets/images/fighters/ufc-ethyn-ewing.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -25258,7 +25258,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/ESTEVAM_RAFAEL_L_08-02.png?itok=9BQyjN44",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/ESTEVAM_RAFAEL_L_08-02.png?itok=9BQyjN44",
+    "image": "assets/images/fighters/ufc-rafael-estevam.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -25307,7 +25307,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/ZECCHINI_MANOLO_R_04-04.png?itok=9jWtZxNN",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/ZECCHINI_MANOLO_R_04-04.png?itok=9jWtZxNN",
+    "image": "assets/images/fighters/ufc-manolo-zecchini.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -25356,7 +25356,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 179,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/DELANO_JOSE_L_04-04.png?itok=yx6OJq5I",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/DELANO_JOSE_L_04-04.png?itok=yx6OJq5I",
+    "image": "assets/images/fighters/ufc-jose-delano.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -25405,7 +25405,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/RUCHALA_ROBERT_R_04-04.png?itok=dyMpcjir",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/RUCHALA_ROBERT_R_04-04.png?itok=dyMpcjir",
+    "image": "assets/images/fighters/ufc-robert-ruchala.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -25454,7 +25454,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/VANNATA_LANDO_L_04-04.png?itok=ceMwCOLJ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/VANNATA_LANDO_L_04-04.png?itok=ceMwCOLJ",
+    "image": "assets/images/fighters/ufc-lando-vannata.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -25503,7 +25503,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-02/FLOWERS_DARRIUS_L_07-29.png?itok=fI4ZyGRM",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-02/FLOWERS_DARRIUS_L_07-29.png?itok=fI4ZyGRM",
+    "image": "assets/images/fighters/ufc-darrius-flowers.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -25552,7 +25552,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/BEKOEV_AZAMAT_L_04-04.png?itok=a6lk_o5N",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/BEKOEV_AZAMAT_L_04-04.png?itok=a6lk_o5N",
+    "image": "assets/images/fighters/ufc-azamat-bekoev.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -25601,7 +25601,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 174,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/HOPE_DAKOTA_R_04-04.png?itok=sMKQySli",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/HOPE_DAKOTA_R_04-04.png?itok=sMKQySli",
+    "image": "assets/images/fighters/ufc-dakota-hope.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -25650,7 +25650,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/CHIESA_MICHAEL_L_03-28.png?itok=sCF2lLlZ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/CHIESA_MICHAEL_L_03-28.png?itok=sCF2lLlZ",
+    "image": "assets/images/fighters/ufc-michael-chiesa.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 38.0,
@@ -25699,7 +25699,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 189,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/EROSA_JULIAN_L_03-28.png?itok=QBTJINN6",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/EROSA_JULIAN_L_03-28.png?itok=QBTJINN6",
+    "image": "assets/images/fighters/ufc-julian-erosa.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 37.0,
@@ -25748,7 +25748,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/NELSON_KYLE_L_10-18.png?itok=N6FSsbo_",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/NELSON_KYLE_L_10-18.png?itok=N6FSsbo_",
+    "image": "assets/images/fighters/ufc-kyle-nelson.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -25797,7 +25797,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/GIBSON_JR_LANCE_R_12-13.png?itok=k-q6SrNE",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-12/GIBSON_JR_LANCE_R_12-13.png?itok=k-q6SrNE",
+    "image": "assets/images/fighters/ufc-lance-gibson-jr.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -25846,7 +25846,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 168,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/FERNANDES_GABRIELLA_L_08-09.png?itok=sUYuxLOm",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/FERNANDES_GABRIELLA_L_08-09.png?itok=sUYuxLOm",
+    "image": "assets/images/fighters/ufc-gabriella-fernandes.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -25895,7 +25895,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 166,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/BRASIL_BRUNA_L_02-07.png?itok=OOoqetRu",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/BRASIL_BRUNA_L_02-07.png?itok=OOoqetRu",
+    "image": "assets/images/fighters/ufc-bruna-brasil.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -25944,7 +25944,7 @@ export const additionalFighters = [
     "heightCm": 198,
     "reachCm": 203,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-02/LANE_AUSTEN_L_03-01.png?itok=8X3Keh9f",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-02/LANE_AUSTEN_L_03-01.png?itok=8X3Keh9f",
+    "image": "assets/images/fighters/ufc-austen-lane.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 38.0,
@@ -25993,7 +25993,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/SILVA_DANNY_L_08-02.png?itok=KZOcQwow",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/SILVA_DANNY_L_08-02.png?itok=KZOcQwow",
+    "image": "assets/images/fighters/ufc-danny-silva.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -26042,7 +26042,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/KONDRATAVICIUS_MANTAS_L_03-21.png?itok=vn9NYCgj",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/KONDRATAVICIUS_MANTAS_L_03-21.png?itok=vn9NYCgj",
+    "image": "assets/images/fighters/ufc-mantas-kondratavicius.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -26091,7 +26091,7 @@ export const additionalFighters = [
     "heightCm": 196,
     "reachCm": 203,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-11/TROCOLI_ANTONIO_R_11-09.png?itok=C1tyD_TC",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-11/TROCOLI_ANTONIO_R_11-09.png?itok=C1tyD_TC",
+    "image": "assets/images/fighters/ufc-antonio-trocoli.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -26136,7 +26136,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/ROCK_SHEM_L_03-21.png?itok=0oH88g96",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/ROCK_SHEM_L_03-21.png?itok=0oH88g96",
+    "image": "assets/images/fighters/ufc-shem-rock.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -26185,7 +26185,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-02/AL-SELWADY_ABDUL-KAREEM_L_03-02.png?itok=v2xf85h-",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-02/AL-SELWADY_ABDUL-KAREEM_L_03-02.png?itok=v2xf85h-",
+    "image": "assets/images/fighters/ufc-abdul-kareem-al-selwady.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -26234,7 +26234,7 @@ export const additionalFighters = [
     "heightCm": 169,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/EMMETT_JOSH_L_03-14.png?itok=CmMjCtXR",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/EMMETT_JOSH_L_03-14.png?itok=CmMjCtXR",
+    "image": "assets/images/fighters/ufc-josh-emmett.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 41.0,
@@ -26283,7 +26283,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/HARDWICK_HARRY_L_09-06.png?itok=WcKUQDmD",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/HARDWICK_HARRY_L_09-06.png?itok=WcKUQDmD",
+    "image": "assets/images/fighters/ufc-harry-hardwick.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -26332,7 +26332,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/CURTIS_CHRIS_L_03-14.png?itok=hDIZj-a7",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/CURTIS_CHRIS_L_03-14.png?itok=hDIZj-a7",
+    "image": "assets/images/fighters/ufc-chris-curtis.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 39.0,
@@ -26381,7 +26381,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/SMITH_ELIJAH_L_03-14.png?itok=3MoxFy9W",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/SMITH_ELIJAH_L_03-14.png?itok=3MoxFy9W",
+    "image": "assets/images/fighters/ufc-elijah-smith.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 23.0,
@@ -26430,7 +26430,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 165,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/YOU_SUYOUNG_L_03-15.png?itok=Mfh4XApl",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/YOU_SUYOUNG_L_03-15.png?itok=Mfh4XApl",
+    "image": "assets/images/fighters/ufc-suyoung-you.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -26479,7 +26479,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/OKI_BOLAJI_L_03-14.png?itok=Hs5udMlS",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/OKI_BOLAJI_L_03-14.png?itok=Hs5udMlS",
+    "image": "assets/images/fighters/ufc-bolaji-oki.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -26528,7 +26528,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/TAVARES_BRAD_L_03-14.png?itok=b95gOYRd",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/TAVARES_BRAD_L_03-14.png?itok=b95gOYRd",
+    "image": "assets/images/fighters/ufc-brad-tavares.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 38.0,
@@ -26577,7 +26577,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/ANDERS_ERYK_L_08-09.png?itok=gQG7b3iT",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/ANDERS_ERYK_L_08-09.png?itok=gQG7b3iT",
+    "image": "assets/images/fighters/ufc-eryk-anders.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 39.0,
@@ -26626,7 +26626,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/RENDON_MONTSE_L_09-13.png?itok=oa9Ma0_h",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/RENDON_MONTSE_L_09-13.png?itok=oa9Ma0_h",
+    "image": "assets/images/fighters/ufc-montserrat-rendon.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 37.0,
@@ -26675,7 +26675,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 182,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/LACERDA_LUAN_L_03-14.png?itok=kciX2WXx",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/LACERDA_LUAN_L_03-14.png?itok=kciX2WXx",
+    "image": "assets/images/fighters/ufc-luan-lacerda.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -26724,7 +26724,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/SOSA_HECHER_R_03-14.png?itok=3lYzpHCZ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/SOSA_HECHER_R_03-14.png?itok=3lYzpHCZ",
+    "image": "assets/images/fighters/ufc-hecher-sosa.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -26773,7 +26773,7 @@ export const additionalFighters = [
     "heightCm": 160,
     "reachCm": 161,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/RODRIGUEZ_PIERA_L_03-14.png?itok=UDMKBpY8",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/RODRIGUEZ_PIERA_L_03-14.png?itok=UDMKBpY8",
+    "image": "assets/images/fighters/ufc-piera-rodriguez.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 33.0,
@@ -26822,7 +26822,7 @@ export const additionalFighters = [
     "heightCm": 165,
     "reachCm": 163,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-02/HUGHES_SAM_L_02-24.png?itok=g_WvjE_Z",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-02/HUGHES_SAM_L_02-24.png?itok=g_WvjE_Z",
+    "image": "assets/images/fighters/ufc-samu-hiyusu.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -26871,7 +26871,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-02/TURCIOS_RICKY_L_02-24.png?itok=94CYiy7J",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-02/TURCIOS_RICKY_L_02-24.png?itok=94CYiy7J",
+    "image": "assets/images/fighters/ufc-ricky-turcios.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -26920,7 +26920,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/TUMENDEMBEREL_NYAMJARGAL_L_08-22.png?itok=snyizaHT",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/TUMENDEMBEREL_NYAMJARGAL_L_08-22.png?itok=snyizaHT",
+    "image": "assets/images/fighters/ufc-nyamjargal-tumendemberel.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 28.0,
@@ -26969,7 +26969,7 @@ export const additionalFighters = [
     "heightCm": 163,
     "reachCm": 159,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/AGUILAR_JESUS_L_09-13.png?itok=u6hVvPbp",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/AGUILAR_JESUS_L_09-13.png?itok=u6hVvPbp",
+    "image": "assets/images/fighters/ufc-jesus-aguilar.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -27018,7 +27018,7 @@ export const additionalFighters = [
     "heightCm": 187,
     "reachCm": 194,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/FERNANDEZ_LUKE_L_03-07.png?itok=AF-dsiIO",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/FERNANDEZ_LUKE_L_03-07.png?itok=AF-dsiIO",
+    "image": "assets/images/fighters/ufc-luke-fernandez.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -27067,7 +27067,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/ZELLHUBER_DANIEL_L_02-28.png?itok=62LD1ZlI",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/ZELLHUBER_DANIEL_L_02-28.png?itok=62LD1ZlI",
+    "image": "assets/images/fighters/ufc-daniel-zellhuber.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -27116,7 +27116,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/2/BUNES_FELIPE_L_01-11.png?itok=ioxW2PD3",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/2/BUNES_FELIPE_L_01-11.png?itok=ioxW2PD3",
+    "image": "assets/images/fighters/ufc-felipe-bunes.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -27165,7 +27165,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-03/PACHECO_ANGEL_L_03-30.png?itok=puR4REyD",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-03/PACHECO_ANGEL_L_03-30.png?itok=puR4REyD",
+    "image": "assets/images/fighters/ufc-angel-pacheco.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -27214,7 +27214,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 189,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/MEDINA_JOSE_L_09-13.png?itok=12XtvWNo",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/MEDINA_JOSE_L_09-13.png?itok=12XtvWNo",
+    "image": "assets/images/fighters/ufc-jose-daniel-medina.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -27263,7 +27263,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/QUINONEZ_CRISTIAN_L_02-28.png?itok=m541clJw",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/QUINONEZ_CRISTIAN_L_02-28.png?itok=m541clJw",
+    "image": "assets/images/fighters/ufc-trevin-dzhayls-6.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -27312,7 +27312,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2022-03/c9dc5e90-fb24-44e0-9a16-9b684c5af43b%252FMOUTINHO_KRIS_L_03-12.png?itok=u2zXrFw2",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2022-03/c9dc5e90-fb24-44e0-9a16-9b684c5af43b%252FMOUTINHO_KRIS_L_03-12.png?itok=u2zXrFw2",
+    "image": "assets/images/fighters/ufc-kameron-els-7.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -27361,7 +27361,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 174,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/SILVA_DOUGLAS_L_02-28.png?itok=wJbOoKxr",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/SILVA_DOUGLAS_L_02-28.png?itok=wJbOoKxr",
+    "image": "assets/images/fighters/ufc-douglas-silva-de-andrade.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 41.0,
@@ -27410,7 +27410,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/SILVA_ERIK_L_02-28.png?itok=DViyu9iI",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/SILVA_ERIK_L_02-28.png?itok=DViyu9iI",
+    "image": "assets/images/fighters/ufc-erik-silva.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 39.0,
@@ -27459,7 +27459,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/NEAL_GEOFF_L_02-21.png?itok=h9m7my9H",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/NEAL_GEOFF_L_02-21.png?itok=h9m7my9H",
+    "image": "assets/images/fighters/ufc-geoff-neal.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -27508,7 +27508,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-11/LEAL_CARLOS_L_10-26.png?itok=ZJxDU-p0",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-11/LEAL_CARLOS_L_10-26.png?itok=ZJxDU-p0",
+    "image": "assets/images/fighters/ufc-carlos-leal.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -27557,7 +27557,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/OSBOURNE_ODE_L_02-21.png?itok=aw0NxANu",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/OSBOURNE_ODE_L_02-21.png?itok=aw0NxANu",
+    "image": "assets/images/fighters/ufc-ode-osbourne.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -27606,7 +27606,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/IDIRIS_ALIBI_L_08-16.png?itok=vKZf9nLQ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/IDIRIS_ALIBI_L_08-16.png?itok=vKZf9nLQ",
+    "image": "assets/images/fighters/ufc-alibi-idiris.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -27655,7 +27655,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 204,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/ROWE_PHIL_L_02-21.png?itok=uhNlGeQ7",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/ROWE_PHIL_L_02-21.png?itok=uhNlGeQ7",
+    "image": "assets/images/fighters/ufc-philip-rowe.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -27704,7 +27704,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 201,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/ALMEIDA_JAILTON_L_02-07.png?itok=xpA9HLAC",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/ALMEIDA_JAILTON_L_02-07.png?itok=xpA9HLAC",
+    "image": "assets/images/fighters/ufc-jailton-almeida.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 35.0,
@@ -27753,7 +27753,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/BARRIAULT_MARC-ANDRE_L_05-10.png?itok=kJq5jhiN",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/BARRIAULT_MARC-ANDRE_L_05-10.png?itok=kJq5jhiN",
+    "image": "assets/images/fighters/ufc-marc-andre-barriault.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -27802,7 +27802,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/MORONO_ALEX_L_02-07.png?itok=b6bEvrIe",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/MORONO_ALEX_L_02-07.png?itok=b6bEvrIe",
+    "image": "assets/images/fighters/ufc-alex-morono.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 36.0,
@@ -27847,7 +27847,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2023-10/BASHARAT_JAVID_L_10-21.png?itok=NqJvnBRc",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2023-10/BASHARAT_JAVID_L_10-21.png?itok=NqJvnBRc",
+    "image": "assets/images/fighters/ufc-trevin-dzhayls-4.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -27900,7 +27900,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/GAFUROV_MUIN_L_02-07.png?itok=IENWwqtE",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/GAFUROV_MUIN_L_02-07.png?itok=IENWwqtE",
+    "image": "assets/images/fighters/ufc-muin-gafurov.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 30.0,
@@ -27949,7 +27949,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/WIKLACZ_JAKUB_R_10-04.png?itok=-j-eX0no",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/WIKLACZ_JAKUB_R_10-04.png?itok=-j-eX0no",
+    "image": "assets/images/fighters/ufc-jakub-wiklacz.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -27998,7 +27998,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/ELEKANA_BILLY_L_01-31.png?itok=l0IviRUv",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/ELEKANA_BILLY_L_01-31.png?itok=l0IviRUv",
+    "image": "assets/images/fighters/ufc-billy-elekana.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -28047,7 +28047,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/FINNEY_TORREZ_L_01-31.png?itok=coCuBaUp",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/FINNEY_TORREZ_L_01-31.png?itok=coCuBaUp",
+    "image": "assets/images/fighters/ufc-torrez-finney.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -28096,7 +28096,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 179,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/YIZHA_L_01-31.png?itok=9mhbEzSu",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-02/YIZHA_L_01-31.png?itok=9mhbEzSu",
+    "image": "assets/images/fighters/ufc-yi-zha.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 29.0,
@@ -28145,7 +28145,7 @@ export const additionalFighters = [
     "heightCm": null,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-01/KIM_SANGWOOK_L_01-31.png?itok=oiL-1dOJ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-01/KIM_SANGWOOK_L_01-31.png?itok=oiL-1dOJ",
+    "image": "assets/images/fighters/ufc-sangwook-kim.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 32.0,
@@ -28194,7 +28194,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 179,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-01/NAKAMURA_KEIICHIRO_L_01-31.png?itok=-vL6J_TE",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-01/NAKAMURA_KEIICHIRO_L_01-31.png?itok=-vL6J_TE",
+    "image": "assets/images/fighters/ufc-keiichiro-nakamura.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 27.0,
@@ -28243,7 +28243,7 @@ export const additionalFighters = [
     "heightCm": null,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-01/SZALAY_SEBASTIAN_R_01-31.png?itok=7ISDNmbU",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-01/SZALAY_SEBASTIAN_R_01-31.png?itok=7ISDNmbU",
+    "image": "assets/images/fighters/ufc-sebastian-szalay.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 31.0,
@@ -28292,7 +28292,7 @@ export const additionalFighters = [
     "heightCm": null,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-01/SULANGRANGBO_L_01-31.png?itok=zv2jzgVc",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-01/SULANGRANGBO_L_01-31.png?itok=zv2jzgVc",
+    "image": "assets/images/fighters/ufc-sulang-rangbo.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 20.0,
@@ -28341,7 +28341,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/FREEMAN_DENZEL_R_11-22.png?itok=LYuPiV6V",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/FREEMAN_DENZEL_R_11-22.png?itok=LYuPiV6V",
+    "image": "assets/images/fighters/ufc-denzel-freeman.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 34.0,
@@ -28390,7 +28390,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-01/FUGITT_ADAM_L_01-24.png?itok=VDbhPtKa",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-01/FUGITT_ADAM_L_01-24.png?itok=VDbhPtKa",
+    "image": "assets/images/fighters/ufc-adam-fugitt.webp",
     "consulted": "2026-10-13",
     "info": {
       "age": 37.0,
@@ -28435,7 +28435,7 @@ export const additionalFighters = [
     "heightCm": 179,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/image/ufc-fighter-container/68009/profile-galery/fullbodyleft-picture/Georges-St-Pierre_318_LeftFullBodyImage.png?itok=-3ZclHf1",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/image/ufc-fighter-container/68009/profile-galery/fullbodyleft-picture/Georges-St-Pierre_318_LeftFullBodyImage.png?itok=-3ZclHf1",
+    "image": "assets/images/fighters/ufc-georges-st-pierre.webp",
     "consulted": "2026-10-14",
     "info": {
       "age": 42.0,
@@ -28512,7 +28512,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/Khabib_Nurmagomedov/1NURMAGOMEDOV_KHABIB_L.png?itok=CcyXygi6",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/Khabib_Nurmagomedov/1NURMAGOMEDOV_KHABIB_L.png?itok=CcyXygi6",
+    "image": "assets/images/fighters/ufc-khabib-nurmagomedov.webp",
     "consulted": "2026-10-14",
     "info": {
       "age": 34.0,
@@ -28583,7 +28583,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 184,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2020-08/CORMIER_DANIEL_L_08-15.png?VersionId=8c0xGmF.jAN.__8bESM5BDrDOjfgi0MX&itok=NnPB2J6Y",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2020-08/CORMIER_DANIEL_L_08-15.png?VersionId=8c0xGmF.jAN.__8bESM5BDrDOjfgi0MX&itok=NnPB2J6Y",
+    "image": "assets/images/fighters/ufc-daniel-cormier.webp",
     "consulted": "2026-10-14",
     "info": {
       "age": 44.0,
@@ -28660,7 +28660,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 166,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2022-06/JEDRZEJCZYK_JOANNA_L_06-11.png?itok=twIWUogI",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2022-06/JEDRZEJCZYK_JOANNA_L_06-11.png?itok=twIWUogI",
+    "image": "assets/images/fighters/ufc-joanna-jedrzejczyk.webp",
     "consulted": "2026-10-14",
     "info": {
       "age": 36.0,
@@ -28731,7 +28731,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2021-11/67978%252Fprofile-galery%252Ffullbodyleft-picture%252FEDGAR_FRANKIE_L_11-06.png?itok=wCuylQK6",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2021-11/67978%252Fprofile-galery%252Ffullbodyleft-picture%252FEDGAR_FRANKIE_L_11-06.png?itok=wCuylQK6",
+    "image": "assets/images/fighters/ufc-frankie-edgar.webp",
     "consulted": "2026-10-14",
     "info": {
       "age": 41.0,
@@ -28802,7 +28802,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2018-10/RUA_SHOGUN_L_0.png?VersionId=RmKWOc4dxqmHId6e8voPVOFTPVAgJpZr&itok=kekWRsI4",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2018-10/RUA_SHOGUN_L_0.png?VersionId=RmKWOc4dxqmHId6e8voPVOFTPVAgJpZr&itok=kekWRsI4",
+    "image": "assets/images/fighters/ufc-mauricio-rua.webp",
     "consulted": "2026-10-14",
     "info": {
       "age": 41.0,
@@ -28873,7 +28873,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/5/POIRIER_DUSTIN_L_06-01.png?itok=VHXq-Y5g",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/5/POIRIER_DUSTIN_L_06-01.png?itok=VHXq-Y5g",
+    "image": "assets/images/fighters/ufc-dustin-poirier.webp",
     "consulted": "2026-10-14",
     "info": {
       "age": 36.0,
@@ -28945,7 +28945,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/PEREZ_CRISTIAN_R_10-17.png?itok=NUZq6JzL",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/PEREZ_CRISTIAN_R_10-17.png?itok=NUZq6JzL",
+    "image": "assets/images/fighters/ufc-cristian-perez-gonzalez.webp",
     "consulted": "2026-10-18",
     "info": {
       "age": 27.0,
@@ -28994,7 +28994,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 177,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/JOURDAIN_LOUIS_L_10-17.png?itok=SH3rRSc7",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/JOURDAIN_LOUIS_L_10-17.png?itok=SH3rRSc7",
+    "image": "assets/images/fighters/ufc-louis-jourdain.webp",
     "consulted": "2026-10-18",
     "info": {
       "age": 29.0,
@@ -29043,7 +29043,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/GALANTI_NICK_R_10-17.png?itok=JdhH_GSm",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/GALANTI_NICK_R_10-17.png?itok=JdhH_GSm",
+    "image": "assets/images/fighters/ufc-nick-galanti.webp",
     "consulted": "2026-10-18",
     "info": {
       "age": 28.0,
@@ -29092,7 +29092,7 @@ export const additionalFighters = [
     "heightCm": null,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/MAHJOUB_JAVAD_L_10-17.png?itok=c1rupi3B",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/MAHJOUB_JAVAD_L_10-17.png?itok=c1rupi3B",
+    "image": "assets/images/fighters/ufc-javad-mahjoub.webp",
     "consulted": "2026-10-18",
     "info": {
       "age": 35.0,
@@ -29141,7 +29141,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 187,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/FAGLIER_JOEL_R_10-17.png?itok=YydkpsHu",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/FAGLIER_JOEL_R_10-17.png?itok=YydkpsHu",
+    "image": "assets/images/fighters/ufc-joel-faglier.webp",
     "consulted": "2026-10-18",
     "info": {
       "age": 25.0,
@@ -29190,7 +29190,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/CERMINARA_KATLYN_L_10-17.png?itok=QSt1A12H",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/CERMINARA_KATLYN_L_10-17.png?itok=QSt1A12H",
+    "image": "assets/images/fighters/ufc-katlyn-chookagian.webp",
     "consulted": "2026-10-18",
     "info": {
       "age": 37.0,
@@ -29239,7 +29239,7 @@ export const additionalFighters = [
     "heightCm": 159,
     "reachCm": 159,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/STILLER_MACKENZIE_R_10-17.png?itok=kv1pFuL_",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/STILLER_MACKENZIE_R_10-17.png?itok=kv1pFuL_",
+    "image": "assets/images/fighters/ufc-mackenzie-stiller.webp",
     "consulted": "2026-10-18",
     "info": {
       "age": 27.0,
@@ -29288,7 +29288,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 164,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/ANHELIGER_CHAD_L_10-17.png?itok=kfCYUBV1",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/ANHELIGER_CHAD_L_10-17.png?itok=kfCYUBV1",
+    "image": "assets/images/fighters/ufc-meyson-dzhons-0.webp",
     "consulted": "2026-10-18",
     "info": {
       "age": 39.0,
@@ -29337,7 +29337,7 @@ export const additionalFighters = [
     "heightCm": 171,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2023-01/KOSLOW_STEVEN_L_12-10.png?itok=pqAG6P4G",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2023-01/KOSLOW_STEVEN_L_12-10.png?itok=pqAG6P4G",
+    "image": "assets/images/fighters/ufc-steven-koslow.webp",
     "consulted": "2026-10-18",
     "info": {
       "age": 29.0,
@@ -29386,7 +29386,7 @@ export const additionalFighters = [
     "heightCm": 174,
     "reachCm": 171,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/CHOVANCEK_CODY_L_10-17.png?itok=bxdkUm-H",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/CHOVANCEK_CODY_L_10-17.png?itok=bxdkUm-H",
+    "image": "assets/images/fighters/ufc-cody-chovancek.webp",
     "consulted": "2026-10-18",
     "info": {
       "age": 28.0,
@@ -29433,7 +29433,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 202,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/DINIZ_JHONATA_L_10-11.png?itok=a7w4jLAU",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/DINIZ_JHONATA_L_10-11.png?itok=a7w4jLAU",
+    "image": "assets/images/fighters/ufc-jhonata-diniz.webp",
     "consulted": "2026-10-18",
     "info": {
       "age": 35.0,
@@ -29482,7 +29482,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/SHADOW_Fighter_fullLength_RED.png?VersionId=niQpXmYT1tbiETIDAxTsCI5FDbiNt9kI&itok=DfVddCfn",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/SHADOW_Fighter_fullLength_RED.png?VersionId=niQpXmYT1tbiETIDAxTsCI5FDbiNt9kI&itok=DfVddCfn",
+    "image": "assets/images/fighters/ufc-asaf-chopurov.webp",
     "consulted": "2026-10-20",
     "info": {
       "age": 24.0,
@@ -29531,7 +29531,7 @@ export const additionalFighters = [
     "heightCm": 160,
     "reachCm": 168,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/LUCINDO_IASMIN_L_08-09.png?itok=itSnZTmA",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/LUCINDO_IASMIN_L_08-09.png?itok=itSnZTmA",
+    "image": "assets/images/fighters/ufc-iasmin-lucindo.webp",
     "consulted": "2026-10-20",
     "info": {
       "age": 24.0,
@@ -29580,7 +29580,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 180,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/SEZINANDO_RODRIGO_L_09-13.png?itok=tmb-7P2Y",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/SEZINANDO_RODRIGO_L_09-13.png?itok=tmb-7P2Y",
+    "image": "assets/images/fighters/ufc-rodrigo-sezinando.webp",
     "consulted": "2026-10-20",
     "info": {
       "age": 27.0,
@@ -29629,7 +29629,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 187,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/LEE_JEONGYEONG_L_03-07.png?itok=Znq_QNLd",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-03/LEE_JEONGYEONG_L_03-07.png?itok=Znq_QNLd",
+    "image": "assets/images/fighters/ufc-jeongyeong-lee.webp",
     "consulted": "2026-10-20",
     "info": {
       "age": 30.0,
@@ -29678,7 +29678,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/KLEIN_NICK_L_08-02.png?itok=NzieeiWf",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/KLEIN_NICK_L_08-02.png?itok=NzieeiWf",
+    "image": "assets/images/fighters/ufc-nick-klein.webp",
     "consulted": "2026-10-20",
     "info": {
       "age": 30.0,
@@ -29728,7 +29728,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 201,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/KROPSCHOT_JOE_R_08-11.png?itok=3FsiQXS0",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/KROPSCHOT_JOE_R_08-11.png?itok=3FsiQXS0",
+    "image": "assets/images/fighters/ufc-joseph-kropschot.webp",
     "consulted": "2026-10-20",
     "info": {
       "age": 31.0,
@@ -29777,7 +29777,7 @@ export const additionalFighters = [
     "heightCm": 171,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/image/2022-02/womens-silhouette-RED-corner.png?itok=SXsY1AgG",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/image/2022-02/womens-silhouette-RED-corner.png?itok=SXsY1AgG",
+    "image": "assets/images/fighters/ufc-lucia-szabova.webp",
     "consulted": "2026-11-25",
     "info": {
       "age": 28.0,
@@ -29826,7 +29826,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/LISBOA_TAINARA_L_10-14.png?itok=ibBAzJ5i",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/LISBOA_TAINARA_L_10-14.png?itok=ibBAzJ5i",
+    "image": "assets/images/fighters/ufc-tainara-lisboa.webp",
     "consulted": "2026-10-20",
     "info": {
       "age": 35.0,
@@ -29875,7 +29875,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/ORTEGA_BRIAN_L_08-23.png?itok=OQf_S2Es",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/ORTEGA_BRIAN_L_08-23.png?itok=OQf_S2Es",
+    "image": "assets/images/fighters/ufc-brian-ortega.webp",
     "consulted": "2026-10-21",
     "info": {
       "age": 35.0,
@@ -29924,7 +29924,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-02/TOPURIA_ALEKSANDRE_R_02-08.png?itok=v-giNC1x",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-02/TOPURIA_ALEKSANDRE_R_02-08.png?itok=v-giNC1x",
+    "image": "assets/images/fighters/ufc-aleksandre-topuria.webp",
     "consulted": "2026-10-21",
     "info": {
       "age": 29.0,
@@ -29973,7 +29973,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2023-11/TURMAN_WELLINGTON_L_12-02.png?itok=icqJ0amp",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2023-11/TURMAN_WELLINGTON_L_12-02.png?itok=icqJ0amp",
+    "image": "assets/images/fighters/ufc-wellington-turman.webp",
     "consulted": "2026-10-21",
     "info": {
       "age": 30.0,
@@ -30026,7 +30026,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 193,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/LORENCO_GABRIEL_L_09-01.png?itok=NdbmVc1d",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/LORENCO_GABRIEL_L_09-01.png?itok=NdbmVc1d",
+    "image": "assets/images/fighters/ufc-gabriel-lorenco.webp",
     "consulted": "2026-10-21",
     "info": {
       "age": 26.0,
@@ -30075,7 +30075,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2023-07/PARSONS_JONNY_L_07-22.png?itok=r2aeVJ95",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2023-07/PARSONS_JONNY_L_07-22.png?itok=r2aeVJ95",
+    "image": "assets/images/fighters/ufc-norma-dyumont-viana-3.webp",
     "consulted": "2026-10-21",
     "info": {
       "age": 32.0,
@@ -30124,7 +30124,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/GALL_MICKEY_L_09-26.png?itok=IAd0wFGh",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/GALL_MICKEY_L_09-26.png?itok=IAd0wFGh",
+    "image": "assets/images/fighters/ufc-mickey-gall.webp",
     "consulted": "2026-10-24",
     "info": {
       "age": 34.0,
@@ -30173,7 +30173,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/THOMPSON_STEPHEN_L_07-12.png?itok=T4Y2Tqct",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/THOMPSON_STEPHEN_L_07-12.png?itok=T4Y2Tqct",
+    "image": "assets/images/fighters/ufc-stephen-thompson.webp",
     "consulted": "2026-11-08",
     "info": {
       "age": 42.0,
@@ -30222,7 +30222,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-04/ELDER_EVAN_L_04-26.png?itok=FqH6Jch-",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-04/ELDER_EVAN_L_04-26.png?itok=FqH6Jch-",
+    "image": "assets/images/fighters/ufc-evan-elder.webp",
     "consulted": "2026-11-08",
     "info": {
       "age": 28.0,
@@ -30271,7 +30271,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 189,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/SANCHES_SAMUEL_R_09-09.png?itok=RWqnGB4l",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-09/SANCHES_SAMUEL_R_09-09.png?itok=RWqnGB4l",
+    "image": "assets/images/fighters/ufc-samuel-sanches.webp",
     "consulted": "2026-11-08",
     "info": {
       "age": 23.0,
@@ -30320,7 +30320,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-11/DEGLI_MARCOS_R_11-07.png?itok=A4UeUmH4",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-11/DEGLI_MARCOS_R_11-07.png?itok=A4UeUmH4",
+    "image": "assets/images/fighters/ufc-marcos-degli.webp",
     "consulted": "2026-11-08",
     "info": {
       "age": 26.0,
@@ -30369,7 +30369,7 @@ export const additionalFighters = [
     "heightCm": null,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-11/CALDERON_CARLOS_R_11-07.png?itok=WgeQCe-t",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-11/CALDERON_CARLOS_R_11-07.png?itok=WgeQCe-t",
+    "image": "assets/images/fighters/ufc-carlos-calderon.webp",
     "consulted": "2026-11-08",
     "info": {
       "age": 30.0,
@@ -30418,7 +30418,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-10/SIDEY_SERHIY_L_11-02.png?itok=c_XKK2-I",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-10/SIDEY_SERHIY_L_11-02.png?itok=c_XKK2-I",
+    "image": "assets/images/fighters/ufc-serhiy-sidey.webp",
     "consulted": "2026-11-18",
     "info": {
       "age": 28.0,
@@ -30467,7 +30467,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/SCOTT_LOUIS_LEE_R_08-19.png?itok=LI80Ph-5",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/SCOTT_LOUIS_LEE_R_08-19.png?itok=LI80Ph-5",
+    "image": "assets/images/fighters/ufc-louis-lee-scott.webp",
     "consulted": "2026-11-18",
     "info": {
       "age": 26.0,
@@ -30516,7 +30516,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/CLANCY_JR_SEAN_R_08-25.png?itok=GM-K67M3",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/CLANCY_JR_SEAN_R_08-25.png?itok=GM-K67M3",
+    "image": "assets/images/fighters/ufc-sean-clancy-jr.webp",
     "consulted": "2026-11-18",
     "info": {
       "age": 23.0,
@@ -30565,7 +30565,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/PASLEY_QUENTEN_L_09-08.png?itok=IrJsCNSN",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/PASLEY_QUENTEN_L_09-08.png?itok=IrJsCNSN",
+    "image": "assets/images/fighters/ufc-quentin-pasley.webp",
     "consulted": "2026-11-18",
     "info": {
       "age": 24.0,
@@ -30614,7 +30614,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/DULATOV_ISLAM_L_07-25.png?itok=b4r4oxs_",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/DULATOV_ISLAM_L_07-25.png?itok=b4r4oxs_",
+    "image": "assets/images/fighters/ufc-islam-dulatov.webp",
     "consulted": "2026-11-18",
     "info": {
       "age": 28.0,
@@ -30663,7 +30663,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/SANTOS_MAIRON_L_03-08.png?itok=P_ILc16F",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-03/SANTOS_MAIRON_L_03-08.png?itok=P_ILc16F",
+    "image": "assets/images/fighters/ufc-mairon-santos-alves.webp",
     "consulted": "2026-11-18",
     "info": {
       "age": 26.0,
@@ -30712,7 +30712,7 @@ export const additionalFighters = [
     "heightCm": null,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ABDULLAEV_AKBAR_R_09-15.png?itok=7e_lanQN",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/ABDULLAEV_AKBAR_R_09-15.png?itok=7e_lanQN",
+    "image": "assets/images/fighters/ufc-akbar-abdullaev.webp",
     "consulted": "2026-11-18",
     "info": {
       "age": 28.0,
@@ -30761,7 +30761,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 201,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/SATYBALDIEV_URAN_L_08-23.png?itok=PM2a7Hrg",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/SATYBALDIEV_URAN_L_08-23.png?itok=PM2a7Hrg",
+    "image": "assets/images/fighters/ufc-uran-satybaldiev.webp",
     "consulted": "2026-11-18",
     "info": {
       "age": 32.0,
@@ -30806,7 +30806,7 @@ export const additionalFighters = [
     "heightCm": null,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/SHADOW_Fighter_fullLength_RED.png?VersionId=niQpXmYT1tbiETIDAxTsCI5FDbiNt9kI&itok=DfVddCfn",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/SHADOW_Fighter_fullLength_RED.png?VersionId=niQpXmYT1tbiETIDAxTsCI5FDbiNt9kI&itok=DfVddCfn",
+    "image": "assets/images/fighters/ufc-ivan-gnizditskiy.webp",
     "consulted": "2026-11-18",
     "info": {
       "age": 30.0,
@@ -30855,7 +30855,7 @@ export const additionalFighters = [
     "heightCm": 178,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2023-12/PARK_JUNYONG_L_12-09.png?itok=LeEvSHc5",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2023-12/PARK_JUNYONG_L_12-09.png?itok=LeEvSHc5",
+    "image": "assets/images/fighters/ufc-jun-yong-park.webp",
     "consulted": "2026-11-18",
     "info": {
       "age": 35.0,
@@ -30904,7 +30904,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 197,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/RODRIGUES_MODESTINO_R_09-01.png?itok=fgflF435",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/RODRIGUES_MODESTINO_R_09-01.png?itok=fgflF435",
+    "image": "assets/images/fighters/ufc-modestino-rodrigues.webp",
     "consulted": "2026-11-18",
     "info": {
       "age": 22.0,
@@ -30953,7 +30953,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 179,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-01/MOTTA_NIKOLAS_L_01-13.png?itok=j7dTiOfC",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-01/MOTTA_NIKOLAS_L_01-13.png?itok=j7dTiOfC",
+    "image": "assets/images/fighters/ufc-nikolas-motta.webp",
     "consulted": "2026-11-18",
     "info": {
       "age": 32.0,
@@ -31002,7 +31002,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 197,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/LORENZ_ALIK_L_08-18.png?itok=d0cY5m7y",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/LORENZ_ALIK_L_08-18.png?itok=d0cY5m7y",
+    "image": "assets/images/fighters/ufc-alik-lorenz.webp",
     "consulted": "2026-11-18",
     "info": {
       "age": 29.0,
@@ -31051,7 +31051,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 174,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/GUAYLUPO_PIERO_R_09-22.png?itok=1K0V6sew",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-09/GUAYLUPO_PIERO_R_09-22.png?itok=1K0V6sew",
+    "image": "assets/images/fighters/ufc-piero-guaylupo.webp",
     "consulted": "2026-11-20",
     "info": {
       "age": 21.0,
@@ -31100,7 +31100,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 175,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-08/KAZAMA_TOSHIOMI_L_08-10.png?itok=I1V758sE",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-08/KAZAMA_TOSHIOMI_L_08-10.png?itok=I1V758sE",
+    "image": "assets/images/fighters/ufc-toshiomi-kazama.webp",
     "consulted": "2026-11-20",
     "info": {
       "age": 28.0,
@@ -31149,7 +31149,7 @@ export const additionalFighters = [
     "heightCm": 160,
     "reachCm": 163,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-11/KOWALKIEWICZ_KAROLINA_L_11-09.png?itok=JK5FHctD",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-11/KOWALKIEWICZ_KAROLINA_L_11-09.png?itok=JK5FHctD",
+    "image": "assets/images/fighters/ufc-karolina-kowalkiewicz.webp",
     "consulted": "2026-11-20",
     "info": {
       "age": 39.0,
@@ -31198,7 +31198,7 @@ export const additionalFighters = [
     "heightCm": null,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-11/YOUSAF_SHOAIB_L_11-21.png?itok=ceSbUhXJ",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-11/YOUSAF_SHOAIB_L_11-21.png?itok=ceSbUhXJ",
+    "image": "assets/images/fighters/ufc-shoaib-yousaf.webp",
     "consulted": "2026-11-25",
     "info": {
       "age": 31.0,
@@ -31247,7 +31247,7 @@ export const additionalFighters = [
     "heightCm": null,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-11/MITCHELL_JOHN_R_11-21.png?itok=6IuAb4pU",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-11/MITCHELL_JOHN_R_11-21.png?itok=6IuAb4pU",
+    "image": "assets/images/fighters/ufc-john-mitchell.webp",
     "consulted": "2026-11-25",
     "info": {
       "age": 31.0,
@@ -31296,7 +31296,7 @@ export const additionalFighters = [
     "heightCm": null,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/CONCEICAO_ROQUE_L.png?itok=uQ7JhFFY",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/CONCEICAO_ROQUE_L.png?itok=uQ7JhFFY",
+    "image": "assets/images/fighters/ufc-roque-conceicao.webp",
     "consulted": "2026-11-24",
     "info": {
       "age": 26.0,
@@ -31345,7 +31345,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/SANTOS_GABRIEL_L_09-07.png?itok=W6SRM8iV",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/SANTOS_GABRIEL_L_09-07.png?itok=W6SRM8iV",
+    "image": "assets/images/fighters/ufc-gabriel-santos.webp",
     "consulted": "2026-11-24",
     "info": {
       "age": 28.0,
@@ -31394,7 +31394,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/ULANBEKOV_TAGIR_L_11-22.png?itok=GvelhCHd",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/ULANBEKOV_TAGIR_L_11-22.png?itok=GvelhCHd",
+    "image": "assets/images/fighters/ufc-tagir-ulanbekov.webp",
     "consulted": "2026-11-25",
     "info": {
       "age": 35.0,
@@ -31439,7 +31439,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-11/ONAMA_DAVID_L_11-16.png?itok=NVO2yaF_",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-11/ONAMA_DAVID_L_11-16.png?itok=NVO2yaF_",
+    "image": "assets/images/fighters/ufc-david-onama.webp",
     "consulted": "2026-11-25",
     "info": {
       "age": 32.0,
@@ -31488,7 +31488,7 @@ export const additionalFighters = [
     "heightCm": 163,
     "reachCm": 168,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/RIBAS_AMANDA_L_07-26.png?itok=3dIeCYcl",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-07/RIBAS_AMANDA_L_07-26.png?itok=3dIeCYcl",
+    "image": "assets/images/fighters/ufc-amanda-ribas.webp",
     "consulted": "2026-11-25",
     "info": {
       "age": 33.0,
@@ -31538,7 +31538,7 @@ export const additionalFighters = [
     "heightCm": 160,
     "reachCm": 166,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/MIZUKI_R_10-25.png?itok=CpbTHLy2",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/MIZUKI_R_10-25.png?itok=CpbTHLy2",
+    "image": "assets/images/fighters/ufc-mizuki-inoue.webp",
     "consulted": "2026-11-25",
     "info": {
       "age": 31.0,
@@ -31591,7 +31591,7 @@ export const additionalFighters = [
     "heightCm": 179,
     "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/MILLER_TRENT_L_08-26.png?itok=5wieQtRA",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/MILLER_TRENT_L_08-26.png?itok=5wieQtRA",
+    "image": "assets/images/fighters/ufc-trent-miller.webp",
     "consulted": "2026-11-25",
     "info": {
       "age": 30.0,
@@ -31640,7 +31640,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-01/TAVERAS_RAMON_L_01-20.png?itok=GHrQbw6B",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-01/TAVERAS_RAMON_L_01-20.png?itok=GHrQbw6B",
+    "image": "assets/images/fighters/ufc-ramon-taveras.webp",
     "consulted": "2026-11-25",
     "info": {
       "age": 31.0,
@@ -31689,7 +31689,7 @@ export const additionalFighters = [
     "heightCm": 171,
     "reachCm": 182,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/PUGA_ROMAN_L_08-18.png?itok=z8arsh1H",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-08/PUGA_ROMAN_L_08-18.png?itok=z8arsh1H",
+    "image": "assets/images/fighters/ufc-roman-puga.webp",
     "consulted": "2026-11-25",
     "info": {
       "age": 29.0,
@@ -31738,7 +31738,7 @@ export const additionalFighters = [
     "heightCm": 177,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/JIMENEZ_RAMIRO_R_08-19.png?itok=AOac_e0j",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-08/JIMENEZ_RAMIRO_R_08-19.png?itok=AOac_e0j",
+    "image": "assets/images/fighters/ufc-ramiro-jimenez.webp",
     "consulted": "2026-11-25",
     "info": {
       "age": 27.0,
@@ -31787,7 +31787,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 189,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/ALVIDREZ_CHRISTOPHER_R_09-30.png?itok=z9x2nDHm",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/ALVIDREZ_CHRISTOPHER_R_09-30.png?itok=z9x2nDHm",
+    "image": "assets/images/fighters/ufc-christopher-alvidrez.webp",
     "consulted": "2026-11-25",
     "info": {
       "age": 29.0,
@@ -31836,7 +31836,7 @@ export const additionalFighters = [
     "heightCm": null,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/SUNDELL_SMILLA_L_10-13.png?itok=Gmp39_jz",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-10/SUNDELL_SMILLA_L_10-13.png?itok=Gmp39_jz",
+    "image": "assets/images/fighters/ufc-smilla-sundell.webp",
     "consulted": "2026-11-25",
     "info": {
       "age": 21.0,
@@ -31902,7 +31902,7 @@ export const additionalFighters = [
     "heightCm": 173,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-10/2/CRUZ_DOMINICK_L_12-11.png?itok=EhbJRfom",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-10/2/CRUZ_DOMINICK_L_12-11.png?itok=EhbJRfom",
+    "image": "assets/images/fighters/ufc-dominick-cruz.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 40.0,
@@ -31973,7 +31973,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 198,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2024-12/WEIDMAN_CHRIS_L_12-07.png?itok=giNCYqZM",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2024-12/WEIDMAN_CHRIS_L_12-07.png?itok=giNCYqZM",
+    "image": "assets/images/fighters/ufc-chris-weidman.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 40.0,
@@ -32044,7 +32044,7 @@ export const additionalFighters = [
     "heightCm": 160,
     "reachCm": 168,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2018-10/JOHNSON_DEMETRIOUS_L.png?VersionId=HRDdP7nmVjZwEyiRKdzDsVlwTPEUIfm_&itok=Monbqw3D",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2018-10/JOHNSON_DEMETRIOUS_L.png?VersionId=HRDdP7nmVjZwEyiRKdzDsVlwTPEUIfm_&itok=Monbqw3D",
+    "image": "assets/images/fighters/ufc-demetrious-johnson.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 35.0,
@@ -32111,7 +32111,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2023-07/LAWLER_ROBBIE_L_07-08.png?itok=iqLZBk3p",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2023-07/LAWLER_ROBBIE_L_07-08.png?itok=iqLZBk3p",
+    "image": "assets/images/fighters/ufc-robbie-lawler.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 41.0,
@@ -32186,7 +32186,7 @@ export const additionalFighters = [
     "heightCm": 170,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/ALDO_JOSE_L_05-10.png?itok=fpmGp-Kn",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-05/ALDO_JOSE_L_05-10.png?itok=fpmGp-Kn",
+    "image": "assets/images/fighters/ufc-jose-aldo.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 38.0,
@@ -32246,7 +32246,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2022-05/06971e1e-4aa9-404e-96f4-b50c2f56c21f%252FCERRONE_DONALD_L_05-07.png?itok=pwsugPjO",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2022-05/06971e1e-4aa9-404e-96f4-b50c2f56c21f%252FCERRONE_DONALD_L_05-07.png?itok=pwsugPjO",
+    "image": "assets/images/fighters/ufc-donald-cerrone.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 40.0,
@@ -32317,7 +32317,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 190,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/image/ufc-fighter-container/69052/profile-galery/fullbodyleft-picture/Rashad-Evans_712_LeftFullBodyImage.png?VersionId=xK3K5ulrG9tv5RlwKo3xAQ.Z1QexpZte&itok=36YT9GHb",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/image/ufc-fighter-container/69052/profile-galery/fullbodyleft-picture/Rashad-Evans_712_LeftFullBodyImage.png?VersionId=xK3K5ulrG9tv5RlwKo3xAQ.Z1QexpZte&itok=36YT9GHb",
+    "image": "assets/images/fighters/ufc-rashad-evans.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 43.0,
@@ -32388,7 +32388,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2022-03/e285d3e7-8514-48ec-9ea0-7936e956b507%252FMichael-Bisping_758_LeftFullBodyImage.png?itok=IEbsQwDE",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2022-03/e285d3e7-8514-48ec-9ea0-7936e956b507%252FMichael-Bisping_758_LeftFullBodyImage.png?itok=IEbsQwDE",
+    "image": "assets/images/fighters/ufc-michael-bisping.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 44.0,
@@ -32459,7 +32459,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 173,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2022-03/85973314-4705-4ef9-ab85-f2d4e16e35a1%252FRonda-Rousey_241883_LeftFullBodyImage.png?itok=7WMtwjUl",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2022-03/85973314-4705-4ef9-ab85-f2d4e16e35a1%252FRonda-Rousey_241883_LeftFullBodyImage.png?itok=7WMtwjUl",
+    "image": "assets/images/fighters/ufc-ronda-rousey.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 36.0,
@@ -32519,7 +32519,7 @@ export const additionalFighters = [
     "heightCm": 168,
     "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/1/FABER_URIJAH_L.png?itok=vuU6AsF7",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-01/1/FABER_URIJAH_L.png?itok=vuU6AsF7",
+    "image": "assets/images/fighters/ufc-urijah-faber.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 45.0,
@@ -32592,7 +32592,7 @@ export const additionalFighters = [
     "heightCm": 175,
     "reachCm": 178,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2020-03/PENN_BJ_L.png?VersionId=7enVGaRzNvudsF2YM8m.U5hjkv8CmYgb&itok=yXJhaBI_",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2020-03/PENN_BJ_L.png?VersionId=7enVGaRzNvudsF2YM8m.U5hjkv8CmYgb&itok=yXJhaBI_",
+    "image": "assets/images/fighters/ufc-bj-penn.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 44.0,
@@ -32779,7 +32779,7 @@ export const additionalFighters = [
     "heightCm": 183,
     "reachCm": 188,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2022-03/eea6bb31-42c1-4fde-b13c-27a18a9c26d5%252FVitor-Belfort_19_LeftFullBodyImage.png?itok=3YSGFmSg",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2022-03/eea6bb31-42c1-4fde-b13c-27a18a9c26d5%252FVitor-Belfort_19_LeftFullBodyImage.png?itok=3YSGFmSg",
+    "image": "assets/images/fighters/ufc-vitor-belfort.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 46.0,
@@ -32843,7 +32843,7 @@ export const additionalFighters = [
     "heightCm": 180,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/Wanderlei_Silva/Wanderlei-Silva-020.png?VersionId=_7.yj7CNSmGi.YAfql30srzeH5mVuinK&itok=izsT-nbu",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/Wanderlei_Silva/Wanderlei-Silva-020.png?VersionId=_7.yj7CNSmGi.YAfql30srzeH5mVuinK&itok=izsT-nbu",
+    "image": "assets/images/fighters/ufc-wanderlei-silva.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 50.0,
@@ -32910,7 +32910,7 @@ export const additionalFighters = [
     "heightCm": 188,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/Anderson_Silva/SILVA_ANDERSON_L.png?VersionId=oqn6CIQraQL7H1Maglm56oOzYSKBL0n0&itok=Rr0PzfXh",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/Anderson_Silva/SILVA_ANDERSON_L.png?VersionId=oqn6CIQraQL7H1Maglm56oOzYSKBL0n0&itok=Rr0PzfXh",
+    "image": "assets/images/fighters/ufc-anderson-silva.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 48.0,
@@ -33429,7 +33429,7 @@ export const additionalFighters = [
     "heightCm": 190,
     "reachCm": 196,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/Antonio_Rodrigo_Nogueira/NOGUIERA_MINOTAURO_R.png?VersionId=YNPNRUEk6HX581_by.3q35b4Fg5zEOmO&itok=eMAItMFt",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/Antonio_Rodrigo_Nogueira/NOGUIERA_MINOTAURO_R.png?VersionId=YNPNRUEk6HX581_by.3q35b4Fg5zEOmO&itok=eMAItMFt",
+    "image": "assets/images/fighters/ufc-minotauro-nogueira.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 47.0,
@@ -34024,7 +34024,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2022-10/SHAMROCK_KEN_R.png?itok=Ywlu2Pl-",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2022-10/SHAMROCK_KEN_R.png?itok=Ywlu2Pl-",
+    "image": "assets/images/fighters/ufc-ken-shamrock.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 59.0,
@@ -34084,7 +34084,7 @@ export const additionalFighters = [
     "heightCm": 185,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2022-10/GRACIE_ROYCE_R.png?itok=5C-l7xe5",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2022-10/GRACIE_ROYCE_R.png?itok=5C-l7xe5",
+    "image": "assets/images/fighters/ufc-royce-gracie.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 56.0,
@@ -34163,7 +34163,7 @@ export const additionalFighters = [
     "heightCm": 193,
     "reachCm": 215,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/JONES_JON_L.png?itok=ZKUJM0wq",
-    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/JONES_JON_L.png?itok=ZKUJM0wq",
+    "image": "assets/images/fighters/ufc-jon-jones.webp",
     "consulted": "2026-11-26",
     "info": {
       "age": 38.0,
