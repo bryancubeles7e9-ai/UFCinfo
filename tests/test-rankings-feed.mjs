@@ -5,9 +5,10 @@ import { readFile } from 'node:fs/promises';
 import { directoryFighters, directoryFighterByName, fighterNameLink } from '../assets/js/fighter-directory.js';
 import { escapeHTML } from '../assets/js/utils.js';
 globalThis.rankingDirectory = { directoryFighterByName, fighterNameLink };
+globalThis.rankingPath = (await import('../assets/js/share-paths.js')).rankingPath;
 let code = await readFile(new URL('../assets/js/rankings.js', import.meta.url), 'utf8');
 code = code.replace(/^import .*;\n/gm, '').replace("new URL('../data/ufc-rankings.json', import.meta.url)", "new URL('https://example.test/rankings.json')");
-code = "const synchronizeChampionships = globalThis.synchronizeChampionships; const {directoryFighterByName, fighterNameLink} = globalThis.rankingDirectory; const getLocale = () => 'es-ES'; const fighters = []; const esc = s => s; const $ = s => globalThis.rankingElements.get(s); const document = {addEventListener() {}}; const setInterval = () => {}; const enterRankings = () => {};\n" + code;
+code = "const synchronizeChampionships = globalThis.synchronizeChampionships; const {directoryFighterByName, fighterNameLink} = globalThis.rankingDirectory; const getLocale = () => 'es-ES'; const fighters = []; const esc = s => s; const $ = s => globalThis.rankingElements.get(s); const document = {addEventListener() {}}; const setInterval = () => {}; const enterRankings = () => {}; const rankingPath = globalThis.rankingPath;\n" + code;
 const { refreshRankings, rankingCategories, rankingSnapshot, initializeRankings } = await import('data:text/javascript;base64,' + Buffer.from(code).toString('base64'));
 const feed = JSON.parse(await readFile(new URL('../assets/data/ufc-rankings.json', import.meta.url)));
 for (const category of feed.categories) {
@@ -42,8 +43,9 @@ assert.equal(rankingCategories.length, 13);
 assert.equal(rankingCategories.filter(c => !c.id.startsWith('p4p-')).length, 11);
 const elements = new Map();
 globalThis.rankingElements = elements;
-for (const selector of ['#ranking-category', '#ranking-source-date', '#ranking-search', '#ranking-local-only', '#ranking-category-title', '#ranking-category-description', '#ranking-leader', '#ranking-result-count', '#ranking-table-body', '#ranking-table', '#ranking-empty', '#ranking-clear']) {
-  elements.set(selector, {value: '', checked: false, listeners: {}, addEventListener(type, callback) { this.listeners[type] = callback; }});
+for (const selector of ['#ranking-category', '#ranking-source-date', '#ranking-search', '#ranking-local-only', '#ranking-category-title', '#ranking-category-description', '#ranking-leader', '#ranking-result-count', '#ranking-table-body', '#ranking-table', '#ranking-empty', '#ranking-clear', '#ranking-share']) {
+  // Elements also carry dataset: the share button keeps the category's address there.
+  elements.set(selector, {value: '', checked: false, dataset: {}, listeners: {}, addEventListener(type, callback) { this.listeners[type] = callback; }});
 }
 initializeRankings();
 await new Promise(resolve => setImmediate(resolve));
@@ -52,6 +54,7 @@ for (const category of rankingCategories) {
   elements.get('#ranking-category').value = category.id;
   elements.get('#ranking-category').listeners.change();
   assert.equal(elements.get('#ranking-category-title').textContent, category.label);
+  assert.match(elements.get('#ranking-share').dataset.sharePath, /^\/rankings\/[a-z0-9-]+$/);
   assert.equal(elements.get('#ranking-table').hidden, false);
   for (const name of category.names) assert.ok(elements.get('#ranking-table-body').innerHTML.includes(escapeHTML(name)));
 }
