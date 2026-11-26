@@ -72,6 +72,9 @@ def main():
             'legacyNote': legend['note'], 'legacyHighlights': legend.get('highlights', []), 'legacyStory': legend.get('story', ''),
             **({'record': legend['record'], 'recordNote': legend.get('recordNote', '')} if legend.get('record') else {}),
         }
+        # Sporting nationality of retired legends whose UFC.com profile has no flag, reviewed by hand in docs/legends.json.
+        if legend.get('code') and not (by_id.get(legend['id']) or {}).get('code'):
+            fields.update(code=legend['code'], country=legend['country'], countrySource=legend['source'], countryConsulted=today)
         if 'championships' in legend:
             source = legend.get('hallOfFameSource') or legend['source']
             fields['championships'] = [{'name': name, 'type': 'undisputed', 'status': 'former', 'source': source} for name in legend['championships']]

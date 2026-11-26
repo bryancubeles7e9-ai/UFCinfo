@@ -13,7 +13,7 @@ export const additionalFighters = [
     "division": "Peso mosca",
     "record": "18-2-0",
     "nickname": "The Fearless",
-    "birthplace": "Hakha , Myanmar",
+    "birthplace": "Hakha, Myanmar",
     "officialStyle": "Freestyle",
     "heightCm": 165,
     "reachCm": 165,
@@ -4985,7 +4985,7 @@ export const additionalFighters = [
     "division": "Peso wélter",
     "record": "22-4-0",
     "nickname": "Robocop",
-    "birthplace": "Nova Bila, Bosnia &amp; Herzegovina",
+    "birthplace": "Nova Bila, Bosnia & Herzegovina",
     "officialStyle": "MMA",
     "heightCm": 179,
     "reachCm": 185,
@@ -5271,7 +5271,7 @@ export const additionalFighters = [
     "info": {
       "age": 26.0,
       "gym": "Jackson Wink MMA Academy - NM",
-      "weightKg": 33.1,
+      "weightKg": null,
       "legReachCm": 106.7,
       "debut": "Jul. 11, 2026",
       "strikesLanded": 15.46,
@@ -6927,7 +6927,7 @@ export const additionalFighters = [
     "division": "Peso ligero",
     "record": "13-5-0",
     "nickname": "",
-    "birthplace": "San Lorenzo , Argentina",
+    "birthplace": "San Lorenzo, Argentina",
     "officialStyle": null,
     "heightCm": 178,
     "reachCm": 175,
@@ -9033,7 +9033,7 @@ export const additionalFighters = [
     "supplemental": true,
     "division": "Peso ligero",
     "record": "11-2-0",
-    "nickname": "The Muscle Hamster ",
+    "nickname": "The Muscle Hamster",
     "birthplace": "United States",
     "officialStyle": "Grappler",
     "heightCm": 171,
@@ -16141,7 +16141,7 @@ export const additionalFighters = [
     "nickname": "The Cobra",
     "birthplace": "Montenegro",
     "officialStyle": "Boxing",
-    "heightCm": 394,
+    "heightCm": null,
     "reachCm": null,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-07/JANICIC_MILOS_L_08-01.png?itok=k_mHSDi4",
     "image": "assets/images/fighters/ufc-milos-janicic.webp",
@@ -16149,7 +16149,7 @@ export const additionalFighters = [
     "info": {
       "age": 29.0,
       "gym": "CDS Novi Sad",
-      "weightKg": 32.7,
+      "weightKg": null,
       "legReachCm": null,
       "debut": "Aug. 1, 2026",
       "strikesLanded": 4.44,
@@ -17363,7 +17363,7 @@ export const additionalFighters = [
     "supplemental": true,
     "division": "Peso pesado",
     "record": "16-1-0",
-    "nickname": "The Clean Monster ",
+    "nickname": "The Clean Monster",
     "birthplace": "State of Rio de Janeiro, Brazil",
     "officialStyle": "MMA",
     "heightCm": 198,
@@ -19079,7 +19079,7 @@ export const additionalFighters = [
     "division": "Peso mosca",
     "record": "17-5-0",
     "nickname": "Nono",
-    "birthplace": "Manaus , Brazil",
+    "birthplace": "Manaus, Brazil",
     "officialStyle": "Jiu-Jitsu",
     "heightCm": 163,
     "reachCm": 170,
@@ -22018,7 +22018,7 @@ export const additionalFighters = [
     "supplemental": true,
     "division": "Peso gallo",
     "record": "10-4-0",
-    "nickname": "Twilight ",
+    "nickname": "Twilight",
     "birthplace": "Las Vegas, United States",
     "officialStyle": "Striker",
     "heightCm": 175,
@@ -24321,7 +24321,7 @@ export const additionalFighters = [
     "supplemental": true,
     "division": "Peso paja femenino",
     "record": "8-1-1",
-    "nickname": "Problem Child ",
+    "nickname": "Problem Child",
     "birthplace": "Carutapera, Brazil",
     "officialStyle": "Grappler",
     "heightCm": 155,
@@ -25987,7 +25987,7 @@ export const additionalFighters = [
     "supplemental": true,
     "division": "Peso pluma",
     "record": "11-2-0",
-    "nickname": "El Puma ",
+    "nickname": "El Puma",
     "birthplace": "Santa Ana, United States",
     "officialStyle": "Boxing",
     "heightCm": 180,
@@ -27356,7 +27356,7 @@ export const additionalFighters = [
     "division": "Peso pluma",
     "record": "29-7-0",
     "nickname": "D Silva",
-    "birthplace": "Castanhal , Brazil",
+    "birthplace": "Castanhal, Brazil",
     "officialStyle": "Muay Thai",
     "heightCm": 170,
     "reachCm": 174,
@@ -28137,7 +28137,7 @@ export const additionalFighters = [
     "first": "SangWook",
     "last": "Kim",
     "supplemental": true,
-    "division": "No indicada",
+    "division": "Peso ligero",
     "record": "13-3-0",
     "nickname": "Frogman",
     "birthplace": "South Korea",
@@ -28235,7 +28235,7 @@ export const additionalFighters = [
     "first": "Sebastian",
     "last": "Szalay",
     "supplemental": true,
-    "division": "No indicada",
+    "division": "Peso pluma",
     "record": "10-1-0",
     "nickname": "Seb",
     "birthplace": "Australia",
@@ -28284,7 +28284,7 @@ export const additionalFighters = [
     "first": "Sulangrangbo",
     "last": "",
     "supplemental": true,
-    "division": "No indicada",
+    "division": "Peso gallo",
     "record": "10-3-0",
     "nickname": "",
     "birthplace": "Sichuan, China",
@@ -30248,7 +30248,7 @@ export const additionalFighters = [
     "supplemental": true,
     "division": "Peso ligero",
     "record": "10-2-0",
-    "nickname": "The Phenom ",
+    "nickname": "The Phenom",
     "birthplace": "St. Louis, MO, United States",
     "officialStyle": "MMA",
     "heightCm": 178,
@@ -32117,7 +32117,11 @@ export const additionalFighters = [
       "11 defensas seguidas",
       "Reinado de 2142 días"
     ],
-    "legacyStory": "Demetrious «Mighty Mouse» Johnson fue el primer campeón del peso mosca de UFC, en 2012, y lo defendió once veces seguidas, entonces un récord de la empresa. Su técnica y su ritmo lo situaron entre los mejores libra por libra de la historia. Perdió el título ante Henry Cejudo en 2018."
+    "legacyStory": "Demetrious «Mighty Mouse» Johnson fue el primer campeón del peso mosca de UFC, en 2012, y lo defendió once veces seguidas, entonces un récord de la empresa. Su técnica y su ritmo lo situaron entre los mejores libra por libra de la historia. Perdió el título ante Henry Cejudo en 2018.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/demetrious-johnson",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-robbie-lawler",
@@ -32563,7 +32567,11 @@ export const additionalFighters = [
       "Primera mujer en el Salón de la Fama",
       "Medallista olímpica de judo"
     ],
-    "legacyStory": "Ronda Rousey, medallista olímpica de judo, fue la primera campeona femenina de UFC y protagonizó en 2013 el primer combate de mujeres de la empresa, ante Liz Carmouche. Con sus llaves de brazo llevó las MMA femeninas a la primera línea. En 2018 fue la primera mujer en entrar en el Salón de la Fama."
+    "legacyStory": "Ronda Rousey, medallista olímpica de judo, fue la primera campeona femenina de UFC y protagonizó en 2013 el primer combate de mujeres de la empresa, ante Liz Carmouche. Con sus llaves de brazo llevó las MMA femeninas a la primera línea. En 2018 fue la primera mujer en entrar en el Salón de la Fama.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/ronda-rousey",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-urijah-faber",
@@ -32628,7 +32636,11 @@ export const additionalFighters = [
       "Primera estrella de las categorías ligeras",
       "Fundador de Team Alpha Male"
     ],
-    "legacyStory": "Urijah «The California Kid» Faber fue campeón del peso pluma de WEC entre 2006 y 2008 y la primera gran estrella de las categorías ligeras en Estados Unidos. En UFC disputó varias veces el título del peso gallo y fundó Team Alpha Male, uno de los equipos más influyentes del deporte."
+    "legacyStory": "Urijah «The California Kid» Faber fue campeón del peso pluma de WEC entre 2006 y 2008 y la primera gran estrella de las categorías ligeras en Estados Unidos. En UFC disputó varias veces el título del peso gallo y fundó Team Alpha Male, uno de los equipos más influyentes del deporte.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/urijah-faber",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-bj-penn",
@@ -32669,7 +32681,7 @@ export const additionalFighters = [
     "supplemental": true,
     "division": "Peso ligero",
     "record": "16-14-2",
-    "nickname": "The Prodigy ",
+    "nickname": "The Prodigy",
     "birthplace": "Kailua, HI, United States",
     "officialStyle": null,
     "heightCm": 175,
@@ -32706,7 +32718,11 @@ export const additionalFighters = [
       "Campeón del peso ligero (2008-2010)",
       "Campeón en dos categorías"
     ],
-    "legacyStory": "BJ Penn fue campeón de UFC en dos categorías: wélter en 2004 y ligero entre 2008 y 2010. Su talento natural en el jiu-jitsu y el boxeo, y su disposición a enfrentarse a rivales más grandes, lo convirtieron en un mito de la primera gran era de UFC."
+    "legacyStory": "BJ Penn fue campeón de UFC en dos categorías: wélter en 2004 y ligero entre 2008 y 2010. Su talento natural en el jiu-jitsu y el boxeo, y su disposición a enfrentarse a rivales más grandes, lo convirtieron en un mito de la primera gran era de UFC.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/bj-penn",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-forrest-griffin",
@@ -32778,7 +32794,11 @@ export const additionalFighters = [
       "Su guerra con Bonnar, en el Salón de la Fama",
       "Campeón del peso semipesado (2008)"
     ],
-    "legacyStory": "Forrest Griffin ganó la primera temporada de The Ultimate Fighter tras una guerra con Stephan Bonnar en 2005, el combate que, según UFC, puso las MMA en el mapa. En 2008 venció a Quinton Jackson para ser campeón del peso semipesado."
+    "legacyStory": "Forrest Griffin ganó la primera temporada de The Ultimate Fighter tras una guerra con Stephan Bonnar en 2005, el combate que, según UFC, puso las MMA en el mapa. En 2008 venció a Quinton Jackson para ser campeón del peso semipesado.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/forrest-griffin",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-mark-kerr",
@@ -32843,7 +32863,11 @@ export const additionalFighters = [
       "«The Smashing Machine»",
       "Figura del peso pesado en PRIDE"
     ],
-    "legacyStory": "Mark Kerr, campeón universitario de lucha, ganó los torneos de peso pesado de UFC 14 y UFC 15 en 1997 y se ganó el apodo de «The Smashing Machine». Después compitió en PRIDE, en Japón, donde fue una de las grandes figuras del peso pesado."
+    "legacyStory": "Mark Kerr, campeón universitario de lucha, ganó los torneos de peso pesado de UFC 14 y UFC 15 en 1997 y se ganó el apodo de «The Smashing Machine». Después compitió en PRIDE, en Japón, donde fue una de las grandes figuras del peso pesado.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/mark-kerr",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-vitor-belfort",
@@ -32977,7 +33001,11 @@ export const additionalFighters = [
       "Grand Prix de PRIDE 2003",
       "19 nocauts, el máximo entre UFC, WEC, PRIDE y Strikeforce"
     ],
-    "legacyStory": "Wanderlei «The Axe Murderer» Silva fue campeón del peso medio de PRIDE y ganó su Grand Prix de 2003, cuando era uno de los luchadores más temidos del mundo. En UFC firmó combates memorables, como el de Chuck Liddell en UFC 79. Suma 19 nocauts, el máximo entre UFC, WEC, PRIDE y Strikeforce."
+    "legacyStory": "Wanderlei «The Axe Murderer» Silva fue campeón del peso medio de PRIDE y ganó su Grand Prix de 2003, cuando era uno de los luchadores más temidos del mundo. En UFC firmó combates memorables, como el de Chuck Liddell en UFC 79. Suma 19 nocauts, el máximo entre UFC, WEC, PRIDE y Strikeforce.",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/athlete/wanderlei-silva",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-anderson-silva",
@@ -33125,7 +33153,11 @@ export const additionalFighters = [
       "Campeón en UFC 30 (2001)",
       "Compitió en cuatro categorías"
     ],
-    "legacyStory": "Jens Pulver fue el primer campeón del peso ligero de UFC, al vencer a Caol Uno en UFC 30 (2001). Más pequeño que casi todos sus rivales, compitió en cuatro categorías durante 14 años, también en PRIDE."
+    "legacyStory": "Jens Pulver fue el primer campeón del peso ligero de UFC, al vencer a Caol Uno en UFC 30 (2001). Más pequeño que casi todos sus rivales, compitió en cuatro categorías durante 14 años, también en PRIDE.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/jens-pulver",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-kevin-randleman",
@@ -33197,7 +33229,11 @@ export const additionalFighters = [
       "Dos veces campeón universitario de lucha",
       "Figura de PRIDE"
     ],
-    "legacyStory": "Kevin «The Monster» Randleman, dos veces campeón universitario de lucha, ganó el título del peso pesado de UFC en 1999 gracias a su potencia explosiva. Lo perdió ante Randy Couture en 2000 y siguió brillando en PRIDE. Falleció en 2016."
+    "legacyStory": "Kevin «The Monster» Randleman, dos veces campeón universitario de lucha, ganó el título del peso pesado de UFC en 1999 gracias a su potencia explosiva. Lo perdió ante Randy Couture en 2000 y siguió brillando en PRIDE. Falleció en 2016.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/kevin-randleman",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-rich-franklin",
@@ -33269,7 +33305,11 @@ export const additionalFighters = [
       "Antiguo profesor de matemáticas",
       "Entrenador en The Ultimate Fighter 2"
     ],
-    "legacyStory": "Rich «Ace» Franklin dejó su trabajo de profesor de matemáticas para dedicarse a las MMA y fue campeón del peso medio entre 2005 y 2006. Entrenó en la segunda temporada de The Ultimate Fighter y fue una de las caras más reconocibles de UFC en su etapa de crecimiento."
+    "legacyStory": "Rich «Ace» Franklin dejó su trabajo de profesor de matemáticas para dedicarse a las MMA y fue campeón del peso medio entre 2005 y 2006. Entrenó en la segunda temporada de The Ultimate Fighter y fue una de las caras más reconocibles de UFC en su etapa de crecimiento.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/rich-franklin",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-matt-serra",
@@ -33341,7 +33381,11 @@ export const additionalFighters = [
       "Noqueó a Georges St-Pierre",
       "Ganador de The Ultimate Fighter 4"
     ],
-    "legacyStory": "Matt Serra, primer estadounidense con cinturón negro de jiu-jitsu otorgado por Renzo Gracie, ganó la cuarta temporada de The Ultimate Fighter. En 2007 noqueó a Georges St-Pierre en una de las mayores sorpresas de la historia para ser campeón del peso wélter: el primer ganador de TUF que llegó a campeón."
+    "legacyStory": "Matt Serra, primer estadounidense con cinturón negro de jiu-jitsu otorgado por Renzo Gracie, ganó la cuarta temporada de The Ultimate Fighter. En 2007 noqueó a Georges St-Pierre en una de las mayores sorpresas de la historia para ser campeón del peso wélter: el primer ganador de TUF que llegó a campeón.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/matt-serra",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-kazushi-sakuraba",
@@ -33372,7 +33416,7 @@ export const additionalFighters = [
     "nickname": "",
     "birthplace": "Japan",
     "officialStyle": null,
-    "heightCm": 0,
+    "heightCm": null,
     "reachCm": null,
     "photoSource": null,
     "image": "assets/images/legends/ufc-kazushi-sakuraba.jpg",
@@ -33406,7 +33450,11 @@ export const additionalFighters = [
       "«The Gracie Hunter»",
       "Venció a Royce Gracie en PRIDE"
     ],
-    "legacyStory": "Kazushi Sakuraba ganó el torneo de UFC Ultimate Japan en 1997 y en PRIDE se convirtió en «The Gracie Hunter» al vencer a varios miembros de la familia Gracie, Royce incluido. Siendo un peso ligero natural, plantó cara y ganó a rivales mucho más pesados."
+    "legacyStory": "Kazushi Sakuraba ganó el torneo de UFC Ultimate Japan en 1997 y en PRIDE se convirtió en «The Gracie Hunter» al vencer a varios miembros de la familia Gracie, Royce incluido. Siendo un peso ligero natural, plantó cara y ganó a rivales mucho más pesados.",
+    "code": "JP",
+    "country": "Japan",
+    "countrySource": "https://www.ufc.com/athlete/kazushi-sakuraba",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-maurice-smith",
@@ -33440,7 +33488,7 @@ export const additionalFighters = [
     "last": "Smith",
     "supplemental": true,
     "division": "Peso pesado",
-    "record": "No indicado",
+    "record": "12-14-0",
     "nickname": "Mo",
     "birthplace": "Seattle, WA, United States",
     "officialStyle": null,
@@ -33478,7 +33526,12 @@ export const additionalFighters = [
       "Venció a Mark Coleman",
       "Campeón de Extreme Fighting"
     ],
-    "legacyStory": "Maurice Smith, campeón de kickboxing, ganó el título del peso pesado de UFC en 1997 al vencer a Mark Coleman. Demostró que un especialista en golpeo podía triunfar en una época dominada por luchadores y especialistas en jiu-jitsu."
+    "legacyStory": "Maurice Smith, campeón de kickboxing, ganó el título del peso pesado de UFC en 1997 al vencer a Mark Coleman. Demostró que un especialista en golpeo podía triunfar en una época dominada por luchadores y especialistas en jiu-jitsu.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/maurice-smith",
+    "countryConsulted": "2026-11-26",
+    "recordNote": "Récord profesional de MMA en toda su carrera; UFC.com no lo muestra en su ficha."
   },
   {
     "id": "ufc-don-frye",
@@ -33543,7 +33596,11 @@ export const additionalFighters = [
       "Campeón del Ultimate Ultimate 96",
       "Tres rivales finalizados en menos de un minuto"
     ],
-    "legacyStory": "Don Frye ganó el torneo de UFC 8 y el Ultimate Ultimate 96, siempre buscando terminar los combates. Fue el primero en UFC en finalizar a tres rivales en menos de un minuto y después siguió su carrera en PRIDE, en Japón."
+    "legacyStory": "Don Frye ganó el torneo de UFC 8 y el Ultimate Ultimate 96, siempre buscando terminar los combates. Fue el primero en UFC en finalizar a tres rivales en menos de un minuto y después siguió su carrera en PRIDE, en Japón.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/don-frye",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-minotauro-nogueira",
@@ -33608,7 +33665,11 @@ export const additionalFighters = [
       "Campeón interino del peso pesado de UFC (2008)",
       "Único con títulos de PRIDE y UFC"
     ],
-    "legacyStory": "Antônio Rodrigo «Minotauro» Nogueira es el único luchador que ha ganado los títulos de peso pesado de PRIDE y de UFC. Famoso por su espíritu de lucha y su jiu-jitsu, venció a rivales como Mirko Cro Cop y Tim Sylvia, y después trabajó como embajador de UFC en Brasil."
+    "legacyStory": "Antônio Rodrigo «Minotauro» Nogueira es el único luchador que ha ganado los títulos de peso pesado de PRIDE y de UFC. Famoso por su espíritu de lucha y su jiu-jitsu, venció a rivales como Mirko Cro Cop y Tim Sylvia, y después trabajó como embajador de UFC en Brasil.",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/athlete/minotauro-nogueira",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-bas-rutten",
@@ -33642,11 +33703,11 @@ export const additionalFighters = [
     "last": "Rutten",
     "supplemental": true,
     "division": "Peso pesado",
-    "record": "No indicado",
+    "record": "28-4-1",
     "nickname": "",
     "birthplace": "Netherlands",
     "officialStyle": null,
-    "heightCm": 0,
+    "heightCm": null,
     "reachCm": null,
     "photoSource": null,
     "image": "assets/images/legends/ufc-bas-rutten.jpg",
@@ -33680,7 +33741,12 @@ export const additionalFighters = [
       "Rey de Pancrase",
       "Invicto en el octágono: 2-0"
     ],
-    "legacyStory": "Bas Rutten fue el rey de Pancrase en Japón y uno de los mejores libra por libra de su época. Solo peleó dos veces en el octágono, ambas con victoria, y la segunda le dio el título del peso pesado en 1999. Después se convirtió en un comentarista y embajador muy querido."
+    "legacyStory": "Bas Rutten fue el rey de Pancrase en Japón y uno de los mejores libra por libra de su época. Solo peleó dos veces en el octágono, ambas con victoria, y la segunda le dio el título del peso pesado en 1999. Después se convirtió en un comentarista y embajador muy querido.",
+    "code": "NL",
+    "country": "Netherlands",
+    "countrySource": "https://www.ufc.com/athlete/bas-rutten",
+    "countryConsulted": "2026-11-26",
+    "recordNote": "Récord profesional de MMA en toda su carrera; UFC.com no lo muestra en su ficha."
   },
   {
     "id": "ufc-pat-miletich",
@@ -33752,7 +33818,11 @@ export const additionalFighters = [
       "Ganador del torneo de UFC 16",
       "Entrenador de Hughes, Pulver y Sylvia"
     ],
-    "legacyStory": "Pat Miletich fue el primer campeón del peso wélter de UFC, tras ganar el torneo de UFC 16 en 1998. Como entrenador llevó a Matt Hughes, Jens Pulver y Tim Sylvia a títulos mundiales."
+    "legacyStory": "Pat Miletich fue el primer campeón del peso wélter de UFC, tras ganar el torneo de UFC 16 en 1998. Como entrenador llevó a Matt Hughes, Jens Pulver y Tim Sylvia a títulos mundiales.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/pat-miletich",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-tito-ortiz",
@@ -33786,7 +33856,7 @@ export const additionalFighters = [
     "last": "Ortiz",
     "supplemental": true,
     "division": "Peso semipesado",
-    "record": "No indicado",
+    "record": "21-12-1",
     "nickname": "The Huntington Beach Bad Boy",
     "birthplace": "Huntington Beach, CA, United States",
     "officialStyle": null,
@@ -33824,7 +33894,12 @@ export const additionalFighters = [
       "5 defensas del título",
       "Rivalidad con Chuck Liddell"
     ],
-    "legacyStory": "Tito Ortiz ganó el título del peso semipesado ante Wanderlei Silva en UFC 25 (2000) y lo defendió cinco veces. Su rivalidad con Chuck Liddell y sus combates con Ken Shamrock lo convirtieron en una de las mayores atracciones de los primeros años de UFC."
+    "legacyStory": "Tito Ortiz ganó el título del peso semipesado ante Wanderlei Silva en UFC 25 (2000) y lo defendió cinco veces. Su rivalidad con Chuck Liddell y sus combates con Ken Shamrock lo convirtieron en una de las mayores atracciones de los primeros años de UFC.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/tito-ortiz",
+    "countryConsulted": "2026-11-26",
+    "recordNote": "Récord profesional de MMA en toda su carrera; UFC.com no lo muestra en su ficha."
   },
   {
     "id": "ufc-matt-hughes",
@@ -33896,7 +33971,11 @@ export const additionalFighters = [
       "7 defensas del título",
       "Su combate con Frank Trigg, en el Salón de la Fama"
     ],
-    "legacyStory": "Matt Hughes fue dos veces campeón del peso wélter entre 2001 y 2006, con siete defensas del título. Venció a Georges St-Pierre, BJ Penn y Royce Gracie, y su segundo combate con Frank Trigg está en el Salón de la Fama."
+    "legacyStory": "Matt Hughes fue dos veces campeón del peso wélter entre 2001 y 2006, con siete defensas del título. Venció a Georges St-Pierre, BJ Penn y Royce Gracie, y su segundo combate con Frank Trigg está en el Salón de la Fama.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/matt-hughes",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-chuck-liddell",
@@ -33968,7 +34047,11 @@ export const additionalFighters = [
       "Más victorias en la historia de la división",
       "Gran estrella de los primeros 2000"
     ],
-    "legacyStory": "Chuck «The Iceman» Liddell, con su cresta y su estilo de defender el derribo y golpear, fue la gran figura de UFC a principios de los 2000. Campeón del peso semipesado entre 2005 y 2007, es el luchador con más victorias de la historia de la división, y su rivalidad con Tito Ortiz fue de las más famosas del deporte."
+    "legacyStory": "Chuck «The Iceman» Liddell, con su cresta y su estilo de defender el derribo y golpear, fue la gran figura de UFC a principios de los 2000. Campeón del peso semipesado entre 2005 y 2007, es el luchador con más victorias de la historia de la división, y su rivalidad con Tito Ortiz fue de las más famosas del deporte.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/chuck-liddell",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-mark-coleman",
@@ -34040,7 +34123,11 @@ export const additionalFighters = [
       "Ganador de los torneos de UFC 10 y UFC 11",
       "Grand Prix absoluto de PRIDE 2000"
     ],
-    "legacyStory": "Mark Coleman ganó los torneos de UFC 10 y UFC 11 y en 1997 se convirtió en el primer campeón del peso pesado de UFC. Su estilo de lucha y castigo en el suelo marcó a una generación, y en 2000 ganó el Grand Prix absoluto de PRIDE."
+    "legacyStory": "Mark Coleman ganó los torneos de UFC 10 y UFC 11 y en 1997 se convirtió en el primer campeón del peso pesado de UFC. Su estilo de lucha y castigo en el suelo marcó a una generación, y en 2000 ganó el Grand Prix absoluto de PRIDE.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/mark-coleman",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-randy-couture",
@@ -34118,7 +34205,11 @@ export const additionalFighters = [
       "Dos veces campeón del semipesado",
       "Primer campeón en dos categorías"
     ],
-    "legacyStory": "Randy Couture fue tres veces campeón del peso pesado y dos del semipesado, el primer luchador en ganar títulos de UFC en dos categorías. Siguió ganando cinturones pasados los 40 años y es uno de los campeones más admirados de la historia."
+    "legacyStory": "Randy Couture fue tres veces campeón del peso pesado y dos del semipesado, el primer luchador en ganar títulos de UFC en dos categorías. Siguió ganando cinturones pasados los 40 años y es uno de los campeones más admirados de la historia.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/randy-couture",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-dan-severn",
@@ -34149,7 +34240,7 @@ export const additionalFighters = [
     "nickname": "The Beast",
     "birthplace": "Coldwater, MI, United States",
     "officialStyle": null,
-    "heightCm": 0,
+    "heightCm": null,
     "reachCm": null,
     "photoSource": null,
     "image": "assets/images/legends/ufc-dan-severn.jpg",
@@ -34183,7 +34274,11 @@ export const additionalFighters = [
       "Ganador del Ultimate Ultimate 95",
       "Primer cinturón de UFC entregado"
     ],
-    "legacyStory": "Dan Severn, luchador de élite, ganó el Ultimate Ultimate 95 y la Superfight de UFC en 1996, y fue el primero en recibir un cinturón de UFC. Disputó más de 100 combates profesionales de MMA."
+    "legacyStory": "Dan Severn, luchador de élite, ganó el Ultimate Ultimate 95 y la Superfight de UFC en 1996, y fue el primero en recibir un cinturón de UFC. Disputó más de 100 combates profesionales de MMA.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/dan-severn",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-ken-shamrock",
@@ -34248,7 +34343,11 @@ export const additionalFighters = [
       "Rey de Pancrase",
       "Rivalidad con Royce Gracie"
     ],
-    "legacyStory": "Ken Shamrock fue el primer campeón de la Superfight de UFC y rey de Pancrase en Japón. Su rivalidad con Royce Gracie en los primeros torneos y sus combates con Tito Ortiz lo convirtieron en una de las primeras estrellas de UFC."
+    "legacyStory": "Ken Shamrock fue el primer campeón de la Superfight de UFC y rey de Pancrase en Japón. Su rivalidad con Royce Gracie en los primeros torneos y sus combates con Tito Ortiz lo convirtieron en una de las primeras estrellas de UFC.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/ken-shamrock",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-royce-gracie",
@@ -34313,7 +34412,11 @@ export const additionalFighters = [
       "Único con tres torneos de UFC",
       "Dio a conocer el jiu-jitsu brasileño"
     ],
-    "legacyStory": "Royce Gracie ganó el primer torneo de UFC en noviembre de 1993 venciendo a rivales más grandes y fuertes con jiu-jitsu brasileño. Ganó tres de los cuatro primeros torneos y mostró al mundo la eficacia de la técnica que había desarrollado su familia."
+    "legacyStory": "Royce Gracie ganó el primer torneo de UFC en noviembre de 1993 venciendo a rivales más grandes y fuertes con jiu-jitsu brasileño. Ganó tres de los cuatro primeros torneos y mostró al mundo la eficacia de la técnica que había desarrollado su familia.",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/athlete/royce-gracie",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-jon-jones",
@@ -34612,7 +34715,11 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/dan-henderson",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/dan-henderson",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-brock-lesnar",
@@ -34685,7 +34792,11 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "recordNote": "Más 1 combate sin resultado: su victoria en UFC 200 (2016) se anuló tras un control antidopaje positivo. UFC.com muestra 6-3-0."
+    "recordNote": "Más 1 combate sin resultado: su victoria en UFC 200 (2016) se anuló tras un control antidopaje positivo. UFC.com muestra 6-3-0.",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/athlete/brock-lesnar",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-carlos-condit",
