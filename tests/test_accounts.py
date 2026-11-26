@@ -108,7 +108,10 @@ class AccountAPITests(unittest.TestCase):
             db.execute("UPDATE sessions SET expires_at=? WHERE user_id=?", (int(time.time())-1,user["user"]["id"]))
         self.assertEqual(self.request("GET", "/api/me/following", cookie=cookie2)[0], 401)
         for path in ["/server.py","/.git/config","/.ufcinfo-data/accounts.sqlite3","/assets/../server.py","/docs/fighter-directory-sources.json"]:
-            self.assertEqual(self.request("GET", path)[0], 404, path)
+            status, body, _ = self.request("GET", path)
+            self.assertEqual(status, 404, path)
+            self.assertIn("Esta página no existe".encode(), body, path)
+            self.assertNotIn(b"import ", body, path)
         self.assertEqual(self.request("GET", "/api/health")[0], 200)
         self.assertEqual(self.request("GET", "/index.html")[0], 200)
         self.assertEqual(self.request("GET", "/assets/js/account.js")[0], 200)
