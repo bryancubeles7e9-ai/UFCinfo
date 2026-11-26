@@ -6,7 +6,7 @@ import { fullName } from "./data.js";
 import { fighterInfo } from "./fighter-info-data.js";
 import { stanceNames } from "./fighter-details.js";
 import { $, escapeHTML as esc, formatDate, formatLocation } from "./utils.js";
-import { formatHeight, formatLength, formatWeight, unitsToggle } from "./units.js";
+import { formatHeight, formatLength, formatWeight } from "./units.js";
 
 const numbers = { format: value => new Intl.NumberFormat(getLocale(), { maximumFractionDigits: 2 }).format(value) };
 const missing = "No indicado";
@@ -72,7 +72,7 @@ function summary(fighter, corner) {
 
 export function renderComparison(red, blue) {
   const cell = (text, percent, corner) => `<td class="lab-value ${corner}">${esc(text)}${percent === null || percent === undefined ? "" : `<div class="lab-percent" aria-hidden="true"><span style="width:${Math.max(0, Math.min(100, percent))}%"></span></div>`}</td>`;
-  return unitsToggle() + comparisonGroups(red, blue).map(group => `<table class="lab-table"><caption>${esc(group.title)}</caption><thead><tr><th scope="col">Dato / estadística</th><th scope="col">${esc(fullName(red))}</th><th scope="col">${esc(fullName(blue))}</th></tr></thead><tbody>${group.rows.map(row => `<tr><th scope="row">${esc(row.label)}</th>${cell(row.red, row.redPercent, "red")}${cell(row.blue, row.bluePercent, "blue")}</tr>`).join("")}</tbody></table>`).join("");
+  return comparisonGroups(red, blue).map(group => `<table class="lab-table"><caption>${esc(group.title)}</caption><thead><tr><th scope="col">Dato / estadística</th><th scope="col">${esc(fullName(red))}</th><th scope="col">${esc(fullName(blue))}</th></tr></thead><tbody>${group.rows.map(row => `<tr><th scope="row">${esc(row.label)}</th>${cell(row.red, row.redPercent, "red")}${cell(row.blue, row.bluePercent, "blue")}</tr>`).join("")}</tbody></table>`).join("");
 }
 
 export function nextMainEventPair(events, now = Date.now()) {

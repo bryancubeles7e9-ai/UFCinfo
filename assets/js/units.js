@@ -40,19 +40,9 @@ export function setUnits(next) {
   return true;
 }
 
-// Small switch shown next to the measurements (fighter profile and Fight Lab).
-export function unitsToggle() {
-  const option = (value, label) => `<button type="button" data-units="${value}" aria-pressed="${units === value}">${label}</button>`;
-  return `<div class="units-toggle" role="group" aria-label="Unidades de medida" translate="no">${option('metric', 'cm · kg')}${option('imperial', 'ft · lb')}</div>`;
-}
-
 export function initializeUnits() {
-  document.addEventListener('click', event => {
-    const button = event.target.closest('[data-units]');
-    if (!button || button.getAttribute('aria-pressed') === 'true') return;
-    setUnits(button.dataset.units);
-    // Keep keyboard focus on the switch after the redraw.
-    const scope = button.closest('dialog') ? `#${button.closest('dialog').id} ` : '';
-    setTimeout(() => document.querySelector(`${scope}.units-toggle [data-units="${button.dataset.units}"]`)?.focus({ preventScroll: true }), 60);
-  });
+  const select = document.querySelector('#units-select');
+  if (!select) return;
+  select.value = units;
+  select.addEventListener('change', event => setUnits(event.target.value));
 }

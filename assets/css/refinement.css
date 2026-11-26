@@ -126,10 +126,13 @@ details.bout-schedule-note > p { margin:10px 0 0; }
 }
 /* Head-and-shoulders photos (ESPN) fill the profile box centred on the face, instead of shrinking like full-body UFC photos. */
 .fighter-profile-photo.is-headshot img { object-fit:cover; object-position:50% 20%; }
-/* Units switch (cm · kg / ft · lb) next to the measurements. */
-.units-toggle { display:inline-flex; gap:2px; padding:2px; border:1px solid var(--line); border-radius:999px; background:var(--bg); }
-.units-toggle button { min-height:32px; padding:4px 12px; border:0; border-radius:999px; background:none; color:var(--muted); font:600 12px var(--body, inherit); cursor:pointer; }
-.units-toggle button[aria-pressed="true"] { background:var(--surface-2, var(--line)); color:var(--ink); }
-.units-toggle button:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
-.fighter-profile-hero > .units-toggle { grid-column:1/-1; justify-self:end; margin-top:12px; }
-#comparison-tables > .units-toggle { display:flex; width:max-content; margin:0 0 12px auto; }
+/* Language and units share one compact control in the header, like a single preference. */
+.header-prefs { display:flex; align-items:stretch; border:1px solid var(--line); border-radius:8px; background:var(--surface); }
+.header-prefs .language-picker select { min-width:0; border:0; border-radius:8px; background-color:transparent; padding:9px 22px 9px 10px; }
+.header-prefs .units-picker { border-left:1px solid var(--line); }
+@media (max-width:700px) {
+ .header-prefs { grid-column:1/-1; }
+ .header-actions #theme-button { grid-column:1/-1; justify-self:end; }
+ .header-prefs .language-picker { flex:1 1 0; }
+ .header-prefs .language-picker select { width:100%; padding:11px 24px 11px 12px; }
+}

@@ -26,6 +26,7 @@ import { initializeMobileNavigation } from "./mobile-navigation.js";
 import { initializeMobileFilters } from "./mobile-filters.js";
 import { getLocale, initializeLanguage, translate } from "./i18n.js";
 import { initializeUnits } from "./units.js";
+import { initializeHeaderFit } from "./header-fit.js";
 import { spoilersEnabled, setSpoilersEnabled, revealResult, resultHidden, hiddenResult } from "./spoilers.js";
 import { initializeAccount } from "./account.js";
 import { eventCalendar } from "./calendar.js";
@@ -866,6 +867,7 @@ initializeMobileNavigation();
 initializeMobileFilters();
 initializeLanguage();
 initializeUnits();
+initializeHeaderFit();
 initializeFilterIndicators();
 
 initializeDataHealth();

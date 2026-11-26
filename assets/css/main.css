@@ -3001,3 +3001,8 @@ button.ranking-name:hover {
   .legend-badge { letter-spacing: .5px; padding: 6px 8px; }
   .legacy-details { padding: 12px; }
 }
+
+/* Set by header-fit.js when the sections and buttons do not fit on one row. */
+.header.is-stacked { flex-wrap: wrap; }
+.header.is-stacked nav { order: 3; width: 100%; justify-content: space-between; }
+.header.is-stacked .header-actions { flex-wrap: wrap; justify-content: flex-end; margin-left: auto; }
