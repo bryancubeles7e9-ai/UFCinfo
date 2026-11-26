@@ -447,3 +447,5 @@ body.light .legend-profile-story{background:#7854ad0a}
   .legend-profile-story p{font-size:16px}
 }
 .legend-profile-record-note{margin:-10px 0 0;font-size:13px;color:var(--muted);line-height:1.5}
+/* Phones: the fighter sheet has 14px side padding, so its top fade band spans exactly that. */
+@media (max-width:480px) { #fighter-dialog::before { margin-left:-14px; margin-right:-14px; } #event-dialog::before { margin-left:-16px; margin-right:-16px; } }

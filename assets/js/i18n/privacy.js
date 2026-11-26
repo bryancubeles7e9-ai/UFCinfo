@@ -32,7 +32,13 @@ export const privacyCopy = {
   "No aparecerán rumores nuevos hasta que se reactive.": "No new rumours will appear until it is resumed.",
   "Para lo que ya es oficial, consulta": "For what is already official, see",
   "Sin conexión. Estás viendo los últimos datos guardados en este dispositivo; pueden no estar al día.": "Offline. You are seeing the latest data saved on this device; it may be out of date.",
-  "Compartir ranking": "Share ranking"
+  "Compartir ranking": "Share ranking",
+  "Consultar la lista completa ›": "See the full list ›",
+  "Hemos añadido los picks que hiciste sin cuenta. Guárdalos para que cuenten.": "We added the picks you made without an account. Save them so they count.",
+  "Volver a cargar lo guardado en tu cuenta": "Reload what is saved in your account",
+  "Horas por pelea orientativas · ¿Cómo las calculamos?": "Estimated times per fight · How do we calculate them?",
+  "Sin ficha en UFCinfo": "No UFCinfo profile",
+  "Destacados primero": "Featured first"
  },
  "ca": {
   "TUS DATOS": "LES TEVES DADES",
@@ -66,6 +72,12 @@ export const privacyCopy = {
   "No aparecerán rumores nuevos hasta que se reactive.": "No apareixeran rumors nous fins que es reactivi.",
   "Para lo que ya es oficial, consulta": "Per al que ja és oficial, consulta",
   "Sin conexión. Estás viendo los últimos datos guardados en este dispositivo; pueden no estar al día.": "Sense connexió. Estàs veient les últimes dades desades en aquest dispositiu; poden no estar al dia.",
-  "Compartir ranking": "Comparteix el rànquing"
+  "Compartir ranking": "Comparteix el rànquing",
+  "Consultar la lista completa ›": "Consulta la llista completa ›",
+  "Hemos añadido los picks que hiciste sin cuenta. Guárdalos para que cuenten.": "Hem afegit els picks que vas fer sense compte. Desa’ls perquè comptin.",
+  "Volver a cargar lo guardado en tu cuenta": "Torna a carregar el que tens desat al compte",
+  "Horas por pelea orientativas · ¿Cómo las calculamos?": "Hores per combat orientatives · Com les calculem?",
+  "Sin ficha en UFCinfo": "Sense fitxa a UFCinfo",
+  "Destacados primero": "Destacats primer"
  }
 };

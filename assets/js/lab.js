@@ -5,7 +5,7 @@ import { directoryFighters, directoryFighterById, directoryFighterByName } from 
 import { fullName } from "./data.js";
 import { fighterInfo } from "./fighter-info-data.js";
 import { stanceNames } from "./fighter-details.js";
-import { $, escapeHTML as esc, formatDate } from "./utils.js";
+import { $, escapeHTML as esc, formatDate, formatLocation } from "./utils.js";
 
 const numbers = { format: value => new Intl.NumberFormat(getLocale(), { maximumFractionDigits: 2 }).format(value) };
 const missing = "No indicado";
@@ -33,7 +33,7 @@ export function comparisonGroups(red, blue) {
       { label: "Altura", red: numeric(red.heightCm, " cm"), blue: numeric(blue.heightCm, " cm") },
       { label: "Alcance de brazos", red: numeric(red.reachCm, " cm"), blue: numeric(blue.reachCm, " cm") },
       number("Alcance de pierna", "legReachCm", " cm"), number("Peso del perfil", "weightKg", " kg"),
-      fact("Lugar de nacimiento", "birthplace"),
+      { label: "Lugar de nacimiento", red: red.birthplace ? formatLocation(red.birthplace) : missing, blue: blue.birthplace ? formatLocation(blue.birthplace) : missing },
     ] },
     { title: "Formación y trayectoria", rows: [
       fact("Estilo indicado por UFC", "officialStyle"),

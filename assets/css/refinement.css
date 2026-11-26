@@ -117,3 +117,10 @@
  @keyframes profile-section-in { from { opacity:0; transform:translateY(4px); } to { opacity:1; transform:none; } }
 }
 .extended-fighter-info dd { font-variant-numeric:tabular-nums; }
+details.bout-schedule-note > summary { cursor:pointer; font-size:13px; color:var(--ink); }
+details.bout-schedule-note > p { margin:10px 0 0; }
+.event-official-link { margin-top:16px; }
+/* Phones: the fighter sheet uses the whole screen, like the fight card sheet (mobile.css). */
+@media (max-width:480px) {
+ #fighter-dialog { width:100%; max-width:none; max-height:100vh; max-height:100dvh; }
+}
