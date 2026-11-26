@@ -30,6 +30,21 @@ class PhotoTests(unittest.TestCase):
         self.assertIn('champion',state['photos']['silva'])
         self.assertEqual(state['failedIds'],['silva'])
 
+    def test_retired_legends_are_not_searched(self):
+        # Their photos are curated; looking them up only produced warnings every run.
+        legend = {'id':'ufc-chuck-liddell','name':'Chuck Liddell','source':'https://www.ufc.com/athlete/chuck-liddell',
+                  'championships':[{'name':'Peso semipesado','status':'former'}],'legend':True}
+        consulted = []
+        state = {'photos':{}}
+        photos.sync([legend], {'categories':[]}, state, consult=lambda f: consulted.append(f['id']), verify=lambda u: None)
+        self.assertEqual(consulted, [])
+        self.assertEqual(state.get('failedIds', []), [])
+
+    def test_webp_portraits_are_archived(self):
+        data = b'RIFF' + b'\x00' * 4 + b'WEBP' + b'x' * 150
+        with tempfile.TemporaryDirectory() as folder, patch.object(photos, 'ROOT', Path(folder)):
+            self.assertTrue(photos.archive_image(data).endswith('.webp'))
+
     def test_archive_survives_url_changes(self):
         data = b'\x89PNG\r\n\x1a\n' + b'x' * 150
         with tempfile.TemporaryDirectory() as folder, patch.object(photos, 'ROOT', Path(folder)):

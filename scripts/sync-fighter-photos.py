@@ -79,7 +79,8 @@ def directory():
       import {directoryFighters} from './assets/js/fighter-directory.js';
       console.log(JSON.stringify(directoryFighters.map(f => ({id:f.id, name:`${f.first} ${f.last}`,
         aliases:[...(f.aliases || []), ...(f.id==='zhang' ? ['Zhang Weili'] : [])], source:f.source,
-        championships:f.championships || [], photoSource:f.photoSource || '', image:f.image, consulted:f.consulted || f.info?.consulted || '2026-10-02'}))));
+        championships:f.championships || [], photoSource:f.photoSource || '', image:f.image, consulted:f.consulted || f.info?.consulted || '2026-10-02',
+        legend:f.legend === true && f.careerStatus === 'retired'}))));
     '''], cwd=ROOT, text=True)
     return json.loads(output)
 
@@ -104,8 +105,9 @@ def sync(fighters, rankings, state, consult=fetch, now=None, verify=verify_image
     now = (now or datetime.now(timezone.utc)).isoformat()
     champions = {records.normalize(c['champion']) for c in rankings['categories'] if c.get('champion')}
     seed_regular_photos(fighters, state)
-    targets = [f for f in fighters if any(records.normalize(n) in champions for n in [f['name'], *f.get('aliases', [])])
-               or bool(f.get('championships')) or any(k in state['photos'].get(f['id'], {}) for k in ('champion', 'bmf'))]
+    # Retired legends keep their curated photos (docs/legends.json); their former belts need no champion portrait.
+    targets = [f for f in fighters if not f.get('legend') and (any(records.normalize(n) in champions for n in [f['name'], *f.get('aliases', [])])
+               or bool(f.get('championships')) or any(k in state['photos'].get(f['id'], {}) for k in ('champion', 'bmf')))]
     def update(fighter):
         try:
             champion = any(records.normalize(n) in champions for n in [fighter['name'], *fighter.get('aliases', [])])
