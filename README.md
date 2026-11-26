@@ -187,7 +187,7 @@ La política de privacidad y el aviso legal están en **/privacidad**. Cada usua
 
 ## Ejecutar el proyecto en local
 
-La interfaz utiliza **HTML, CSS y JavaScript**, sin proceso de compilación. El servidor de cuentas utiliza **Python y SQLite**.
+La interfaz utiliza **HTML, CSS y JavaScript**. El código de `assets/js` se agrupa en `assets/js/app.bundle.js` con `node scripts/build-bundle.mjs` (requiere esbuild; ver `docs/PUBLICACION.md`); hay que regenerarlo tras cada cambio en `assets/js`. El servidor de cuentas utiliza **Python y SQLite**.
 
 Con Python 3.10 o posterior y soporte para `hashlib.scrypt`, desde la raíz del repositorio:
 

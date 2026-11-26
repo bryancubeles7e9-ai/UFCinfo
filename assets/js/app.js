@@ -389,13 +389,29 @@ $("#spoiler-button").addEventListener("click", () => {
   $("#spoiler-button").setAttribute("aria-pressed", String(spoilersEnabled()));
   refreshSpoilerViews();
 });
-function renderAll() {
+// Hidden sections can wait: at startup they are drawn when the browser is idle,
+// or straight away if the visitor opens one first (see navigate).
+const deferredViews = new Map();
+const currentView = () => document.querySelector("[data-view]:not([hidden])")?.dataset.view || location.hash.slice(1).split('?')[0] || "inicio";
+function runDeferredView(view) {
+  const work = deferredViews.get(view);
+  if (!work) return;
+  deferredViews.delete(view);
+  work();
+}
+function whenIdle(view, work) {
+  deferredViews.set(view, work);
+  const run = () => runDeferredView(view);
+  if (window.requestIdleCallback) requestIdleCallback(run, {timeout: 2000}); else setTimeout(run, 300);
+}
+function renderAll({deferHidden = false} = {}) {
   document.body.classList.toggle("light", store.state.theme === "light");
   renderOverview();
-  renderFighters();
   renderEvents();
-  renderSaved();
-  pickem.render();
+  for (const [view, work] of [["luchadores", renderFighters], ["guardados", renderSaved], ["pickem", () => pickem.render()]]) {
+    if (deferHidden && currentView() !== view) whenIdle(view, work);
+    else { deferredViews.delete(view); work(); }
+  }
   const officialId = $("#event-detail").dataset.officialEventId;
   if ($("#event-dialog").open && officialId) showOfficialEvent(officialId);
 }
@@ -433,6 +449,7 @@ function navigate() {
     ].includes(view)
   )
     view = "inicio";
+  runDeferredView(view);
   document
     .querySelectorAll("[data-view]")
     .forEach((section) => (section.hidden = section.dataset.view !== view));
@@ -756,7 +773,7 @@ document.addEventListener(
   true,
 );
 account = initializeAccount({store, onChange: renderAll});
-renderAll();
+renderAll({deferHidden: true});
 // Arriving through a shared address: show its section, then open the profile or the card.
 const sharedPath = parseSharePath(location.pathname);
 let sharedFighterId = null;

@@ -63,6 +63,21 @@ Mientras Render reinicia el servidor tras un despliegue, su proxy responde 502�
 
 Límite: un visitante que entra por primera vez justo durante el reinicio aún no tiene el service worker instalado y ve la página de Render; desde su primera visita ya ve la pantalla propia.
 
+## Paquete de la interfaz
+
+El navegador carga `assets/js/app.bundle.js`: todo el código de la interfaz en un solo archivo minificado, en lugar de una cadena de unos 45 módulos. Los archivos de datos (`fighter-directory-data.js`, `official-events.js` y los demás `*-data.js`) quedan fuera del paquete y se descargan en paralelo, así que las actualizaciones automáticas de datos no necesitan regenerarlo.
+
+**Después de cambiar cualquier archivo de `assets/js`**, hay que regenerar el paquete:
+
+```bash
+npm install --no-save --no-package-lock esbuild@0.25.5
+node scripts/build-bundle.mjs
+```
+
+La validación de GitHub (`--check`) falla si el paquete no coincide con el código, y Render solo publica cuando la validación pasa. Además, la portada precarga el póster del próximo evento, las secciones ocultas se dibujan cuando el navegador queda libre y las fotos se reutilizan durante una hora sin volver a descargarse.
+
+**Resultado (26 de noviembre de 2026, móvil con la CPU ralentizada ×4):** portada completa en 4G de 2,6 s a 1,7 s y en 4G lenta de 7,7 s a 7,0 s; peticiones de 85 a 55; tiempo de bloqueo de 760 ms a unos 420 ms. En 4G lenta el límite es ya el peso de las fotos y los datos.
+
 ## Enlaces para compartir e indexar
 
 Cada luchador y cada velada tienen su propia dirección: **/luchadores/ilia-topuria** o **/carteleras/ufc-335**. El servidor responde con la web normal, pero con el título, la descripción, la foto y la dirección canónica de esa página, así que al compartirla en WhatsApp o en redes se ve su vista previa, y Google puede indexarla. Al abrirla, la web muestra la sección y abre la ficha o la cartelera. Mientras una ficha o una cartelera está abierta, la barra de direcciones muestra su enlace; al cerrarla, vuelve a la portada.

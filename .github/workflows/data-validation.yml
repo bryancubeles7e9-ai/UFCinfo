@@ -28,6 +28,11 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: '22'
+      - name: Comprobar que el paquete de la interfaz está al día
+        # app.bundle.js must match assets/js; otherwise visitors would get old code.
+        run: |
+          npm install --no-save --no-package-lock esbuild@0.25.5
+          node scripts/build-bundle.mjs --check
       - name: Probar importadores y recuperación tras velada
         run: python3 -m unittest discover -s tests -p 'test_*.py'
       - name: Probar filtros y confirmaciones de rumores
