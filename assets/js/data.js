@@ -973,4 +973,6 @@ export function createDemoEvents() {
 }
 export const fighterById = (id) =>
   fighters.find((fighter) => fighter.id === id);
-export const fullName = (fighter) => `${fighter.first} ${fighter.last}`;
+export const fullName = (fighter) => [fighter.first, fighter.last].filter(Boolean).join(" ");
+// Two letters for the portrait when there is no photo; one-name fighters ("Alatengheili") use their first two.
+export const initials = (fighter) => fighter.last ? `${fighter.first?.[0] || ""}${fighter.last[0]}` : String(fighter.first || "").slice(0, 2).toUpperCase();

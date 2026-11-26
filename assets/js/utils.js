@@ -58,7 +58,7 @@ export function boutDivisionLabel(value) {
 
 // UFC.com writes places in English: venues as "Arena, City Country" ("T-Mobile Arena, Las Vegas United States")
 // and birthplaces as "City, Country". Show them as "Arena, City, País" with the country in the visitor's language.
-const placeAliases = { 'Hong Kong': 'HK', Macao: 'MO', Macau: 'MO', 'Bosnia &amp; Herzegovina': 'BA', 'Bosnia & Herzegovina': 'BA', 'Czech Republic': 'CZ' };
+const placeAliases = { Myanmar: 'MM', Turkey: 'TR', 'Ivory Coast': 'CI', 'Hong Kong': 'HK', Macao: 'MO', Macau: 'MO', 'Bosnia &amp; Herzegovina': 'BA', 'Bosnia & Herzegovina': 'BA', 'Czech Republic': 'CZ' };
 const homeNations = {
   England: { es: 'Inglaterra', ca: 'Anglaterra' }, Scotland: { es: 'Escocia', ca: 'Escòcia' },
   Wales: { es: 'Gales', ca: 'Gal·les' }, 'Northern Ireland': { es: 'Irlanda del Norte', ca: 'Irlanda del Nord' },

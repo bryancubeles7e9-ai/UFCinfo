@@ -273,7 +273,9 @@
    "Primer campió del pes mosca d’UFC",
    "11 defenses seguides",
    "Regnat de 2.142 dies"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-robbie-lawler",
@@ -472,7 +474,9 @@
    "Campiona del pes gall (2012-2015)",
    "Primera dona al Saló de la Fama",
    "Medallista olímpica de judo"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-urijah-faber",
@@ -503,7 +507,9 @@
    "Campió del pes ploma de WEC (2006-2008)",
    "Primera estrella de les categories lleugeres",
    "Fundador de Team Alpha Male"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-bj-penn",
@@ -537,7 +543,9 @@
    "Campió del pes wèlter (2004)",
    "Campió del pes lleuger (2008-2010)",
    "Campió en dues categories"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-forrest-griffin",
@@ -570,7 +578,9 @@
    "Guanyador de The Ultimate Fighter 1",
    "La seva guerra amb Bonnar, al Saló de la Fama",
    "Campió del pes semipesant (2008)"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-mark-kerr",
@@ -601,7 +611,9 @@
    "Guanyador dels tornejos d’UFC 14 i UFC 15",
    "«The Smashing Machine»",
    "Figura del pes pesant a PRIDE"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-vitor-belfort",
@@ -663,7 +675,9 @@
    "Campió del pes mitjà de PRIDE",
    "Grand Prix de PRIDE 2003",
    "19 KO, el màxim entre UFC, WEC, PRIDE i Strikeforce"
-  ]
+  ],
+  "code": "BR",
+  "country": "Brazil"
  },
  {
   "id": "ufc-anderson-silva",
@@ -729,7 +743,9 @@
    "Primer campió del pes lleuger d’UFC",
    "Campió a UFC 30 (2001)",
    "Va competir en quatre categories"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-kevin-randleman",
@@ -762,7 +778,9 @@
    "Campió del pes pesant (1999-2000)",
    "Dues vegades campió universitari de lluita",
    "Figura de PRIDE"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-rich-franklin",
@@ -795,7 +813,9 @@
    "Campió del pes mitjà (2005-2006)",
    "Antic professor de matemàtiques",
    "Entrenador a The Ultimate Fighter 2"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-matt-serra",
@@ -828,7 +848,9 @@
    "Campió del pes wèlter (2007-2008)",
    "Va noquejar Georges St-Pierre",
    "Guanyador de The Ultimate Fighter 4"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-kazushi-sakuraba",
@@ -859,7 +881,9 @@
    "Campió del torneig UFC Ultimate Japan",
    "«The Gracie Hunter»",
    "Va vèncer Royce Gracie a PRIDE"
-  ]
+  ],
+  "code": "JP",
+  "country": "Japan"
  },
  {
   "id": "ufc-maurice-smith",
@@ -892,7 +916,13 @@
    "Campió del pes pesant (1997)",
    "Va vèncer Mark Coleman",
    "Campió d’Extreme Fighting"
-  ]
+  ],
+  "code": "US",
+  "country": "United States",
+  "record": "12-14-0",
+  "recordNote": "Récord profesional de MMA en toda su carrera; UFC.com no lo muestra en su ficha.",
+  "recordNoteEn": "Professional MMA record across his whole career; UFC.com does not show it on his profile.",
+  "recordNoteCa": "Rècord professional d’MMA de tota la carrera; UFC.com no el mostra a la fitxa."
  },
  {
   "id": "ufc-don-frye",
@@ -923,7 +953,9 @@
    "Campió del torneig d’UFC 8",
    "Campió de l’Ultimate Ultimate 96",
    "Tres rivals finalitzats en menys d’un minut"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-minotauro-nogueira",
@@ -954,7 +986,9 @@
    "Campió del pes pesant de PRIDE (2001-2003)",
    "Campió interí del pes pesant d’UFC (2008)",
    "Únic amb títols de PRIDE i UFC"
-  ]
+  ],
+  "code": "BR",
+  "country": "Brazil"
  },
  {
   "id": "ufc-bas-rutten",
@@ -987,7 +1021,13 @@
    "Campió del pes pesant (1999)",
    "Rei de Pancrase",
    "Invicte a l’octàgon: 2-0"
-  ]
+  ],
+  "code": "NL",
+  "country": "Netherlands",
+  "record": "28-4-1",
+  "recordNote": "Récord profesional de MMA en toda su carrera; UFC.com no lo muestra en su ficha.",
+  "recordNoteEn": "Professional MMA record across his whole career; UFC.com does not show it on his profile.",
+  "recordNoteCa": "Rècord professional d’MMA de tota la carrera; UFC.com no el mostra a la fitxa."
  },
  {
   "id": "ufc-pat-miletich",
@@ -1020,7 +1060,9 @@
    "Primer campió del pes wèlter d’UFC",
    "Guanyador del torneig d’UFC 16",
    "Entrenador de Hughes, Pulver i Sylvia"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-tito-ortiz",
@@ -1053,7 +1095,13 @@
    "Campió del pes semipesant (2000-2003)",
    "5 defenses del títol",
    "Rivalitat amb Chuck Liddell"
-  ]
+  ],
+  "code": "US",
+  "country": "United States",
+  "record": "21-12-1",
+  "recordNote": "Récord profesional de MMA en toda su carrera; UFC.com no lo muestra en su ficha.",
+  "recordNoteEn": "Professional MMA record across his whole career; UFC.com does not show it on his profile.",
+  "recordNoteCa": "Rècord professional d’MMA de tota la carrera; UFC.com no el mostra a la fitxa."
  },
  {
   "id": "ufc-matt-hughes",
@@ -1086,7 +1134,9 @@
    "Dues vegades campió del pes wèlter",
    "7 defenses del títol",
    "El seu combat amb Frank Trigg, al Saló de la Fama"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-chuck-liddell",
@@ -1119,7 +1169,9 @@
    "Campió del pes semipesant (2005-2007)",
    "Més victòries de la història de la divisió",
    "Gran estrella dels primers 2000"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-mark-coleman",
@@ -1152,7 +1204,9 @@
    "Primer campió del pes pesant d’UFC",
    "Guanyador dels tornejos d’UFC 10 i UFC 11",
    "Grand Prix absolut de PRIDE 2000"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-randy-couture",
@@ -1186,7 +1240,9 @@
    "Tres vegades campió del pes pesant",
    "Dues vegades campió del semipesant",
    "Primer campió en dues categories"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-dan-severn",
@@ -1217,7 +1273,9 @@
    "Campió de la Superfight d’UFC (1996)",
    "Guanyador de l’Ultimate Ultimate 95",
    "Primer cinturó d’UFC lliurat"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-ken-shamrock",
@@ -1248,7 +1306,9 @@
    "Primer campió de la Superfight d’UFC",
    "Rei de Pancrase",
    "Rivalitat amb Royce Gracie"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-royce-gracie",
@@ -1279,7 +1339,9 @@
    "Guanyador d’UFC 1 (1993)",
    "Únic amb tres tornejos d’UFC",
    "Va donar a conèixer el jiu-jitsu brasiler"
-  ]
+  ],
+  "code": "BR",
+  "country": "Brazil"
  },
  {
   "id": "ufc-dustin-poirier",
@@ -1458,7 +1520,9 @@
    "Doble campió de PRIDE alhora",
    "El seu combat amb Shogun, al Saló de la Fama",
    "Lluitador olímpic"
-  ]
+  ],
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-brock-lesnar",
@@ -1497,7 +1561,9 @@
   "record": "5-3-0",
   "recordNote": "Más 1 combate sin resultado: su victoria en UFC 200 (2016) se anuló tras un control antidopaje positivo. UFC.com muestra 6-3-0.",
   "recordNoteEn": "Plus 1 no contest: his UFC 200 win (2016) was overturned after a failed drug test. UFC.com shows 6-3-0.",
-  "recordNoteCa": "Més 1 combat sense resultat: la seva victòria a UFC 200 (2016) es va anul·lar després d’un control antidopatge positiu. UFC.com mostra 6-3-0."
+  "recordNoteCa": "Més 1 combat sense resultat: la seva victòria a UFC 200 (2016) es va anul·lar després d’un control antidopatge positiu. UFC.com mostra 6-3-0.",
+  "code": "US",
+  "country": "United States"
  },
  {
   "id": "ufc-carlos-condit",

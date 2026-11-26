@@ -135,6 +135,8 @@ def main():
         for i,(f,result) in enumerate(pool.map(profile,found.values())):
             if isinstance(result,Exception):failures.append({'name':f['name'],'source':f['source'],'error':str(result)})
             elif records.normalize(result['name']) not in known and f['id'] not in ids:
+                if result.get('division') in (None, '', 'No indicada'):
+                    result['division'] = profiles.division_from_events(result['name'], feed['events']) or result.get('division')
                 data.append(result);ids.add(f['id']);known.add(records.normalize(result['name']));added+=1
                 if f['id'] not in manifest_ids:manifest.append(f);manifest_ids.add(f['id'])
             if (i+1)%25==0:print('Reviewed',i+1,'added',added,flush=True)
