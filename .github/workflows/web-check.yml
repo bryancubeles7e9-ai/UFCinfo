@@ -1,0 +1,48 @@
+name: Probar la web en un navegador
+on:
+  # Render publishes code only after the checks pass, so a broken page never reaches visitors.
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'server.py'
+      - 'pickem.py'
+      - 'assets/js/**'
+      - 'assets/css/**'
+      - 'assets/*.html'
+      - 'assets/sw.js'
+      - 'tests/browser-smoke.mjs'
+      - '.github/workflows/web-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: web-check-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Instalar Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.63.0
+          npx playwright install --with-deps chromium
+      - name: Arrancar la web
+        run: |
+          python3 server.py --port 8780 --database "$RUNNER_TEMP/accounts.sqlite3" > "$RUNNER_TEMP/server.log" 2>&1 &
+          for attempt in $(seq 1 30); do
+            curl -fsS http://127.0.0.1:8780/api/health > /dev/null && exit 0
+            sleep 1
+          done
+          cat "$RUNNER_TEMP/server.log"
+          exit 1
+      - name: Recorrer la web en ordenador y móvil
+        run: node tests/browser-smoke.mjs http://127.0.0.1:8780

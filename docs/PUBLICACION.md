@@ -62,3 +62,7 @@ Mientras Render reinicia el servidor tras un despliegue, su proxy responde 502�
 - **Aviso dentro de la web:** si el reinicio ocurre mientras alguien la usa, aparece un mensaje discreto mientras las peticiones se reintentan y desaparece al volver el servidor.
 
 Límite: un visitante que entra por primera vez justo durante el reinicio aún no tiene el service worker instalado y ve la página de Render; desde su primera visita ya ve la pantalla propia.
+
+## Prueba de navegador antes de publicar
+
+El workflow **Probar la web en un navegador** (`web-check.yml`) se ejecuta con cada cambio de la interfaz o del servidor. Arranca la web y, con Chromium, recorre las ocho secciones en ordenador y en móvil, abre una ficha de luchador y una cartelera y cambia el idioma (`tests/browser-smoke.mjs`). Falla ante errores de JavaScript, respuestas 4xx/5xx de la propia web, secciones vacías o desbordes horizontales. Como Render publica solo cuando pasan las comprobaciones, una página rota no llega a los visitantes. Para ejecutarla en local: arranca `python3 server.py` y luego `node tests/browser-smoke.mjs http://127.0.0.1:8780`.
