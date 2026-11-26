@@ -554,5 +554,73 @@
   "hallOfFameSource": "https://www.ufc.com/30/royce-gracie-hall-fame",
   "championships": [],
   "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_RGracie_16x9.jpg"
+ },
+ {
+  "id": "ufc-dustin-poirier",
+  "name": "Dustin Poirier",
+  "source": "https://www.ufc.com/athlete/dustin-poirier",
+  "wing": "ufcinfo",
+  "inducted": null,
+  "retirementReviewed": "2026-11-26: retirado tras UFC 318 (julio de 2025); UFC.com aún lo lista como «Active» sin combates posteriores.",
+  "legendSource": "https://www.ufc.com/news/dustin-poirier-diamond-last-dance-bmf-ufc-318",
+  "hallOfFameImage": "https://www.ufc.com/images/2025-07/PoirierCareerTributeFinal_16x9.00_01_30_12.Still001.jpg",
+  "highlights": [
+   "Campeón interino del peso ligero en UFC 236 (2019)",
+   "Dos victorias sobre Conor McGregor (2021)",
+   "Tres combates por el título indiscutible",
+   "Último combate: UFC 318, en Luisiana"
+  ],
+  "note": "«The Diamond» ganó el título interino del peso ligero ante Max Holloway en UFC 236 (2019), venció dos veces a Conor McGregor en 2021 y disputó el título indiscutible ante Khabib Nurmagomedov, Charles Oliveira e Islam Makhachev. Se despidió en UFC 318 (julio de 2025), en su Luisiana natal, con el cinturón BMF en juego.",
+  "noteEn": "“The Diamond” won the interim lightweight title against Max Holloway at UFC 236 (2019), beat Conor McGregor twice in 2021 and fought for the undisputed title against Khabib Nurmagomedov, Charles Oliveira and Islam Makhachev. He said goodbye at UFC 318 (July 2025), in his native Louisiana, with the BMF belt on the line.",
+  "noteCa": "«The Diamond» va guanyar el títol interí del pes lleuger contra Max Holloway a UFC 236 (2019), va vèncer dues vegades Conor McGregor el 2021 i va disputar el títol indiscutible contra Khabib Nurmagomedov, Charles Oliveira i Islam Makhachev. Es va acomiadar a UFC 318 (juliol del 2025), a la seva Louisiana natal, amb el cinturó BMF en joc.",
+  "highlightsEn": [
+   "Interim lightweight champion at UFC 236 (2019)",
+   "Two wins over Conor McGregor (2021)",
+   "Three undisputed title fights",
+   "Final fight: UFC 318, in Louisiana"
+  ],
+  "highlightsCa": [
+   "Campió interí del pes lleuger a UFC 236 (2019)",
+   "Dues victòries sobre Conor McGregor (2021)",
+   "Tres combats pel títol indiscutible",
+   "Últim combat: UFC 318, a Louisiana"
+  ],
+  "retired": 2025
+ },
+ {
+  "id": "ufc-jon-jones",
+  "name": "Jon Jones",
+  "source": "https://www.ufc.com/athlete/jon-jones",
+  "wing": "ufcinfo",
+  "inducted": null,
+  "retirementReviewed": "2026-11-26: retirado; dejó vacante el título del peso pesado en junio de 2025 (perfil de UFC). UFC.com aún lo lista como «Active».",
+  "legendSource": "https://www.ufc.com/athlete/jon-jones",
+  "hallOfFameImage": "https://www.ufc.com/images/2023-11/HOF_JonesGus_16x9.jpg",
+  "championships": [
+   "Peso semipesado",
+   "Peso pesado"
+  ],
+  "highlights": [
+   "Campeón más joven de la historia de UFC",
+   "8 defensas en su primer reinado del peso semipesado",
+   "Campeón del peso pesado (UFC 285, 2023)",
+   "Su primer combate con Gustafsson está en el Salón de la Fama"
+  ],
+  "note": "«Bones», el campeón más joven de la historia de UFC y, para muchos aficionados, el mejor de todos los tiempos. Encadenó ocho defensas del peso semipesado en su primer reinado, conquistó el peso pesado en UFC 285 y lo defendió ante Stipe Miocic en UFC 309. Dejó vacante el título en junio de 2025.",
+  "noteEn": "“Bones”, the youngest champion in UFC history and, for many fans, the greatest of all time. He put together eight light heavyweight title defenses in his first reign, won the heavyweight title at UFC 285 and defended it against Stipe Miocic at UFC 309. He vacated the title in June 2025.",
+  "noteCa": "«Bones», el campió més jove de la història d’UFC i, per a molts aficionats, el millor de tots els temps. Va encadenar vuit defenses del pes semipesant en el primer regnat, va conquerir el pes pesant a UFC 285 i el va defensar contra Stipe Miocic a UFC 309. Va deixar vacant el títol el juny del 2025.",
+  "highlightsEn": [
+   "Youngest champion in UFC history",
+   "8 defenses in his first light heavyweight reign",
+   "Heavyweight champion (UFC 285, 2023)",
+   "His first fight with Gustafsson is in the Hall of Fame"
+  ],
+  "highlightsCa": [
+   "Campió més jove de la història d’UFC",
+   "8 defenses en el primer regnat del pes semipesant",
+   "Campió del pes pesant (UFC 285, 2023)",
+   "El seu primer combat amb Gustafsson és al Saló de la Fama"
+  ],
+  "retired": 2025
  }
 ]

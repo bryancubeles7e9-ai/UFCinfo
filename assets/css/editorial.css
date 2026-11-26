@@ -362,3 +362,7 @@ body.light .legend-card-tagline,body.light .legends-hall-intro .eyebrow{color:#6
   .legend-card h3{font-size:26px}
 }
 .legacy-banner{aspect-ratio:auto;height:clamp(180px,26vw,300px)}
+.legacy-highlights{display:grid;gap:6px;margin:4px 0 8px;padding:0;list-style:none}
+.legacy-highlights li{position:relative;padding-left:18px;font-size:13px;line-height:1.45;color:var(--ink)}
+.legacy-highlights li::before{content:"";position:absolute;left:2px;top:.5em;width:7px;height:7px;border-radius:2px;background:var(--legend,#a78acb);transform:rotate(45deg)}
+.legacy-details .legacy-highlights li{font-size:14px}

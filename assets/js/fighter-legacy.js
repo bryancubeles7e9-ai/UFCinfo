@@ -1,5 +1,5 @@
 import { escapeHTML as esc } from './utils.js';
-import { legendTagline } from './legends-hall.js';
+import { legendTagline, legacyHighlights } from './legends-hall.js';
 
 // Editorial recognition is independent of championship ownership.
 export const isLegend = fighter => fighter.legend === true && fighter.careerStatus === 'retired';
@@ -18,6 +18,6 @@ export function renderLegacyDetails(fighter) {
     ? `<figure class="legacy-banner"><img src="${esc(fighter.hallOfFame.image)}" alt="" loading="lazy" decoding="async" width="1280" height="720"><figcaption>FOTOGRAFÍA: UFC</figcaption></figure>` : '';
   const intro = hallOfFame
     ? `Miembro del Salón de la Fama de UFC (${esc(legendTagline(fighter).replace('Salón de la Fama de UFC · ', ''))}). Retiro documentado por UFC.`
-    : 'Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado.';
-  return `<section class="legacy-details">${banner}${legendBadge(fighter)}<p>${intro}</p>${fighter.legacyNote ? `<p class="legacy-note">${esc(fighter.legacyNote)}</p>` : ""}${source}<p class="data-note">Consulta: ${esc(fighter.legendConsulted || '—')}</p></section>`;
+    : `Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado${fighter.hallOfFame?.retired ? ` (${fighter.hallOfFame.retired})` : ''}.`;
+  return `<section class="legacy-details">${banner}${legendBadge(fighter)}<p>${intro}</p>${fighter.legacyNote ? `<p class="legacy-note">${esc(fighter.legacyNote)}</p>` : ""}${legacyHighlights(fighter)}${source}<p class="data-note">Consulta: ${esc(fighter.legendConsulted || '—')}</p></section>`;
 }

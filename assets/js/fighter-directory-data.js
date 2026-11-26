@@ -28488,9 +28488,11 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2021,
-      "image": "assets/images/legends/ufc-georges-st-pierre.jpg"
+      "image": "assets/images/legends/ufc-georges-st-pierre.jpg",
+      "retired": null
     },
-    "legacyNote": "Dos veces campeón del peso wélter y campeón del peso medio de UFC; uno de los luchadores más completos y dominantes de la historia."
+    "legacyNote": "Dos veces campeón del peso wélter y campeón del peso medio de UFC; uno de los luchadores más completos y dominantes de la historia.",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-khabib-nurmagomedov",
@@ -28557,9 +28559,11 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2022,
-      "image": "assets/images/legends/ufc-khabib-nurmagomedov.jpg"
+      "image": "assets/images/legends/ufc-khabib-nurmagomedov.jpg",
+      "retired": null
     },
-    "legacyNote": "Campeón del peso ligero desde 2018; se retiró invicto con un récord de 29-0."
+    "legacyNote": "Campeón del peso ligero desde 2018; se retiró invicto con un récord de 29-0.",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-daniel-cormier",
@@ -28632,9 +28636,11 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2022,
-      "image": "assets/images/legends/ufc-daniel-cormier.jpg"
+      "image": "assets/images/legends/ufc-daniel-cormier.jpg",
+      "retired": null
     },
-    "legacyNote": "Campeón del peso semipesado y del peso pesado de UFC, con ambos cinturones a la vez."
+    "legacyNote": "Campeón del peso semipesado y del peso pesado de UFC, con ambos cinturones a la vez.",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-joanna-jedrzejczyk",
@@ -28701,9 +28707,11 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2024,
-      "image": "assets/images/legends/ufc-joanna-jedrzejczyk.jpg"
+      "image": "assets/images/legends/ufc-joanna-jedrzejczyk.jpg",
+      "retired": null
     },
-    "legacyNote": "Campeona del peso paja de UFC y protagonista, frente a Zhang Weili, de un combate incluido en el Salón de la Fama."
+    "legacyNote": "Campeona del peso paja de UFC y protagonista, frente a Zhang Weili, de un combate incluido en el Salón de la Fama.",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-frankie-edgar",
@@ -28770,9 +28778,11 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2024,
-      "image": "assets/images/legends/ufc-frankie-edgar.jpg"
+      "image": "assets/images/legends/ufc-frankie-edgar.jpg",
+      "retired": null
     },
-    "legacyNote": "Campeón del peso ligero (2010-2012), con 8 bonificaciones a la pelea de la noche, la segunda mayor cifra de la historia de UFC."
+    "legacyNote": "Campeón del peso ligero (2010-2012), con 8 bonificaciones a la pelea de la noche, la segunda mayor cifra de la historia de UFC.",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-mauricio-rua",
@@ -28839,9 +28849,11 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2024,
-      "image": "assets/images/legends/ufc-mauricio-rua.jpg"
+      "image": "assets/images/legends/ufc-mauricio-rua.jpg",
+      "retired": null
     },
-    "legacyNote": "Campeón del peso semipesado de UFC (2010-2011) y ganador del Grand Prix de peso medio de PRIDE en 2005."
+    "legacyNote": "Campeón del peso semipesado de UFC (2010-2011) y ganador del Grand Prix de peso medio de PRIDE en 2005.",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-dustin-poirier",
@@ -28890,14 +28902,26 @@ export const additionalFighters = [
     "careerStatus": "retired",
     "legend": true,
     "legendSource": "https://www.ufc.com/news/dustin-poirier-diamond-last-dance-bmf-ufc-318",
-    "legendConsulted": "2026-10-14",
+    "legendConsulted": "2026-11-26",
     "retirementSource": "https://www.ufc.com/news/new-dustin-poirier-merch-one-last-dance",
-    "legacyNote": "Campeón interino del peso ligero de UFC en 2019.",
+    "legacyNote": "«The Diamond» ganó el título interino del peso ligero ante Max Holloway en UFC 236 (2019), venció dos veces a Conor McGregor en 2021 y disputó el título indiscutible ante Khabib Nurmagomedov, Charles Oliveira e Islam Makhachev. Se despidió en UFC 318 (julio de 2025), en su Luisiana natal, con el cinturón BMF en juego.",
     "championships": [],
     "code": "US",
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-318",
-    "countryConsulted": "2026-10-14"
+    "countryConsulted": "2026-10-14",
+    "hallOfFame": {
+      "wing": "ufcinfo",
+      "inducted": null,
+      "image": "assets/images/legends/ufc-dustin-poirier.jpg",
+      "retired": 2025
+    },
+    "legacyHighlights": [
+      "Campeón interino del peso ligero en UFC 236 (2019)",
+      "Dos victorias sobre Conor McGregor (2021)",
+      "Tres combates por el título indiscutible",
+      "Último combate: UFC 318, en Luisiana"
+    ]
   },
   {
     "id": "ufc-cristian-perez-gonzalez",
@@ -31842,7 +31866,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2026,
-      "image": "assets/images/legends/ufc-dominick-cruz.jpg"
+      "image": "assets/images/legends/ufc-dominick-cruz.jpg",
+      "retired": null
     },
     "legacyNote": "Primer campeón del peso gallo de UFC, coronado en WEC 53. Firmó el reinado más largo de la división: 1117 días.",
     "championships": [
@@ -31890,7 +31915,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/dominick-cruz",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-chris-weidman",
@@ -31907,7 +31933,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2026,
-      "image": "assets/images/legends/ufc-chris-weidman.jpg"
+      "image": "assets/images/legends/ufc-chris-weidman.jpg",
+      "retired": null
     },
     "legacyNote": "Conquistó el título del peso medio ante Anderson Silva en UFC 162 y venció también a Vitor Belfort y Lyoto Machida.",
     "championships": [
@@ -31955,7 +31982,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/chris-weidman",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-demetrious-johnson",
@@ -31972,7 +32000,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2026,
-      "image": "assets/images/legends/ufc-demetrious-johnson.jpg"
+      "image": "assets/images/legends/ufc-demetrious-johnson.jpg",
+      "retired": null
     },
     "legacyNote": "Primer campeón del peso mosca de UFC: 11 victorias seguidas con el título y el reinado más largo de la división, 2142 días.",
     "championships": [
@@ -32020,7 +32049,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/demetrious-johnson",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-robbie-lawler",
@@ -32037,7 +32067,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": null,
-      "image": "assets/images/legends/ufc-robbie-lawler.jpg"
+      "image": "assets/images/legends/ufc-robbie-lawler.jpg",
+      "retired": null
     },
     "legacyNote": "Campeón del peso wélter desde UFC 181 (2014); sus defensas ante Rory MacDonald y Carlos Condit fueron dos guerras a cinco asaltos.",
     "championships": [
@@ -32085,7 +32116,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/robbie-lawler",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-jose-aldo",
@@ -32102,7 +32134,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2023,
-      "image": "assets/images/legends/ufc-jose-aldo.jpg"
+      "image": "assets/images/legends/ufc-jose-aldo.jpg",
+      "retired": null
     },
     "legacyNote": "Dos veces campeón del peso pluma de UFC y campeón de WEC; sus 7 defensas del título son récord de la división.",
     "championships": [
@@ -32154,7 +32187,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/jose-aldo",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-donald-cerrone",
@@ -32171,7 +32205,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2023,
-      "image": "assets/images/legends/ufc-donald-cerrone.jpg"
+      "image": "assets/images/legends/ufc-donald-cerrone.jpg",
+      "retired": null
     },
     "legacyNote": "«Cowboy» disputó 38 combates en UFC y comparte el récord de bonificaciones (18); es segundo en victorias (23) y finalizaciones (16).",
     "championships": [],
@@ -32212,7 +32247,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/donald-cerrone",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-rashad-evans",
@@ -32229,7 +32265,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2019,
-      "image": "assets/images/legends/ufc-rashad-evans.jpg"
+      "image": "assets/images/legends/ufc-rashad-evans.jpg",
+      "retired": null
     },
     "legacyNote": "Ganador de la segunda temporada de The Ultimate Fighter y campeón del peso semipesado tras vencer a Forrest Griffin en UFC 92.",
     "championships": [
@@ -32277,7 +32314,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/rashad-evans",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-michael-bisping",
@@ -32294,7 +32332,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2019,
-      "image": "assets/images/legends/ufc-michael-bisping.jpg"
+      "image": "assets/images/legends/ufc-michael-bisping.jpg",
+      "retired": null
     },
     "legacyNote": "Ganador de la tercera temporada de The Ultimate Fighter y primer británico campeón de UFC, en el peso medio (2016-2017).",
     "championships": [
@@ -32342,7 +32381,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/michael-bisping",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-ronda-rousey",
@@ -32359,7 +32399,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2018,
-      "image": "assets/images/legends/ufc-ronda-rousey.jpg"
+      "image": "assets/images/legends/ufc-ronda-rousey.jpg",
+      "retired": null
     },
     "legacyNote": "Primera campeona femenina de UFC (peso gallo, 2012-2015) y primera mujer en el Salón de la Fama.",
     "championships": [
@@ -32407,7 +32448,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/ronda-rousey",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-urijah-faber",
@@ -32424,7 +32466,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2017,
-      "image": "assets/images/legends/ufc-urijah-faber.jpg"
+      "image": "assets/images/legends/ufc-urijah-faber.jpg",
+      "retired": null
     },
     "legacyNote": "Campeón del peso pluma de WEC (2006-2008) y primera gran estrella de las divisiones ligeras.",
     "championships": [],
@@ -32465,7 +32508,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/urijah-faber",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-bj-penn",
@@ -32482,7 +32526,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2015,
-      "image": "assets/images/legends/ufc-bj-penn.jpg"
+      "image": "assets/images/legends/ufc-bj-penn.jpg",
+      "retired": null
     },
     "legacyNote": "Campeón del peso wélter (2004) y del peso ligero (2008-2010) de UFC.",
     "championships": [
@@ -32536,7 +32581,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/bj-penn",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-forrest-griffin",
@@ -32553,7 +32599,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "modern",
       "inducted": 2013,
-      "image": "assets/images/legends/ufc-forrest-griffin.jpg"
+      "image": "assets/images/legends/ufc-forrest-griffin.jpg",
+      "retired": null
     },
     "legacyNote": "Ganador de la primera temporada de The Ultimate Fighter; su combate con Stephan Bonnar en 2005 impulsó las MMA. Campeón del peso semipesado en 2008.",
     "championships": [
@@ -32601,7 +32648,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/forrest-griffin",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-mark-kerr",
@@ -32618,7 +32666,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2025,
-      "image": "assets/images/legends/ufc-mark-kerr.jpg"
+      "image": "assets/images/legends/ufc-mark-kerr.jpg",
+      "retired": null
     },
     "legacyNote": "Ganó los torneos de peso pesado de UFC 14 y UFC 15; es uno de los cinco luchadores con varios torneos de UFC.",
     "championships": [],
@@ -32659,7 +32708,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/mark-kerr",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-vitor-belfort",
@@ -32676,7 +32726,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": null,
-      "image": "assets/images/legends/ufc-vitor-belfort.jpg"
+      "image": "assets/images/legends/ufc-vitor-belfort.jpg",
+      "retired": null
     },
     "legacyNote": "Tiene el récord de finalizaciones en el primer asalto de UFC (13) y logró 10 nocauts en 90 segundos o menos.",
     "championships": [],
@@ -32717,7 +32768,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/vitor-belfort",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-wanderlei-silva",
@@ -32734,7 +32786,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": null,
-      "image": "assets/images/legends/ufc-wanderlei-silva.jpg"
+      "image": "assets/images/legends/ufc-wanderlei-silva.jpg",
+      "retired": null
     },
     "legacyNote": "Campeón del peso medio de PRIDE y ganador de su Grand Prix de 2003; suma 19 nocauts, el máximo entre UFC, WEC, PRIDE y Strikeforce.",
     "championships": [],
@@ -32775,7 +32828,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/wanderlei-silva",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-anderson-silva",
@@ -32792,7 +32846,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2023,
-      "image": "assets/images/legends/ufc-anderson-silva.jpg"
+      "image": "assets/images/legends/ufc-anderson-silva.jpg",
+      "retired": null
     },
     "legacyNote": "Campeón del peso medio (2006-2013) con 16 victorias seguidas, la racha más larga de la historia de UFC.",
     "championships": [
@@ -32840,7 +32895,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/anderson-silva",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-jens-pulver",
@@ -32857,7 +32913,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2023,
-      "image": "assets/images/legends/ufc-jens-pulver.jpg"
+      "image": "assets/images/legends/ufc-jens-pulver.jpg",
+      "retired": null
     },
     "legacyNote": "Primer campeón del peso ligero de UFC, en UFC 30; compitió en cuatro categorías durante 14 años.",
     "championships": [
@@ -32905,7 +32962,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/jens-pulver",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-kevin-randleman",
@@ -32922,7 +32980,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2021,
-      "image": "assets/images/legends/ufc-kevin-randleman.jpg"
+      "image": "assets/images/legends/ufc-kevin-randleman.jpg",
+      "retired": null
     },
     "legacyNote": "Campeón del peso pesado de UFC (1999-2000) y campeón universitario de lucha de la NCAA.",
     "championships": [
@@ -32970,7 +33029,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/kevin-randleman",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-rich-franklin",
@@ -32987,7 +33047,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2019,
-      "image": "assets/images/legends/ufc-rich-franklin.jpg"
+      "image": "assets/images/legends/ufc-rich-franklin.jpg",
+      "retired": null
     },
     "legacyNote": "Antiguo profesor de matemáticas, campeón del peso medio de UFC (2005-2006) y entrenador en The Ultimate Fighter.",
     "championships": [
@@ -33035,7 +33096,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/rich-franklin",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-matt-serra",
@@ -33052,7 +33114,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2018,
-      "image": "assets/images/legends/ufc-matt-serra.jpg"
+      "image": "assets/images/legends/ufc-matt-serra.jpg",
+      "retired": null
     },
     "legacyNote": "Primer ganador de The Ultimate Fighter que llegó a campeón de UFC: conquistó el peso wélter ante Georges St-Pierre.",
     "championships": [
@@ -33100,7 +33163,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/matt-serra",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-kazushi-sakuraba",
@@ -33117,7 +33181,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2017,
-      "image": "assets/images/legends/ufc-kazushi-sakuraba.jpg"
+      "image": "assets/images/legends/ufc-kazushi-sakuraba.jpg",
+      "retired": null
     },
     "legacyNote": "«The Gracie Hunter», campeón del torneo de peso pesado de UFC Ultimate Japan; venció a rivales de categorías muy superiores.",
     "championships": [],
@@ -33158,7 +33223,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/kazushi-sakuraba",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-maurice-smith",
@@ -33175,7 +33241,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2017,
-      "image": "assets/images/legends/ufc-maurice-smith.jpg"
+      "image": "assets/images/legends/ufc-maurice-smith.jpg",
+      "retired": null
     },
     "legacyNote": "Campeón del peso pesado de UFC en 1997 tras vencer a Mark Coleman; demostró que un especialista en golpeo podía triunfar en las MMA.",
     "championships": [
@@ -33223,7 +33290,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/maurice-smith",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-don-frye",
@@ -33240,7 +33308,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2016,
-      "image": "assets/images/legends/ufc-don-frye.jpg"
+      "image": "assets/images/legends/ufc-don-frye.jpg",
+      "retired": null
     },
     "legacyNote": "Campeón del torneo de UFC 8 y de Ultimate Ultimate 96.",
     "championships": [],
@@ -33281,7 +33350,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/don-frye",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-minotauro-nogueira",
@@ -33298,7 +33368,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2016,
-      "image": "assets/images/legends/ufc-minotauro-nogueira.jpg"
+      "image": "assets/images/legends/ufc-minotauro-nogueira.jpg",
+      "retired": null
     },
     "legacyNote": "Único luchador que ha ganado los títulos de peso pesado de PRIDE y de UFC (interino, 2008).",
     "championships": [],
@@ -33339,7 +33410,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/minotauro-nogueira",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-bas-rutten",
@@ -33356,7 +33428,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2015,
-      "image": "assets/images/legends/ufc-bas-rutten.jpg"
+      "image": "assets/images/legends/ufc-bas-rutten.jpg",
+      "retired": null
     },
     "legacyNote": "Campeón del peso pesado de UFC en 1999, ganó sus dos combates en el octágono y fue rey de Pancrase.",
     "championships": [
@@ -33404,7 +33477,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/bas-rutten",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-pat-miletich",
@@ -33421,7 +33495,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2014,
-      "image": "assets/images/legends/ufc-pat-miletich.jpg"
+      "image": "assets/images/legends/ufc-pat-miletich.jpg",
+      "retired": null
     },
     "legacyNote": "Primer campeón del peso wélter de UFC; como entrenador llevó a Matt Hughes, Jens Pulver y Tim Sylvia a títulos mundiales.",
     "championships": [
@@ -33469,7 +33544,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/pat-miletich",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-tito-ortiz",
@@ -33486,7 +33562,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2012,
-      "image": "assets/images/legends/ufc-tito-ortiz.jpg"
+      "image": "assets/images/legends/ufc-tito-ortiz.jpg",
+      "retired": null
     },
     "legacyNote": "Campeón del peso semipesado (2000-2003) con cinco defensas del título; su rivalidad con Chuck Liddell marcó los primeros años de UFC.",
     "championships": [
@@ -33534,7 +33611,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/tito-ortiz",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-matt-hughes",
@@ -33551,7 +33629,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2010,
-      "image": "assets/images/legends/ufc-matt-hughes.jpg"
+      "image": "assets/images/legends/ufc-matt-hughes.jpg",
+      "retired": null
     },
     "legacyNote": "Dos veces campeón del peso wélter (2001-2006) con siete defensas del título.",
     "championships": [
@@ -33599,7 +33678,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/matt-hughes",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-chuck-liddell",
@@ -33616,7 +33696,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2009,
-      "image": "assets/images/legends/ufc-chuck-liddell.jpg"
+      "image": "assets/images/legends/ufc-chuck-liddell.jpg",
+      "retired": null
     },
     "legacyNote": "Campeón del peso semipesado (2005-2007) y luchador con más victorias en la historia de la división.",
     "championships": [
@@ -33664,7 +33745,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/chuck-liddell",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-mark-coleman",
@@ -33681,7 +33763,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2008,
-      "image": "assets/images/legends/ufc-mark-coleman.jpg"
+      "image": "assets/images/legends/ufc-mark-coleman.jpg",
+      "retired": null
     },
     "legacyNote": "Primer campeón del peso pesado de UFC, dos veces ganador de torneos y campeón del Grand Prix absoluto de PRIDE en 2000.",
     "championships": [
@@ -33729,7 +33812,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/mark-coleman",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-randy-couture",
@@ -33746,7 +33830,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2006,
-      "image": "assets/images/legends/ufc-randy-couture.jpg"
+      "image": "assets/images/legends/ufc-randy-couture.jpg",
+      "retired": null
     },
     "legacyNote": "Tres veces campeón del peso pesado y dos del semipesado: el primer campeón de UFC en dos categorías.",
     "championships": [
@@ -33800,7 +33885,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/randy-couture",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-dan-severn",
@@ -33817,7 +33903,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2005,
-      "image": "assets/images/legends/ufc-dan-severn.jpg"
+      "image": "assets/images/legends/ufc-dan-severn.jpg",
+      "retired": null
     },
     "legacyNote": "Campeón de la Superfight de UFC en 1996 y ganador del torneo Ultimate Ultimate 95; el primero en recibir un cinturón de UFC.",
     "championships": [],
@@ -33858,7 +33945,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/dan-severn",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-ken-shamrock",
@@ -33875,7 +33963,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2003,
-      "image": "assets/images/legends/ufc-ken-shamrock.jpg"
+      "image": "assets/images/legends/ufc-ken-shamrock.jpg",
+      "retired": null
     },
     "legacyNote": "Primer campeón de la Superfight de UFC y rey de Pancrase; su rivalidad con Royce Gracie marcó los inicios de UFC.",
     "championships": [],
@@ -33916,7 +34005,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/ken-shamrock",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "legacyHighlights": []
   },
   {
     "id": "ufc-royce-gracie",
@@ -33933,7 +34023,8 @@ export const additionalFighters = [
     "hallOfFame": {
       "wing": "pioneer",
       "inducted": 2003,
-      "image": "assets/images/legends/ufc-royce-gracie.jpg"
+      "image": "assets/images/legends/ufc-royce-gracie.jpg",
+      "retired": null
     },
     "legacyNote": "Ganó el primer torneo de UFC en noviembre de 1993 con jiu-jitsu brasileño y tres de los cuatro primeros torneos.",
     "championships": [],
@@ -33972,6 +34063,85 @@ export const additionalFighters = [
       "source": "https://www.ufc.com/athlete/royce-gracie",
       "consulted": "2026-11-26",
       "statisticsSource": "https://www.ufc.com/athlete/royce-gracie",
+      "statisticsConsulted": "2026-11-26"
+    },
+    "photoCredit": "UFC",
+    "legacyHighlights": []
+  },
+  {
+    "id": "ufc-jon-jones",
+    "name": "Jon Jones",
+    "aliases": [
+      "Jon Jones"
+    ],
+    "source": "https://www.ufc.com/athlete/jon-jones",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/athlete/jon-jones",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/jon-jones",
+    "hallOfFame": {
+      "wing": "ufcinfo",
+      "inducted": null,
+      "image": "assets/images/legends/ufc-jon-jones.jpg",
+      "retired": 2025
+    },
+    "legacyNote": "«Bones», el campeón más joven de la historia de UFC y, para muchos aficionados, el mejor de todos los tiempos. Encadenó ocho defensas del peso semipesado en su primer reinado, conquistó el peso pesado en UFC 285 y lo defendió ante Stipe Miocic en UFC 309. Dejó vacante el título en junio de 2025.",
+    "legacyHighlights": [
+      "Campeón más joven de la historia de UFC",
+      "8 defensas en su primer reinado del peso semipesado",
+      "Campeón del peso pesado (UFC 285, 2023)",
+      "Su primer combate con Gustafsson está en el Salón de la Fama"
+    ],
+    "championships": [
+      {
+        "name": "Peso semipesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/athlete/jon-jones"
+      },
+      {
+        "name": "Peso pesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/athlete/jon-jones"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26",
+    "first": "Jon",
+    "last": "Jones",
+    "supplemental": true,
+    "division": "Peso pesado",
+    "record": "28-1-0",
+    "nickname": "Bones",
+    "birthplace": "Rochester, NY, United States",
+    "officialStyle": null,
+    "heightCm": 193,
+    "reachCm": 215,
+    "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/JONES_JON_L.png?itok=ZKUJM0wq",
+    "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-10/JONES_JON_L.png?itok=ZKUJM0wq",
+    "consulted": "2026-11-26",
+    "info": {
+      "age": 38.0,
+      "gym": "Team Jones",
+      "weightKg": null,
+      "legReachCm": 114.3,
+      "debut": "Aug. 9, 2008",
+      "strikesLanded": 4.38,
+      "strikesAbsorbed": 2.24,
+      "takedownAverage": 1.89,
+      "submissionAverage": 0.46,
+      "strikingDefense": 64.0,
+      "takedownDefense": 95.0,
+      "knockdownAverage": 0.25,
+      "strikingAccuracy": 59,
+      "takedownAccuracy": 37,
+      "koWins": 11.0,
+      "submissionWins": 7.0,
+      "firstRoundFinishes": null,
+      "source": "https://www.ufc.com/athlete/jon-jones",
+      "consulted": "2026-11-26",
+      "statisticsSource": "https://www.ufc.com/athlete/jon-jones",
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC"

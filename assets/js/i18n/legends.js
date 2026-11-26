@@ -12,6 +12,8 @@ export const legendsCopy = {
     'Salón de la Fama de UFC ›': 'UFC Hall of Fame ›', 'Trayectoria en UFC ›': 'UFC career ›',
     'Miembro del Salón de la Fama de UFC': 'UFC Hall of Fame member', 'Retiro documentado por UFC.': 'Retirement documented by UFC.',
     'Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado.': 'Historic career. UFCinfo legends selection with documented retirement.',
+    'Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado': 'Historic career. UFCinfo legends selection with documented retirement',
+    'Retiro en': 'Retired in', 'Momentos clave': 'Key moments',
   },
   ca: {
     'SALÓN DE LEYENDAS': 'SALÓ DE LLEGENDES', 'Salón de leyendas': 'Saló de llegendes',
@@ -25,5 +27,7 @@ export const legendsCopy = {
     'Salón de la Fama de UFC ›': 'Saló de la Fama d’UFC ›', 'Trayectoria en UFC ›': 'Trajectòria a UFC ›',
     'Miembro del Salón de la Fama de UFC': 'Membre del Saló de la Fama d’UFC', 'Retiro documentado por UFC.': 'Retirada documentada per UFC.',
     'Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado.': 'Trajectòria històrica. Selecció de llegendes d’UFCinfo amb retirada documentada.',
+    'Trayectoria histórica. Selección de leyendas de UFCinfo con retiro documentado': 'Trajectòria històrica. Selecció de llegendes d’UFCinfo amb retirada documentada',
+    'Retiro en': 'Retirada el', 'Momentos clave': 'Moments clau',
   },
 };
