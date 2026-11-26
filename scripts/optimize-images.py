@@ -35,7 +35,8 @@ def optimize(source):
 def main():
     before = after = count = 0
     for source in sorted(IMAGES.rglob("*")):
-        if source.suffix.lower() in {".png", ".jpg", ".jpeg"} and source.is_file():
+        # Brand images (app icons, share card) keep their format: manifests and link previews declare it.
+        if source.suffix.lower() in {".png", ".jpg", ".jpeg"} and source.is_file() and "brand" not in source.parts:
             sizes = optimize(source)
             if sizes:
                 before, after, count = before + sizes[0], after + sizes[1], count + 1

@@ -272,6 +272,26 @@ class AccountAPITests(unittest.TestCase):
         self.assertIn(f'<link rel="canonical" href="{self.origin}/"', home)
         self.assertIn(b"/luchadores/ilia-topuria", self.request("GET", "/sitemap.xml")[1])
 
+    def test_home_preview_image_and_installable_app(self):
+        home = self.request("GET", "/")[1].decode()
+        self.assertIn(f'<meta property="og:image" content="{self.origin}/assets/images/brand/ufcinfo-share.jpg"', home)
+        self.assertIn('rel="manifest" href="assets/manifest.webmanifest"', home)
+        status, manifest, headers = self.request("GET", "/assets/manifest.webmanifest")
+        self.assertEqual(status, 200)
+        manifest = json.loads(manifest)
+        self.assertEqual((manifest["start_url"], manifest["display"]), ("/", "standalone"))
+        for icon in manifest["icons"]:
+            conn = http.client.HTTPConnection("127.0.0.1", self.port, timeout=10)
+            conn.request("GET", icon["src"], headers={"Accept": "image/avif,image/webp,*/*"})
+            response = conn.getresponse()
+            body = response.read()
+            conn.close()
+            # Icons keep the PNG format the manifest declares.
+            self.assertEqual((response.status, response.getheader("Content-Type"), body[:4]), (200, "image/png", b"\x89PNG"), icon["src"])
+        # A shared fighter keeps its own photo instead of the generic card.
+        fighter = self.request("GET", "/luchadores/ilia-topuria")[1].decode()
+        self.assertNotIn("ufcinfo-share.jpg", fighter)
+
     def test_rate_limit(self):
         for _ in range(10):
             self.database.rate_limit("isolated-test-address", "limited")

@@ -63,6 +63,14 @@ Mientras Render reinicia el servidor tras un despliegue, su proxy responde 502�
 
 Límite: un visitante que entra por primera vez justo durante el reinicio aún no tiene el service worker instalado y ve la página de Render; desde su primera visita ya ve la pantalla propia.
 
+## Aplicación instalable e imagen al compartir
+
+UFCinfo se puede **instalar en el móvil o el ordenador** como una aplicación: icono en la pantalla de inicio y apertura a pantalla completa, sin pasar por las tiendas. En Android y en Chrome aparece la opción «Instalar» o «Añadir a pantalla de inicio»; en iPhone, Compartir › «Añadir a pantalla de inicio». La configuración está en `assets/manifest.webmanifest`, con accesos directos a Carteleras, Pick’em y Luchadores.
+
+Al compartir la portada (o cualquier página sin foto propia), la vista previa muestra la tarjeta `assets/images/brand/ufcinfo-share.jpg` (1200×630). Las fichas y las veladas siguen usando su propia foto.
+
+Los iconos y la tarjeta se generan con las tipografías de la web: `node scripts/build-brand-images.mjs` (requiere Playwright). Estas imágenes no se convierten a WebP, porque el manifiesto y las vistas previas declaran su formato.
+
 ## Paquete de la interfaz
 
 El navegador carga `assets/js/app.bundle.js`: todo el código de la interfaz en un solo archivo minificado, en lugar de una cadena de unos 45 módulos. Los archivos de datos (`fighter-directory-data.js`, `official-events.js` y los demás `*-data.js`) quedan fuera del paquete y se descargan en paralelo, así que las actualizaciones automáticas de datos no necesitan regenerarlo.
