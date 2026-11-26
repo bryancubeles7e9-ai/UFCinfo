@@ -1,5 +1,6 @@
 """Octagon website and same-origin account API. Python standard library only."""
 import argparse
+import gzip
 import hashlib
 import hmac
 import json
@@ -27,6 +28,33 @@ COOKIE = "octagon_session"
 MAX_BODY = 16_384
 MIN_FREE_DISK = 50 * 1024 * 1024
 CLIENT_ERROR_LIMIT = (20, 500)  # Per address and in total, per hour.
+# Text assets are sent gzip-compressed: the fighter catalogue alone drops from about 1 MB to under 200 KB.
+COMPRESSIBLE = {".js", ".mjs", ".css", ".json", ".html", ".svg", ".txt", ".xml", ".webmanifest"}
+_compressed = {}
+_compressed_lock = threading.Lock()
+
+
+def compressed_file(target):
+    """Returns (gzip bytes, etag) for a file, reusing the result until the file changes."""
+    stat = target.stat()
+    key = (stat.st_mtime_ns, stat.st_size)
+    with _compressed_lock:
+        cached = _compressed.get(target)
+    if cached and cached[0] == key:
+        return cached[1], cached[2]
+    payload = gzip.compress(target.read_bytes(), compresslevel=6, mtime=0)
+    etag = f'W/"{stat.st_mtime_ns:x}-{stat.st_size:x}"'
+    with _compressed_lock:
+        _compressed[target] = (key, payload, etag)
+    return payload, etag
+
+
+def accepts_gzip(header):
+    for part in (header or "").split(","):
+        name, _, params = part.strip().partition(";")
+        if name.strip().lower() in {"gzip", "*"}:
+            return params.replace(" ", "").lower() not in {"q=0", "q=0.0", "q=0.00", "q=0.000"}
+    return False
 
 
 def password_hash(password, salt):
@@ -146,10 +174,17 @@ def make_handler(database, public_origin, fighter_ids):
 
         def end_headers(self):
             # Assets use stable URLs: revalidate after deployments to avoid mixing versions.
-            if urlsplit(self.path).path.startswith('/assets/'):
+            if urlsplit(self.path).path.startswith('/assets/fonts/'):
+                # Font files carry a content hash in their name, so they never change.
+                self.send_header('Cache-Control', 'public, max-age=31536000, immutable')
+            elif urlsplit(self.path).path.startswith('/assets/'):
                 self.send_header('Cache-Control', 'no-cache')
             if urlsplit(self.path).path == '/assets/sw.js':
                 self.send_header('Service-Worker-Allowed', '/')
+            if getattr(self, 'vary', None):
+                # The same photo URL may be answered with a WebP copy for other browsers.
+                self.send_header('Vary', self.vary)
+                self.vary = None
             self.send_header("X-Content-Type-Options", "nosniff")
             self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
             self.send_header("X-Frame-Options", "SAMEORIGIN")
@@ -392,6 +427,10 @@ def make_handler(database, public_origin, fighter_ids):
                 payload = body.encode("utf-8")
                 self.send_response(200)
                 self.send_header("Content-Type", content_type)
+                self.send_header("Vary", "Accept-Encoding")
+                if accepts_gzip(self.headers.get("Accept-Encoding")):
+                    payload = gzip.compress(payload, compresslevel=6, mtime=0)
+                    self.send_header("Content-Encoding", "gzip")
                 self.send_header("Content-Length", str(len(payload)))
                 self.send_header("Cache-Control", "no-cache")
                 self.end_headers()
@@ -404,7 +443,42 @@ def make_handler(database, public_origin, fighter_ids):
                 return self.send_error(404)
             if path not in {"/", "/index.html"} and not (path.startswith("/assets/") and target.is_file()):
                 return self.send_error(404)
+            if target.suffix.lower() in COMPRESSIBLE and accepts_gzip(self.headers.get("Accept-Encoding")):
+                try:
+                    payload, etag = compressed_file(target)
+                except OSError:
+                    return self.send_error(404)
+                return self.send_asset(target, payload, etag, "Accept-Encoding", encoding="gzip")
+            # Photos have a lighter WebP copy (scripts/optimize-images.py) for browsers that accept it.
+            webp = target.with_suffix(".webp")
+            if target.suffix.lower() in {".png", ".jpg", ".jpeg"} and "image/webp" in self.headers.get("Accept", "") and webp.is_file():
+                try:
+                    stat = webp.stat()
+                    payload = webp.read_bytes()
+                except OSError:
+                    return super().do_GET()
+                return self.send_asset(webp, payload, f'W/"{stat.st_mtime_ns:x}-{stat.st_size:x}"', "Accept")
+            if target.suffix.lower() in {".png", ".jpg", ".jpeg"}:
+                self.vary = "Accept"
             return super().do_GET()
+
+        def send_asset(self, target, payload, etag, vary, encoding=None):
+            # The ETag lets returning visitors revalidate without downloading the file again.
+            if etag in {tag.strip() for tag in self.headers.get("If-None-Match", "").split(",")}:
+                self.send_response(304)
+                self.send_header("ETag", etag)
+                self.send_header("Vary", vary)
+                self.end_headers()
+                return
+            self.send_response(200)
+            self.send_header("Content-Type", self.guess_type(str(target)))
+            if encoding:
+                self.send_header("Content-Encoding", encoding)
+            self.send_header("Vary", vary)
+            self.send_header("ETag", etag)
+            self.send_header("Content-Length", str(len(payload)))
+            self.end_headers()
+            self.wfile.write(payload)
 
         def do_HEAD(self):
             # Avoid SimpleHTTPRequestHandler bypassing the static-file allowlist.

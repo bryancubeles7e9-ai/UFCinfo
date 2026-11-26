@@ -34,7 +34,7 @@ export async function refreshEvents() {
   try {
     const controller = new AbortController();
     timer = setTimeout(() => controller.abort(), 12000);
-    const response = await fetch(new URL('../data/ufc-events.json', import.meta.url), { cache: 'no-store', signal: controller.signal });
+    const response = await fetch(new URL('../data/ufc-events.json', import.meta.url), { cache:'no-cache', signal: controller.signal });
     if (!response.ok) throw new Error('Feed unavailable');
     const feed = await response.json();
     if (feed.schemaVersion !== 1 || !Number.isInteger(feed.year) || !Array.isArray(feed.events) || feed.events.length > 100 ||

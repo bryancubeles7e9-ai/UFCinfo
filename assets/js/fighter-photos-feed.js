@@ -38,7 +38,7 @@ export function applyFighterPhotos() {
 }
 export async function refreshFighterPhotos() {
   try {
-    const response = await fetch(new URL('../data/fighter-photos.json', import.meta.url), {cache:'no-store'});
+    const response = await fetch(new URL('../data/fighter-photos.json', import.meta.url), {cache:'no-cache'});
     if (!response.ok) return false;
     const feed = await response.json();
     if (feed.schemaVersion !== 1 || !feed.photos || typeof feed.photos !== 'object' || Array.isArray(feed.photos)) return false;

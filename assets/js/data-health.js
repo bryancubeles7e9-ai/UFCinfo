@@ -31,7 +31,7 @@ export function initializeDataHealth() {
     if(running)return;running=true;
     await Promise.allSettled([...new Set([...feeds.map(([,file])=>file),'sync-health'])].map(async file=>{
       try{
-        const response=await fetch(new URL(`../data/${file}.json`,import.meta.url),{cache:'no-store',signal:AbortSignal.timeout(12000)});
+        const response=await fetch(new URL(`../data/${file}.json`,import.meta.url),{cache:'no-cache',signal:AbortSignal.timeout(12000)});
         if(!response.ok)throw Error('Unavailable');
         const feed=await response.json();if(feed?.schemaVersion!==1)throw Error('Invalid feed');
         cache.set(file,{feed,unavailable:false});

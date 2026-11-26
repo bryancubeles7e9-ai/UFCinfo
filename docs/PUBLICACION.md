@@ -63,6 +63,10 @@ Mientras Render reinicia el servidor tras un despliegue, su proxy responde 502�
 
 Límite: un visitante que entra por primera vez justo durante el reinicio aún no tiene el service worker instalado y ve la página de Render; desde su primera visita ya ve la pantalla propia.
 
+## Rendimiento
+
+Medido con Lighthouse el 26 de noviembre de 2026 en la portada: en ordenador, 97 de rendimiento y 100 en accesibilidad, buenas prácticas y SEO; en móvil con 4G lenta simulada, alrededor de 65 de rendimiento (antes 34), 100 de accesibilidad y desplazamiento visual casi nulo (0,005, antes 0,88). El peso de la portada bajó de 3,7 MB a unos 1,3 MB gracias a la compresión gzip, las copias WebP de las fotos y las tipografías propias. El siguiente paso, si hace falta, es agrupar los módulos JavaScript para reducir la cadena de descargas en móvil.
+
 ## Prueba de navegador antes de publicar
 
 El workflow **Probar la web en un navegador** (`web-check.yml`) se ejecuta con cada cambio de la interfaz o del servidor. Arranca la web y, con Chromium, recorre las ocho secciones en ordenador y en móvil, abre una ficha de luchador y una cartelera y cambia el idioma (`tests/browser-smoke.mjs`). Falla ante errores de JavaScript, respuestas 4xx/5xx de la propia web, secciones vacías o desbordes horizontales. Como Render publica solo cuando pasan las comprobaciones, una página rota no llega a los visitantes. Para ejecutarla en local: arranca `python3 server.py` y luego `node tests/browser-smoke.mjs http://127.0.0.1:8780`.

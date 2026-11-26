@@ -98,6 +98,12 @@ jobs:
         id: records
         continue-on-error: true
         run: python3 scripts/run-data-sync.py records --ensure-full
+      - name: Crear copias ligeras de las fotos nuevas
+        # Optional: if it fails, the server keeps sending the original photos.
+        continue-on-error: true
+        run: |
+          python3 -m pip install --quiet pillow==12.0.0
+          python3 scripts/optimize-images.py
       - name: Publicar todos los datos en un commit
         id: revision
         if: ${{ !cancelled() && steps.preflight.outcome == 'success' }}

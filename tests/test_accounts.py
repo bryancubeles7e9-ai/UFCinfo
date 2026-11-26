@@ -174,6 +174,46 @@ class AccountAPITests(unittest.TestCase):
             self.assertEqual(db.execute("PRAGMA integrity_check").fetchone()[0], "ok")
             self.assertEqual(db.execute("SELECT COUNT(*) FROM users WHERE username='backupuser'").fetchone()[0], 1)
 
+    def test_text_assets_are_compressed_and_revalidated(self):
+        import gzip
+        def get(path, **headers):
+            conn = http.client.HTTPConnection("127.0.0.1", self.port, timeout=10)
+            conn.request("GET", path, headers=headers)
+            response = conn.getresponse()
+            body, result = response.read(), (response.status, dict(response.getheaders()))
+            conn.close()
+            return result + (body,)
+        original = Path("assets/js/fighter-directory-data.js").read_bytes()
+        status, headers, body = get("/assets/js/fighter-directory-data.js", **{"Accept-Encoding": "gzip, br"})
+        self.assertEqual((status, headers["Content-Encoding"], headers["Vary"]), (200, "gzip", "Accept-Encoding"))
+        self.assertEqual(gzip.decompress(body), original)
+        self.assertLess(len(body), len(original) / 4)
+        self.assertEqual(get("/assets/js/fighter-directory-data.js", **{"Accept-Encoding": "gzip", "If-None-Match": headers["ETag"]})[0], 304)
+        status, headers, body = get("/assets/js/fighter-directory-data.js")
+        self.assertNotIn("Content-Encoding", headers)
+        self.assertEqual(body, original)
+        self.assertNotIn("Content-Encoding", get("/assets/js/app.js", **{"Accept-Encoding": "gzip;q=0"})[1])
+        status, headers, body = get("/", **{"Accept-Encoding": "gzip"})
+        self.assertIn(b"<html", gzip.decompress(body))
+        self.assertEqual(get("/assets/../server.py", **{"Accept-Encoding": "gzip"})[0], 404)
+
+    def test_photos_use_the_lighter_webp_copy_when_the_browser_accepts_it(self):
+        def get(path, **headers):
+            conn = http.client.HTTPConnection("127.0.0.1", self.port, timeout=10)
+            conn.request("GET", path, headers=headers)
+            response = conn.getresponse()
+            result = (response.status, dict(response.getheaders()), response.read())
+            conn.close()
+            return result
+        photo = "/assets/images/fighters/alex-pereira.png"
+        status, headers, body = get(photo, Accept="image/avif,image/webp,*/*")
+        self.assertEqual((status, headers["Content-Type"], headers["Vary"]), (200, "image/webp", "Accept"))
+        self.assertEqual(body, Path("assets/images/fighters/alex-pereira.webp").read_bytes())
+        self.assertEqual(get(photo, Accept="image/webp", **{"If-None-Match": headers["ETag"]})[0], 304)
+        status, headers, body = get(photo, Accept="image/png")
+        self.assertEqual((status, headers["Vary"]), (200, "Accept"))
+        self.assertEqual(body, Path("assets/images/fighters/alex-pereira.png").read_bytes())
+
     def test_rate_limit(self):
         for _ in range(10):
             self.database.rate_limit("isolated-test-address", "limited")

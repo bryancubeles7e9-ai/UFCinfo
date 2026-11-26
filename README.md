@@ -191,6 +191,10 @@ Abre **http://127.0.0.1:8780**. No se necesitan paquetes adicionales para el ser
 
 Un servidor estático como Live Server permite explorar el modo invitado, pero no ejecuta las cuentas. Abrir `index.html` directamente con doble clic no basta para cargar los módulos JavaScript.
 
+### Velocidad de carga
+
+El servidor envía comprimidos (gzip) el código, los estilos y los datos, y responde «sin cambios» (304) cuando el navegador ya tiene la versión actual. Cada foto tiene una copia WebP mucho más ligera junto al original, que se sirve a los navegadores compatibles; tras añadir fotos a mano, ejecuta `python3 scripts/optimize-images.py` (necesita Pillow). La actualización automática de datos crea esas copias por sí sola. Las tipografías se sirven desde `assets/fonts/` en lugar de Google Fonts, y la portada reserva su espacio para que la página no salte al cargar.
+
 Las claves de los proveedores se configuran en el entorno de las automatizaciones y nunca deben incluirse en el código ni enviarse al navegador. Para usar la copia de datos existente en local no necesitas contratar esas APIs.
 
 ## Organización del repositorio

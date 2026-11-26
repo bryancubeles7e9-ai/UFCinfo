@@ -555,7 +555,7 @@ export async function refreshRankings() {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 12000);
   try {
-    const response = await fetch(new URL('../data/ufc-rankings.json', import.meta.url), { cache: 'no-store', signal: controller.signal });
+    const response = await fetch(new URL('../data/ufc-rankings.json', import.meta.url), { cache:'no-cache', signal: controller.signal });
     if (!response.ok) throw new Error('Rankings unavailable');
     const feed = await response.json();
     const ids = rankingCategories.map(c => c.id);

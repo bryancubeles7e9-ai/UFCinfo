@@ -20,7 +20,7 @@ function validStats(entry, fighter) {
 const byId = new Map(directoryFighters.map(fighter => [fighter.id, fighter]));
 export async function refreshFighterRecords() {
   try {
-    const response = await fetch(new URL('../data/fighter-records.json', import.meta.url), { cache: 'no-store' });
+    const response = await fetch(new URL('../data/fighter-records.json', import.meta.url), { cache:'no-cache' });
     if (!response.ok) return false;
     const feed = await response.json();
     if (feed.schemaVersion !== 1 || feed.source !== 'UFC' ||

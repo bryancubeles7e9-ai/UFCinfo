@@ -9,7 +9,7 @@ let requested;
 globalThis.fetch = async (url, options) => { requested=options; return {ok:true,json:async()=>initial}; };
 assert.equal(await refreshEvents(),true);
 assert.equal(eventsFeed.automatic,false);
-assert.equal(requested.cache,'no-store');
+assert.equal(requested.cache,'no-cache');
 const live = structuredClone(initial);
 live.source='UFCalendar'; live.sourceUrl='https://www.ufcalendar.com'; live.synchronizedAt='2026-10-05T10:00:00Z';
 live.events[8].bouts[0].winner=live.events[8].bouts[0].blue;

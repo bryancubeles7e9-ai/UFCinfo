@@ -104,7 +104,7 @@ export function initializeRumors() {
     loading = true;
     const controller = new AbortController(), timer = setTimeout(() => controller.abort(),10000);
     try {
-      const responses = await Promise.all([fetch(new URL('../data/ufc-rumors.json',import.meta.url), {cache:'no-store',signal:controller.signal}),fetch(new URL('../data/ufc-rumor-groups.json',import.meta.url), {cache:'no-store',signal:controller.signal})]);
+      const responses = await Promise.all([fetch(new URL('../data/ufc-rumors.json',import.meta.url), {cache:'no-cache',signal:controller.signal}),fetch(new URL('../data/ufc-rumor-groups.json',import.meta.url), {cache:'no-cache',signal:controller.signal})]);
       if (responses.some(response=>!response.ok)) throw Error('Unavailable');
       const [next,nextGroups] = await Promise.all(responses.map(response=>response.json()));
       if (!validateRumorFeed(next)) throw Error('Invalid feed');

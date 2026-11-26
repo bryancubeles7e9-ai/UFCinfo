@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap");
 :root {
   --bg: #101010;
   --surface: #181818;
@@ -187,14 +186,14 @@ html {
   right: 0;
 }
 .header nav a > span {
-  font-size: 7px;
+  font-size: 10px;
   background: #f4512b22;
   color: var(--accent);
   padding: 3px 4px;
   border-radius: 2px;
 }
 .header nav b {
-  font-size: 8px;
+  font-size: 10px;
   border: 1px solid var(--line);
   padding: 2px 5px;
 }
@@ -259,7 +258,7 @@ main {
   padding: 0 32px;
 }
 .eyebrow {
-  font-size: 9px;
+  font-size: 11px;
   letter-spacing: 1.8px;
   color: var(--muted);
   font-weight: 600;
@@ -269,7 +268,7 @@ main {
   align-items: center;
   gap: 9px;
   margin: 27px 0 18px;
-  font-size: 8px;
+  font-size: 10px;
 }
 .top-kicker > span:last-child {
   margin-left: auto;
@@ -302,7 +301,7 @@ main {
   align-items: start;
 }
 .hero-tag {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1.5px;
   color: #a3a29e;
   display: flex;
@@ -310,7 +309,7 @@ main {
   align-items: center;
 }
 .hero-tag > span {
-  font-size: 8px;
+  font-size: 10px;
   border: 1px solid #f4512b65;
   color: var(--accent);
   padding: 6px 8px;
@@ -338,7 +337,7 @@ main {
   gap: 35px;
   justify-content: space-between;
   width: 100%;
-  font-size: 7px;
+  font-size: 10px;
   letter-spacing: 1px;
   color: #6c6c67;
   margin-top: auto;
@@ -363,14 +362,14 @@ main {
   gap: 8px;
   align-items: center;
   color: #afaca7;
-  font-size: 7px;
+  font-size: 10px;
   letter-spacing: 1.7px;
 }
 .art-coordinate {
   position: absolute;
   right: 24px;
   bottom: 25px;
-  font-size: 7px;
+  font-size: 10px;
   letter-spacing: 1px;
   color: #7b776f;
 }
@@ -411,7 +410,7 @@ main {
   border: 0;
 }
 .overview-stats article > span {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1.2px;
   color: var(--muted);
 }
@@ -463,7 +462,7 @@ main {
 }
 .badge {
   display: inline-block;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1px;
   border: 1px solid var(--line);
   padding: 7px 9px;
@@ -506,7 +505,7 @@ main {
   font-size: 16px;
 }
 .event-date small {
-  font-size: 8px;
+  font-size: 10px;
   color: var(--muted);
 }
 .countdown {
@@ -521,7 +520,7 @@ main {
 .countdown small {
   display: block;
   color: var(--muted);
-  font-size: 7px;
+  font-size: 10px;
   letter-spacing: 1px;
   margin-top: 4px;
 }
@@ -553,7 +552,7 @@ main {
   pointer-events: none;
 }
 .event-rounds {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1.8px;
   color: var(--muted);
   margin-bottom: 21px;
@@ -587,7 +586,7 @@ main {
   background: var(--line);
 }
 .event-matchup > p {
-  font-size: 6px;
+  font-size: 10px;
   letter-spacing: 1.3px;
   color: var(--muted);
   margin-top: 22px;
@@ -655,7 +654,7 @@ main {
   position: absolute;
   bottom: 14px;
   left: 16px;
-  font-size: 6px;
+  font-size: 10px;
   color: #b4ada1;
   letter-spacing: 1.8px;
   z-index: 1;
@@ -682,7 +681,7 @@ main {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  font-size: 8px;
+  font-size: 10px;
   color: var(--muted);
 }
 .fighter-card-meta > span:last-child {
@@ -719,7 +718,7 @@ main {
   padding: 14px 0;
 }
 .fighter-card-footer > span {
-  font-size: 7px;
+  font-size: 10px;
   letter-spacing: 1.5px;
   color: var(--muted);
 }
@@ -891,7 +890,7 @@ select {
   align-items: end;
 }
 .comparison-selects label {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1.3px;
   color: var(--muted);
 }
@@ -948,7 +947,7 @@ select {
   text-align: center;
 }
 .comparison-row > span {
-  font-size: 9px;
+  font-size: 11px;
   color: var(--muted);
   text-align: center;
 }
@@ -982,7 +981,7 @@ select {
   gap: 10px;
 }
 .result-caption > span {
-  font-size: 7px;
+  font-size: 10px;
   letter-spacing: 1px;
   color: var(--muted);
 }
@@ -1008,7 +1007,7 @@ select {
 .result-names {
   display: flex;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: 10px;
   margin-top: 9px;
   color: var(--muted);
 }
@@ -1108,7 +1107,7 @@ input[type="range"] {
   border: 0;
 }
 .saved-item small {
-  font-size: 8px;
+  font-size: 10px;
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1165,24 +1164,24 @@ footer {
 }
 .footer-brand > span {
   display: block;
-  font: 7px var(--body);
+  font: 10px var(--body);
   letter-spacing: 1.5px;
   color: var(--muted);
   margin-top: 7px;
 }
 footer > p {
   color: var(--muted);
-  font-size: 9px;
+  font-size: 11px;
   line-height: 1.9;
 }
 footer > div:last-child {
-  font-size: 9px;
+  font-size: 11px;
   display: flex;
   flex-direction: column;
   gap: 9px;
 }
 footer > div:last-child > span {
-  font-size: 8px;
+  font-size: 10px;
   color: var(--muted);
 }
 dialog {
@@ -1276,7 +1275,7 @@ dialog .dialog-close {
 .bout-heading {
   display: flex;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1.2px;
   color: var(--muted);
   margin-bottom: 14px;
@@ -1295,7 +1294,7 @@ dialog .dialog-close {
   padding: 20px;
 }
 .pick-button small {
-  font-size: 7px;
+  font-size: 10px;
   letter-spacing: 1px;
   color: var(--accent);
 }
@@ -1306,7 +1305,7 @@ dialog .dialog-close {
   overflow-wrap: anywhere;
 }
 .pick-button span {
-  font-size: 9px;
+  font-size: 11px;
   color: var(--muted);
 }
 .pick-button.picked {
@@ -1416,7 +1415,7 @@ dialog .dialog-close {
     gap: 17px;
   }
   .header-actions .button {
-    font-size: 9px;
+    font-size: 11px;
     padding: 9px;
   }
   .hero-copy {
@@ -1436,7 +1435,7 @@ dialog .dialog-close {
   }
   .hero-bottom {
     gap: 12px;
-    font-size: 6px;
+    font-size: 10px;
   }
   .event-info {
     padding: 24px;
@@ -1591,10 +1590,10 @@ dialog .dialog-close {
     display: block;
   }
   .top-kicker > span:last-child {
-    font-size: 6px;
+    font-size: 10px;
   }
   .top-kicker {
-    font-size: 7px;
+    font-size: 10px;
     letter-spacing: 1px;
   }
   .ticker {
@@ -1629,7 +1628,7 @@ dialog .dialog-close {
     font-size: 31px;
   }
   .section-heading .text-link {
-    font-size: 9px;
+    font-size: 11px;
     max-width: 110px;
     line-height: 1.6;
     text-align: right;
@@ -1678,14 +1677,14 @@ dialog .dialog-close {
     letter-spacing: -6px;
   }
   .fighter-card-footer > span {
-    font-size: 6px;
+    font-size: 10px;
     letter-spacing: 0.8px;
   }
   .fighter-card-body p {
-    font-size: 9px;
+    font-size: 11px;
   }
   .portrait-label {
-    font-size: 5px;
+    font-size: 10px;
     letter-spacing: 0.8px;
   }
   .lab-banner {
@@ -1765,13 +1764,13 @@ dialog .dialog-close {
     gap: 6px;
   }
   .comparison-row > span {
-    font-size: 8px;
+    font-size: 10px;
   }
   .result-caption > span {
-    font-size: 6px;
+    font-size: 10px;
   }
   .result-names {
-    font-size: 7px;
+    font-size: 10px;
   }
   .saved-layout {
     grid-template-columns: 1fr;
@@ -1819,10 +1818,10 @@ dialog .dialog-close {
     font-size: 22px;
   }
   .pick-button small {
-    font-size: 6px;
+    font-size: 10px;
   }
   .pick-button span {
-    font-size: 8px;
+    font-size: 10px;
   }
   .bout-vs {
     font-size: 16px;
@@ -1868,7 +1867,7 @@ dialog .dialog-close {
     gap: 8px;
   }
   .hero-buttons a {
-    font-size: 9px !important;
+    font-size: 11px !important;
     padding: 12px 10px !important;
   }
   .fighter-grid {
@@ -1885,7 +1884,7 @@ dialog .dialog-close {
     height: 28px;
   }
   .hero-bottom {
-    font-size: 5px;
+    font-size: 10px;
   }
   .page-heading h1 {
     font-size: 47px;
@@ -1925,14 +1924,14 @@ dialog .dialog-close {
   padding: 15px 18px;
   background: var(--surface);
   border: 1px solid var(--line);
-  font-size: 9px;
+  font-size: 11px;
   color: var(--muted);
   line-height: 1.7;
   margin-bottom: 22px;
 }
 .ranking-source > span:last-child {
   margin-left: auto;
-  font-size: 8px;
+  font-size: 10px;
 }
 .ranking-toolbar {
   align-items: center;
@@ -1940,7 +1939,7 @@ dialog .dialog-close {
 .ranking-category-label {
   margin: 0;
   gap: 6px;
-  font-size: 8px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -1977,7 +1976,7 @@ dialog .dialog-close {
   margin: 9px 0 0;
 }
 .ranking-panel .badge {
-  font-size: 7px;
+  font-size: 10px;
 }
 .ranking-table-wrapper {
   overflow-x: auto;
@@ -1990,7 +1989,7 @@ dialog .dialog-close {
 #ranking-table thead th {
   padding: 12px 10px;
   border-bottom: 1px solid var(--line);
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 1px;
   color: var(--muted);
   font-weight: 500;
@@ -2043,7 +2042,7 @@ button.ranking-name:hover {
   color: var(--accent);
 }
 .ranking-status {
-  font-size: 8px;
+  font-size: 10px;
   color: var(--muted);
 }
 .ranking-sidebar {
@@ -2057,7 +2056,7 @@ button.ranking-name:hover {
     var(--surface);
 }
 .ranking-leader .eyebrow {
-  font-size: 7px;
+  font-size: 10px;
 }
 .ranking-leader-symbol {
   font: 700 100px/0.95 var(--display);
@@ -2153,7 +2152,7 @@ button.ranking-name:hover {
     font-size: 29px;
   }
   #ranking-table thead th {
-    font-size: 7px;
+    font-size: 10px;
     padding: 10px 5px;
   }
   #ranking-table tbody td,
@@ -2164,14 +2163,14 @@ button.ranking-name:hover {
     font-size: 20px;
   }
   .ranking-status {
-    font-size: 7px;
+    font-size: 10px;
   }
   #ranking-table tbody th {
     width: 42px;
   }
   .ranking-source {
     padding: 13px;
-    font-size: 8px;
+    font-size: 10px;
   }
   .ranking-toolbar .search-box {
     width: 100%;
@@ -2221,7 +2220,7 @@ button.ranking-name:hover {
 }
 .fighter-card-body .fighter-division {
   color: var(--ink);
-  font-size: 9px;
+  font-size: 11px;
   margin-bottom: 7px;
   font-weight: 600;
 }
@@ -2238,7 +2237,7 @@ button.ranking-name:hover {
   margin: 19px 0;
 }
 .official-facts dt {
-  font-size: 8px;
+  font-size: 10px;
   color: var(--muted);
   margin-bottom: 6px;
 }
@@ -2249,7 +2248,7 @@ button.ranking-name:hover {
   overflow-wrap: anywhere;
 }
 .official-facts > p {
-  font-size: 8px;
+  font-size: 10px;
   line-height: 1.7;
   color: var(--muted);
 }
@@ -2265,7 +2264,7 @@ button.ranking-name:hover {
     min-width: 130px;
   }
   .profile-layout .official-facts .badge {
-    font-size: 7px;
+    font-size: 10px;
   }
 }
 
@@ -2274,7 +2273,7 @@ button.ranking-name:hover {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-size: 8px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 5px 8px;
@@ -2313,7 +2312,7 @@ button.ranking-name:hover {
   padding-top: 12px;
 }
 .card-combat-info dt {
-  font-size: 6px;
+  font-size: 10px;
   letter-spacing: 1px;
   color: var(--muted);
 }
@@ -2350,7 +2349,7 @@ button.ranking-name:hover {
   margin: 7px 0 9px;
 }
 .combat-stance .eyebrow {
-  font-size: 7px;
+  font-size: 10px;
 }
 .martial-base {
   border-bottom: 1px solid var(--line);
@@ -2381,7 +2380,7 @@ button.ranking-name:hover {
   font-size: 27px;
 }
 .championship-heading .badge {
-  font-size: 7px;
+  font-size: 10px;
 }
 .championship-history ul {
   list-style: none;
@@ -2415,12 +2414,12 @@ button.ranking-name:hover {
 }
 .belt-row small {
   display: block;
-  font-size: 8px;
+  font-size: 10px;
   color: var(--muted);
   margin-top: 5px;
 }
 .belt-status {
-  font-size: 7px;
+  font-size: 10px;
   letter-spacing: 1px;
   padding: 5px 7px;
   background: #c5a46910;
@@ -2435,12 +2434,12 @@ button.ranking-name:hover {
 .belt-scope,
 .no-belts {
   color: var(--muted);
-  font-size: 9px;
+  font-size: 11px;
   line-height: 1.9;
   margin-top: 12px;
 }
 .belt-scope {
-  font-size: 8px;
+  font-size: 10px;
 }
 .view[data-view="luchadores"] .filters {
   width: 100%;
@@ -2473,10 +2472,10 @@ button.ranking-name:hover {
     gap: 10px;
   }
   .card-combat-info dd {
-    font-size: 9px;
+    font-size: 11px;
   }
   .championship-badge {
-    font-size: 7px;
+    font-size: 10px;
     letter-spacing: 0.4px;
     padding: 4px 5px;
     gap: 5px;
@@ -2623,7 +2622,7 @@ button.ranking-name:hover {
 .followed-ranking { font-size: 10px; color: var(--muted); line-height: 1.7; margin: 16px 0; }
 .followed-next { border-top: 1px solid var(--line); padding: 16px 0; }
 .followed-next p { font-size: 12px; line-height: 1.7; }
-.followed-next .eyebrow { font-size: 9px; margin-bottom: 10px; }
+.followed-next .eyebrow { font-size: 11px; margin-bottom: 10px; }
 .followed-next strong { font: 700 22px var(--display); }
 .followed-fighter > .outline-button { margin-top: 6px; white-space: normal; }
 @media (max-width: 1000px) { .following-fighter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -2824,7 +2823,7 @@ button.ranking-name:hover {
 .hero-agenda h2 > span { font-size: 16px; font-weight: 400; }
 .hero-bouts { width: 100%; }
 .hero-bouts > div { padding: 14px 0; border-bottom: 1px solid #ffffff20; }
-.hero-bouts .eyebrow { font-size: 9px; color: #aaa9a4; }
+.hero-bouts .eyebrow { font-size: 11px; color: #aaa9a4; }
 .hero-bouts p { margin: 8px 0; font-size: 16px; font-weight: 600; line-height: 1.5; }
 .hero-bouts p span { color: var(--accent); }
 .hero-bouts small { color: #aaa9a4; }
@@ -2908,7 +2907,7 @@ button.ranking-name:hover {
   }
 
   #fighter-dialog .large .portrait-initials { font-size: 86px; top: 72px; }
-  #fighter-dialog .portrait-label { font-size: 8px; }
+  #fighter-dialog .portrait-label { font-size: 10px; }
   #fighter-dialog .official-facts { margin-top: 20px; }
   #fighter-dialog .official-facts dl { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   #fighter-dialog .profile-copy > a,
@@ -2989,7 +2988,7 @@ button.ranking-name:hover {
   text-transform: uppercase;
 }
 .legend-badge svg { width: 23px; height: 23px; flex: 0 0 auto; }
-.legend-status { border-left: 1px solid currentColor; padding-left: 8px; font-size: 9px; font-weight: 400; }
+.legend-status { border-left: 1px solid currentColor; padding-left: 8px; font-size: 11px; font-weight: 400; }
 .fighter-card.fighter-legend, .followed-fighter.fighter-legend {
   border-top: 3px solid #ae8cde;
   background: linear-gradient(135deg, #a78bfa0c, transparent 55%), var(--surface);

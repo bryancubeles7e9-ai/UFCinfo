@@ -17,7 +17,7 @@ for (const category of feed.categories) {
 let options;
 globalThis.fetch = async (_, opts) => { options = opts; return {ok: true, json: async () => feed}; };
 assert.equal(await refreshRankings(), true);
-assert.equal(options.cache, 'no-store');
+assert.equal(options.cache, 'no-cache');
 assert.equal(rankingSnapshot.synchronizedAt, feed.synchronizedAt);
 const previous = JSON.stringify(rankingCategories);
 const previousBelts = JSON.stringify(directoryFighters.map(f => f.championships));
