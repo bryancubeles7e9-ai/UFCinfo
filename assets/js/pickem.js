@@ -28,7 +28,7 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
     const item = current();
     return item ? item.event.id !== state.nextEventId || item.closed || now() >= item.closesAt : !eventData() || isClosed(eventData());
   }
-  function useState(next) {
+  function useState(next, mergeGuest = true) {
     confirmedAt = null;
     const wasNext = selected === state?.nextEventId;
     state = next; serverOffset = next.serverTime - Date.now();
@@ -37,6 +37,13 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
     }
     const item = current();
     draft = item ? picksFor(item.event, item.picks) : {}; draftRevision = item?.revision || 0; dirty = false;
+    // Picks made as a guest in this browser join the account automatically (the account's own picks win).
+    if (mergeGuest && next.authenticated && item && !closed()) {
+      const guest = picksFor(item.event, local[item.event.id]);
+      const added = Object.keys(guest).filter(key => !(key in draft));
+      if (added.length) { draft = {...guest, ...draft}; dirty = true; message = 'Hemos añadido los picks que hiciste sin cuenta. Guárdalos para que cuenten.'; return true; }
+    }
+    return false;
   }
   function pastEvent() {
     const archived = state?.events.map(item => item.event) || [];
@@ -104,7 +111,7 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
     const locked = closed(), count = Object.keys(picks).length;
     const favoriteIds = getFavoriteIds();
     const options = state?.events.filter(r => r.joined || r.event.id === state.nextEventId) || [];
-    root.innerHTML = `<p class="data-note">Elige un luchador y una de sus cuatro opciones por combate. Inicia sesión y guarda antes del cierre.</p>${options.length ? `<label>Velada <select id="pickem-event">${options.map(r=>`<option value="${esc(r.event.id)}" ${r.event.id===selected?'selected':''}>${esc(r.event.title)} · ${esc(date(r.event.date))}</option>`).join('')}</select></label>` : ''}
+    root.innerHTML = `<p class="data-note">Elige un luchador y una de sus cuatro opciones por combate. Inicia sesión y guarda antes del cierre.</p>${options.length ? `<label class="pickem-event-picker"><span>Velada</span> <select id="pickem-event">${options.map(r=>`<option value="${esc(r.event.id)}" ${r.event.id===selected?'selected':''}>${esc(r.event.title)} · ${esc(date(r.event.date))}</option>`).join('')}</select></label>` : ''}
       <div class="panel pickem-summary"><div><p class="eyebrow">TUS PRONÓSTICOS UFC</p><h2 translate="no">${esc(event.title)}</h2><p translate="no">${esc(date(event.date))}</p><p class="data-note">Hora local · inicio de la principal</p></div><div class="pickem-progress"><strong>${count} / ${event.bouts.filter(b=>!b._void).length}</strong><span>Pronósticos elegidos</span><progress max="${Math.max(1,event.bouts.length)}" value="${count}" aria-label="Pronósticos elegidos"></progress></div></div>
       <p><strong>100 o 350 puntos por acierto</strong> · Victoria general: 100 puntos si gana tu luchador. KO/TKO, sumisión o decisión: 350 puntos solo si aciertas ganador y método; no se suman a los 100. Si fallas el método, son 0 puntos. Empates, no contest y cancelaciones son neutrales: ni acierto ni error.</p>
       <p class="data-note">El cierre usa el primer bloque oficial disponible; sin horarios completos, cuatro horas antes de la principal. Lo controla el servidor.</p>
@@ -114,9 +121,9 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
       <div class="panel pickem-save">
       ${authenticated ? `<p>Los pronósticos guardados participan en el ranking con tu nombre de usuario.</p><p><span>Nombre de usuario</span>: <strong translate="no">${esc(state.alias || "")}</strong></p>
       <button class="button small" id="pickem-save" ${locked || busy || !count || !dirty ? 'disabled' : ''}>${busy?'Guardando…':'Guardar pronósticos'}</button>
-      ${!locked && Object.keys(picksFor(event,local[event.id])).length ? '<button class="outline-button small" id="pickem-import">Recuperar picks de este navegador</button>' : ''}` : '<p>Modo invitado: tus picks son locales y no puntúan. Inicia sesión para participar en el ranking.</p><button class="button small" id="pickem-login">Iniciar sesión</button>'}
+` : '<p>Modo invitado: tus picks son locales y no puntúan. Inicia sesión para participar en el ranking.</p><button class="button small" id="pickem-login">Iniciar sesión</button>'}
       <p id="pickem-save-status" role="status" class="${confirmedAt !== null && !dirty ? 'is-confirmed' : ''}">${confirmedAt !== null && !dirty ? confirmationIcon(Date.now() - confirmedAt) : ''}<span>${esc(message || (dirty ? 'Cambios sin guardar' : authenticated ? (item?.joined ? 'Pronósticos guardados en tu cuenta' : 'Elige tus ganadores y guarda para participar') : 'Guardado local en este navegador'))}</span></p>
-      <button class="outline-button small" id="pickem-refresh" ${busy?'disabled':''}>Recargar pronósticos guardados</button></div>
+      ${authenticated ? `<button type="button" class="text-link pickem-refresh" id="pickem-refresh" ${busy?'disabled':''}>Volver a cargar lo guardado en tu cuenta</button>` : ''}</div>
       <div class="pickem-grid">${event.bouts.map((bout,i)=>`<fieldset class="pickem-bout ${resultBorder(bout,item)}${followedBoutFighters(bout,favoriteIds).length ? ' is-followed' : ''}"><legend>${esc({'main':'Principal','prelims':'Preliminares','early-prelims':'Preliminares previas'}[bout.section]||'Combate')} · ${esc(boutDivisionLabel(bout.division))}</legend>${followedBoutBadge(bout,favoriteIds)}${bout._void?'<p>Combate anulado</p>':renderBoutTime(event,bout)}<div class="pickem-options">${[bout.red,bout.blue].map((name,side)=>{
         const fighter=directoryFighterByName(name), chosen=selection(picks[pickKey(bout)],bout);
         const labels={general:'Victoria sin especificar',ko:'KO/TKO',submission:'Sumisión',decision:'Decisión'};
@@ -159,7 +166,7 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
       // Preserve unsaved edits until explicitly saved or the event is changed.
       if(!discard && dirty && state?.authenticated && data.authenticated) {
         state=data; serverOffset=data.serverTime-Date.now();
-      } else useState(data);
+      } else if (useState(data, !discard)) { render(); await loadRanking(); return; }
       message='';
     } catch { if(ticket!==generation)return; message='No se pudo comprobar la cuenta o la cartelera. Reintenta antes de guardar.'; }
     render(); await loadRanking();
@@ -176,7 +183,6 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
     const pager=e.target.closest('[data-rank-page]');
     if(pager){page+=Number(pager.dataset.rankPage);await loadRanking();return;}
     const event=eventData(); if(!event||busy)return;
-    if(e.target.closest('#pickem-import')&&!closed()){confirmedAt=null;draft=picksFor(event,local[event.id]);dirty=true;message='Cambios sin guardar';render();return;}
     if(e.target.closest('#pickem-save')) {
       if(closed()) {render();return;}
       confirmedAt=null;busy=true;message='Guardando…';render();const ticket=++generation;
@@ -186,7 +192,7 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
         if(!session.user)throw Error('Inicia sesión para guardar tus pronósticos.');
         const data=await accountRequest('me/pickem',{method:'PUT',csrf:session.csrf,body:{eventId:event.id,picks:picksFor(event,draft),revision:draftRevision}});
         if(ticket!==generation)return;
-        useState(data);confirmedAt=Date.now();message='Pronósticos guardados en tu cuenta';
+        if(local[event.id]){delete local[event.id];try{storage.setItem('ufcinfo-pickem-v1',JSON.stringify(local));}catch{}}useState(data);confirmedAt=Date.now();message='Pronósticos guardados en tu cuenta';
       } catch(error){if(ticket!==generation)return;message=error.status ? error.message : 'No se ha confirmado el guardado. Actualiza los datos y vuelve a intentarlo.';}
       finally{busy=false;render();}
       await loadRanking();return;

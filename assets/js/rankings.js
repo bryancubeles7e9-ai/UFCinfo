@@ -3,6 +3,19 @@ import { synchronizeChampionships } from "./fighter-championships.js";
 import { getLocale } from "./i18n.js";
 import { directoryFighterByName, fighterNameLink } from "./fighter-directory.js";
 import { $, escapeHTML as esc } from "./utils.js";
+
+// UFC.com publishes the date as English text without a year ("Tuesday, Nov. 24"): show it in the visitor's language.
+const rankingMonths = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+export function publishedLabel(snapshot) {
+  const text = String(snapshot?.published || '');
+  const match = text.match(/([A-Za-z]{3})[a-z]*\.?\s+(\d{1,2})/);
+  const month = match ? rankingMonths.indexOf(match[1].toLowerCase()) : -1;
+  if (month < 0) return text;
+  const checked = new Date(snapshot.synchronizedAt || snapshot.consulted || Date.now());
+  let year = checked.getUTCFullYear();
+  if (month > checked.getUTCMonth() + 1) year -= 1;
+  return new Date(Date.UTC(year, month, Number(match[2]), 12)).toLocaleDateString(getLocale(), {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC'});
+}
 import { rankingPath } from "./share-paths.js";
 
 // Respaldo del top 15 de «All Rankings», no de «All Meta Rankings».
@@ -608,7 +621,7 @@ export function initializeRankings() {
     .join("");
   function render() {
     $("#ranking-source-date").textContent =
-      `Versión publicada: ${rankingSnapshot.published || "Fecha no indicada por UFC"} · Última consulta: ${new Date(rankingSnapshot.synchronizedAt || rankingSnapshot.consulted + "T00:00:00Z").toLocaleString(getLocale())}`;
+      `Versión publicada: ${publishedLabel(rankingSnapshot) || "Fecha no indicada por UFC"} · Última consulta: ${new Date(rankingSnapshot.synchronizedAt || rankingSnapshot.consulted + "T00:00:00Z").toLocaleString(getLocale(), {dateStyle: "medium", timeStyle: "short"})}`;
     const category =
       rankingCategories.find((c) => c.id === $("#ranking-category").value) ||
       rankingCategories[0];
@@ -632,7 +645,7 @@ export function initializeRankings() {
     $("#ranking-result-count").textContent =
       `${rows.length} de ${category.names.length} luchadores${showChampion ? " + campeón" : ""}`;
     $("#ranking-table-body").innerHTML =
-      `${showChampion ? `<tr class="champion-row"><th scope="row"><span class="rank-champion">C</span></th><td>${nameLink(category.champion)}</td><td><span class="badge orange">CAMPEÓN</span></td></tr>` : ""}${rows.map((row) => `<tr><th scope="row"><span class="rank-position ${row.rank <= 3 ? "podium" : ""}">${String(row.rank).padStart(2, "0")}</span></th><td>${nameLink(row.name)}</td><td>${localProfile(row.name) ? '<span class="ranking-status">Ficha disponible</span>' : '<span class="ranking-status muted">Lista UFC</span>'}</td></tr>`).join("")}`;
+      `${showChampion ? `<tr class="champion-row"><th scope="row"><span class="rank-champion">C</span></th><td>${nameLink(category.champion)}</td><td><span class="badge orange">CAMPEÓN</span></td></tr>` : ""}${rows.map((row) => `<tr><th scope="row"><span class="rank-position ${row.rank <= 3 ? "podium" : ""}">${String(row.rank).padStart(2, "0")}</span></th><td>${nameLink(row.name)}</td><td>${localProfile(row.name) ? '' : '<span class="ranking-status muted">Sin ficha en UFCinfo</span>'}</td></tr>`).join("")}`;
     $("#ranking-table").hidden = !rows.length && !showChampion;
     $("#ranking-empty").hidden = rows.length > 0 || Boolean(showChampion);
   }

@@ -1,6 +1,6 @@
 import { fullName } from './data.js';
 import { directoryFighterByName } from './fighter-directory.js';
-import { escapeHTML as esc, formatDate } from './utils.js';
+import { escapeHTML as esc, formatDate, formatLocation } from './utils.js';
 import { countryLabel } from './fighter-country.js';
 import { getLocale } from './i18n.js';
 import { isLegend, legendBadge, renderLegacyDetails } from './fighter-legacy.js';
@@ -41,7 +41,7 @@ export function renderFighterHistory(fighter, events) {
 }
 export function fighterProfile(fighter, { follow, events, active = 'summary' }) {
   if (isLegend(fighter)) return legendProfile(fighter, { follow });
-  const facts = [['País representado', countryLabel(fighter, getLocale()) || 'No indicado'], ['División', fighter.division], ['Apodo', fighter.nickname || 'No indicado'], ['Estilo indicado por UFC', fighter.officialStyle || 'No indicado'], ['Lugar de nacimiento', fighter.birthplace || 'No indicado']];
+  const facts = [['País representado', countryLabel(fighter, getLocale()) || 'No indicado'], ['División', fighter.division], ['Apodo', fighter.nickname || 'No indicado'], ['Estilo indicado por UFC', fighter.officialStyle || 'No indicado'], ['Lugar de nacimiento', fighter.birthplace ? formatLocation(fighter.birthplace) : 'No indicado']];
   const metrics = [['Récord · V-D-E', fighter.record || '—'], ['Altura', fighter.heightCm == null ? '—' : `${fighter.heightCm} cm`], ['Alcance', fighter.reachCm == null ? '—' : `${fighter.reachCm} cm`]];
   const tabs = [['summary','Resumen'], ['statistics','Estadísticas'], ['history','Historial']];
   return `<div class="fighter-profile ${hasCurrentBelt(fighter) ? 'is-champion' : ''} ${isLegend(fighter) ? 'is-legend' : ''}">

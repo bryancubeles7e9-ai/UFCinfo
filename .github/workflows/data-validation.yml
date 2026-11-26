@@ -61,6 +61,7 @@ jobs:
           node tests/test-pickem-view.mjs
           node tests/test-legends.mjs
           node tests/test-share-paths.mjs
+          node tests/test-places.mjs
           node tests/test-offline.mjs
           node scripts/build-share-index.mjs --check
 
