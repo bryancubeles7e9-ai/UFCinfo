@@ -4276,5 +4276,77 @@
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-318",
     "countryConsulted": "2026-10-14"
+  },
+  "david-onama": {
+    "code": "UG",
+    "country": "Uganda",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-01-2025",
+    "countryConsulted": "2026-11-26"
+  },
+  "amanda-ribas": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-26-2025",
+    "countryConsulted": "2026-11-26"
+  },
+  "mizuki-inoue": {
+    "code": "JP",
+    "country": "Japan",
+    "countrySource": "https://www.ufc.com/event/ufc-321",
+    "countryConsulted": "2026-11-26"
+  },
+  "dominick-cruz": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-13-2022",
+    "countryConsulted": "2026-11-26"
+  },
+  "chris-weidman": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-310",
+    "countryConsulted": "2026-11-26"
+  },
+  "robbie-lawler": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-290",
+    "countryConsulted": "2026-11-26"
+  },
+  "donald-cerrone": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-276",
+    "countryConsulted": "2026-11-26"
+  },
+  "rashad-evans": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-225",
+    "countryConsulted": "2026-11-26"
+  },
+  "michael-bisping": {
+    "code": "GB",
+    "country": "United Kingdom",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-shanghai-nov-25-2017",
+    "countryConsulted": "2026-11-26"
+  },
+  "vitor-belfort": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-224",
+    "countryConsulted": "2026-11-26"
+  },
+  "anderson-silva": {
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2020",
+    "countryConsulted": "2026-11-26"
+  },
+  "jon-jones": {
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-309",
+    "countryConsulted": "2026-11-26"
   }
 }

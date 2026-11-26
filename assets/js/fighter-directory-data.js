@@ -19523,7 +19523,7 @@ export const additionalFighters = [
     "birthplace": "Azerbaijan",
     "officialStyle": "Wrestler",
     "heightCm": 183,
-    "reachCm": null,
+    "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/HASANOV_FARMAN_L_06-27.png?itok=_Ex8iG6f",
     "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/HASANOV_FARMAN_L_06-27.png?itok=_Ex8iG6f",
     "consulted": "2026-10-13",
@@ -19719,7 +19719,7 @@ export const additionalFighters = [
     "birthplace": "Umea, Sweden",
     "officialStyle": "MMA",
     "heightCm": 183,
-    "reachCm": null,
+    "reachCm": 192,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/BERGGREN_THEODOR_R_06-27.png?itok=OcKsL0Tw",
     "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/BERGGREN_THEODOR_R_06-27.png?itok=OcKsL0Tw",
     "consulted": "2026-10-13",
@@ -19866,7 +19866,7 @@ export const additionalFighters = [
     "birthplace": "Azerbaijan",
     "officialStyle": null,
     "heightCm": 178,
-    "reachCm": null,
+    "reachCm": 185,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/ABDULLAYEV_TAHIR_L_06-27.png?itok=OjpS2GZ7",
     "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/ABDULLAYEV_TAHIR_L_06-27.png?itok=OjpS2GZ7",
     "consulted": "2026-10-13",
@@ -20503,7 +20503,7 @@ export const additionalFighters = [
     "birthplace": "Tbilisi, Georgia",
     "officialStyle": "MMA",
     "heightCm": 183,
-    "reachCm": null,
+    "reachCm": 183,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/CHOKHELI_LEVAN_R_06-20.png?itok=36IHyuqN",
     "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-06/CHOKHELI_LEVAN_R_06-20.png?itok=36IHyuqN",
     "consulted": "2026-10-13",
@@ -25599,7 +25599,7 @@ export const additionalFighters = [
     "birthplace": "United States",
     "officialStyle": null,
     "heightCm": 168,
-    "reachCm": null,
+    "reachCm": 174,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/HOPE_DAKOTA_R_04-04.png?itok=sMKQySli",
     "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2026-04/HOPE_DAKOTA_R_04-04.png?itok=sMKQySli",
     "consulted": "2026-10-13",
@@ -29479,8 +29479,8 @@ export const additionalFighters = [
     "nickname": "The Honey Badger",
     "birthplace": "Georgia",
     "officialStyle": "MMA",
-    "heightCm": null,
-    "reachCm": null,
+    "heightCm": 170,
+    "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/SHADOW_Fighter_fullLength_RED.png?VersionId=niQpXmYT1tbiETIDAxTsCI5FDbiNt9kI&itok=DfVddCfn",
     "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/image/fighter_images/SHADOW_Fighter_fullLength_RED.png?VersionId=niQpXmYT1tbiETIDAxTsCI5FDbiNt9kI&itok=DfVddCfn",
     "consulted": "2026-10-20",
@@ -29774,8 +29774,8 @@ export const additionalFighters = [
     "nickname": "",
     "birthplace": null,
     "officialStyle": null,
-    "heightCm": null,
-    "reachCm": null,
+    "heightCm": 171,
+    "reachCm": 170,
     "photoSource": "https://ufc.com/images/styles/athlete_bio_full_body/s3/image/2022-02/womens-silhouette-RED-corner.png?itok=SXsY1AgG",
     "image": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/image/2022-02/womens-silhouette-RED-corner.png?itok=SXsY1AgG",
     "consulted": "2026-11-25",
@@ -31464,7 +31464,11 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/david-onama",
       "statisticsConsulted": "2026-11-25"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "code": "UG",
+    "country": "Uganda",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-01-2025",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-amanda-ribas",
@@ -31509,7 +31513,11 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/amanda-ribas",
       "statisticsConsulted": "2026-11-25"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-26-2025",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-mizuki-inoue",
@@ -31555,7 +31563,11 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/mizuki-inoue",
       "statisticsConsulted": "2026-11-25"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "code": "JP",
+    "country": "Japan",
+    "countrySource": "https://www.ufc.com/event/ufc-321",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-trent-miller",
@@ -31916,7 +31928,11 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-13-2022",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-chris-weidman",
@@ -31983,7 +31999,11 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-310",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-demetrious-johnson",
@@ -32117,7 +32137,11 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-290",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-jose-aldo",
@@ -32248,7 +32272,11 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-276",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-rashad-evans",
@@ -32315,7 +32343,11 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-225",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-michael-bisping",
@@ -32382,7 +32414,11 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "GB",
+    "country": "United Kingdom",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-shanghai-nov-25-2017",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-ronda-rousey",
@@ -32769,7 +32805,11 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-224",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-wanderlei-silva",
@@ -32896,7 +32936,11 @@ export const additionalFighters = [
       "statisticsConsulted": "2026-11-26"
     },
     "photoCredit": "UFC",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2020",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-jens-pulver",
@@ -34144,6 +34188,10 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/jon-jones",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-309",
+    "countryConsulted": "2026-11-26"
   }
 ];
