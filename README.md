@@ -168,15 +168,14 @@ Más información: [Funcionamiento de rumores](docs/RUMORES.md) y [criterios del
 
 ## Próxima fase
 
-El proyecto busca ser útil para otros seguidores, autosostenible y una muestra de desarrollo personal. La web ya está online; el siguiente objetivo es prepararla para un lanzamiento público más amplio.
+UFCinfo empieza como proyecto personal y muestra de desarrollo, aspira a ser una **comunidad internacional de aficionados a las MMA** y, cuando tenga público, a cubrir sus costes. La base técnica (fase 1) quedó completada en noviembre de 2026. Las siguientes fases, con plazos orientativos:
 
-1. **Cerrar la validación de las automatizaciones** con la próxima velada (resultados, récords y estadísticas tras el combate).
-2. **Pulir la experiencia:** velocidad y datos incompletos. El móvil ya cuenta con barra inferior de navegación y controles adaptados.
-3. **Probarla con seguidores de UFC** y corregir los problemas que encuentren al usarla sin explicaciones.
-4. **Preparar el lanzamiento público:** dominio propio, presentación y difusión del proyecto.
-5. **Explorar la aplicación móvil**, valorando primero una web instalable (PWA).
+1. **Lanzamiento público internacional** (dic. 2026 – feb. 2027): dominio propio, direcciones indexables por luchador y velada, inglés al mismo nivel que el español, privacidad y copias de seguridad.
+2. **Aplicación instalable (PWA) y notificaciones** (mar. – may. 2027): instalación desde el navegador y avisos de combates, cierre de Pick’em y resultados.
+3. **Comunidad** (jun. – ago. 2027): ligas privadas de Pick’em, perfiles públicos opcionales y compartir pronósticos.
+4. **Otras promotoras de MMA** (sep. – nov. 2027), empezando por una con fuentes oficiales fiables.
 
-La aplicación, la PWA y la ampliación a otras promotoras de MMA son objetivos futuros, no funciones disponibles actualmente. Consulta también la [hoja de ruta](docs/ROADMAP.md).
+A lo largo de todas las fases se busca la sostenibilidad económica (publicidad discreta, patrocinios y, más adelante, funciones opcionales). La publicación en tiendas de aplicaciones queda para cuando la PWA demuestre demanda. Detalles e indicadores de cada fase en la [hoja de ruta](docs/ROADMAP.md).
 
 ## Ejecutar el proyecto en local
 

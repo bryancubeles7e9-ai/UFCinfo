@@ -1,46 +1,83 @@
 # Hoja de ruta de UFCinfo
 
-Actualizada el 13 de octubre de 2026. Los siguientes objetivos siguen este orden de prioridad, sin fechas de entrega fijadas. Son trabajo previsto; cada fase se dará por completada tras comprobar su funcionamiento.
+Actualizada el 26 de noviembre de 2026. Sustituye a la versión del 13 de octubre.
 
-## 1. Pulir la web y el funcionamiento de las APIs
+## Visión
 
-Consolidar la web actual para que sea cómoda de usar y sus datos se actualicen de forma fiable.
+UFCinfo empieza como **proyecto personal y muestra de desarrollo**, crece hasta ser una **comunidad internacional de aficionados a las MMA** y, cuando tenga público, **cubre sus costes** sin renunciar a la calidad de los datos.
 
-- Corregir errores y mejorar el diseño, la navegación y el rendimiento en móvil y ordenador.
-- Revisar las fichas, las carteleras, los rankings y los rumores para detectar datos incompletos, duplicados o inconsistentes.
-- Comprobar las APIs, los importadores y las automatizaciones de principio a fin: consulta, validación, guardado y publicación.
-- Revisar horarios, consumo de consultas, filtros y recuperación ante fallos, conservando la última información válida.
-- Mostrar fechas de consulta claras y facilitar la detección de actualizaciones fallidas.
+**Meta a un año (noviembre de 2027):** una web y una aplicación instalable usadas de forma habitual por aficionados de habla hispana e inglesa, con Pick’em entre amigos, avisos de los combates que interesan a cada usuario y más de una promotora de MMA.
 
-**Resultado esperado:** una web estable, con las funciones principales verificadas y actualizaciones habituales que requieran poca intervención manual.
+### Principios que no cambian
 
-## 2. Publicar y lanzar la página web
+- **Datos verificados:** fuentes oficiales, fechas de consulta visibles y ningún dato inventado.
+- **Automatización fiable:** las actualizaciones no deben depender de trabajo manual; un fallo se detecta y avisa.
+- **Privacidad:** se recoge solo lo necesario y nunca se venden datos de los usuarios.
+- **Sin apuestas:** Pick’em es un juego de pronósticos sin dinero.
 
-La web ya está accesible en Render. Esta fase consiste en consolidar su publicación y preparar el lanzamiento para usuarios externos.
+Los plazos son orientativos. Cada fase se da por cerrada al comprobar sus indicadores, no por fecha.
 
-- Revisar el alojamiento, el despliegue y el acceso público.
-- Verificar HTTPS, persistencia de las cuentas y copias de seguridad.
-- Preparar la presentación del proyecto y la información necesaria para que un visitante entienda cómo usarlo.
-- Comprobar los recorridos principales desde distintos dispositivos: consultar eventos, abrir fichas, seguir luchadores y acceder a una cuenta.
-- Recoger las primeras incidencias y comentarios de usuarios para ajustar la web.
+## Fase 1 · Base estable — completada en noviembre de 2026
 
-**Resultado esperado:** una versión pública lista para compartir y utilizar de forma habitual.
+Web pulida en móvil y ordenador, datos de UFC.com actualizados dos veces al día, perfiles nuevos incorporados solos desde carteleras y rankings, despliegue solo tras pasar las pruebas, comprobación de la web cada 15 minutos y avisos por email ante fallos.
 
-## 3. Implementar una aplicación móvil
+**Pendiente para cerrarla del todo:** comprobar con la próxima velada que resultados, récords y estadísticas se completan solos, y añadir copias de seguridad externas de las cuentas y del Pick’em.
 
-Con la web y sus automatizaciones consolidadas, desarrollar una aplicación móvil que permita consultar los datos y seguir a los luchadores desde el teléfono.
+## Fase 2 · Lanzamiento público internacional — diciembre de 2026 a febrero de 2027
 
-- Definir el alcance de la primera versión y elegir la tecnología y las plataformas.
-- Adaptar la navegación y las funciones principales a la experiencia de una aplicación.
-- Reutilizar las fuentes de datos y el sistema de cuentas y seguimiento cuando corresponda.
-- Probar la aplicación en dispositivos reales y preparar su distribución.
+Preparar la web para que la encuentren y la usen personas que no conocen el proyecto.
 
-**Resultado esperado:** una primera aplicación funcional, conectada con los datos del proyecto. La tecnología, las plataformas y el canal de distribución quedan por decidir.
+- **Dominio propio** y presentación clara del proyecto.
+- **Direcciones indexables:** pasar de secciones con `#` a direcciones reales por luchador, velada y ranking (por ejemplo, `/luchadores/ilia-topuria`), con título, descripción e imagen para buscadores y redes sociales. Es el requisito principal para crecer por búsquedas.
+- **Inglés al mismo nivel que el español** en textos, fichas y resúmenes; catalán como idioma adicional.
+- **Privacidad y cookies:** política de privacidad, aviso de cookies conforme a la normativa europea y analítica respetuosa con la privacidad para medir visitas sin perfilar a nadie.
+- **Copias de seguridad** cifradas y probadas de la base de datos.
+- **Prueba con usuarios reales** de distintos países y corrección de lo que encuentren.
 
-## Más adelante: otras promotoras de MMA
+**Indicadores:** dominio activo, fichas y veladas que aparecen en Google en español e inglés, y primeros 100 usuarios registrados.
 
-Mantener como objetivo futuro la incorporación de otras promotoras, con sus eventos, luchadores y resultados. Su elección y las fuentes de datos se decidirán después de las prioridades anteriores.
+## Fase 3 · Aplicación instalable y notificaciones — marzo a mayo de 2027
+
+Convertir la web en una **aplicación instalable (PWA)** desde el navegador, sin pasar todavía por las tiendas.
+
+- Icono en la pantalla de inicio, apertura a pantalla completa y consulta sin conexión de los datos ya descargados.
+- **Notificaciones** que el usuario elige: próximo combate de un luchador seguido, cierre inminente de Pick’em y resultados disponibles (respetando el modo sin spoilers).
+- Funcionamiento verificado en Android y en iPhone (las notificaciones en iPhone requieren instalar la aplicación).
+
+**Indicadores:** la aplicación se instala en Android e iPhone, y una parte significativa de los usuarios activa al menos un aviso.
+
+## Fase 4 · Comunidad y Pick’em con amigos — junio a agosto de 2027
+
+Dar motivos para volver cada semana y para invitar a otros.
+
+- **Ligas privadas** de Pick’em con enlace de invitación y clasificación propia.
+- **Perfiles públicos** opcionales con historial de pronósticos y logros.
+- **Compartir** pronósticos y resultados como imagen o enlace.
+- Medidas contra abusos: límites, informes de usuarios y nombres moderados.
+- Revisar si la base de datos actual (SQLite) aguanta el volumen o conviene migrar a PostgreSQL.
+
+**Indicadores:** ligas activas en cada velada y crecimiento de usuarios por invitación.
+
+## Fase 5 · Otras promotoras de MMA — septiembre a noviembre de 2027
+
+- Generalizar el modelo de datos para que eventos, luchadores y rankings indiquen su promotora.
+- Incorporar primero una promotora con fuentes oficiales fiables (candidatas: PFL y ONE Championship), con la misma exigencia de verificación que UFC.
+- Luchadores que han pasado por varias promotoras con una sola ficha.
+- Filtros por promotora en Carteleras, Luchadores y Pick’em.
+
+**Indicadores:** al menos una promotora más con carteleras, resultados y perfiles actualizados solos.
+
+## Sostenibilidad económica — a lo largo de todas las fases
+
+- **Objetivo inicial:** cubrir los costes de alojamiento (Render y su disco) y de las APIs de pago, como la de rumores.
+- Activar la **publicidad discreta** ya preparada (Google AdSense) cuando haya tráfico suficiente y la gestión de consentimiento esté lista.
+- Valorar **patrocinios** afines y, más adelante, **funciones opcionales de pago** que no limiten lo esencial (por ejemplo, ligas privadas ampliadas o estadísticas avanzadas).
+- Reactivar la búsqueda de rumores cuando su coste esté cubierto.
+
+## Más adelante · Aplicación en tiendas
+
+Solo si la PWA demuestra demanda: publicar en **Google Play** empaquetando la propia PWA (bajo coste) y, después, valorar la **App Store**, que exige más trabajo y una cuota anual.
 
 ## Mejoras continuas
 
-Seguir realizando pequeños retoques y correcciones durante todas las fases. La ampliación de perfiles y datos, y las mejoras de la experiencia móvil, forman parte de ese mantenimiento continuo.
+Durante todas las fases: correcciones, rendimiento, accesibilidad, revisión de datos incompletos y mantenimiento de las automatizaciones y de sus credenciales.
