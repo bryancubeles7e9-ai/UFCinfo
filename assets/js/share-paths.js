@@ -25,10 +25,13 @@ function fighterSlugs() {
 export const fighterPath = fighter => `/luchadores/${fighterSlugs().byId.get(fighter.id) || pathSlug(fighter.id)}`;
 export const fighterIdFromSlug = slug => fighterSlugs().bySlug.get(slug) || null;
 export const eventPath = event => `/carteleras/${pathSlug(event.id)}`;
+// /rankings/peso-ligero, /rankings/peso-paja-femenino, /rankings/libra-por-libra-masculino.
+const rankingName = label => /^Libra por libra/.test(label) ? label : label.replace(/ · Masculino$/, '');
+export const rankingPath = category => `/rankings/${pathSlug(rankingName(category.label))}`;
 
 export function parseSharePath(pathname) {
-  const match = /^\/(luchadores|carteleras)\/([a-z0-9-]{1,120})\/?$/.exec(pathname || '');
-  return match ? { kind: match[1] === 'luchadores' ? 'fighter' : 'event', slug: match[2] } : null;
+  const match = /^\/(luchadores|carteleras|rankings)\/([a-z0-9-]{1,120})\/?$/.exec(pathname || '');
+  return match ? { kind: { luchadores: 'fighter', carteleras: 'event', rankings: 'ranking' }[match[1]], slug: match[2] } : null;
 }
 
 export const shareUrl = path => new URL(path, location.origin).href;

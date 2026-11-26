@@ -271,6 +271,10 @@ class AccountAPITests(unittest.TestCase):
         home = self.request("GET", "/")[1].decode()
         self.assertIn(f'<link rel="canonical" href="{self.origin}/"', home)
         self.assertIn(b"/luchadores/ilia-topuria", self.request("GET", "/sitemap.xml")[1])
+        page = self.request("GET", "/rankings/peso-ligero")[1].decode()
+        self.assertIn("<title>Ranking UFC · Peso ligero", page)
+        self.assertEqual(self.request("GET", "/rankings/no-existe")[0], 404)
+        self.assertIn(b"/rankings/peso-paja-femenino", self.request("GET", "/sitemap.xml")[1])
 
     def test_home_preview_image_and_installable_app(self):
         home = self.request("GET", "/")[1].decode()

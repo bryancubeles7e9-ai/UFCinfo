@@ -95,7 +95,8 @@ def home_poster():
 
 def share_pages():
     data = share_index()
-    return [f"luchadores/{slug}" for slug in data.get("fighters", {})] + [f"carteleras/{slug}" for slug in data.get("events", {})]
+    return ([f"luchadores/{slug}" for slug in data.get("fighters", {})] + [f"carteleras/{slug}" for slug in data.get("events", {})]
+            + [f"rankings/{slug}" for slug in data.get("rankings", {})])
 
 
 def accepts_gzip(header):
@@ -505,11 +506,11 @@ def make_handler(database, public_origin, fighter_ids):
                 self.end_headers()
                 self.wfile.write(payload)
                 return
-            share = re.fullmatch(r"/(luchadores|carteleras)/([a-z0-9-]{1,120})/?", path)
+            share = re.fullmatch(r"/(luchadores|carteleras|rankings)/([a-z0-9-]{1,120})/?", path)
             if share:
                 # Shareable fighter or event address: the app opens that profile or card,
                 # and the page carries its own title, description and photo for previews.
-                section = "fighters" if share[1] == "luchadores" else "events"
+                section = {"luchadores": "fighters", "carteleras": "events", "rankings": "rankings"}[share[1]]
                 entry = share_index().get(section, {}).get(share[2])
                 if not entry:
                     return self.send_error(404)

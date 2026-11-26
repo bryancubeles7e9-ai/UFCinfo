@@ -104,11 +104,11 @@ La validación de GitHub (`--check`) falla si el paquete no coincide con el cód
 
 ## Enlaces para compartir e indexar
 
-Cada luchador y cada velada tienen su propia dirección: **/luchadores/ilia-topuria** o **/carteleras/ufc-335**. El servidor responde con la web normal, pero con el título, la descripción, la foto y la dirección canónica de esa página, así que al compartirla en WhatsApp o en redes se ve su vista previa, y Google puede indexarla. Al abrirla, la web muestra la sección y abre la ficha o la cartelera. Mientras una ficha o una cartelera está abierta, la barra de direcciones muestra su enlace; al cerrarla, vuelve a la portada.
+Cada luchador, cada velada y cada ranking tienen su propia dirección: **/luchadores/ilia-topuria**, **/carteleras/ufc-335** o **/rankings/peso-ligero** (las categorías femeninas terminan en `-femenino`). El servidor responde con la web normal, pero con el título, la descripción, la foto y la dirección canónica de esa página, así que al compartirla en WhatsApp o en redes se ve su vista previa, y Google puede indexarla. Al abrirla, la web muestra la sección y abre la ficha o la cartelera. Mientras una ficha o una cartelera está abierta, la barra de direcciones muestra su enlace; al cerrarla, vuelve a la portada.
 
-- Los botones **Compartir ficha** y **Compartir cartelera** usan el menú de compartir del móvil o copian el enlace.
+- Los botones **Compartir ficha**, **Compartir cartelera** y **Compartir ranking** usan el menú de compartir del móvil o copian el enlace. La vista previa de un ranking muestra la foto del campeón (o del número uno libra por libra) y el podio.
 - Los datos de cada dirección están en `assets/data/share-index.json`, que genera `node scripts/build-share-index.mjs`. Las actualizaciones automáticas de datos lo regeneran en el mismo commit, y la validación (`--check`) falla si queda desactualizado.
-- El mapa del sitio (`/sitemap.xml`) incluye todas las fichas y las veladas.
+- El mapa del sitio (`/sitemap.xml`) incluye todas las fichas, veladas y rankings.
 - Una dirección que no existe muestra la página 404 de UFCinfo.
 
 ## Privacidad y aviso legal

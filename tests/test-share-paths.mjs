@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 globalThis.localStorage = { getItem() {}, setItem() {} };
-const { pathSlug, fighterPath, fighterIdFromSlug, eventPath, parseSharePath } = await import('../assets/js/share-paths.js');
+const { pathSlug, fighterPath, fighterIdFromSlug, eventPath, rankingPath, parseSharePath } = await import('../assets/js/share-paths.js');
+const { rankingCategories } = await import('../assets/js/rankings.js');
 const { directoryFighters, directoryFighterByName } = await import('../assets/js/fighter-directory.js');
 const { boutShareUrl } = await import('../assets/js/bout-links.js');
 
@@ -24,4 +25,9 @@ const index = JSON.parse(readFileSync(new URL('../assets/data/share-index.json',
 assert.equal(Object.keys(index.fighters).length, directoryFighters.length);
 assert.match(index.fighters['ilia-topuria'].title, /^Ilia Topuria/);
 assert.ok(index.events['ufc-335'].image);
+assert.deepEqual(parseSharePath('/rankings/peso-ligero'), { kind: 'ranking', slug: 'peso-ligero' });
+const rankingPaths = rankingCategories.map(rankingPath);
+assert.equal(new Set(rankingPaths).size, rankingCategories.length);
+assert.ok(rankingPaths.includes('/rankings/peso-ligero') && rankingPaths.includes('/rankings/peso-paja-femenino') && rankingPaths.includes('/rankings/libra-por-libra-masculino'));
+assert.equal(Object.keys(index.rankings).length, rankingCategories.length);
 console.log(`PASS: ${paths.length} direcciones de luchador únicas, veladas, rutas no válidas rechazadas y enlaces de combate en la portada`);

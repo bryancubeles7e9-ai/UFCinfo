@@ -788,11 +788,16 @@ renderAll({deferHidden: true});
 const sharedPath = parseSharePath(location.pathname);
 let sharedFighterId = null;
 if (sharedPath) {
-  history.replaceState(history.state, '', location.pathname + (sharedPath.kind === 'fighter' ? '#luchadores' : '#eventos'));
+  history.replaceState(history.state, '', location.pathname + ({fighter: '#luchadores', event: '#eventos', ranking: '#rankings'})[sharedPath.kind]);
   if (sharedPath.kind === 'fighter') sharedFighterId = fighterIdFromSlug(sharedPath.slug);
-  else pendingSharedEvent = sharedPath.slug;
+  else if (sharedPath.kind === 'event') pendingSharedEvent = sharedPath.slug;
 }
 navigate();
+if (sharedPath?.kind === 'ranking') {
+  // The rankings section has no dialog to keep the address in: show the category, then go back to /.
+  document.dispatchEvent(new CustomEvent('ufcinfo:show-ranking', {detail: sharedPath.slug}));
+  history.replaceState(history.state, '', '/#rankings');
+}
 if (sharedFighterId) showProfile(sharedFighterId, {animate: true});
 else if (sharedPath?.kind === 'fighter') resetSharePath();
 updateCountdowns();
