@@ -16,9 +16,9 @@ STATE = ROOT / 'assets/data/fighter-photos.json'
 spec = importlib.util.spec_from_file_location('records', ROOT / 'scripts/sync-ufc-fighter-records.py')
 records = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(records)
-# Visually verified neutral portrait; UFC still publishes a historical belt photo.
-NEUTRAL = {'shevchenko': {'url': 'https://a.espncdn.com/i/headshots/mma/players/full/2554705.png',
-    'source': 'ESPN', 'sourceUrl': 'https://www.espn.com/mma/fighter/_/id/2554705/valentina-shevchenko'}}
+# Former champions whose only official UFC portrait shows the belt they held, kept by the owner's choice
+# (an outside headshot looked out of place next to every other UFC photo).
+KEEP_TITLE_PHOTO = {'shevchenko'}
 
 class PhotoParser(HTMLParser):
     def __init__(self):
@@ -47,7 +47,8 @@ def choose_photo(url, fighter, champion, previous=None):
     held_belt = any(b.get('status') == 'current' and b.get('type') == 'undisputed' for b in fighter.get('championships', []))
     stale_title_photo = any(url == previous.get(k, {}).get('url') for k in ('champion', 'bmf')) or (held_belt and url == original)
     if not champion and ('BELT' in urlparse(url).path.upper() or stale_title_photo):
-        return NEUTRAL.get(fighter['id'])  # Never label an explicit belt image as neutral.
+        if fighter['id'] not in KEEP_TITLE_PHOTO:
+            return None  # Never label an explicit belt image as neutral.
     return {'url': url, 'source': 'UFC', 'sourceUrl': fighter['source']}
 
 def fetch(fighter):

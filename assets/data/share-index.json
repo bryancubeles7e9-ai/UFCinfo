@@ -30,12 +30,6 @@
    "description": "Weili Zhang: Peso mosca femenino · récord 26-4-0. Ficha, estadísticas, historial y próximos combates en UFCinfo.",
    "image": "assets/images/fighters/zhang-weili.png"
   },
-  "valentina-shevchenko": {
-   "id": "shevchenko",
-   "title": "Valentina Shevchenko «Bullet» — UFCinfo",
-   "description": "Valentina Shevchenko: Peso mosca femenino · récord 26-4-1. Ficha, estadísticas, historial y próximos combates en UFCinfo.",
-   "image": "assets/images/fighters/valentina-shevchenko.png"
-  },
   "alexander-volkanovski": {
    "id": "volkanovski",
    "title": "Alexander Volkanovski «The Great» — UFCinfo",
@@ -143,6 +137,12 @@
    "title": "Khamzat Chimaev «Borz» — UFCinfo",
    "description": "Khamzat Chimaev: Peso medio · récord 15-1-0. Ficha, estadísticas, historial y próximos combates en UFCinfo.",
    "image": "assets/images/fighters/khamzat-chimaev.png"
+  },
+  "valentina-shevchenko": {
+   "id": "shevchenko",
+   "title": "Valentina Shevchenko «Bullet» — UFCinfo",
+   "description": "Valentina Shevchenko: Peso mosca femenino · récord 26-4-1. Ficha, estadísticas, historial y próximos combates en UFCinfo.",
+   "image": "assets/images/fighters/valentina-shevchenko.png"
   },
   "joshua-van": {
    "id": "ufc-joshua-van",
