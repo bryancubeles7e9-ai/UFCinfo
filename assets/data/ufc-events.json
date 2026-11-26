@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "UFC",
   "sourceUrl": "https://www.ufc.com",
-  "synchronizedAt": "2026-11-26T11:43:16.992112+00:00",
+  "synchronizedAt": "2026-11-26T11:54:11.938425+00:00",
   "events": [
     {
       "id": "ufc-337",
@@ -22,7 +22,7 @@
       "sectionSchedule": {
         "eventDate": "2027-02-20T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-337",
-        "checkedAt": "2026-11-26T11:43:16.992112+00:00",
+        "checkedAt": "2026-11-26T11:54:11.938425+00:00",
         "starts": {
           "prelims": "2027-02-20T20:00:00+00:00",
           "main": "2027-02-20T22:00:00+00:00"
@@ -48,7 +48,7 @@
       "sectionSchedule": {
         "eventDate": "2027-02-13T22:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-13-2027",
-        "checkedAt": "2026-11-26T11:43:16.992112+00:00",
+        "checkedAt": "2026-11-26T11:54:11.938425+00:00",
         "starts": {
           "prelims": "2027-02-13T20:00:00+00:00",
           "main": "2027-02-13T22:00:00+00:00"
@@ -168,7 +168,7 @@
       "sectionSchedule": {
         "eventDate": "2027-02-07T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-february-06-2027",
-        "checkedAt": "2026-11-26T11:43:16.992112+00:00",
+        "checkedAt": "2026-11-26T11:54:11.938425+00:00",
         "starts": {
           "prelims": "2027-02-06T22:00:00+00:00",
           "main": "2027-02-07T01:00:00+00:00"
@@ -391,7 +391,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-31T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-336",
-        "checkedAt": "2026-11-26T11:43:16.992112+00:00",
+        "checkedAt": "2026-11-26T11:54:11.938425+00:00",
         "starts": {
           "early-prelims": "2027-01-30T22:00:00+00:00",
           "prelims": "2027-01-31T00:00:00+00:00",
@@ -531,7 +531,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-24T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
-        "checkedAt": "2026-11-26T11:43:16.992112+00:00",
+        "checkedAt": "2026-11-26T11:54:11.938425+00:00",
         "starts": {
           "prelims": "2027-01-23T22:00:00+00:00",
           "main": "2027-01-24T01:00:00+00:00"
@@ -1016,7 +1016,7 @@
       "sectionSchedule": {
         "eventDate": "2027-01-17T01:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-january-16-2027",
-        "checkedAt": "2026-11-26T11:43:16.992112+00:00",
+        "checkedAt": "2026-11-26T11:54:11.938425+00:00",
         "starts": {
           "prelims": "2027-01-16T22:00:00+00:00",
           "main": "2027-01-17T01:00:00+00:00"
@@ -1345,7 +1345,7 @@
       "sectionSchedule": {
         "eventDate": "2026-12-13T02:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-335",
-        "checkedAt": "2026-11-26T11:43:16.992112+00:00",
+        "checkedAt": "2026-11-26T11:54:11.938425+00:00",
         "starts": {
           "main": "2026-12-13T02:00:00+00:00",
           "early-prelims": "2026-12-12T22:00:00+00:00",
@@ -1484,7 +1484,7 @@
       "sectionSchedule": {
         "eventDate": "2026-12-05T18:00:00+00:00",
         "source": "https://www.ufc.com/event/ufc-fight-night-december-05-2026",
-        "checkedAt": "2026-11-26T11:43:16.992112+00:00",
+        "checkedAt": "2026-11-26T11:54:11.938425+00:00",
         "starts": {
           "main": "2026-12-05T18:00:00+00:00",
           "prelims": "2026-12-05T15:00:00+00:00"
@@ -2103,7 +2103,7 @@
       ],
       "scheduleSource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
       "resultsSource": "https://www.ufc.com/event/ufc-fight-night-november-21-2026",
-      "resultsCheckedAt": "2026-11-26T11:43:19.016899+00:00"
+      "resultsCheckedAt": "2026-11-26T11:54:13.080594+00:00"
     },
     {
       "id": "ufc-334",
@@ -2433,7 +2433,7 @@
       ],
       "eventKind": "numbered",
       "resultsSource": "https://www.ufc.com/event/ufc-334",
-      "resultsCheckedAt": "2026-11-26T11:43:19.016899+00:00"
+      "resultsCheckedAt": "2026-11-26T11:54:13.080594+00:00"
     },
     {
       "id": "ufc-fight-night-november-07-2026",
@@ -9083,7 +9083,7 @@
     }
   ],
   "resultsVerification": {
-    "checkedAt": "2026-11-26T11:43:19.016899+00:00",
+    "checkedAt": "2026-11-26T11:54:13.080594+00:00",
     "verifiedIds": [
       "ufc-fight-night-november-21-2026",
       "ufc-334"
@@ -9091,7 +9091,7 @@
     "failedIds": []
   },
   "scheduleVerification": {
-    "checkedAt": "2026-11-26T11:43:16.992112+00:00",
+    "checkedAt": "2026-11-26T11:54:11.938425+00:00",
     "verifiedIds": [
       "ufc-fight-night-december-05-2026",
       "ufc-335",
