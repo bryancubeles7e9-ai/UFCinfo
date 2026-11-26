@@ -124,7 +124,6 @@ export const catalan = {
   "Guardado automático en este navegador": "Desament automàtic en aquest navegador",
   "No se ha podido guardar. Tus elecciones se perderán al cerrar esta página.": "No s’ha pogut desar. Les teves eleccions es perdran en tancar aquesta pàgina.",
   "Tu elección": "La teva elecció",
-  "Elegir ganador": "Tria el guanyador",
   "Combates pendientes de anuncio.": "Combats pendents d’anunci.",
 
   "hora local · inicio de la principal": "hora local · inici de la principal",
@@ -172,7 +171,7 @@ export const catalan = {
 "Cartelera principal y preliminares disponibles.":"Cartellera principal i preliminars disponibles.",
 "Combates anunciados; pueden cambiar antes del evento.":"Combats anunciats; poden canviar abans de l’esdeveniment.",
 
-  "Filtros y orden": "Filtres i ordre", "Limpiar filtros": "Netejar filtres",
+  "Filtros y orden": "Filtres i ordre", 
   "Numerados": "Numerats",
   "Especiales": "Especials",
   "No hay eventos UFC disponibles.": "No hi ha esdeveniments UFC disponibles.",
