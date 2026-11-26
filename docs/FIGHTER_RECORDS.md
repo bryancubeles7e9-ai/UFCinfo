@@ -41,3 +41,9 @@ Si la ficha de UFC.com publica el récord pero le faltan estadísticas principal
 ## Correcciones oficiales confirmadas
 
 Si UFC.com rebaja un total (por ejemplo, las finalizaciones) o ajusta ligeramente el récord, el perfil queda en `profileReview` con la fecha en que se vio por primera vez. Si la ficha oficial sigue mostrando **exactamente los mismos datos durante 72 horas**, la sincronización acepta la corrección sola, la guarda en `fighter-records.json` con `acceptedCorrection` (fecha, motivo y récord anterior) y desde entonces compara con ese perfil en lugar del catálogo. Un cambio en esas 72 horas reinicia el plazo. Nunca se aceptan solos los datos no válidos, las estadísticas puestas a cero ni una caída del récord de más de dos combates: esos casos siguen esperando una revisión con `scripts/probe-ufc-profiles.py`.
+
+## Completar huecos de las fichas
+
+`python3 scripts/fill-profile-gaps.py` revisa los perfiles con altura, alcance, estadísticas o país vacíos y los rellena desde fuentes oficiales, **sin sobrescribir nunca un dato existente**: altura, alcance y estadísticas salen del perfil del luchador en UFC.com; el país representado, solo de la bandera que aparece junto a él en una cartelera oficial enlazada desde ese perfil (nunca del lugar de nacimiento). Con `--dry-run` solo informa.
+
+Ejecución del 26 de noviembre de 2026: 12 países (entre ellos Jon Jones, Anderson Silva, Michael Bisping, Dominick Cruz y Robbie Lawler), 7 alcances y 2 alturas. Quedan 70 perfiles con algún hueco porque UFC.com no publica el dato: sobre todo alcance de debutantes y de pioneros, y el país de leyendas cuyas carteleras antiguas no muestran banderas. El récord de Maurice Smith, Bas Rutten y Tito Ortiz figura como «No indicado» porque su perfil oficial muestra 0-0-0. La web muestra «—» o «No indicado» en esos casos, sin inventar valores.

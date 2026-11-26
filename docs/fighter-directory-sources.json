@@ -7927,7 +7927,11 @@
     "aliases": [
       "David Onama"
     ],
-    "source": "https://www.ufc.com/athlete/david-onama"
+    "source": "https://www.ufc.com/athlete/david-onama",
+    "code": "UG",
+    "country": "Uganda",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-november-01-2025",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-amanda-ribas",
@@ -7935,7 +7939,11 @@
     "aliases": [
       "Amanda Ribas"
     ],
-    "source": "https://www.ufc.com/athlete/amanda-ribas"
+    "source": "https://www.ufc.com/athlete/amanda-ribas",
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-july-26-2025",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-mizuki-inoue",
@@ -7944,7 +7952,11 @@
       "Mizuki",
       "Mizuki Inoue"
     ],
-    "source": "https://www.ufc.com/athlete/mizuki-inoue"
+    "source": "https://www.ufc.com/athlete/mizuki-inoue",
+    "code": "JP",
+    "country": "Japan",
+    "countrySource": "https://www.ufc.com/event/ufc-321",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-trent-miller",
@@ -8046,7 +8058,11 @@
       }
     ],
     "championshipHistoryConsulted": "2026-11-26",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-august-13-2022",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-chris-weidman",
@@ -8076,7 +8092,11 @@
       }
     ],
     "championshipHistoryConsulted": "2026-11-26",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-310",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-demetrious-johnson",
@@ -8136,7 +8156,11 @@
       }
     ],
     "championshipHistoryConsulted": "2026-11-26",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-290",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-jose-aldo",
@@ -8166,7 +8190,11 @@
       }
     ],
     "championshipHistoryConsulted": "2026-11-26",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-307",
+    "countryConsulted": "2026-10-10T22:09:21.078756+00:00"
   },
   {
     "id": "ufc-donald-cerrone",
@@ -8189,7 +8217,11 @@
     "legacyNote": "«Cowboy» disputó 38 combates en UFC y comparte el récord de bonificaciones (18); es segundo en victorias (23) y finalizaciones (16).",
     "championships": [],
     "championshipHistoryConsulted": "2026-11-26",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-276",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-rashad-evans",
@@ -8219,7 +8251,11 @@
       }
     ],
     "championshipHistoryConsulted": "2026-11-26",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-225",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-michael-bisping",
@@ -8249,7 +8285,11 @@
       }
     ],
     "championshipHistoryConsulted": "2026-11-26",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "GB",
+    "country": "United Kingdom",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-shanghai-nov-25-2017",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-ronda-rousey",
@@ -8414,7 +8454,11 @@
     "legacyNote": "Tiene el récord de finalizaciones en el primer asalto de UFC (13) y logró 10 nocauts en 90 segundos o menos.",
     "championships": [],
     "championshipHistoryConsulted": "2026-11-26",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-224",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-wanderlei-silva",
@@ -8467,7 +8511,11 @@
       }
     ],
     "championshipHistoryConsulted": "2026-11-26",
-    "legacyHighlights": []
+    "legacyHighlights": [],
+    "code": "BR",
+    "country": "Brazil",
+    "countrySource": "https://www.ufc.com/event/ufc-fight-night-october-31-2020",
+    "countryConsulted": "2026-11-26"
   },
   {
     "id": "ufc-jens-pulver",
@@ -9012,6 +9060,10 @@
         "source": "https://www.ufc.com/athlete/jon-jones"
       }
     ],
-    "championshipHistoryConsulted": "2026-11-26"
+    "championshipHistoryConsulted": "2026-11-26",
+    "code": "US",
+    "country": "United States",
+    "countrySource": "https://www.ufc.com/event/ufc-309",
+    "countryConsulted": "2026-11-26"
   }
 ]
