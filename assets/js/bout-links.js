@@ -9,6 +9,7 @@ const identity = name => {
 export const boutShareKey = bout => [bout.red, bout.blue].map(identity).sort().join('~');
 export function boutShareUrl(event, bout, base = location.href) {
   const url = new URL(base);
+  url.pathname = '/';  // Not the address of the card or profile that happens to be open.
   url.search = '';
   url.hash = 'eventos?' + new URLSearchParams({evento:event.id, combate:boutShareKey(bout)});
   return url.href;

@@ -1,4 +1,4 @@
-// Interface copy of the account privacy tools and legal links.
+// Interface copy of the account privacy tools, legal links and share buttons.
 export const privacyCopy = {
  "en": {
   "TUS DATOS": "YOUR DATA",
@@ -15,7 +15,12 @@ export const privacyCopy = {
   "Proyecto independiente de aficionados, sin relación con UFC. Fotografías y datos oficiales: UFC.": "Independent fan project, not affiliated with UFC. Official photos and data: UFC.",
   "Cuenta eliminada. Seguimos en modo invitado · Datos guardados en este navegador.": "Account deleted. You are now a guest · Data saved in this browser.",
   "La contraseña no es correcta.": "The password is incorrect.",
-  "Escribe tu contraseña para confirmar.": "Enter your password to confirm."
+  "Escribe tu contraseña para confirmar.": "Enter your password to confirm.",
+  "Compartir ficha": "Share profile",
+  "Compartir cartelera": "Share fight card",
+  "Enlace copiado. Ya puedes pegarlo donde quieras.": "Link copied. You can paste it anywhere.",
+  "No se ha podido copiar. Enlace:": "Could not copy. Link:",
+  "La velada compartida no está disponible en los datos actuales.": "The shared event is not available in the current data."
  },
  "ca": {
   "TUS DATOS": "LES TEVES DADES",
@@ -32,6 +37,11 @@ export const privacyCopy = {
   "Proyecto independiente de aficionados, sin relación con UFC. Fotografías y datos oficiales: UFC.": "Projecte independent d’aficionats, sense relació amb UFC. Fotografies i dades oficials: UFC.",
   "Cuenta eliminada. Seguimos en modo invitado · Datos guardados en este navegador.": "Compte eliminat. Continues en mode convidat · Dades desades en aquest navegador.",
   "La contraseña no es correcta.": "La contrasenya no és correcta.",
-  "Escribe tu contraseña para confirmar.": "Escriu la contrasenya per confirmar."
+  "Escribe tu contraseña para confirmar.": "Escriu la contrasenya per confirmar.",
+  "Compartir ficha": "Comparteix la fitxa",
+  "Compartir cartelera": "Comparteix la cartellera",
+  "Enlace copiado. Ya puedes pegarlo donde quieras.": "Enllaç copiat. Ja el pots enganxar on vulguis.",
+  "No se ha podido copiar. Enlace:": "No s’ha pogut copiar. Enllaç:",
+  "La velada compartida no está disponible en los datos actuales.": "La vetllada compartida no està disponible a les dades actuals."
  }
 };

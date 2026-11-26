@@ -177,6 +177,10 @@ UFCinfo empieza como proyecto personal y muestra de desarrollo, aspira a ser una
 
 A lo largo de todas las fases se busca la sostenibilidad económica (publicidad discreta, patrocinios y, más adelante, funciones opcionales). La publicación en tiendas de aplicaciones queda para cuando la PWA demuestre demanda. Detalles e indicadores de cada fase en la [hoja de ruta](docs/ROADMAP.md).
 
+## Enlaces para compartir
+
+Cada luchador y cada velada tienen su propia dirección (por ejemplo, `/luchadores/ilia-topuria` o `/carteleras/ufc-335`), con su título y su foto en la vista previa de WhatsApp o de las redes, y aparecen en el mapa del sitio para los buscadores. Las fichas y las carteleras incluyen un botón para compartirlas. Detalles en `docs/PUBLICACION.md`.
+
 ## Privacidad
 
 La política de privacidad y el aviso legal están en **/privacidad**. Cada usuario puede descargar sus datos o eliminar su cuenta desde «Mi cuenta». El responsable y el contacto se configuran en Render (`PRIVACY_OWNER`, `PRIVACY_CONTACT`). Detalles en `docs/PUBLICACION.md`.

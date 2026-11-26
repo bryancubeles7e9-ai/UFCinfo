@@ -1,0 +1,44 @@
+// Shareable addresses: /luchadores/<nombre> and /carteleras/<velada>. The server answers them with
+// the page's own title, description and photo (assets/data/share-index.json) so links preview well.
+import { directoryFighters } from './fighter-directory.js';
+import { fullName } from './data.js';
+
+export const pathSlug = text => String(text || '').normalize('NFKD').replace(/[̀-ͯ]/g, '')
+  .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+
+let slugs = null;
+// One slug per fighter; namesakes fall back to their stable id.
+function fighterSlugs() {
+  if (slugs) return slugs;
+  const counts = new Map();
+  for (const f of directoryFighters) counts.set(pathSlug(fullName(f)), (counts.get(pathSlug(fullName(f))) || 0) + 1);
+  slugs = { byId: new Map(), bySlug: new Map() };
+  for (const f of directoryFighters) {
+    const name = pathSlug(fullName(f));
+    const slug = counts.get(name) > 1 || !name ? pathSlug(f.id) : name;
+    slugs.byId.set(f.id, slug);
+    slugs.bySlug.set(slug, f.id);
+  }
+  return slugs;
+}
+
+export const fighterPath = fighter => `/luchadores/${fighterSlugs().byId.get(fighter.id) || pathSlug(fighter.id)}`;
+export const fighterIdFromSlug = slug => fighterSlugs().bySlug.get(slug) || null;
+export const eventPath = event => `/carteleras/${pathSlug(event.id)}`;
+
+export function parseSharePath(pathname) {
+  const match = /^\/(luchadores|carteleras)\/([a-z0-9-]{1,120})\/?$/.exec(pathname || '');
+  return match ? { kind: match[1] === 'luchadores' ? 'fighter' : 'event', slug: match[2] } : null;
+}
+
+export const shareUrl = path => new URL(path, location.origin).href;
+
+// Native share sheet on phones; copy to the clipboard elsewhere. Returns what happened.
+export async function shareLink({ title, url }) {
+  if (navigator.share) {
+    try { await navigator.share({ title, url }); return 'shared'; }
+    catch (error) { if (error?.name === 'AbortError') return 'cancelled'; }
+  }
+  try { await navigator.clipboard.writeText(url); return 'copied'; }
+  catch { return 'failed'; }
+}

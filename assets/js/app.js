@@ -2,6 +2,7 @@ import {revealResultMotion, transitionCatalog, initializeFilterIndicators} from 
 import {confirmationIcon, confirmCopy, resetCopyConfirmation, highlightSection} from './action-feedback.js';
 import {enterEventBouts, pulseSharedBout, transitionEventList, revealBoutWinner} from './event-motion.js';
 import {boutShareKey, boutShareUrl, parseBoutLink, resolveBoutLink} from './bout-links.js';
+import {parseSharePath, fighterIdFromSlug, fighterPath, eventPath, pathSlug, shareUrl, shareLink} from './share-paths.js';
 import {renderHomeHero} from './home-hero.js';
 import {initializeClientErrors, initializeRestartNotice, registerUpdatingPage} from './client-errors.js';
 initializeClientErrors();
@@ -64,7 +65,23 @@ import { compactMartialInfo, renderMartialDetails, martialDetails } from "./figh
 
 const store = createStore();
 let account = null;
-let eventFeedReady = false, pendingBoutLink = null;
+let eventFeedReady = false, pendingBoutLink = null, pendingSharedEvent = null;
+// The address bar shows the shareable address of the open profile or card, and returns to / when it closes.
+function syncSharePath(path) {
+  if (location.pathname !== path) history.replaceState(history.state, '', path + location.hash);
+}
+function resetSharePath() {
+  if (!$("#fighter-dialog").open && !$("#event-dialog").open && location.pathname !== '/') history.replaceState(history.state, '', '/' + location.hash);
+}
+const shareButton = (path, title, label) => `<button type="button" class="outline-button small share-page-button" data-share-path="${esc(path)}" data-share-title="${esc(title)}"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v14"/></svg><span>${label}</span></button>`;
+function openPendingSharedEvent() {
+  if (!pendingSharedEvent || !eventFeedReady) return;
+  const slug = pendingSharedEvent;
+  pendingSharedEvent = null;
+  const event = eventsFeed.events.find(e => e.type === 'official' && pathSlug(e.id) === slug && !['cancelled', 'postponed'].includes(e.status));
+  if (event) showOfficialEvent(event.id);
+  else { resetSharePath(); toast('La velada compartida no está disponible en los datos actuales.'); }
+}
 let catalogView = 'compact';
 try { catalogView = localStorage.getItem('ufcinfo-catalog-view') === 'cards' ? 'cards' : 'compact'; } catch {}
 const rankings = initializeRankings();
@@ -173,7 +190,9 @@ function showOfficialEvent(id, focusBoutKey = undefined) {
   detail.dataset.sharedBoutKey = sharedKey;
   detail.dataset.officialEventId = id;
   detail.innerHTML = `<p class="eyebrow">${eventKindLabel(event)} · ${eventStatus(event)}</p><h2 class="event-dialog-title" translate="no">${esc(event.title)} · ${esc(event.subtitle)}</h2><p class="muted"><span translate="no">${esc(event.location)}</span> · ${formatDate(event.date)} · ${formatTime(event.date)} (hora local)</p>${missingSharedBout ? '<p class="bout-share-notice" role="status">La pelea compartida ya no está en esta cartelera.</p>' : ''}<p class="data-note">${upcoming ? "Combates anunciados; pueden cambiar antes del evento." : "Cartelera principal y preliminares disponibles."} ${esc(feedNote())}</p>${upcoming ? `<p class="data-note bout-schedule-note">${scheduleExplanation}</p>` : ""}${sectionNav}<div class="bout-list">${event.bouts.length ? event.bouts.map((b,i) => `${i === 0 || (b.section || 'main') !== (event.bouts[i-1].section || 'main') ? `<h3 class="bout-section-heading" id="event-section-${esc(b.section || 'main')}-${i}" tabindex="-1">${({'main':'Cartelera principal','prelims':'Preliminares','early-prelims':'Preliminares previas'})[b.section || 'main']}</h3>` : ''}<article class="bout${followedBoutFighters(b, store.state.favorites).length ? ' is-followed' : ''}${boutShareKey(b) === sharedKey ? ' is-shared' : ''}" id="event-bout-${i}" tabindex="-1">${followedBoutBadge(b, store.state.favorites)}<div class="bout-heading"><span>${(b.section || "main") === "main" && i === 0 ? "COMBATE ESTELAR" : (b.section || "main") === "main" && i === 1 ? "COMBATE COESTELAR" : `COMBATE ${i+1}`}</span><span>${esc(boutDivisionLabel(b.division))}</span></div><div class="official-bout-names"${winnerSide(event, b) ? ` data-winner-side="${winnerSide(event, b)}"` : ''}>${fighterNameLink(b.red, "bout-fighter-name")}<span>VS</span>${fighterNameLink(b.blue, "bout-fighter-name")}</div>${renderBoutTime(event, b)}<p class="official-result" data-result-key="${esc(boutPinKey(event,b))}">${isAwaitingResults(event) ? "Resultados pendientes de actualización" : upcoming ? "Combate anunciado · Sin resultado" : officialResult(b, boutPinKey(event, b))}</p><div class="bout-share-actions"><span class="bout-share-status" role="status" aria-live="polite"></span><button type="button" class="text-link bout-share-button" data-share-bout="${esc(boutShareKey(b))}" aria-label="Compartir combate: ${esc(b.red)} vs ${esc(b.blue)}"><svg class="share-link-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m10 13 4-4M8 16l-2 2a4.2 4.2 0 0 1-6-6l5-5a4.2 4.2 0 0 1 6 0M16 8l2-2a4.2 4.2 0 0 1 6 6l-5 5a4.2 4.2 0 0 1-6 0" transform="translate(1 0) scale(.9)"/></svg>${confirmationIcon()}<span>Compartir combate</span></button></div><label class="bout-share-fallback" hidden><span>Enlace del combate</span><input type="text" readonly value="${esc(boutShareUrl(event,b))}"></label></article>`).join("") : empty("La cartelera principal todavía no se ha anunciado.")}</div><a class="button small" href="${esc(event.source)}" target="_blank" rel="noopener noreferrer">Cartelera oficial UFC ›</a>`;
+  detail.querySelector('.event-dialog-title')?.insertAdjacentHTML('afterend', `<div class="share-page-row">${shareButton(eventPath(event), `${event.title}: ${event.subtitle}`, 'Compartir cartelera')}</div>`);
   if (!$("#event-dialog").open) $("#event-dialog").showModal();
+  syncSharePath(eventPath(event));
   if (entering) enterEventBouts(detail, Boolean(focusBoutKey));
   if (focusBoutKey) requestAnimationFrame(() => {
     if (!$("#event-dialog").open || detail.dataset.officialEventId !== id) return;
@@ -387,8 +406,9 @@ function showProfile(id, {animate = false} = {}) {
   const active = detail.dataset.fighterId === id ? detail.dataset.section || 'summary' : 'summary';
   detail.dataset.fighterId = id;
   detail.dataset.section = active;
-  detail.innerHTML = fighterProfile(fighter, {follow: followButton(fighter), events: eventsFeed.events, active});
+  detail.innerHTML = fighterProfile(fighter, {follow: followButton(fighter) + shareButton(fighterPath(fighter), fullName(fighter), 'Compartir ficha'), events: eventsFeed.events, active});
   if (!$("#fighter-dialog").open) $("#fighter-dialog").showModal();
+  syncSharePath(fighterPath(fighter));
   if (animate) countProfileFigures(detail); // Data refreshes re-render silently.
 }
 function updateCountdowns() {
@@ -517,9 +537,18 @@ document.addEventListener("click", (event) => {
     exportCalendar(calendar.dataset.saveEvent);
     return;
   }
+  const share = event.target.closest("[data-share-path]");
+  if (share) {
+    shareLink({title: share.dataset.shareTitle, url: shareUrl(share.dataset.sharePath)}).then(result => {
+      if (result === 'copied') { toast('Enlace copiado. Ya puedes pegarlo donde quieras.'); confirmCopy(share); }
+      else if (result === 'failed') toast(`No se ha podido copiar. Enlace: ${shareUrl(share.dataset.sharePath)}`);
+    });
+    return;
+  }
   const close = event.target.closest("[data-close]");
   if (close) close.closest("dialog").close();
 });
+for (const dialog of ["#fighter-dialog", "#event-dialog"]) $(dialog).addEventListener("close", resetSharePath);
 $("#cancel-confirm").addEventListener("click", () => {
   $("#confirm-dialog").close();
   confirmAction = null;
@@ -728,7 +757,17 @@ document.addEventListener(
 );
 account = initializeAccount({store, onChange: renderAll});
 renderAll();
+// Arriving through a shared address: show its section, then open the profile or the card.
+const sharedPath = parseSharePath(location.pathname);
+let sharedFighterId = null;
+if (sharedPath) {
+  history.replaceState(history.state, '', location.pathname + (sharedPath.kind === 'fighter' ? '#luchadores' : '#eventos'));
+  if (sharedPath.kind === 'fighter') sharedFighterId = fighterIdFromSlug(sharedPath.slug);
+  else pendingSharedEvent = sharedPath.slug;
+}
 navigate();
+if (sharedFighterId) showProfile(sharedFighterId, {animate: true});
+else if (sharedPath?.kind === 'fighter') resetSharePath();
 updateCountdowns();
 persist();
 setInterval(updateCountdowns, 1000);
@@ -745,6 +784,7 @@ async function updateEventFeed() {
   const officialId = $("#event-detail").dataset.officialEventId;
   if ($("#event-dialog").open && officialId) showOfficialEvent(officialId);
   openPendingBoutLink();
+  openPendingSharedEvent();
 }
 updateEventFeed();
 async function updateFighterRecords() {

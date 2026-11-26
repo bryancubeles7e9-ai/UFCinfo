@@ -50,7 +50,9 @@ jobs:
         if: steps.clock.outputs.due == 'true'
         run: |
           if [ ! -f assets/data/morning-retry.json ]; then exit 0; fi
-          git add assets/data/morning-retry.json assets/data/ufc-events.json assets/data/fighter-records.json assets/js/fighter-directory-data.js docs/fighter-directory-sources.json
+          # Titles and photos of the shareable /luchadores and /carteleras addresses follow the data.
+          node scripts/build-share-index.mjs || echo "::warning::No se pudo actualizar el índice de enlaces para compartir."
+          git add assets/data/morning-retry.json assets/data/ufc-events.json assets/data/fighter-records.json assets/js/fighter-directory-data.js docs/fighter-directory-sources.json assets/data/share-index.json
           if ! git diff --cached --quiet; then
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

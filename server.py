@@ -49,6 +49,27 @@ def compressed_file(target):
     return payload, etag
 
 
+_share = {"key": None, "data": {}}
+
+
+def share_index():
+    """assets/data/share-index.json (built by scripts/build-share-index.mjs), reloaded when it changes."""
+    target = ROOT / "assets/data/share-index.json"
+    try:
+        stat = target.stat()
+        key = (stat.st_mtime_ns, stat.st_size)
+        if _share["key"] != key:
+            _share.update(key=key, data=json.loads(target.read_text()))
+    except (OSError, ValueError):
+        return {}
+    return _share["data"]
+
+
+def share_pages():
+    data = share_index()
+    return [f"luchadores/{slug}" for slug in data.get("fighters", {})] + [f"carteleras/{slug}" for slug in data.get("events", {})]
+
+
 def accepts_gzip(header):
     for part in (header or "").split(","):
         name, _, params = part.strip().partition(";")
@@ -450,6 +471,27 @@ def make_handler(database, public_origin, fighter_ids):
                 self.end_headers()
                 self.wfile.write(payload)
                 return
+            share = re.fullmatch(r"/(luchadores|carteleras)/([a-z0-9-]{1,120})/?", path)
+            if share:
+                # Shareable fighter or event address: the app opens that profile or card,
+                # and the page carries its own title, description and photo for previews.
+                section = "fighters" if share[1] == "luchadores" else "events"
+                entry = share_index().get(section, {}).get(share[2])
+                if not entry:
+                    return self.send_error(404)
+                home = public_origin.rstrip("/") + "/"
+                payload = self.index_page(home, f"{home}{share[1]}/{share[2]}", entry).encode("utf-8")
+                self.send_response(200)
+                self.send_header("Content-Type", "text/html; charset=utf-8")
+                self.send_header("Vary", "Accept-Encoding")
+                if accepts_gzip(self.headers.get("Accept-Encoding")):
+                    payload = gzip.compress(payload, compresslevel=6, mtime=0)
+                    self.send_header("Content-Encoding", "gzip")
+                self.send_header("Content-Length", str(len(payload)))
+                self.send_header("Cache-Control", "no-cache")
+                self.end_headers()
+                self.wfile.write(payload)
+                return
             if path in {"/privacidad", "/privacy"}:
                 # Owner and contact come from Render's settings (PRIVACY_OWNER, PRIVACY_CONTACT), not from the repository.
                 owner = os.environ.get("PRIVACY_OWNER", "").strip() or "Pendiente de indicar"
@@ -472,11 +514,11 @@ def make_handler(database, public_origin, fighter_ids):
                     body = f"User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: {home}sitemap.xml\n"
                     content_type = "text/plain; charset=utf-8"
                 elif path == "/sitemap.xml":
-                    body = '<?xml version="1.0" encoding="UTF-8"?>\n' + f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>{escape(home)}</loc></url><url><loc>{escape(home)}privacidad</loc></url></urlset>\n'
+                    body = '<?xml version="1.0" encoding="UTF-8"?>\n' + '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{escape(home + page)}</loc></url>" for page in ["", "privacidad", *share_pages()]) + "</urlset>\n"
                     content_type = "application/xml; charset=utf-8"
                 else:
-                    body = (ROOT / "index.html").read_text()
-                    metadata = f'<link rel="canonical" href="{escape(home, quote=True)}" />\n<meta property="og:url" content="{escape(home, quote=True)}" />'
+                    body = self.index_page(home, home)
+                    metadata = ''
                     verification = os.environ.get("GOOGLE_SITE_VERIFICATION", "")
                     if verification:
                         metadata += f'\n<meta name="google-site-verification" content="{escape(verification, quote=True)}" />'
@@ -540,6 +582,25 @@ def make_handler(database, public_origin, fighter_ids):
             self.send_header("Content-Length", str(len(payload)))
             self.end_headers()
             self.wfile.write(payload)
+
+        def index_page(self, home, url, entry=None):
+            """index.html with absolute asset paths and, for shared addresses, that page's own metadata."""
+            body = (ROOT / "index.html").read_text()
+            # Shared addresses live below /, so relative asset paths must resolve from the root.
+            body = body.replace('<meta charset="utf-8" />', '<meta charset="utf-8" />\n    <base href="/" />', 1)
+            metadata = f'<link rel="canonical" href="{escape(url, quote=True)}" />\n<meta property="og:url" content="{escape(url, quote=True)}" />'
+            if entry:
+                title, description = escape(entry["title"]), escape(entry["description"], quote=True)
+                body = re.sub(r"<title>.*?</title>", f"<title>{title}</title>", body, count=1, flags=re.S)
+                body = re.sub(r'(<meta\s+name="description"\s+content=")[^"]*', lambda m: m[1] + description, body, count=1)
+                body = re.sub(r'(<meta property="og:title" content=")[^"]*', lambda m: m[1] + escape(entry["title"], quote=True), body, count=1)
+                body = re.sub(r'(<meta property="og:description" content=")[^"]*', lambda m: m[1] + description, body, count=1)
+                body = body.replace('<meta property="og:type" content="website" />', '<meta property="og:type" content="profile" />' if "/luchadores/" in url else '<meta property="og:type" content="website" />', 1)
+                image = entry.get("image")
+                if image:
+                    image = image if image.startswith("https://") else home + image.lstrip("/")
+                    metadata += f'\n<meta property="og:image" content="{escape(image, quote=True)}" />\n<meta name="twitter:card" content="summary_large_image" />'
+            return body.replace("</head>", metadata + "\n</head>", 1)
 
         def send_error(self, code, message=None, explain=None):
             # Visitors who follow a broken link get a branded page instead of Python's default one.

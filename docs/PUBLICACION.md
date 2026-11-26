@@ -63,6 +63,15 @@ Mientras Render reinicia el servidor tras un despliegue, su proxy responde 502�
 
 Límite: un visitante que entra por primera vez justo durante el reinicio aún no tiene el service worker instalado y ve la página de Render; desde su primera visita ya ve la pantalla propia.
 
+## Enlaces para compartir e indexar
+
+Cada luchador y cada velada tienen su propia dirección: **/luchadores/ilia-topuria** o **/carteleras/ufc-335**. El servidor responde con la web normal, pero con el título, la descripción, la foto y la dirección canónica de esa página, así que al compartirla en WhatsApp o en redes se ve su vista previa, y Google puede indexarla. Al abrirla, la web muestra la sección y abre la ficha o la cartelera. Mientras una ficha o una cartelera está abierta, la barra de direcciones muestra su enlace; al cerrarla, vuelve a la portada.
+
+- Los botones **Compartir ficha** y **Compartir cartelera** usan el menú de compartir del móvil o copian el enlace.
+- Los datos de cada dirección están en `assets/data/share-index.json`, que genera `node scripts/build-share-index.mjs`. Las actualizaciones automáticas de datos lo regeneran en el mismo commit, y la validación (`--check`) falla si queda desactualizado.
+- El mapa del sitio (`/sitemap.xml`) incluye todas las fichas y las veladas.
+- Una dirección que no existe muestra la página 404 de UFCinfo.
+
 ## Privacidad y aviso legal
 
 La página **/privacidad** (también /privacy) explica en español, inglés y catalán qué datos se guardan, para qué, durante cuánto tiempo, quién interviene (Render y GitHub), la única cookie técnica y cómo ejercer los derechos. La plantilla es `privacy.html`. El responsable y el correo de contacto **no están en el repositorio**: los toma de las variables `PRIVACY_OWNER` y `PRIVACY_CONTACT` de Render; si faltan, la página muestra «Pendiente de indicar».

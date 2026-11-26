@@ -35,7 +35,12 @@ class PublicationTests(unittest.TestCase):
                 status, sitemap = get("/sitemap.xml")
                 self.assertEqual(status, 200)
                 locations = ElementTree.fromstring(sitemap).findall("{*}url/{*}loc")
-                self.assertEqual([item.text for item in locations], [origin + "/", origin + "/privacidad"])
+                urls = [item.text for item in locations]
+                self.assertEqual(urls[:2], [origin + "/", origin + "/privacidad"])
+                # Every shareable fighter and event address is listed, all on the public origin.
+                self.assertIn(origin + "/luchadores/ilia-topuria", urls)
+                self.assertTrue(any(url.startswith(origin + "/carteleras/") for url in urls))
+                self.assertTrue(all(url.startswith(origin + "/") for url in urls))
                 status, robots = get("/robots.txt")
                 self.assertEqual(status, 200)
                 self.assertIn("Sitemap: https://ufcinfo.example/sitemap.xml", robots)
