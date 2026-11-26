@@ -188,7 +188,8 @@ def directory():
     output = subprocess.check_output(["node", "--input-type=module", "-e", """
       import { fighters } from './assets/js/data.js';
       import { additionalFighters } from './assets/js/fighter-directory-data.js';
-      console.log(JSON.stringify([...fighters, ...additionalFighters].map(f =>
+      // Retired legends keep their reviewed record (docs/legends.json); they no longer change.
+      console.log(JSON.stringify([...fighters, ...additionalFighters].filter(f => !(f.legend === true && f.careerStatus === 'retired')).map(f =>
         ({id:f.id, name:f.name || `${f.first} ${f.last}`, aliases:[...(f.aliases || []), ...(f.id === "zhang" ? ["Zhang Weili"] : [])], source:f.source, record:f.record, info:f.info}))));
     """], cwd=ROOT, text=True)
     return json.loads(output)

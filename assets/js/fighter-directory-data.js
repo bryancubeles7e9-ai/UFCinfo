@@ -34652,7 +34652,7 @@ export const additionalFighters = [
     "last": "Lesnar",
     "supplemental": true,
     "division": "Peso pesado",
-    "record": "6-3-0",
+    "record": "5-3-0",
     "nickname": "",
     "birthplace": "Webster, SD, United States",
     "officialStyle": null,
@@ -34684,7 +34684,8 @@ export const additionalFighters = [
       "statisticsSource": "https://www.ufc.com/athlete/brock-lesnar",
       "statisticsConsulted": "2026-11-26"
     },
-    "photoCredit": "UFC"
+    "photoCredit": "UFC",
+    "recordNote": "Más 1 combate sin resultado: su victoria en UFC 200 (2016) se anuló tras un control antidopaje positivo. UFC.com muestra 6-3-0."
   },
   {
     "id": "ufc-carlos-condit",

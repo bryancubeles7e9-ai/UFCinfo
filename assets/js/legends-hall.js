@@ -32,7 +32,7 @@ export function legendsHallHeader(legends, wing = 'all') {
     .map(([key, label, total]) => `<button type="button" data-legend-wing="${key}" aria-pressed="${key === wing}">${label} <span>${total}</span></button>`).join('');
   return `<div class="legends-hall-intro">
       <p class="eyebrow">SALÓN DE LEYENDAS</p>
-      <h3>Los que hicieron historia en el octágono.</h3>
+      <h2>Los que hicieron historia en el octágono.</h2>
       <p>Luchadores retirados del Salón de la Fama de UFC, con su ala y año de ingreso, sus cinturones y lo que los hizo únicos, junto a la selección propia de UFCinfo. Las fotografías y los datos proceden de UFC.com.</p>
     </div>
     <dl class="legends-hall-stats">

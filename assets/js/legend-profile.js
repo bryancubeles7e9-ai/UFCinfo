@@ -34,6 +34,7 @@ export function legendProfile(fighter, { follow = '' } = {}) {
     </header>
     <div class="legend-profile-actions">${follow}${link}</div>
     <dl class="legend-profile-facts">${facts.map(([label, value]) => `<div><dt>${label}</dt><dd>${value}</dd></div>`).join('')}</dl>
+    ${fighter.recordNote ? `<p class="legend-profile-record-note">${esc(fighter.recordNote)}</p>` : ''}
     ${belts.length ? `<section class="legend-profile-belts"><h3>Cinturones de UFC</h3><ul>${belts.map(b => `<li>${beltIcon}<span>${esc(b.name)}</span></li>`).join('')}</ul></section>` : ''}
     <section class="legend-profile-story"><h3>Su historia</h3><p>${esc(fighter.legacyStory || fighter.legacyNote || '')}</p></section>
     <p class="data-note">Datos y fotografía: UFC.com. Consulta: ${esc(fighter.legendConsulted || '—')}.</p>

@@ -1,19 +1,7 @@
-import { english } from './i18n/en.js';
-import { catalan } from './i18n/ca.js';
-import { martialNotes } from './i18n/martial-notes.js';
-import { legendNotes } from './i18n/legend-notes.js';
-import { legendsCopy } from './i18n/legends.js';
-import { privacyCopy } from './i18n/privacy.js';
-// Bout classes built by boutDivisionLabel() in utils.js, in every form it can produce.
-const weights = [['mosca','Flyweight','mosca'], ['gallo','Bantamweight','gall'], ['pluma','Featherweight','ploma'], ['ligero','Lightweight','lleuger'],
-  ['wélter','Welterweight','wèlter'], ['medio','Middleweight','mitjà'], ['semipesado','Light Heavyweight','semipesant'], ['pesado','Heavyweight','pesant'],
-  ['paja','Strawweight','palla'], ['pactado','Catchweight','pactat']];
-const boutClasses = { en: {}, ca: {} };
-for (const [es, en, ca] of weights) for (const [women, enWomen, caWomen] of [['', '', ''], [' femenino', "Women's ", ' femení']]) {
-  Object.assign(boutClasses.en, { [`Peso ${es}${women}`]: `${enWomen}${en}`, [`Título del peso ${es}${women}`]: `${enWomen}${en} title`, [`Título interino del peso ${es}${women}`]: `Interim ${enWomen}${en} title` });
-  Object.assign(boutClasses.ca, { [`Peso ${es}${women}`]: `Pes ${ca}${caWomen}`, [`Título del peso ${es}${women}`]: `Títol del pes ${ca}${caWomen}`, [`Título interino del peso ${es}${women}`]: `Títol interí del pes ${ca}${caWomen}` });
-}
-const dictionaries = { en: {...boutClasses.en, ...english, ...martialNotes.en, ...legendNotes.en, ...legendsCopy.en, ...privacyCopy.en}, ca: {...boutClasses.ca, ...catalan, ...martialNotes.ca, ...legendNotes.ca, ...legendsCopy.ca, ...privacyCopy.ca} };
+// English and Catalan dictionaries live in ./i18n/dictionaries.js and load on demand.
+let dictionaries = null;
+let pattern = null;
+let loading = null;
 const locales = { es: 'es-ES', en: 'en-US', ca: 'ca-ES' };
 const storageKey = 'ufcinfo-language';
 let language = 'es';
@@ -22,10 +10,19 @@ export const getLanguage = () => language;
 export const getLocale = () => locales[language];
 const normalize = text => text.replace(/\s+/g, ' ').trim();
 const escapePattern = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-const phrases = [...new Set([...Object.keys(dictionaries.en), ...Object.keys(dictionaries.ca)])].sort((a, b) => b.length - a.length);
-const pattern = new RegExp(`(?<![\\p{L}])(?:${phrases.map(escapePattern).join('|')})(?![\\p{L}])`, 'gu');
+export function loadDictionaries() {
+  loading ??= import('./i18n/dictionaries.js').then(module => {
+    dictionaries = module.dictionaries;
+    const phrases = [...new Set([...Object.keys(dictionaries.en), ...Object.keys(dictionaries.ca)])].sort((a, b) => b.length - a.length);
+    pattern = new RegExp(`(?<![\\p{L}])(?:${phrases.map(escapePattern).join('|')})(?![\\p{L}])`, 'gu');
+  });
+  return loading;
+}
+export const languageReady = () => language === 'es' ? Promise.resolve() : loadDictionaries();
+// Scripts and tests without a page translate synchronously, as before.
+if (typeof document === 'undefined') await loadDictionaries();
 export function translate(text) {
-  if (language === 'es') return text;
+  if (language === 'es' || !dictionaries) return text;
   const dictionary = dictionaries[language];
   const source = normalize(String(text));
   if (dictionary[source]) return String(text).replace(/\S[\s\S]*\S|\S/, dictionary[source]);
@@ -52,7 +49,8 @@ export function setLanguage(next) {
   try { globalThis.localStorage?.setItem(storageKey, next); } catch { /* Selection still works for this visit. */ }
   if (typeof document !== 'undefined') {
     document.documentElement.lang = next;
-    document.dispatchEvent(new Event('ufcinfo:language-changed'));
+    // Translate once the dictionaries are available (immediately after the first time).
+    languageReady().then(() => { if (language === next) document.dispatchEvent(new Event('ufcinfo:language-changed')); });
   }
   return true;
 }
@@ -107,4 +105,7 @@ export function initializeLanguage() {
   document.querySelector('#language-select').addEventListener('change', event => setLanguage(event.target.value));
   document.addEventListener('ufcinfo:language-changed', () => update());
   update();
+  // English or Catalan saved from a previous visit: translate as soon as the dictionaries arrive,
+  // then show the page (index.html hides it meanwhile to avoid a flash of Spanish).
+  languageReady().then(() => update()).finally(() => document.documentElement.classList.remove('i18n-pending'));
 }

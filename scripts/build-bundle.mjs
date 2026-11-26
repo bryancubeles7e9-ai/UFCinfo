@@ -18,6 +18,8 @@ const result = await esbuild.build({
   bundle: true, format: 'esm', target: 'es2022', minify: true, legalComments: 'none', write: false, logLevel: 'error',
   // Keep data modules as separate files, imported from the bundle's own folder.
   plugins: [{ name: 'external-data', setup(build) {
+    // Translations load on demand (only for English and Catalan), so they stay out of the bundle.
+    build.onResolve({ filter: /\/i18n\/dictionaries\.js$/ }, () => ({ path: './i18n/dictionaries.js', external: true }));
     build.onResolve({ filter: new RegExp(`/(${dataModules.join('|').replaceAll('.', '\\.')})$`) },
       args => ({ path: './' + args.path.split('/').pop(), external: true }));
   } }],

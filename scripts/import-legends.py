@@ -70,6 +70,7 @@ def main():
             'legendConsulted': today, 'retirementSource': athlete.get('retirementSource') or legend['source'],
             'hallOfFame': {'wing': legend['wing'], 'inducted': legend.get('inducted'), 'image': save_banner(legend), 'retired': legend.get('retired')},
             'legacyNote': legend['note'], 'legacyHighlights': legend.get('highlights', []), 'legacyStory': legend.get('story', ''),
+            **({'record': legend['record'], 'recordNote': legend.get('recordNote', '')} if legend.get('record') else {}),
         }
         if 'championships' in legend:
             source = legend.get('hallOfFameSource') or legend['source']
@@ -99,6 +100,7 @@ def main():
         notes = {'en': {l['note']: l['noteEn'] for l in legends}, 'ca': {l['note']: l['noteCa'] for l in legends}}
         for code, field in (('en', 'storyEn'), ('ca', 'storyCa')):
             notes[code].update({l['story']: l[field] for l in legends if l.get('story')})
+            notes[code].update({l['recordNote']: l['recordNote' + field[5:]] for l in legends if l.get('recordNote')})
         for code in ('en', 'ca'):
             notes[code].update({h: t for l in legends for h, t in zip(l.get('highlights', []), l.get('highlights' + code.capitalize(), []))})
         (ROOT / 'assets/js/i18n/legend-notes.js').write_text(
