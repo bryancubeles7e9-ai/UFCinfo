@@ -15,10 +15,10 @@ class PhotoTests(unittest.TestCase):
         self.assertEqual(photos.photo_url(html, fighter), 'https://www.ufc.com/images/natalia.png?x=1&y=2')
         with self.assertRaises(ValueError): photos.photo_url(html.replace('Natalia Silva','Other Athlete'), fighter)
         with self.assertRaises(ValueError): photos.photo_url(html.replace('ufc.com/images','evil.test/images'), fighter)
-    def test_former_belt_rejected_and_neutral_fallback(self):
+    def test_former_belt_rejected_unless_kept(self):
         url = 'https://www.ufc.com/images/ATHLETE_BELT.png'
         self.assertIsNone(photos.choose_photo(url, {'id':'unknown'}, False))
-        self.assertEqual(photos.choose_photo(url, {'id':'shevchenko'}, False)['source'], 'ESPN')
+        self.assertEqual(photos.choose_photo(url, {'id':'shevchenko','source':'https://www.ufc.com/athlete/valentina-shevchenko'}, False)['source'], 'UFC')
     def test_previous_variants_and_failure_preserved(self):
         fighter = {'id':'silva','name':'Natalia Silva','source':'https://www.ufc.com/athlete/natalia-silva'}
         rankings={'categories':[{'champion':'Natalia Silva'}]}

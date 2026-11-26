@@ -22,10 +22,10 @@
     },
     "shevchenko": {
       "regular": {
-        "url": "https://a.espncdn.com/i/headshots/mma/players/full/2554705.png",
-        "source": "ESPN",
-        "sourceUrl": "https://www.espn.com/mma/fighter/_/id/2554705/valentina-shevchenko",
-        "image": "assets/images/fighter-variants/ae0ee65d8b0317117ffd41fafeab115f67ae7985324a8015b74d2e40b2975f30.png",
+        "url": "https://www.ufc.com/images/styles/athlete_bio_full_body/s3/2025-11/SHEVCHENKO_VALENTINA_L_BELT_11-15.png?itok=4KuKr99O",
+        "source": "UFC",
+        "sourceUrl": "https://www.ufc.com/athlete/valentina-shevchenko",
+        "image": "assets/images/fighters/valentina-shevchenko.png",
         "consultedAt": "2026-11-26T23:00:38.671365+00:00"
       },
       "champion": {
