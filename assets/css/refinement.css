@@ -126,3 +126,10 @@ details.bout-schedule-note > p { margin:10px 0 0; }
 }
 /* Head-and-shoulders photos (ESPN) fill the profile box centred on the face, instead of shrinking like full-body UFC photos. */
 .fighter-profile-photo.is-headshot img { object-fit:cover; object-position:50% 20%; }
+/* Units switch (cm · kg / ft · lb) next to the measurements. */
+.units-toggle { display:inline-flex; gap:2px; padding:2px; border:1px solid var(--line); border-radius:999px; background:var(--bg); }
+.units-toggle button { min-height:32px; padding:4px 12px; border:0; border-radius:999px; background:none; color:var(--muted); font:600 12px var(--body, inherit); cursor:pointer; }
+.units-toggle button[aria-pressed="true"] { background:var(--surface-2, var(--line)); color:var(--ink); }
+.units-toggle button:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+.fighter-profile-hero > .units-toggle { grid-column:1/-1; justify-self:end; margin-top:12px; }
+#comparison-tables > .units-toggle { display:flex; width:max-content; margin:0 0 12px auto; }

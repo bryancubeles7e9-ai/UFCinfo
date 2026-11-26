@@ -1,6 +1,7 @@
 import { getLocale } from "./i18n.js";
 import { fighterInfo } from "./fighter-info-data.js";
 import { escapeHTML as esc } from "./utils.js";
+import { formatLength, formatWeight } from "./units.js";
 
 const numbers = { format: value => new Intl.NumberFormat(getLocale(), { maximumFractionDigits: 2 }).format(value) };
 function value(number, unit = "") {
@@ -32,8 +33,8 @@ export function renderExtendedFighterInfo(fighter) {
   const biography = [
     ["Edad en la consulta", value(info.age, " años")],
     ["Equipo / gimnasio", info.gym || "No indicado"],
-    ["Peso del perfil", value(info.weightKg, " kg")],
-    ["Alcance de pierna", value(info.legReachCm, " cm")],
+    ["Peso del perfil", formatWeight(info.weightKg, "No indicado")],
+    ["Alcance de pierna", formatLength(info.legReachCm, "No indicado")],
     ["Debut en UFC", info.debut ? dateLabel(info.debut) : "No indicado"],
   ];
   const striking = [
