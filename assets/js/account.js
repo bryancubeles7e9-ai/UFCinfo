@@ -97,6 +97,7 @@ export function initializeAccount({store, onChange}) {
     $("#auth-title").textContent = user ? "Tu cuenta" : mode === "login" ? "Inicia sesión" : "Crea tu cuenta";
     $("#auth-form").hidden = !!user && !expired;
     $("#auth-signed-in").hidden = !user || expired;
+    document.querySelector("#auth-dialog .auth-tabs").hidden = !!user && !expired;
     $("#auth-register-tab").disabled = !!user && expired;
     $("#auth-username").maxLength = mode === "register" ? 24 : 254;
     $("#auth-username").pattern = mode === "register" ? "[A-Za-z0-9_\\-]{3,24}" : ".*";
@@ -212,6 +213,35 @@ export function initializeAccount({store, onChange}) {
     } catch (error) { status(error.message); }
     finally {busy=false; render();}
   }
+  // Privacy: the user can delete the account and everything linked to it.
+  const deleteForm = $("#account-delete-form");
+  const toggleDelete = open => {
+    deleteForm.hidden = !open;
+    $("#account-delete-open").setAttribute("aria-expanded", String(open));
+    $("#account-delete-error").textContent = "";
+    $("#account-delete-password").value = "";
+    if (open) $("#account-delete-password").focus();
+  };
+  $("#account-delete-open").addEventListener("click", () => toggleDelete(deleteForm.hidden));
+  $("#account-delete-cancel").addEventListener("click", () => toggleDelete(false));
+  deleteForm.addEventListener("submit", async event => {
+    event.preventDefault();
+    if (busy || !user) return;
+    busy = true; render(); $("#account-delete-confirm").disabled = true;
+    try {
+      await accountRequest("me/delete", {method:"POST", csrf, body:{password:$("#account-delete-password").value}});
+      const id = user.id;
+      clearTimeout(timer);
+      try { localStorage.removeItem(cacheKey(id)); } catch { /* Nothing cached. */ }
+      store.forgetScope(id);
+      generation++; user=null; expired=false; csrf=""; base=[]; dirty=false;
+      document.dispatchEvent(new Event("ufcinfo:account-changed"));
+      store.useScope(); onChange(); toggleDelete(false);
+      status("Cuenta eliminada. Seguimos en modo invitado · Datos guardados en este navegador.");
+      if ($("#auth-dialog").open) $("#auth-dialog").close();
+    } catch (error) { $("#account-delete-error").textContent = error.message; }
+    finally { busy=false; $("#account-delete-confirm").disabled = false; render(); }
+  });
   $("#account-logout").addEventListener("click", logout);
   $("#auth-logout").addEventListener("click", logout);
   document.addEventListener("visibilitychange", () => {if (!document.hidden) refresh();});

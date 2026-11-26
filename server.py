@@ -361,6 +361,51 @@ def make_handler(database, public_origin, fighter_ids):
                         row = dict(db.execute("SELECT * FROM users WHERE id=?", (user_id,)).fetchone())
                         row["csrf"] = csrf
                     return self.json_response(201 if registering else 200, self.user_response(row), self.cookie(token))
+                if self.command == "GET" and path == "/api/me/export":
+                    # Right of access: everything the server keeps about the account, as a JSON download.
+                    row = self.session()
+                    with database.connect() as db:
+                        tables = {r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+                        alias = db.execute("SELECT alias FROM pickem_profiles WHERE user_id=?", (row["id"],)).fetchone() if "pickem_profiles" in tables else None
+                        entries = [{"event": e["event_id"], "picks": json.loads(e["picks"]), "updatedAt": e["updated_at"]}
+                                   for e in db.execute("SELECT * FROM pickem_entries WHERE user_id=? ORDER BY updated_at", (row["id"],))] if "pickem_entries" in tables else []
+                    payload = json.dumps({"exportedAt": int(time.time()), "account": {"username": row["username"], "updatedAt": row["updated_at"]},
+                                          "following": json.loads(row["favorites"]), "pickem": {"alias": alias[0] if alias else None, "entries": entries},
+                                          "note": "Las contraseñas se guardan solo como huella cifrada (scrypt) y no se pueden recuperar."},
+                                         ensure_ascii=False, indent=2).encode()
+                    self.send_response(200)
+                    self.send_header("Content-Type", "application/json; charset=utf-8")
+                    self.send_header("Content-Disposition", 'attachment; filename="ufcinfo-mis-datos.json"')
+                    self.send_header("Cache-Control", "no-store")
+                    self.send_header("Content-Length", str(len(payload)))
+                    self.end_headers()
+                    return self.wfile.write(payload)
+                if self.command == "POST" and path == "/api/me/delete":
+                    # Right to erasure: the password confirms the request; everything linked to the account goes.
+                    row = self.session()
+                    if not hmac.compare_digest(self.headers.get("X-Octagon-CSRF", ""), row["csrf"]):
+                        raise APIError(403, "La sesión no pudo validar la solicitud.")
+                    password = self.body().get("password")
+                    if not isinstance(password, str) or not password or len(password) > 256:
+                        raise APIError(400, "Escribe tu contraseña para confirmar.")
+                    database.rate_limit(self.client_address[0], row["username"])
+                    if not password_slots.acquire(blocking=False):
+                        raise APIError(503, "El servidor está ocupado. Inténtalo de nuevo.")
+                    try:
+                        with database.connect() as db:
+                            account = db.execute("SELECT salt,password FROM users WHERE id=?", (row["id"],)).fetchone()
+                        if not account or not hmac.compare_digest(password_hash(password, account["salt"]), account["password"]):
+                            raise APIError(401, "La contraseña no es correcta.")
+                    finally:
+                        password_slots.release()
+                    with database.connect() as db:
+                        tables = {r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+                        for table in ("pickem_entries", "pickem_profiles"):
+                            if table in tables:
+                                db.execute(f"DELETE FROM {table} WHERE user_id=?", (row["id"],))
+                        db.execute("DELETE FROM sessions WHERE user_id=?", (row["id"],))
+                        db.execute("DELETE FROM users WHERE id=?", (row["id"],))
+                    return self.json_response(200, {"user": None, "deleted": True}, self.cookie(clear=True))
                 if (self.command, path) in {("POST", "/api/auth/logout"), ("PUT", "/api/me/following")}:
                     row = self.session()
                     if not hmac.compare_digest(self.headers.get("X-Octagon-CSRF", ""), row["csrf"]):
@@ -405,13 +450,29 @@ def make_handler(database, public_origin, fighter_ids):
                 self.end_headers()
                 self.wfile.write(payload)
                 return
+            if path in {"/privacidad", "/privacy"}:
+                # Owner and contact come from Render's settings (PRIVACY_OWNER, PRIVACY_CONTACT), not from the repository.
+                owner = os.environ.get("PRIVACY_OWNER", "").strip() or "Pendiente de indicar"
+                contact = os.environ.get("PRIVACY_CONTACT", "").strip()
+                if not re.fullmatch(r"[^@\s<>\"']+@[^@\s<>\"']+\.[a-z]{2,}", contact, re.I):
+                    contact = ""
+                body = (ROOT / "privacy.html").read_text().replace("{{OWNER}}", escape(owner))
+                body = body.replace('<a href="mailto:{{CONTACT}}">{{CONTACT}}</a>', f'<a href="mailto:{escape(contact, quote=True)}">{escape(contact)}</a>' if contact else "pendiente de indicar")
+                payload = body.encode("utf-8")
+                self.send_response(200)
+                self.send_header("Content-Type", "text/html; charset=utf-8")
+                self.send_header("Cache-Control", "no-cache")
+                self.send_header("Content-Length", str(len(payload)))
+                self.end_headers()
+                self.wfile.write(payload)
+                return
             if path in {"/", "/index.html", "/robots.txt", "/sitemap.xml"}:
                 home = public_origin.rstrip("/") + "/"
                 if path == "/robots.txt":
                     body = f"User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: {home}sitemap.xml\n"
                     content_type = "text/plain; charset=utf-8"
                 elif path == "/sitemap.xml":
-                    body = '<?xml version="1.0" encoding="UTF-8"?>\n' + f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>{escape(home)}</loc></url></urlset>\n'
+                    body = '<?xml version="1.0" encoding="UTF-8"?>\n' + f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>{escape(home)}</loc></url><url><loc>{escape(home)}privacidad</loc></url></urlset>\n'
                     content_type = "application/xml; charset=utf-8"
                 else:
                     body = (ROOT / "index.html").read_text()

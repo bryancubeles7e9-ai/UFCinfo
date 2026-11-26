@@ -434,13 +434,13 @@
     <footer>
       <div class="footer-brand">UFCinfo<span>INSIDE THE FIGHT.</span></div>
       <p>
-        Proyecto de aficionados inspirado en UFC. Fotografías y datos oficiales: UFC. Carteleras de aficionados imaginarias.<br />Puedes guardar el seguimiento en tu cuenta o usar el modo invitado en
+        Proyecto independiente de aficionados, sin relación con UFC. Fotografías y datos oficiales: UFC.<br />Puedes guardar el seguimiento en tu cuenta o usar el modo invitado en
         este navegador. Sin conexión a resultados en directo.
       </p>
       <div>
         <a href="https://www.ufc.com" target="_blank" rel="noopener noreferrer"
           >UFC oficial ›</a
-        ><a class="ads-privacy" data-ads-privacy hidden>Privacidad y publicidad</a><span id="storage-status">● Guardado local</span>
+        ><a href="/privacidad">Privacidad y aviso legal</a><a class="ads-privacy" data-ads-privacy hidden>Privacidad y publicidad</a><span id="storage-status">● Guardado local</span>
       </div>
     </footer>
     <dialog id="auth-dialog" aria-labelledby="auth-title">
@@ -451,10 +451,14 @@
         <label class="field-label" for="auth-username">Nombre de usuario</label><input id="auth-username" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" maxlength="254" required>
         <label class="field-label" for="auth-password">Contraseña</label><input id="auth-password" name="password" type="password" autocomplete="current-password" maxlength="256" required>
         <p class="data-note">Nombre de usuario: 3–24 caracteres, con letras, números, guiones o guiones bajos. Contraseña: al menos 12 caracteres.</p>
+        <p class="data-note" id="auth-privacy-note">Solo guardamos tu nombre de usuario, tus luchadores seguidos y tus pronósticos. Consulta la <a href="/privacidad">política de privacidad</a>.</p>
         <label id="auth-import-local-row" class="auth-import-local" hidden><input id="auth-import-local" type="checkbox" checked> Añadir a mi nueva cuenta los luchadores que sigo como invitado</label>
         <button id="auth-submit" class="button" type="submit">Iniciar sesión</button>
       </form>
-      <div id="auth-signed-in" hidden><p id="auth-signed-username" translate="no"></p><p>Tu seguimiento se guarda en esta cuenta.</p><button id="auth-logout" class="outline-button small">Cerrar sesión</button></div>
+      <div id="auth-signed-in" hidden><p id="auth-signed-username" translate="no"></p><p>Tu seguimiento se guarda en esta cuenta.</p><button id="auth-logout" class="outline-button small">Cerrar sesión</button>
+        <div class="account-privacy"><p class="eyebrow">TUS DATOS</p><div class="account-privacy-actions"><a id="account-export" class="outline-button small" href="/api/me/export" download>Descargar mis datos</a><button id="account-delete-open" type="button" class="outline-button small danger-button" aria-expanded="false" aria-controls="account-delete-form">Eliminar mi cuenta</button></div>
+          <form id="account-delete-form" hidden><p>Se borrarán tu cuenta, tus luchadores seguidos, tus pronósticos de Pick’em y tus sesiones. <strong>No se puede deshacer.</strong></p><label class="field-label" for="account-delete-password">Escribe tu contraseña para confirmar</label><input id="account-delete-password" type="password" autocomplete="current-password" maxlength="256" required><div class="account-privacy-actions"><button id="account-delete-confirm" type="submit" class="button small danger-button">Eliminar definitivamente</button><button id="account-delete-cancel" type="button" class="outline-button small">Cancelar</button></div><p id="account-delete-error" class="auth-error" role="alert"></p></form>
+          <p class="data-note"><a href="/privacidad">Privacidad y aviso legal</a></p></div></div>
       <p id="auth-error" class="auth-error" role="alert"></p>
     </dialog>
     <dialog id="fighter-dialog">

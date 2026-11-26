@@ -366,3 +366,13 @@ body.light .legend-card-tagline,body.light .legends-hall-intro .eyebrow{color:#6
 .legacy-highlights li{position:relative;padding-left:18px;font-size:13px;line-height:1.45;color:var(--ink)}
 .legacy-highlights li::before{content:"";position:absolute;left:2px;top:.5em;width:7px;height:7px;border-radius:2px;background:var(--legend,#a78acb);transform:rotate(45deg)}
 .legacy-details .legacy-highlights li{font-size:14px}
+/* Account privacy tools: download data and delete the account. */
+.account-privacy{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.account-privacy-actions{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0}
+.account-privacy form{margin-top:12px;padding:14px;border:1px solid #d9472b66;border-radius:10px;background:#d9472b0d}
+.account-privacy form p{margin:0 0 10px;font-size:14px}
+.account-privacy input{width:100%}
+.outline-button.danger-button{color:#ff7a5c;border-color:#d9472b88}
+.button.danger-button{background:#c8341b}
+body.light .outline-button.danger-button{color:#b02a12}
+#auth-privacy-note a,.account-privacy .data-note a{color:inherit;text-decoration:underline}

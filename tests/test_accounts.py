@@ -217,6 +217,43 @@ class AccountAPITests(unittest.TestCase):
         self.assertEqual((status, headers["Vary"]), (200, "Accept"))
         self.assertEqual(body, Path("assets/images/fighters/alex-pereira.png").read_bytes())
 
+    def test_users_can_download_and_delete_their_data(self):
+        user, cookie = self.register("borrame", ["oliveira"])
+        status, data, headers = self.request("GET", "/api/me/export", cookie=cookie)
+        self.assertEqual(status, 200)
+        self.assertIn("attachment", headers["Content-Disposition"])
+        self.assertEqual((data["account"]["username"], data["following"]), ("borrame", ["oliveira"]))
+        self.assertNotIn("password", json.dumps(data["account"]))
+        self.assertEqual(self.request("GET", "/api/me/export")[0], 401)
+        # Wrong password, or a request without the CSRF token, deletes nothing.
+        self.assertEqual(self.request("POST", "/api/me/delete", {"password": "otra-contrasena-123"}, cookie, user["csrf"])[0], 401)
+        self.assertEqual(self.request("POST", "/api/me/delete", {"password": "testing-password-12345"}, cookie)[0], 403)
+        with self.database.connect() as db:
+            self.assertEqual(db.execute("SELECT COUNT(*) FROM users WHERE username='borrame'").fetchone()[0], 1)
+        status, data, headers = self.request("POST", "/api/me/delete", {"password": "testing-password-12345"}, cookie, user["csrf"])
+        self.assertEqual((status, data["deleted"]), (200, True))
+        self.assertIn("Max-Age=0", headers["Set-Cookie"])
+        with self.database.connect() as db:
+            self.assertEqual(db.execute("SELECT COUNT(*) FROM users WHERE username='borrame'").fetchone()[0], 0)
+            self.assertEqual(db.execute("SELECT COUNT(*) FROM sessions WHERE user_id=?", (user["user"]["id"],)).fetchone()[0], 0)
+        self.assertIsNone(self.request("GET", "/api/auth/session", cookie=cookie)[1]["user"])
+        self.assertEqual(self.request("POST", "/api/auth/login", {"username": "borrame", "password": "testing-password-12345"})[0], 401)
+
+    def test_privacy_page_uses_the_configured_owner(self):
+        with unittest.mock.patch.dict("os.environ", {"PRIVACY_OWNER": "Ana <b>Prueba</b>", "PRIVACY_CONTACT": "ana@example.com"}):
+            status, body, headers = self.request("GET", "/privacidad")
+        page = body.decode()
+        self.assertEqual(status, 200)
+        self.assertIn("Ana &lt;b&gt;Prueba&lt;/b&gt;", page)
+        self.assertIn('mailto:ana@example.com', page)
+        self.assertNotIn("{{", page)
+        with unittest.mock.patch.dict("os.environ", {"PRIVACY_OWNER": "", "PRIVACY_CONTACT": "no es un correo"}):
+            page = self.request("GET", "/privacy")[1].decode()
+        self.assertIn("Pendiente de indicar", page)
+        self.assertNotIn("mailto:", page)
+        self.assertEqual(self.request("GET", "/privacy.html")[0], 404)
+        self.assertIn(b"/privacidad", self.request("GET", "/sitemap.xml")[1])
+
     def test_rate_limit(self):
         for _ in range(10):
             self.database.rate_limit("isolated-test-address", "limited")

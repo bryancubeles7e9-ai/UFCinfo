@@ -10,6 +10,7 @@ on:
       - 'assets/js/**'
       - 'assets/css/**'
       - 'assets/*.html'
+      - 'privacy.html'
       - 'assets/sw.js'
       - 'tests/browser-smoke.mjs'
       - '.github/workflows/web-check.yml'
