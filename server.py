@@ -588,7 +588,7 @@ def make_handler(database, public_origin, fighter_ids):
                 return self.send_asset(target, payload, etag, "Accept-Encoding", encoding="gzip")
             # Photos have a lighter WebP copy (scripts/optimize-images.py) for browsers that accept it.
             webp = target.with_suffix(".webp")
-            if target.suffix.lower() in {".png", ".jpg", ".jpeg"} and "image/webp" in self.headers.get("Accept", "") and webp.is_file():
+            if target.suffix.lower() in {".png", ".jpg", ".jpeg"} and "image/webp" in self.headers.get("Accept", "") and webp.is_file() and "/brand/" not in path:
                 try:
                     stat = webp.stat()
                     payload = webp.read_bytes()
@@ -626,6 +626,12 @@ def make_handler(database, public_origin, fighter_ids):
             poster = home_poster()
             if poster and not entry:
                 metadata += f'\n<link rel="preload" as="image" href="/{escape(poster, quote=True)}" fetchpriority="high" />'
+            # Shared links always carry an image: the page's own photo, or the UFCinfo card.
+            if not (entry and entry.get("image")):
+                metadata += (f'\n<meta property="og:image" content="{escape(home, quote=True)}assets/images/brand/ufcinfo-share.jpg" />'
+                             '\n<meta property="og:image:width" content="1200" />\n<meta property="og:image:height" content="630" />'
+                             '\n<meta property="og:image:alt" content="UFCinfo: carteleras, luchadores, rankings y Pick’em de UFC" />'
+                             '\n<meta name="twitter:card" content="summary_large_image" />')
             if entry:
                 title, description = escape(entry["title"]), escape(entry["description"], quote=True)
                 body = re.sub(r"<title>.*?</title>", f"<title>{title}</title>", body, count=1, flags=re.S)

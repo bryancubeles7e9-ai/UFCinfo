@@ -1,0 +1,25 @@
+{
+  "name": "UFCinfo — Carteleras UFC, luchadores y rankings",
+  "short_name": "UFCinfo",
+  "description": "Carteleras, luchadores, rankings, leyendas y Pick’em de UFC, con datos oficiales.",
+  "lang": "es",
+  "dir": "ltr",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#101010",
+  "theme_color": "#101010",
+  "categories": ["sports", "entertainment"],
+  "icons": [
+    { "src": "/assets/images/brand/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/images/brand/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/images/brand/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Carteleras", "url": "/#eventos", "icons": [{ "src": "/assets/images/brand/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Pick’em", "url": "/#pickem", "icons": [{ "src": "/assets/images/brand/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Luchadores", "url": "/#luchadores", "icons": [{ "src": "/assets/images/brand/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
