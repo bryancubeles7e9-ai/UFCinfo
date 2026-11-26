@@ -23,7 +23,9 @@ for (const f of additionalFighters) {
   if (/^https:/.test(f.image)) assert.match(f.image, /^https:\/\/www\.ufc\.com\/images\//);
   else {
     const image = await readFile(new URL('../' + f.image, import.meta.url));
-    assert.deepEqual([...image.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+    // Local PNG portraits, or the Hall of Fame JPEG photo for legends without a UFC portrait.
+    if (f.image.startsWith('assets/images/legends/')) assert.deepEqual([...image.subarray(0, 3)], [255, 216, 255]);
+    else assert.deepEqual([...image.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
   }
   for (const key of ['strikingDefense', 'takedownDefense', 'strikingAccuracy', 'takedownAccuracy']) {
     assert.ok(f.info[key] === null || (f.info[key] >= 0 && f.info[key] <= 100));

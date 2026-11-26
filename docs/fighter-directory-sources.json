@@ -7077,7 +7077,7 @@
     "careerStatus": "retired",
     "legend": true,
     "legendSource": "https://www.ufc.com/hof/georges-st-pierre-hall-of-fame",
-    "legendConsulted": "2026-10-14",
+    "legendConsulted": "2026-11-26",
     "retirementSource": "https://www.ufc.com/athlete/georges-st-pierre",
     "championships": [
       {
@@ -7097,7 +7097,13 @@
     "code": "CA",
     "country": "Canada",
     "countrySource": "https://www.ufc.com/event/ufc-217",
-    "countryConsulted": "2026-10-14"
+    "countryConsulted": "2026-10-14",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2021,
+      "image": "assets/images/legends/ufc-georges-st-pierre.jpg"
+    },
+    "legacyNote": "Dos veces campeón del peso wélter y campeón del peso medio de UFC; uno de los luchadores más completos y dominantes de la historia."
   },
   {
     "id": "ufc-khabib-nurmagomedov",
@@ -7109,7 +7115,7 @@
     "careerStatus": "retired",
     "legend": true,
     "legendSource": "https://www.ufc.com/news/khabib-eagle-nurmagomedov-named-ufc-hall-fame-class-2022",
-    "legendConsulted": "2026-10-14",
+    "legendConsulted": "2026-11-26",
     "retirementSource": "https://www.ufc.com/athlete/khabib-nurmagomedov",
     "championships": [
       {
@@ -7123,7 +7129,13 @@
     "code": "RU",
     "country": "Russia",
     "countrySource": "https://www.ufc.com/event/ufc-254",
-    "countryConsulted": "2026-10-14"
+    "countryConsulted": "2026-10-14",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2022,
+      "image": "assets/images/legends/ufc-khabib-nurmagomedov.jpg"
+    },
+    "legacyNote": "Campeón del peso ligero desde 2018; se retiró invicto con un récord de 29-0."
   },
   {
     "id": "ufc-daniel-cormier",
@@ -7135,7 +7147,7 @@
     "careerStatus": "retired",
     "legend": true,
     "legendSource": "https://www.ufc.com/hof/daniel-cormier-hall-of-fame",
-    "legendConsulted": "2026-10-14",
+    "legendConsulted": "2026-11-26",
     "retirementSource": "https://www.ufc.com/athlete/daniel-cormier",
     "championships": [
       {
@@ -7155,7 +7167,13 @@
     "code": "US",
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-241",
-    "countryConsulted": "2026-10-14"
+    "countryConsulted": "2026-10-14",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2022,
+      "image": "assets/images/legends/ufc-daniel-cormier.jpg"
+    },
+    "legacyNote": "Campeón del peso semipesado y del peso pesado de UFC, con ambos cinturones a la vez."
   },
   {
     "id": "ufc-joanna-jedrzejczyk",
@@ -7167,7 +7185,7 @@
     "careerStatus": "retired",
     "legend": true,
     "legendSource": "https://www.ufc.com/news/joanna-jedrzejczyk-named-ufc-hall-fame-class-2024",
-    "legendConsulted": "2026-10-14",
+    "legendConsulted": "2026-11-26",
     "retirementSource": "https://www.ufc.com/athlete/joanna-jedrzejczyk",
     "championships": [
       {
@@ -7181,7 +7199,13 @@
     "code": "PL",
     "country": "Poland",
     "countrySource": "https://www.ufc.com/event/ufc-275",
-    "countryConsulted": "2026-10-14"
+    "countryConsulted": "2026-10-14",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2024,
+      "image": "assets/images/legends/ufc-joanna-jedrzejczyk.jpg"
+    },
+    "legacyNote": "Campeona del peso paja de UFC y protagonista, frente a Zhang Weili, de un combate incluido en el Salón de la Fama."
   },
   {
     "id": "ufc-frankie-edgar",
@@ -7193,7 +7217,7 @@
     "careerStatus": "retired",
     "legend": true,
     "legendSource": "https://www.ufc.com/news/frankie-answer-edgar-named-ufc-hall-fame-class-2024",
-    "legendConsulted": "2026-10-14",
+    "legendConsulted": "2026-11-26",
     "retirementSource": "https://www.ufc.com/athlete/frankie-edgar",
     "championships": [
       {
@@ -7207,7 +7231,13 @@
     "code": "US",
     "country": "United States",
     "countrySource": "https://www.ufc.com/event/ufc-281",
-    "countryConsulted": "2026-10-14"
+    "countryConsulted": "2026-10-14",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2024,
+      "image": "assets/images/legends/ufc-frankie-edgar.jpg"
+    },
+    "legacyNote": "Campeón del peso ligero (2010-2012), con 8 bonificaciones a la pelea de la noche, la segunda mayor cifra de la historia de UFC."
   },
   {
     "id": "ufc-mauricio-rua",
@@ -7219,7 +7249,7 @@
     "careerStatus": "retired",
     "legend": true,
     "legendSource": "https://www.ufc.com/news/mauricio-shogun-rua-named-ufc-hall-fame-class-2024",
-    "legendConsulted": "2026-10-14",
+    "legendConsulted": "2026-11-26",
     "retirementSource": "https://www.ufc.com/news/mauricio-shogun-rua-named-ufc-hall-fame-class-2024",
     "championships": [
       {
@@ -7233,7 +7263,13 @@
     "code": "BR",
     "country": "Brazil",
     "countrySource": "https://www.ufc.com/event/ufc-283",
-    "countryConsulted": "2026-10-14"
+    "countryConsulted": "2026-10-14",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2024,
+      "image": "assets/images/legends/ufc-mauricio-rua.jpg"
+    },
+    "legacyNote": "Campeón del peso semipesado de UFC (2010-2011) y ganador del Grand Prix de peso medio de PRIDE en 2005."
   },
   {
     "id": "ufc-dustin-poirier",
@@ -7957,5 +7993,892 @@
     "country": "Sweden",
     "countrySource": "https://www.ufc.com/event/ufc-fight-night-january-23-2027",
     "countryConsulted": "2026-11-25"
+  },
+  {
+    "id": "ufc-dominick-cruz",
+    "name": "Dominick Cruz",
+    "aliases": [
+      "Dominick Cruz"
+    ],
+    "source": "https://www.ufc.com/athlete/dominick-cruz",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/dominick-cruz-hall-of-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/dominick-cruz",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2026,
+      "image": "assets/images/legends/ufc-dominick-cruz.jpg"
+    },
+    "legacyNote": "Primer campeón del peso gallo de UFC, coronado en WEC 53. Firmó el reinado más largo de la división: 1117 días.",
+    "championships": [
+      {
+        "name": "Peso gallo",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/dominick-cruz-hall-of-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-chris-weidman",
+    "name": "Chris Weidman",
+    "aliases": [
+      "Chris Weidman"
+    ],
+    "source": "https://www.ufc.com/athlete/chris-weidman",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/chris-weidman-hall-of-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/chris-weidman",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2026,
+      "image": "assets/images/legends/ufc-chris-weidman.jpg"
+    },
+    "legacyNote": "Conquistó el título del peso medio ante Anderson Silva en UFC 162 y venció también a Vitor Belfort y Lyoto Machida.",
+    "championships": [
+      {
+        "name": "Peso medio",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/chris-weidman-hall-of-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-demetrious-johnson",
+    "name": "Demetrious Johnson",
+    "aliases": [
+      "Demetrious Johnson"
+    ],
+    "source": "https://www.ufc.com/athlete/demetrious-johnson",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/demetrious-johnson-hall-of-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/demetrious-johnson",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2026,
+      "image": "assets/images/legends/ufc-demetrious-johnson.jpg"
+    },
+    "legacyNote": "Primer campeón del peso mosca de UFC: 11 victorias seguidas con el título y el reinado más largo de la división, 2142 días.",
+    "championships": [
+      {
+        "name": "Peso mosca",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/demetrious-johnson-hall-of-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-robbie-lawler",
+    "name": "Robbie Lawler",
+    "aliases": [
+      "Robbie Lawler"
+    ],
+    "source": "https://www.ufc.com/athlete/robbie-lawler",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/hof/robbie-lawler-hall-of-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/robbie-lawler",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": null,
+      "image": "assets/images/legends/ufc-robbie-lawler.jpg"
+    },
+    "legacyNote": "Campeón del peso wélter desde UFC 181 (2014); sus defensas ante Rory MacDonald y Carlos Condit fueron dos guerras a cinco asaltos.",
+    "championships": [
+      {
+        "name": "Peso wélter",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/hof/robbie-lawler-hall-of-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-jose-aldo",
+    "name": "José Aldo",
+    "aliases": [
+      "José Aldo"
+    ],
+    "source": "https://www.ufc.com/athlete/jose-aldo",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/jose-aldo-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/jose-aldo",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2023,
+      "image": "assets/images/legends/ufc-jose-aldo.jpg"
+    },
+    "legacyNote": "Dos veces campeón del peso pluma de UFC y campeón de WEC; sus 7 defensas del título son récord de la división.",
+    "championships": [
+      {
+        "name": "Peso pluma",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/jose-aldo-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-donald-cerrone",
+    "name": "Donald Cerrone",
+    "aliases": [
+      "Donald Cerrone"
+    ],
+    "source": "https://www.ufc.com/athlete/donald-cerrone",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/donald-cowboy-cerrone-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/donald-cerrone",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2023,
+      "image": "assets/images/legends/ufc-donald-cerrone.jpg"
+    },
+    "legacyNote": "«Cowboy» disputó 38 combates en UFC y comparte el récord de bonificaciones (18); es segundo en victorias (23) y finalizaciones (16).",
+    "championships": [],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-rashad-evans",
+    "name": "Rashad Evans",
+    "aliases": [
+      "Rashad Evans"
+    ],
+    "source": "https://www.ufc.com/athlete/rashad-evans",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/rashad-evans-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/rashad-evans",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2019,
+      "image": "assets/images/legends/ufc-rashad-evans.jpg"
+    },
+    "legacyNote": "Ganador de la segunda temporada de The Ultimate Fighter y campeón del peso semipesado tras vencer a Forrest Griffin en UFC 92.",
+    "championships": [
+      {
+        "name": "Peso semipesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/rashad-evans-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-michael-bisping",
+    "name": "Michael Bisping",
+    "aliases": [
+      "Michael Bisping"
+    ],
+    "source": "https://www.ufc.com/athlete/michael-bisping",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/michael-bisping-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/michael-bisping",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2019,
+      "image": "assets/images/legends/ufc-michael-bisping.jpg"
+    },
+    "legacyNote": "Ganador de la tercera temporada de The Ultimate Fighter y primer británico campeón de UFC, en el peso medio (2016-2017).",
+    "championships": [
+      {
+        "name": "Peso medio",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/michael-bisping-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-ronda-rousey",
+    "name": "Ronda Rousey",
+    "aliases": [
+      "Ronda Rousey"
+    ],
+    "source": "https://www.ufc.com/athlete/ronda-rousey",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/ronda-rousey-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/ronda-rousey",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2018,
+      "image": "assets/images/legends/ufc-ronda-rousey.jpg"
+    },
+    "legacyNote": "Primera campeona femenina de UFC (peso gallo, 2012-2015) y primera mujer en el Salón de la Fama.",
+    "championships": [
+      {
+        "name": "Peso gallo femenino",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/ronda-rousey-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-urijah-faber",
+    "name": "Urijah Faber",
+    "aliases": [
+      "Urijah Faber"
+    ],
+    "source": "https://www.ufc.com/athlete/urijah-faber",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/urijah-faber-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/urijah-faber",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2017,
+      "image": "assets/images/legends/ufc-urijah-faber.jpg"
+    },
+    "legacyNote": "Campeón del peso pluma de WEC (2006-2008) y primera gran estrella de las divisiones ligeras.",
+    "championships": [],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-bj-penn",
+    "name": "BJ Penn",
+    "aliases": [
+      "BJ Penn"
+    ],
+    "source": "https://www.ufc.com/athlete/bj-penn",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/bj-penn-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/bj-penn",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2015,
+      "image": "assets/images/legends/ufc-bj-penn.jpg"
+    },
+    "legacyNote": "Campeón del peso wélter (2004) y del peso ligero (2008-2010) de UFC.",
+    "championships": [
+      {
+        "name": "Peso wélter",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/bj-penn-hall-fame"
+      },
+      {
+        "name": "Peso ligero",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/bj-penn-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-forrest-griffin",
+    "name": "Forrest Griffin",
+    "aliases": [
+      "Forrest Griffin"
+    ],
+    "source": "https://www.ufc.com/athlete/forrest-griffin",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/forrest-griffin-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/forrest-griffin",
+    "hallOfFame": {
+      "wing": "modern",
+      "inducted": 2013,
+      "image": "assets/images/legends/ufc-forrest-griffin.jpg"
+    },
+    "legacyNote": "Ganador de la primera temporada de The Ultimate Fighter; su combate con Stephan Bonnar en 2005 impulsó las MMA. Campeón del peso semipesado en 2008.",
+    "championships": [
+      {
+        "name": "Peso semipesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/forrest-griffin-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-mark-kerr",
+    "name": "Mark Kerr",
+    "aliases": [
+      "Mark Kerr"
+    ],
+    "source": "https://www.ufc.com/athlete/mark-kerr",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/hof/mark-kerr-hall-of-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/mark-kerr",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2025,
+      "image": "assets/images/legends/ufc-mark-kerr.jpg"
+    },
+    "legacyNote": "Ganó los torneos de peso pesado de UFC 14 y UFC 15; es uno de los cinco luchadores con varios torneos de UFC.",
+    "championships": [],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-vitor-belfort",
+    "name": "Vitor Belfort",
+    "aliases": [
+      "Vitor Belfort"
+    ],
+    "source": "https://www.ufc.com/athlete/vitor-belfort",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/hof/vitor-belfort-hall-of-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/vitor-belfort",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": null,
+      "image": "assets/images/legends/ufc-vitor-belfort.jpg"
+    },
+    "legacyNote": "Tiene el récord de finalizaciones en el primer asalto de UFC (13) y logró 10 nocauts en 90 segundos o menos.",
+    "championships": [],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-wanderlei-silva",
+    "name": "Wanderlei Silva",
+    "aliases": [
+      "Wanderlei Silva"
+    ],
+    "source": "https://www.ufc.com/athlete/wanderlei-silva",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/wanderlei-silva-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/wanderlei-silva",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": null,
+      "image": "assets/images/legends/ufc-wanderlei-silva.jpg"
+    },
+    "legacyNote": "Campeón del peso medio de PRIDE y ganador de su Grand Prix de 2003; suma 19 nocauts, el máximo entre UFC, WEC, PRIDE y Strikeforce.",
+    "championships": [],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-anderson-silva",
+    "name": "Anderson Silva",
+    "aliases": [
+      "Anderson Silva"
+    ],
+    "source": "https://www.ufc.com/athlete/anderson-silva",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/anderson-silva-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/anderson-silva",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2023,
+      "image": "assets/images/legends/ufc-anderson-silva.jpg"
+    },
+    "legacyNote": "Campeón del peso medio (2006-2013) con 16 victorias seguidas, la racha más larga de la historia de UFC.",
+    "championships": [
+      {
+        "name": "Peso medio",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/anderson-silva-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-jens-pulver",
+    "name": "Jens Pulver",
+    "aliases": [
+      "Jens Pulver"
+    ],
+    "source": "https://www.ufc.com/athlete/jens-pulver",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/jens-pulver-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/jens-pulver",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2023,
+      "image": "assets/images/legends/ufc-jens-pulver.jpg"
+    },
+    "legacyNote": "Primer campeón del peso ligero de UFC, en UFC 30; compitió en cuatro categorías durante 14 años.",
+    "championships": [
+      {
+        "name": "Peso ligero",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/jens-pulver-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-kevin-randleman",
+    "name": "Kevin Randleman",
+    "aliases": [
+      "Kevin Randleman"
+    ],
+    "source": "https://www.ufc.com/athlete/kevin-randleman",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/kevin-randleman-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/kevin-randleman",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2021,
+      "image": "assets/images/legends/ufc-kevin-randleman.jpg"
+    },
+    "legacyNote": "Campeón del peso pesado de UFC (1999-2000) y campeón universitario de lucha de la NCAA.",
+    "championships": [
+      {
+        "name": "Peso pesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/kevin-randleman-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-rich-franklin",
+    "name": "Rich Franklin",
+    "aliases": [
+      "Rich Franklin"
+    ],
+    "source": "https://www.ufc.com/athlete/rich-franklin",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/rich-franklin-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/rich-franklin",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2019,
+      "image": "assets/images/legends/ufc-rich-franklin.jpg"
+    },
+    "legacyNote": "Antiguo profesor de matemáticas, campeón del peso medio de UFC (2005-2006) y entrenador en The Ultimate Fighter.",
+    "championships": [
+      {
+        "name": "Peso medio",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/rich-franklin-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-matt-serra",
+    "name": "Matt Serra",
+    "aliases": [
+      "Matt Serra"
+    ],
+    "source": "https://www.ufc.com/athlete/matt-serra",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/matt-serra-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/matt-serra",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2018,
+      "image": "assets/images/legends/ufc-matt-serra.jpg"
+    },
+    "legacyNote": "Primer ganador de The Ultimate Fighter que llegó a campeón de UFC: conquistó el peso wélter ante Georges St-Pierre.",
+    "championships": [
+      {
+        "name": "Peso wélter",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/matt-serra-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-kazushi-sakuraba",
+    "name": "Kazushi Sakuraba",
+    "aliases": [
+      "Kazushi Sakuraba"
+    ],
+    "source": "https://www.ufc.com/athlete/kazushi-sakuraba",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/kazushi-sakuraba-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/kazushi-sakuraba",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2017,
+      "image": "assets/images/legends/ufc-kazushi-sakuraba.jpg"
+    },
+    "legacyNote": "«The Gracie Hunter», campeón del torneo de peso pesado de UFC Ultimate Japan; venció a rivales de categorías muy superiores.",
+    "championships": [],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-maurice-smith",
+    "name": "Maurice Smith",
+    "aliases": [
+      "Maurice Smith"
+    ],
+    "source": "https://www.ufc.com/athlete/maurice-smith",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/maurice-smith-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/maurice-smith",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2017,
+      "image": "assets/images/legends/ufc-maurice-smith.jpg"
+    },
+    "legacyNote": "Campeón del peso pesado de UFC en 1997 tras vencer a Mark Coleman; demostró que un especialista en golpeo podía triunfar en las MMA.",
+    "championships": [
+      {
+        "name": "Peso pesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/maurice-smith-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-don-frye",
+    "name": "Don Frye",
+    "aliases": [
+      "Don Frye"
+    ],
+    "source": "https://www.ufc.com/athlete/don-frye",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/don-frye-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/don-frye",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2016,
+      "image": "assets/images/legends/ufc-don-frye.jpg"
+    },
+    "legacyNote": "Campeón del torneo de UFC 8 y de Ultimate Ultimate 96.",
+    "championships": [],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-minotauro-nogueira",
+    "name": "Minotauro Nogueira",
+    "aliases": [
+      "Minotauro Nogueira"
+    ],
+    "source": "https://www.ufc.com/athlete/minotauro-nogueira",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/minotauro-nogueira-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/minotauro-nogueira",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2016,
+      "image": "assets/images/legends/ufc-minotauro-nogueira.jpg"
+    },
+    "legacyNote": "Único luchador que ha ganado los títulos de peso pesado de PRIDE y de UFC (interino, 2008).",
+    "championships": [],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-bas-rutten",
+    "name": "Bas Rutten",
+    "aliases": [
+      "Bas Rutten"
+    ],
+    "source": "https://www.ufc.com/athlete/bas-rutten",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/bas-rutten-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/bas-rutten",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2015,
+      "image": "assets/images/legends/ufc-bas-rutten.jpg"
+    },
+    "legacyNote": "Campeón del peso pesado de UFC en 1999, ganó sus dos combates en el octágono y fue rey de Pancrase.",
+    "championships": [
+      {
+        "name": "Peso pesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/bas-rutten-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-pat-miletich",
+    "name": "Pat Miletich",
+    "aliases": [
+      "Pat Miletich"
+    ],
+    "source": "https://www.ufc.com/athlete/pat-miletich",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/pat-miletich-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/pat-miletich",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2014,
+      "image": "assets/images/legends/ufc-pat-miletich.jpg"
+    },
+    "legacyNote": "Primer campeón del peso wélter de UFC; como entrenador llevó a Matt Hughes, Jens Pulver y Tim Sylvia a títulos mundiales.",
+    "championships": [
+      {
+        "name": "Peso wélter",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/pat-miletich-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-tito-ortiz",
+    "name": "Tito Ortiz",
+    "aliases": [
+      "Tito Ortiz"
+    ],
+    "source": "https://www.ufc.com/athlete/tito-ortiz",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/tito-ortiz-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/tito-ortiz",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2012,
+      "image": "assets/images/legends/ufc-tito-ortiz.jpg"
+    },
+    "legacyNote": "Campeón del peso semipesado (2000-2003) con cinco defensas del título; su rivalidad con Chuck Liddell marcó los primeros años de UFC.",
+    "championships": [
+      {
+        "name": "Peso semipesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/tito-ortiz-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-matt-hughes",
+    "name": "Matt Hughes",
+    "aliases": [
+      "Matt Hughes"
+    ],
+    "source": "https://www.ufc.com/athlete/matt-hughes",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/matt-hughes-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/matt-hughes",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2010,
+      "image": "assets/images/legends/ufc-matt-hughes.jpg"
+    },
+    "legacyNote": "Dos veces campeón del peso wélter (2001-2006) con siete defensas del título.",
+    "championships": [
+      {
+        "name": "Peso wélter",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/matt-hughes-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-chuck-liddell",
+    "name": "Chuck Liddell",
+    "aliases": [
+      "Chuck Liddell"
+    ],
+    "source": "https://www.ufc.com/athlete/chuck-liddell",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/chuck-liddell-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/chuck-liddell",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2009,
+      "image": "assets/images/legends/ufc-chuck-liddell.jpg"
+    },
+    "legacyNote": "Campeón del peso semipesado (2005-2007) y luchador con más victorias en la historia de la división.",
+    "championships": [
+      {
+        "name": "Peso semipesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/chuck-liddell-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-mark-coleman",
+    "name": "Mark Coleman",
+    "aliases": [
+      "Mark Coleman"
+    ],
+    "source": "https://www.ufc.com/athlete/mark-coleman",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/mark-coleman-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/mark-coleman",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2008,
+      "image": "assets/images/legends/ufc-mark-coleman.jpg"
+    },
+    "legacyNote": "Primer campeón del peso pesado de UFC, dos veces ganador de torneos y campeón del Grand Prix absoluto de PRIDE en 2000.",
+    "championships": [
+      {
+        "name": "Peso pesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/mark-coleman-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-randy-couture",
+    "name": "Randy Couture",
+    "aliases": [
+      "Randy Couture"
+    ],
+    "source": "https://www.ufc.com/athlete/randy-couture",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/randy-couture-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/randy-couture",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2006,
+      "image": "assets/images/legends/ufc-randy-couture.jpg"
+    },
+    "legacyNote": "Tres veces campeón del peso pesado y dos del semipesado: el primer campeón de UFC en dos categorías.",
+    "championships": [
+      {
+        "name": "Peso pesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/randy-couture-hall-fame"
+      },
+      {
+        "name": "Peso semipesado",
+        "type": "undisputed",
+        "status": "former",
+        "source": "https://www.ufc.com/30/randy-couture-hall-fame"
+      }
+    ],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-dan-severn",
+    "name": "Dan Severn",
+    "aliases": [
+      "Dan Severn"
+    ],
+    "source": "https://www.ufc.com/athlete/dan-severn",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/dan-severn-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/dan-severn",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2005,
+      "image": "assets/images/legends/ufc-dan-severn.jpg"
+    },
+    "legacyNote": "Campeón de la Superfight de UFC en 1996 y ganador del torneo Ultimate Ultimate 95; el primero en recibir un cinturón de UFC.",
+    "championships": [],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-ken-shamrock",
+    "name": "Ken Shamrock",
+    "aliases": [
+      "Ken Shamrock"
+    ],
+    "source": "https://www.ufc.com/athlete/ken-shamrock",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/ken-shamrock-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/ken-shamrock",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2003,
+      "image": "assets/images/legends/ufc-ken-shamrock.jpg"
+    },
+    "legacyNote": "Primer campeón de la Superfight de UFC y rey de Pancrase; su rivalidad con Royce Gracie marcó los inicios de UFC.",
+    "championships": [],
+    "championshipHistoryConsulted": "2026-11-26"
+  },
+  {
+    "id": "ufc-royce-gracie",
+    "name": "Royce Gracie",
+    "aliases": [
+      "Royce Gracie"
+    ],
+    "source": "https://www.ufc.com/athlete/royce-gracie",
+    "careerStatus": "retired",
+    "legend": true,
+    "legendSource": "https://www.ufc.com/30/royce-gracie-hall-fame",
+    "legendConsulted": "2026-11-26",
+    "retirementSource": "https://www.ufc.com/athlete/royce-gracie",
+    "hallOfFame": {
+      "wing": "pioneer",
+      "inducted": 2003,
+      "image": "assets/images/legends/ufc-royce-gracie.jpg"
+    },
+    "legacyNote": "Ganó el primer torneo de UFC en noviembre de 1993 con jiu-jitsu brasileño y tres de los cuatro primeros torneos.",
+    "championships": [],
+    "championshipHistoryConsulted": "2026-11-26"
   }
 ]

@@ -46,6 +46,7 @@ import {
   toast,
   boutDivisionLabel,
 } from "./utils.js";
+import { legendsHallHeader, legendCard, sortLegends, filterLegends } from "./legends-hall.js";
 import { initializeLab } from "./lab.js";
 import { initializeRankings, rankingCategories } from "./rankings.js";
 import {
@@ -235,6 +236,7 @@ function renderOverview() {
     .join("");
 }
 const catalogPagination = createCatalogPagination(24);
+let legendWingFilter = 'all';
 function renderFighters() {
   const query = $("#fighter-search").value.toLocaleLowerCase("es").trim(),
     style = $("#style-filter").value,
@@ -261,7 +263,15 @@ function renderFighters() {
     list.sort((a, b) => fullName(a).localeCompare(fullName(b), "es"));
   if ($("#fighter-sort").value === "power")
     list.sort((a, b) => (b.stats?.[2] ?? -1) - (a.stats?.[2] ?? -1));
-  const page = catalogPagination.select(list, [query, style, division, stance, belts, $("#fighter-sort").value, onlyFavorites]);
+  // Legends collection: gallery with Hall of Fame photos and wing filters.
+  const legendsView = belts === 'legend';
+  $("#legends-hall").hidden = !legendsView;
+  if (legendsView) {
+    if ($("#fighter-sort").value === "featured") list = sortLegends(list);
+    $("#legends-hall").innerHTML = legendsHallHeader(list, legendWingFilter);
+    list = filterLegends(list, legendWingFilter);
+  }
+  const page = catalogPagination.select(list, [query, style, division, stance, belts, $("#fighter-sort").value, onlyFavorites, legendWingFilter]);
   const language = getLocale().slice(0, 2);
   const words = {es: ['Mostrando', 'de', 'luchadores', 'Cargar más'], en: ['Showing', 'of', 'fighters', 'Load more'], ca: ['Mostrant', 'de', 'lluitadors', 'Carrega’n més']}[language] || ['Mostrando', 'de', 'luchadores', 'Cargar más'];
   const count = `${words[0]} ${page.shown} ${words[1]} ${page.total} ${words[2]}`;
@@ -274,9 +284,9 @@ function renderFighters() {
     const active = onlyFavorites ? 'following' : ['current', 'legend'].includes(belts) ? belts : belts === 'all' ? 'all' : '';
     button.setAttribute('aria-pressed', String(button.dataset.fighterScope === active));
   });
-  $("#fighter-list").className = catalogView === 'compact' ? 'fighter-directory-list' : 'fighter-grid';
+  $("#fighter-list").className = legendsView ? 'legends-grid' : catalogView === 'compact' ? 'fighter-directory-list' : 'fighter-grid';
   $("#fighter-list").innerHTML = list.length
-    ? page.items.map((f) => catalogView === 'compact' ? compactFighterRow(f, followButton(f, true)) : f.supplemental ? additionalFighterCard(f) : fighterCard(f)).join("")
+    ? page.items.map((f) => legendsView ? legendCard(f, followButton(f, true)) : catalogView === 'compact' ? compactFighterRow(f, followButton(f, true)) : f.supplemental ? additionalFighterCard(f) : fighterCard(f)).join("")
     : empty("Ningún luchador coincide. Prueba otros filtros.");
 }
 let homeHeroHtml = '';
@@ -544,6 +554,12 @@ document.querySelectorAll('[data-fighter-scope]').forEach(button => button.addEv
   $("#championship-filter").value = ['current', 'legend'].includes(scope) ? scope : 'all';
   $("#championship-filter").dispatchEvent(new Event('change', {bubbles:true}));
 }));
+$("#legends-hall").addEventListener('click', event => {
+  const button = event.target.closest('[data-legend-wing]');
+  if (!button || button.dataset.legendWing === legendWingFilter) return;
+  legendWingFilter = button.dataset.legendWing;
+  transitionCatalog($("#fighter-list"), renderFighters);
+});
 $("#fighter-detail").addEventListener('click', event => {
   const button = event.target.closest('[data-profile-section]');
   if (!button) return;

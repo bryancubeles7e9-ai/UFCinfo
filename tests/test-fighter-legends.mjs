@@ -16,7 +16,9 @@ for (const fighter of legends) {
   assert.ok(fighter.code && fighter.image && fighter.stance && fighter.retirementSource);
   assert.notEqual(martialDetails(fighter).kind, 'unknown');
   assert.match(legendBadge(fighter), /Leyenda/);
-  assert.match(renderLegacyDetails(fighter), /Trayectoria histórica/);
+  // Hall of Fame members show their wing, year, note and the official photo.
+  assert.match(renderLegacyDetails(fighter), /Miembro del Salón de la Fama de UFC \(Ala moderna · 20\d\d\)/);
+  assert.match(renderLegacyDetails(fighter), /assets\/images\/legends\//);
 }
 assert.match(legendBadge(legends[3]), /Retirada/);
 assert.equal(legendBadge({}), '');
@@ -36,6 +38,7 @@ assert.ok(matchesChampionship(dustin, 'legend'));
 assert.ok(!matchesChampionship(dustin, 'current'));
 assert.equal(dustin.stance, 'Southpaw');
 assert.match(renderLegacyDetails(dustin), /Campeón interino/);
+assert.match(renderLegacyDetails(dustin), /Trayectoria histórica/);
 assert.ok(!dustin.championships.some(b => b.type === 'undisputed' || b.name === 'BMF'));
 assert.ok(!renderLegacyDetails({...dustin,legacyNote:'<script>bad</script>'}).includes('<script>'));
 console.log('PASS: Dustin Poirier is a retired legend; interim title described accurately');
