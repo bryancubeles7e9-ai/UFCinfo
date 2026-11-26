@@ -132,6 +132,11 @@ export function createStore() {
       state = value;
       return this.save();
     },
+    // After deleting an account, its copy in this browser goes too.
+    forgetScope(accountId) {
+      if (!/^[a-zA-Z0-9-]{1,80}$/.test(String(accountId))) return;
+      try { localStorage.removeItem(`${key}:account:${accountId}`); } catch { /* Nothing stored. */ }
+    },
     useScope(accountId = null) {
       if (accountId !== null && !/^[a-zA-Z0-9-]{1,80}$/.test(accountId))
         throw new Error("Identificador de cuenta no válido.");

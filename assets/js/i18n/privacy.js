@@ -1,0 +1,37 @@
+// Interface copy of the account privacy tools and legal links.
+export const privacyCopy = {
+ "en": {
+  "TUS DATOS": "YOUR DATA",
+  "Descargar mis datos": "Download my data",
+  "Eliminar mi cuenta": "Delete my account",
+  "Se borrarán tu cuenta, tus luchadores seguidos, tus pronósticos de Pick’em y tus sesiones.": "Your account, followed fighters, Pick’em picks and sessions will be deleted.",
+  "No se puede deshacer.": "This cannot be undone.",
+  "Escribe tu contraseña para confirmar": "Enter your password to confirm",
+  "Eliminar definitivamente": "Delete permanently",
+  "Cancelar": "Cancel",
+  "Privacidad y aviso legal": "Privacy and legal notice",
+  "Solo guardamos tu nombre de usuario, tus luchadores seguidos y tus pronósticos. Consulta la": "We only store your username, followed fighters and picks. See the",
+  "política de privacidad": "privacy policy",
+  "Proyecto independiente de aficionados, sin relación con UFC. Fotografías y datos oficiales: UFC.": "Independent fan project, not affiliated with UFC. Official photos and data: UFC.",
+  "Cuenta eliminada. Seguimos en modo invitado · Datos guardados en este navegador.": "Account deleted. You are now a guest · Data saved in this browser.",
+  "La contraseña no es correcta.": "The password is incorrect.",
+  "Escribe tu contraseña para confirmar.": "Enter your password to confirm."
+ },
+ "ca": {
+  "TUS DATOS": "LES TEVES DADES",
+  "Descargar mis datos": "Descarrega les meves dades",
+  "Eliminar mi cuenta": "Elimina el meu compte",
+  "Se borrarán tu cuenta, tus luchadores seguidos, tus pronósticos de Pick’em y tus sesiones.": "S’esborraran el teu compte, els lluitadors que segueixes, els pronòstics de Pick’em i les sessions.",
+  "No se puede deshacer.": "No es pot desfer.",
+  "Escribe tu contraseña para confirmar": "Escriu la contrasenya per confirmar",
+  "Eliminar definitivamente": "Elimina definitivament",
+  "Cancelar": "Cancel·la",
+  "Privacidad y aviso legal": "Privacitat i avís legal",
+  "Solo guardamos tu nombre de usuario, tus luchadores seguidos y tus pronósticos. Consulta la": "Només desem el teu nom d’usuari, els lluitadors que segueixes i els pronòstics. Consulta la",
+  "política de privacidad": "política de privacitat",
+  "Proyecto independiente de aficionados, sin relación con UFC. Fotografías y datos oficiales: UFC.": "Projecte independent d’aficionats, sense relació amb UFC. Fotografies i dades oficials: UFC.",
+  "Cuenta eliminada. Seguimos en modo invitado · Datos guardados en este navegador.": "Compte eliminat. Continues en mode convidat · Dades desades en aquest navegador.",
+  "La contraseña no es correcta.": "La contrasenya no és correcta.",
+  "Escribe tu contraseña para confirmar.": "Escriu la contrasenya per confirmar."
+ }
+};

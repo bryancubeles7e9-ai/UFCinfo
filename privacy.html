@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UFCinfo · Privacidad y aviso legal</title>
+<meta name="description" content="Qué datos guarda UFCinfo, para qué, durante cuánto tiempo y cómo ejercer tus derechos.">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/fonts.css">
+<style>
+  /* Self-contained legal page; the server fills in the owner and contact placeholders. */
+  :root { --bg:#101010; --surface:#191919; --ink:#f3f1ec; --muted:#b4b1ab; --line:#2b2b2b; --accent:#f4512b; }
+  @media (prefers-color-scheme: light) { :root { --bg:#f4f2ed; --surface:#fff; --ink:#151515; --muted:#55524d; --line:#dedad2; --accent:#c8391a; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 "DM Sans", Arial, sans-serif; }
+  header, main { width:min(820px,100%); margin:0 auto; padding:0 20px; }
+  header { display:flex; align-items:center; justify-content:space-between; gap:12px; padding-top:22px; padding-bottom:22px; border-bottom:1px solid var(--line); }
+  .brand { font:800 26px/1 "Barlow Condensed", "Arial Narrow", Impact, sans-serif; color:var(--ink); text-decoration:none; }
+  .brand span { color:var(--accent); }
+  select { padding:8px 10px; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); font:inherit; font-size:14px; }
+  main { padding-top:34px; padding-bottom:60px; }
+  h1 { font:800 clamp(34px,6vw,52px)/1.02 "Barlow Condensed", "Arial Narrow", Impact, sans-serif; text-transform:uppercase; margin:0 0 8px; }
+  h2 { font:800 26px/1.15 "Barlow Condensed", "Arial Narrow", Impact, sans-serif; margin:34px 0 8px; }
+  p, li { color:var(--ink); } .muted { color:var(--muted); font-size:14px; }
+  ul { padding-left:20px; } li { margin:6px 0; }
+  a { color:var(--accent); }
+  .card { padding:16px 18px; border:1px solid var(--line); border-radius:12px; background:var(--surface); }
+  .back { display:inline-block; margin-top:34px; padding:12px 20px; border-radius:10px; background:var(--accent); color:#fff; font-weight:700; text-decoration:none; }
+  [data-lang]:not(.active) { display:none; }
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="/">UFC<span>info</span></a>
+  <select id="lang" aria-label="Idioma / Language / Idioma"><option value="es">Español</option><option value="en">English</option><option value="ca">Català</option></select>
+</header>
+<main>
+
+<section data-lang="es" class="active" lang="es">
+  <h1>Privacidad y aviso legal</h1>
+  <p class="muted">Última actualización: 26 de noviembre de 2026.</p>
+  <div class="card">
+    <p><strong>Responsable:</strong> {{OWNER}}<br><strong>Contacto:</strong> <a href="mailto:{{CONTACT}}">{{CONTACT}}</a></p>
+    <p>UFCinfo es un proyecto personal e independiente de aficionados. <strong>No está afiliado a UFC, a Zuffa ni a TKO</strong>; «UFC» y las fotografías oficiales pertenecen a sus titulares y se usan para informar, citando la fuente.</p>
+  </div>
+
+  <h2>Sin cuenta: nada sale de tu navegador</h2>
+  <p>Si usas UFCinfo como invitado, el servidor no guarda nada sobre ti. Tus preferencias (idioma, luchadores que sigues, modo sin spoilers, tema, vista del catálogo y rumores ya vistos) se quedan en el almacenamiento local de tu navegador y puedes borrarlas desde su configuración.</p>
+
+  <h2>Con cuenta: qué guardamos</h2>
+  <ul>
+    <li><strong>Nombre de usuario</strong> y <strong>contraseña</strong>. La contraseña se guarda solo como huella cifrada (scrypt): nadie puede leerla.</li>
+    <li><strong>Luchadores que sigues</strong>, para recuperarlos en otros dispositivos.</li>
+    <li><strong>Pick’em:</strong> el nombre que eliges para la clasificación y tus pronósticos.</li>
+    <li><strong>Sesión:</strong> una cookie técnica que mantiene la sesión iniciada hasta 30 días.</li>
+  </ul>
+  <p>No pedimos correo, nombre real, fecha de nacimiento ni ubicación.</p>
+
+  <h2>Seguridad y funcionamiento</h2>
+  <ul>
+    <li>Para frenar ataques, los intentos de acceso (dirección IP y nombre de usuario) se guardan <strong>15 minutos</strong>.</li>
+    <li>Si la web falla en tu navegador, se envía un informe técnico (mensaje de error, archivo, sección y tipo de navegador), sin dirección IP ni cookies.</li>
+    <li>El alojamiento (Render) registra las peticiones a la web, con dirección IP, como cualquier servidor.</li>
+    <li>Las fotografías de los luchadores se cargan desde UFC.com, así que tu navegador se conecta a sus servidores.</li>
+  </ul>
+
+  <h2>Para qué y con qué base legal</h2>
+  <p>Usamos los datos de la cuenta solo para darte el servicio que pides: guardar tu seguimiento y tus pronósticos y mostrarte en la clasificación (ejecución del servicio, art. 6.1.b del RGPD). Los registros de seguridad y de errores responden al interés legítimo de mantener la web segura y funcionando (art. 6.1.f). No vendemos datos, no hacemos perfiles y no hay publicidad ni analítica de terceros.</p>
+
+  <h2>Cuánto tiempo</h2>
+  <ul>
+    <li>Cuenta, seguimiento y pronósticos: hasta que elimines la cuenta.</li>
+    <li>Sesiones: 30 días como máximo. Intentos de acceso: 15 minutos.</li>
+    <li>Copias de seguridad: cifradas y guardadas 90 días; después se borran solas.</li>
+  </ul>
+
+  <h2>Quién más interviene</h2>
+  <p><strong>Render</strong> aloja la web y la base de datos, y <strong>GitHub</strong> guarda las copias de seguridad cifradas. Ambos actúan como encargados del tratamiento y pueden procesar datos fuera de la Unión Europea con las garantías previstas en el RGPD, como las cláusulas contractuales tipo.</p>
+
+  <h2>Cookies</h2>
+  <p>Solo hay una cookie, <code>octagon_session</code>, estrictamente necesaria para mantener tu sesión. No hay cookies de analítica ni de publicidad, por eso no te pedimos consentimiento. Si algún día se activa publicidad, se pedirá antes tu permiso.</p>
+
+  <h2>Tus derechos</h2>
+  <ul>
+    <li><strong>Descargar tus datos</strong> y <strong>eliminar tu cuenta</strong> lo puedes hacer tú mismo desde el menú de tu cuenta: el borrado es inmediato e incluye seguimiento, pronósticos y sesiones (de las copias de seguridad desaparece en 90 días).</li>
+    <li>Para acceder, rectificar, oponerte o limitar el tratamiento, escribe a <a href="mailto:{{CONTACT}}">{{CONTACT}}</a>.</li>
+    <li>Si crees que no se respetan tus derechos, puedes reclamar ante la <a href="https://www.aepd.es" rel="noopener noreferrer">Agencia Española de Protección de Datos</a>.</li>
+  </ul>
+  <p>Para crear una cuenta debes tener al menos 14 años.</p>
+  <a class="back" href="/">Volver a UFCinfo</a>
+</section>
+
+<section data-lang="en" lang="en">
+  <h1>Privacy and legal notice</h1>
+  <p class="muted">Last updated: 26 November 2026.</p>
+  <div class="card">
+    <p><strong>Data controller:</strong> {{OWNER}}<br><strong>Contact:</strong> <a href="mailto:{{CONTACT}}">{{CONTACT}}</a></p>
+    <p>UFCinfo is an independent personal fan project. <strong>It is not affiliated with UFC, Zuffa or TKO</strong>; “UFC” and the official photos belong to their owners and are used for information, with the source credited.</p>
+  </div>
+  <h2>Without an account: nothing leaves your browser</h2>
+  <p>If you use UFCinfo as a guest, the server stores nothing about you. Your preferences (language, followed fighters, spoiler-free mode, theme, catalogue view and rumours already seen) stay in your browser’s local storage and you can clear them from its settings.</p>
+  <h2>With an account: what we store</h2>
+  <ul>
+    <li><strong>Username</strong> and <strong>password</strong>. The password is stored only as a scrypt hash: nobody can read it.</li>
+    <li><strong>Followed fighters</strong>, so you get them back on other devices.</li>
+    <li><strong>Pick’em:</strong> the name you choose for the leaderboard and your picks.</li>
+    <li><strong>Session:</strong> a technical cookie that keeps you signed in for up to 30 days.</li>
+  </ul>
+  <p>We do not ask for your email, real name, date of birth or location.</p>
+  <h2>Security and operation</h2>
+  <ul>
+    <li>To stop attacks, sign-in attempts (IP address and username) are kept for <strong>15 minutes</strong>.</li>
+    <li>If the site breaks in your browser, a technical report is sent (error message, file, section and browser type), without IP address or cookies.</li>
+    <li>The host (Render) logs requests to the site, with IP address, like any server.</li>
+    <li>Fighter photos load from UFC.com, so your browser connects to its servers.</li>
+  </ul>
+  <h2>Purpose and legal basis</h2>
+  <p>Account data is used only to provide the service you ask for: saving your follows and picks and showing you on the leaderboard (performance of the service, GDPR art. 6.1.b). Security and error logs serve the legitimate interest of keeping the site safe and working (art. 6.1.f). We do not sell data, build profiles, or use third-party advertising or analytics.</p>
+  <h2>How long</h2>
+  <ul>
+    <li>Account, follows and picks: until you delete the account.</li>
+    <li>Sessions: 30 days at most. Sign-in attempts: 15 minutes.</li>
+    <li>Backups: encrypted and kept for 90 days, then deleted automatically.</li>
+  </ul>
+  <h2>Who else is involved</h2>
+  <p><strong>Render</strong> hosts the site and database, and <strong>GitHub</strong> stores the encrypted backups. Both act as processors and may process data outside the European Union under GDPR safeguards such as standard contractual clauses.</p>
+  <h2>Cookies</h2>
+  <p>There is a single cookie, <code>octagon_session</code>, strictly necessary to keep you signed in. There are no analytics or advertising cookies, so we do not ask for consent. If advertising is ever enabled, your permission will be requested first.</p>
+  <h2>Your rights</h2>
+  <ul>
+    <li>You can <strong>download your data</strong> and <strong>delete your account</strong> yourself from your account menu: deletion is immediate and includes follows, picks and sessions (it disappears from backups within 90 days).</li>
+    <li>To access, rectify, object to or restrict processing, write to <a href="mailto:{{CONTACT}}">{{CONTACT}}</a>.</li>
+    <li>If you believe your rights are not respected, you can complain to the <a href="https://www.aepd.es" rel="noopener noreferrer">Spanish Data Protection Agency (AEPD)</a>.</li>
+  </ul>
+  <p>You must be at least 14 to create an account.</p>
+  <a class="back" href="/">Back to UFCinfo</a>
+</section>
+
+<section data-lang="ca" lang="ca">
+  <h1>Privacitat i avís legal</h1>
+  <p class="muted">Darrera actualització: 26 de novembre de 2026.</p>
+  <div class="card">
+    <p><strong>Responsable:</strong> {{OWNER}}<br><strong>Contacte:</strong> <a href="mailto:{{CONTACT}}">{{CONTACT}}</a></p>
+    <p>UFCinfo és un projecte personal i independent d’aficionats. <strong>No està afiliat a UFC, a Zuffa ni a TKO</strong>; «UFC» i les fotografies oficials pertanyen als seus titulars i s’utilitzen per informar, citant-ne la font.</p>
+  </div>
+  <h2>Sense compte: res no surt del teu navegador</h2>
+  <p>Si fas servir UFCinfo com a convidat, el servidor no desa res sobre tu. Les teves preferències (idioma, lluitadors que segueixes, mode sense spoilers, tema, vista del catàleg i rumors ja vistos) es queden a l’emmagatzematge local del navegador i les pots esborrar des de la seva configuració.</p>
+  <h2>Amb compte: què desem</h2>
+  <ul>
+    <li><strong>Nom d’usuari</strong> i <strong>contrasenya</strong>. La contrasenya només es desa com a empremta xifrada (scrypt): ningú no la pot llegir.</li>
+    <li><strong>Lluitadors que segueixes</strong>, per recuperar-los en altres dispositius.</li>
+    <li><strong>Pick’em:</strong> el nom que tries per a la classificació i els teus pronòstics.</li>
+    <li><strong>Sessió:</strong> una galeta tècnica que manté la sessió iniciada fins a 30 dies.</li>
+  </ul>
+  <p>No demanem correu, nom real, data de naixement ni ubicació.</p>
+  <h2>Seguretat i funcionament</h2>
+  <ul>
+    <li>Per frenar atacs, els intents d’accés (adreça IP i nom d’usuari) es desen <strong>15 minuts</strong>.</li>
+    <li>Si el web falla al teu navegador, s’envia un informe tècnic (missatge d’error, fitxer, secció i tipus de navegador), sense adreça IP ni galetes.</li>
+    <li>L’allotjament (Render) registra les peticions al web, amb adreça IP, com qualsevol servidor.</li>
+    <li>Les fotografies dels lluitadors es carreguen des d’UFC.com, de manera que el navegador es connecta als seus servidors.</li>
+  </ul>
+  <h2>Per a què i amb quina base legal</h2>
+  <p>Fem servir les dades del compte només per donar-te el servei que demanes: desar el seguiment i els pronòstics i mostrar-te a la classificació (execució del servei, art. 6.1.b del RGPD). Els registres de seguretat i d’errors responen a l’interès legítim de mantenir el web segur i en funcionament (art. 6.1.f). No venem dades, no fem perfils i no hi ha publicitat ni analítica de tercers.</p>
+  <h2>Quant de temps</h2>
+  <ul>
+    <li>Compte, seguiment i pronòstics: fins que eliminis el compte.</li>
+    <li>Sessions: 30 dies com a màxim. Intents d’accés: 15 minuts.</li>
+    <li>Còpies de seguretat: xifrades i desades 90 dies; després s’esborren soles.</li>
+  </ul>
+  <h2>Qui més hi intervé</h2>
+  <p><strong>Render</strong> allotja el web i la base de dades, i <strong>GitHub</strong> desa les còpies de seguretat xifrades. Tots dos actuen com a encarregats del tractament i poden tractar dades fora de la Unió Europea amb les garanties previstes al RGPD, com les clàusules contractuals tipus.</p>
+  <h2>Galetes</h2>
+  <p>Només hi ha una galeta, <code>octagon_session</code>, estrictament necessària per mantenir la sessió. No hi ha galetes d’analítica ni de publicitat, per això no et demanem consentiment. Si algun dia s’activa la publicitat, abans es demanarà el teu permís.</p>
+  <h2>Els teus drets</h2>
+  <ul>
+    <li>Pots <strong>descarregar les teves dades</strong> i <strong>eliminar el compte</strong> tu mateix des del menú del compte: l’esborrat és immediat i inclou seguiment, pronòstics i sessions (de les còpies de seguretat desapareix en 90 dies).</li>
+    <li>Per accedir, rectificar, oposar-te o limitar el tractament, escriu a <a href="mailto:{{CONTACT}}">{{CONTACT}}</a>.</li>
+    <li>Si creus que no es respecten els teus drets, pots reclamar davant l’<a href="https://www.aepd.es" rel="noopener noreferrer">Agència Espanyola de Protecció de Dades</a>.</li>
+  </ul>
+  <p>Per crear un compte has de tenir com a mínim 14 anys.</p>
+  <a class="back" href="/">Torna a UFCinfo</a>
+</section>
+</main>
+<script>
+  const select = document.getElementById('lang');
+  const show = code => {
+    document.querySelectorAll('[data-lang]').forEach(s => s.classList.toggle('active', s.dataset.lang === code));
+    document.documentElement.lang = code; select.value = code;
+    document.title = {es:'UFCinfo · Privacidad y aviso legal', en:'UFCinfo · Privacy and legal notice', ca:'UFCinfo · Privacitat i avís legal'}[code];
+  };
+  let saved = null;
+  try { saved = localStorage.getItem('ufcinfo-language'); } catch {}
+  show([saved, ...(navigator.languages || [navigator.language])].map(l => String(l || '').slice(0, 2)).find(l => ['es','en','ca'].includes(l)) || 'es');
+  select.addEventListener('change', () => { show(select.value); try { localStorage.setItem('ufcinfo-language', select.value); } catch {} });
+</script>
+</body>
+</html>

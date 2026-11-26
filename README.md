@@ -177,6 +177,10 @@ UFCinfo empieza como proyecto personal y muestra de desarrollo, aspira a ser una
 
 A lo largo de todas las fases se busca la sostenibilidad económica (publicidad discreta, patrocinios y, más adelante, funciones opcionales). La publicación en tiendas de aplicaciones queda para cuando la PWA demuestre demanda. Detalles e indicadores de cada fase en la [hoja de ruta](docs/ROADMAP.md).
 
+## Privacidad
+
+La política de privacidad y el aviso legal están en **/privacidad**. Cada usuario puede descargar sus datos o eliminar su cuenta desde «Mi cuenta». El responsable y el contacto se configuran en Render (`PRIVACY_OWNER`, `PRIVACY_CONTACT`). Detalles en `docs/PUBLICACION.md`.
+
 ## Ejecutar el proyecto en local
 
 La interfaz utiliza **HTML, CSS y JavaScript**, sin proceso de compilación. El servidor de cuentas utiliza **Python y SQLite**.

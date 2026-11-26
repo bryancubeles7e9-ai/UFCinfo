@@ -63,6 +63,14 @@ Mientras Render reinicia el servidor tras un despliegue, su proxy responde 502�
 
 Límite: un visitante que entra por primera vez justo durante el reinicio aún no tiene el service worker instalado y ve la página de Render; desde su primera visita ya ve la pantalla propia.
 
+## Privacidad y aviso legal
+
+La página **/privacidad** (también /privacy) explica en español, inglés y catalán qué datos se guardan, para qué, durante cuánto tiempo, quién interviene (Render y GitHub), la única cookie técnica y cómo ejercer los derechos. La plantilla es `privacy.html`. El responsable y el correo de contacto **no están en el repositorio**: los toma de las variables `PRIVACY_OWNER` y `PRIVACY_CONTACT` de Render; si faltan, la página muestra «Pendiente de indicar».
+
+Desde **Mi cuenta › Tus datos**, cada usuario puede descargar sus datos en JSON (`GET /api/me/export`) y eliminar su cuenta confirmando la contraseña (`POST /api/me/delete`). El borrado elimina al momento la cuenta, el seguimiento, el nombre y los pronósticos de Pick’em y las sesiones; de las copias de seguridad desaparece cuando caducan, a los 90 días. El pie de página y el formulario de registro enlazan a la política.
+
+Como solo existe una cookie estrictamente necesaria y no hay analítica ni publicidad, no hace falta aviso de cookies. **Antes de activar AdSense** habrá que añadir un gestor de consentimiento y actualizar la política.
+
 ## Rendimiento
 
 Medido con Lighthouse el 26 de noviembre de 2026 en la portada: en ordenador, 97 de rendimiento y 100 en accesibilidad, buenas prácticas y SEO; en móvil con 4G lenta simulada, alrededor de 65 de rendimiento (antes 34), 100 de accesibilidad y desplazamiento visual casi nulo (0,005, antes 0,88). El peso de la portada bajó de 3,7 MB a unos 1,3 MB gracias a la compresión gzip, las copias WebP de las fotos y las tipografías propias. El siguiente paso, si hace falta, es agrupar los módulos JavaScript para reducir la cadena de descargas en móvil.

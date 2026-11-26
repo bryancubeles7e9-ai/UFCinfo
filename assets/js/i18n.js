@@ -3,6 +3,7 @@ import { catalan } from './i18n/ca.js';
 import { martialNotes } from './i18n/martial-notes.js';
 import { legendNotes } from './i18n/legend-notes.js';
 import { legendsCopy } from './i18n/legends.js';
+import { privacyCopy } from './i18n/privacy.js';
 // Bout classes built by boutDivisionLabel() in utils.js, in every form it can produce.
 const weights = [['mosca','Flyweight','mosca'], ['gallo','Bantamweight','gall'], ['pluma','Featherweight','ploma'], ['ligero','Lightweight','lleuger'],
   ['wélter','Welterweight','wèlter'], ['medio','Middleweight','mitjà'], ['semipesado','Light Heavyweight','semipesant'], ['pesado','Heavyweight','pesant'],
@@ -12,7 +13,7 @@ for (const [es, en, ca] of weights) for (const [women, enWomen, caWomen] of [[''
   Object.assign(boutClasses.en, { [`Peso ${es}${women}`]: `${enWomen}${en}`, [`Título del peso ${es}${women}`]: `${enWomen}${en} title`, [`Título interino del peso ${es}${women}`]: `Interim ${enWomen}${en} title` });
   Object.assign(boutClasses.ca, { [`Peso ${es}${women}`]: `Pes ${ca}${caWomen}`, [`Título del peso ${es}${women}`]: `Títol del pes ${ca}${caWomen}`, [`Título interino del peso ${es}${women}`]: `Títol interí del pes ${ca}${caWomen}` });
 }
-const dictionaries = { en: {...boutClasses.en, ...english, ...martialNotes.en, ...legendNotes.en, ...legendsCopy.en}, ca: {...boutClasses.ca, ...catalan, ...martialNotes.ca, ...legendNotes.ca, ...legendsCopy.ca} };
+const dictionaries = { en: {...boutClasses.en, ...english, ...martialNotes.en, ...legendNotes.en, ...legendsCopy.en, ...privacyCopy.en}, ca: {...boutClasses.ca, ...catalan, ...martialNotes.ca, ...legendNotes.ca, ...legendsCopy.ca, ...privacyCopy.ca} };
 const locales = { es: 'es-ES', en: 'en-US', ca: 'ca-ES' };
 const storageKey = 'ufcinfo-language';
 let language = 'es';

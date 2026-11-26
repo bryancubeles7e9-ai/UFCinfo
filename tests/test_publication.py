@@ -35,7 +35,7 @@ class PublicationTests(unittest.TestCase):
                 status, sitemap = get("/sitemap.xml")
                 self.assertEqual(status, 200)
                 locations = ElementTree.fromstring(sitemap).findall("{*}url/{*}loc")
-                self.assertEqual([item.text for item in locations], [origin + "/"])
+                self.assertEqual([item.text for item in locations], [origin + "/", origin + "/privacidad"])
                 status, robots = get("/robots.txt")
                 self.assertEqual(status, 200)
                 self.assertIn("Sitemap: https://ufcinfo.example/sitemap.xml", robots)
