@@ -315,3 +315,5 @@ body.light{--accent:#c8391a}
 /* Light theme: the follow button over list rows uses the light surface instead of a dark disc. */
 body.light .favorite-button:not(.selected){background:var(--surface-2);color:var(--muted);border-color:var(--line)}
 body.light .championship-badge.former{color:#5f625f;border-color:#a8aaa4}
+/* Martial background note: body text, not a caption. */
+.martial-base > p:not(.eyebrow){font-size:14px;line-height:1.6}
