@@ -52,3 +52,13 @@ Necesita tres valores que solo conoce el propietario (nunca se escriben en el c�
 2. Descífralo en tu ordenador: `openssl enc -d -aes-256-cbc -pbkdf2 -iter 600000 -in ufcinfo-AAAA-MM-DD.sqlite3.enc -out accounts.sqlite3` (pide la contraseña de cifrado).
 3. Comprueba la copia: `sqlite3 accounts.sqlite3 "PRAGMA integrity_check;"` debe responder `ok`.
 4. Activa el modo de mantenimiento en Render, sustituye `/var/data/accounts.sqlite3` por la copia (desde la *Shell* del servicio) y vuelve a desactivarlo.
+
+## Pantalla de actualización durante los despliegues
+
+Mientras Render reinicia el servidor tras un despliegue, su proxy responde 502–504 con una página propia que no se puede personalizar. Para que el visitante entienda qué pasa:
+
+- **Service worker** (`assets/sw.js`, servido con `Service-Worker-Allowed: /`): guarda solo `assets/updating.html` y, cuando al abrir o recargar la web Render responde 502, 503 o 504 (o el servidor no contesta y el dispositivo sí tiene conexión), muestra esa página en lugar del error. No guarda ni sirve ningún otro archivo, así que nunca muestra versiones antiguas de la web.
+- **`assets/updating.html`**: explica en español, inglés o catalán (según el idioma elegido en la web o el del navegador) que la web se está actualizando y que los datos están a salvo; comprueba `/api/health` con intervalos crecientes y recarga sola cuando el servidor vuelve.
+- **Aviso dentro de la web:** si el reinicio ocurre mientras alguien la usa, aparece un mensaje discreto mientras las peticiones se reintentan y desaparece al volver el servidor.
+
+Límite: un visitante que entra por primera vez justo durante el reinicio aún no tiene el service worker instalado y ve la página de Render; desde su primera visita ya ve la pantalla propia.

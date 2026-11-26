@@ -15,15 +15,25 @@ export class AccountError extends Error {
 const retryDelays = [1000, 2000, 4000, 8000, 15000];
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 
+const announce = name => globalThis.document?.dispatchEvent?.(new Event(`ufcinfo:server-${name}`));
+
 export async function accountRequest(path, options = {}, delays = retryDelays) {
+  let waited = false;
   for (let attempt = 0; ; attempt++) {
     try {
-      return await requestOnce(path, options);
+      const data = await requestOnce(path, options);
+      if (waited) announce("back");
+      return data;
     } catch (error) {
       // Gateway errors never reached the app, so any method may retry; a lost
       // connection is retried only for reads, which cannot apply a change twice.
       const restarting = [502, 503, 504].includes(error.status) || (error.status === 0 && (options.method || "GET") === "GET");
-      if (!restarting || attempt >= delays.length) throw error;
+      if (!restarting || attempt >= delays.length) {
+        if (waited) announce("back");
+        throw error;
+      }
+      if (!waited) announce("restarting");
+      waited = true;
       await wait(delays[attempt]);
     }
   }

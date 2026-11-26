@@ -287,6 +287,7 @@ Object.assign(english, {
   "Última búsqueda: todavía no disponible.": "Last search: not yet available.",
   "Búsqueda programada cada hora en punto.": "Search scheduled at the start of every hour.",
   "NUEVO": "NEW",
+  "Estamos actualizando la web. Tu acción se completará en unos segundos.": "We are updating the site. Your action will complete in a few seconds.",
   "Búsqueda de rumores en pausa.": "Rumor search paused.",
   "Datos de la fuente": "Source details",
   "Accesos rápidos": "Quick links",

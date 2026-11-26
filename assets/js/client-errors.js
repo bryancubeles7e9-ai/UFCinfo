@@ -23,6 +23,12 @@ function send(report) {
     headers: {'Content-Type': 'application/json'}, body: JSON.stringify(report)}).catch(() => {});
 }
 
+// The service worker only replaces Render's restart error page with a friendly one.
+export function registerUpdatingPage() {
+  if (!('serviceWorker' in navigator) || !window.isSecureContext) return;
+  navigator.serviceWorker.register('/assets/sw.js', {scope: '/'}).catch(() => {});
+}
+
 export function initializeClientErrors() {
   window.addEventListener('error', event => {
     const report = errorReport(event);
@@ -35,4 +41,18 @@ export function initializeClientErrors() {
       filename: frame[1], lineno: Number(frame[2]), colno: Number(frame[3])});
     if (report) send(report);
   });
+}
+
+// While a request waits for the server to restart, tell the visitor why instead of failing silently.
+export function initializeRestartNotice() {
+  let notice = null;
+  document.addEventListener('ufcinfo:server-restarting', () => {
+    if (notice) return;
+    notice = document.createElement('div');
+    notice.className = 'server-restart-notice';
+    notice.setAttribute('role', 'status');
+    notice.innerHTML = '<span class="server-restart-spinner" aria-hidden="true"></span><span>Estamos actualizando la web. Tu acción se completará en unos segundos.</span>';
+    document.body.append(notice);
+  });
+  document.addEventListener('ufcinfo:server-back', () => { notice?.remove(); notice = null; });
 }

@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict';
-globalThis.document = {querySelector: () => null};
+const events = [];
+globalThis.document = Object.assign(new EventTarget(), {querySelector: () => null});
+for (const name of ['restarting', 'back']) document.addEventListener(`ufcinfo:server-${name}`, () => events.push(name));
 const {accountRequest} = await import('../assets/js/account.js');
 const {errorReport} = await import('../assets/js/client-errors.js');
 const json = (status, body) => ({ok: status < 400, status, headers: {get: () => 'application/json'}, json: async () => body});
@@ -10,6 +12,7 @@ let calls = 0;
 globalThis.fetch = async () => (++calls < 3 ? html(502) : json(200, {ok: true}));
 assert.deepEqual(await accountRequest('pickem/state', {}, [0, 0, 0]), {ok: true});
 assert.equal(calls, 3);
+assert.deepEqual(events, ['restarting', 'back'], 'visitors see a restart notice that clears once the server is back');
 
 // A save that loses its connection is not repeated: it may already have been applied.
 calls = 0;

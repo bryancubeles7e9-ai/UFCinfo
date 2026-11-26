@@ -148,6 +148,8 @@ def make_handler(database, public_origin, fighter_ids):
             # Assets use stable URLs: revalidate after deployments to avoid mixing versions.
             if urlsplit(self.path).path.startswith('/assets/'):
                 self.send_header('Cache-Control', 'no-cache')
+            if urlsplit(self.path).path == '/assets/sw.js':
+                self.send_header('Service-Worker-Allowed', '/')
             self.send_header("X-Content-Type-Options", "nosniff")
             self.send_header("Referrer-Policy", "strict-origin-when-cross-origin")
             self.send_header("X-Frame-Options", "SAMEORIGIN")
