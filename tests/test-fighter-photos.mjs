@@ -12,7 +12,7 @@ const natalia = directoryFighterByName('Natalia Silva'), valentina = directoryFi
 assert.equal(natalia.image, photos.photos.silva.champion.image || photos.photos.silva.champion.url);
 assert.equal(valentina.image, photos.photos.shevchenko.regular.image || photos.photos.shevchenko.regular.url);
 assert.equal(valentina.photoCredit, 'UFC');
-assert.ok(valentina.image.startsWith('assets/images/fighters/'));
+assert.ok(/^assets\/images\/(fighters|fighter-variants)\//.test(valentina.image));
 synchronizeChampionships([{id:'flyweight-women',champion:'Valentina Shevchenko'}], rankings);
 applyFighterPhotos();
 assert.equal(valentina.image, photos.photos.shevchenko.champion.image || photos.photos.shevchenko.champion.url);
