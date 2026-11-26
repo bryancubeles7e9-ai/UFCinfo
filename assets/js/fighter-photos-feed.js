@@ -8,7 +8,7 @@ const original = new Map(directoryFighters.map(f => [f.id, {image:f.image, mode:
 let snapshot = null;
 function validPhoto(photo) {
   if (!photo || !Number.isFinite(Date.parse(photo.consultedAt))) return false;
-  if (photo.image !== undefined && !/^assets\/images\/(?:fighter-variants\/[a-f0-9]{64}\.(?:png|jpg)|fighters\/[a-z0-9-]+\.png)$/.test(photo.image)) return false;
+  if (photo.image !== undefined && !/^assets\/images\/(?:fighter-variants\/[a-f0-9]{64}\.(?:png|jpg|webp)|fighters\/[a-z0-9-]+\.(?:png|webp))$/.test(photo.image)) return false;
   try {
     const url = new URL(photo.url), source = new URL(photo.sourceUrl);
     return url.protocol === 'https:' && source.protocol === 'https:' &&

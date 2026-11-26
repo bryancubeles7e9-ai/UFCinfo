@@ -63,9 +63,10 @@ def verify_image(url):
     return archive_image(data)
 
 def archive_image(data):
-    if not 100 < len(data) <= 4_000_000 or not (data.startswith(b'\x89PNG\r\n\x1a\n') or data.startswith(b'\xff\xd8\xff')):
+    webp = data[:4] == b'RIFF' and data[8:12] == b'WEBP'  # Portraits stored by scripts/localize-photos.py.
+    if not 100 < len(data) <= 4_000_000 or not (data.startswith(b'\x89PNG\r\n\x1a\n') or data.startswith(b'\xff\xd8\xff') or webp):
         raise ValueError('Portrait response empty, invalid or too large')
-    extension = 'png' if data.startswith(b'\x89PNG') else 'jpg'
+    extension = 'webp' if webp else 'png' if data.startswith(b'\x89PNG') else 'jpg'
     relative = Path('assets/images/fighter-variants') / (hashlib.sha256(data).hexdigest() + '.' + extension)
     destination = ROOT / relative
     destination.parent.mkdir(parents=True, exist_ok=True)
@@ -89,7 +90,9 @@ def seed_regular_photos(fighters, state):
         # Archive existing neutral portraits before someone wins their first title.
         if (not source or any(b.get('status') == 'current' for b in fighter.get('championships', []))
             or 'BELT' in source.upper() or 'BMF' in source.upper()
-            or not image.startswith('assets/images/fighters/') or not (ROOT / image).is_file()):
+            or not image.startswith('assets/images/fighters/') or not (ROOT / image).is_file()
+            # Photos stored by scripts/localize-photos.py are kept in place; no archived copy needed.
+            or image.endswith('.webp')):
             continue
         variants = state['photos'].setdefault(fighter['id'], {})
         if any(source == variants.get(k, {}).get('url') for k in ('champion', 'bmf')):

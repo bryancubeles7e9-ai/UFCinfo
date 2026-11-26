@@ -25,6 +25,8 @@ for (const f of additionalFighters) {
     const image = await readFile(new URL('../' + f.image, import.meta.url));
     // Local PNG portraits, or the Hall of Fame JPEG photo for legends without a UFC portrait.
     if (f.image.startsWith('assets/images/legends/')) assert.deepEqual([...image.subarray(0, 3)], [255, 216, 255]);
+    // Official UFC photos stored on this site by scripts/localize-photos.py.
+    else if (f.image.endsWith('.webp')) assert.equal(image.subarray(8, 12).toString(), 'WEBP');
     else assert.deepEqual([...image.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
   }
   for (const key of ['strikingDefense', 'takedownDefense', 'strikingAccuracy', 'takedownAccuracy']) {

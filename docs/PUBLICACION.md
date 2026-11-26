@@ -71,6 +71,12 @@ Al compartir la portada (o cualquier página sin foto propia), la vista previa m
 
 Los iconos y la tarjeta se generan con las tipografías de la web: `node scripts/build-brand-images.mjs` (requiere Playwright). Estas imágenes no se convierten a WebP, porque el manifiesto y las vistas previas declaran su formato.
 
+## Fotos alojadas en la web
+
+Todas las fotos oficiales de los luchadores se sirven desde la propia web: la web no carga nada de otros dominios, así que es más rápida, funciona sin conexión, no depende de que UFC cambie sus direcciones y el navegador no recibe cookies de terceros. `scripts/localize-photos.py` descarga cada foto que todavía apunte a UFC.com y la guarda como WebP (máximo 700 px de alto) en `assets/images/fighters/<id>.webp`; la dirección original se conserva en `photoSource`. La actualización automática lo ejecuta antes de publicar, así que la foto de un luchador recién incorporado solo se carga desde UFC.com hasta la siguiente actualización. Si una descarga falla, se mantiene la foto de UFC.com y se avisa en el registro.
+
+El 26 de noviembre de 2026 se guardaron 526 fotos (19 MB); la nota de buenas prácticas de Lighthouse en móvil pasa de 93 a 96.
+
 ## Uso sin conexión
 
 El service worker (`assets/sw.js`) guarda en el dispositivo una copia de la web y de los últimos datos: en la primera visita, la interfaz, los estilos, las tipografías, el paquete de código, los archivos de datos y los JSON de veladas, rankings, récords y rumores (lista `PRECACHE`), y después cada archivo y foto de la web que se va consultando (hasta 250 fotos).
