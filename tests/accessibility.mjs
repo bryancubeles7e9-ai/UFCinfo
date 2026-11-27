@@ -31,6 +31,10 @@ await audit('404', async p => { await p.goto(base+'/no-existe'); });
 await audit('sin-conexion', async (p, ctx) => { await p.goto(base+'/'); await p.waitForLoadState('networkidle'); await ctx.setOffline(true); await p.evaluate(()=>window.dispatchEvent(new Event('offline'))); });
 await audit('ordenador-leyendas', async p => { await p.goto(base+'/#luchadores'); await p.waitForLoadState('networkidle'); await p.click('[data-fighter-scope="legend"]'); }, {width:1440,height:900});
 await audit('tema-claro-leyenda', async p => { await p.goto(base+'/'); await p.waitForLoadState('networkidle'); await p.evaluate(()=>document.getElementById('theme-button').click()); await p.goto(base+'/luchadores/royce-gracie'); await p.waitForLoadState('networkidle'); });
+const light = async (p, url) => { await p.goto(base+'/'); await p.waitForLoadState('networkidle'); await p.evaluate(()=>document.getElementById('theme-button').click()); await p.goto(base+url); await p.waitForLoadState('networkidle'); };
+await audit('tema-claro-portada', async p => { await light(p, '/'); }, {width:1440,height:900});
+await audit('tema-claro-pickem', async p => { await light(p, '/#pickem'); await p.waitForTimeout(500); await p.locator('[data-pick-method]').first().click(); });
+await audit('tema-claro-fightlab', async p => { await light(p, '/#laboratorio'); }, {width:1440,height:900});
 let total = 0;
 for (const [k, v] of Object.entries(results)) { total += v.length; for (const x of v) { console.error(`[${k}] ${x.impact} ${x.id} (${x.n}): ${x.help}`); x.targets.forEach(t=>console.error('      ', t.slice(0,180))); } }
 await b.close();

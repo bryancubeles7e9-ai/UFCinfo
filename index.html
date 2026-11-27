@@ -46,6 +46,7 @@
     <script type="module" src="assets/js/adsense-init.js"></script>
   </head>
   <body>
+    <script>try { if (localStorage.getItem("ufcinfo-theme") === "light") document.body.classList.add("light"); } catch (e) {}</script>
     <a class="skip" href="#main">Saltar al contenido</a>
     <header class="header">
       <a class="logo" href="#inicio"
@@ -194,6 +195,7 @@
           <p class="data-note" id="event-feed-status" role="status" aria-live="polite">Cargando última actualización de las carteleras…</p>
           <a class="text-link" id="event-feed-source" href="https://www.ufc.com" target="_blank" rel="noopener noreferrer">Fuente: UFC ›</a>
         </details>
+        <h2 class="sr-only">Lista de veladas</h2>
         <div class="event-list" id="event-list"></div>
         <aside class="ad-placement" data-ad-placement="events" data-no-translate aria-label="Publicidad" hidden><span class="ad-placement-label">Publicidad</span></aside>
       </section>

@@ -426,6 +426,7 @@ function whenIdle(view, work) {
 }
 function renderAll({deferHidden = false} = {}) {
   document.body.classList.toggle("light", store.state.theme === "light");
+  try { localStorage.setItem("ufcinfo-theme", store.state.theme); } catch { /* Other pages fall back to the system theme. */ }
   renderOverview();
   renderEvents();
   for (const [view, work] of [["luchadores", renderFighters], ["guardados", renderSaved], ["pickem", () => pickem.render()]]) {

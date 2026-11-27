@@ -3003,6 +3003,7 @@ button.ranking-name:hover {
 }
 
 /* Set by header-fit.js when the sections and buttons do not fit on one row. */
-.header.is-stacked { flex-wrap: wrap; }
+.header.is-stacked { flex-wrap: wrap; padding-top: 16px; }
+@media (min-width: 1101px) and (max-width: 1200px) { .header { padding-top: 16px; } }
 .header.is-stacked nav { order: 3; width: 100%; justify-content: space-between; }
 .header.is-stacked .header-actions { flex-wrap: wrap; justify-content: flex-end; margin-left: auto; }
