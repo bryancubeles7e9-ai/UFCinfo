@@ -641,7 +641,7 @@ export function initializeRankings() {
     share.dataset.shareTitle = `Ranking UFC · ${category.label}`;
     $("#ranking-category-description").textContent = category.description;
     $("#ranking-leader").innerHTML =
-      `<span class="eyebrow">${category.champion ? "CAMPEÓN DE LA DIVISIÓN" : "NÚMERO UNO · LIBRA POR LIBRA"}</span><div class="ranking-leader-symbol" aria-hidden="true">${category.champion ? "C" : "01"}</div><h3>${esc(leader)}</h3><p>${esc(category.short)} · Copia fechada</p><a class="text-link" href="${rankingSnapshot.source}" target="_blank" rel="noopener noreferrer">Consultar la lista completa ›</a>`;
+      `<span class="eyebrow">${category.champion ? (category.id.endsWith("-women") ? "CAMPEONA DE LA DIVISIÓN" : "CAMPEÓN DE LA DIVISIÓN") : "NÚMERO UNO · LIBRA POR LIBRA"}</span><div class="ranking-leader-symbol" aria-hidden="true">${category.champion ? "C" : "01"}</div><h3>${esc(leader)}</h3><p>${esc(category.short)} · Copia fechada</p><a class="text-link" href="${rankingSnapshot.source}" target="_blank" rel="noopener noreferrer">Consultar la lista completa ›</a>`;
     $("#ranking-result-count").textContent =
       `${rows.length} de ${category.names.length} luchadores${showChampion ? " + campeón" : ""}`;
     $("#ranking-table-body").innerHTML =
