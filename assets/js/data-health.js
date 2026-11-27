@@ -18,6 +18,15 @@ export function renderHealthItem(kind,feed,{job=null,unavailable=false,locale='e
 export function initializeDataHealth() {
   const host=document.querySelector('#data-health');
   if(!host)return;
+  // A tool for the owner, not for visitors: hidden unless this browser opened the site once with ?estado
+  // (remembered on this device; ?estado=off forgets it).
+  const flag='ufcinfo-data-health';
+  try{
+    const param=new URLSearchParams(location.search).get('estado');
+    if(param==='off')localStorage.removeItem(flag);else if(param!==null)localStorage.setItem(flag,'1');
+    host.hidden=localStorage.getItem(flag)!=='1';
+  }catch{host.hidden=true;}
+  if(host.hidden)return;
   const cache=new Map();let running=false;
   function render(){
     const text=labels[getLocale().slice(0,2)]||labels.es;

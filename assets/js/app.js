@@ -83,9 +83,10 @@ function updateTitle(view = document.querySelector("[data-view]:not([hidden])")?
 function syncSharePath(path, title) {
   openTitle = title || null;
   updateTitle();
-  if (location.pathname === path) return;
-  if (viewHashPattern.test(location.hash)) savedViewHash = location.hash;
-  history.replaceState(history.state, '', path + (viewHashPattern.test(location.hash) ? '' : location.hash));
+  const viewHash = viewHashPattern.test(location.hash);
+  if (location.pathname === path && !viewHash) return;
+  if (viewHash) savedViewHash = location.hash;
+  history.replaceState(history.state, '', path + (viewHash ? '' : location.hash));
 }
 function resetSharePath() {
   if ($("#fighter-dialog").open || $("#event-dialog").open) return;

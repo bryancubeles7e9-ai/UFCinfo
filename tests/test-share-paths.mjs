@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 globalThis.localStorage = { getItem() {}, setItem() {} };
-const { pathSlug, fighterPath, fighterIdFromSlug, eventPath, rankingPath, parseSharePath } = await import('../assets/js/share-paths.js');
+const { shareUrl, pathSlug, fighterPath, fighterIdFromSlug, eventPath, rankingPath, parseSharePath } = await import('../assets/js/share-paths.js');
 const { rankingCategories } = await import('../assets/js/rankings.js');
 const { directoryFighters, directoryFighterByName } = await import('../assets/js/fighter-directory.js');
 const { boutShareUrl } = await import('../assets/js/bout-links.js');
@@ -30,4 +30,10 @@ const rankingPaths = rankingCategories.map(rankingPath);
 assert.equal(new Set(rankingPaths).size, rankingCategories.length);
 assert.ok(rankingPaths.includes('/rankings/peso-ligero') && rankingPaths.includes('/rankings/peso-paja-femenino') && rankingPaths.includes('/rankings/libra-por-libra-masculino'));
 assert.equal(Object.keys(index.rankings).length, rankingCategories.length);
+// Links shared from English or Catalan carry the language for their preview; Spanish ones stay clean.
+assert.equal(shareUrl('/luchadores/ilia-topuria', 'es', 'https://ufcinfo.example'), 'https://ufcinfo.example/luchadores/ilia-topuria');
+assert.equal(shareUrl('/luchadores/ilia-topuria', 'en', 'https://ufcinfo.example'), 'https://ufcinfo.example/luchadores/ilia-topuria?lang=en');
+assert.equal(shareUrl('/rankings/peso-ligero', 'ca', 'https://ufcinfo.example'), 'https://ufcinfo.example/rankings/peso-ligero?lang=ca');
+for (const section of ['fighters', 'events', 'rankings']) for (const [slug, entry] of Object.entries(index[section]))
+  for (const lang of ['en', 'ca']) assert.ok(entry[lang]?.title && entry[lang]?.description, `${section}/${slug} ${lang}`);
 console.log(`PASS: ${paths.length} direcciones de luchador únicas, veladas, rutas no válidas rechazadas y enlaces de combate en la portada`);

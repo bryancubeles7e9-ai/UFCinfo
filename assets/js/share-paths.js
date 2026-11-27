@@ -2,6 +2,7 @@
 // the page's own title, description and photo (assets/data/share-index.json) so links preview well.
 import { directoryFighters } from './fighter-directory.js';
 import { fullName } from './data.js';
+import { getLanguage } from './i18n.js';
 
 export const pathSlug = text => String(text || '').normalize('NFKD').replace(/[̀-ͯ]/g, '')
   .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -34,7 +35,12 @@ export function parseSharePath(pathname) {
   return match ? { kind: { luchadores: 'fighter', carteleras: 'event', rankings: 'ranking' }[match[1]], slug: match[2] } : null;
 }
 
-export const shareUrl = path => new URL(path, location.origin).href;
+// Shared from the English or Catalan site, the link carries ?lang so its preview uses that language.
+export function shareUrl(path, language = getLanguage(), origin = location.origin) {
+  const url = new URL(path, origin);
+  if (language === 'en' || language === 'ca') url.searchParams.set('lang', language);
+  return url.href;
+}
 
 // Native share sheet on phones; copy to the clipboard elsewhere. Returns what happened.
 export async function shareLink({ title, url }) {
