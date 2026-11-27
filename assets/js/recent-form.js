@@ -6,6 +6,7 @@ import { directoryFighterByName, normalizeFighterName } from './fighter-director
 import { fullName } from './data.js';
 
 let byFighter = null;
+let firstYear = 2026;
 let loading = null;
 
 // Index the bouts by fighter (directory id when known, otherwise the normalized name).
@@ -24,7 +25,11 @@ export function indexHistory(bouts, resolve = directoryFighterByName) {
   return index;
 }
 
-export function useHistory(bouts) { byFighter = indexHistory(bouts); }
+export function useHistory(bouts) {
+  byFighter = indexHistory(bouts);
+  const years = bouts.map(bout => new Date(bout.date).getUTCFullYear()).filter(Number.isFinite);
+  if (years.length) firstYear = Math.min(...years);
+}
 export const historyReady = () => byFighter !== null;
 
 export function loadFightHistory() {
@@ -55,13 +60,13 @@ export function currentStreak(form) {
 const words = {
   es: { W: ['V', 'Victoria'], L: ['D', 'Derrota'], D: ['E', 'Empate'], NC: ['SR', 'Sin resultado'], vs: 'ante', label: 'Forma reciente', none: 'Sin combates registrados en UFCinfo todavía.',
     streak: (r, n) => `Racha: ${n} ${r === 'W' ? (n === 1 ? 'victoria' : 'victorias') : (n === 1 ? 'derrota' : 'derrotas')}`,
-    note: 'Combates registrados en UFCinfo desde 2026; la trayectoria completa está en su perfil oficial de UFC.' },
+    note: year => `Combates registrados en UFCinfo desde ${year}; la trayectoria completa está en su perfil oficial de UFC.` },
   en: { W: ['W', 'Win'], L: ['L', 'Loss'], D: ['D', 'Draw'], NC: ['NC', 'No contest'], vs: 'vs', label: 'Recent form', none: 'No bouts recorded on UFCinfo yet.',
     streak: (r, n) => `Streak: ${n} ${r === 'W' ? (n === 1 ? 'win' : 'wins') : (n === 1 ? 'loss' : 'losses')}`,
-    note: 'Bouts recorded on UFCinfo since 2026; the full career is on their official UFC profile.' },
+    note: year => `Bouts recorded on UFCinfo since ${year}; the full career is on their official UFC profile.` },
   ca: { W: ['V', 'Victòria'], L: ['D', 'Derrota'], D: ['E', 'Empat'], NC: ['SR', 'Sense resultat'], vs: 'contra', label: 'Forma recent', none: 'Encara no hi ha combats registrats a UFCinfo.',
     streak: (r, n) => `Ratxa: ${n} ${r === 'W' ? (n === 1 ? 'victòria' : 'victòries') : (n === 1 ? 'derrota' : 'derrotes')}`,
-    note: 'Combats registrats a UFCinfo des del 2026; la trajectòria completa és al seu perfil oficial d’UFC.' },
+    note: year => `Combats registrats a UFCinfo des del ${year}; la trajectòria completa és al seu perfil oficial d’UFC.` },
 };
 const text = () => words[getLanguage()] || words.es;
 const className = { W: 'is-win', L: 'is-loss', D: 'is-draw', NC: 'is-nc' };
@@ -83,5 +88,5 @@ export function recentFormSection(fighter) {
   const streak = currentStreak(form);
   return `<section class="recent-form" translate="no"><h3>${t.label}</h3>${form.length
     ? `${formChips(form)}${streak && streak.count > 1 ? `<p class="recent-form-streak ${className[streak.result]}">${esc(t.streak(streak.result, streak.count))}</p>` : ''}`
-    : `<p class="data-note">${t.none}</p>`}<p class="data-note">${t.note}</p></section>`;
+    : `<p class="data-note">${t.none}</p>`}<p class="data-note">${t.note(firstYear)}</p></section>`;
 }
