@@ -100,6 +100,8 @@ node scripts/build-bundle.mjs
 
 Las traducciones al inglés y al catalán (`assets/js/i18n/dictionaries.js` y sus módulos) tampoco van en el paquete: solo se descargan si el visitante elige esos idiomas, y mientras llegan la página espera oculta (2 s como máximo) para no mostrar un destello en español. El paquete pasó así de 458 KB a 190 KB.
 
+**Idioma y medidas iniciales.** La web arranca en el idioma del navegador: catalán → catalán; español, gallego o euskera → español; inglés o cualquier otro idioma → inglés. Lo que el visitante elige en el selector se guarda y manda siempre. Los buscadores y herramientas automáticas (Googlebot, Lighthouse, Chromium sin interfaz) reciben siempre el español original, para que el sitio se indexe en su idioma de origen. Las medidas empiezan en pies y libras solo con navegadores en inglés de EE. UU. La regla está en `assets/js/i18n.js` (`preferredLanguage`) y repetida en línea en `index.html`, `assets/404.html` y `privacy.html`; `tests/test-language-detect.mjs` comprueba que las cuatro coinciden.
+
 La validación de GitHub (`--check`) falla si el paquete no coincide con el código, y Render solo publica cuando la validación pasa. Además, la portada precarga el póster del próximo evento, las secciones ocultas se dibujan cuando el navegador queda libre y las fotos se reutilizan durante una hora sin volver a descargarse.
 
 **Resultado (26 de noviembre de 2026, móvil con la CPU ralentizada ×4):** portada completa en 4G de 2,6 s a 1,7 s y en 4G lenta de 7,7 s a 7,0 s; peticiones de 85 a 55; tiempo de bloqueo de 760 ms a unos 420 ms. En 4G lenta el límite es ya el peso de las fotos y los datos.

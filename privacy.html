@@ -192,9 +192,8 @@
     document.documentElement.lang = code; select.value = code;
     document.title = {es:'UFCinfo · Privacidad y aviso legal', en:'UFCinfo · Privacy and legal notice', ca:'UFCinfo · Privacitat i avís legal'}[code];
   };
-  let saved = null;
-  try { saved = localStorage.getItem('ufcinfo-language'); } catch {}
-  show([saved, ...(navigator.languages || [navigator.language])].map(l => String(l || '').slice(0, 2)).find(l => ['es','en','ca'].includes(l)) || 'es');
+  function ufcLang(){try{var s=localStorage.getItem("ufcinfo-language");if(s==="es"||s==="en"||s==="ca")return s;}catch(e){}if(/bot|crawl|spider|slurp|headlesschrome|lighthouse/i.test(navigator.userAgent))return "es";var l=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language];for(var i=0;i<l.length;i++){var c=String(l[i]||"").toLowerCase().slice(0,2);if(c==="ca")return "ca";if(c==="es"||c==="gl"||c==="eu")return "es";if(c==="en")return "en";}return l.length&&l[0]?"en":"es";}
+  show(ufcLang());
   select.addEventListener('change', () => { show(select.value); try { localStorage.setItem('ufcinfo-language', select.value); } catch {} });
 </script>
 </body>

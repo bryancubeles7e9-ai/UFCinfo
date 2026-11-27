@@ -5,7 +5,24 @@ let loading = null;
 const locales = { es: 'es-ES', en: 'en-US', ca: 'ca-ES' };
 const storageKey = 'ufcinfo-language';
 let language = 'es';
-try { const saved = globalThis.localStorage?.getItem(storageKey); if (Object.hasOwn(locales, saved)) language = saved; } catch { /* Spanish remains available without storage. */ }
+// Visitors start in their browser's language (Catalan, Spanish or English; any other language → English).
+// A language chosen in the selector is saved and always wins. Crawlers keep the Spanish original,
+// so search engines index the site in its source language. index.html, 404.html and privacy.html repeat this rule.
+export function preferredLanguage(languages = [], userAgent = '') {
+  if (/bot|crawl|spider|slurp|headlesschrome|lighthouse/i.test(userAgent)) return 'es';
+  for (const entry of languages) {
+    const code = String(entry || '').toLowerCase().slice(0, 2);
+    if (code === 'ca') return 'ca';
+    if (code === 'es' || code === 'gl' || code === 'eu') return 'es';
+    if (code === 'en') return 'en';
+  }
+  return languages.length ? 'en' : 'es';
+}
+try {
+  const saved = globalThis.localStorage?.getItem(storageKey);
+  if (Object.hasOwn(locales, saved)) language = saved;
+  else if (typeof document !== 'undefined') language = preferredLanguage(navigator.languages?.length ? navigator.languages : [navigator.language], navigator.userAgent);
+} catch { /* Spanish remains available without storage. */ }
 export const getLanguage = () => language;
 export const getLocale = () => locales[language];
 const normalize = text => text.replace(/\s+/g, ' ').trim();
