@@ -11,8 +11,16 @@ for (const fighter of additionalFighters) {
 }
 export { additionalFighters };
 export const directoryFighters = [...fighters, ...additionalFighters];
+// The same few hundred names are looked up on every render: remember their normalized form.
+const normalized = new Map();
 export function normalizeFighterName(name) {
-  return name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es").replace(/[^a-z0-9]/g, "");
+  let key = normalized.get(name);
+  if (key === undefined) {
+    key = name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("es").replace(/[^a-z0-9]/g, "");
+    if (normalized.size > 5000) normalized.clear();
+    normalized.set(name, key);
+  }
+  return key;
 }
 const byName = new Map();
 const byId = new Map();

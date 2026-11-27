@@ -255,6 +255,11 @@ def make_handler(database, public_origin, fighter_ids):
             self.send_response(status)
             self.send_header("Content-Type", "application/json; charset=utf-8")
             self.send_header("Cache-Control", "no-store")
+            # Larger answers (Pick'em state and rankings, account export) travel compressed.
+            if len(payload) > 1400 and accepts_gzip(self.headers.get("Accept-Encoding")):
+                payload = gzip.compress(payload, compresslevel=6, mtime=0)
+                self.send_header("Content-Encoding", "gzip")
+                self.send_header("Vary", "Accept-Encoding")
             self.send_header("Content-Length", str(len(payload)))
             if cookie:
                 self.send_header("Set-Cookie", cookie)

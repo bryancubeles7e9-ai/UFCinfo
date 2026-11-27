@@ -103,7 +103,11 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
     const labels = {correct:'Pick acertado', wrong:'Pick fallado', unpicked:'Sin elegir', pending:'Resultado pendiente', void:'Resultado neutral'};
     return `<p class="pickem-bout-result is-${status}"><strong>${labels[status]}</strong> · ${status==='pending'?'—':pickPoints(bout,item.picks)} <span>puntos</span>${status==='void'?`<br><span>${esc(bout.outcome || 'Combate anulado')}</span>`:''}${!['pending','void'].includes(status)?`<br><span>Ganador</span>: <span translate="no">${esc(bout.winner)}</span>${bout.method?` · <span translate="no">${esc(bout.method)}</span>`:''}`:''}</p>`;
   }
+  // Hidden Pick'em does not redraw (feeds and the clock would do it often); it draws when shown.
+  let pendingRender = false;
   function render() {
+    if (root.closest?.('[hidden]')) { pendingRender = true; return; }
+    pendingRender = false;
     const event = eventData(), item = current();
     if (!event) { root.innerHTML = `<div class="panel"><h2>Próxima cartelera pendiente</h2></div>${board()}`; return; }
     const authenticated = !!state?.authenticated;
@@ -216,5 +220,5 @@ export function initializePickem({getFavoriteIds = () => []} = {}) {
   window.addEventListener('storage',e=>{if(e.key==='ufcinfo-pickem-v1'||e.key===null){local=readPicks(storage);render();}});
   setInterval(tickCountdown,1000);
   document.addEventListener('visibilitychange',tickCountdown);
-  return {render, update(next){events=next;render();refresh();}, animate(){revealedResults='';revealResults();}};
+  return {render, update(next){events=next;render();refresh();}, animate(){if(pendingRender)render();revealedResults='';revealResults();}};
 }

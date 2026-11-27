@@ -424,7 +424,8 @@ function whenIdle(view, work) {
   const run = () => runDeferredView(view);
   if (window.requestIdleCallback) requestIdleCallback(run, {timeout: 2000}); else setTimeout(run, 300);
 }
-function renderAll({deferHidden = false} = {}) {
+// Sections the visitor is not looking at are redrawn when the browser is idle, or as soon as they are opened.
+function renderAll({deferHidden = true} = {}) {
   document.body.classList.toggle("light", store.state.theme === "light");
   try { localStorage.setItem("ufcinfo-theme", store.state.theme); } catch { /* Other pages fall back to the system theme. */ }
   renderOverview();

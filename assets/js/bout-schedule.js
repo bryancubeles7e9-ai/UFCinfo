@@ -1,6 +1,20 @@
 import { escapeHTML as esc } from './utils.js';
 import { getLocale } from './i18n.js';
 
+// Creating an Intl.DateTimeFormat is slow; every bout of every card reuses the same few.
+const formatOptions = {
+  time: {hour:'2-digit', minute:'2-digit', hourCycle:'h23'},
+  'time-offset': {hour:'2-digit', minute:'2-digit', hourCycle:'h23', timeZoneName:'shortOffset'},
+  day: {day:'numeric', month:'short'},
+  date: {year:'numeric', month:'2-digit', day:'2-digit'},
+};
+const formatters = new Map();
+function formatter(locale, kind) {
+  const key = `${locale}|${kind}`;
+  if (!formatters.has(key)) formatters.set(key, new Intl.DateTimeFormat(locale, formatOptions[kind]));
+  return formatters.get(key);
+}
+
 const minute = 60000;
 export const scheduleExplanation = 'Horas por pelea orientativas, no oficiales. Usamos el inicio oficial de cada bloque cuando está disponible; si falta, estimamos preliminares 2 h antes y previas 4 h antes de la principal. Calculamos 30 min por combate de 3 asaltos y 50 min por uno de 5; sin duración confirmada usamos 30 min. Ajustamos las preliminares al bloque y ampliamos el margen hacia el final. Pueden cambiar por duración, pausas o cambios de cartelera.';
 
@@ -56,9 +70,9 @@ export function renderBoutTime(event, bout) {
   if (!window) return `<p class="bout-estimate" translate="no">${labels[2]}</p>`;
   const from = new Date(window.start), to = new Date(window.end);
   const crossesClockChange = from.getTimezoneOffset() !== to.getTimezoneOffset();
-  const time = value => new Intl.DateTimeFormat(getLocale(), {hour:'2-digit',minute:'2-digit',hourCycle:'h23',...(crossesClockChange?{timeZoneName:'shortOffset'}:{})}).format(value);
-  const day = value => new Intl.DateTimeFormat(getLocale(), {day:'numeric',month:'short'}).format(value);
-  const sameDay = new Intl.DateTimeFormat('en-CA',{year:'numeric',month:'2-digit',day:'2-digit'}).format(from) === new Intl.DateTimeFormat('en-CA',{year:'numeric',month:'2-digit',day:'2-digit'}).format(to);
+  const time = value => formatter(getLocale(), crossesClockChange ? 'time-offset' : 'time').format(value);
+  const day = value => formatter(getLocale(), 'day').format(value);
+  const sameDay = formatter('en-CA', 'date').format(from) === formatter('en-CA', 'date').format(to);
   const first = sameDay ? time(from) : `${time(from)} · ${day(from)}`;
   const last = `${time(to)} · ${day(to)}`;
   return `<p class="bout-estimate" translate="no"><span>${labels[0]}</span> <time datetime="${esc(window.start)}">${esc(first)}</time> – <time datetime="${esc(window.end)}">${esc(last)}</time> <small>${labels[1]}</small></p>`;
