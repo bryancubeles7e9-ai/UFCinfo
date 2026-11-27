@@ -39,9 +39,8 @@
     en: {title:'This page does not exist', body:'The link may be incomplete or the page may have moved.', home:'Go to the home page', doc:'UFCinfo · Page not found'},
     ca: {title:'Aquesta pàgina no existeix', body:'Pot ser que l’enllaç estigui incomplet o que la pàgina s’hagi mogut.', home:'Ves a la portada', doc:'UFCinfo · Pàgina no trobada'},
   };
-  let saved = null;
-  try { saved = localStorage.getItem('ufcinfo-language'); } catch {}
-  const code = [saved, ...(navigator.languages || [navigator.language])].map(l => String(l || '').slice(0, 2)).find(l => l === 'es' || texts[l]);
+  function ufcLang(){try{var s=localStorage.getItem("ufcinfo-language");if(s==="es"||s==="en"||s==="ca")return s;}catch(e){}if(/bot|crawl|spider|slurp|headlesschrome|lighthouse/i.test(navigator.userAgent))return "es";var l=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language];for(var i=0;i<l.length;i++){var c=String(l[i]||"").toLowerCase().slice(0,2);if(c==="ca")return "ca";if(c==="es"||c==="gl"||c==="eu")return "es";if(c==="en")return "en";}return l.length&&l[0]?"en":"es";}
+  const code = ufcLang();
   const t = texts[code];
   if (t) {
     document.documentElement.lang = code;

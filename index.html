@@ -4,8 +4,9 @@
     <meta charset="utf-8" />
     <!-- Lets the mobile menu start folded, so the page does not jump when the scripts load. -->
     <script>document.documentElement.classList.add("js");
-      // English or Catalan chosen earlier: hide the page until its translations load (2 s at most).
-      try { var lang = localStorage.getItem("ufcinfo-language"); if (lang === "en" || lang === "ca") { document.documentElement.lang = lang;
+      // English or Catalan (chosen earlier or from the browser): hide the page until its translations load (2 s at most).
+      function ufcLang(){try{var s=localStorage.getItem("ufcinfo-language");if(s==="es"||s==="en"||s==="ca")return s;}catch(e){}if(/bot|crawl|spider|slurp|headlesschrome|lighthouse/i.test(navigator.userAgent))return "es";var l=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language];for(var i=0;i<l.length;i++){var c=String(l[i]||"").toLowerCase().slice(0,2);if(c==="ca")return "ca";if(c==="es"||c==="gl"||c==="eu")return "es";if(c==="en")return "en";}return l.length&&l[0]?"en":"es";}
+      try { var lang = ufcLang(); if (lang === "en" || lang === "ca") { document.documentElement.lang = lang;
         document.documentElement.classList.add("i18n-pending"); setTimeout(function () { document.documentElement.classList.remove("i18n-pending"); }, 2000); } } catch (e) {}</script>
     <style>.i18n-pending body{visibility:hidden}</style>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
