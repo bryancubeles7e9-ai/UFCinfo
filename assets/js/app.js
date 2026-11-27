@@ -35,7 +35,7 @@ import { followingActivity, followingFighterCard, followingBoutCard, resolvePinn
 import { additionalFighters, directoryFighters, directoryFighterById, directoryFighterByName, fighterNameLink, normalizeFighterName } from "./fighter-directory.js";
 import { refreshFighterRecords } from "./fighter-records-feed.js";
 import { renderExtendedFighterInfo, renderFighterConsultation } from "./fighter-info.js";
-import { eventsFeed, refreshEvents } from "./events-feed.js";
+import { eventsFeed, refreshEvents, archiveSeasons, loadEventArchive, archiveLoaded, archivedEvents, archivedEvent } from "./events-feed.js";
 import {
   fighters,
   fullName,
@@ -110,12 +110,19 @@ function openPendingSharedEvent() {
   const slug = pendingSharedEvent;
   pendingSharedEvent = null;
   const event = eventsFeed.events.find(e => e.type === 'official' && pathSlug(e.id) === slug && !['cancelled', 'postponed'].includes(e.status));
-  if (event) showOfficialEvent(event.id);
-  else { resetSharePath(); toast('La velada compartida no está disponible en los datos actuales.'); }
+  if (event) { showOfficialEvent(event.id); return; }
+  // Not in the current season: look in the archive of past seasons.
+  loadEventArchive().then(() => {
+    const archived = archiveSeasons.flatMap(year => archivedEvents(year)).find(e => pathSlug(e.id) === slug);
+    if (archived) showOfficialEvent(archived.id);
+    else { resetSharePath(); toast('La velada compartida no está disponible en los datos actuales.'); }
+  });
 }
 let catalogView = 'compact';
 try { catalogView = localStorage.getItem('ufcinfo-catalog-view') === 'cards' ? 'cards' : 'compact'; } catch {}
 const rankings = initializeRankings();
+// null = the current season; a year = that past season from the archive.
+let eventSeason = null;
 let eventFilter = "upcoming",
   eventKindFilter = "all",
   onlyFollowingEvents = false,
@@ -206,8 +213,12 @@ function officialEventCard(event, featured = false) {
   const upcoming = isUpcomingEvent(event);
   return `<article class="event-card official-event-card ${featured ? "featured" : ""}" data-event-card="${esc(event.id)}"><div class="event-info"><span class="badge orange event-type-badge">${eventKindLabel(event)} · ${eventStatus(event)}</span><p class="eyebrow">CARTELERA · ${event.bouts.length ? `${event.bouts.length} COMBATES${upcoming ? " ANUNCIADOS" : ""}` : "PENDIENTE DE ANUNCIO"}</p><h3 translate="no">${esc(event.title)}</h3><p>${esc(event.subtitle)}</p><div class="event-location" translate="no">${esc(formatLocation(event.location))}</div><div class="event-date">${formatDate(event.date)} · ${formatTime(event.date)} <small>hora local · inicio de la principal</small></div>${upcoming ? `<div class="countdown" data-official-countdown="${esc(event.date)}"></div>` : ""}<button class="button small" data-official-event="${esc(event.id)}">${upcoming ? "Ver combates anunciados" : "Ver cartelera y resultados"} ›</button><p class="event-official-link"><a class="text-link" href="${esc(event.source)}" target="_blank" rel="noopener noreferrer">Evento oficial UFC ›</a></p>${upcoming ? '<p class="data-note">Cartelera anunciada; los combates y horarios pueden cambiar.</p>' : ""}</div>${eventPoster(event, featured)}</article>`;
 }
+// A card of the current season or, once loaded, of an archived one.
+function findOfficialEvent(id) {
+  return eventsFeed.events.find(e => e.type === 'official' && e.id === id && !['cancelled', 'postponed'].includes(e.status)) || archivedEvent(id);
+}
 function showOfficialEvent(id, focusBoutKey = undefined) {
-  const event = eventsFeed.events.find(e => e.type === 'official' && e.id === id && !['cancelled', 'postponed'].includes(e.status));
+  const event = findOfficialEvent(id);
   if (!event) return;
   const upcoming = isUpcomingEvent(event);
   const sections = [['main', 'Principal'], ['prelims', 'Preliminares'], ['early-prelims', 'Previas']]
@@ -359,12 +370,20 @@ function renderEvents({animate = false} = {}) {
   renderEventFeedStatus();
   const query = $("#event-search").value.toLocaleLowerCase("es").trim();
   $("#event-following-only").setAttribute("aria-pressed", String(onlyFollowingEvents));
-  const list = availableOfficialEvents()
+  renderSeasonButtons();
+  const archived = eventSeason !== null;
+  document.querySelector(".event-status-buttons").hidden = archived;   // A past season has only finished cards.
+  if (archived && !archiveLoaded()) {
+    $("#event-list").innerHTML = empty("Cargando la temporada…");
+    loadEventArchive().then(ok => { if (eventSeason !== null) ok ? renderEvents() : ($("#event-list").innerHTML = empty("No se pudo cargar la temporada. Inténtalo de nuevo.")); });
+    return;
+  }
+  const list = (archived ? archivedEvents(eventSeason) : availableOfficialEvents())
     .filter(e => !onlyFollowingEvents || e.bouts.some(b => followedBoutFighters(b, store.state.favorites).length))
     .filter(e => eventKindFilter === "all" || (e.type === "official" && (e.eventKind || "numbered") === eventKindFilter))
     .filter(
       (e) =>
-        (eventFilter === "all" || (eventFilter === "upcoming" && isUpcomingEvent(e)) || (eventFilter === "completed" && (!isUpcomingEvent(e) || isAwaitingResults(e)))) &&
+        (archived || eventFilter === "all" || (eventFilter === "upcoming" && isUpcomingEvent(e)) || (eventFilter === "completed" && (!isUpcomingEvent(e) || isAwaitingResults(e)))) &&
         `${e.title} ${e.subtitle || ""} ${e.location} ${e.type === "official" ? e.bouts.map(b => `${b.red} ${b.blue}`).join(" ") : ""}`.toLocaleLowerCase("es").includes(query),
     )
     .sort((a, b) => {
@@ -380,6 +399,10 @@ function renderEvents({animate = false} = {}) {
       : empty(onlyFollowingEvents ? "Ninguna velada coincide con tus luchadores seguidos y los filtros actuales." : "No hay carteleras con estos filtros. Prueba otra selección.");
     updateCountdowns();
   }, animate);
+}
+function renderSeasonButtons() {
+  const seasons = [null, ...archiveSeasons.filter(year => year < eventsFeed.year)];
+  $("#event-season").innerHTML = seasons.map(year => `<button type="button" data-event-season="${year ?? "current"}" aria-pressed="${year === eventSeason}"${year === eventSeason ? ' class="active"' : ""} translate="no">${year ?? eventsFeed.year}</button>`).join("");
 }
 function empty(text, action = '') {
   return `<div class="empty-state"><span>◇</span><p>${esc(text)}</p>${action}</div>`;
@@ -686,6 +709,14 @@ document.querySelectorAll("[data-event-kind]").forEach(button => {
     });
     renderEvents({animate:true});
   });
+});
+$("#event-season").addEventListener("click", (event) => {
+  const button = event.target.closest("[data-event-season]");
+  if (!button) return;
+  const season = button.dataset.eventSeason === "current" ? null : Number(button.dataset.eventSeason);
+  if (season === eventSeason) return;
+  eventSeason = season;
+  renderEvents({animate: true});
 });
 document.querySelectorAll("[data-event-filter]").forEach((button) =>
   button.addEventListener("click", () => {

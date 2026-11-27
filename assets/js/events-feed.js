@@ -7,6 +7,7 @@ export const eventsFeed = {
   synchronizedAt: '2026-10-05T00:00:00Z',
   automatic: false,
   unavailable: false,
+  year: new Date().getUTCFullYear(),
 };
 let updating = false;
 
@@ -45,6 +46,7 @@ export async function refreshEvents() {
         !feed.events.every(e => validEvent(e, feed.year)) || new Set(feed.events.map(e => e.id)).size !== feed.events.length) throw new Error('Invalid feed');
     // Keep inactive cards in the source archive, out of upcoming cards/Fight Lab.
     eventsFeed.events = feed.events.filter(e => !['cancelled', 'postponed'].includes(e.status));
+    eventsFeed.year = feed.year;
     eventsFeed.source = feed.source;
     eventsFeed.sourceUrl = feed.sourceUrl;
     eventsFeed.synchronizedAt = feed.synchronizedAt || eventsFeed.synchronizedAt;
@@ -59,3 +61,29 @@ export async function refreshEvents() {
     updating = false;
   }
 }
+
+// Past seasons (assets/data/ufc-events-archive.json, written by scripts/import-history-year.py).
+// Loaded only when a visitor picks a past season in Carteleras or opens a link to one of its cards.
+export const archiveSeasons = [2025];
+const archivedById = new Map();
+const archivedBySeason = new Map();
+let archiveLoading = null;
+export function loadEventArchive() {
+  archiveLoading ??= fetch(new URL('../data/ufc-events-archive.json', import.meta.url), { cache: 'no-cache' })
+    .then(response => (response.ok ? response.json() : null))
+    .then(data => {
+      if (data?.schemaVersion !== 1 || !data.seasons || typeof data.seasons !== 'object') throw new Error('Invalid archive');
+      for (const [season, content] of Object.entries(data.seasons)) {
+        const year = Number(season);
+        const events = (Array.isArray(content?.events) ? content.events : []).filter(e => e?.status === 'completed' && validEvent(e, year));
+        archivedBySeason.set(year, events.sort((a, b) => Date.parse(b.date) - Date.parse(a.date)));
+        for (const event of events) archivedById.set(event.id, event);
+      }
+      return true;
+    })
+    .catch(() => { archiveLoading = null; return false; });
+  return archiveLoading;
+}
+export const archiveLoaded = () => archivedBySeason.size > 0;
+export const archivedEvents = year => archivedBySeason.get(year) || [];
+export const archivedEvent = id => archivedById.get(id) || null;

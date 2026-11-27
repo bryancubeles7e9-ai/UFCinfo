@@ -34,6 +34,13 @@ class HistoryYearTests(unittest.TestCase):
         self.assertEqual(event['bouts'][0]['title'], 'UFC Fight Night')
         self.assertIsNone(m.parse_event(page((2024, 12, 14, 23), [fight('A', 'B')]), 'ufc-310', 2025))
         self.assertEqual(m.parse_event(page((2025, 1, 18, 23), [fight('A', 'B')]), 'ufc-311', 2025)['bouts'][0]['title'], 'UFC 311')
+        archived = event['event']   # The full card, in the shape of the events feed.
+        self.assertEqual((archived['id'], archived['number'], archived['eventKind'], archived['status']), ('ufc-fight-night-march-08-2025', None, 'fight-night', 'completed'))
+        self.assertEqual(archived['source'], 'https://www.ufc.com/event/ufc-fight-night-march-08-2025')
+        self.assertEqual(archived['subtitle'], 'Ana Uno vs Bea Dos')
+        self.assertEqual([(b['section'], b['winner'], b['outcome']) for b in archived['bouts']],
+                         [('main', 'Ana Uno', None), ('main', 'Dani Cuatro', None), ('prelims', None, 'Empate'), ('prelims', None, 'Sin resultado (No contest)')])
+        self.assertEqual(m.parse_event(page((2025, 1, 18, 23), [fight('A', 'B')]), 'ufc-311', 2025)['event']['number'], 311)
 
     def test_whole_year_and_season_check(self):
         cards = {f'ufc-fight-night-{m.MONTHS[i % 12]}-{(i % 27) + 1:02d}-2025': page((2025, i % 12 + 1, (i % 27) + 1, 23),
@@ -43,6 +50,16 @@ class HistoryYearTests(unittest.TestCase):
         self.assertEqual(missing, 365 - 35)
         self.assertEqual(m.check_season(events, 2025), [])
         self.assertTrue(m.check_season(events[:10], 2025))   # Too few cards: nothing is written.
+
+    def test_archive_keeps_other_seasons(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as folder:
+            m.ARCHIVE = Path(folder) / 'archive.json'
+            m.write_archive(2024, [{'id': 'ufc-300', 'date': '2024-04-13T22:00:00+00:00'}])
+            m.write_archive(2025, [{'id': 'ufc-311', 'date': '2025-01-18T23:00:00+00:00'}])
+            seasons = m.read_archive()['seasons']
+            self.assertEqual(list(seasons), ['2025', '2024'])
+            self.assertEqual(seasons['2024']['events'][0]['id'], 'ufc-300')
 
     def test_merge_keeps_saved_results(self):
         saved = {'schemaVersion': 1, 'bouts': [{'date': '2025-03-08T23:00:00+00:00', 'event': 'e', 'title': 'UFC 1', 'red': 'A', 'blue': 'B', 'result': 'nc'}]}

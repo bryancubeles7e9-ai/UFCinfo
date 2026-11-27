@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Add a past season's completed UFC results to the permanent fight history.
+"""Add a past season to UFCinfo: its results to the permanent fight history and its cards to the archive.
 
 Usage: python3 scripts/import-history-year.py 2025 [--dry-run]
 
 Reads each official event page on UFC.com (the same source and parser as the daily results check)
 and merges every completed bout (main card, prelims and early prelims) into
-assets/data/fight-history.json. It never touches the current season's events feed and never
-removes saved bouts. Events are found without a listing page: numbered cards are tried by number
+assets/data/fight-history.json, and the full cards (venue, sections, divisions, times, poster) into
+assets/data/ufc-events-archive.json for the Carteleras season selector. It never touches the current
+season's events feed and never removes saved bouts. Events are found without a listing page: numbered cards are tried by number
 and Fight Nights by their dated address (ufc-fight-night-<month>-<day>-<year>); addresses that do
 not exist are skipped. Nothing is written unless the season looks complete.
 """
@@ -21,11 +22,16 @@ from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 HISTORY = ROOT / 'assets/data/fight-history.json'
+ARCHIVE = ROOT / 'assets/data/ufc-events-archive.json'
+POSTERS = ROOT / 'assets/images/events'
 UFC = 'https://www.ufc.com/event/'
 MONTHS = ('january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december')
 spec = importlib.util.spec_from_file_location('official_card', ROOT / 'scripts/import-fight-nights.py')
 html = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(html)
+poster_spec = importlib.util.spec_from_file_location('event_poster', ROOT / 'scripts/sync-ufc-events.py')
+posters = importlib.util.module_from_spec(poster_spec)
+poster_spec.loader.exec_module(posters)
 
 
 def fetch(slug):
@@ -67,7 +73,7 @@ def parse_event(page, slug, year):
     if start.year != year or start > datetime.now(timezone.utc):
         return None
     number = slug[4:] if slug[4:].isdigit() else None
-    bouts, incomplete = [], 0
+    bouts, card_bouts, incomplete = [], [], 0
     for card_id, section in (('main-card', 'main'), ('prelims-card', 'prelims'), ('early-prelims', 'early-prelims')):
         for card in root.find(id=card_id):
             for fight in card.find('c-listing-fight'):
@@ -81,12 +87,26 @@ def parse_event(page, slug, year):
                     incomplete += 1
                     continue
                 result = 'red' if wins[0] else 'blue' if wins[1] else 'draw' if draw else 'nc'
+                method, round_, time = (html.first(fight, k) for k in ('method', 'round', 'time'))
                 bouts.append({'date': start.isoformat(), 'event': slug, 'title': f'UFC {number}' if number else 'UFC Fight Night',
-                              'red': red, 'blue': blue, 'result': result,
-                              'method': html.first(fight, 'method') or None, 'round': html.first(fight, 'round') or None})
+                              'red': red, 'blue': blue, 'result': result, 'method': method or None, 'round': round_ or None})
+                # The same bout in the shape of the events feed, for the season archive.
+                card_bouts.append({'red': red, 'blue': blue, 'section': section, 'division': html.first(fight, 'c-listing-fight__class-text'),
+                             'winner': red if result == 'red' else blue if result == 'blue' else None,
+                             'outcome': 'Empate' if result == 'draw' else 'Sin resultado (No contest)' if result == 'nc' else None,
+                             'method': method, 'round': round_, 'time': time})
     if len({frozenset((b['red'], b['blue'])) for b in bouts}) != len(bouts):
         raise ValueError(f'{slug}: duplicate bouts')
-    return {'slug': slug, 'date': start.isoformat(), 'bouts': bouts, 'incomplete': incomplete}
+    event = None
+    if card_bouts:
+        event = {'id': slug, 'number': int(number) if number else None, 'eventKind': 'numbered' if number else 'fight-night',
+                 'title': f'UFC {number}' if number else 'UFC Fight Night',
+                 'subtitle': f"{card_bouts[0]['red']} vs {card_bouts[0]['blue']}",
+                 'status': 'completed', 'date': start.isoformat(),
+                 'location': html.first(root, 'field--name-venue') or 'Recinto no indicado', 'type': 'official',
+                 'source': UFC + slug, 'checkedAt': datetime.now(timezone.utc).date().isoformat(),
+                 'bouts': card_bouts, 'poster': None, 'posterAlt': None}
+    return {'slug': slug, 'date': start.isoformat(), 'bouts': bouts, 'incomplete': incomplete, 'event': event, 'page': page}
 
 
 def import_year(year, numbers, read=fetch, workers=4):
@@ -130,6 +150,36 @@ def write(history):
     HISTORY.write_text('{"schemaVersion":1,"source":"UFC","bouts":[\n' + ',\n'.join(json.dumps(b, ensure_ascii=False, separators=(',', ':')) for b in history['bouts']) + '\n]}\n')
 
 
+def archive_posters(cards, events):
+    """Official event art, saved like the current season's posters. A missing poster never blocks the import."""
+    pages = {e['slug']: e['page'] for e in events}
+    previous = {e['id']: e for season in read_archive().get('seasons', {}).values() for e in season.get('events', [])}
+    saved = 0
+    for card in cards:
+        prior = previous.get(card['id'], {})
+        card.update(poster=prior.get('poster'), posterAlt=prior.get('posterAlt'), posterSource=prior.get('posterSource'))
+        try:
+            posters.save_event_poster(card, pages[card['id']], POSTERS)
+        except Exception as error:  # Optional image: keep the card.
+            print(f"::warning::Sin póster para {card['id']}: {type(error).__name__}")
+        saved += bool(card.get('poster'))
+    return saved
+
+
+def read_archive():
+    try:
+        return json.loads(ARCHIVE.read_text())
+    except (OSError, ValueError):
+        return {'schemaVersion': 1, 'source': 'UFC', 'seasons': {}}
+
+
+def write_archive(year, cards):
+    archive = read_archive()
+    archive.setdefault('seasons', {})[str(year)] = {'events': sorted(cards, key=lambda e: e['date'], reverse=True)}
+    archive['seasons'] = dict(sorted(archive['seasons'].items(), reverse=True))
+    ARCHIVE.write_text(json.dumps(archive, ensure_ascii=False, indent=1) + '\n')
+
+
 def main():
     year = int(sys.argv[1])
     numbers = {2025: range(311, 324)}.get(year, range(0))
@@ -144,8 +194,14 @@ def main():
         return 1
     history, added = merge(json.loads(HISTORY.read_text()), events)
     print(f'{added} combates nuevos en el historial')
+    cards = [e['event'] for e in events if e['event']]
     if '--dry-run' not in sys.argv:
         write(history)
+        saved = archive_posters(cards, events)
+        write_archive(year, cards)
+        print(f'{len(cards)} carteleras de {year} en el archivo ({saved} pósteres)')
+    else:
+        print(f'{len(cards)} carteleras de {year} irían al archivo')
     return 0
 
 

@@ -55,7 +55,11 @@ for (const f of directoryFighters) {
   }));
 }
 const events = {};
-for (const e of feed.events.filter(e => e.type === 'official' && !['cancelled', 'postponed'].includes(e.status))) {
+// Past seasons from the archive have their own addresses too (/carteleras/ufc-320).
+let archived = [];
+try { archived = Object.values(JSON.parse(readFileSync(new URL('../assets/data/ufc-events-archive.json', import.meta.url))).seasons || {}).flatMap(season => season.events || []); } catch { /* No archive yet. */ }
+const currentIds = new Set(feed.events.map(e => e.id));
+for (const e of [...feed.events, ...archived.filter(e => !currentIds.has(e.id))].filter(e => e.type === 'official' && !['cancelled', 'postponed'].includes(e.status))) {
   const main = e.bouts?.[0];
   events[eventPath(e).split('/').pop()] = localized(inLanguages((lang, t) => ({
     id: e.id, title: `${e.title}: ${e.subtitle} — UFCinfo`,
