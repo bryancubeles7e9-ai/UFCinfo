@@ -311,7 +311,7 @@ main{padding-bottom:28px}
 /* Desktop search fields: readable text and room for the whole hint. */
 @media(min-width:701px){.search-box input{font-size:14px;width:min(320px,100%)}.view[data-view="luchadores"] .search-box input,.ranking-toolbar .search-box input,.rumor-toolbar .search-box input{flex:1;min-width:0;width:auto}}
 /* Light theme: a deeper orange keeps accent text readable on light backgrounds (4.5:1 or more). */
-body.light{--accent:#c8391a}
+body.light{--accent:#b3311a;--blue:#3d6aa6;--border:#c9cacd}
 /* Light theme: the follow button over list rows uses the light surface instead of a dark disc. */
 body.light .favorite-button:not(.selected){background:var(--surface-2);color:var(--muted);border-color:var(--line)}
 body.light .championship-badge.former{color:#5f625f;border-color:#a8aaa4}
@@ -449,3 +449,9 @@ body.light .legend-profile-story{background:#7854ad0a}
 .legend-profile-record-note{margin:-10px 0 0;font-size:13px;color:var(--muted);line-height:1.5}
 /* Phones: the fighter sheet has 14px side padding, so its top fade band spans exactly that. */
 @media (max-width:480px) { #fighter-dialog::before { margin-left:-14px; margin-right:-14px; } #event-dialog::before { margin-left:-16px; margin-right:-16px; } }
+
+/* Light theme: white text on the orange buttons (dark text did not reach 4.5:1) and darker picked accents. */
+body.light .button,body.light .skip{color:#fff}
+body.light .button:hover{background:#952812;border-color:#952812;color:#fff}
+body.light .pickem-choice.is-picked small,body.light .pickem-fighter.is-picked .pickem-fighter-info{color:#a12c12}
+@media(min-width:701px){.ranking-toolbar .search-box{flex:1 1 280px;min-width:240px}}

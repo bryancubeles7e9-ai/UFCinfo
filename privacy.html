@@ -11,6 +11,8 @@
   /* Self-contained legal page; the server fills in the owner and contact placeholders. */
   :root { --bg:#101010; --surface:#191919; --ink:#f3f1ec; --muted:#b4b1ab; --line:#2b2b2b; --accent:#f4512b; }
   @media (prefers-color-scheme: light) { :root { --bg:#f4f2ed; --surface:#fff; --ink:#151515; --muted:#55524d; --line:#dedad2; --accent:#c8391a; } }
+  :root[data-theme="dark"] { --bg:#101010; --surface:#191919; --ink:#f3f1ec; --muted:#b4b1ab; --line:#2b2b2b; --accent:#f4512b; }
+  :root[data-theme="light"] { --bg:#f4f2ed; --surface:#fff; --ink:#151515; --muted:#55524d; --line:#dedad2; --accent:#c8391a; }
   * { box-sizing:border-box; }
   body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 "DM Sans", Arial, sans-serif; }
   header, main { width:min(820px,100%); margin:0 auto; padding:0 20px; }
@@ -183,6 +185,7 @@
 </section>
 </main>
 <script>
+  try { const theme = localStorage.getItem('ufcinfo-theme'); if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme; } catch {}
   const select = document.getElementById('lang');
   const show = code => {
     document.querySelectorAll('[data-lang]').forEach(s => s.classList.toggle('active', s.dataset.lang === code));
