@@ -26,7 +26,10 @@ function send(report) {
 // The service worker only replaces Render's restart error page with a friendly one.
 export function registerUpdatingPage() {
   if (!('serviceWorker' in navigator) || !window.isSecureContext) return;
-  navigator.serviceWorker.register('/assets/sw.js', {scope: '/'}).catch(() => {});
+  // After the page has loaded and gone idle: the offline copy must not compete with the first view.
+  const register = () => navigator.serviceWorker.register('/assets/sw.js', {scope: '/'}).catch(() => {});
+  const idle = () => (window.requestIdleCallback ? requestIdleCallback(register, {timeout: 5000}) : setTimeout(register, 2000));
+  if (document.readyState === 'complete') idle(); else window.addEventListener('load', idle, {once: true});
 }
 
 export function initializeClientErrors() {

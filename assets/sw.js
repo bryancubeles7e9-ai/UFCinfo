@@ -2,7 +2,7 @@
 // - Online, every request goes to the network as usual, and a copy of the site's own files is kept.
 // - Offline, the site opens from that copy: the interface plus the last data downloaded.
 // - While Render restarts after a deploy (502/503/504), pages show the friendly "updating" screen.
-const CACHE = 'ufcinfo-offline-v2';
+const CACHE = 'ufcinfo-offline-v3';
 const IMAGES = 'ufcinfo-images-v1';
 const PAGE = '/assets/updating.html';
 const RESTARTING = new Set([502, 503, 504]);
@@ -11,8 +11,7 @@ const MAX_IMAGES = 250;
 // What the site needs to open without a connection. tests/test-offline.mjs checks every file exists.
 const PRECACHE = [
   '/', PAGE, '/assets/manifest.webmanifest',
-  '/assets/css/fonts.css', '/assets/css/main.css', '/assets/css/mobile.css', '/assets/css/refinement.css',
-  '/assets/css/pickem.css', '/assets/css/editorial.css', '/assets/css/adsense.css',
+  '/assets/css/app.css', '/assets/css/fonts.css',
   '/assets/fonts/dm-sans-latin-002a94d0.woff2', '/assets/fonts/barlow-condensed-latin-e7616768.woff2',
   '/assets/fonts/barlow-condensed-latin-00a5e45f.woff2', '/assets/fonts/barlow-condensed-latin-5048d744.woff2',
   '/assets/js/app.bundle.js', '/assets/js/adsense-init.js', '/assets/js/adsense.js',

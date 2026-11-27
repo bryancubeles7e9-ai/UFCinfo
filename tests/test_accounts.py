@@ -199,6 +199,14 @@ class AccountAPITests(unittest.TestCase):
         status, headers, body = get("/", **{"Accept-Encoding": "gzip"})
         self.assertIn(b"<html", gzip.decompress(body))
         self.assertEqual(get("/assets/../server.py", **{"Accept-Encoding": "gzip"})[0], 404)
+        # Larger API answers are compressed too; short ones are not worth it.
+        status, headers, body = get("/api/pickem/state", **{"Accept-Encoding": "gzip"})
+        self.assertEqual((status, headers.get("Content-Encoding"), headers.get("Cache-Control")), (200, "gzip", "no-store"))
+        self.assertIn("events", json.loads(gzip.decompress(body)))
+        status, headers, body = get("/api/pickem/state")
+        self.assertNotIn("Content-Encoding", headers)
+        self.assertIn("events", json.loads(body))
+        self.assertNotIn("Content-Encoding", get("/api/health", **{"Accept-Encoding": "gzip"})[1])
 
     def test_photos_use_the_lighter_webp_copy_when_the_browser_accepts_it(self):
         def get(path, **headers):

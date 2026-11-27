@@ -89,7 +89,9 @@ El service worker (`assets/sw.js`) guarda en el dispositivo una copia de la web 
 
 ## Paquete de la interfaz
 
-El navegador carga `assets/js/app.bundle.js`: todo el código de la interfaz en un solo archivo minificado, en lugar de una cadena de unos 45 módulos. Los archivos de datos (`fighter-directory-data.js`, `official-events.js` y los demás `*-data.js`) quedan fuera del paquete y se descargan en paralelo, así que las actualizaciones automáticas de datos no necesitan regenerarlo.
+El navegador carga `assets/js/app.bundle.js`: todo el código de la interfaz en un solo archivo minificado, en lugar de una cadena de unos 45 módulos. Los archivos de datos (`fighter-directory-data.js`, `official-events.js` y los demás `*-data.js`) quedan fuera del paquete y se descargan en paralelo, así que las actualizaciones automáticas de datos no necesitan regenerarlo. Los estilos siguen el mismo camino: `fonts.css`, `main.css`, `mobile.css`, `refinement.css`, `pickem.css`, `editorial.css` y `adsense.css` se editan por separado y el mismo comando los une y minifica en `assets/css/app.css`, el único CSS que carga la portada (antes eran siete peticiones que bloqueaban el primer pintado). La comprobación `--check` falla si `app.bundle.js` o `app.css` no están al día.
+
+**Arranque ligero.** Las secciones que el visitante no está viendo (Carteleras, Luchadores, Mi esquina, Pick’em) se redibujan cuando el navegador está libre o al abrirlas, nunca en el arranque ni con cada actualización de datos; los formatos de fecha y hora se reutilizan y los nombres normalizados se recuerdan; el service worker se registra cuando la página ya ha cargado; y las respuestas grandes de la API viajan comprimidas. En un móvil simulado (Lighthouse, 4G lenta) el tiempo bloqueado bajó de 500–1000 ms a unos 200 ms y la puntuación de rendimiento de la portada pasó de 52 a 68–69; accesibilidad, buenas prácticas y SEO siguen en 100.
 
 **Después de cambiar cualquier archivo de `assets/js`**, hay que regenerar el paquete:
 
