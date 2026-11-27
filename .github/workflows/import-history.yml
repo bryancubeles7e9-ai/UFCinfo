@@ -55,6 +55,7 @@ jobs:
           node tests/test-recent-form.mjs
           node tests/test-event-archive.mjs
       - name: Publicar
+        id: publish
         if: ${{ inputs.publish }}
         env:
           YEAR: ${{ inputs.year }}
@@ -67,7 +68,16 @@ jobs:
           git commit -m "Añadir la temporada $YEAR: resultados al historial y carteleras al archivo"
           for attempt in 1 2 3 4 5; do
             if ! git pull --rebase origin main; then git rebase --abort || true; echo "::error::No se pudo integrar main"; exit 1; fi
-            if git push origin HEAD:main; then exit 0; fi
+            if git push origin HEAD:main; then echo "changed=true" >> "$GITHUB_OUTPUT"; exit 0; fi
             sleep $((attempt * 2))
           done
           echo "::error::No se pudo publicar tras cinco intentos"; exit 1
+      # Commits pushed by this job do not always start a Render deploy on their own: ask for one.
+      - name: Actualizar Render
+        if: steps.publish.outputs.changed == 'true'
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -n "$RENDER_DEPLOY_HOOK_URL" ]; then
+            curl --fail --silent --output /dev/null --request POST "$RENDER_DEPLOY_HOOK_URL"
+          fi
