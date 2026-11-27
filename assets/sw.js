@@ -20,7 +20,7 @@ const PRECACHE = [
   '/assets/js/i18n/dictionaries.js', '/assets/js/i18n/en.js', '/assets/js/i18n/ca.js', '/assets/js/i18n/martial-notes.js',
   '/assets/js/i18n/legend-notes.js', '/assets/js/i18n/legends.js', '/assets/js/i18n/privacy.js',
   '/assets/data/ufc-events.json', '/assets/data/ufc-rankings.json', '/assets/data/fighter-records.json',
-  '/assets/data/fighter-photos.json', '/assets/data/sync-health.json', '/assets/data/ufc-rumors.json',
+  '/assets/data/fighter-photos.json', '/assets/data/fight-history.json', '/assets/data/sync-health.json', '/assets/data/ufc-rumors.json',
   '/assets/data/ufc-rumor-groups.json', '/assets/data/adsense.json',
   '/assets/images/favicon.svg', '/assets/images/fighter-placeholder.svg', '/assets/images/event-poster-pending.svg',
   '/assets/images/brand/icon-192.png',

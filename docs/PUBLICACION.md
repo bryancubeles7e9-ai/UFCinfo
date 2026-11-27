@@ -108,6 +108,12 @@ La validación de GitHub (`--check`) falla si el paquete no coincide con el cód
 
 **Resultado (26 de noviembre de 2026, móvil con la CPU ralentizada ×4):** portada completa en 4G de 2,6 s a 1,7 s y en 4G lenta de 7,7 s a 7,0 s; peticiones de 85 a 55; tiempo de bloqueo de 760 ms a unos 420 ms. En 4G lenta el límite es ya el peso de las fotos y los datos.
 
+## Forma reciente e historial de combates
+
+Cada ficha muestra la **forma reciente** del luchador (sus últimos 5 resultados, del más reciente al más antiguo, y su racha de victorias o derrotas), y las carteleras y Pick’em muestran la forma con la que llega cada luchador a su combate (solo resultados anteriores a esa velada). V = victoria, D = derrota, E = empate, SR = sin resultado; en inglés W/L/D/NC.
+
+Los datos salen de `assets/data/fight-history.json`, un historial **permanente** de todos los combates terminados que UFCinfo ha registrado desde 2026. Lo genera `scripts/build-fight-history.mjs` a partir de `ufc-events.json`: añade los resultados nuevos y nunca borra los anteriores, así que cuando el feed de eventos pase a la temporada siguiente la forma reciente sigue completa. Si UFC corrige un resultado, la corrección sustituye al registro anterior. Las automatizaciones de datos (`ufc-events.yml` y `morning-retry.yml`) lo actualizan en cada publicación, y la validación comprueba con `--check` que no falta ningún resultado. La ficha indica que se trata de los combates registrados en UFCinfo y remite al perfil oficial para la trayectoria completa.
+
 ## Enlaces para compartir e indexar
 
 Cada luchador, cada velada y cada ranking tienen su propia dirección: **/luchadores/ilia-topuria**, **/carteleras/ufc-335** o **/rankings/peso-ligero** (las categorías femeninas terminan en `-femenino`). El servidor responde con la web normal, pero con el título, la descripción, la foto y la dirección canónica de esa página, así que al compartirla en WhatsApp o en redes se ve su vista previa, y Google puede indexarla. Al abrirla, la web muestra la sección y abre la ficha o la cartelera. Mientras una ficha o una cartelera está abierta, la barra de direcciones muestra su enlace; al cerrarla, vuelve a la portada.

@@ -111,7 +111,9 @@ jobs:
         run: |
           # Titles and photos of the shareable /luchadores and /carteleras addresses follow the data.
           node scripts/build-share-index.mjs || echo "::warning::No se pudo actualizar el índice de enlaces para compartir."
-          git add assets/data/sync-health.json assets/data/ufc-events.json assets/data/ufc-rankings.json assets/data/fighter-records.json assets/data/fighter-photos.json assets/js/fighter-directory-data.js docs/fighter-directory-sources.json assets/data/share-index.json
+          # Every completed result joins the permanent fight history (recent form keeps earlier seasons).
+          node scripts/build-fight-history.mjs || echo "::warning::No se pudo actualizar el historial de combates."
+          git add assets/data/sync-health.json assets/data/ufc-events.json assets/data/ufc-rankings.json assets/data/fighter-records.json assets/data/fighter-photos.json assets/js/fighter-directory-data.js docs/fighter-directory-sources.json assets/data/share-index.json assets/data/fight-history.json
           if [ -d assets/images/events ]; then git add assets/images/events; fi
           if [ -d assets/images/fighter-variants ]; then git add assets/images/fighter-variants; fi
           if [ -d assets/images/fighters ]; then git add assets/images/fighters; fi

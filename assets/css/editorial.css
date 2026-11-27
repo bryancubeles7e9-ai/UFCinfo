@@ -455,3 +455,20 @@ body.light .button,body.light .skip{color:#fff}
 body.light .button:hover{background:#952812;border-color:#952812;color:#fff}
 body.light .pickem-choice.is-picked small,body.light .pickem-fighter.is-picked .pickem-fighter-info{color:#a12c12}
 @media(min-width:701px){.ranking-toolbar .search-box{flex:1 1 280px;min-width:240px}}
+/* Recent form: last results as small chips (newest on the left). */
+.form-chips{display:flex;gap:4px;margin:0;padding:0;list-style:none}
+.form-chips li{display:grid;place-items:center;min-width:26px;height:26px;padding:0 4px;border-radius:6px;font:700 12px var(--body,inherit);border:1px solid var(--line);color:var(--muted);background:var(--surface-2)}
+.form-chips .is-win{color:#0e3b1f;background:#4cc27a;border-color:#4cc27a}
+.form-chips .is-loss{color:#fff;background:#b3311a;border-color:#b3311a}
+.form-chips .is-draw,.form-chips .is-nc{color:var(--ink);background:var(--surface-2)}
+.form-chips.is-compact li{min-width:20px;height:20px;font-size:11px;border-radius:5px}
+.recent-form{margin:0 0 20px;padding:16px 18px;border:1px solid var(--line);border-radius:10px}
+.recent-form h3{margin:0 0 10px;font:700 12px var(--body,inherit);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.recent-form-streak{margin:10px 0 0;font-weight:700}
+.recent-form-streak.is-win{color:#3aa866}
+.recent-form-streak.is-loss{color:var(--accent)}
+.recent-form .data-note{margin:10px 0 0}
+.bout-form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 4px}
+.bout-form > div:last-child .form-chips{justify-content:flex-end}
+.pickem-choice .form-chips{justify-content:center;margin-top:2px}
+body.light .recent-form-streak.is-win{color:#1d7a43}
