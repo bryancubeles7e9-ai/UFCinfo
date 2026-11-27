@@ -1,4 +1,13 @@
 import { escapeHTML as esc } from "./utils.js";
+import { getLocale } from "./i18n.js";
+
+// Date the belts were checked, in the visitor's language (the rankings sync, or the manual review).
+function beltConsulted(fighter) {
+  const stamp = fighter.championshipConsultedAt || fighter.championshipHistoryConsulted || "2026-10-02";
+  const date = new Date(/^\d{4}-\d{2}-\d{2}$/.test(stamp) ? `${stamp}T12:00:00Z` : stamp);
+  if (Number.isNaN(date.getTime())) return stamp;
+  return date.toLocaleDateString(getLocale(), { day: "numeric", month: "long", year: "numeric" });
+}
 
 export const stanceNames = {
   Orthodox: {
@@ -66,5 +75,5 @@ export function renderChampionships(fighter) {
   const belts = [...(fighter.championships || [])].sort(
     (a, b) => Number(b.status === "current") - Number(a.status === "current"),
   );
-  return `<section class="championship-history"><div class="championship-heading"><h3>Cinturones UFC</h3><span class="badge">${belts.length} ${belts.length === 1 ? "CINTURÓN" : "CINTURONES"}</span></div>${belts.length ? `<ul>${belts.map((belt) => `<li class="belt-row ${belt.status}"><span class="belt-symbol">${beltIcon}</span><div><strong>${esc(belt.name)}</strong><small>${belt.type === "special" ? "Título especial BMF" : "Título absoluto de división"}</small></div><span class="belt-status">${belt.status === "current" ? "ACTUAL" : "ANTERIOR"}</span></li>`).join("")}</ul>` : '<p class="no-belts">Sin cinturones UFC absolutos o BMF registrados en esta ficha.</p>'}<p class="belt-scope">Títulos absolutos y BMF. No incluye cinturones interinos. Consulta: ${fighter.championshipConsultedAt ? esc(new Date(fighter.championshipConsultedAt).toLocaleString("es-ES")) + " · Rankings oficiales UFC" : esc(fighter.championshipHistoryConsulted || "2 de octubre de 2026")}.</p></section>`;
+  return `<section class="championship-history"><div class="championship-heading"><h3>Cinturones UFC</h3><span class="badge">${belts.length} ${belts.length === 1 ? "CINTURÓN" : "CINTURONES"}</span></div>${belts.length ? `<ul>${belts.map((belt) => `<li class="belt-row ${belt.status}"><span class="belt-symbol">${beltIcon}</span><div><strong>${esc(belt.name)}</strong><small>${belt.type === "special" ? "Título especial BMF" : "Título absoluto de división"}</small></div><span class="belt-status">${belt.status === "current" ? "ACTUAL" : "ANTERIOR"}</span></li>`).join("")}</ul>` : '<p class="no-belts">Sin cinturones UFC absolutos o BMF registrados en esta ficha.</p>'}<p class="belt-scope"><span>Títulos absolutos y BMF. No incluye cinturones interinos.</span> <span>Consulta</span>: <time translate="no">${esc(beltConsulted(fighter))}</time>${fighter.championshipConsultedAt ? " · <span>Rankings oficiales UFC</span>" : ""}.</p></section>`;
 }
