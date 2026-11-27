@@ -4645,7 +4645,7 @@
   "peso-pluma": {
    "id": "featherweight",
    "title": "Ranking UFC · Peso pluma · Masculino — UFCinfo",
-   "description": "Top 15 oficial de UFC: peso pluma, masculino. Campeón: Alexander Volkanovski. 1. Diego Lopes, 1. Movsar Evloev, 3. Lerone Murphy. Consulta el ranking completo en UFCinfo.",
+   "description": "Top 15 oficial de UFC: peso pluma, masculino. Campeón: Alexander Volkanovski. 1. Movsar Evloev, 1. Diego Lopes, 3. Lerone Murphy. Consulta el ranking completo en UFCinfo.",
    "image": "assets/images/fighters/alexander-volkanovski.png"
   },
   "peso-ligero": {
@@ -4693,7 +4693,7 @@
   "peso-gallo-femenino": {
    "id": "bantamweight-women",
    "title": "Ranking UFC · Peso gallo · Femenino — UFCinfo",
-   "description": "Top 15 oficial de UFC: peso gallo, femenino. Campeón: Kayla Harrison. 1. Amanda Nunes, 2. Joselyne Edwards, 2. Julianna Peña. Consulta el ranking completo en UFCinfo.",
+   "description": "Top 15 oficial de UFC: peso gallo, femenino. Campeón: Kayla Harrison. 1. Amanda Nunes, 2. Julianna Peña, 2. Joselyne Edwards. Consulta el ranking completo en UFCinfo.",
    "image": "assets/images/fighters/kayla-harrison.png"
   }
  }
