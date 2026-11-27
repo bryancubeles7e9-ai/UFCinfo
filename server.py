@@ -519,8 +519,13 @@ def make_handler(database, public_origin, fighter_ids):
                 entry = share_index().get(section, {}).get(share[2])
                 if not entry:
                     return self.send_error(404)
+                # Links shared from the English or Catalan site carry ?lang=en|ca: the preview speaks that language.
+                lang = parse_qs(urlsplit(self.path).query).get("lang", [""])[0]
+                lang = lang if lang in ("en", "ca") and isinstance(entry.get(lang), dict) else "es"
+                if lang != "es":
+                    entry = {**entry, **entry[lang]}
                 home = public_origin.rstrip("/") + "/"
-                payload = self.index_page(home, f"{home}{share[1]}/{share[2]}", entry).encode("utf-8")
+                payload = self.index_page(home, f"{home}{share[1]}/{share[2]}", entry, lang).encode("utf-8")
                 self.send_response(200)
                 self.send_header("Content-Type", "text/html; charset=utf-8")
                 self.send_header("Vary", "Accept-Encoding")
@@ -623,12 +628,18 @@ def make_handler(database, public_origin, fighter_ids):
             self.end_headers()
             self.wfile.write(payload)
 
-        def index_page(self, home, url, entry=None):
+        def index_page(self, home, url, entry=None, lang="es"):
             """index.html with absolute asset paths and, for shared addresses, that page's own metadata."""
             body = (ROOT / "index.html").read_text()
+            if lang != "es":
+                body = body.replace('<html lang="es">', f'<html lang="{lang}">', 1)
             # Shared addresses live below /, so relative asset paths must resolve from the root.
             body = body.replace('<meta charset="utf-8" />', '<meta charset="utf-8" />\n    <base href="/" />', 1)
-            metadata = f'<link rel="canonical" href="{escape(url, quote=True)}" />\n<meta property="og:url" content="{escape(url, quote=True)}" />'
+            # The canonical address has no language; og:url keeps it, so each language gets its own cached preview.
+            shared = url + (f"?lang={lang}" if lang != "es" else "")
+            locale = {"es": "es_ES", "en": "en_US", "ca": "ca_ES"}[lang]
+            metadata = (f'<link rel="canonical" href="{escape(url, quote=True)}" />\n<meta property="og:url" content="{escape(shared, quote=True)}" />'
+                        f'\n<meta property="og:locale" content="{locale}" />')
             poster = home_poster()
             if poster and not entry:
                 metadata += f'\n<link rel="preload" as="image" href="/{escape(poster, quote=True)}" fetchpriority="high" />'
