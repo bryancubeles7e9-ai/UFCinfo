@@ -2,48 +2,48 @@
   "schemaVersion": 1,
   "jobs": {
     "rankings": {
-      "attemptedAt": "2026-11-27T13:11:39.277037+00:00",
-      "status": "failed",
-      "pending": 0,
-      "lastSuccessAt": "2026-11-27T13:01:16.253324+00:00",
-      "consecutiveFailures": 1,
-      "finishedAt": "2026-11-27T13:11:39.672931+00:00",
-      "exitCode": 1
-    },
-    "events": {
-      "attemptedAt": "2026-11-27T13:11:16.821954+00:00",
+      "attemptedAt": "2026-11-27T14:03:28.824411+00:00",
       "status": "success",
       "pending": 0,
-      "lastSuccessAt": "2026-11-27T13:11:32.502313+00:00",
+      "lastSuccessAt": "2026-11-27T14:03:28.991969+00:00",
       "consecutiveFailures": 0,
-      "finishedAt": "2026-11-27T13:11:32.502328+00:00",
+      "finishedAt": "2026-11-27T14:03:28.991985+00:00",
+      "exitCode": 0
+    },
+    "events": {
+      "attemptedAt": "2026-11-27T14:03:27.089615+00:00",
+      "status": "success",
+      "pending": 0,
+      "lastSuccessAt": "2026-11-27T14:03:28.477414+00:00",
+      "consecutiveFailures": 0,
+      "finishedAt": "2026-11-27T14:03:28.477431+00:00",
       "exitCode": 0
     },
     "results": {
-      "attemptedAt": "2026-11-27T13:11:32.556681+00:00",
+      "attemptedAt": "2026-11-27T14:03:28.516251+00:00",
       "status": "success",
       "pending": 0,
-      "lastSuccessAt": "2026-11-27T13:11:39.221428+00:00",
+      "lastSuccessAt": "2026-11-27T14:03:28.786850+00:00",
       "consecutiveFailures": 0,
-      "finishedAt": "2026-11-27T13:11:39.221443+00:00",
+      "finishedAt": "2026-11-27T14:03:28.786868+00:00",
       "exitCode": 0
     },
     "photos": {
-      "attemptedAt": "2026-11-27T13:11:40.423266+00:00",
+      "attemptedAt": "2026-11-27T14:03:29.518484+00:00",
       "status": "success",
       "pending": 0,
-      "lastSuccessAt": "2026-11-27T13:11:50.058610+00:00",
+      "lastSuccessAt": "2026-11-27T14:03:30.910966+00:00",
       "consecutiveFailures": 0,
-      "finishedAt": "2026-11-27T13:11:50.058627+00:00",
+      "finishedAt": "2026-11-27T14:03:30.910984+00:00",
       "exitCode": 0
     },
     "records": {
-      "attemptedAt": "2026-11-27T13:11:50.121569+00:00",
+      "attemptedAt": "2026-11-27T14:03:30.950947+00:00",
       "status": "partial",
-      "pending": 40,
+      "pending": 11,
       "consecutiveFailures": 0,
       "pendingSince": "2026-10-21T22:22:11.527571+00:00",
-      "finishedAt": "2026-11-27T13:14:35.623839+00:00",
+      "finishedAt": "2026-11-27T14:03:32.099544+00:00",
       "exitCode": 0
     }
   }
