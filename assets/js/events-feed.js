@@ -64,7 +64,7 @@ export async function refreshEvents() {
 
 // Past seasons (assets/data/ufc-events-archive.json, written by scripts/import-history-year.py).
 // Loaded only when a visitor picks a past season in Carteleras or opens a link to one of its cards.
-export const archiveSeasons = [2025];
+export const archiveSeasons = [2025, 2024];
 const archivedById = new Map();
 const archivedBySeason = new Map();
 let archiveLoading = null;
