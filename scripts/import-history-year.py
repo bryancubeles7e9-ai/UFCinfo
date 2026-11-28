@@ -196,7 +196,7 @@ def write_archive(year, cards):
 def main():
     year = int(sys.argv[1])
     # Numbered cards of each season (the date check discards any that fall in another year).
-    numbers = {2024: range(296, 312), 2025: range(310, 325)}.get(year, range(0))
+    numbers = {2023: range(282, 298), 2024: range(296, 312), 2025: range(310, 325)}.get(year, range(0))
     events, missing = import_year(year, numbers)
     for event in events:
         print(f"{event['date'][:10]} {event['slug']}: {len(event['bouts'])} combates" + (f" ({event['incomplete']} sin resultado completo)" if event['incomplete'] else ''))
