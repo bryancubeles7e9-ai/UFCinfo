@@ -98,6 +98,10 @@ def parse_event(page, slug, year):
                 no_contest = bool(fight.find('c-listing-fight__outcome--nc'))
                 if not red or not blue or red == blue or sum(wins) > 1 or not (any(wins) or draw or no_contest):
                     incomplete += 1
+                    # What the page shows for this bout, to adapt the reader if UFC marks it another way.
+                    marks = sorted({c for node in [fight, *fight.find('c-listing-fight__outcome')] for c in node.attrs.get('class', '').split() if 'outcome' in c or 'result' in c})
+                    texts = [n.text() for n in fight.find('c-listing-fight__outcome')] + [html.first(fight, k) for k in ('method', 'round', 'time')]
+                    NOTES.append(f'{slug}: sin resultado completo: {red} vs {blue} · marcas {marks} · textos {texts}')
                     continue
                 result = 'red' if wins[0] else 'blue' if wins[1] else 'draw' if draw else 'nc'
                 method, round_, time = (html.first(fight, k) for k in ('method', 'round', 'time'))

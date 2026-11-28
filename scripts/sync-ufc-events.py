@@ -1,5 +1,6 @@
 """Sync completed and announced numbered UFC and Fight Night main cards from UFCalendar; keep last good data on failure."""
 import argparse
+import difflib
 from datetime import datetime, timezone
 import json
 import os
@@ -8,6 +9,7 @@ import re
 import sys
 import tempfile
 import time
+import unicodedata
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -252,6 +254,20 @@ def public_bytes(url, max_bytes):
             raise SyncError('Public asset exceeded size limit')
         return body
 
+def poster_matches_card(url, event):
+    """Promotional art names its headliners in the file (…-bonfim-vs-brady-TEMP-HERO.jpg). When the bout
+    fell through, that art shows a fight that never happened: skip it."""
+    match = re.search(r'-([a-z]+)-vs-([a-z]+)-(?:event-art|temp-hero|endpage)', urlparse(url).path.lower())
+    bouts = event.get('bouts') or []
+    if not match or not bouts:
+        return True
+    plain = lambda text: re.sub(r'[^a-z ]', '', unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode().lower())
+    names = {part for bout in bouts for side in ('red', 'blue') for part in plain(bout[side]).replace('-', ' ').split()}
+    # UFC filenames have typos («onana», «buckey»): one recognisable name is enough; neither means another fight.
+    close = lambda word: any(word == name or (len(word) > 3 and len(name) > 3 and difflib.SequenceMatcher(None, word, name).ratio() >= 0.8) for name in names)
+    return close(match.group(1)) or close(match.group(2))
+
+
 def save_event_poster(event, page, image_dir, read_public=public_bytes):
     """Update the poster from an already fetched UFC page, if it has event art."""
     parser = PosterParser()
@@ -259,6 +275,8 @@ def save_event_poster(event, page, image_dir, read_public=public_bytes):
     if not parser.poster:
         return
     url, alt = parser.poster
+    if not poster_matches_card(url, event):
+        return
     target = image_dir / f"{event['id']}.jpg"
     if event.get('posterSource') != url or not target.is_file() or not target.stat().st_size:
         body = read_public(url, 4000000)

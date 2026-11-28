@@ -7,7 +7,9 @@ from datetime import datetime, timedelta, timezone
 import importlib.util
 import json
 from pathlib import Path
+import re
 import tempfile
+import unicodedata
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,7 +19,9 @@ spec.loader.exec_module(html)
 
 
 def pair(bout):
-    return frozenset(' '.join(bout[k].casefold().split()) for k in ('red', 'blue'))
+    # Accents and punctuation vary between sources («José Souza» / «Jose Souza»): compare without them.
+    clean = lambda name: re.sub(r'[^a-z0-9]', '', unicodedata.normalize('NFKD', name).encode('ascii', 'ignore').decode().casefold())
+    return frozenset(clean(bout[k]) for k in ('red', 'blue'))
 
 
 def completed_card(page, event, now):

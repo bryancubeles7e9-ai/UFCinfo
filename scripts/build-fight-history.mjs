@@ -25,7 +25,11 @@ for (const event of feed.events) {
     merged.set(key(entry), entry);
   }
 }
-const bouts = [...merged.values()].sort((a, b) => b.date.localeCompare(a.date) || key(a).localeCompare(key(b)));
+// The same bout spelled two ways (accents) is kept once: the most recently written spelling wins.
+const plain = name => name.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+const unique = new Map();
+for (const bout of merged.values()) unique.set(`${bout.event}|${[plain(bout.red), plain(bout.blue)].sort().join('|')}`, bout);
+const bouts = [...unique.values()].sort((a, b) => b.date.localeCompare(a.date) || key(a).localeCompare(key(b)));
 // One bout per line: small file, readable diffs when new results arrive.
 const output = '{"schemaVersion":1,"source":"UFC","bouts":[\n' + bouts.map(bout => JSON.stringify(bout)).join(',\n') + '\n]}\n';
 
