@@ -34,16 +34,27 @@ posters = importlib.util.module_from_spec(poster_spec)
 poster_spec.loader.exec_module(posters)
 
 
+NOTES = []   # Why numbered cards were skipped, printed at the end (they should all exist).
+
+
 def fetch(slug):
-    """The event page, or None when UFC.com has no such event (404 or a redirect elsewhere)."""
+    """The event page, or None when UFC.com has no such event (404 or a redirect away from events)."""
     url = UFC + slug
     try:
         with urlopen(Request(url, headers={'User-Agent': 'Mozilla/5.0'}), timeout=25) as response:
-            if response.geturl().rstrip('/') != url:
+            final = response.geturl().rstrip('/')
+            # Special numbered cards (e.g. «Noche UFC») can move to another event address: follow it.
+            if final != url and not (slug[4:].isdigit() and final.startswith(UFC)):
+                if slug[4:].isdigit():
+                    NOTES.append(f'{slug}: UFC.com redirige a {final}')
                 return None
+            if final != url:
+                NOTES.append(f'{slug}: leído desde {final}')
             data = response.read(3_000_001)
     except HTTPError as error:
         if error.code in (403, 404, 410):
+            if slug[4:].isdigit():
+                NOTES.append(f'{slug}: UFC.com responde {error.code}')
             return None
         raise
     if len(data) > 3_000_000:
@@ -68,6 +79,8 @@ def parse_event(page, slug, year):
     times = root.find('c-event-fight-card-broadcaster__time') + root.find('c-hero__headline-suffix')
     stamp = next((n.attrs.get('data-timestamp') for n in times if n.attrs.get('data-timestamp')), None)
     if not stamp:
+        if slug[4:].isdigit():
+            NOTES.append(f'{slug}: la página no indica la fecha del evento')
         return None
     start = datetime.fromtimestamp(int(stamp), timezone.utc)
     if start.year != year or start > datetime.now(timezone.utc):
@@ -188,6 +201,12 @@ def main():
     for event in events:
         print(f"{event['date'][:10]} {event['slug']}: {len(event['bouts'])} combates" + (f" ({event['incomplete']} sin resultado completo)" if event['incomplete'] else ''))
     print(f'{len(events)} veladas de {year}, {sum(len(e["bouts"]) for e in events)} combates; {missing} direcciones sin velada')
+    for note in NOTES:
+        print(f'::notice::{note}')
+    found = {e['slug'] for e in events}
+    for slug in (f'ufc-{n}' for n in numbers):
+        if slug not in found and not any(note.startswith(slug + ':') for note in NOTES):
+            print(f'::notice::{slug}: no es de {year} o no tiene combates con resultado')
     problems = check_season(events, year)
     for problem in problems:
         print(f'::error::{problem}')
