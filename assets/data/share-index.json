@@ -10768,6 +10768,580 @@
     "description": "UFC 324 · 25 de gen. del 2026 · T-Mobile Arena, Las Vegas, Estats Units. Combat estel·lar: Justin Gaethje vs Paddy Pimblett (títol interí del pes lleuger). Cartellera, resultats i horaris a UFCinfo."
    }
   },
+  "ufc-fight-night-december-14-2024": {
+   "id": "ufc-fight-night-december-14-2024",
+   "title": "UFC Fight Night: Cub Swanson vs Billy Quarantillo — UFCinfo",
+   "description": "UFC Fight Night · 15 dic 2024 · Amalie Arena, Tampa, Estados Unidos. Combate estelar: Cub Swanson vs Billy Quarantillo (peso pluma). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-december-14-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Cub Swanson vs Billy Quarantillo — UFCinfo",
+    "description": "UFC Fight Night · Dec 15, 2024 · Amalie Arena, Tampa, United States. Main event: Cub Swanson vs Billy Quarantillo (featherweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Cub Swanson vs Billy Quarantillo — UFCinfo",
+    "description": "UFC Fight Night · 15 de des. del 2024 · Amalie Arena, Tampa, Estats Units. Combat estel·lar: Cub Swanson vs Billy Quarantillo (pes ploma). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-310": {
+   "id": "ufc-310",
+   "title": "UFC 310: Alexandre Pantoja vs Kai Asakura — UFCinfo",
+   "description": "UFC 310 · 8 dic 2024 · T-Mobile Arena, Las Vegas, Estados Unidos. Combate estelar: Alexandre Pantoja vs Kai Asakura (título del peso mosca). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-310.jpg",
+   "en": {
+    "title": "UFC 310: Alexandre Pantoja vs Kai Asakura — UFCinfo",
+    "description": "UFC 310 · Dec 8, 2024 · T-Mobile Arena, Las Vegas, United States. Main event: Alexandre Pantoja vs Kai Asakura (flyweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 310: Alexandre Pantoja vs Kai Asakura — UFCinfo",
+    "description": "UFC 310 · 8 de des. del 2024 · T-Mobile Arena, Las Vegas, Estats Units. Combat estel·lar: Alexandre Pantoja vs Kai Asakura (títol del pes mosca). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-november-23-2024": {
+   "id": "ufc-fight-night-november-23-2024",
+   "title": "UFC Fight Night: Petr Yan vs Deiveson Figueiredo — UFCinfo",
+   "description": "UFC Fight Night · 23 nov 2024 · Galaxy Arena, Macao. Combate estelar: Petr Yan vs Deiveson Figueiredo (peso gallo). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-november-23-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Petr Yan vs Deiveson Figueiredo — UFCinfo",
+    "description": "UFC Fight Night · Nov 23, 2024 · Galaxy Arena, Macao. Main event: Petr Yan vs Deiveson Figueiredo (bantamweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Petr Yan vs Deiveson Figueiredo — UFCinfo",
+    "description": "UFC Fight Night · 23 de nov. del 2024 · Galaxy Arena, Macao. Combat estel·lar: Petr Yan vs Deiveson Figueiredo (pes gall). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-309": {
+   "id": "ufc-309",
+   "title": "UFC 309: Jon Jones vs Stipe Miocic — UFCinfo",
+   "description": "UFC 309 · 17 nov 2024 · Madison Square Garden, New York, Estados Unidos. Combate estelar: Jon Jones vs Stipe Miocic (título del peso pesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-309.jpg",
+   "en": {
+    "title": "UFC 309: Jon Jones vs Stipe Miocic — UFCinfo",
+    "description": "UFC 309 · Nov 17, 2024 · Madison Square Garden, New York, United States. Main event: Jon Jones vs Stipe Miocic (heavyweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 309: Jon Jones vs Stipe Miocic — UFCinfo",
+    "description": "UFC 309 · 17 de nov. del 2024 · Madison Square Garden, New York, Estats Units. Combat estel·lar: Jon Jones vs Stipe Miocic (títol del pes pesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-november-09-2024": {
+   "id": "ufc-fight-night-november-09-2024",
+   "title": "UFC Fight Night: Neil Magny vs Carlos Prates — UFCinfo",
+   "description": "UFC Fight Night · 10 nov 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Neil Magny vs Carlos Prates (peso wélter). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-november-09-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Neil Magny vs Carlos Prates — UFCinfo",
+    "description": "UFC Fight Night · Nov 10, 2024 · Meta APEX, Las Vegas, United States. Main event: Neil Magny vs Carlos Prates (welterweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Neil Magny vs Carlos Prates — UFCinfo",
+    "description": "UFC Fight Night · 10 de nov. del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Neil Magny vs Carlos Prates (pes wèlter). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-november-02-2024": {
+   "id": "ufc-fight-night-november-02-2024",
+   "title": "UFC Fight Night: Brandon Moreno vs Amir Albazi — UFCinfo",
+   "description": "UFC Fight Night · 3 nov 2024 · Rogers Place, Edmonton, Canadá. Combate estelar: Brandon Moreno vs Amir Albazi (peso mosca). Cartelera, resultados y horarios en UFCinfo.",
+   "image": null,
+   "en": {
+    "title": "UFC Fight Night: Brandon Moreno vs Amir Albazi — UFCinfo",
+    "description": "UFC Fight Night · Nov 3, 2024 · Rogers Place, Edmonton, Canada. Main event: Brandon Moreno vs Amir Albazi (flyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Brandon Moreno vs Amir Albazi — UFCinfo",
+    "description": "UFC Fight Night · 3 de nov. del 2024 · Rogers Place, Edmonton, Canadà. Combat estel·lar: Brandon Moreno vs Amir Albazi (pes mosca). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-308": {
+   "id": "ufc-308",
+   "title": "UFC 308: Ilia Topuria vs Max Holloway — UFCinfo",
+   "description": "UFC 308 · 26 oct 2024 · Etihad Arena, Yas Island/Yas West, Emiratos Árabes Unidos. Combate estelar: Ilia Topuria vs Max Holloway (título del peso pluma). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-308.jpg",
+   "en": {
+    "title": "UFC 308: Ilia Topuria vs Max Holloway — UFCinfo",
+    "description": "UFC 308 · Oct 26, 2024 · Etihad Arena, Yas Island/Yas West, United Arab Emirates. Main event: Ilia Topuria vs Max Holloway (featherweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 308: Ilia Topuria vs Max Holloway — UFCinfo",
+    "description": "UFC 308 · 26 d’oct. del 2024 · Etihad Arena, Yas Island/Yas West, Emirats Àrabs Units. Combat estel·lar: Ilia Topuria vs Max Holloway (títol del pes ploma). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-october-19-2024": {
+   "id": "ufc-fight-night-october-19-2024",
+   "title": "UFC Fight Night: Anthony Hernandez vs Michel Pereira — UFCinfo",
+   "description": "UFC Fight Night · 19 oct 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Anthony Hernandez vs Michel Pereira (peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-october-19-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Anthony Hernandez vs Michel Pereira — UFCinfo",
+    "description": "UFC Fight Night · Oct 19, 2024 · Meta APEX, Las Vegas, United States. Main event: Anthony Hernandez vs Michel Pereira (middleweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Anthony Hernandez vs Michel Pereira — UFCinfo",
+    "description": "UFC Fight Night · 19 d’oct. del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Anthony Hernandez vs Michel Pereira (pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-october-12-2024": {
+   "id": "ufc-fight-night-october-12-2024",
+   "title": "UFC Fight Night: Brandon Royval vs Tatsuro Taira — UFCinfo",
+   "description": "UFC Fight Night · 12 oct 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Brandon Royval vs Tatsuro Taira (peso mosca). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-october-12-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Brandon Royval vs Tatsuro Taira — UFCinfo",
+    "description": "UFC Fight Night · Oct 12, 2024 · Meta APEX, Las Vegas, United States. Main event: Brandon Royval vs Tatsuro Taira (flyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Brandon Royval vs Tatsuro Taira — UFCinfo",
+    "description": "UFC Fight Night · 12 d’oct. del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Brandon Royval vs Tatsuro Taira (pes mosca). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-307": {
+   "id": "ufc-307",
+   "title": "UFC 307: Alex Pereira vs Khalil Rountree Jr. — UFCinfo",
+   "description": "UFC 307 · 6 oct 2024 · Delta Center, Salt Lake City, Estados Unidos. Combate estelar: Alex Pereira vs Khalil Rountree Jr. (título del peso semipesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-307.jpg",
+   "en": {
+    "title": "UFC 307: Alex Pereira vs Khalil Rountree Jr. — UFCinfo",
+    "description": "UFC 307 · Oct 6, 2024 · Delta Center, Salt Lake City, United States. Main event: Alex Pereira vs Khalil Rountree Jr. (light heavyweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 307: Alex Pereira vs Khalil Rountree Jr. — UFCinfo",
+    "description": "UFC 307 · 6 d’oct. del 2024 · Delta Center, Salt Lake City, Estats Units. Combat estel·lar: Alex Pereira vs Khalil Rountree Jr. (títol del pes semipesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-september-28-2024": {
+   "id": "ufc-fight-night-september-28-2024",
+   "title": "UFC Fight Night: Renato Moicano vs Benoît Saint Denis — UFCinfo",
+   "description": "UFC Fight Night · 28 sept 2024 · Accor Arena, Paris, Francia. Combate estelar: Renato Moicano vs Benoît Saint Denis (peso ligero). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-september-28-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Renato Moicano vs Benoît Saint Denis — UFCinfo",
+    "description": "UFC Fight Night · Sep 28, 2024 · Accor Arena, Paris, France. Main event: Renato Moicano vs Benoît Saint Denis (lightweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Renato Moicano vs Benoît Saint Denis — UFCinfo",
+    "description": "UFC Fight Night · 28 de set. del 2024 · Accor Arena, Paris, França. Combat estel·lar: Renato Moicano vs Benoît Saint Denis (pes lleuger). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-september-07-2024": {
+   "id": "ufc-fight-night-september-07-2024",
+   "title": "UFC Fight Night: Gilbert Burns vs Sean Brady — UFCinfo",
+   "description": "UFC Fight Night · 7 sept 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Gilbert Burns vs Sean Brady (peso wélter). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-september-07-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Gilbert Burns vs Sean Brady — UFCinfo",
+    "description": "UFC Fight Night · Sep 7, 2024 · Meta APEX, Las Vegas, United States. Main event: Gilbert Burns vs Sean Brady (welterweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Gilbert Burns vs Sean Brady — UFCinfo",
+    "description": "UFC Fight Night · 7 de set. del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Gilbert Burns vs Sean Brady (pes wèlter). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-august-24-2024": {
+   "id": "ufc-fight-night-august-24-2024",
+   "title": "UFC Fight Night: Jared Cannonier vs Caio Borralho — UFCinfo",
+   "description": "UFC Fight Night · 25 ago 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Jared Cannonier vs Caio Borralho (peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-august-24-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Jared Cannonier vs Caio Borralho — UFCinfo",
+    "description": "UFC Fight Night · Aug 25, 2024 · Meta APEX, Las Vegas, United States. Main event: Jared Cannonier vs Caio Borralho (middleweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Jared Cannonier vs Caio Borralho — UFCinfo",
+    "description": "UFC Fight Night · 25 d’ag. del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Jared Cannonier vs Caio Borralho (pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-305": {
+   "id": "ufc-305",
+   "title": "UFC 305: Dricus Du Plessis vs Israel Adesanya — UFCinfo",
+   "description": "UFC 305 · 18 ago 2024 · RAC Arena, Perth, Australia. Combate estelar: Dricus Du Plessis vs Israel Adesanya (título del peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-305.jpg",
+   "en": {
+    "title": "UFC 305: Dricus Du Plessis vs Israel Adesanya — UFCinfo",
+    "description": "UFC 305 · Aug 18, 2024 · RAC Arena, Perth, Australia. Main event: Dricus Du Plessis vs Israel Adesanya (middleweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 305: Dricus Du Plessis vs Israel Adesanya — UFCinfo",
+    "description": "UFC 305 · 18 d’ag. del 2024 · RAC Arena, Perth, Austràlia. Combat estel·lar: Dricus Du Plessis vs Israel Adesanya (títol del pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-august-10-2024": {
+   "id": "ufc-fight-night-august-10-2024",
+   "title": "UFC Fight Night: Marcin Tybura vs Serghei Spivac — UFCinfo",
+   "description": "UFC Fight Night · 10 ago 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Marcin Tybura vs Serghei Spivac (peso pesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-august-10-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Marcin Tybura vs Serghei Spivac — UFCinfo",
+    "description": "UFC Fight Night · Aug 10, 2024 · Meta APEX, Las Vegas, United States. Main event: Marcin Tybura vs Serghei Spivac (heavyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Marcin Tybura vs Serghei Spivac — UFCinfo",
+    "description": "UFC Fight Night · 10 d’ag. del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Marcin Tybura vs Serghei Spivac (pes pesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-august-03-2024": {
+   "id": "ufc-fight-night-august-03-2024",
+   "title": "UFC Fight Night: Cory Sandhagen vs Umar Nurmagomedov — UFCinfo",
+   "description": "UFC Fight Night · 3 ago 2024 · Etihad Arena, Yas Island/Yas West, Emiratos Árabes Unidos. Combate estelar: Cory Sandhagen vs Umar Nurmagomedov (peso gallo). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-august-03-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Cory Sandhagen vs Umar Nurmagomedov — UFCinfo",
+    "description": "UFC Fight Night · Aug 3, 2024 · Etihad Arena, Yas Island/Yas West, United Arab Emirates. Main event: Cory Sandhagen vs Umar Nurmagomedov (bantamweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Cory Sandhagen vs Umar Nurmagomedov — UFCinfo",
+    "description": "UFC Fight Night · 3 d’ag. del 2024 · Etihad Arena, Yas Island/Yas West, Emirats Àrabs Units. Combat estel·lar: Cory Sandhagen vs Umar Nurmagomedov (pes gall). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-304": {
+   "id": "ufc-304",
+   "title": "UFC 304: Leon Edwards vs Belal Muhammad — UFCinfo",
+   "description": "UFC 304 · 28 jul 2024 · Co-op Live, Manchester, Reino Unido. Combate estelar: Leon Edwards vs Belal Muhammad (título del peso wélter). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-304.jpg",
+   "en": {
+    "title": "UFC 304: Leon Edwards vs Belal Muhammad — UFCinfo",
+    "description": "UFC 304 · Jul 28, 2024 · Co-op Live, Manchester, United Kingdom. Main event: Leon Edwards vs Belal Muhammad (welterweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 304: Leon Edwards vs Belal Muhammad — UFCinfo",
+    "description": "UFC 304 · 28 de jul. del 2024 · Co-op Live, Manchester, Regne Unit. Combat estel·lar: Leon Edwards vs Belal Muhammad (títol del pes wèlter). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-july-20-2024": {
+   "id": "ufc-fight-night-july-20-2024",
+   "title": "UFC Fight Night: Amanda Lemos vs Virna Jandiroba — UFCinfo",
+   "description": "UFC Fight Night · 21 jul 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Amanda Lemos vs Virna Jandiroba (peso paja femenino). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-july-20-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Amanda Lemos vs Virna Jandiroba — UFCinfo",
+    "description": "UFC Fight Night · Jul 21, 2024 · Meta APEX, Las Vegas, United States. Main event: Amanda Lemos vs Virna Jandiroba (women's strawweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Amanda Lemos vs Virna Jandiroba — UFCinfo",
+    "description": "UFC Fight Night · 21 de jul. del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Amanda Lemos vs Virna Jandiroba (pes palla femení). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-july-13-2024": {
+   "id": "ufc-fight-night-july-13-2024",
+   "title": "UFC Fight Night: Rose Namajunas vs Tracy Cortez — UFCinfo",
+   "description": "UFC Fight Night · 14 jul 2024 · Ball Arena, Denver, Estados Unidos. Combate estelar: Rose Namajunas vs Tracy Cortez (peso mosca femenino). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-july-13-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Rose Namajunas vs Tracy Cortez — UFCinfo",
+    "description": "UFC Fight Night · Jul 14, 2024 · Ball Arena, Denver, United States. Main event: Rose Namajunas vs Tracy Cortez (women's flyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Rose Namajunas vs Tracy Cortez — UFCinfo",
+    "description": "UFC Fight Night · 14 de jul. del 2024 · Ball Arena, Denver, Estats Units. Combat estel·lar: Rose Namajunas vs Tracy Cortez (pes mosca femení). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-303": {
+   "id": "ufc-303",
+   "title": "UFC 303: Alex Pereira vs Jiří Procházka — UFCinfo",
+   "description": "UFC 303 · 30 jun 2024 · T-Mobile Arena, Las Vegas, Estados Unidos. Combate estelar: Alex Pereira vs Jiří Procházka (título del peso semipesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-303.jpg",
+   "en": {
+    "title": "UFC 303: Alex Pereira vs Jiří Procházka — UFCinfo",
+    "description": "UFC 303 · Jun 30, 2024 · T-Mobile Arena, Las Vegas, United States. Main event: Alex Pereira vs Jiří Procházka (light heavyweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 303: Alex Pereira vs Jiří Procházka — UFCinfo",
+    "description": "UFC 303 · 30 de juny del 2024 · T-Mobile Arena, Las Vegas, Estats Units. Combat estel·lar: Alex Pereira vs Jiří Procházka (títol del pes semipesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-june-22-2024": {
+   "id": "ufc-fight-night-june-22-2024",
+   "title": "UFC Fight Night: Robert Whittaker vs Ikram Aliskerov — UFCinfo",
+   "description": "UFC Fight Night · 22 jun 2024 · Kingdom Arena, Riyadh, Arabia Saudí. Combate estelar: Robert Whittaker vs Ikram Aliskerov (peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": null,
+   "en": {
+    "title": "UFC Fight Night: Robert Whittaker vs Ikram Aliskerov — UFCinfo",
+    "description": "UFC Fight Night · Jun 22, 2024 · Kingdom Arena, Riyadh, Saudi Arabia. Main event: Robert Whittaker vs Ikram Aliskerov (middleweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Robert Whittaker vs Ikram Aliskerov — UFCinfo",
+    "description": "UFC Fight Night · 22 de juny del 2024 · Kingdom Arena, Riyadh, Aràbia Saudí. Combat estel·lar: Robert Whittaker vs Ikram Aliskerov (pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-june-15-2024": {
+   "id": "ufc-fight-night-june-15-2024",
+   "title": "UFC Fight Night: Alex Perez vs Tatsuro Taira — UFCinfo",
+   "description": "UFC Fight Night · 16 jun 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Alex Perez vs Tatsuro Taira (peso mosca). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-june-15-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Alex Perez vs Tatsuro Taira — UFCinfo",
+    "description": "UFC Fight Night · Jun 16, 2024 · Meta APEX, Las Vegas, United States. Main event: Alex Perez vs Tatsuro Taira (flyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Alex Perez vs Tatsuro Taira — UFCinfo",
+    "description": "UFC Fight Night · 16 de juny del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Alex Perez vs Tatsuro Taira (pes mosca). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-june-08-2024": {
+   "id": "ufc-fight-night-june-08-2024",
+   "title": "UFC Fight Night: Jared Cannonier vs Nassourdine Imavov — UFCinfo",
+   "description": "UFC Fight Night · 9 jun 2024 · KFC Yum! Center, Louisville, Estados Unidos. Combate estelar: Jared Cannonier vs Nassourdine Imavov (peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-june-08-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Jared Cannonier vs Nassourdine Imavov — UFCinfo",
+    "description": "UFC Fight Night · Jun 9, 2024 · KFC Yum! Center, Louisville, United States. Main event: Jared Cannonier vs Nassourdine Imavov (middleweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Jared Cannonier vs Nassourdine Imavov — UFCinfo",
+    "description": "UFC Fight Night · 9 de juny del 2024 · KFC Yum! Center, Louisville, Estats Units. Combat estel·lar: Jared Cannonier vs Nassourdine Imavov (pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-302": {
+   "id": "ufc-302",
+   "title": "UFC 302: Islam Makhachev vs Dustin Poirier — UFCinfo",
+   "description": "UFC 302 · 2 jun 2024 · Prudential Center, Newark, Estados Unidos. Combate estelar: Islam Makhachev vs Dustin Poirier (título del peso ligero). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-302.jpg",
+   "en": {
+    "title": "UFC 302: Islam Makhachev vs Dustin Poirier — UFCinfo",
+    "description": "UFC 302 · Jun 2, 2024 · Prudential Center, Newark, United States. Main event: Islam Makhachev vs Dustin Poirier (lightweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 302: Islam Makhachev vs Dustin Poirier — UFCinfo",
+    "description": "UFC 302 · 2 de juny del 2024 · Prudential Center, Newark, Estats Units. Combat estel·lar: Islam Makhachev vs Dustin Poirier (títol del pes lleuger). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-may-18-2024": {
+   "id": "ufc-fight-night-may-18-2024",
+   "title": "UFC Fight Night: Edson Barboza vs Lerone Murphy — UFCinfo",
+   "description": "UFC Fight Night · 18 may 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Edson Barboza vs Lerone Murphy (peso pluma). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-may-18-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Edson Barboza vs Lerone Murphy — UFCinfo",
+    "description": "UFC Fight Night · May 18, 2024 · Meta APEX, Las Vegas, United States. Main event: Edson Barboza vs Lerone Murphy (featherweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Edson Barboza vs Lerone Murphy — UFCinfo",
+    "description": "UFC Fight Night · 18 de maig del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Edson Barboza vs Lerone Murphy (pes ploma). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-may-11-2024": {
+   "id": "ufc-fight-night-may-11-2024",
+   "title": "UFC Fight Night: Derrick Lewis vs Rodrigo Nascimento — UFCinfo",
+   "description": "UFC Fight Night · 11 may 2024 · Enterprise Center, St. Louis, Estados Unidos. Combate estelar: Derrick Lewis vs Rodrigo Nascimento (peso pesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-may-11-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Derrick Lewis vs Rodrigo Nascimento — UFCinfo",
+    "description": "UFC Fight Night · May 11, 2024 · Enterprise Center, St. Louis, United States. Main event: Derrick Lewis vs Rodrigo Nascimento (heavyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Derrick Lewis vs Rodrigo Nascimento — UFCinfo",
+    "description": "UFC Fight Night · 11 de maig del 2024 · Enterprise Center, St. Louis, Estats Units. Combat estel·lar: Derrick Lewis vs Rodrigo Nascimento (pes pesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-301": {
+   "id": "ufc-301",
+   "title": "UFC 301: Alexandre Pantoja vs Steve Erceg — UFCinfo",
+   "description": "UFC 301 · 5 may 2024 · Farmasi Arena, Rio de Janeiro, Brasil. Combate estelar: Alexandre Pantoja vs Steve Erceg (título del peso mosca). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-301.jpg",
+   "en": {
+    "title": "UFC 301: Alexandre Pantoja vs Steve Erceg — UFCinfo",
+    "description": "UFC 301 · May 5, 2024 · Farmasi Arena, Rio de Janeiro, Brazil. Main event: Alexandre Pantoja vs Steve Erceg (flyweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 301: Alexandre Pantoja vs Steve Erceg — UFCinfo",
+    "description": "UFC 301 · 5 de maig del 2024 · Farmasi Arena, Rio de Janeiro, Brasil. Combat estel·lar: Alexandre Pantoja vs Steve Erceg (títol del pes mosca). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-april-27-2024": {
+   "id": "ufc-fight-night-april-27-2024",
+   "title": "UFC Fight Night: Matheus Nicolau vs Alex Perez — UFCinfo",
+   "description": "UFC Fight Night · 27 abr 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Matheus Nicolau vs Alex Perez (peso mosca). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-april-27-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Matheus Nicolau vs Alex Perez — UFCinfo",
+    "description": "UFC Fight Night · Apr 27, 2024 · Meta APEX, Las Vegas, United States. Main event: Matheus Nicolau vs Alex Perez (flyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Matheus Nicolau vs Alex Perez — UFCinfo",
+    "description": "UFC Fight Night · 27 d’abr. del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Matheus Nicolau vs Alex Perez (pes mosca). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-300": {
+   "id": "ufc-300",
+   "title": "UFC 300: Alex Pereira vs Jamahal Hill — UFCinfo",
+   "description": "UFC 300 · 14 abr 2024 · T-Mobile Arena, Las Vegas, Estados Unidos. Combate estelar: Alex Pereira vs Jamahal Hill (título del peso semipesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-300.jpg",
+   "en": {
+    "title": "UFC 300: Alex Pereira vs Jamahal Hill — UFCinfo",
+    "description": "UFC 300 · Apr 14, 2024 · T-Mobile Arena, Las Vegas, United States. Main event: Alex Pereira vs Jamahal Hill (light heavyweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 300: Alex Pereira vs Jamahal Hill — UFCinfo",
+    "description": "UFC 300 · 14 d’abr. del 2024 · T-Mobile Arena, Las Vegas, Estats Units. Combat estel·lar: Alex Pereira vs Jamahal Hill (títol del pes semipesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-april-06-2024": {
+   "id": "ufc-fight-night-april-06-2024",
+   "title": "UFC Fight Night: Brendan Allen vs Chris Curtis — UFCinfo",
+   "description": "UFC Fight Night · 6 abr 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Brendan Allen vs Chris Curtis (peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-april-06-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Brendan Allen vs Chris Curtis — UFCinfo",
+    "description": "UFC Fight Night · Apr 6, 2024 · Meta APEX, Las Vegas, United States. Main event: Brendan Allen vs Chris Curtis (middleweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Brendan Allen vs Chris Curtis — UFCinfo",
+    "description": "UFC Fight Night · 6 d’abr. del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Brendan Allen vs Chris Curtis (pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-march-30-2024": {
+   "id": "ufc-fight-night-march-30-2024",
+   "title": "UFC Fight Night: Erin Blanchfield vs Manon Fiorot — UFCinfo",
+   "description": "UFC Fight Night · 31 mar 2024 · Boardwalk Hall, Atlantic City, Estados Unidos. Combate estelar: Erin Blanchfield vs Manon Fiorot (peso mosca femenino). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-march-30-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Erin Blanchfield vs Manon Fiorot — UFCinfo",
+    "description": "UFC Fight Night · Mar 31, 2024 · Boardwalk Hall, Atlantic City, United States. Main event: Erin Blanchfield vs Manon Fiorot (women's flyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Erin Blanchfield vs Manon Fiorot — UFCinfo",
+    "description": "UFC Fight Night · 31 de març del 2024 · Boardwalk Hall, Atlantic City, Estats Units. Combat estel·lar: Erin Blanchfield vs Manon Fiorot (pes mosca femení). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-march-23-2024": {
+   "id": "ufc-fight-night-march-23-2024",
+   "title": "UFC Fight Night: Amanda Ribas vs Rose Namajunas — UFCinfo",
+   "description": "UFC Fight Night · 24 mar 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Amanda Ribas vs Rose Namajunas (peso mosca femenino). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-march-23-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Amanda Ribas vs Rose Namajunas — UFCinfo",
+    "description": "UFC Fight Night · Mar 24, 2024 · Meta APEX, Las Vegas, United States. Main event: Amanda Ribas vs Rose Namajunas (women's flyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Amanda Ribas vs Rose Namajunas — UFCinfo",
+    "description": "UFC Fight Night · 24 de març del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Amanda Ribas vs Rose Namajunas (pes mosca femení). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-march-16-2024": {
+   "id": "ufc-fight-night-march-16-2024",
+   "title": "UFC Fight Night: Tai Tuivasa vs Marcin Tybura — UFCinfo",
+   "description": "UFC Fight Night · 16 mar 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Tai Tuivasa vs Marcin Tybura (peso pesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-march-16-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Tai Tuivasa vs Marcin Tybura — UFCinfo",
+    "description": "UFC Fight Night · Mar 16, 2024 · Meta APEX, Las Vegas, United States. Main event: Tai Tuivasa vs Marcin Tybura (heavyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Tai Tuivasa vs Marcin Tybura — UFCinfo",
+    "description": "UFC Fight Night · 16 de març del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Tai Tuivasa vs Marcin Tybura (pes pesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-299": {
+   "id": "ufc-299",
+   "title": "UFC 299: Sean O'Malley vs Marlon Vera — UFCinfo",
+   "description": "UFC 299 · 10 mar 2024 · Kaseya Center, Miami, Estados Unidos. Combate estelar: Sean O'Malley vs Marlon Vera (título del peso gallo). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-299.jpg",
+   "en": {
+    "title": "UFC 299: Sean O'Malley vs Marlon Vera — UFCinfo",
+    "description": "UFC 299 · Mar 10, 2024 · Kaseya Center, Miami, United States. Main event: Sean O'Malley vs Marlon Vera (bantamweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 299: Sean O'Malley vs Marlon Vera — UFCinfo",
+    "description": "UFC 299 · 10 de març del 2024 · Kaseya Center, Miami, Estats Units. Combat estel·lar: Sean O'Malley vs Marlon Vera (títol del pes gall). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-march-02-2024": {
+   "id": "ufc-fight-night-march-02-2024",
+   "title": "UFC Fight Night: Jairzinho Rozenstruik vs Shamil Gaziev — UFCinfo",
+   "description": "UFC Fight Night · 2 mar 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Jairzinho Rozenstruik vs Shamil Gaziev (peso pesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-march-02-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Jairzinho Rozenstruik vs Shamil Gaziev — UFCinfo",
+    "description": "UFC Fight Night · Mar 2, 2024 · Meta APEX, Las Vegas, United States. Main event: Jairzinho Rozenstruik vs Shamil Gaziev (heavyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Jairzinho Rozenstruik vs Shamil Gaziev — UFCinfo",
+    "description": "UFC Fight Night · 2 de març del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Jairzinho Rozenstruik vs Shamil Gaziev (pes pesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-february-24-2024": {
+   "id": "ufc-fight-night-february-24-2024",
+   "title": "UFC Fight Night: Brandon Moreno vs Brandon Royval — UFCinfo",
+   "description": "UFC Fight Night · 25 feb 2024 · Arena CDMX, México D.F., México. Combate estelar: Brandon Moreno vs Brandon Royval (peso mosca). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-february-24-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Brandon Moreno vs Brandon Royval — UFCinfo",
+    "description": "UFC Fight Night · Feb 25, 2024 · Arena CDMX, México D.F., Mexico. Main event: Brandon Moreno vs Brandon Royval (flyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Brandon Moreno vs Brandon Royval — UFCinfo",
+    "description": "UFC Fight Night · 25 de febr. del 2024 · Arena CDMX, México D.F., Mèxic. Combat estel·lar: Brandon Moreno vs Brandon Royval (pes mosca). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-298": {
+   "id": "ufc-298",
+   "title": "UFC 298: Alexander Volkanovski vs Ilia Topuria — UFCinfo",
+   "description": "UFC 298 · 18 feb 2024 · Honda Center, Anaheim, Estados Unidos. Combate estelar: Alexander Volkanovski vs Ilia Topuria (título del peso pluma). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-298.jpg",
+   "en": {
+    "title": "UFC 298: Alexander Volkanovski vs Ilia Topuria — UFCinfo",
+    "description": "UFC 298 · Feb 18, 2024 · Honda Center, Anaheim, United States. Main event: Alexander Volkanovski vs Ilia Topuria (featherweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 298: Alexander Volkanovski vs Ilia Topuria — UFCinfo",
+    "description": "UFC 298 · 18 de febr. del 2024 · Honda Center, Anaheim, Estats Units. Combat estel·lar: Alexander Volkanovski vs Ilia Topuria (títol del pes ploma). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-february-10-2024": {
+   "id": "ufc-fight-night-february-10-2024",
+   "title": "UFC Fight Night: Jack Hermansson vs Joe Pyfer — UFCinfo",
+   "description": "UFC Fight Night · 11 feb 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Jack Hermansson vs Joe Pyfer (peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-february-10-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Jack Hermansson vs Joe Pyfer — UFCinfo",
+    "description": "UFC Fight Night · Feb 11, 2024 · Meta APEX, Las Vegas, United States. Main event: Jack Hermansson vs Joe Pyfer (middleweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Jack Hermansson vs Joe Pyfer — UFCinfo",
+    "description": "UFC Fight Night · 11 de febr. del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Jack Hermansson vs Joe Pyfer (pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-february-03-2024": {
+   "id": "ufc-fight-night-february-03-2024",
+   "title": "UFC Fight Night: Roman Dolidze vs Nassourdine Imavov — UFCinfo",
+   "description": "UFC Fight Night · 4 feb 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Roman Dolidze vs Nassourdine Imavov (peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-february-03-2024.jpg",
+   "en": {
+    "title": "UFC Fight Night: Roman Dolidze vs Nassourdine Imavov — UFCinfo",
+    "description": "UFC Fight Night · Feb 4, 2024 · Meta APEX, Las Vegas, United States. Main event: Roman Dolidze vs Nassourdine Imavov (middleweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Roman Dolidze vs Nassourdine Imavov — UFCinfo",
+    "description": "UFC Fight Night · 4 de febr. del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Roman Dolidze vs Nassourdine Imavov (pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-297": {
+   "id": "ufc-297",
+   "title": "UFC 297: Sean Strickland vs Dricus Du Plessis — UFCinfo",
+   "description": "UFC 297 · 21 ene 2024 · Scotiabank Arena, Toronto, Canadá. Combate estelar: Sean Strickland vs Dricus Du Plessis (título del peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-297.jpg",
+   "en": {
+    "title": "UFC 297: Sean Strickland vs Dricus Du Plessis — UFCinfo",
+    "description": "UFC 297 · Jan 21, 2024 · Scotiabank Arena, Toronto, Canada. Main event: Sean Strickland vs Dricus Du Plessis (middleweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 297: Sean Strickland vs Dricus Du Plessis — UFCinfo",
+    "description": "UFC 297 · 21 de gen. del 2024 · Scotiabank Arena, Toronto, Canadà. Combat estel·lar: Sean Strickland vs Dricus Du Plessis (títol del pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-january-13-2024": {
+   "id": "ufc-fight-night-january-13-2024",
+   "title": "UFC Fight Night: Magomed Ankalaev vs Johnny Walker — UFCinfo",
+   "description": "UFC Fight Night · 14 ene 2024 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Magomed Ankalaev vs Johnny Walker (peso semipesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": null,
+   "en": {
+    "title": "UFC Fight Night: Magomed Ankalaev vs Johnny Walker — UFCinfo",
+    "description": "UFC Fight Night · Jan 14, 2024 · Meta APEX, Las Vegas, United States. Main event: Magomed Ankalaev vs Johnny Walker (light heavyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Magomed Ankalaev vs Johnny Walker — UFCinfo",
+    "description": "UFC Fight Night · 14 de gen. del 2024 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Magomed Ankalaev vs Johnny Walker (pes semipesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
   "ufc-fight-night-december-13-2025": {
    "id": "ufc-fight-night-december-13-2025",
    "title": "UFC Fight Night: Brandon Royval vs Manel Kape — UFCinfo",
