@@ -10768,6 +10768,608 @@
     "description": "UFC 324 · 25 de gen. del 2026 · T-Mobile Arena, Las Vegas, Estats Units. Combat estel·lar: Justin Gaethje vs Paddy Pimblett (títol interí del pes lleuger). Cartellera, resultats i horaris a UFCinfo."
    }
   },
+  "ufc-296": {
+   "id": "ufc-296",
+   "title": "UFC 296: Leon Edwards vs Colby Covington — UFCinfo",
+   "description": "UFC 296 · 17 dic 2023 · T-Mobile Arena, Las Vegas, Estados Unidos. Combate estelar: Leon Edwards vs Colby Covington (título del peso wélter). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-296.jpg",
+   "en": {
+    "title": "UFC 296: Leon Edwards vs Colby Covington — UFCinfo",
+    "description": "UFC 296 · Dec 17, 2023 · T-Mobile Arena, Las Vegas, United States. Main event: Leon Edwards vs Colby Covington (welterweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 296: Leon Edwards vs Colby Covington — UFCinfo",
+    "description": "UFC 296 · 17 de des. del 2023 · T-Mobile Arena, Las Vegas, Estats Units. Combat estel·lar: Leon Edwards vs Colby Covington (títol del pes wèlter). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-december-09-2023": {
+   "id": "ufc-fight-night-december-09-2023",
+   "title": "UFC Fight Night: Song Yadong vs Chris Gutierrez — UFCinfo",
+   "description": "UFC Fight Night · 10 dic 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Song Yadong vs Chris Gutierrez (peso gallo). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-december-09-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Song Yadong vs Chris Gutierrez — UFCinfo",
+    "description": "UFC Fight Night · Dec 10, 2023 · Meta APEX, Las Vegas, United States. Main event: Song Yadong vs Chris Gutierrez (bantamweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Song Yadong vs Chris Gutierrez — UFCinfo",
+    "description": "UFC Fight Night · 10 de des. del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Song Yadong vs Chris Gutierrez (pes gall). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-december-02-2023": {
+   "id": "ufc-fight-night-december-02-2023",
+   "title": "UFC Fight Night: Beneil Dariush vs Arman Tsarukyan — UFCinfo",
+   "description": "UFC Fight Night · 3 dic 2023 · Moody Center, Austin, Estados Unidos. Combate estelar: Beneil Dariush vs Arman Tsarukyan (peso ligero). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-december-02-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Beneil Dariush vs Arman Tsarukyan — UFCinfo",
+    "description": "UFC Fight Night · Dec 3, 2023 · Moody Center, Austin, United States. Main event: Beneil Dariush vs Arman Tsarukyan (lightweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Beneil Dariush vs Arman Tsarukyan — UFCinfo",
+    "description": "UFC Fight Night · 3 de des. del 2023 · Moody Center, Austin, Estats Units. Combat estel·lar: Beneil Dariush vs Arman Tsarukyan (pes lleuger). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-november-18-2023": {
+   "id": "ufc-fight-night-november-18-2023",
+   "title": "UFC Fight Night: Brendan Allen vs Paul Craig — UFCinfo",
+   "description": "UFC Fight Night · 18 nov 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Brendan Allen vs Paul Craig (peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": null,
+   "en": {
+    "title": "UFC Fight Night: Brendan Allen vs Paul Craig — UFCinfo",
+    "description": "UFC Fight Night · Nov 18, 2023 · Meta APEX, Las Vegas, United States. Main event: Brendan Allen vs Paul Craig (middleweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Brendan Allen vs Paul Craig — UFCinfo",
+    "description": "UFC Fight Night · 18 de nov. del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Brendan Allen vs Paul Craig (pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-295": {
+   "id": "ufc-295",
+   "title": "UFC 295: Jiří Procházka vs Alex Pereira — UFCinfo",
+   "description": "UFC 295 · 12 nov 2023 · Madison Square Garden, New York, Estados Unidos. Combate estelar: Jiří Procházka vs Alex Pereira (título del peso semipesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-295.jpg",
+   "en": {
+    "title": "UFC 295: Jiří Procházka vs Alex Pereira — UFCinfo",
+    "description": "UFC 295 · Nov 12, 2023 · Madison Square Garden, New York, United States. Main event: Jiří Procházka vs Alex Pereira (light heavyweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 295: Jiří Procházka vs Alex Pereira — UFCinfo",
+    "description": "UFC 295 · 12 de nov. del 2023 · Madison Square Garden, New York, Estats Units. Combat estel·lar: Jiří Procházka vs Alex Pereira (títol del pes semipesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-november-04-2023": {
+   "id": "ufc-fight-night-november-04-2023",
+   "title": "UFC Fight Night: Jailton Almeida vs Derrick Lewis — UFCinfo",
+   "description": "UFC Fight Night · 5 nov 2023 · Ibirapuera Arena, São Paulo, Brasil. Combate estelar: Jailton Almeida vs Derrick Lewis (peso pesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-november-04-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Jailton Almeida vs Derrick Lewis — UFCinfo",
+    "description": "UFC Fight Night · Nov 5, 2023 · Ibirapuera Arena, São Paulo, Brazil. Main event: Jailton Almeida vs Derrick Lewis (heavyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Jailton Almeida vs Derrick Lewis — UFCinfo",
+    "description": "UFC Fight Night · 5 de nov. del 2023 · Ibirapuera Arena, São Paulo, Brasil. Combat estel·lar: Jailton Almeida vs Derrick Lewis (pes pesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-294": {
+   "id": "ufc-294",
+   "title": "UFC 294: Islam Makhachev vs Alexander Volkanovski — UFCinfo",
+   "description": "UFC 294 · 21 oct 2023 · Etihad Arena, Yas Island/Yas West, Emiratos Árabes Unidos. Combate estelar: Islam Makhachev vs Alexander Volkanovski (título del peso ligero). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-294.jpg",
+   "en": {
+    "title": "UFC 294: Islam Makhachev vs Alexander Volkanovski — UFCinfo",
+    "description": "UFC 294 · Oct 21, 2023 · Etihad Arena, Yas Island/Yas West, United Arab Emirates. Main event: Islam Makhachev vs Alexander Volkanovski (lightweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 294: Islam Makhachev vs Alexander Volkanovski — UFCinfo",
+    "description": "UFC 294 · 21 d’oct. del 2023 · Etihad Arena, Yas Island/Yas West, Emirats Àrabs Units. Combat estel·lar: Islam Makhachev vs Alexander Volkanovski (títol del pes lleuger). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-october-14-2023": {
+   "id": "ufc-fight-night-october-14-2023",
+   "title": "UFC Fight Night: Sodiq Yusuff vs Edson Barboza — UFCinfo",
+   "description": "UFC Fight Night · 14 oct 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Sodiq Yusuff vs Edson Barboza (peso pluma). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-october-14-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Sodiq Yusuff vs Edson Barboza — UFCinfo",
+    "description": "UFC Fight Night · Oct 14, 2023 · Meta APEX, Las Vegas, United States. Main event: Sodiq Yusuff vs Edson Barboza (featherweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Sodiq Yusuff vs Edson Barboza — UFCinfo",
+    "description": "UFC Fight Night · 14 d’oct. del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Sodiq Yusuff vs Edson Barboza (pes ploma). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-october-07-2023": {
+   "id": "ufc-fight-night-october-07-2023",
+   "title": "UFC Fight Night: Grant Dawson vs King Green — UFCinfo",
+   "description": "UFC Fight Night · 7 oct 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Grant Dawson vs King Green (peso ligero). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-october-07-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Grant Dawson vs King Green — UFCinfo",
+    "description": "UFC Fight Night · Oct 7, 2023 · Meta APEX, Las Vegas, United States. Main event: Grant Dawson vs King Green (lightweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Grant Dawson vs King Green — UFCinfo",
+    "description": "UFC Fight Night · 7 d’oct. del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Grant Dawson vs King Green (pes lleuger). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-september-23-2023": {
+   "id": "ufc-fight-night-september-23-2023",
+   "title": "UFC Fight Night: Rafael Fiziev vs Mateusz Gamrot — UFCinfo",
+   "description": "UFC Fight Night · 23 sept 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Rafael Fiziev vs Mateusz Gamrot (peso ligero). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-september-23-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Rafael Fiziev vs Mateusz Gamrot — UFCinfo",
+    "description": "UFC Fight Night · Sep 23, 2023 · Meta APEX, Las Vegas, United States. Main event: Rafael Fiziev vs Mateusz Gamrot (lightweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Rafael Fiziev vs Mateusz Gamrot — UFCinfo",
+    "description": "UFC Fight Night · 23 de set. del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Rafael Fiziev vs Mateusz Gamrot (pes lleuger). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-september-16-2023": {
+   "id": "ufc-fight-night-september-16-2023",
+   "title": "UFC Fight Night: Alexa Grasso vs Valentina Shevchenko — UFCinfo",
+   "description": "UFC Fight Night · 17 sept 2023 · T-Mobile Arena, Las Vegas, Estados Unidos. Combate estelar: Alexa Grasso vs Valentina Shevchenko (título del peso mosca femenino). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-september-16-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Alexa Grasso vs Valentina Shevchenko — UFCinfo",
+    "description": "UFC Fight Night · Sep 17, 2023 · T-Mobile Arena, Las Vegas, United States. Main event: Alexa Grasso vs Valentina Shevchenko (women's flyweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Alexa Grasso vs Valentina Shevchenko — UFCinfo",
+    "description": "UFC Fight Night · 17 de set. del 2023 · T-Mobile Arena, Las Vegas, Estats Units. Combat estel·lar: Alexa Grasso vs Valentina Shevchenko (títol del pes mosca femení). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-293": {
+   "id": "ufc-293",
+   "title": "UFC 293: Israel Adesanya vs Sean Strickland — UFCinfo",
+   "description": "UFC 293 · 10 sept 2023 · Afterpay Arena, Sydney Olympic Park, Australia. Combate estelar: Israel Adesanya vs Sean Strickland (título del peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-293.jpg",
+   "en": {
+    "title": "UFC 293: Israel Adesanya vs Sean Strickland — UFCinfo",
+    "description": "UFC 293 · Sep 10, 2023 · Afterpay Arena, Sydney Olympic Park, Australia. Main event: Israel Adesanya vs Sean Strickland (middleweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 293: Israel Adesanya vs Sean Strickland — UFCinfo",
+    "description": "UFC 293 · 10 de set. del 2023 · Afterpay Arena, Sydney Olympic Park, Austràlia. Combat estel·lar: Israel Adesanya vs Sean Strickland (títol del pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-september-02-2023": {
+   "id": "ufc-fight-night-september-02-2023",
+   "title": "UFC Fight Night: Ciryl Gane vs Serghei Spivac — UFCinfo",
+   "description": "UFC Fight Night · 2 sept 2023 · Accor Arena, Paris, Francia. Combate estelar: Ciryl Gane vs Serghei Spivac (peso pesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-september-02-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Ciryl Gane vs Serghei Spivac — UFCinfo",
+    "description": "UFC Fight Night · Sep 2, 2023 · Accor Arena, Paris, France. Main event: Ciryl Gane vs Serghei Spivac (heavyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Ciryl Gane vs Serghei Spivac — UFCinfo",
+    "description": "UFC Fight Night · 2 de set. del 2023 · Accor Arena, Paris, França. Combat estel·lar: Ciryl Gane vs Serghei Spivac (pes pesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-august-26-2023": {
+   "id": "ufc-fight-night-august-26-2023",
+   "title": "UFC Fight Night: Max Holloway vs Chan Sung Jung — UFCinfo",
+   "description": "UFC Fight Night · 26 ago 2023 · Singapore Indoor Stadium, Singapore, Singapur. Combate estelar: Max Holloway vs Chan Sung Jung (peso pluma). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-august-26-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Max Holloway vs Chan Sung Jung — UFCinfo",
+    "description": "UFC Fight Night · Aug 26, 2023 · Singapore Indoor Stadium, Singapore, Singapore. Main event: Max Holloway vs Chan Sung Jung (featherweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Max Holloway vs Chan Sung Jung — UFCinfo",
+    "description": "UFC Fight Night · 26 d’ag. del 2023 · Singapore Indoor Stadium, Singapore, Singapur. Combat estel·lar: Max Holloway vs Chan Sung Jung (pes ploma). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-292": {
+   "id": "ufc-292",
+   "title": "UFC 292: Aljamain Sterling vs Sean O'Malley — UFCinfo",
+   "description": "UFC 292 · 20 ago 2023 · TD Garden, Boston, Estados Unidos. Combate estelar: Aljamain Sterling vs Sean O'Malley (título del peso gallo). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-292.jpg",
+   "en": {
+    "title": "UFC 292: Aljamain Sterling vs Sean O'Malley — UFCinfo",
+    "description": "UFC 292 · Aug 20, 2023 · TD Garden, Boston, United States. Main event: Aljamain Sterling vs Sean O'Malley (bantamweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 292: Aljamain Sterling vs Sean O'Malley — UFCinfo",
+    "description": "UFC 292 · 20 d’ag. del 2023 · TD Garden, Boston, Estats Units. Combat estel·lar: Aljamain Sterling vs Sean O'Malley (títol del pes gall). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-august-12-2023": {
+   "id": "ufc-fight-night-august-12-2023",
+   "title": "UFC Fight Night: Vicente Luque vs Rafael Dos Anjos — UFCinfo",
+   "description": "UFC Fight Night · 12 ago 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Vicente Luque vs Rafael Dos Anjos (peso wélter). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-august-12-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Vicente Luque vs Rafael Dos Anjos — UFCinfo",
+    "description": "UFC Fight Night · Aug 12, 2023 · Meta APEX, Las Vegas, United States. Main event: Vicente Luque vs Rafael Dos Anjos (welterweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Vicente Luque vs Rafael Dos Anjos — UFCinfo",
+    "description": "UFC Fight Night · 12 d’ag. del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Vicente Luque vs Rafael Dos Anjos (pes wèlter). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-august-05-2023": {
+   "id": "ufc-fight-night-august-05-2023",
+   "title": "UFC Fight Night: Cory Sandhagen vs Rob Font — UFCinfo",
+   "description": "UFC Fight Night · 6 ago 2023 · Bridgestone Arena, Nashville, Estados Unidos. Combate estelar: Cory Sandhagen vs Rob Font (peso pactado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-august-05-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Cory Sandhagen vs Rob Font — UFCinfo",
+    "description": "UFC Fight Night · Aug 6, 2023 · Bridgestone Arena, Nashville, United States. Main event: Cory Sandhagen vs Rob Font (catchweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Cory Sandhagen vs Rob Font — UFCinfo",
+    "description": "UFC Fight Night · 6 d’ag. del 2023 · Bridgestone Arena, Nashville, Estats Units. Combat estel·lar: Cory Sandhagen vs Rob Font (pes pactat). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-291": {
+   "id": "ufc-291",
+   "title": "UFC 291: Dustin Poirier vs Justin Gaethje — UFCinfo",
+   "description": "UFC 291 · 30 jul 2023 · Delta Center, Salt Lake City, Estados Unidos. Combate estelar: Dustin Poirier vs Justin Gaethje (peso ligero). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-291.jpg",
+   "en": {
+    "title": "UFC 291: Dustin Poirier vs Justin Gaethje — UFCinfo",
+    "description": "UFC 291 · Jul 30, 2023 · Delta Center, Salt Lake City, United States. Main event: Dustin Poirier vs Justin Gaethje (lightweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 291: Dustin Poirier vs Justin Gaethje — UFCinfo",
+    "description": "UFC 291 · 30 de jul. del 2023 · Delta Center, Salt Lake City, Estats Units. Combat estel·lar: Dustin Poirier vs Justin Gaethje (pes lleuger). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-july-22-2023": {
+   "id": "ufc-fight-night-july-22-2023",
+   "title": "UFC Fight Night: Tom Aspinall vs Marcin Tybura — UFCinfo",
+   "description": "UFC Fight Night · 22 jul 2023 · The O2, London, Reino Unido. Combate estelar: Tom Aspinall vs Marcin Tybura (peso pesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-july-22-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Tom Aspinall vs Marcin Tybura — UFCinfo",
+    "description": "UFC Fight Night · Jul 22, 2023 · The O2, London, United Kingdom. Main event: Tom Aspinall vs Marcin Tybura (heavyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Tom Aspinall vs Marcin Tybura — UFCinfo",
+    "description": "UFC Fight Night · 22 de jul. del 2023 · The O2, London, Regne Unit. Combat estel·lar: Tom Aspinall vs Marcin Tybura (pes pesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-july-15-2023": {
+   "id": "ufc-fight-night-july-15-2023",
+   "title": "UFC Fight Night: Holly Holm vs Mayra Bueno Silva — UFCinfo",
+   "description": "UFC Fight Night · 16 jul 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Holly Holm vs Mayra Bueno Silva (peso gallo femenino). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-july-15-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Holly Holm vs Mayra Bueno Silva — UFCinfo",
+    "description": "UFC Fight Night · Jul 16, 2023 · Meta APEX, Las Vegas, United States. Main event: Holly Holm vs Mayra Bueno Silva (women's bantamweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Holly Holm vs Mayra Bueno Silva — UFCinfo",
+    "description": "UFC Fight Night · 16 de jul. del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Holly Holm vs Mayra Bueno Silva (pes gall femení). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-290": {
+   "id": "ufc-290",
+   "title": "UFC 290: Alexander Volkanovski vs Yair Rodriguez — UFCinfo",
+   "description": "UFC 290 · 9 jul 2023 · T-Mobile Arena, Las Vegas, Estados Unidos. Combate estelar: Alexander Volkanovski vs Yair Rodriguez (título del peso pluma). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-290.jpg",
+   "en": {
+    "title": "UFC 290: Alexander Volkanovski vs Yair Rodriguez — UFCinfo",
+    "description": "UFC 290 · Jul 9, 2023 · T-Mobile Arena, Las Vegas, United States. Main event: Alexander Volkanovski vs Yair Rodriguez (featherweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 290: Alexander Volkanovski vs Yair Rodriguez — UFCinfo",
+    "description": "UFC 290 · 9 de jul. del 2023 · T-Mobile Arena, Las Vegas, Estats Units. Combat estel·lar: Alexander Volkanovski vs Yair Rodriguez (títol del pes ploma). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-july-01-2023": {
+   "id": "ufc-fight-night-july-01-2023",
+   "title": "UFC Fight Night: Sean Strickland vs Abus Magomedov — UFCinfo",
+   "description": "UFC Fight Night · 1 jul 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Sean Strickland vs Abus Magomedov (peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-july-01-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Sean Strickland vs Abus Magomedov — UFCinfo",
+    "description": "UFC Fight Night · Jul 1, 2023 · Meta APEX, Las Vegas, United States. Main event: Sean Strickland vs Abus Magomedov (middleweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Sean Strickland vs Abus Magomedov — UFCinfo",
+    "description": "UFC Fight Night · 1 de jul. del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Sean Strickland vs Abus Magomedov (pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-june-24-2023": {
+   "id": "ufc-fight-night-june-24-2023",
+   "title": "UFC Fight Night: Josh Emmett vs Ilia Topuria — UFCinfo",
+   "description": "UFC Fight Night · 24 jun 2023 · VyStar Veterans Memorial Arena, Jacksonville, Estados Unidos. Combate estelar: Josh Emmett vs Ilia Topuria (peso pluma). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-june-24-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Josh Emmett vs Ilia Topuria — UFCinfo",
+    "description": "UFC Fight Night · Jun 24, 2023 · VyStar Veterans Memorial Arena, Jacksonville, United States. Main event: Josh Emmett vs Ilia Topuria (featherweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Josh Emmett vs Ilia Topuria — UFCinfo",
+    "description": "UFC Fight Night · 24 de juny del 2023 · VyStar Veterans Memorial Arena, Jacksonville, Estats Units. Combat estel·lar: Josh Emmett vs Ilia Topuria (pes ploma). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-june-17-2023": {
+   "id": "ufc-fight-night-june-17-2023",
+   "title": "UFC Fight Night: Marvin Vettori vs Jared Cannonier — UFCinfo",
+   "description": "UFC Fight Night · 18 jun 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Marvin Vettori vs Jared Cannonier (peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-june-17-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Marvin Vettori vs Jared Cannonier — UFCinfo",
+    "description": "UFC Fight Night · Jun 18, 2023 · Meta APEX, Las Vegas, United States. Main event: Marvin Vettori vs Jared Cannonier (middleweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Marvin Vettori vs Jared Cannonier — UFCinfo",
+    "description": "UFC Fight Night · 18 de juny del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Marvin Vettori vs Jared Cannonier (pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-289": {
+   "id": "ufc-289",
+   "title": "UFC 289: Amanda Nunes vs Irene Aldana — UFCinfo",
+   "description": "UFC 289 · 11 jun 2023 · Rogers Arena, Vancouver, Canadá. Combate estelar: Amanda Nunes vs Irene Aldana (título del peso gallo femenino). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-289.jpg",
+   "en": {
+    "title": "UFC 289: Amanda Nunes vs Irene Aldana — UFCinfo",
+    "description": "UFC 289 · Jun 11, 2023 · Rogers Arena, Vancouver, Canada. Main event: Amanda Nunes vs Irene Aldana (women's bantamweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 289: Amanda Nunes vs Irene Aldana — UFCinfo",
+    "description": "UFC 289 · 11 de juny del 2023 · Rogers Arena, Vancouver, Canadà. Combat estel·lar: Amanda Nunes vs Irene Aldana (títol del pes gall femení). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-june-03-2023": {
+   "id": "ufc-fight-night-june-03-2023",
+   "title": "UFC Fight Night: Kai Kara-France vs Amir Albazi — UFCinfo",
+   "description": "UFC Fight Night · 4 jun 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Kai Kara-France vs Amir Albazi (peso mosca). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-june-03-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Kai Kara-France vs Amir Albazi — UFCinfo",
+    "description": "UFC Fight Night · Jun 4, 2023 · Meta APEX, Las Vegas, United States. Main event: Kai Kara-France vs Amir Albazi (flyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Kai Kara-France vs Amir Albazi — UFCinfo",
+    "description": "UFC Fight Night · 4 de juny del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Kai Kara-France vs Amir Albazi (pes mosca). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-may-20-2023": {
+   "id": "ufc-fight-night-may-20-2023",
+   "title": "UFC Fight Night: Mackenzie Dern vs Angela Hill — UFCinfo",
+   "description": "UFC Fight Night · 20 may 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Mackenzie Dern vs Angela Hill (peso paja femenino). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-may-20-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Mackenzie Dern vs Angela Hill — UFCinfo",
+    "description": "UFC Fight Night · May 20, 2023 · Meta APEX, Las Vegas, United States. Main event: Mackenzie Dern vs Angela Hill (women's strawweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Mackenzie Dern vs Angela Hill — UFCinfo",
+    "description": "UFC Fight Night · 20 de maig del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Mackenzie Dern vs Angela Hill (pes palla femení). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-may-13-2023": {
+   "id": "ufc-fight-night-may-13-2023",
+   "title": "UFC Fight Night: Jairzinho Rozenstruik vs Jailton Almeida — UFCinfo",
+   "description": "UFC Fight Night · 13 may 2023 · Spectrum Center, Charlotte, Estados Unidos. Combate estelar: Jairzinho Rozenstruik vs Jailton Almeida (peso pesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-may-13-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Jairzinho Rozenstruik vs Jailton Almeida — UFCinfo",
+    "description": "UFC Fight Night · May 13, 2023 · Spectrum Center, Charlotte, United States. Main event: Jairzinho Rozenstruik vs Jailton Almeida (heavyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Jairzinho Rozenstruik vs Jailton Almeida — UFCinfo",
+    "description": "UFC Fight Night · 13 de maig del 2023 · Spectrum Center, Charlotte, Estats Units. Combat estel·lar: Jairzinho Rozenstruik vs Jailton Almeida (pes pesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-288": {
+   "id": "ufc-288",
+   "title": "UFC 288: Aljamain Sterling vs Henry Cejudo — UFCinfo",
+   "description": "UFC 288 · 7 may 2023 · Prudential Center, Newark, Estados Unidos. Combate estelar: Aljamain Sterling vs Henry Cejudo (título del peso gallo). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-288.jpg",
+   "en": {
+    "title": "UFC 288: Aljamain Sterling vs Henry Cejudo — UFCinfo",
+    "description": "UFC 288 · May 7, 2023 · Prudential Center, Newark, United States. Main event: Aljamain Sterling vs Henry Cejudo (bantamweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 288: Aljamain Sterling vs Henry Cejudo — UFCinfo",
+    "description": "UFC 288 · 7 de maig del 2023 · Prudential Center, Newark, Estats Units. Combat estel·lar: Aljamain Sterling vs Henry Cejudo (títol del pes gall). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-april-29-2023": {
+   "id": "ufc-fight-night-april-29-2023",
+   "title": "UFC Fight Night: Song Yadong vs Ricky Simon — UFCinfo",
+   "description": "UFC Fight Night · 29 abr 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Song Yadong vs Ricky Simon (peso gallo). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-april-29-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Song Yadong vs Ricky Simon — UFCinfo",
+    "description": "UFC Fight Night · Apr 29, 2023 · Meta APEX, Las Vegas, United States. Main event: Song Yadong vs Ricky Simon (bantamweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Song Yadong vs Ricky Simon — UFCinfo",
+    "description": "UFC Fight Night · 29 d’abr. del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Song Yadong vs Ricky Simon (pes gall). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-april-22-2023": {
+   "id": "ufc-fight-night-april-22-2023",
+   "title": "UFC Fight Night: Sergei Pavlovich vs Curtis Blaydes — UFCinfo",
+   "description": "UFC Fight Night · 22 abr 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Sergei Pavlovich vs Curtis Blaydes (peso pesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-april-22-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Sergei Pavlovich vs Curtis Blaydes — UFCinfo",
+    "description": "UFC Fight Night · Apr 22, 2023 · Meta APEX, Las Vegas, United States. Main event: Sergei Pavlovich vs Curtis Blaydes (heavyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Sergei Pavlovich vs Curtis Blaydes — UFCinfo",
+    "description": "UFC Fight Night · 22 d’abr. del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Sergei Pavlovich vs Curtis Blaydes (pes pesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-april-15-2023": {
+   "id": "ufc-fight-night-april-15-2023",
+   "title": "UFC Fight Night: Max Holloway vs Arnold Allen — UFCinfo",
+   "description": "UFC Fight Night · 16 abr 2023 · T-Mobile Center, Kansas City, Estados Unidos. Combate estelar: Max Holloway vs Arnold Allen (peso pluma). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-april-15-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Max Holloway vs Arnold Allen — UFCinfo",
+    "description": "UFC Fight Night · Apr 16, 2023 · T-Mobile Center, Kansas City, United States. Main event: Max Holloway vs Arnold Allen (featherweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Max Holloway vs Arnold Allen — UFCinfo",
+    "description": "UFC Fight Night · 16 d’abr. del 2023 · T-Mobile Center, Kansas City, Estats Units. Combat estel·lar: Max Holloway vs Arnold Allen (pes ploma). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-287": {
+   "id": "ufc-287",
+   "title": "UFC 287: Alex Pereira vs Israel Adesanya — UFCinfo",
+   "description": "UFC 287 · 9 abr 2023 · Kaseya Center, Miami, Estados Unidos. Combate estelar: Alex Pereira vs Israel Adesanya (título del peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-287.jpg",
+   "en": {
+    "title": "UFC 287: Alex Pereira vs Israel Adesanya — UFCinfo",
+    "description": "UFC 287 · Apr 9, 2023 · Kaseya Center, Miami, United States. Main event: Alex Pereira vs Israel Adesanya (middleweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 287: Alex Pereira vs Israel Adesanya — UFCinfo",
+    "description": "UFC 287 · 9 d’abr. del 2023 · Kaseya Center, Miami, Estats Units. Combat estel·lar: Alex Pereira vs Israel Adesanya (títol del pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-march-25-2023": {
+   "id": "ufc-fight-night-march-25-2023",
+   "title": "UFC Fight Night: Marlon Vera vs Cory Sandhagen — UFCinfo",
+   "description": "UFC Fight Night · 25 mar 2023 · Frost Bank Center, San Antonio, Estados Unidos. Combate estelar: Marlon Vera vs Cory Sandhagen (peso gallo). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-march-25-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Marlon Vera vs Cory Sandhagen — UFCinfo",
+    "description": "UFC Fight Night · Mar 25, 2023 · Frost Bank Center, San Antonio, United States. Main event: Marlon Vera vs Cory Sandhagen (bantamweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Marlon Vera vs Cory Sandhagen — UFCinfo",
+    "description": "UFC Fight Night · 25 de març del 2023 · Frost Bank Center, San Antonio, Estats Units. Combat estel·lar: Marlon Vera vs Cory Sandhagen (pes gall). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-286": {
+   "id": "ufc-286",
+   "title": "UFC 286: Leon Edwards vs Kamaru Usman — UFCinfo",
+   "description": "UFC 286 · 18 mar 2023 · The O2, London, Reino Unido. Combate estelar: Leon Edwards vs Kamaru Usman (título del peso wélter). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-286.jpg",
+   "en": {
+    "title": "UFC 286: Leon Edwards vs Kamaru Usman — UFCinfo",
+    "description": "UFC 286 · Mar 18, 2023 · The O2, London, United Kingdom. Main event: Leon Edwards vs Kamaru Usman (welterweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 286: Leon Edwards vs Kamaru Usman — UFCinfo",
+    "description": "UFC 286 · 18 de març del 2023 · The O2, London, Regne Unit. Combat estel·lar: Leon Edwards vs Kamaru Usman (títol del pes wèlter). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-march-11-2023": {
+   "id": "ufc-fight-night-march-11-2023",
+   "title": "UFC Fight Night: Petr Yan vs Merab Dvalishvili — UFCinfo",
+   "description": "UFC Fight Night · 11 mar 2023 · The Theater at Virgin Hotels Las Vegas, Las Vegas, Estados Unidos. Combate estelar: Petr Yan vs Merab Dvalishvili (peso gallo). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-march-11-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Petr Yan vs Merab Dvalishvili — UFCinfo",
+    "description": "UFC Fight Night · Mar 11, 2023 · The Theater at Virgin Hotels Las Vegas, Las Vegas, United States. Main event: Petr Yan vs Merab Dvalishvili (bantamweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Petr Yan vs Merab Dvalishvili — UFCinfo",
+    "description": "UFC Fight Night · 11 de març del 2023 · The Theater at Virgin Hotels Las Vegas, Las Vegas, Estats Units. Combat estel·lar: Petr Yan vs Merab Dvalishvili (pes gall). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-285": {
+   "id": "ufc-285",
+   "title": "UFC 285: Jon Jones vs Ciryl Gane — UFCinfo",
+   "description": "UFC 285 · 5 mar 2023 · T-Mobile Arena, Las Vegas, Estados Unidos. Combate estelar: Jon Jones vs Ciryl Gane (título del peso pesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-285.jpg",
+   "en": {
+    "title": "UFC 285: Jon Jones vs Ciryl Gane — UFCinfo",
+    "description": "UFC 285 · Mar 5, 2023 · T-Mobile Arena, Las Vegas, United States. Main event: Jon Jones vs Ciryl Gane (heavyweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 285: Jon Jones vs Ciryl Gane — UFCinfo",
+    "description": "UFC 285 · 5 de març del 2023 · T-Mobile Arena, Las Vegas, Estats Units. Combat estel·lar: Jon Jones vs Ciryl Gane (títol del pes pesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-february-25-2023": {
+   "id": "ufc-fight-night-february-25-2023",
+   "title": "UFC Fight Night: Andre Muniz vs Brendan Allen — UFCinfo",
+   "description": "UFC Fight Night · 26 feb 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Andre Muniz vs Brendan Allen (peso medio). Cartelera, resultados y horarios en UFCinfo.",
+   "image": null,
+   "en": {
+    "title": "UFC Fight Night: Andre Muniz vs Brendan Allen — UFCinfo",
+    "description": "UFC Fight Night · Feb 26, 2023 · Meta APEX, Las Vegas, United States. Main event: Andre Muniz vs Brendan Allen (middleweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Andre Muniz vs Brendan Allen — UFCinfo",
+    "description": "UFC Fight Night · 26 de febr. del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Andre Muniz vs Brendan Allen (pes mitjà). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-february-18-2023": {
+   "id": "ufc-fight-night-february-18-2023",
+   "title": "UFC Fight Night: Jéssica Andrade vs Erin Blanchfield — UFCinfo",
+   "description": "UFC Fight Night · 19 feb 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Jéssica Andrade vs Erin Blanchfield (peso mosca femenino). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-february-18-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Jéssica Andrade vs Erin Blanchfield — UFCinfo",
+    "description": "UFC Fight Night · Feb 19, 2023 · Meta APEX, Las Vegas, United States. Main event: Jéssica Andrade vs Erin Blanchfield (women's flyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Jéssica Andrade vs Erin Blanchfield — UFCinfo",
+    "description": "UFC Fight Night · 19 de febr. del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Jéssica Andrade vs Erin Blanchfield (pes mosca femení). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-284": {
+   "id": "ufc-284",
+   "title": "UFC 284: Islam Makhachev vs Alexander Volkanovski — UFCinfo",
+   "description": "UFC 284 · 12 feb 2023 · RAC Arena, Perth, Australia. Combate estelar: Islam Makhachev vs Alexander Volkanovski (título del peso ligero). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-284.jpg",
+   "en": {
+    "title": "UFC 284: Islam Makhachev vs Alexander Volkanovski — UFCinfo",
+    "description": "UFC 284 · Feb 12, 2023 · RAC Arena, Perth, Australia. Main event: Islam Makhachev vs Alexander Volkanovski (lightweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 284: Islam Makhachev vs Alexander Volkanovski — UFCinfo",
+    "description": "UFC 284 · 12 de febr. del 2023 · RAC Arena, Perth, Austràlia. Combat estel·lar: Islam Makhachev vs Alexander Volkanovski (títol del pes lleuger). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-february-04-2023": {
+   "id": "ufc-fight-night-february-04-2023",
+   "title": "UFC Fight Night: Derrick Lewis vs Serghei Spivac — UFCinfo",
+   "description": "UFC Fight Night · 5 feb 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Derrick Lewis vs Serghei Spivac (peso pesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-february-04-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Derrick Lewis vs Serghei Spivac — UFCinfo",
+    "description": "UFC Fight Night · Feb 5, 2023 · Meta APEX, Las Vegas, United States. Main event: Derrick Lewis vs Serghei Spivac (heavyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Derrick Lewis vs Serghei Spivac — UFCinfo",
+    "description": "UFC Fight Night · 5 de febr. del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Derrick Lewis vs Serghei Spivac (pes pesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-283": {
+   "id": "ufc-283",
+   "title": "UFC 283: Glover Teixeira vs Jamahal Hill — UFCinfo",
+   "description": "UFC 283 · 22 ene 2023 · Farmasi Arena, Rio de Janeiro, Brasil. Combate estelar: Glover Teixeira vs Jamahal Hill (título del peso semipesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-283.jpg",
+   "en": {
+    "title": "UFC 283: Glover Teixeira vs Jamahal Hill — UFCinfo",
+    "description": "UFC 283 · Jan 22, 2023 · Farmasi Arena, Rio de Janeiro, Brazil. Main event: Glover Teixeira vs Jamahal Hill (light heavyweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 283: Glover Teixeira vs Jamahal Hill — UFCinfo",
+    "description": "UFC 283 · 22 de gen. del 2023 · Farmasi Arena, Rio de Janeiro, Brasil. Combat estel·lar: Glover Teixeira vs Jamahal Hill (títol del pes semipesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
+  "ufc-fight-night-january-14-2023": {
+   "id": "ufc-fight-night-january-14-2023",
+   "title": "UFC Fight Night: Sean Strickland vs Nassourdine Imavov — UFCinfo",
+   "description": "UFC Fight Night · 15 ene 2023 · Meta APEX, Las Vegas, Estados Unidos. Combate estelar: Sean Strickland vs Nassourdine Imavov (peso semipesado). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-fight-night-january-14-2023.jpg",
+   "en": {
+    "title": "UFC Fight Night: Sean Strickland vs Nassourdine Imavov — UFCinfo",
+    "description": "UFC Fight Night · Jan 15, 2023 · Meta APEX, Las Vegas, United States. Main event: Sean Strickland vs Nassourdine Imavov (light heavyweight). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC Fight Night: Sean Strickland vs Nassourdine Imavov — UFCinfo",
+    "description": "UFC Fight Night · 15 de gen. del 2023 · Meta APEX, Las Vegas, Estats Units. Combat estel·lar: Sean Strickland vs Nassourdine Imavov (pes semipesant). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
   "ufc-fight-night-december-14-2024": {
    "id": "ufc-fight-night-december-14-2024",
    "title": "UFC Fight Night: Cub Swanson vs Billy Quarantillo — UFCinfo",
