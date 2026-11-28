@@ -10922,6 +10922,20 @@
     "description": "UFC Fight Night · 28 de set. del 2024 · Accor Arena, Paris, França. Combat estel·lar: Renato Moicano vs Benoît Saint Denis (pes lleuger). Cartellera, resultats i horaris a UFCinfo."
    }
   },
+  "ufc-306": {
+   "id": "ufc-306",
+   "title": "UFC 306: Sean O'Malley vs Merab Dvalishvili — UFCinfo",
+   "description": "UFC 306 · 15 sept 2024 · Sphere, Las Vegas, Estados Unidos. Combate estelar: Sean O'Malley vs Merab Dvalishvili (título del peso gallo). Cartelera, resultados y horarios en UFCinfo.",
+   "image": "assets/images/events/ufc-306.jpg",
+   "en": {
+    "title": "UFC 306: Sean O'Malley vs Merab Dvalishvili — UFCinfo",
+    "description": "UFC 306 · Sep 15, 2024 · Sphere, Las Vegas, United States. Main event: Sean O'Malley vs Merab Dvalishvili (bantamweight title). Fight card, results and times on UFCinfo."
+   },
+   "ca": {
+    "title": "UFC 306: Sean O'Malley vs Merab Dvalishvili — UFCinfo",
+    "description": "UFC 306 · 15 de set. del 2024 · Sphere, Las Vegas, Estats Units. Combat estel·lar: Sean O'Malley vs Merab Dvalishvili (títol del pes gall). Cartellera, resultats i horaris a UFCinfo."
+   }
+  },
   "ufc-fight-night-september-07-2024": {
    "id": "ufc-fight-night-september-07-2024",
    "title": "UFC Fight Night: Gilbert Burns vs Sean Brady — UFCinfo",

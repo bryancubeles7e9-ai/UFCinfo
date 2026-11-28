@@ -8080,6 +8080,123 @@
      "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2024-08/092824-ufc-fight-night-moicano-vs-saint-denis-EVENT-ART.jpg?h=d1cb525d&itok=UYhP0_2O"
     },
     {
+     "id": "ufc-306",
+     "number": 306,
+     "eventKind": "numbered",
+     "title": "UFC 306",
+     "subtitle": "Sean O'Malley vs Merab Dvalishvili",
+     "status": "completed",
+     "date": "2024-09-15T02:00:00+00:00",
+     "location": "Sphere, Las Vegas United States",
+     "type": "official",
+     "source": "https://www.ufc.com/event/ufc-306",
+     "checkedAt": "2026-11-28",
+     "bouts": [
+      {
+       "red": "Sean O'Malley",
+       "blue": "Merab Dvalishvili",
+       "section": "main",
+       "division": "Bantamweight Title Bout",
+       "winner": "Merab Dvalishvili",
+       "outcome": null,
+       "method": "Decision - Unanimous",
+       "round": "5",
+       "time": "5:00"
+      },
+      {
+       "red": "Alexa Grasso",
+       "blue": "Valentina Shevchenko",
+       "section": "main",
+       "division": "Women's Flyweight Title Bout",
+       "winner": "Valentina Shevchenko",
+       "outcome": null,
+       "method": "Decision - Unanimous",
+       "round": "5",
+       "time": "5:00"
+      },
+      {
+       "red": "Brian Ortega",
+       "blue": "Diego Lopes",
+       "section": "main",
+       "division": "Featherweight Bout",
+       "winner": "Diego Lopes",
+       "outcome": null,
+       "method": "Decision - Unanimous",
+       "round": "3",
+       "time": "5:00"
+      },
+      {
+       "red": "Daniel Zellhuber",
+       "blue": "Esteban Ribovics",
+       "section": "main",
+       "division": "Lightweight Bout",
+       "winner": "Esteban Ribovics",
+       "outcome": null,
+       "method": "Decision - Split",
+       "round": "3",
+       "time": "5:00"
+      },
+      {
+       "red": "Ronaldo Rodriguez",
+       "blue": "Ode' Osbourne",
+       "section": "main",
+       "division": "Flyweight Bout",
+       "winner": "Ronaldo Rodriguez",
+       "outcome": null,
+       "method": "Decision - Unanimous",
+       "round": "3",
+       "time": "5:00"
+      },
+      {
+       "red": "Irene Aldana",
+       "blue": "Norma Dumont",
+       "section": "prelims",
+       "division": "Women's Bantamweight Bout",
+       "winner": "Norma Dumont",
+       "outcome": null,
+       "method": "Decision - Unanimous",
+       "round": "3",
+       "time": "5:00"
+      },
+      {
+       "red": "Manuel Torres",
+       "blue": "Ignacio Bahamondes",
+       "section": "prelims",
+       "division": "Lightweight Bout",
+       "winner": "Ignacio Bahamondes",
+       "outcome": null,
+       "method": "KO/TKO",
+       "round": "1",
+       "time": "4:02"
+      },
+      {
+       "red": "Yazmin Jauregui",
+       "blue": "Ketlen Souza",
+       "section": "prelims",
+       "division": "Women's Strawweight Bout",
+       "winner": "Ketlen Souza",
+       "outcome": null,
+       "method": "Submission",
+       "round": "1",
+       "time": "3:02"
+      },
+      {
+       "red": "Raul Rosas Jr.",
+       "blue": "Aoriqileng",
+       "section": "early-prelims",
+       "division": "Bantamweight Bout",
+       "winner": "Raul Rosas Jr.",
+       "outcome": null,
+       "method": "Decision - Unanimous",
+       "round": "3",
+       "time": "5:00"
+      }
+     ],
+     "poster": "assets/images/events/ufc-306.jpg",
+     "posterAlt": "Don't Miss A Moment Of Riyadh Season Noche UFC, Live From Sphere In Las Vegas, Nevada On September 14, 2024",
+     "posterSource": "https://ufc.com/images/styles/background_image_sm/s3/2024-08/091424-ufc-306-omalley-vs-dvalishvili-EVENT-ART.jpg?h=d1cb525d&itok=2BFkiXSt"
+    },
+    {
      "id": "ufc-fight-night-september-07-2024",
      "number": null,
      "eventKind": "fight-night",
