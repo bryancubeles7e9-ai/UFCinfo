@@ -11417,15 +11417,15 @@
   "peso-pluma": {
    "id": "featherweight",
    "title": "Ranking UFC · Peso pluma · Masculino — UFCinfo",
-   "description": "Top 15 oficial de UFC: peso pluma, masculino. Campeón: Alexander Volkanovski. 1. Diego Lopes, 1. Movsar Evloev, 3. Lerone Murphy. Consulta el ranking completo en UFCinfo.",
+   "description": "Top 15 oficial de UFC: peso pluma, masculino. Campeón: Alexander Volkanovski. 1. Movsar Evloev, 1. Diego Lopes, 3. Lerone Murphy. Consulta el ranking completo en UFCinfo.",
    "image": "assets/images/fighters/alexander-volkanovski.png",
    "en": {
     "title": "UFC rankings · Featherweight · Men — UFCinfo",
-    "description": "Official UFC top 15: featherweight, men. Champion: Alexander Volkanovski. 1. Diego Lopes, 1. Movsar Evloev, 3. Lerone Murphy. See the full ranking on UFCinfo."
+    "description": "Official UFC top 15: featherweight, men. Champion: Alexander Volkanovski. 1. Movsar Evloev, 1. Diego Lopes, 3. Lerone Murphy. See the full ranking on UFCinfo."
    },
    "ca": {
     "title": "Rànquing UFC · Pes ploma · Masculí — UFCinfo",
-    "description": "Top 15 oficial d’UFC: pes ploma, masculí. Campió: Alexander Volkanovski. 1. Diego Lopes, 1. Movsar Evloev, 3. Lerone Murphy. Consulta el rànquing complet a UFCinfo."
+    "description": "Top 15 oficial d’UFC: pes ploma, masculí. Campió: Alexander Volkanovski. 1. Movsar Evloev, 1. Diego Lopes, 3. Lerone Murphy. Consulta el rànquing complet a UFCinfo."
    }
   },
   "peso-ligero": {
@@ -11529,15 +11529,15 @@
   "peso-gallo-femenino": {
    "id": "bantamweight-women",
    "title": "Ranking UFC · Peso gallo · Femenino — UFCinfo",
-   "description": "Top 15 oficial de UFC: peso gallo, femenino. Campeona: Kayla Harrison. 1. Amanda Nunes, 2. Joselyne Edwards, 2. Julianna Peña. Consulta el ranking completo en UFCinfo.",
+   "description": "Top 15 oficial de UFC: peso gallo, femenino. Campeona: Kayla Harrison. 1. Amanda Nunes, 2. Julianna Peña, 2. Joselyne Edwards. Consulta el ranking completo en UFCinfo.",
    "image": "assets/images/fighters/kayla-harrison.png",
    "en": {
     "title": "UFC rankings · Bantamweight · Women — UFCinfo",
-    "description": "Official UFC top 15: bantamweight, women. Champion: Kayla Harrison. 1. Amanda Nunes, 2. Joselyne Edwards, 2. Julianna Peña. See the full ranking on UFCinfo."
+    "description": "Official UFC top 15: bantamweight, women. Champion: Kayla Harrison. 1. Amanda Nunes, 2. Julianna Peña, 2. Joselyne Edwards. See the full ranking on UFCinfo."
    },
    "ca": {
     "title": "Rànquing UFC · Pes gall · Femení — UFCinfo",
-    "description": "Top 15 oficial d’UFC: pes gall, femení. Campiona: Kayla Harrison. 1. Amanda Nunes, 2. Joselyne Edwards, 2. Julianna Peña. Consulta el rànquing complet a UFCinfo."
+    "description": "Top 15 oficial d’UFC: pes gall, femení. Campiona: Kayla Harrison. 1. Amanda Nunes, 2. Julianna Peña, 2. Joselyne Edwards. Consulta el rànquing complet a UFCinfo."
    }
   }
  }
